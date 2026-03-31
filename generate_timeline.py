@@ -219,6 +219,9 @@ def parse_element(heading: str, body_lines: list) -> dict:
         "perturbation_type": fields.get("perturbation_type", ""),
         "affected_motor": fields.get("affected_motor", ""),
         "note": fields.get("note", ""),
+        "resolution": fields.get("resolution", ""),
+        "resolution_conditions": fields.get("resolution_conditions", ""),
+        "avortement": fields.get("avortement", ""),
     }
 
 
@@ -230,10 +233,42 @@ PHASE_COLORS = {
     "feodale": "#8B7355",
     "oligarchique": "#2E8B57",
     "absolutiste": "#6A0DAD",
-    "rn": "#CC2936",
+    "rn": "#D4A017",
     "parlementaire": "#1E90FF",
     "technocratique": "#708090",
 }
+
+SAILLANT_ICONS = {
+    "Éveil féodal": "wb_sunny",
+    "Pic féodal": "terrain",
+    "Crise féodale": "bolt",
+    "Pacte oligarchique": "gavel",
+    "1er monarque oligarchique": "stars",
+    "Pic oligarchique": "terrain",
+    "Fin de l'expansion": "block",
+    "Guerre sociale": "local_fire_department",
+    "1er monarque absolu": "crown",
+    "1er monarque absolu (du reboot)": "crown",
+    "Dernière grande révolte oligarchique": "whatshot",
+    "Pic absolutiste": "terrain",
+    "Explosion de l'AR": "flash_on",
+    "Expérience parlementaire": "account_balance",
+    "Phase aiguë": "skull",
+    "Moment thermidorien": "balance",
+    "Émergence de l'IR": "military_tech",
+    "Impérialiste Revanchard": "military_tech",
+    "Glorieuse Révolution": "star",
+    "Reconstruction": "construction",
+    "Codification de la Torah": "menu_book",
+    "Destruction du 1er Temple": "cancel",
+    "Invasion macédonienne": "cancel",
+    "Écrasement": "cancel",
+    "Liquidation définitive": "cancel",
+    "Réduction d'échelle": "compress",
+    "Magna Carta": "description",
+}
+SAILLANT_ICON_DEFAULT = "diamond"
+SAILLANT_ICON_AVORTEMENT = "cancel"
 
 PHASE_LABELS = {
     "feodale": "Féodale",
@@ -330,7 +365,8 @@ def generate_html(data: dict) -> str:
         parts = []
         for key in ["kind", "type", "phase", "title", "summary", "description",
                      "figure", "confidence", "alternatives", "step", "deviation",
-                     "typical_duration", "perturbation_type", "affected_motor", "note"]:
+                     "typical_duration", "perturbation_type", "affected_motor", "note",
+                     "resolution", "resolution_conditions", "avortement"]:
             parts.append(f"'{key}':'{escape_js_string(str(e.get(key, '')))}'")
         parts.append(f"'start':{e['start'] if e['start'] is not None else 'null'}")
         parts.append(f"'end':{e['end'] if e['end'] is not None else 'null'}")
@@ -435,9 +471,9 @@ def generate_html(data: dict) -> str:
 
     # Assign stagger levels (0-4): default to row 0, bump down only if conflict
     # A saillant "occupies" a horizontal band of ~7% around its position
-    MAX_ROWS = 5
-    ROW_HEIGHT = 55  # px per row
-    CONFLICT_RADIUS = 5  # % of timeline width — two saillants within this range conflict
+    MAX_ROWS = 6
+    ROW_HEIGHT = 65  # px per row
+    CONFLICT_RADIUS = 4  # % of timeline width — two saillants within this range conflict
 
     levels = []
     for i, (s, pct) in enumerate(dated_saillants):
@@ -460,21 +496,22 @@ def generate_html(data: dict) -> str:
         color = PHASE_COLORS.get(s["phase"], "#333")
         offset = level_offsets[level]
 
-        conf = s.get("confidence", "high")
-        outline = ""
-        if conf == "medium":
-            outline = "outline:2px dashed rgba(0,0,0,0.4);outline-offset:2px;"
-        elif conf == "low":
-            outline = "outline:2px dotted rgba(0,0,0,0.4);outline-offset:2px;"
-
         figure_label = s["figure"] if s["figure"] else s["title"]
         start_label = format_year(s["start"], s["start_approx"])
 
+        is_avortement = s.get("avortement") == "true"
+        avortement_class = " avortement" if is_avortement else ""
+        if is_avortement:
+            icon_name = SAILLANT_ICON_AVORTEMENT
+        else:
+            icon_name = SAILLANT_ICONS.get(s["title"], SAILLANT_ICON_DEFAULT)
+        bg_color = "#c0392b" if is_avortement else color
         saillant_markers_html += f"""
         <div class="saillant-group" style="left:{left_pct:.4f}%;top:{200 + offset}px;">
-            <div class="saillant-marker" style="background:{color};{outline}"
+            <div class="saillant-marker{avortement_class}" style="background:{bg_color};"
                 data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(figure_label)} ({start_label})&#10;{escape_html(s['summary'])}"
                 onclick="showDetail({elements.index(s)})">
+                <span class="{'material-symbols-outlined' if icon_name in ('crown', 'skull') else 'material-icons'}">{icon_name}</span>
             </div>
             <div class="saillant-label"><span class="saillant-title">{escape_html(s['title'])}</span><span class="saillant-figure">{escape_html(s['figure']) if s['figure'] else ''}</span><span class="saillant-date">{start_label}</span></div>
         </div>"""
@@ -524,6 +561,8 @@ def generate_html(data: dict) -> str:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Parcours — {escape_html(nation)}</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 <style>
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background:#fafafa; color:#222; line-height:1.5; }}
@@ -542,7 +581,7 @@ body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; backgroun
 
 /* Timeline container */
 .timeline-wrapper {{ padding:1rem 2rem 0.5rem; overflow-x:auto; }}
-.timeline-container {{ position:relative; min-width:2800px; min-height:500px; margin-bottom:10px; }}
+.timeline-container {{ position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }}
 
 /* Ticks */
 .tick {{ position:absolute; top:0; height:100%; pointer-events:none; }}
@@ -588,15 +627,18 @@ body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; backgroun
 
 /* Saillant markers */
 .saillant-group {{ position:absolute; top:150px; z-index:10; }}
-.saillant-marker {{ width:14px; height:14px; transform:rotate(45deg); cursor:pointer;
-    margin-left:-7px; transition:transform 0.15s; border-radius:2px; }}
-.saillant-marker:hover {{ transform:rotate(45deg) scale(1.3); }}
-.saillant-label {{ position:absolute; top:20px; left:-50px; width:100px; text-align:center;
+.saillant-marker {{ width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,0.3); }}
+.saillant-marker:hover {{ transform:scale(1.2); }}
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined {{ font-size:14px; color:#fff; }}
+.saillant-label {{ position:absolute; top:28px; left:-40px; width:80px; text-align:center;
     line-height:1.15; pointer-events:none; }}
 .saillant-label .saillant-title {{ font-size:0.5rem; font-weight:800; text-transform:uppercase;
     letter-spacing:-0.02em; color:#333; display:block; }}
 .saillant-label .saillant-figure {{ font-size:0.6rem; color:#555; display:block; }}
 .saillant-label .saillant-date {{ font-size:0.5rem; color:#888; display:block; }}
+.saillant-marker.avortement {{ background:#c0392b !important; }}
 
 /* Tooltip */
 .tooltip {{ position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
@@ -637,7 +679,9 @@ body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; backgroun
 .legend-title {{ font-size:0.8rem; font-weight:700; color:#555; }}
 .legend-item {{ display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }}
 .legend-swatch {{ width:16px; height:16px; border-radius:3px; flex-shrink:0; }}
-.legend-diamond {{ width:10px; height:10px; transform:rotate(45deg); flex-shrink:0; background:#666; border-radius:1px; }}
+.legend-diamond {{ width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }}
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined {{ font-size:10px; color:#fff; }}
 .legend-conf {{ display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }}
 
 /* Footer */
@@ -683,11 +727,8 @@ body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; backgroun
 <div class="legend">
     <span class="legend-title">Phases :</span>
     {"".join(f'<span class="legend-item"><span class="legend-swatch" style="background:{very_light_hex(c)};border:2px solid {c};"></span>{PHASE_LABELS.get(k, k)}</span>' for k, c in PHASE_COLORS.items())}
-    <span class="legend-item"><span class="legend-diamond"></span>Saillant</span>
-    <span class="legend-title" style="margin-left:0.5rem;">Confiance :</span>
-    <span class="legend-item"><span class="legend-conf" style="background:#eee;border:2px solid #888;"></span>Haute</span>
-    <span class="legend-item"><span class="legend-conf" style="background:#eee;border:2px dashed #888;"></span>Moyenne</span>
-    <span class="legend-item"><span class="legend-conf" style="background:#eee;border:2px dotted #888;"></span>Basse</span>
+    <span class="legend-item"><span class="legend-diamond"><span class="material-icons" style="font-size:10px;color:#fff;">terrain</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;"><span class="material-icons" style="font-size:10px;color:#fff;">cancel</span></span>Avortement</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -706,7 +747,7 @@ const elements = {elements_js};
 
 const phaseColors = {{
     'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
-    'rn':'#CC2936','parlementaire':'#1E90FF','technocratique':'#708090'
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
 }};
 const phaseLabels = {{
     'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
@@ -786,6 +827,15 @@ function showDetail(idx) {{
     }}
     if (e.note) {{
         html += `<div class="detail-section"><div class="detail-section-title">Note</div><p style="color:#666;">${{e.note}}</p></div>`;
+    }}
+    if (e.resolution) {{
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#c0392b' : '#27ae60';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<div class="detail-section"><div class="detail-section-title">Résolution ${{resIcon}}</div><p style="color:${{resColor}};font-weight:600;">${{e.resolution}}</p></div>`;
+    }}
+    if (e.resolution_conditions) {{
+        html += `<div class="detail-section"><div class="detail-section-title">Conditions de résolution</div><p style="color:#555;">${{e.resolution_conditions}}</p></div>`;
     }}
 
     content.innerHTML = html;

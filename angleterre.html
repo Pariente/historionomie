@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Angleterre</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background:#fafafa; color:#222; line-height:1.5; }
+
+/* Header */
+.header { background:#fff; border-bottom:1px solid #ddd; padding:1.2rem 2rem; }
+.header h1 { font-size:1.6rem; color:#333; margin-bottom:0.3rem; }
+.header .subtitle { font-size:0.95rem; color:#666; }
+.header .meta-row { display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:0.5rem; font-size:0.85rem; color:#555; }
+.header .meta-row span { display:inline-flex; align-items:center; gap:0.3rem; }
+.meta-label { font-weight:600; color:#444; }
+
+/* Pre-phase note */
+.prephase-note { background:#f5f0e6; border-left:4px solid #bba87a; padding:0.8rem 1.2rem; margin:1rem 2rem; border-radius:0 4px 4px 0; font-size:0.9rem; color:#555; }
+.prephase-note strong { color:#7a6840; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.8rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2; }
+.phase-band-dates { font-size:0.65rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.7rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:18px; height:170px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.6rem; color:#a33; font-weight:600; white-space:nowrap;
+    position:absolute; bottom:4px; left:0; right:0; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); transform-origin:left;
+    left:50%; white-space:normal; }
+
+/* Pre-phase band */
+.prephase-band { position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
+    border-radius:6px; display:flex; align-items:center; justify-content:center; }
+.prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:150px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,0.3); }
+.saillant-marker:hover { transform:scale(1.2); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:14px; color:#fff; }
+.saillant-label { position:absolute; top:28px; left:-40px; width:80px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.5rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:-0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#555; display:block; }
+.saillant-label .saillant-date { font-size:0.5rem; color:#888; display:block; }
+.saillant-marker.avortement { background:#c0392b !important; }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.3);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(480px,90vw); background:#fff;
+    box-shadow:-4px 0 20px rgba(0,0,0,0.15); z-index:501; overflow-y:auto; padding:2rem;
+    display:none; }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+.detail-close { position:absolute; top:1rem; right:1rem; background:none; border:none;
+    font-size:1.5rem; cursor:pointer; color:#666; line-height:1; }
+.detail-close:hover { color:#333; }
+.detail-title { font-size:1.3rem; font-weight:700; margin-bottom:0.3rem; padding-right:2rem; }
+.detail-kind { display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px;
+    border-radius:10px; color:#fff; margin-bottom:0.8rem; }
+.detail-meta { font-size:0.85rem; color:#555; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+.detail-description { font-size:0.9rem; line-height:1.6; color:#333; margin-bottom:1rem;
+    border-left:3px solid #ddd; padding-left:1rem; }
+.detail-section { margin-bottom:0.8rem; }
+.detail-section-title { font-size:0.75rem; font-weight:700; color:#888; text-transform:uppercase;
+    letter-spacing:0.5px; margin-bottom:0.3rem; }
+.detail-section p { font-size:0.85rem; color:#444; line-height:1.5; }
+
+.confidence-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.7rem; font-weight:600; }
+.confidence-high { background:#d4edda; color:#155724; border:1px solid #28a745; }
+.confidence-medium { background:#fff3cd; color:#856404; border:1px dashed #ffc107; }
+.confidence-low { background:#f8d7da; color:#721c24; border:1px dotted #dc3545; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #eee; background:#fff; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #eee; margin-top:1rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Parcours de construction nationale — Angleterre</h1>
+    <div class="subtitle">Parcours de l&#39;Angleterre</div>
+    <div class="meta-row">
+        
+        <span><span class='meta-label'>Territoire :</span> Angleterre</span>
+        <span><span class='meta-label'>Statut :</span> Phase parlementaire</span>
+        <span><span class='meta-label'>Confiance :</span> medium</span>
+    </div>
+</div>
+
+
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:0.4736%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">800</div>
+        </div>
+        <div class="tick" style="left:16.2589%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:32.0442%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:47.8295%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:63.6148%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:79.4002%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        <div class="tick" style="left:95.1855%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">2000</div>
+        </div>
+        
+        
+        <div class="phase-band" style="left:2.7624%;width:18.7056%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (~829 — 1066)&#10;La première phase féodale anglaise s&#39;étend d&#39;Ecgberht de Wessex (~829) jusqu&#39;à la conquête normande de 1066. Elle produit plusieurs pics féodaux successifs — Æthelstan, Edgar, Cnut — mais chaque crise qui suit la mort du roi fort avorte, parce que les élites sont trop hétérogènes pour former une conscience de classe capable d&#39;imposer un pacte. La phase boucle deux fois avant d&#39;être interrompue par le reboot normand."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#8B7355;">Phase féodale</div>
+            <div class="phase-band-dates">~829 — 1066</div>
+        </div>
+        <div class="phase-band" style="left:21.4680%;width:20.5998%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale (reboot)&lt;/strong&gt; (1066 — ~1327)&#10;La seconde phase féodale anglaise commence avec la conquête normande de 1066, qui remplace intégralement l&#39;aristocratie anglo-saxonne par une noblesse normande francophone et introduit un nouveau système féodal. Elle se décompose en deux sous-phases : une longue coagulation des élites (1066-1307), ponctuée par trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l&#39;Anarchie, Jean sans Terre), où l&#39;homogénéisation est accélérée par la perte de la Normandie (1204) ; puis une bascule oligarchique (1307-~1327) sous Édouard II, dont la faiblesse permet aux barons — désormais homogènes à l&#39;échelle anglaise — d&#39;imposer les Ordonnances de 1311."
+            onclick="showDetail(8)">
+            <div class="phase-band-label" style="color:#8B7355;">Phase féodale (reboot)</div>
+            <div class="phase-band-dates">1066 — ~1327</div>
+        </div>
+        <div class="phase-band" style="left:42.0679%;width:12.4704%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (~1327 — 1485)&#10;La phase oligarchique anglaise s&#39;étend de l&#39;avènement d&#39;Édouard III en 1327 jusqu&#39;à la victoire d&#39;Henri Tudor à Bosworth en 1485. Elle traverse la séquence complète — essor, polarisation et guerre sociale — dans une durée plus courte que la norme, facilitée par la géographie insulaire et la compacité du territoire."
+            onclick="showDetail(19)">
+            <div class="phase-band-label" style="color:#2E8B57;">Phase oligarchique</div>
+            <div class="phase-band-dates">~1327 — 1485</div>
+        </div>
+        <div class="phase-band" style="left:54.5383%;width:12.3915%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (1485 — 1642)&#10;La phase absolutiste anglaise s&#39;étend de l&#39;accession d&#39;Henri VII Tudor en 1485 jusqu&#39;au déclenchement de la guerre civile en 1642. Elle traverse la séquence complète — absolutisation rapide sous les Tudors, impérialisme absolutiste sous Élisabeth, puis Ancien Régime sous les Stuarts — dans une durée plus courte que la norme."
+            onclick="showDetail(27)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Phase absolutiste</div>
+            <div class="phase-band-dates">1485 — 1642</div>
+        </div>
+        <div class="phase-band" style="left:66.9298%;width:3.6306%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale&lt;/strong&gt; (1642 — 1688)&#10;La Révolution Nationale anglaise s&#39;étend du déclenchement de la guerre civile en 1642 à la Glorieuse Révolution de 1688 et traverse l&#39;intégralité de la séquence typique — explosion de l&#39;Ancien Régime, expérience parlementaire, phase aiguë, moment thermidorien, Impérialiste Revanchard, Restauration et Glorieuse Révolution — en quarante-six ans, conformément à la norme."
+            onclick="showDetail(35)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale</div>
+            <div class="phase-band-dates">1642 — 1688</div>
+        </div>
+        <div class="phase-band" style="left:70.5604%;width:26.6772%;
+            background:#c6e3ff;border-top:3px solid #1E90FF;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase parlementaire&lt;/strong&gt; (1688 — en cours)&#10;L&#39;Angleterre entre dans sa phase parlementaire en 1688, aboutissement de son Parcours de construction nationale, avec le Parlement de Westminster comme source ultime du pouvoir politique à travers les régimes successifs."
+            onclick="showDetail(45)">
+            <div class="phase-band-label" style="color:#1E90FF;">Phase parlementaire</div>
+            <div class="phase-band-dates">1688 — en cours</div>
+        </div>
+        
+        <div class="subphase-band" style="left:2.7624%;width:18.7056%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (~829 — 1066)&#10;D&#39;Ecgberht de Wessex à la conquête normande. La coagulation produit trois pics féodaux (Æthelstan, Edgar, Cnut) entrecoupés de crises qui avortent systématiquement, parce que l&#39;hétérogénéité culturelle entre Anglo-Saxons et Scandinaves du Danelaw empêche les élites de former une conscience de classe à l&#39;échelle du royaume. Sous Cnut, l&#39;augmentation d&#39;échelle (empire anglo-scandinave) éloigne encore la possibilité du pacte. La phase est interrompue par le reboot normand sans jamais produire de bascule oligarchique."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:21.4680%;width:19.0213%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (1066 — 1307)&#10;De Guillaume le Conquérant à Édouard Ier. Trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l&#39;Anarchie, Jean sans Terre). L&#39;homogénéisation progresse lentement — accélérée par la perte de la Normandie (1204) qui force les barons à se penser comme anglais."
+            onclick="showDetail(9)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:40.4893%;width:1.5785%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Bascule oligarchique&lt;/strong&gt; (1307 — ~1327)&#10;La mort d&#39;Édouard Ier en 1307 ouvre une crise profonde sous Édouard II, roi faible et dépendant de ses favoris. Cette fois, les deux conditions du pacte sont réunies simultanément : l&#39;homogénéité des élites à l&#39;échelle anglaise (acquise après 1204) et le moment de faiblesse du souverain. Les barons imposent les Ordonnances de 1311 — premier pacte oligarchique anglais."
+            onclick="showDetail(16)">
+            <span class="subphase-label">Bascule oligarchique</span>
+        </div>
+        <div class="subphase-band narrow" style="left:42.0679%;width:3.9463%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (~1327 — ~1377)&#10;Édouard III exploite les institutions héritées de la phase féodale — Échiquier, common law, Parlement — pour projeter la puissance anglaise vers la France dans la Guerre de Cent Ans, portant le prestige du royaume à son maximum avec les victoires de Crécy et de Poitiers et la fondation de l&#39;Ordre de la Jarretière."
+            onclick="showDetail(20)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:46.0142%;width:6.1563%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (~1377 — ~1455)&#10;Richard II tente une autocratie personnelle et se fait déposer par Henri Bolingbroke en 1399, ouvrant la dynastie Lancaster. Henri V réunit temporairement le royaume autour de la victoire d&#39;Azincourt en 1415, mais la faiblesse d&#39;Henri VI rouvre les fractures et cristallise deux factions rivales — Lancaster et York — dont l&#39;affrontement devient inévitable."
+            onclick="showDetail(24)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band narrow" style="left:52.1705%;width:2.3678%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (~1455 — 1485)&#10;Les Guerres des Roses constituent la guerre sociale du Parcours anglais, un affrontement de trente ans entre York et Lancaster dont ni l&#39;un ni l&#39;autre ne sort définitivement vainqueur, ce qui permet l&#39;émergence d&#39;Henri Tudor comme figure tierce à Bosworth en 1485."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:54.5383%;width:5.7616%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1485 — ~1558)&#10;Henri VII brise le pouvoir des magnats issus des Guerres des Roses et reconstruit le fisc royal, puis Henri VIII accomplit l&#39;absolutisation la plus radicale de l&#39;histoire anglaise en rompant avec Rome, en dissolvant les monastères et en écrasant la dernière révolte oligarchique du Pilgrimage of Grace."
+            onclick="showDetail(28)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band narrow" style="left:60.2999%;width:3.5517%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (~1558 — ~1603)&#10;Le règne d&#39;Élisabeth Ière porte la puissance absolutiste anglaise à son sommet avec la défaite de l&#39;Armada espagnole en 1588, l&#39;expansion coloniale vers la Virginie et les Indes orientales, la domestication de l&#39;aristocratie à la cour et l&#39;éclat culturel de l&#39;ère shakespearienne."
+            onclick="showDetail(31)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band narrow" style="left:63.8516%;width:3.0781%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime&lt;/strong&gt; (~1603 — 1642)&#10;L&#39;accession des Stuarts en 1603 ouvre l&#39;Ancien Régime anglais : une nouvelle dynastie dépourvue de la légitimité institutionnelle des Tudors, confrontée à une société en mutation rapide où un bloc contestataire se forme — puritains et gentry exclue contre le parti de cour — jusqu&#39;à l&#39;explosion de la guerre civile en 1642."
+            onclick="showDetail(33)">
+            <span class="subphase-label">Ancien Régime</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:66.7719%;width:1.0260%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1640 — 1653)&#10;La crise éclate avec le Long Parlement de 1640, qui démantèle les instruments du pouvoir personnel de Charles Ier. La guerre civile, l&#39;exécution du roi en 1649 et la proclamation du Commonwealth traversent les quatre premières étapes de la Révolution Nationale à un rythme accéléré."
+            onclick="showDetail(36)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:67.7979%;width:0.5525%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Impérialiste Revanchard&lt;/strong&gt; (1653 — 1660)&#10;Cromwell, devenu Lord Protecteur, incarne la figure de l&#39;Impérialiste Revanchard : il restaure la verticalité du pouvoir, ventile les élites par la méritocratie militaire, projette la puissance anglaise vers l&#39;extérieur et unifie administrativement les Îles Britanniques, avant de mourir en 1658 sans successeur capable."
+            onclick="showDetail(41)">
+            <span class="subphase-label">Impérialiste Revanchard</span>
+        </div>
+        <div class="subphase-band narrow" style="left:68.3504%;width:2.2099%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt; (1660 — 1688)&#10;Charles II est restauré en 1660 dans le cadre de la Déclaration de Breda, qui maintient les acquis fondamentaux de la Révolution tout en rétablissant la monarchie. Mais Jacques II, en tentant de restaurer le catholicisme et l&#39;absolutisme, provoque la crise finale qui aboutit à la Glorieuse Révolution de 1688."
+            onclick="showDetail(43)">
+            <span class="subphase-label">Restauration</span>
+        </div>
+        
+        
+        <div class="saillant-group" style="left:2.7624%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Ecgberht de Wessex (~829)&#10;Ecgberht est le premier roi à imposer la suprématie du Wessex sur toute l&#39;Angleterre, forçant les autres royaumes (Mercie, Northumbrie) à se positionner par rapport à lui."
+                onclick="showDetail(2)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Ecgberht de Wessex</span><span class="saillant-date">~829</span></div>
+        </div>
+        <div class="saillant-group" style="left:10.4972%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Æthelstan (~927)&#10;Premier roi à gouverner effectivement toute l&#39;Angleterre. Il conquiert York, remporte Brunanburh et porte l&#39;autorité royale personnelle à un niveau sans précédent."
+                onclick="showDetail(3)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Æthelstan</span><span class="saillant-date">~927</span></div>
+        </div>
+        <div class="saillant-group" style="left:13.0229%;top:265px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Edgar le Pacifique (~959)&#10;Roi stable, réformes monétaires, Regularis Concordia. L&#39;autorité royale est au maximum dans une Angleterre prospère. Mais la crise de succession à sa mort ne débouche sur aucun pacte."
+                onclick="showDetail(4)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Edgar le Pacifique</span><span class="saillant-date">~959</span></div>
+        </div>
+        <div class="saillant-group" style="left:14.5225%;top:200px;">
+            <div class="saillant-marker avortement" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Crise féodale (978)&#10;L&#39;assassinat d&#39;Edward the Martyr ouvre une longue période d&#39;instabilité sous Æthelred le Malavisé. Aucun pacte n&#39;émerge — les élites sont trop hétérogènes (Anglo-Saxons + Scandinaves du Danelaw) pour se constituer en classe à l&#39;échelle du royaume."
+                onclick="showDetail(5)">
+                <span class="material-icons">cancel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure"></span><span class="saillant-date">978</span></div>
+        </div>
+        <div class="saillant-group" style="left:17.5217%;top:265px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Cnut le Grand (~1016)&#10;Cnut bâtit un empire anglo-scandinave (Angleterre + Danemark + Norvège) et règne avec autorité. Mais l&#39;augmentation d&#39;échelle élève le seuil d&#39;homogénéité requis pour un pacte, rendant celui-ci encore plus improbable."
+                onclick="showDetail(6)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Cnut le Grand</span><span class="saillant-date">~1016</span></div>
+        </div>
+        <div class="saillant-group" style="left:19.0213%;top:200px;">
+            <div class="saillant-marker avortement" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Crise féodale (1035)&#10;La mort de Cnut provoque la fragmentation de l&#39;empire anglo-scandinave. Les conditions du pacte ne sont toujours pas réunies : l&#39;échelle est trop grande et les élites trop hétérogènes. Le Parcours revient en position de pic potentiel, mais la conquête normande interrompt le cycle."
+                onclick="showDetail(7)">
+                <span class="material-icons">cancel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure"></span><span class="saillant-date">1035</span></div>
+        </div>
+        <div class="saillant-group" style="left:21.4680%;top:330px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Guillaume le Conquérant (1066)&#10;Guillaume le Conquérant remplace intégralement l&#39;aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal et réalise le Domesday Book. C&#39;est l&#39;éveil féodal de la seconde phase — le moment où un nouveau jeu commence."
+                onclick="showDetail(10)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Guillaume le Conquérant</span><span class="saillant-date">1066</span></div>
+        </div>
+        <div class="saillant-group" style="left:25.7301%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Henri Ier (~1120)&#10;Henri Ier crée l&#39;Échiquier comme instrument fiscal permanent, réunifie l&#39;Angleterre et la Normandie sous une seule couronne, et impose une paix royale remarquable. Le pouvoir est à son sommet — mais il est personnel."
+                onclick="showDetail(11)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Henri Ier</span><span class="saillant-date">~1120</span></div>
+        </div>
+        <div class="saillant-group" style="left:26.9140%;top:265px;">
+            <div class="saillant-marker avortement" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;L&#39;Anarchie&lt;/strong&gt;&#10;L&#39;Anarchie (1135)&#10;Dix-neuf ans de guerre civile entre Étienne de Blois et Mathilde l&#39;Emperesse. La faiblesse du souverain est présente, mais l&#39;homogénéité des élites ne l&#39;est pas — d&#39;autant que l&#39;Empire Plantagenêt est sur le point de se former, élevant l&#39;échelle bien au-delà du cadre anglais."
+                onclick="showDetail(12)">
+                <span class="material-icons">cancel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">L&#39;Anarchie</span><span class="saillant-figure"></span><span class="saillant-date">1135</span></div>
+        </div>
+        <div class="saillant-group" style="left:29.6764%;top:330px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Henri II Plantagenêt (~1170)&#10;Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Mais il constitue simultanément l&#39;Empire Plantagenêt (Angleterre + Normandie + Anjou + Aquitaine), ce qui augmente l&#39;échelle du royaume et repousse le seuil d&#39;homogénéité requis pour un pacte."
+                onclick="showDetail(13)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Henri II Plantagenêt</span><span class="saillant-date">~1170</span></div>
+        </div>
+        <div class="saillant-group" style="left:32.4388%;top:200px;">
+            <div class="saillant-marker avortement" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Jean sans Terre (~1205)&#10;Jean sans Terre ruine le système Plantagenêt : perte de la Normandie (1204), Magna Carta imposée (1215), guerre civile. Crise féodale avortée — l&#39;homogénéité est encore insuffisante."
+                onclick="showDetail(14)">
+                <span class="material-icons">cancel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Jean sans Terre</span><span class="saillant-date">~1205</span></div>
+        </div>
+        <div class="saillant-group" style="left:39.5422%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Édouard Ier (~1295)&#10;Édouard Ier atteint le sommet de son pouvoir vers 1295 avec le Parlement modèle, les Statuts de Westminster et le Quia Emptores, portant l&#39;autorité royale personnelle à un niveau sans précédent. Le parallèle avec Philippe le Bel, exactement contemporain, est frappant."
+                onclick="showDetail(15)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Édouard Ier</span><span class="saillant-date">~1295</span></div>
+        </div>
+        <div class="saillant-group" style="left:40.4893%;top:265px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Édouard II (1307)&#10;Le règne d&#39;Édouard II concentre tous les marqueurs de la crise féodale : roi faible, favoris impopulaires, défaite militaire humiliante à Bannockburn, et finalement déposition et assassinat du souverain en 1327. Cette fois, la crise ne boucle pas — elle produit le pacte."
+                onclick="showDetail(17)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Édouard II</span><span class="saillant-date">1307</span></div>
+        </div>
+        <div class="saillant-group" style="left:40.8051%;top:330px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Pacte oligarchique (1311)&#10;Les Ordonnances de 1311, imposées par les Lords Ordainers à Édouard II, constituent le premier pacte oligarchique anglais en codifiant explicitement les contraintes pesant sur l&#39;exécutif royal — contrôle des nominations, des finances et de la politique étrangère par les barons."
+                onclick="showDetail(18)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure"></span><span class="saillant-date">1311</span></div>
+        </div>
+        <div class="saillant-group" style="left:42.0679%;top:395px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Édouard III (1327)&#10;Édouard III est le premier roi d&#39;Angleterre dont le pouvoir s&#39;exerce dans un cadre institutionnel codifié par le pacte oligarchique de 1311, avec un appareil étatique permanent — Échiquier, tribunaux de common law, Parlement — qui fonctionne indépendamment de la personne du roi."
+                onclick="showDetail(21)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Édouard III</span><span class="saillant-date">1327</span></div>
+        </div>
+        <div class="saillant-group" style="left:43.8832%;top:200px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Édouard III (~1350)&#10;Édouard III atteint le sommet de sa puissance vers 1350 avec les victoires de Crécy et de Poitiers, le Traité de Brétigny et la fondation de l&#39;Ordre de la Jarretière, portant le prestige de la monarchie oligarchique anglaise à son maximum."
+                onclick="showDetail(22)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Édouard III</span><span class="saillant-date">~1350</span></div>
+        </div>
+        <div class="saillant-group" style="left:46.0142%;top:265px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Fin de l&#39;expansion (~1377)&#10;La mort du Prince Noir en 1376, le vieillissement d&#39;Édouard III et la perte progressive des territoires français ferment la soupape extérieure qui canalisait les tensions entre élites, ouvrant la voie à la polarisation intérieure."
+                onclick="showDetail(23)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure"></span><span class="saillant-date">~1377</span></div>
+        </div>
+        <div class="saillant-group" style="left:52.1705%;top:200px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Guerre sociale (~1455)&#10;Les Guerres des Roses opposent la faction Lancaster (prébendière, patronage de cour) à la faction York (patrimoniale, grands domaines fonciers) dans un conflit qui décime les deux camps et permet l&#39;émergence d&#39;Henri Tudor comme tiers à Bosworth."
+                onclick="showDetail(26)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure"></span><span class="saillant-date">~1455</span></div>
+        </div>
+        <div class="saillant-group" style="left:54.5383%;top:265px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Henri VII (1485)&#10;Henri Tudor résout les Guerres des Roses en s&#39;emparant du pouvoir comme figure tierce à Bosworth, puis brise le pouvoir des magnats, reconstruit le fisc et installe une nouvelle dynastie qui concentre le pouvoir au-delà de tout ce que les York ou les Lancaster avaient pu atteindre."
+                onclick="showDetail(29)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Henri VII</span><span class="saillant-date">1485</span></div>
+        </div>
+        <div class="saillant-group" style="left:58.5635%;top:200px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Dernière grande révolte oligarchique&lt;/strong&gt;&#10;Henri VIII (~1536)&#10;Le Pilgrimage of Grace de 1536, soulèvement massif du nord de l&#39;Angleterre contre la dissolution des monastères et la rupture avec Rome, constitue la dernière tentative des anciennes élites oligarchiques de résister à l&#39;absolutisation. Son écrasement clôt définitivement la transition."
+                onclick="showDetail(30)">
+                <span class="material-icons">whatshot</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Dernière grande révolte oligarchique</span><span class="saillant-figure">Henri VIII</span><span class="saillant-date">~1536</span></div>
+        </div>
+        <div class="saillant-group" style="left:62.6677%;top:200px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Élisabeth Ière (~1588)&#10;La défaite de l&#39;Armada espagnole en 1588, l&#39;expansion coloniale et l&#39;éclat culturel de l&#39;ère shakespearienne portent le prestige de la monarchie absolutiste anglaise à son sommet, avant que la mort d&#39;Élisabeth en 1603 n&#39;ouvre la phase de déclin."
+                onclick="showDetail(32)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Élisabeth Ière</span><span class="saillant-date">~1588</span></div>
+        </div>
+        <div class="saillant-group" style="left:63.8516%;top:265px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Fin de l&#39;expansion (1603)&#10;La mort d&#39;Élisabeth Ière et la succession Stuart en 1603 ferment la soupape d&#39;expansion élisabéthaine et ouvrent une période de sclérose où le système perd sa capacité à canaliser les tensions internes vers l&#39;extérieur."
+                onclick="showDetail(34)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure"></span><span class="saillant-date">1603</span></div>
+        </div>
+        <div class="saillant-group" style="left:66.7719%;top:200px;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Explosion de l&#39;AR&lt;/strong&gt;&#10;Explosion de l&#39;AR (1640)&#10;Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentative du roi d&#39;arrêter cinq parlementaires déclenche la guerre civile."
+                onclick="showDetail(37)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;AR</span><span class="saillant-figure"></span><span class="saillant-date">1640</span></div>
+        </div>
+        <div class="saillant-group" style="left:66.7719%;top:330px;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Expérience parlementaire (1640)&#10;Le Long Parlement gouverne pendant la guerre civile en s&#39;appuyant sur ses propres comités et sur la New Model Army, première tentative de substituer un gouvernement parlementaire au pouvoir royal."
+                onclick="showDetail(38)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure"></span><span class="saillant-date">1640</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.4033%;top:395px;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Phase aiguë (1648)&#10;L&#39;Épuration de Pride expulse les modérés du Parlement, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649, et la monarchie est abolie au profit du Commonwealth."
+                onclick="showDetail(39)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure"></span><span class="saillant-date">1648</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.7979%;top:460px;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Moment thermidorien&lt;/strong&gt;&#10;Moment thermidorien (1653)&#10;Cromwell dissout le Rump Parliament en avril 1653, mettant fin à l&#39;expérience parlementaire radicale et rétablissant un pouvoir exécutif fort sous la forme du Protectorat."
+                onclick="showDetail(40)">
+                <span class="material-icons">balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Moment thermidorien</span><span class="saillant-figure"></span><span class="saillant-date">1653</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.7979%;top:525px;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Impérialiste Revanchard&lt;/strong&gt;&#10;Oliver Cromwell (1653)&#10;Cromwell s&#39;empare du pouvoir en dissolvant le Rump Parliament et en devenant Lord Protecteur, instaurant un régime méritocratique et impérialiste qui projette la puissance anglaise vers les Caraïbes et l&#39;Europe."
+                onclick="showDetail(42)">
+                <span class="material-icons">military_tech</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Impérialiste Revanchard</span><span class="saillant-figure">Oliver Cromwell</span><span class="saillant-date">1653</span></div>
+        </div>
+        <div class="saillant-group" style="left:70.5604%;top:265px;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Glorieuse Révolution (1688)&#10;L&#39;invitation faite à Guillaume d&#39;Orange de débarquer en Angleterre, la fuite de Jacques II et l&#39;adoption du Bill of Rights en 1689 ancrent définitivement la souveraineté parlementaire dans la constitution anglaise."
+                onclick="showDetail(44)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure"></span><span class="saillant-date">1688</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond"><span class="material-icons" style="font-size:10px;color:#fff;">terrain</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;"><span class="material-icons" style="font-size:10px;color:#fff;">cancel</span></span>Avortement</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <button class="detail-close" onclick="closeDetail()">&times;</button>
+    <div id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 31/03/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','summary':'La première phase féodale anglaise s\'étend d\'Ecgberht de Wessex (~829) jusqu\'à la conquête normande de 1066. Elle produit plusieurs pics féodaux successifs — Æthelstan, Edgar, Cnut — mais chaque crise qui suit la mort du roi fort avorte, parce que les élites sont trop hétérogènes pour former une conscience de classe capable d\'imposer un pacte. La phase boucle deux fois avant d\'être interrompue par le reboot normand.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'AVORTÉE — la phase boucle deux fois (pic → crise → nouveau pic → crise) sans jamais produire de pacte oligarchique. L\'hétérogénéité culturelle entre Anglo-Saxons et Scandinaves du Danelaw empêche les élites de se percevoir comme une classe homogène à l\'échelle du royaume, condition nécessaire au pacte (Deblonde). Sous Cnut, l\'augmentation d\'échelle (empire anglo-scandinave) élève encore le seuil d\'homogénéité requis. La conquête normande de 1066 met fin à cette phase sans la résoudre.','resolution_conditions':'Non atteintes. Le pacte oligarchique exige deux conditions simultanées (Deblonde) : homogénéité des élites à l\'échelle du royaume ET moment de faiblesse du souverain. La première condition n\'est jamais remplie — les élites sont trop hétérogènes culturellement (Anglo-Saxons + Scandinaves), et l\'empire de Cnut élève encore l\'échelle requise.','avortement':'','start':829,'end':1066,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','summary':'D\'Ecgberht de Wessex à la conquête normande. La coagulation produit trois pics féodaux (Æthelstan, Edgar, Cnut) entrecoupés de crises qui avortent systématiquement, parce que l\'hétérogénéité culturelle entre Anglo-Saxons et Scandinaves du Danelaw empêche les élites de former une conscience de classe à l\'échelle du royaume. Sous Cnut, l\'augmentation d\'échelle (empire anglo-scandinave) éloigne encore la possibilité du pacte. La phase est interrompue par le reboot normand sans jamais produire de bascule oligarchique.','description':'La coagulation des élites anglo-saxonnes s\'étend sur près de 237 ans sans jamais aboutir. Le mécanisme est celui de la boucle avortée : chaque pic féodal (Æthelstan, Edgar, Cnut) porte le pouvoir personnel du suzerain à son maximum, mais la crise qui suit la mort du roi fort ne débouche pas sur un pacte, parce que le seuil d\'homogénéité n\'est jamais atteint. Le problème fondamental est double. D\'une part, la présence du Danelaw — territoire scandinave au nord et à l\'est de l\'Angleterre — introduit une hétérogénéité culturelle profonde entre les élites anglo-saxonnes et les élites scandinaves. D\'autre part, l\'empire de Cnut élève l\'échelle du royaume en englobant l\'Angleterre, le Danemark et la Norvège, ce qui repousse le seuil d\'homogénéité requis bien au-delà de ce qui est atteignable. La coagulation boucle deux fois (Æthelstan → crise → Edgar → crise → Cnut → crise) sans jamais franchir le seuil — un cas d\'école de phase avortée par déficit d\'homogénéisation.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':829,'end':1066,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','summary':'Ecgberht est le premier roi à imposer la suprématie du Wessex sur toute l\'Angleterre, forçant les autres royaumes (Mercie, Northumbrie) à se positionner par rapport à lui.','description':'En 825, Ecgberht de Wessex bat la Mercie à la bataille d\'Ellendun, mettant fin à la suprématie mercienne. En 829, il reçoit la soumission des Northumbriens à Dore. Sa suprématie personnelle est brève — la Mercie retrouve son indépendance dans l\'année — mais l\'effet structurant est permanent : après Ecgberht, le Wessex est la puissance dominante d\'Angleterre et ne perd plus jamais cette position. Tout ce qui suit (Alfred, Edward, Æthelstan) découle de cette bascule de 829. C\'est l\'éveil féodal : le moment où un chef impose pour la première fois une suprématie supra-régionale et structure le jeu politique autour de lui.','figure':'Ecgberht de Wessex','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':829,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Premier roi à gouverner effectivement toute l\'Angleterre. Il conquiert York, remporte Brunanburh et porte l\'autorité royale personnelle à un niveau sans précédent.','description':'Æthelstan conquiert le royaume viking d\'York en 927, devenant le premier roi à gouverner l\'ensemble de l\'Angleterre. Il est l\'aboutissement de la reconquête du Danelaw lancée par son père Edward l\'Ancien et sa tante Æthelflæd. En 937, il remporte à Brunanburh une victoire écrasante contre une coalition de Vikings, d\'Écossais et de Bretons — une des plus grandes batailles du haut Moyen Âge insulaire. Il se titre « rex Anglorum » et mène une diplomatie européenne active (ses sœurs épousent des rois francs et germaniques). C\'est un pic féodal classique : le pouvoir est au sommet, mais il repose entièrement sur la personne du roi. À sa mort en 939, le système se fragmente immédiatement — le Danelaw se révolte et York redevient viking.','figure':'Æthelstan','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':927,'end':939,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Roi stable, réformes monétaires, Regularis Concordia. L\'autorité royale est au maximum dans une Angleterre prospère. Mais la crise de succession à sa mort ne débouche sur aucun pacte.','description':'Edgar le Pacifique (959-975) règne sur une Angleterre unifiée et prospère. Il réforme la monnaie (refrappes régulières centralisées), promulgue la Regularis Concordia (codification des pratiques monastiques) et travaille étroitement avec l\'archevêque Dunstan. Son règne représente un second pic féodal, peut-être le plus stable de la phase — un roi dont l\'autorité personnelle ne repose pas sur des conquêtes récentes mais sur un système de gouvernement efficace. Mais ce pouvoir reste personnel. Sa mort en 975 provoque une crise de succession violente qui montre que rien n\'a été codifié au-delà de la personne du roi.','figure':'Edgar le Pacifique','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':959,'end':975,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','summary':'L\'assassinat d\'Edward the Martyr ouvre une longue période d\'instabilité sous Æthelred le Malavisé. Aucun pacte n\'émerge — les élites sont trop hétérogènes (Anglo-Saxons + Scandinaves du Danelaw) pour se constituer en classe à l\'échelle du royaume.','description':'Le meurtre d\'Edward the Martyr (978) ouvre une longue période d\'instabilité sous Æthelred, marquée par les invasions danoises, le paiement du Danegeld, et finalement la conquête de Sweyn Forkbeard (1013). C\'est un moment de faiblesse du souverain — la première condition du pacte (Deblonde) est remplie. Mais la seconde condition — l\'homogénéité des élites à l\'échelle du royaume — ne l\'est pas : les aristocraties anglo-saxonnes et scandinaves du Danelaw ne se perçoivent pas comme un groupe capable d\'agir collectivement. Le rappel conditionnel d\'Æthelred en 1014 est parfois cité comme un proto-pacte, mais c\'est une simple demande féodale au roi d\'être juste — aucune codification, aucun effet durable. La faiblesse sans homogénéité produit le chaos, et le chaos appelle un nouveau roi fort : Cnut.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'true','start':978,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Cnut bâtit un empire anglo-scandinave (Angleterre + Danemark + Norvège) et règne avec autorité. Mais l\'augmentation d\'échelle élève le seuil d\'homogénéité requis pour un pacte, rendant celui-ci encore plus improbable.','description':'Cnut le Grand (1016-1035) bâtit un empire couvrant l\'Angleterre, le Danemark et la Norvège. Il intègre les élites anglo-saxonnes à son système, promulgue des codes de lois, et règne avec un mélange d\'autorité personnelle et de pragmatisme politique. C\'est un troisième pic féodal — le pouvoir est de nouveau au sommet — mais cette fois l\'échelle du royaume a augmenté. L\'empire anglo-scandinave est bien plus hétérogène que l\'Angleterre seule : le pacte oligarchique, s\'il devait se produire, devrait maintenant se former à l\'échelle impériale, ce qui est impossible étant donné l\'hétérogénéité culturelle entre Anglais, Danois et Norvégiens. L\'augmentation d\'échelle éloigne la possibilité du pacte au lieu de la rapprocher — un mécanisme que l\'on retrouve avec l\'Empire Plantagenêt au siècle suivant.','figure':'Cnut le Grand','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1016,'end':1035,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','summary':'La mort de Cnut provoque la fragmentation de l\'empire anglo-scandinave. Les conditions du pacte ne sont toujours pas réunies : l\'échelle est trop grande et les élites trop hétérogènes. Le Parcours revient en position de pic potentiel, mais la conquête normande interrompt le cycle.','description':'L\'empire de Cnut se disloque entre ses fils (Harold Harefoot, Harthacnut). La dynastie danoise s\'éteint en 1042 avec la mort de Harthacnut. La maison de Wessex revient avec Édouard le Confesseur (1042-1066), mais celui-ci est dominé par les Godwin et ne parvient pas à restaurer l\'autorité royale. Le jeu féodal reprend sans codification — un nouveau cycle pourrait s\'amorcer, mais la conquête normande de 1066 interrompt définitivement cette première phase féodale. C\'est un reboot : le remplacement intégral de l\'aristocratie par les Normands détruit le substrat social sur lequel un pacte aurait pu se former et remet les compteurs à zéro.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'true','start':1035,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale (reboot)','summary':'La seconde phase féodale anglaise commence avec la conquête normande de 1066, qui remplace intégralement l\'aristocratie anglo-saxonne par une noblesse normande francophone et introduit un nouveau système féodal. Elle se décompose en deux sous-phases : une longue coagulation des élites (1066-1307), ponctuée par trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l\'Anarchie, Jean sans Terre), où l\'homogénéisation est accélérée par la perte de la Normandie (1204) ; puis une bascule oligarchique (1307-~1327) sous Édouard II, dont la faiblesse permet aux barons — désormais homogènes à l\'échelle anglaise — d\'imposer les Ordonnances de 1311.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'+61 ans (~261 ans). Expliqué par deux facteurs. D\'abord, l\'hétérogénéité culturelle introduite par la conquête normande : les élites francophones et la population anglophone ne fusionnent que progressivement. Ensuite, l\'Empire Plantagenêt d\'Henri II élève l\'échelle du royaume (Angleterre + Normandie + Anjou + Aquitaine), ce qui repousse le seuil d\'homogénéité requis pour le pacte. Ce n\'est qu\'après la perte de la Normandie en 1204, qui ramène l\'échelle au niveau anglais, que l\'homogénéisation peut s\'achever et que les conditions du pacte deviennent atteignables.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — les Ordonnances de 1311 codifient les pouvoirs du roi et les droits des barons, marquant le passage d\'un pouvoir personnel à un pouvoir encadré par des règles institutionnelles.','resolution_conditions':'Les deux conditions du pacte (Deblonde) sont enfin réunies simultanément sous Édouard II : (1) homogénéité des élites à l\'échelle du royaume, acquise progressivement après la perte de la Normandie (1204) qui force les barons à se penser comme anglais ; (2) moment de faiblesse du souverain, fourni par l\'incompétence d\'Édouard II et sa dépendance envers ses favoris.','avortement':'','start':1066,'end':1327,'start_approx':false,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','summary':'De Guillaume le Conquérant à Édouard Ier. Trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l\'Anarchie, Jean sans Terre). L\'homogénéisation progresse lentement — accélérée par la perte de la Normandie (1204) qui force les barons à se penser comme anglais.','description':'La coagulation des élites post-normandes s\'étend sur 241 ans, soit bien au-delà de la durée typique, en raison de deux facteurs qui retardent l\'homogénéisation. D\'abord, la conquête normande introduit une hétérogénéité culturelle profonde entre l\'aristocratie francophone et la population anglophone — une fracture qui mettra des générations à se résorber. Ensuite, l\'Empire Plantagenêt d\'Henri II élève l\'échelle du royaume en englobant des territoires continentaux (Normandie, Anjou, Aquitaine), ce qui repousse le seuil d\'homogénéité requis pour un pacte bien au-delà du cadre anglais. Le mécanisme est celui de l\'alternance entre pics et crises avortées : Henri Ier porte le pouvoir personnel à un sommet, mais l\'Anarchie qui suit sa mort ne produit pas de pacte ; Henri II reconstruit un édifice encore plus impressionnant, mais la crise sous Jean sans Terre avorte elle aussi. Le tournant est la perte de la Normandie en 1204 : en privant les barons de leurs terres continentales, Philippe Auguste les force à choisir l\'Angleterre et à se penser comme anglais — ce qui lance enfin l\'homogénéisation à l\'échelle du royaume. Il faut encore un siècle (1204-1307) pour que cette homogénéisation aboutisse. Édouard Ier porte le dernier pic féodal vers 1295, exactement contemporain de Philippe le Bel en France.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1066,'end':1307,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','summary':'Guillaume le Conquérant remplace intégralement l\'aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal et réalise le Domesday Book. C\'est l\'éveil féodal de la seconde phase — le moment où un nouveau jeu commence.','description':'Guillaume redistribue toutes les terres, remplace l\'aristocratie anglo-saxonne par une noblesse normande francophone, et impose un nouveau système féodal fondé sur la vassalité directe au roi. Le Domesday Book (1086) recense systématiquement les terres et les revenus du royaume — un instrument de contrôle sans équivalent en Europe à cette date. Les outils administratifs anglo-saxons (shires, hundreds, writs, Danegeld) sont préservés et intégrés au nouveau système, donnant à la monarchie normande une avance institutionnelle considérable sur les autres royaumes européens. L\'hétérogénéité culturelle introduite par la conquête — élites francophones, population anglophone — est profonde et retardera la formation d\'une conscience de classe commune nécessaire au pacte oligarchique.','figure':'Guillaume le Conquérant','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1066,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Henri Ier crée l\'Échiquier comme instrument fiscal permanent, réunifie l\'Angleterre et la Normandie sous une seule couronne, et impose une paix royale remarquable. Le pouvoir est à son sommet — mais il est personnel.','description':'Henri Ier (1100-1135) développe l\'Échiquier comme instrument fiscal permanent et impose une paix royale remarquable. Il réunifie l\'Angleterre et la Normandie sous une seule couronne. Mais la mort de son fils dans le naufrage de la Blanche-Nef (1120) ouvre une crise de succession qui, à sa mort en 1135, dégénère en guerre civile entre Étienne de Blois et Mathilde. L\'Anarchie qui suit démontre que le pouvoir reposait encore entièrement sur la personne du suzerain — marqueur classique du pic féodal.','figure':'Henri Ier','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1120,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'L\'Anarchie','summary':'Dix-neuf ans de guerre civile entre Étienne de Blois et Mathilde l\'Emperesse. La faiblesse du souverain est présente, mais l\'homogénéité des élites ne l\'est pas — d\'autant que l\'Empire Plantagenêt est sur le point de se former, élevant l\'échelle bien au-delà du cadre anglais.','description':'L\'Anarchie (1135-1154) est une guerre civile entre Étienne de Blois et Mathilde l\'Emperesse. Les barons jouent les deux camps, construisent des châteaux sans autorisation, et l\'autorité royale s\'effondre. C\'est un moment de faiblesse du souverain — la première condition du pacte est remplie. Mais la seconde condition — l\'homogénéité des élites à l\'échelle du royaume — fait défaut. Les barons anglo-normands, rejoints par les Angevins (Mathilde est mariée à Geoffroy Plantagenêt), sont trop hétérogènes pour former une conscience de classe. De plus, Henri II Plantagenêt, qui émerge comme le nouveau roi fort, est sur le point de constituer un empire couvrant l\'Angleterre, la Normandie, l\'Anjou et l\'Aquitaine — ce qui élèvera encore le seuil d\'homogénéité requis. La faiblesse sans homogénéité produit le chaos, puis un nouveau pic féodal.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'true','start':1135,'end':1154,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Mais il constitue simultanément l\'Empire Plantagenêt (Angleterre + Normandie + Anjou + Aquitaine), ce qui augmente l\'échelle du royaume et repousse le seuil d\'homogénéité requis pour un pacte.','description':'Henri II Plantagenêt (1154-1189) est un roi d\'une énergie exceptionnelle qui porte le pouvoir personnel à un nouveau sommet. Il développe le common law par les Assises de Clarendon (1166) et de Northampton (1176), met en place un réseau de juges itinérants qui unifient la justice royale sur tout le territoire, et tente d\'affirmer l\'autorité laïque sur l\'Église — ce qui le conduit au conflit fatal avec Thomas Becket, assassiné en 1170. Mais Henri II ne gouverne pas seulement l\'Angleterre : il est le maître d\'un empire qui s\'étend de l\'Écosse aux Pyrénées, couvrant la Normandie, le Maine, l\'Anjou, la Touraine, le Poitou et l\'Aquitaine. Cette augmentation d\'échelle est décisive pour le Parcours. Le pacte oligarchique, s\'il devait se produire, devrait maintenant se former à l\'échelle impériale — or les barons anglais, normands, angevins et aquitains ne forment en rien une classe homogène. L\'Empire Plantagenêt éloigne la possibilité du pacte en élevant le seuil bien au-delà de ce que l\'homogénéité des élites peut atteindre. Ce n\'est qu\'après la destruction de l\'empire par Philippe Auguste que le seuil redescendra au niveau anglais.','figure':'Henri II Plantagenêt','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1170,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','summary':'Jean sans Terre ruine le système Plantagenêt : perte de la Normandie (1204), Magna Carta imposée (1215), guerre civile. Crise féodale avortée — l\'homogénéité est encore insuffisante.','description':'Jean sans Terre (1199-1216) ruine activement l\'édifice construit par Henri II et Richard. En 1204, Philippe Auguste lui confisque la Normandie, le Maine, l\'Anjou et le Poitou — l\'Empire Plantagenêt continental est détruit. En 1215, les barons en révolte imposent la Magna Carta à Runnymede, qui ressemble à un pacte oligarchique mais n\'en est pas un : Jean la répudie immédiatement, le Pape l\'annule, et la Première guerre des Barons (1215-1217) s\'ensuit. La crise ne débouche pas sur un pacte parce que les conditions ne sont pas réunies : les barons sont encore en transition identitaire (la perte de la Normandie vient juste de les forcer à se penser comme anglais plutôt que normands). Paradoxalement, cette crise accélère l\'homogénéisation : la perte des terres continentales force les barons à choisir l\'Angleterre, ce qui construit progressivement la conscience de classe nécessaire au futur pacte. Il faudra encore un siècle (1204→1311) pour que cette homogénéisation aboutisse.','figure':'Jean sans Terre','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'true','start':1205,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Édouard Ier atteint le sommet de son pouvoir vers 1295 avec le Parlement modèle, les Statuts de Westminster et le Quia Emptores, portant l\'autorité royale personnelle à un niveau sans précédent. Le parallèle avec Philippe le Bel, exactement contemporain, est frappant.','description':'Le pic féodal anglais se situe vers 1295, lorsque Édouard Ier convoque le Parlement modèle qui réunit pour la première fois lords spirituels et temporels, chevaliers des comtés et bourgeois des villes dans une même assemblée. Les Statuts de Westminster (1275, 1285) et le Quia Emptores (1290) rationalisent le droit féodal et renforcent la position de la Couronne. Le parallèle avec Philippe le Bel en France est remarquable : les deux règnes sont exactement contemporains, les deux souverains s\'appuient sur des légistes personnels pour imposer un pouvoir sans précédent, et dans les deux cas l\'édifice se fragmente à la mort du roi. Ce synchronisme suggère que les deux Parcours, bien que décalés dans leur point de départ (1066 vs ~1108), convergent à ce stade de leur développement, probablement parce que l\'Angleterre post-normande bénéficiait d\'une avance institutionnelle héritée de l\'appareil anglo-saxon. Sous Édouard Ier, les deux conditions du pacte sont presque réunies : l\'homogénéité est acquise à l\'échelle anglaise, mais le roi est trop fort pour que les barons puissent imposer quoi que ce soit. L\'homogénéité sans la faiblesse produit des aventures extérieures et des tensions croissantes — le pacte attend le moment de faiblesse.','figure':'Édouard Ier','confidence':'medium','alternatives':'Dans certaines lectures, Édouard Ier est identifié comme le premier monarque oligarchique plutôt que le pic féodal. Argument Deblonde : son pouvoir est PERSONNEL — ses administrateurs sont ses créatures, pas une classe autonome. À sa mort, le système se fragmente.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1295,'end':null,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Bascule oligarchique','summary':'La mort d\'Édouard Ier en 1307 ouvre une crise profonde sous Édouard II, roi faible et dépendant de ses favoris. Cette fois, les deux conditions du pacte sont réunies simultanément : l\'homogénéité des élites à l\'échelle anglaise (acquise après 1204) et le moment de faiblesse du souverain. Les barons imposent les Ordonnances de 1311 — premier pacte oligarchique anglais.','description':'Édouard II hérite en 1307 d\'un royaume dont la puissance reposait entièrement sur la personne de son père. Son règne est un désastre : il s\'aliène immédiatement les barons en élevant son favori Pierre Gaveston, qui est finalement capturé et exécuté par les lords en 1312. Le désastre militaire de Bannockburn en 1314, où l\'armée anglaise est écrasée par les Écossais de Robert Bruce, achève de discréditer le roi. Puis les Despensers, nouveaux favoris, provoquent une rébellion menée par la reine Isabelle et Roger Mortimer, qui déposent et assassinent Édouard II en 1327. C\'est le moment où les deux conditions du pacte (Deblonde) convergent enfin : les élites anglaises, homogènes à l\'échelle du royaume depuis la fusion culturelle post-1204, font face à un souverain manifestement faible. Contrairement à l\'Anarchie de 1135 — où la faiblesse existait mais pas l\'homogénéité — et contrairement au règne d\'Édouard Ier — où l\'homogénéité existait mais pas la faiblesse —, la conjonction des deux conditions permet cette fois la formation du pacte.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1307,'end':1327,'start_approx':false,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','summary':'Le règne d\'Édouard II concentre tous les marqueurs de la crise féodale : roi faible, favoris impopulaires, défaite militaire humiliante à Bannockburn, et finalement déposition et assassinat du souverain en 1327. Cette fois, la crise ne boucle pas — elle produit le pacte.','description':'Édouard II règne de 1307 à 1327 et incarne la crise féodale dans sa forme la plus brutale. Son incapacité à gouverner sans favoris — d\'abord Gaveston, puis les Despensers — démontre qu\'il ne dispose pas du charisme personnel nécessaire pour maintenir l\'édifice construit par son père. La défaite de Bannockburn en 1314 détruit le prestige militaire de la Couronne en Écosse. Les barons, conscients que le pouvoir royal personnel est défaillant, comprennent la nécessité de codifier les règles du pouvoir pour empêcher qu\'un favori ne s\'arroge l\'autorité royale. La déposition d\'Édouard II en 1327 — premier roi anglais déposé par ses propres barons — constitue un précédent constitutionnel majeur qui fonde la conscience oligarchique : le roi n\'est pas au-dessus des règles, il peut être destitué s\'il les viole.','figure':'Édouard II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1307,'end':1327,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','summary':'Les Ordonnances de 1311, imposées par les Lords Ordainers à Édouard II, constituent le premier pacte oligarchique anglais en codifiant explicitement les contraintes pesant sur l\'exécutif royal — contrôle des nominations, des finances et de la politique étrangère par les barons.','description':'En 1311, un comité de vingt et un Lords Ordainers impose à Édouard II un ensemble de quarante et une ordonnances qui codifient pour la première fois les rapports entre la Couronne et les barons. Ces ordonnances exigent le consentement baronial pour les nominations royales, le contrôle parlementaire des finances et l\'approbation des campagnes militaires par le Parlement. C\'est un moment charnière au sens de Deblonde : les élites ne se contentent plus de résister personnellement au roi — elles codifient les règles de l\'exécutif dans un document formel. Le passage d\'une légitimité personnelle à une légitimité institutionnelle est précisément ce qui définit la bascule oligarchique. L\'analogie avec les États généraux de 1317 en France est directe : dans les deux cas, la mort ou la faiblesse du roi fort pousse les grands à formaliser des règles qui encadrent désormais le pouvoir royal. Et dans les deux cas, la condition préalable était la même : une homogénéité des élites suffisante à l\'échelle du royaume pour qu\'elles puissent agir collectivement.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1311,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','summary':'La phase oligarchique anglaise s\'étend de l\'avènement d\'Édouard III en 1327 jusqu\'à la victoire d\'Henri Tudor à Bosworth en 1485. Elle traverse la séquence complète — essor, polarisation et guerre sociale — dans une durée plus courte que la norme, facilitée par la géographie insulaire et la compacité du territoire.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'-42 ans (~158 ans). La géographie insulaire protège l\'Angleterre des invasions continentales, et la compacité du territoire facilite la centralisation. De plus, la phase féodale prolongée avait déjà fait avancer le travail institutionnel — l\'Échiquier, le common law, le Parlement — au-delà de ce qui est typique à ce stade.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1327,'end':1485,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','summary':'Édouard III exploite les institutions héritées de la phase féodale — Échiquier, common law, Parlement — pour projeter la puissance anglaise vers la France dans la Guerre de Cent Ans, portant le prestige du royaume à son maximum avec les victoires de Crécy et de Poitiers et la fondation de l\'Ordre de la Jarretière.','description':'L\'essor oligarchique anglais est remarquablement vigoureux. Édouard III dispose dès son accession d\'un appareil étatique fonctionnel — l\'Échiquier gère les finances, les tribunaux de common law administrent la justice, le Parlement vote les impôts selon des procédures établies — et il s\'en sert pour projeter la puissance anglaise vers l\'extérieur. La Guerre de Cent Ans, lancée en 1337, sert de soupape pour les tensions internes en offrant à la noblesse des perspectives de conquête et de butin. Les victoires de Crécy (1346) et de Poitiers (1356), l\'Ordre de la Jarretière fondé en 1348 et le Traité de Brétigny (1360) qui accorde d\'immenses territoires en France portent le prestige anglais à son apogée. Mais Édouard III, malgré toute sa puissance, dépend du Parlement pour la fiscalité de guerre — c\'est le marqueur d\'un pouvoir oligarchique, non absolu.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1327,'end':1377,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','summary':'Édouard III est le premier roi d\'Angleterre dont le pouvoir s\'exerce dans un cadre institutionnel codifié par le pacte oligarchique de 1311, avec un appareil étatique permanent — Échiquier, tribunaux de common law, Parlement — qui fonctionne indépendamment de la personne du roi.','description':'Édouard III accède au trône en 1327, après la déposition de son père, dans un contexte où les règles du jeu politique ont été profondément transformées par les Ordonnances de 1311 et le précédent de la déposition royale. Il dispose d\'un appareil étatique permanent dont le fonctionnement ne dépend plus de la seule personne du souverain : l\'Échiquier collecte les revenus, les tribunaux de common law administrent une justice unifiée sur tout le territoire, et le Parlement — dont les procédures sont désormais établies — vote les impôts et légifère en partenariat avec la Couronne. C\'est ce cadre institutionnel qui distingue Édouard III de son grand-père Édouard Ier : là où celui-ci gouvernait par la force de sa personnalité et de ses créatures, Édouard III gouverne dans un système de règles codifiées dont il ne peut s\'affranchir. La preuve en est que le Parlement conditionne systématiquement les levées d\'impôts à des concessions politiques — un rapport de force institutionnel, non personnel.','figure':'Édouard III','confidence':'medium','alternatives':'Dans certaines lectures, Édouard Ier est le premier monarque oligarchique. Argument Deblonde : Édouard Ier est le pic féodal (pouvoir personnel), Édouard III est le premier roi à gouverner dans un cadre institutionnel codifié par les Ordonnances de 1311 et la pratique parlementaire.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1327,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pic oligarchique','summary':'Édouard III atteint le sommet de sa puissance vers 1350 avec les victoires de Crécy et de Poitiers, le Traité de Brétigny et la fondation de l\'Ordre de la Jarretière, portant le prestige de la monarchie oligarchique anglaise à son maximum.','description':'Le pic oligarchique anglais se situe vers 1350, lorsque convergent les victoires militaires et le prestige institutionnel d\'Édouard III. La victoire de Crécy en 1346 démontre la supériorité tactique de l\'armée anglaise, la bataille de Poitiers en 1356 voit la capture du roi de France Jean II le Bon, et le Traité de Brétigny en 1360 accorde à l\'Angleterre d\'immenses territoires en France en pleine souveraineté. L\'Ordre de la Jarretière, fondé en 1348, symbolise l\'éclat chevaleresque de la cour. Mais ce pouvoir, aussi impressionnant soit-il, reste oligarchique : Édouard III ne peut lever d\'impôts sans le consentement du Parlement, et sa politique étrangère est conditionnée par les ressources que les communes acceptent de lui accorder. Après ce pic, le déclin s\'amorce avec la mort du Prince Noir en 1376 et le vieillissement du roi.','figure':'Édouard III','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1350,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','summary':'La mort du Prince Noir en 1376, le vieillissement d\'Édouard III et la perte progressive des territoires français ferment la soupape extérieure qui canalisait les tensions entre élites, ouvrant la voie à la polarisation intérieure.','description':'Le Prince Noir, fils aîné d\'Édouard III et héritier du trône, meurt en 1376 après une longue maladie. Édouard III, sénile et dominé par sa maîtresse Alice Perrers, s\'éteint l\'année suivante. Les territoires conquis en France sont progressivement perdus : le Traité de Brétigny est de facto caduc, et les campagnes de Charles V de France reconquièrent la majeure partie des possessions anglaises sur le continent. La soupape extérieure qui avait permis de canaliser les ambitions de la noblesse vers la France et le butin se ferme. Sans cette valve d\'expansion, les tensions entre factions d\'élites qui couvaient pendant l\'essor vont se retourner vers l\'intérieur et structurer la polarisation qui mène aux Guerres des Roses.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1377,'end':null,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','summary':'Richard II tente une autocratie personnelle et se fait déposer par Henri Bolingbroke en 1399, ouvrant la dynastie Lancaster. Henri V réunit temporairement le royaume autour de la victoire d\'Azincourt en 1415, mais la faiblesse d\'Henri VI rouvre les fractures et cristallise deux factions rivales — Lancaster et York — dont l\'affrontement devient inévitable.','description':'La polarisation des élites anglaises se structure autour de deux factions dont les contours se précisent progressivement. Richard II (1377-1399) tente d\'imposer un pouvoir personnel en s\'appuyant sur un réseau de favoris, mais il est déposé par Henri Bolingbroke, duc de Lancaster, qui devient Henri IV. La dynastie Lancaster s\'appuie sur le patronage de cour et les ressources de l\'État central pour maintenir un réseau de fidélité — ce qui en fait la faction prébendière au sens weberien. Henri V (1415) parvient à unifier temporairement le royaume grâce à la victoire spectaculaire d\'Azincourt et à la conquête de la Normandie, mais sa mort prématurée en 1422 laisse le trône à Henri VI, un roi faible et probablement atteint de maladie mentale. La faction York, menée par Richard d\'York, regroupe les grands magnats terriens dont la puissance repose sur leurs domaines fonciers — c\'est la faction patrimoniale. Le conflit entre ces deux maisons, exacerbé par la perte des dernières possessions françaises en 1453 qui ferme définitivement la soupape extérieure, évolue inexorablement vers la guerre ouverte.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1377,'end':1455,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','summary':'Les Guerres des Roses constituent la guerre sociale du Parcours anglais, un affrontement de trente ans entre York et Lancaster dont ni l\'un ni l\'autre ne sort définitivement vainqueur, ce qui permet l\'émergence d\'Henri Tudor comme figure tierce à Bosworth en 1485.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1455,'end':1485,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','summary':'Les Guerres des Roses opposent la faction Lancaster (prébendière, patronage de cour) à la faction York (patrimoniale, grands domaines fonciers) dans un conflit qui décime les deux camps et permet l\'émergence d\'Henri Tudor comme tiers à Bosworth.','description':'Les Guerres des Roses, qui s\'étendent de la première bataille de Saint-Albans en 1455 à la bataille de Bosworth en 1485, constituent la guerre sociale du Parcours anglais. La faction Lancaster, appuyée sur le patronage royal et les ressources de l\'État central, affronte la faction York, dont la puissance repose sur d\'immenses domaines fonciers dans le nord et l\'ouest de l\'Angleterre. Le conflit connaît de multiples renversements — Édouard IV d\'York prend le pouvoir en 1461, est brièvement renversé en 1470, le reprend en 1471 — et décime la noblesse des deux camps. Conformément au schéma classique de la guerre sociale, ce n\'est ni Lancaster ni York qui l\'emporte in fine, mais Henri Tudor, figure tierce dont la légitimité dynastique est ténue — il est gallois, descendant par les femmes des Lancaster et allié par mariage aux York. Sa victoire à Bosworth en 1485 résout l\'impasse en installant au pouvoir un homme qui n\'est pleinement identifié à aucune des deux factions.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1455,'end':1485,'start_approx':true,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','summary':'La phase absolutiste anglaise s\'étend de l\'accession d\'Henri VII Tudor en 1485 jusqu\'au déclenchement de la guerre civile en 1642. Elle traverse la séquence complète — absolutisation rapide sous les Tudors, impérialisme absolutiste sous Élisabeth, puis Ancien Régime sous les Stuarts — dans une durée plus courte que la norme.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'-43 ans (~157 ans). La géographie insulaire facilite le contrôle du territoire, l\'absolutisation est accélérée par l\'énergie destructrice de la Réforme henricienne, et la transition dynastique Tudor-Stuart affaiblit prématurément le système.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1485,'end':1642,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','summary':'Henri VII brise le pouvoir des magnats issus des Guerres des Roses et reconstruit le fisc royal, puis Henri VIII accomplit l\'absolutisation la plus radicale de l\'histoire anglaise en rompant avec Rome, en dissolvant les monastères et en écrasant la dernière révolte oligarchique du Pilgrimage of Grace.','description':'L\'absolutisation anglaise est remarquablement rapide et brutale. Henri VII (1485-1509) commence par briser méthodiquement le pouvoir des grands magnats survivants des Guerres des Roses, utilisant la Chambre étoilée comme instrument de justice royale et accumulant un trésor considérable grâce à une fiscalité agressive gérée par des administrateurs professionnels — Empson et Dudley — qui ne doivent rien à la noblesse traditionnelle. Henri VIII (1509-1547) porte l\'absolutisation à son paroxysme : l\'Acte de Suprématie de 1534 fait du roi le chef de l\'Église d\'Angleterre, rompant avec Rome et fusionnant le pouvoir politique et religieux en une seule personne. La dissolution des monastères entre 1536 et 1541 constitue la plus grande redistribution de terres depuis la conquête normande, transférant un quart des terres cultivées du royaume à la Couronne puis à une nouvelle classe de propriétaires terriens dépendants du roi. Le Pilgrimage of Grace de 1536, dernière grande révolte des élites du nord contre la politique henricienne, est écrasé sans pitié.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1485,'end':1558,'start_approx':false,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','summary':'Henri Tudor résout les Guerres des Roses en s\'emparant du pouvoir comme figure tierce à Bosworth, puis brise le pouvoir des magnats, reconstruit le fisc et installe une nouvelle dynastie qui concentre le pouvoir au-delà de tout ce que les York ou les Lancaster avaient pu atteindre.','description':'Henri VII est le premier monarque absolu anglais au sens historionomique : il résout la guerre sociale en s\'imposant comme tiers, sans être pleinement identifié à aucune des deux factions. Gallois d\'origine, descendant par les femmes de Jean de Gand et allié aux York par son mariage avec Élisabeth d\'York, il transcende le clivage Lancaster-York. Son programme est classiquement absolutiste : la Chambre étoilée permet une justice royale directe qui court-circuite les tribunaux des magnats, le Conseil privé remplace les assemblées baroniales comme organe de gouvernement, et une fiscalité agressive — confiée à des administrateurs professionnels sans ancrage nobiliaire — remplit le trésor royal. Henri VII brise systématiquement le pouvoir des magnats par des attainders, des amendes et des obligations de caution, créant un vide aristocratique que son fils Henri VIII remplira avec une nouvelle classe de serviteurs de la Couronne.','figure':'Henri VII','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1485,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Dernière grande révolte oligarchique','summary':'Le Pilgrimage of Grace de 1536, soulèvement massif du nord de l\'Angleterre contre la dissolution des monastères et la rupture avec Rome, constitue la dernière tentative des anciennes élites oligarchiques de résister à l\'absolutisation. Son écrasement clôt définitivement la transition.','description':'L\'Acte de Suprématie de 1534 et la dissolution des monastères à partir de 1536 provoquent un soulèvement massif dans le nord de l\'Angleterre, connu sous le nom de Pilgrimage of Grace. Cette révolte mobilise la noblesse terrienne du nord, le clergé régulier et les populations rurales attachées au catholicisme romain et aux structures traditionnelles. C\'est la dernière grande révolte oligarchique du Parcours anglais : les forces sociales qui résistent sont celles de l\'ancien ordre — magnats du nord, monastères, gentry catholique — qui refusent la concentration du pouvoir entre les mains du roi et la destruction de leurs bases économiques et culturelles. Henri VIII négocie d\'abord, puis écrase la rébellion avec une brutalité calculée, exécutant les meneurs et confisquant les terres. Après 1536, aucune faction n\'est plus en mesure de contester le monopole royal du pouvoir, et la dissolution des monastères entre 1536 et 1541 redistribue un quart des terres du royaume, créant une nouvelle classe de propriétaires dont la fortune dépend directement de la Couronne.','figure':'Henri VIII','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1536,'end':null,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','summary':'Le règne d\'Élisabeth Ière porte la puissance absolutiste anglaise à son sommet avec la défaite de l\'Armada espagnole en 1588, l\'expansion coloniale vers la Virginie et les Indes orientales, la domestication de l\'aristocratie à la cour et l\'éclat culturel de l\'ère shakespearienne.','description':'Élisabeth Ière règne de 1558 à 1603 et incarne le pic absolutiste anglais. Elle hérite d\'un appareil étatique considérablement renforcé par son père Henri VIII et sa demi-sœur Marie, et le porte à son maximum de prestige. La défaite de l\'Invincible Armada en 1588 est le moment de gloire suprême : l\'Angleterre, petite île protestante, repousse la plus grande puissance catholique du monde, ce qui transforme la conscience nationale. L\'expansion coloniale s\'amorce avec les premières tentatives de colonisation en Virginie et la fondation de la Compagnie des Indes orientales en 1600. L\'aristocratie est domestiquée par le système du patronage élisabéthain, qui subordonne l\'avancement social à la faveur royale. Shakespeare, Marlowe, Spenser et les autres produisent une littérature d\'une richesse inégalée qui témoigne de la vitalité culturelle du moment. Comme dans tout pic absolutiste, cependant, la réussite même du système porte en elle les germes de son déclin : la concentration du pouvoir autour de la personne de la reine, restée sans héritier, crée une angoisse successorale qui pèse sur les dernières années du règne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1558,'end':1603,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Pic absolutiste','summary':'La défaite de l\'Armada espagnole en 1588, l\'expansion coloniale et l\'éclat culturel de l\'ère shakespearienne portent le prestige de la monarchie absolutiste anglaise à son sommet, avant que la mort d\'Élisabeth en 1603 n\'ouvre la phase de déclin.','description':'Le pic absolutiste anglais se situe vers 1588, autour de la défaite de l\'Armada. Élisabeth Ière concentre entre ses mains un pouvoir considérable : elle contrôle l\'Église anglicane en tant que gouverneur suprême, elle nomme et révoque les officiers royaux à sa guise, et elle domestique l\'aristocratie par un système de patronage qui rend l\'avancement social dépendant de la faveur royale. La victoire sur l\'Armada en 1588 porte le prestige national à son sommet et renforce le sentiment d\'exceptionnalisme anglais. Les premières expéditions coloniales — Raleigh en Virginie, Drake autour du monde — projettent la puissance anglaise outre-mer. L\'éclat culturel de l\'ère shakespearienne complète le tableau. Mais après 1588, le déclin s\'amorce : les guerres d\'Irlande s\'enlisent, la révolte d\'Essex en 1601 révèle les tensions au sein de l\'élite, et l\'absence d\'héritier crée une incertitude dynastique qui ne sera résolue que par l\'accession des Stuarts écossais en 1603.','figure':'Élisabeth Ière','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1588,'end':null,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime','summary':'L\'accession des Stuarts en 1603 ouvre l\'Ancien Régime anglais : une nouvelle dynastie dépourvue de la légitimité institutionnelle des Tudors, confrontée à une société en mutation rapide où un bloc contestataire se forme — puritains et gentry exclue contre le parti de cour — jusqu\'à l\'explosion de la guerre civile en 1642.','description':'La mort d\'Élisabeth en 1603 et l\'accession de Jacques Ier Stuart, roi d\'Écosse devenu roi d\'Angleterre, marquent l\'entrée dans l\'Ancien Régime. Jacques Ier théorise le droit divin des rois dans un contexte où le Parlement anglais a une tradition de participation bien plus robuste que les assemblées écossaises. Ses favoris — Buckingham surtout — monopolisent le patronage royal et aliènent la gentry qui se trouve exclue des circuits de pouvoir. La vente de titres de noblesse dévalue l\'honneur aristocratique. Charles Ier poursuit cette trajectoire en accentuant les tensions : sa « règle personnelle » de 1629 à 1640 — onze ans de gouvernement sans Parlement — ses levées fiscales contestées comme le Ship Money, et les réformes laudiennes qui tentent de rapprocher l\'Église anglicane du catholicisme provoquent la cristallisation d\'un bloc contestataire. Ce bloc réunit les puritains — extrême-gauche structurelle, qui veulent purifier l\'Église et la société — et la gentry exclue du patronage de cour — extrême-droite structurelle, nostalgique d\'un ordre antérieur où elle avait sa place. Face à eux, le bloc élitaire de cour — les bénéficiaires du système Stuart — tient le centre. La tentative de Charles Ier d\'imposer le Prayer Book aux Écossais en 1637 provoque la révolte des Covenanters, qui l\'oblige à rappeler le Parlement, déclenchant la crise finale.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1603,'end':1642,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fin de l\'expansion','summary':'La mort d\'Élisabeth Ière et la succession Stuart en 1603 ferment la soupape d\'expansion élisabéthaine et ouvrent une période de sclérose où le système perd sa capacité à canaliser les tensions internes vers l\'extérieur.','description':'La mort d\'Élisabeth en 1603 clôt l\'ère d\'expansion absolutiste. Jacques Ier, roi d\'Écosse qui hérite du trône anglais, fait la paix avec l\'Espagne en 1604 (Traité de Londres) et adopte une politique étrangère pacifique qui prive la noblesse de la soupape guerrière. L\'expansion coloniale se poursuit — Jamestown en 1607, Plymouth en 1620 — mais elle ne profite pas directement à la Couronne et ne sert pas de ciment politique. La transition dynastique Tudor-Stuart introduit un élément de fragilité fondamentale : les Stuarts n\'ont pas la légitimité institutionnelle construite par les Tudors au fil d\'un siècle de règne, et leur culture politique écossaise — plus autoritaire, moins parlementaire — se heurte à la tradition anglaise de consultation. C\'est le marqueur classique de la fin de l\'expansion : la soupape extérieure se ferme, les tensions internes ne sont plus canalisées, et le système entre dans la sclérose qui précède l\'explosion révolutionnaire.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1603,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale','summary':'La Révolution Nationale anglaise s\'étend du déclenchement de la guerre civile en 1642 à la Glorieuse Révolution de 1688 et traverse l\'intégralité de la séquence typique — explosion de l\'Ancien Régime, expérience parlementaire, phase aiguë, moment thermidorien, Impérialiste Revanchard, Restauration et Glorieuse Révolution — en quarante-six ans, conformément à la norme.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'dans la norme (~46 ans)','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1642,'end':1688,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','summary':'La crise éclate avec le Long Parlement de 1640, qui démantèle les instruments du pouvoir personnel de Charles Ier. La guerre civile, l\'exécution du roi en 1649 et la proclamation du Commonwealth traversent les quatre premières étapes de la Révolution Nationale à un rythme accéléré.','description':'La convocation du Long Parlement en novembre 1640, rendue nécessaire par la révolte écossaise des Covenanters, déclenche un basculement irrésistible. Le Parlement abolit la Chambre étoilée et la Cour de la Haute Commission, exécute le comte de Strafford — principal ministre et homme de confiance de Charles Ier — et impose le Triennial Act. La tentative de Charles Ier d\'arrêter cinq membres du Parlement en janvier 1642 provoque la rupture définitive et le déclenchement de la guerre civile. Le Parlement gouverne pendant la guerre grâce à la New Model Army créée en 1645 sous la direction d\'Oliver Cromwell et Thomas Fairfax. L\'Épuration de Pride en décembre 1648 marque le basculement vers la phase aiguë : les presbytériens modérés sont expulsés, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649 — acte régicide qui radicalise irréversiblement le processus révolutionnaire. Le Commonwealth est proclamé et la monarchie abolie.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1640,'end':1653,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'AR','summary':'Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentative du roi d\'arrêter cinq parlementaires déclenche la guerre civile.','description':'L\'explosion de l\'Ancien Régime anglais commence avec la convocation du Long Parlement en novembre 1640. En quelques mois, le Parlement abolit la Chambre étoilée, supprime la Cour de la Haute Commission, interdit le Ship Money et fait exécuter le comte de Strafford en mai 1641 — principal architecte de la politique de « thorough » de Charles Ier. La rapidité de cet effondrement témoigne de la sclérose avancée du système : les instruments du pouvoir personnel royal, qui avaient fonctionné pendant la règle personnelle de 1629-1640, se révèlent incapables de résister à la pression d\'un Parlement déterminé. La tentative de Charles Ier d\'arrêter cinq membres de la Chambre des communes en janvier 1642 transforme la crise institutionnelle en conflit armé, exactement comme la fuite de Louis XVI à Varennes radicalisa la Révolution française un siècle et demi plus tard.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1640,'end':1642,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','summary':'Le Long Parlement gouverne pendant la guerre civile en s\'appuyant sur ses propres comités et sur la New Model Army, première tentative de substituer un gouvernement parlementaire au pouvoir royal.','description':'L\'expérience parlementaire anglaise de 1640-1648 est la première tentative de gouvernement représentatif en Angleterre. Le Long Parlement crée ses propres organes exécutifs — le Committee of Both Kingdoms coordonne l\'effort de guerre — et lève une armée professionnelle, la New Model Army, en 1645, qui remplace les milices aristocratiques par une force fondée sur le mérite. Cette armée, dirigée par Oliver Cromwell et Thomas Fairfax, remporte les batailles décisives de Marston Moor (1644) et de Naseby (1645). Mais l\'expérience parlementaire se heurte au même écueil que toutes les premières tentatives de ce type : la division entre modérés (presbytériens, qui veulent un accord avec le roi) et radicaux (Indépendants, qui refusent tout compromis) rend le gouvernement instable et prépare la prise de contrôle par l\'aile dure.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1640,'end':1648,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','summary':'L\'Épuration de Pride expulse les modérés du Parlement, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649, et la monarchie est abolie au profit du Commonwealth.','description':'La phase aiguë s\'ouvre avec l\'Épuration de Pride le 6 décembre 1648 : le colonel Pride, sur ordre de l\'armée, expulse physiquement les membres presbytériens modérés de la Chambre des communes. Le Rump Parliament restant, dominé par les Indépendants, met en place un tribunal qui juge Charles Ier pour haute trahison et le condamne à mort. L\'exécution publique du roi le 30 janvier 1649 est un acte d\'une radicalité sans précédent — le premier régicide légal en Europe — qui abolit la monarchie et proclame le Commonwealth. C\'est le moment où l\'extrême-gauche structurelle — les exclus les plus radicaux de l\'ancien système — impose sa vision en éliminant le symbole même de l\'ordre ancien. Mais comme dans toute phase aiguë, cette radicalité porte en elle sa propre réaction.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1648,'end':1649,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Moment thermidorien','summary':'Cromwell dissout le Rump Parliament en avril 1653, mettant fin à l\'expérience parlementaire radicale et rétablissant un pouvoir exécutif fort sous la forme du Protectorat.','description':'En avril 1653, Oliver Cromwell dissout par la force le Rump Parliament, déclarant aux députés restants qu\'ils ne sont plus dignes de siéger. Cet acte met fin à la phase parlementaire radicale du Commonwealth et marque le retour du centre et de la droite au pouvoir, incarnés par l\'armée et son chef. Le Barebones Parliament, brièvement convoqué puis dissous la même année, confirme que la voie parlementaire pure est épuisée. Le moment thermidorien anglais est ainsi le symétrique exact de celui de la France : là où les conventionnels renversent Robespierre le 9 thermidor, c\'est le général Cromwell qui purge le Parlement radical et restaure un pouvoir vertical.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1653,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Impérialiste Revanchard','summary':'Cromwell, devenu Lord Protecteur, incarne la figure de l\'Impérialiste Revanchard : il restaure la verticalité du pouvoir, ventile les élites par la méritocratie militaire, projette la puissance anglaise vers l\'extérieur et unifie administrativement les Îles Britanniques, avant de mourir en 1658 sans successeur capable.','description':'Oliver Cromwell est l\'Impérialiste Revanchard du Parcours anglais, figure autoritaire qui renoue avec la verticalité du pouvoir après le chaos révolutionnaire. Devenu Lord Protecteur en décembre 1653, il gouverne avec l\'appui de l\'armée et d\'un réseau de Major-Generals qui administrent directement les régions — préfiguration du système préfectoral napoléonien. L\'armée elle-même est une machine méritocratique : les officiers sont promus selon leurs capacités, non leur naissance, ce qui ventile les élites en renouvelant la classe dirigeante. Sur le plan extérieur, Cromwell projette la puissance anglaise en conquérant la Jamaïque en 1655, en imposant le respect aux puissances européennes et en unifiant administrativement l\'Angleterre, l\'Écosse et l\'Irlande. Mais comme tout Impérialiste Revanchard, son régime ne lui survit pas : sa mort en 1658 est suivie de l\'effondrement rapide du Protectorat sous son fils Richard, incapable de maintenir l\'allégeance de l\'armée.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1653,'end':1660,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Impérialiste Revanchard','summary':'Cromwell s\'empare du pouvoir en dissolvant le Rump Parliament et en devenant Lord Protecteur, instaurant un régime méritocratique et impérialiste qui projette la puissance anglaise vers les Caraïbes et l\'Europe.','description':'Cromwell devient Lord Protecteur en décembre 1653, après avoir dissous successivement le Rump Parliament et le Barebones Parliament. Son régime combine la restauration de l\'ordre intérieur — les Major-Generals imposent la discipline puritaine dans les régions — avec une projection de puissance extérieure agressive : conquête de la Jamaïque en 1655, guerre contre l\'Espagne, alliance avec la France de Mazarin, victoire de la bataille des Dunes en 1658. L\'armée, fondée sur le mérite et non sur la naissance, constitue le principal vecteur de mobilité sociale et absorbe les tensions de la société post-révolutionnaire. Cromwell est le Bonaparte anglais — avec cette différence qu\'il précède Bonaparte d\'un siècle et demi, confirmant que la séquence de la Révolution Nationale est structurelle et non contingente.','figure':'Oliver Cromwell','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1653,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Restauration','summary':'Charles II est restauré en 1660 dans le cadre de la Déclaration de Breda, qui maintient les acquis fondamentaux de la Révolution tout en rétablissant la monarchie. Mais Jacques II, en tentant de restaurer le catholicisme et l\'absolutisme, provoque la crise finale qui aboutit à la Glorieuse Révolution de 1688.','description':'La Restauration de 1660 ne constitue pas un retour à l\'Ancien Régime Stuart : la Déclaration de Breda garantit la liberté de conscience, le maintien des propriétés acquises pendant la Révolution et l\'amnistie générale. Charles II gouverne avec habileté dans un cadre à base élargie mais pas encore pleinement parlementaire, naviguant entre la cour, le Parlement et la mémoire de la guerre civile. Le Habeas Corpus Act de 1679 et l\'Exclusion Crisis de 1679-1681 — tentative parlementaire d\'exclure le catholique Jacques du trône — montrent que le Parlement dispose désormais d\'un poids politique irréversible. L\'accession de Jacques II en 1685 et sa tentative de restauration catholique — Declaration of Indulgence, nomination de catholiques aux postes clés, rapprochement avec Louis XIV — provoquent la réaction qui aboutit à la Glorieuse Révolution, moment où le parlementarisme s\'ancre définitivement dans la vie politique anglaise.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1660,'end':1688,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','summary':'L\'invitation faite à Guillaume d\'Orange de débarquer en Angleterre, la fuite de Jacques II et l\'adoption du Bill of Rights en 1689 ancrent définitivement la souveraineté parlementaire dans la constitution anglaise.','description':'La Glorieuse Révolution de 1688 est le moment fondateur de la démocratie parlementaire anglaise et, par extension, du modèle parlementaire occidental. Sept lords — les « Immortal Seven » — invitent Guillaume d\'Orange à débarquer en Angleterre pour sauvegarder les libertés protestantes. Jacques II s\'enfuit sans combattre, et le Parlement offre la couronne conjointement à Guillaume et à Marie dans le cadre du Bill of Rights de 1689, qui consacre la souveraineté parlementaire, interdit la suspension des lois par le roi, garantit la liberté de parole au Parlement et exige le consentement parlementaire pour toute levée d\'impôts. C\'est l\'acte qui clôt la Révolution Nationale anglaise et ouvre la phase parlementaire : désormais, la chambre basse est la source ultime du pouvoir politique, et aucune tentative ultérieure — jacobite ou autre — ne parviendra à renverser ce principe.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1688,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'parlementaire','title':'Phase parlementaire','summary':'L\'Angleterre entre dans sa phase parlementaire en 1688, aboutissement de son Parcours de construction nationale, avec le Parlement de Westminster comme source ultime du pouvoir politique à travers les régimes successifs.','description':'Depuis 1688, l\'Angleterre est un État-nation parlementaire où la souveraineté réside dans la Chambre des communes. La monarchie subsiste comme institution, mais le pouvoir effectif passe progressivement aux ministres responsables devant le Parlement. Le système de partis — Whigs et Tories — se structure dès le XVIIIe siècle, et le cabinet ministériel émerge sous Walpole comme organe exécutif responsable devant la chambre basse. Le Reform Act de 1832 élargit le suffrage et consacre le principe selon lequel le pouvoir émane de la représentation nationale. L\'Angleterre est, avec les Pays-Bas, la première nation européenne à achever son Parcours de construction nationale et à entrer en phase parlementaire, ce qui explique son rôle de modèle pour les Révolutions Nationales ultérieures — française, américaine et au-delà.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1688,'end':null,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    let html = `<div class="detail-title">${e.title}</div>`;
+    html += `<span class="detail-kind" style="background:${color}">${kindLabel}</span>`;
+    if (e.phase) html += ` <span style="font-size:0.75rem;color:#666;">${phaseLabel}</span>`;
+    if (e.step) html += ` <span style="font-size:0.75rem;color:#888;">(étape ${e.step})</span>`;
+
+    html += `<div class="detail-meta">`;
+    html += `<div><strong>Dates :</strong> ${dates}</div>`;
+    if (e.figure) html += `<div><strong>Figure :</strong> ${e.figure}</div>`;
+    if (e.confidence) html += `<div><strong>Confiance :</strong> <span class="confidence-badge ${confClass}">${confLabel}</span></div>`;
+    if (e.deviation) html += `<div><strong>Déviation :</strong> ${e.deviation}</div>`;
+    if (e.typical_duration) html += `<div><strong>Durée typique :</strong> ${e.typical_duration}</div>`;
+    if (e.perturbation_type) html += `<div><strong>Type :</strong> ${e.perturbation_type}</div>`;
+    if (e.affected_motor) html += `<div><strong>Moteur affecté :</strong> ${e.affected_motor}</div>`;
+    html += `</div>`;
+
+    if (e.summary) {
+        html += `<div class="detail-section"><div class="detail-section-title">Résumé</div><p>${e.summary}</p></div>`;
+    }
+    if (e.description) {
+        html += `<div class="detail-section"><div class="detail-section-title">Description</div><div class="detail-description">${e.description}</div></div>`;
+    }
+    if (e.alternatives) {
+        html += `<div class="detail-section"><div class="detail-section-title">Alternatives</div><p style="font-style:italic;color:#666;">${e.alternatives}</p></div>`;
+    }
+    if (e.note) {
+        html += `<div class="detail-section"><div class="detail-section-title">Note</div><p style="color:#666;">${e.note}</p></div>`;
+    }
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#c0392b' : '#27ae60';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<div class="detail-section"><div class="detail-section-title">Résolution ${resIcon}</div><p style="color:${resColor};font-weight:600;">${e.resolution}</p></div>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<div class="detail-section"><div class="detail-section-title">Conditions de résolution</div><p style="color:#555;">${e.resolution_conditions}</p></div>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

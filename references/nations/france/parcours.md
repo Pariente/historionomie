@@ -1,11 +1,11 @@
-# Parcours de la France — Hypothèse 3 (Deblonde)
+# Parcours de la France
 
 ## Metadata
 - nation: France
 - territory: Île-de-France → royaume de France
 - start: ~1108
 - status: Phase parlementaire / technocratique
-- hypothesis: H3 — Séquence Deblonde. T0 = Louis VI (~1108). Bascule oligarchique = 1317. Hugues Capet (987) est un précurseur.
+- note: T0 = Louis VI (~1108). Bascule oligarchique = 1317. Hugues Capet (987) est un précurseur.
 - confidence: medium
 
 ---
@@ -23,16 +23,19 @@
 - end: 1328
 - title: Phase féodale
 - typical_duration: ~200 ans
-- summary: La phase féodale française s'étend de l'avènement de Louis VI le Gros, premier Capétien à exercer une autorité effective au-delà de l'Île-de-France, jusqu'à l'extinction des Capétiens directs et l'accession de Philippe VI de Valois en 1328. Elle suit la séquence Deblonde complète, avec coagulation de deux maisons rivales, guerre de sécession, apogée et bascule oligarchique.
+- resolution: Pacte oligarchique — les grands seigneurs codifient collectivement les règles de succession (loi salique, 1317)
+- resolution_conditions: Conscience de classe des seigneurs féodaux (homogénéité culturelle suffisante entre eux pour se percevoir comme un groupe capable d'agir collectivement). Atteinte en France grâce à 200 ans de brassage capétien et à la fusion progressive de l'aristocratie autour de la cour de Paris.
+- summary: La phase féodale française s'étend de l'avènement de Louis VI le Gros, premier Capétien à exercer une autorité effective au-delà de l'Île-de-France, jusqu'à l'extinction des Capétiens directs et l'accession de Philippe VI en 1328. Elle se décompose en deux sous-phases : une longue coagulation des élites (~1108-1314), ponctuée par deux pics féodaux (Philippe Auguste, Philippe le Bel) qui accélèrent l'homogénéisation baronniale, puis une bascule oligarchique rapide (1314-1328) déclenchée par la crise dynastique post-Philippe le Bel.
 - deviation: dans la norme (~220 ans)
 
-### Subphase : Coagulation
+### Subphase : Coagulation des élites
 - type: subphase
 - phase: feodale
 - start: ~1108
-- end: ~1180
-- title: Coagulation
-- summary: Deux grandes « maisons » se cristallisent et s'affrontent pour la prééminence sur l'espace français : les Capétiens, ancrés en Île-de-France et soutenus par l'Église, et les Plantagenêt, maîtres d'un vaste empire allant de l'Angleterre à l'Aquitaine. Louis VI le Gros est le premier chef capétien à exercer une autorité effective au-delà de son domaine.
+- end: 1314
+- title: Coagulation des élites
+- summary: De Louis VI à la mort de Philippe le Bel. Les élites capétiennes s'homogénéisent progressivement à travers deux pics féodaux (Philippe Auguste, Philippe le Bel) qui cristallisent l'opposition baronniale et répandent l'administration.
+- description: La coagulation des élites féodales françaises s'étend sur deux siècles, de l'avènement de Louis VI le Gros jusqu'à la mort de Philippe le Bel en 1314. Le mécanisme central est l'alternance entre pics féodaux — où un suzerain fort impose sa prééminence personnelle et étend les outils administratifs — et les réactions baronniales qui suivent. Chaque pic accélère l'homogénéisation culturelle des élites en les forçant à se positionner par rapport au pouvoir royal : les victoires de Philippe Auguste (Bouvines, 1214) intègrent les barons du nord dans un même espace politique, tandis que l'autoritarisme de Philippe le Bel et de ses légistes pousse les grands du royaume à se percevoir comme un groupe distinct, capable d'agir collectivement. Entre les pics, les croisades de Louis IX projettent le prestige capétien à l'échelle de la chrétienté et renforcent la conscience d'appartenance commune. À la mort de Philippe le Bel, le seuil d'homogénéité est atteint : les élites sont suffisamment coagulées pour que la crise dynastique qui suit débouche sur un pacte plutôt que sur le chaos.
 
 #### Saillant : Éveil féodal
 - type: saillant
@@ -44,40 +47,14 @@
 - summary: Louis VI le Gros est le premier Capétien à exercer une autorité supra-régionale effective, en pacifiant l'Île-de-France et en convoquant avec succès le ban royal en 1124 contre la menace impériale germanique.
 - description: Louis VI le Gros règne de 1108 à 1137 et marque le véritable début du Parcours français en transformant le titre royal capétien en pouvoir effectif. Il commence par soumettre les petits seigneurs pillards de l'Île-de-France — Le Puiset, Montlhéry —, ce qui sécurise le domaine royal et en fait un territoire véritablement administré. En 1124, face à la menace d'invasion de l'empereur Henri V, il convoque le ban et les vassaux de tout le royaume répondent à l'appel, démontrant pour la première fois que le roi capétien peut fonctionner comme un « chef des chefs » reconnu au-delà de son domaine. Son conseiller Suger, abbé de Saint-Denis, théorise cette prééminence royale et construit une idéologie monarchique qui servira les Capétiens pendant des siècles. Louis VI noue également une alliance stratégique avec la bourgeoisie des communes, posant les bases d'un appui social alternatif à la seule fidélité vassalique.
 
-### Subphase : Guerre de sécession
-- type: subphase
-- phase: feodale
-- start: ~1180
-- end: ~1229
-- title: Guerre de sécession
-- summary: La confrontation entre Capétiens et Plantagenêt atteint son paroxysme sous Philippe Auguste, qui confisque la Normandie en 1204 et écrase la coalition anglo-germano-flamande à Bouvines en 1214. Parallèlement, la Croisade des Albigeois (1209-1229) permet de soumettre les maisons méridionales et de rattacher le Midi au royaume.
-- description: Sous Philippe Auguste, la rivalité entre les deux grandes maisons atteint son point de rupture. Le roi capétien confisque la Normandie, le Maine, l'Anjou et le Poitou aux Plantagenêt en 1204, puis écrase la coalition formée par Jean sans Terre, l'empereur Otton IV et le comte de Flandre à la bataille de Bouvines en 1214, victoire qui fait tripler le domaine royal et assoit définitivement la supériorité capétienne dans le nord du royaume. Simultanément, la Croisade des Albigeois (1209-1229), lancée contre les cathares du Languedoc, permet aux barons du nord de soumettre les maisons méridionales indépendantes. C'est la séquence classique de la guerre de sécession féodale : la plus grande maison — les Capétiens — écrase ses challengers au nord comme au sud et s'impose comme la puissance dominante incontestée.
-
-#### Saillant : 1er suzerain fort
+#### Saillant : Pic féodal
 - type: saillant
 - start: 1214
 - figure: Philippe Auguste
-- title: 1er suzerain fort
+- title: Pic féodal
 - confidence: high
 - summary: La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l'Île-de-France et de tripler le domaine royal.
 - description: Philippe Auguste transforme la monarchie capétienne d'une suzeraineté nominale en une puissance territoriale de premier plan. La confiscation de la Normandie en 1204, arrachée aux Plantagenêt, puis la victoire écrasante de Bouvines en 1214 contre une coalition européenne, font tripler le domaine royal et démontrent que le roi de France dispose désormais d'une supériorité militaire décisive sur ses vassaux. Au-delà de ces conquêtes, Philippe Auguste met en place un réseau de baillis royaux sur tout le territoire et fixe le siège de l'administration à Paris, posant les bases du premier appareil étatique permanent en France. Ces innovations institutionnelles préparent la transition vers la phase oligarchique en créant les outils d'un pouvoir central qui ne dépend plus uniquement des liens personnels de vassalité.
-
-### Subphase : Apogée féodale
-- type: subphase
-- phase: feodale
-- start: ~1229
-- end: ~1314
-- title: Apogée féodale
-- summary: La monarchie capétienne atteint son apogée féodale avec les « aventures extérieures » de Louis IX, qui projette le prestige français à l'échelle de la chrétienté, suivies du règne autoritaire de Philippe le Bel, qui porte le pouvoir royal à un niveau sans précédent avant que le système ne se fragilise à sa mort.
-
-#### Saillant : Aventures militaires extérieures
-- type: saillant
-- start: 1248
-- figure: Louis IX
-- title: Aventures extérieures
-- confidence: high
-- summary: Les septième et huitième croisades (1248 et 1270) portent le prestige international de la France à son maximum, faisant de Louis IX l'arbitre moral de la chrétienté tout entière.
-- description: Louis IX, qui règne de 1226 à 1270, incarne la projection extérieure de la puissance féodale capétienne parvenue à maturité. Ses deux croisades — la septième en 1248 vers l'Égypte, la huitième en 1270 vers Tunis où il trouve la mort — sont des aventures militaires coûteuses et largement infructueuses sur le plan territorial, mais elles confèrent au roi de France un prestige international sans précédent, au point qu'il est sollicité comme arbitre dans les conflits entre souverains européens. Sur le plan intérieur, Louis IX renforce l'administration royale par l'envoi d'enquêteurs royaux dans les provinces, ce qui accroît la présence de l'État central sans pour autant remettre en cause la structure féodale du pouvoir. Ce prestige et cet appareil administratif préparent le terrain pour le règne bien plus autoritaire de Philippe le Bel.
 
 #### Saillant : Pic féodal
 - type: saillant
@@ -123,7 +100,9 @@
 - end: 1598
 - title: Phase oligarchique
 - typical_duration: ~200 ans
-- summary: La phase oligarchique s'étend de l'avènement de Philippe VI de Valois en 1328 jusqu'à la résolution des Guerres de Religion par Henri IV en 1598. Elle est considérablement prolongée par la Guerre de Cent Ans, qui interrompt l'essor oligarchique pendant plus d'un siècle et hétérogénéise massivement la société française.
+- resolution: Guerre sociale — ni la Ligue catholique (patrimoniale) ni les Princes protestants (prébendière) ne l'emportent. Henri IV émerge comme tiers et subordonne les anciens réseaux lignagers au pouvoir administratif central.
+- resolution_conditions: Polarisation complète des deux factions, épuisement mutuel après 36 ans de Guerres de Religion, et disponibilité d'un tiers (Henri IV, protestant converti) qui ne s'identifie à aucune faction.
+- summary: La phase oligarchique s'étend de l'avènement de Philippe VI en 1328 jusqu'à la résolution des Guerres de Religion par Henri IV en 1598. Elle est considérablement prolongée par la Guerre de Cent Ans, qui interrompt l'essor oligarchique pendant plus d'un siècle et hétérogénéise massivement la société française.
 - deviation: +81 ans (~281 ans). Guerre de Cent Ans (1337-1453) = prolongement d'environ 80-100 ans → endogène ~180-200 ans.
 
 ### Subphase : Essor oligarchique
@@ -132,16 +111,16 @@
 - start: 1328
 - end: 1337
 - title: Essor oligarchique
-- summary: Philippe VI de Valois, premier roi dont la légitimité repose sur les règles codifiées de la loi salique plutôt que sur la tradition du co-couronnement, commence à exploiter les nouvelles ressources institutionnelles du royaume. Cet essor naissant est brutalement interrompu par le déclenchement de la Guerre de Cent Ans en 1337.
+- summary: Philippe VI, premier roi dont la légitimité repose sur les règles codifiées de la loi salique plutôt que sur la tradition du co-couronnement, commence à exploiter les nouvelles ressources institutionnelles du royaume. Cet essor naissant est brutalement interrompu par le déclenchement de la Guerre de Cent Ans en 1337.
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
 - start: 1328
-- figure: Philippe VI de Valois
+- figure: Philippe VI
 - title: 1er monarque oligarchique
 - confidence: medium
-- summary: Philippe VI de Valois est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique directe des Capétiens.
-- description: Philippe VI de Valois accède au trône en 1328 en vertu de la loi salique fraîchement codifiée, ce qui en fait le premier souverain français dont la légitimité est fondée sur des règles institutionnelles explicites plutôt que sur la succession dynastique directe. Il inaugure la branche des Valois et dispose d'un appareil étatique hérité de Philippe le Bel — baillis, Parlement de Paris, administration fiscale — mais dans un cadre où le pouvoir royal est désormais encadré par les règles adoptées collectivement par les grands du royaume. Son successeur Jean II le Bon achète le Dauphiné en 1349, première extension significative du domaine royal hors du périmètre capétien historique, ce qui montre que l'État central commence à fonctionner comme une machine d'expansion territoriale institutionnalisée.
+- summary: Philippe VI est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique directe des Capétiens.
+- description: Philippe VI accède au trône en 1328 en vertu de la loi salique fraîchement codifiée, ce qui en fait le premier souverain français dont la légitimité est fondée sur des règles institutionnelles explicites plutôt que sur la succession dynastique directe. Il inaugure la branche des Valois et dispose d'un appareil étatique hérité de Philippe le Bel — baillis, Parlement de Paris, administration fiscale — mais dans un cadre où le pouvoir royal est désormais encadré par les règles adoptées collectivement par les grands du royaume. Son successeur Jean II le Bon achète le Dauphiné en 1349, première extension significative du domaine royal hors du périmètre capétien historique, ce qui montre que l'État central commence à fonctionner comme une machine d'expansion territoriale institutionnalisée.
 
 ### Perturbation : Guerre de Cent Ans
 - type: perturbation
@@ -161,15 +140,6 @@
 - title: Essor oligarchique (reprise)
 - summary: Une fois la Guerre de Cent Ans terminée, la monarchie des Valois entreprend une reconstruction vigoureuse du royaume, avec la création de la première armée permanente française sous Charles VII, la centralisation agressive de Louis XI et la projection de puissance vers l'Italie, qui culmine sous François Ier.
 - description: Charles VII, qui règne de 1422 à 1461, reconquiert progressivement le territoire et jette les bases d'un État central modernisé en créant les compagnies d'ordonnance, première armée permanente française, et en rétablissant un fisc efficace grâce à la taille royale. Louis XI poursuit cette dynamique de 1461 à 1483 avec une centralisation agressive : il soumet la Bourgogne après la mort de Charles le Téméraire en 1477 et rattache la Provence et l'Anjou au domaine royal. Les Guerres d'Italie, lancées par Charles VIII en 1494, ouvrent une phase de projection de puissance vers l'extérieur qui canalise les ambitions de la noblesse et porte l'essor oligarchique à son apogée sous François Ier. Cette séquence de reconstruction, centralisation et expansion est typique de la reprise d'un essor oligarchique après un prolongement.
-
-#### Saillant : Aventures extérieures
-- type: saillant
-- start: ~1461
-- figure: Louis XI
-- title: Aventures extérieures
-- confidence: high
-- summary: Louis XI écrase la Bourgogne de Charles le Téméraire en 1477 et rattache plusieurs grandes provinces au domaine royal, tandis que les Guerres d'Italie lancées par Charles VIII en 1494 projettent la puissance française vers l'extérieur dans une dynamique d'expansion caractéristique de l'apogée oligarchique.
-- description: Louis XI, qui règne de 1461 à 1483, incarne la phase d'aventures extérieures de l'essor oligarchique français. Il écrase Charles le Téméraire, duc de Bourgogne, qui meurt à la bataille de Nancy en 1477, et rattache la Bourgogne, la Picardie, la Provence et l'Anjou au domaine royal, réalisant des gains territoriaux considérables qui renforcent massivement l'État central. Son fils Charles VIII lance ensuite les Guerres d'Italie en 1494, inaugurant un demi-siècle de projection de puissance française au-delà des Alpes. Cette dynamique d'expansion sert de soupape pour les tensions internes en offrant à la noblesse des perspectives de conquête et de gloire, un mécanisme que l'on retrouve dans tous les parcours nationaux à ce stade.
 
 #### Saillant : Pic oligarchique
 - type: saillant
@@ -223,6 +193,8 @@
 - end: 1789
 - title: Phase absolutiste
 - typical_duration: ~200 ans
+- resolution: Éclatement de la sédimentation — la Révolution de 1789 brise un Ancien Régime devenu insoutenable (élites sédimentées, surproduction élitaire, crise financière).
+- resolution_conditions: Sédimentation complète des élites (la mobilité sociale est figée), homogénéité culturelle maximale (les Lumières ont diffusé une conscience nationale à l'échelle du pays), formation du bloc contestataire (ED+EG convergent), et crise financière/légitimité du pouvoir central.
 - summary: La phase absolutiste française s'étend de l'Édit de Nantes d'Henri IV en 1598 jusqu'à la Révolution de 1789. Elle suit la séquence classique — absolutisation sous Henri IV et Richelieu, impérialisme absolutiste sous Louis XIV, puis sclérose progressive de l'Ancien Régime — dans une durée de cent quatre-vingt-onze ans, conforme à la norme.
 - deviation: dans la norme (~191 ans)
 
@@ -247,7 +219,7 @@
 - type: saillant
 - start: 1648
 - end: 1653
-- figure: Condé / Parlement de Paris
+- figure: La Fronde
 - title: Dernière grande révolte oligarchique
 - confidence: high
 - summary: La Fronde (1648-1653) est le dernier sursaut de résistance oligarchique contre le pouvoir absolu en construction : les parlementaires puis les princes du sang se soulèvent contre Mazarin pendant la minorité de Louis XIV, mais leur échec clôt définitivement l'absolutisation.
@@ -296,6 +268,8 @@
 - end: 1830
 - title: Révolution Nationale
 - typical_duration: ~25-80 ans
+- resolution: Subordination du pouvoir administratif à la représentation nationale — les Trois Glorieuses (1830) ancrent définitivement le parlementarisme.
+- resolution_conditions: L'IR a échoué (défaite de Napoléon à Waterloo), la Restauration a montré qu'un retour complet à l'ancien ordre est impossible (la Charte de 1814 maintient des acquis), et l'homogénéité culturelle nationale (forgée par la Révolution, le Code civil, la conscription) est suffisante pour soutenir un régime représentatif.
 - summary: La Révolution Nationale française s'étend de la prise de la Bastille en 1789 aux Trois Glorieuses de 1830 et constitue le parcours de référence du modèle historionomique, traversant les sept étapes canoniques en quarante et un ans.
 - deviation: dans la norme (~41 ans)
 
@@ -352,11 +326,11 @@
 - summary: Bonaparte s'empare du pouvoir par le coup d'État du 18 Brumaire et incarne la figure de l'Impérialiste Revanchard : il restaure la verticalité du pouvoir, ventile les élites par la méritocratie, unifie le droit par le Code civil et projette la puissance française à l'échelle de toute l'Europe, avant d'être défait par une coalition exogène à Waterloo en 1815.
 - description: Napoléon Bonaparte est l'Impérialiste Revanchard du Parcours français, figure autoritaire qui renoue avec la verticalité du pouvoir après le chaos révolutionnaire. Il ventile les élites en remplaçant le critère de naissance par le mérite — Légion d'honneur, lycées, préfectures, carrières ouvertes aux talents — ce qui renouvelle la classe dirigeante et absorbe les tensions sociales. Son impérialisme militaire à l'échelle européenne canalise les énergies nationales vers l'extérieur. Mais comme tout Impérialiste Revanchard, sa chute est exogène : c'est la coalition européenne qui le défait à Waterloo en 1815, pas une révolution intérieure.
 
-#### Saillant : Émergence de l'IR
+#### Saillant : Impérialiste Revanchard
 - type: saillant
 - start: 1799
-- figure: Bonaparte / Napoléon
-- title: Émergence de l'IR
+- figure: Bonaparte
+- title: Impérialiste Revanchard
 - confidence: high
 - summary: Le coup d'État du 18 Brumaire le 9 novembre 1799 porte Bonaparte au pouvoir ; il instaure le Consulat puis l'Empire et réalise l'unification juridique définitive du pays par le Code civil, acte fondateur de l'État-nation moderne français.
 - description: Bonaparte s'empare du pouvoir par le coup d'État du 18 Brumaire le 9 novembre 1799, mettant fin au Directoire agonisant. Il instaure d'abord le Consulat, puis se fait couronner empereur en 1804. Sa contribution décisive au Parcours français est la ventilation des élites par la méritocratie — la Légion d'honneur récompense le talent, les lycées forment une nouvelle élite, les préfets administrent rationnellement le territoire — et surtout le Code civil de 1804, qui unifie le droit sur l'ensemble du territoire national et consacre les principes d'égalité civile issus de la Révolution. Cette unification juridique est un acquis irréversible qui survivra à la chute de Napoléon et constitue l'un des héritages les plus durables de la Révolution Nationale française.

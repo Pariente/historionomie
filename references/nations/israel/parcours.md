@@ -17,18 +17,20 @@
 - end: -885
 - title: Phase féodale
 - typical_duration: ~200 ans
-- summary: La phase féodale d'Israël s'étend des Juges à Omri, couvrant la coagulation tribale, l'émergence de la monarchie davidique et la fragmentation post-salomonienne. Elle dure environ 215 ans, ce qui est parfaitement dans la norme endogène.
+- resolution: Émergence d'Omri (-885) et fondation de l'État central en Samarie. Pas de pacte oligarchique identifiable dans les sources — la transition se fait par la construction progressive d'un appareil étatique, pas par un acte ponctuel de codification.
+- resolution_conditions: Épuisement de la compétition féodale post-schisme (45 ans de coups et d'assassinats), homogénéisation culturelle accélérée par la réduction du territoire (perte de la Judée), émergence d'un chef militaire sans attache tribale identifiable (Omri, sar ha-tsava).
+- summary: La phase féodale d'Israël s'étend des Juges à Omri. Elle se décompose en deux sous-phases : une coagulation des élites (~-1100 à ~-930), ponctuée par deux pics féodaux (David, Salomon) qui accélèrent l'homogénéisation tribale, puis une bascule oligarchique (~-930 à -885) déclenchée par le schisme de Roboam et résolue par l'émergence d'Omri. Elle dure environ 215 ans, ce qui est parfaitement dans la norme endogène.
 - deviation: dans la norme (~215 ans)
 - description: Le collapsus de l'Âge du Bronze au XIIe siècle av. J.-C. libère le Levant de la tutelle égyptienne et permet l'installation des Peuples de la Mer sur les côtes (Philistins), tandis que des groupes nomades et semi-nomades se sédentarisent dans les montagnes de Judée et de Samarie. L'homogénéité culturelle est faible : une conscience ethnique et religieuse partagée existe (absence d'ossements de porc, structures architecturales similaires), mais le yahvisme n'est pas encore exclusif et aucun État central n'existe. Le territoire moteur est la Samarie, dont la population est environ quatre fois supérieure à celle de la Judée. La société est organisée en tribus (shevatim), clans (mishpahot) et maisons paternelles (batei avot), avec des anciens (zekenim) siégeant en conseils locaux et des chefs de guerre charismatiques — les Juges — mobilisés en temps de crise sur la base de liens personnels de fidélité, caractéristiques d'une société féodale.
 
-### Subphase : Coagulation
+### Subphase : Coagulation des élites
 - type: subphase
 - phase: feodale
 - start: ~-1100
-- end: ~-1010
-- title: Coagulation
-- summary: Les tribus se polarisent en deux blocs rivaux : les tribus du Nord, regroupées autour de la « maison de Saül/Joseph », et celles du Sud, fidèles à la « maison de David/Juda ».
-- description: Le clivage entre Nord et Sud est antérieur à la monarchie, mais il se cristallise avec le règne de Saül en deux blocs distincts. Au nord, les tribus de Benjamin et d'Éphraïm forment la « maison de Saül/Joseph » ; au sud, Juda constitue la « maison de David ». Cette coagulation est remarquablement rapide — environ 70 ans seulement — parce que le clivage tribal préexiste au Parcours et n'a pas besoin d'être construit ex nihilo.
+- end: ~-930
+- title: Coagulation des élites
+- summary: Des Juges à la mort de Salomon. Les réseaux tribaux se coagulent autour de deux blocs (Nord/Sud), avec deux pics féodaux (David, Salomon) qui accélèrent l'homogénéisation.
+- description: La coagulation des élites israélites s'étend sur environ 170 ans, de l'époque des Juges jusqu'à la mort de Salomon. Le mécanisme central est le même qu'ailleurs : les pics féodaux — moments où un suzerain charismatique impose sa prééminence personnelle — accélèrent l'homogénéisation culturelle en forçant les tribus à se positionner par rapport à un pouvoir central. Saül cristallise la bipolarité Nord/Sud en devenant le premier chef supra-régional ; David la résout temporairement en conquérant Jérusalem comme capitale neutre et en unifiant les tribus sous son autorité contractuelle ; Salomon porte l'édifice à son sommet en construisant le Temple et en développant un réseau commercial ambitieux. Mais chaque pic repose sur la personne du suzerain, et chaque mort du suzerain teste le degré de coagulation atteint. La coagulation est ici remarquablement rapide — environ 170 ans — parce que le clivage tribal préexiste au Parcours et n'a pas besoin d'être construit ex nihilo, et parce que la pression philistine extérieure accélère la solidarité inter-tribale.
 
 #### Saillant : Éveil féodal
 - type: saillant
@@ -39,40 +41,14 @@
 - summary: Saül est le premier « chef des chefs » d'Israël, acclamé roi par les tribus après une victoire militaire contre les Ammonites.
 - description: Saül est acclamé roi après sa victoire militaire contre les Ammonites (1 Samuel 11), devenant ainsi le premier chef supra-régional reconnu par plusieurs tribus. Son pouvoir repose entièrement sur des liens personnels de fidélité et sur son charisme guerrier, sans aucune administration permanente ni appareil fiscal. C'est le marqueur classique de l'éveil féodal : un primus inter pares dont l'autorité dépend de sa personne et de ses succès militaires, non d'institutions durables.
 
-### Subphase : Guerre de sécession
-- type: subphase
-- phase: feodale
-- start: ~-1010
-- end: ~-1003
-- title: Guerre de sécession
-- summary: Après la mort de Saül, David, roi de Juda, affronte Ish-Boshet, fils de Saül et roi du Nord, pendant environ sept ans avant de l'emporter et d'unifier les tribus.
-- description: La mort de Saül à la bataille de Guilboa ouvre une guerre de succession entre les deux maisons féodales. David est oint roi de Juda à Hébron, tandis qu'Ish-Boshet, fils de Saül, est proclamé roi du Nord par le général Abner. Le conflit dure environ sept ans, ponctué de négociations et de trahisons. Abner finit par ouvrir des pourparlers avec David, mais il est assassiné par Joab ; peu après, Ish-Boshet est lui-même assassiné par ses propres officiers. La victoire de David, obtenue autant par la diplomatie que par les armes, met fin à la bipolarité féodale.
-
-#### Saillant : 1er suzerain fort
+#### Saillant : Pic féodal
 - type: saillant
 - start: ~-1003
 - figure: David
-- title: 1er suzerain fort
+- title: Pic féodal
 - confidence: high
 - summary: David est reconnu roi de tout Israël par les anciens du Nord, conquiert Jérusalem comme capitale neutre et écrase les Philistins, devenant le premier suzerain incontesté de l'ensemble des tribus.
 - description: Les anciens du Nord reconnaissent David comme roi de tout Israël par un pacte négocié (brith, 2 Samuel 5:3), ce qui souligne que son autorité n'est pas imposée mais contractuelle — marque d'un suzerain féodal, pas d'un monarque absolu. David conquiert Jérusalem, cité jébusienne située entre Nord et Sud, et en fait sa capitale : c'est un choix politique délibéré, visant à transcender le clivage tribal en s'installant sur un terrain neutre. Il écrase les Philistins et soumet les peuples voisins, consolidant ainsi sa position de chef de guerre charismatique. L'édifice davidique, cependant, reste fondé sur la personne du suzerain et ses liens de fidélité personnelle.
-
-### Subphase : Apogée féodale
-- type: subphase
-- phase: feodale
-- start: ~-1003
-- end: ~-930
-- title: Apogée féodale
-- summary: Les conquêtes de David étendent le territoire à son maximum, et Salomon érige le Temple de Jérusalem comme acte de légitimation symbolique majeure. Mais l'édifice se fragmente à la mort de Salomon, faute de structures institutionnelles durables.
-
-#### Saillant : Aventures extérieures
-- type: saillant
-- start: ~-1000
-- figure: David
-- title: Aventures extérieures
-- confidence: high
-- summary: David mène une série de conquêtes contre Moab, Ammon, Aram-Damas et Édom, portant le territoire sous contrôle israélite à son extension maximale.
-- description: David projette sa puissance vers l'extérieur en soumettant successivement Moab, Ammon, Aram-Damas et Édom. Le territoire sous contrôle davidique atteint son extension maximale, couvrant une zone allant du Sinaï à la Syrie. Ces aventures extérieures sont typiques de l'apogée féodale : le suzerain fort, ayant unifié les tribus, canalise l'énergie guerrière vers l'extérieur. Mais cette expansion reste fragile car elle ne repose sur aucun appareil administratif permanent capable de gouverner durablement des territoires aussi vastes.
 
 #### Saillant : Pic féodal
 - type: saillant
@@ -90,8 +66,8 @@
 - start: ~-930
 - end: -885
 - title: Bascule oligarchique
-- summary: La faiblesse de Roboam provoque le schisme des tribus du Nord, suivi de 45 ans d'instabilité politique marquée par des coups d'État et des rois éphémères, jusqu'à ce qu'Omri fonde enfin un véritable État central en Samarie.
-- description: Le refus de Roboam de réduire la corvée provoque la sécession immédiate des dix tribus du Nord, qui élisent Jéroboam Ier. Mais le Nord traverse ensuite 45 ans d'instabilité chronique — coups d'État, assassinats, rois éphémères (Jéroboam Ier, Nadab, Baasha, Éla, Zimri) — avant qu'Omri ne parvienne à fonder un État central en Samarie. Le « pacte oligarchique » prend ici une forme atypique : dans une société tribale du Xe siècle av. J.-C., la codification de l'exécutif ne passe pas par une charte ou une assemblée, mais par la rupture elle-même. Les tribus du Nord ne codifient pas l'exécutif salomonien — elles le rejettent, ouvrant la voie à la construction d'un nouvel État.
+- summary: Le schisme de -930 est une crise féodale classique. Les 45 ans suivants sont du chaos féodal (coups, assassinats, compétition entre chefs rivaux). Omri (-885) émerge et fonde l'État central en Samarie.
+- description: Le refus de Roboam provoque le schisme — les tribus du Nord acclament Jéroboam Ier, mais cette acclamation est un acte féodal classique (choix d'un chef des chefs, comme Saül ou David avant lui). Les 45 ans qui suivent le confirment : Nadab assassiné par Baasha (d'une autre tribu, Issachar), Baasha règne 22 ans puis son fils Éla est assassiné par Zimri, Zimri renversé par Omri — une compétition entre chefs rivaux, typiquement féodale. C'est Omri (-885) qui résout la bascule en fondant Samarie (capitale neutre, sans attache tribale) et en créant un véritable appareil étatique. Aucun pacte oligarchique n'est identifiable dans les sources pour cette période — la transition se fait sans acte formel de codification.
 
 #### Saillant : Crise féodale
 - type: saillant
@@ -111,6 +87,8 @@
 - end: -641
 - title: Phase oligarchique
 - typical_duration: ~200 ans
+- resolution: Guerre sociale — ni la faction pro-assyrienne (prébendière) ni la faction yahviste (patrimoniale) ne l'emporte. Josias émerge comme tiers et subordonne les réseaux lignagers au pouvoir administratif central.
+- resolution_conditions: Polarisation complète des factions (sous Manassé), épuisement du conflit, déclin de l'Assyrie (qui libère le champ), et disponibilité d'un jeune roi (Josias, 8 ans) qui n'est lié à aucune faction.
 - summary: La phase oligarchique voit l'émergence d'un véritable État central en Samarie sous Omri, son pic de puissance sous Jéroboam II, puis son transfert en Judée après le choc assyrien de -722, et enfin la guerre sociale entre faction pro-assyrienne et faction yahviste, résolue par l'émergence de Josias.
 - deviation: +45 ans, causé par le choc assyrien (-722)
 
@@ -130,15 +108,6 @@
 - confidence: high
 - summary: Omri fonde l'État central du royaume d'Israël en Samarie, marquant le passage décisif d'une société tribale à un véritable État territorial doté d'une administration, d'un fisc et d'une armée permanente.
 - description: Omri transforme le royaume d'Israël en un véritable État territorial centré sur Samarie, avec une administration centrale, une fiscalité organisée et une armée permanente. La stèle de Mesha, source extra-biblique majeure, décrit les conquêtes omrides en Moab, Galaad et Ammon. Son fils Ahab poursuit cette politique par des alliances matrimoniales stratégiques, épousant notamment Jézabel, princesse de Tyr. En -853, lors de la bataille de Qarqar contre l'Assyrie, Ahab déploie 2 000 chars et 10 000 fantassins à 400 km de sa capitale — un effort logistique qui atteste d'un appareil étatique sophistiqué. Les ostraca de Samarie (~-770) confirment l'existence d'un système fiscal permanent et structuré.
-
-#### Saillant : Aventures extérieures
-- type: saillant
-- start: ~-853
-- figure: Ahab
-- title: Aventures extérieures
-- confidence: high
-- summary: Ahab projette la puissance de l'État omride à son maximum lors de la bataille de Qarqar en -853, déployant 2 000 chars et 10 000 fantassins à 400 km de sa capitale, en alliance avec Tyr.
-- description: La bataille de Qarqar (-853) constitue le sommet de la projection de puissance de l'État omride. Ahab y engage 2 000 chars et 10 000 fantassins contre l'armée assyrienne de Salmanazar III, à plus de 400 km de sa capitale — ce qui témoigne d'une capacité logistique et militaire considérable. L'alliance matrimoniale avec Tyr (Jézabel) inscrit le royaume dans un réseau diplomatique et commercial méditerranéen. Cette capacité de projection extérieure est le marqueur caractéristique d'un État oligarchique en plein essor.
 
 #### Saillant : Pic oligarchique
 - type: saillant
@@ -203,6 +172,8 @@
 - end: -586
 - title: Phase absolutiste (interrompue)
 - typical_duration: ~200 ans
+- resolution: AVORTÉE — la résolution (éclatement de la sédimentation) n'est jamais atteinte. La conquête babylonienne (-586) détruit l'État central avant que la phase ait pu se déployer.
+- resolution_conditions: Non atteintes. La phase n'a duré que 54 ans sur les ~200 nécessaires. Josias meurt à Megiddo (-609), et ses successeurs ne parviennent pas à maintenir l'élan.
 - summary: La première phase absolutiste, ouverte par la centralisation radicale de Josias, est brutalement interrompue après seulement 54 ans par la conquête babylonienne de -586, avant d'avoir pu accomplir sa mécanique complète.
 - deviation: Interrompu par la conquête babylonienne
 
@@ -225,6 +196,7 @@
 
 #### Saillant : Destruction du 1er Temple
 - type: saillant
+- avortement: true
 - start: -586
 - title: Destruction du 1er Temple
 - confidence: high
@@ -254,6 +226,8 @@
 - end: -332
 - title: Phase oligarchique (reboot)
 - typical_duration: ~200 ans
+- resolution: AVORTÉE — la guerre sociale est engagée (~-350) mais interrompue par la conquête macédonienne (-332) avant d'être résolue. La polarisation reprend sous le prolongement hellénistique.
+- resolution_conditions: Non atteintes. Les deux factions (pro-achéménide vs nationaliste yahviste) n'ont pas eu le temps d'épuiser leur affrontement. L'intervention extérieure (Alexandre) reshufflle les cartes.
 - summary: Après le retour d'exil, Israël reconstruit son État central autour du Temple, codifie la Torah comme loi suprême et établit un pacte oligarchique par la Knesset HaGuedola. La guerre sociale est engagée mais interrompue par la conquête macédonienne avant d'être résolue.
 - deviation: dans la norme (188 ans, interrompu avant résolution de la guerre sociale)
 - description: Le reboot babylonien fait régresser le Parcours en phase oligarchique, mais la forte homogénéité culturelle préservée par les élites exilées permet un redémarrage remarquablement rapide. La communauté de retour est petite, soudée et dotée d'un cadre juridique et religieux déjà élaboré — la Torah — qui sert de socle à la reconstruction institutionnelle. Le Parcours traverse les sous-phases classiques de l'essor oligarchique et de la polarisation des élites, mais la guerre sociale ne parvient pas à se résoudre avant l'irruption d'Alexandre le Grand en -332.
@@ -274,24 +248,6 @@
 - summary: La création de la Knesset HaGuedola (Grande Assemblée de 120 membres) en -516 constitue le pacte oligarchique par lequel les élites codifient la structure du pouvoir et les rapports entre l'exécutif (le Grand Prêtre) et les différentes composantes de l'élite.
 - description: Le Temple est achevé en -515, et la Knesset HaGuedola — Grande Assemblée de 120 membres — est instituée dès -516. Cette assemblée codifie les rapports entre l'exécutif (le Grand Prêtre), les anciens, les prêtres et les scribes. C'est un pacte oligarchique au sens plein du terme : les élites définissent collectivement la structure de l'exécutif et les règles du jeu politique, ce qui constitue le marqueur d'entrée en phase oligarchique. L'absence de roi n'invalide pas cette identification, car le Parcours est porté par le niveau combiné des deux moteurs, non par la présence d'un saillant monarchique.
 
-#### Saillant : Codification de la Torah
-- type: saillant
-- start: ~-458
-- figure: Esdras
-- title: Codification de la Torah
-- confidence: high
-- summary: Lors de sa mission vers -458, Esdras proclame la Torah loi de la communauté, accomplissant un acte de codification juridique fondamental qui place la loi au-dessus de l'exécutif.
-- description: La mission d'Esdras (~-458) constitue un tournant majeur dans la construction institutionnelle d'Israël. La Torah est solennellement proclamée loi de la communauté devant le peuple assemblé — c'est un acte de codification juridique fondamental. Désormais, la loi est au-dessus de l'exécutif : même le Grand Prêtre est soumis à un cadre normatif qu'il n'a pas le pouvoir de modifier unilatéralement. Ce primat de la loi sur le pouvoir est un marqueur oligarchique fort, comparable à la Grande Charte anglaise ou aux premières codifications capétiennes.
-
-#### Saillant : Reconstruction
-- type: saillant
-- start: -445
-- figure: Néhémie
-- title: Reconstruction
-- confidence: high
-- summary: Néhémie reconstruit les murailles de Jérusalem, annule les dettes et interdit les mariages mixtes entre -445 et -433, renforçant à la fois l'État central et l'homogénéité culturelle de la communauté.
-- description: La mission de Néhémie (-445 à -433) agit simultanément sur les deux moteurs du Parcours. Sur le plan de l'État central, il reconstruit les murailles de Jérusalem — acte à la fois matériel et symbolique de souveraineté — et procède à une annulation des dettes qui rétablit la cohésion sociale. Sur le plan de l'homogénéité culturelle, il interdit les mariages mixtes, renforçant les frontières identitaires de la communauté. Néhémie est comparable à un Louis XI : un reconstructeur pragmatique qui consolide l'État et resserre la cohésion nationale en combinant réformes administratives et mesures d'unification culturelle.
-
 ### Subphase : Polarisation des élites
 - type: subphase
 - phase: oligarchique
@@ -301,14 +257,14 @@
 - summary: Après la mission de Néhémie, les tensions internes montent crescendo — l'assassinat du frère du Grand Prêtre dans le Temple même en témoigne — et deux factions se cristallisent (pro-achéménide vs nationaliste yahviste), mais la guerre sociale naissante est interrompue par la conquête macédonienne de -332.
 - description: Après la fin de la mission de Néhémie en -433, les tensions internes s'intensifient progressivement. Le Grand Prêtre Johanan assassine son propre frère Joshua dans le Temple même (~-400), signe d'un conflit d'élites devenu violent. Bagoas, gouverneur perse, profane le Temple en représailles. Deux factions se cristallisent : la faction pro-achéménide, intégrée aux structures impériales perses, et la faction nationaliste yahviste, attachée à l'autonomie religieuse et politique. La polarisation évolue vers une guerre sociale aux alentours de -350, mais celle-ci est brutalement interrompue par la conquête macédonienne de -332 avant d'avoir pu se résoudre par l'émergence d'un tiers.
 
-#### Saillant : Guerre sociale (interrompue)
+#### Saillant : Invasion macédonienne
 - type: saillant
-- start: ~-350
-- end: -332
-- title: Guerre sociale (interrompue)
-- confidence: medium
-- summary: Le conflit entre la faction pro-achéménide et la faction nationaliste yahviste s'engage vers -350, mais il est interrompu par la conquête d'Alexandre le Grand avant d'avoir pu aboutir à une résolution.
-- description: La guerre sociale de la deuxième phase oligarchique est engagée mais jamais résolue. L'assassinat de Joshua par Johanan dans le Temple lui-même illustre l'intensité du conflit entre les deux factions : les pro-achéménides, intégrés aux circuits impériaux perses, et les nationalistes yahvistes, défenseurs de l'autonomie religieuse. La conquête macédonienne de -332 interrompt ce processus en déstabilisant les deux camps : les circuits achéménides sur lesquels reposait la puissance des prébendières sont détruits, et la société est brutalement exposée à un nouveau cadre culturel — l'hellénisme — qui recompose entièrement les clivages.
+- avortement: true
+- start: -332
+- title: Invasion macédonienne
+- confidence: high
+- summary: La conquête d'Alexandre le Grand interrompt la guerre sociale avant sa résolution et ouvre le prolongement hellénistique.
+- description: La guerre sociale entre faction pro-achéménide et faction nationaliste yahviste était engagée depuis ~-350 (l'assassinat de Joshua par Johanan dans le Temple illustre l'intensité du conflit). Mais la conquête macédonienne de -332 interrompt le processus avant toute résolution : les circuits achéménides sur lesquels reposait la puissance des prébendières sont détruits, et la société est brutalement exposée à un nouveau cadre culturel — l'hellénisme — qui recompose entièrement les clivages. Le Parcours ne régresse pas (les institutions survivent), mais la polarisation reprend à zéro sous le prolongement hellénistique.
 
 ---
 
@@ -321,6 +277,8 @@
 - end: -140
 - title: Phase oligarchique (prolongement)
 - typical_duration: ~200 ans
+- resolution: Guerre sociale — ni les Oniades (patrimoniale) ni les Tobiades (prébendière) ne l'emportent. La dynastie hasmonéenne émerge comme tiers, issue de la révolte populaire des Maccabées.
+- resolution_conditions: La polarisation, prolongée par l'hellénisation constante, finit par se cristalliser quand Antiochus IV force le jeu (persécution religieuse -167). L'intervention extérieure brutale catalyse la résolution que la dynamique interne n'arrivait pas à produire seule.
 - summary: Sous domination hellénistique, les institutions judéennes survivent mais la société est profondément perturbée par l'hellénisation, qui recompose en permanence les factions et empêche la cristallisation de la guerre sociale pendant près de deux siècles.
 - deviation: 192 ans (prolongement causé par la conquête macédonienne)
 - description: La conquête macédonienne ne détruit pas les institutions judéennes — le Grand Prêtre reste en fonction, les assemblées continuent de siéger, le cadre juridique n'est pas aboli — mais elle hétérogénéise profondément la société en l'exposant à la culture grecque. C'est donc un prolongement, non un reboot : le Parcours ne régresse pas, il stagne. Le Parcours reprend là où il était bloqué, c'est-à-dire à la polarisation des élites, mais cette polarisation est massivement prolongée parce que l'hellénisation recompose en permanence les factions. Chaque vague d'intégration au monde grec — réorientation des circuits commerciaux, adoption de la langue grecque, introduction des gymnases et de l'éphébie — désorganise les élites prébendières et les oblige à se reconstituer. Ce n'est que lorsque les factions ont fini de se stabiliser, sous la forme du clivage Oniades vs Tobiades, que la guerre sociale peut enfin éclater et se résoudre.
@@ -361,6 +319,8 @@
 - end: 66
 - title: Phase absolutiste (2e occurrence)
 - typical_duration: ~200 ans
+- resolution: Éclatement de la sédimentation — la Grande Révolte de 66 explose l'Ancien Régime sadducéen devenu insoutenable (sédimentation des élites, pression fiscale, surproduction élitaire).
+- resolution_conditions: Sédimentation complète (les Sadducéens monopolisent le Temple et ses revenus), homogénéité culturelle maximale (alphabétisation synagogale, littérature apocalyptique), formation du bloc contestataire (Pharisiens ED + Zélotes EG vs Sadducéens), et crise de légitimité (brutalité des procurateurs romains).
 - summary: La deuxième phase absolutiste s'étend des Hasmonéens à Hérode et parcourt l'intégralité de la séquence typique — absolutisation, impérialisme absolutiste et Ancien Régime — en 206 ans, durée parfaitement conforme à la norme endogène.
 - deviation: dans la norme (206 ans)
 
@@ -434,6 +394,8 @@
 - end: 70
 - title: Révolution Nationale (avortée)
 - typical_duration: ~25-80 ans
+- resolution: AVORTÉE — la résolution (subordination du pouvoir administratif à la représentation nationale) n'est jamais atteinte. Rome écrase la révolte en 70, détruit le Temple, et provoque un reboot vers la phase absolutiste.
+- resolution_conditions: Non atteintes. La RN est écrasée par une puissance extérieure (6 légions romaines sous Vespasien puis Titus) avant même le moment thermidorien. Le Parcours est interrompu, pas résolu.
 - summary: La Grande Révolte de 66-70 constitue une Révolution Nationale avortée : elle parcourt les trois premières étapes de la séquence typique (explosion, expérience parlementaire, phase aiguë) mais est écrasée par Rome avant d'atteindre le moment thermidorien.
 - deviation: Avortée après 4 ans (écrasée par Rome)
 
@@ -474,6 +436,7 @@
 
 #### Saillant : Écrasement
 - type: saillant
+- avortement: true
 - start: 70
 - title: Écrasement
 - confidence: high
@@ -503,15 +466,26 @@
 - end: 135
 - title: Phase absolutiste (reboot)
 - typical_duration: ~200 ans
+- resolution: AVORTÉE — le Parcours est définitivement interrompu par la liquidation hadrienne (135). Le peuple juif préserve son homogénéité culturelle en exil pendant 1800 ans, permettant une reprise au XIXe siècle.
+- resolution_conditions: Non atteintes. Hadrien déploie 6 légions, rase Jérusalem, interdit le judaïsme. La destruction est si totale que le Parcours ne peut pas reprendre sur ce territoire.
 - summary: Le reboot post-70 fait régresser le Parcours de la RN vers la phase absolutiste. Le vide oligarchique, la présence d'un pouvoir central fort (Rome) et la préservation de l'homogénéité culturelle par l'académie de Yavné créent directement les conditions d'entrée en phase absolutiste, mais celle-ci est définitivement interrompue par la liquidation hadrienne de 135.
 - deviation: Interrompu après 65 ans (liquidation définitive par Hadrien)
 - description: La destruction du Second Temple en 70 anéantit les réseaux du pouvoir central — Temple, Sanhédrin, Grand Sacerdoce, fiscalité autonome — mais l'homogénéité culturelle est préservée et même renforcée par l'académie de Yavné. Yohanan ben Zakkaï y fonde un centre d'étude qui fixe le canon biblique, standardise la liturgie et poursuit la codification halakhique. Cette autorité est purement normative — elle ne repose sur aucune infrastructure matérielle, ce qui la rend indestructible par la force militaire. Le Parcours, après le reboot, entre directement en phase absolutiste car les conditions y sont réunies : le vide oligarchique est total (toutes les anciennes factions sont éliminées), un pouvoir central fort existe (Rome), et l'homogénéité culturelle est au maximum. Mais cette phase n'a le temps de produire qu'un seul saillant — Bar Kokhva — avant d'être définitivement interrompue par Hadrien en 135.
 
-#### Saillant : 1er monarque absolu (du reboot)
+#### Saillant : 1er monarque absolu
 - type: saillant
 - start: 132
 - figure: Bar Kokhva
-- title: 1er monarque absolu (du reboot)
+- title: 1er monarque absolu
 - confidence: high
 - summary: Bar Kokhva prend le titre de Nassi (prince), reçoit l'onction messianique de Rabbi Akiva et exerce un pouvoir absolu sans aucune consultation, incarnant non pas un révolutionnaire national mais un monarque absolu menant une guerre d'indépendance.
-- description: Bar Kokhva s'attribue le titre de Nassi (prince) et reçoit l'onction messianique de Rabbi Akiva, ce qui lui confère une légitimité à la fois politique et religieuse. Son exercice du pouvoir est entièrement absolutiste : frappe monétaire autonome, réquisitions, ordres sans consultation, exécution de Rabbi Éléazar de Modi'in sans procès — preuve que l'exécutif contrôle la hiérarchie ecclésiastique. Il est essentiel de comprendre que Bar Kokhva n'est pas un révolutionnaire national au sens de la RN : c'est un monarque absolu menant une guerre d'indépendance, ce qui correspond exactement à la position du Parcours après le reboot de 70. La révolte est écrasée par Hadrien en 135, mettant fin au Parcours antique d'Israël sur le territoire du Levant.
+- description: Bar Kokhva s'attribue le titre de Nassi (prince) et reçoit l'onction messianique de Rabbi Akiva, ce qui lui confère une légitimité à la fois politique et religieuse. Son exercice du pouvoir est entièrement absolutiste : frappe monétaire autonome, réquisitions, ordres sans consultation, exécution de Rabbi Éléazar de Modi'in sans procès — preuve que l'exécutif contrôle la hiérarchie ecclésiastique. Il est essentiel de comprendre que Bar Kokhva n'est pas un révolutionnaire national au sens de la RN : c'est un monarque absolu menant une guerre d'indépendance, ce qui correspond exactement à la position du Parcours après le reboot de 70.
+
+#### Saillant : Liquidation définitive
+- type: saillant
+- avortement: true
+- start: 135
+- title: Liquidation définitive
+- confidence: high
+- summary: Hadrien écrase la révolte de Bar Kokhva, rase Jérusalem, interdit le judaïsme et renomme la province Syria Palaestina. Le Parcours antique d'Israël est définitivement interrompu.
+- description: Hadrien déploie six légions sous le commandement de Sextus Julius Severus. Betar est capturée, Bar Kokhva tué. Le judaïsme est interdit, Rabbi Akiva exécuté, Jérusalem rasée et rebâtie sous le nom d'Aelia Capitolina, la province renommée Syria Palaestina — une damnatio memoriae à l'échelle d'une province. Le Parcours antique est terminé. Mais l'académie se reconstitue à Ousha puis à Tibériade, Rabbi Yehouda HaNassi rédige la Mishna (fin du IIe siècle), et le peuple juif préserve son homogénéité culturelle pendant 1800 ans en exil — rendant possible la reprise du Parcours au XIXe siècle avec le mouvement sioniste.

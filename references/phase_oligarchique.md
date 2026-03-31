@@ -2,6 +2,8 @@
 
 La phase oligarchique voit l'émergence puis la victoire du pouvoir administratif sur les réseaux féodaux. Son marqueur fondamental : la constitution d'un État central doté d'un impôt permanent, d'une armée permanente et d'une administration centrale.
 
+**Les « égaux » de cette phase** sont les oligarques — les anciens seigneurs féodaux devenus une classe structurée — auxquels viennent s'ajouter de nouvelles élites (bourgeoisie, administration). Le pacte oligarchique de la phase précédente ne peut plus tenir : il y a « trop de monde autour de la table ». **Résolution** : la **guerre sociale** aboutit à la **subordination des anciens réseaux lignagers au pouvoir administratif central**, avec la possibilité de monter socialement en rejoignant l'administration. Un tiers (ni prébendière ni patrimoniale) émerge et impose cette subordination.
+
 La dynamique principale de cette phase est l'affrontement entre deux types d'élites :
 - La **classe patrimoniale** (Weber) : élite dont le revenu repose sur un patrimoine propre, foncier ou productif, indépendant du pouvoir central. Issue de l'aristocratie de la phase féodale, elle est plutôt terrienne, rurale, traditionaliste.
 - La **classe prébendière** (Weber) : élite dont le revenu dépend du pouvoir central — charges, faveurs, accès aux réseaux commerciaux structurés par l'État. Elle est associée au commerce, aux échanges et à l'administration centrale, où le suzerain recrute ses fonctionnaires.
@@ -43,8 +45,7 @@ Le premier souverain qui dispose d'un État central — impôt permanent, armée
 
 **Exemples :**
 - Israël antique : Omri (-885)
-- France (hypothèse Deblonde) : Philippe VI de Valois (1328) — premier roi sous les règles codifiées (loi salique)
-- France (hypothèse alternative) : Philippe Auguste (1180)
+- France : Philippe VI de Valois (1328) — premier roi sous les règles codifiées (loi salique)
 - Angleterre : Édouard Ier (1272)
 
 ### Saillant : Pic oligarchique (milieu de phase environ, position à confirmer)
@@ -53,8 +54,7 @@ En milieu de phase apparaît souvent une figure exécutive particulièrement pui
 
 **Exemples :**
 - Israël antique : Jéroboam II (~-770)
-- France (hypothèse Deblonde) : François Ier (~1515) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses).
-- France (hypothèse alternative) : Philippe le Bel (~1300)
+- France : François Ier (~1515) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses).
 - Angleterre : Édouard III (~1350)
 
 **Note :** Ce saillant est bien identifié mais sa position chronologique précise au sein de la phase (milieu ? premier tiers ?) demande davantage d'exemples pour être stabilisée.

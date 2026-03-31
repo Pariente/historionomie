@@ -2,6 +2,8 @@
 
 La phase absolutiste achève l'élimination des réseaux féodaux et oligarchiques par le pouvoir central. L'administration centrale acquiert une supériorité incontestée, de facto et de jure, sur les administrations locales. Le pouvoir devient moins personnel, plus immanent.
 
+**Les « égaux » de cette phase** sont en théorie l'ensemble de la nation — l'homogénéisation culturelle s'étend progressivement à des couches de plus en plus larges de la population (alphabétisation, langue commune, conscience nationale). Mais l'administration centrale, qui intègre les nouvelles élites, finit par se sédimenter : les places sont prises, la mobilité sociale se fige, les rentes deviennent insupportables. **Résolution** : l'**éclatement de la sédimentation** — la Révolution Nationale brise l'ancien ordre devenu insoutenable.
+
 ## Comment identifier cette phase
 
 ### Test discriminant (absolutiste vs RN)

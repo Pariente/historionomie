@@ -29,7 +29,8 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | `references/phase_parlementaire.md` | Phase parlementaire, technocratique, dominat | La question porte sur les phases post-RN |
 | `references/elites.md` | Matrice 2×2 des élites (prébendières/patrimoniales × gouvernementales/non-gouvernementales), mécanismes d'absolutisation, guerre sociale | La question touche à la dynamique des élites |
 | `references/perturbations.md` | Reboot, prolongement, transfert de territoire, rébellion périphérique | La question touche à un choc externe ou une déviation des durées typiques |
-| `references/nations/*/parcours*.md` | Parcours nationaux déjà mappés (Israël, France, Angleterre, Allemagne) — données structurées pour comparaison et génération d'infographies. Chaque nation peut avoir plusieurs hypothèses (h1, h2) et une synthèse. | Pour comparer avec un parcours connu ou générer une infographie |
+| `references/nations/*/parcours.md` | Parcours nationaux déjà mappés (Israël, France) — données structurées, hypothèse finale retenue | Pour comparer avec un parcours connu ou générer une infographie |
+| `references/nations/*/justification.md` | Justification des choix, hypothèses écartées, questions ouvertes | Pour comprendre le raisonnement derrière le parcours |
 
 ## Workflow : analyser le Parcours d'une nation
 
@@ -81,19 +82,29 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 - Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, chercher un choc externe.
 - Ce choc a-t-il détruit les institutions (→ reboot) ou simplement hétérogénéisé la société (→ prolongement) ?
 
-### Étape 3 : Proposer une analyse argumentée
+### Étape 3 : Produire le fichier `parcours.md`
 
-Présenter l'analyse sous forme de :
+Créer le fichier structuré `references/nations/<nation>/parcours.md` avec :
+- Les phases, sous-phases, saillants et perturbations identifiés
+- Les champs normalisés (type, start, end, title, summary, description, figure, confidence)
+- Des résumés (summary) en 1-2 phrases et des descriptions (description) en 3-6 phrases construites — pas de style télégraphique
 
-1. **Tableau des saillants identifiés** (avec dates et justifications)
-2. **Identification des sous-phases** avec leurs marqueurs
-3. **Perturbations identifiées** et leur effet sur le Parcours
-4. **Comparaison** avec les parcours connus (Israël, France, Angleterre) — les parallèles éclairent et renforcent l'analyse
-5. **Points d'incertitude** — ce qui reste à confirmer, les hypothèses alternatives
+Ce fichier est le **résultat final** — il ne contient que l'hypothèse retenue, pas les débats.
 
-### Étape 4 : Discuter et itérer
+### Étape 4 : Produire le fichier `justification.md`
 
-L'historionomie est une discipline en cours de construction. L'utilisateur peut contester une identification, proposer un saillant alternatif, ou demander d'explorer une hypothèse. Claude doit être prêt à réviser son analyse sur la base d'arguments solides.
+Créer le fichier `references/nations/<nation>/justification.md` qui documente :
+
+1. **Les hésitations** — pour chaque saillant où la confiance n'est pas « high », expliquer pourquoi on a hésité, quelles alternatives ont été envisagées, et pourquoi l'hypothèse retenue a été préférée
+2. **Les hypothèses écartées** — documenter les hypothèses alternatives avec leurs arguments pour et contre (comme les *machlokot* du Talmud : on conserve la trace du débat même quand la décision est prise)
+3. **Les questions ouvertes** — ce qui reste à confirmer, les points qui nécessitent davantage de cas comparatifs
+4. **Les comparaisons** avec les parcours connus (Israël, France) — les parallèles qui éclairent et renforcent (ou affaiblissent) l'analyse
+
+Le fichier de justification est **séparé** du parcours : le parcours est le résultat, la justification est le raisonnement. On peut modifier l'un sans toucher l'autre.
+
+### Étape 5 : Discuter et itérer
+
+L'historionomie est une discipline en cours de construction. L'utilisateur peut contester une identification, proposer un saillant alternatif, ou demander d'explorer une hypothèse. Claude doit être prêt à réviser son analyse sur la base d'arguments solides, et à mettre à jour le parcours ET la justification.
 
 ## Principes importants
 
