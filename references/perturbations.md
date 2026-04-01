@@ -45,27 +45,13 @@ L'effet sur les sous-phases diffère selon le type de perturbation :
 - **Après un reboot**, le Parcours recommence par la **première sous-phase** de la phase de destination, puisque l'État central doit être reconstruit. Exemple : après le reboot de -586, Israël repasse par l'essor oligarchique (-520 à ~-350) avant d'atteindre la guerre sociale.
 - **Après un prolongement**, le Parcours reprend **là où il était bloqué**. Les institutions ayant survécu, il n'est pas nécessaire de repasser par les sous-phases antérieures. Exemple : après le prolongement de -332, Israël ne repasse pas par l'essor oligarchique — la polarisation des élites reprend (Oniades vs Tobiades) et débouche directement sur la guerre sociale.
 
-## Boucles intra-phase
+## Boucles en phase féodale
 
-Les perturbations ne font pas toujours régresser le Parcours à une phase antérieure. Elles peuvent aussi créer des **boucles à l'intérieur d'une même phase** : les acquis institutionnels sont détruits ou affaiblis, et il faut les reconstruire sans pour autant changer de phase.
-
-Ce mécanisme a été identifié dans deux contextes :
-
-### Boucles en phase féodale
-
-La phase féodale est ponctuée de **pics féodaux** (rois forts) suivis de **crises féodales** (effondrement post-pic). Si les conditions du pacte oligarchique ne sont pas réunies (homogénéité insuffisante), le Parcours **boucle** — un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes.
+La phase féodale est ponctuée de **pics féodaux** (rois forts) suivis de **crises féodales** (effondrement post-pic). Si les conditions du pacte oligarchique ne sont pas réunies (homogénéité insuffisante), le Parcours **boucle** — un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes. Les boucles allongent la durée de la phase féodale au-delà de la norme endogène de ~200 ans.
 
 **Exemple :** L'Angleterre boucle 5 fois sur ~500 ans (d'Ecgberht ~829 aux Ordonnances de 1311) avant que l'homogénéité des élites anglaises ne soit suffisante pour produire un pacte oligarchique. Chaque cycle (pic → crise → pas de pacte → nouveau pic) fait avancer l'homogénéisation, mais pas assez pour franchir le seuil.
 
-### Boucles en phase oligarchique
-
-Le même mécanisme peut se produire en phase oligarchique. Un choc externe (guerre prolongée, invasion) peut **détruire les acquis institutionnels** de l'essor oligarchique, forçant leur reconstruction. Le Parcours ne régresse pas à la phase féodale (les institutions de base survivent), mais il perd les acquis les plus récents et doit les rebâtir.
-
-**Exemple :** La Guerre de Cent Ans en France. Charles V (1364-1380) crée une armée permanente, réforme la fiscalité et reconquiert le territoire perdu. Mais sous Charles VI (1380-1422), sous la pression des oligarques et le chaos de la folie royale, ces acquis sont détruits — l'armée permanente est supprimée, les Armagnacs et les Bourguignons se déchirent, Azincourt (1415) et le traité de Troyes (1420) menacent l'existence même du royaume. Il faut attendre Charles VII (1445) pour que l'armée permanente soit rétablie et la fiscalité reconstruite. **80 ans perdus** — la France bâtit deux fois les mêmes institutions.
-
-### Principe général
-
-Les perturbations peuvent créer des boucles dans **n'importe quelle phase**, pas seulement en phase féodale. Le mécanisme est toujours le même : un choc externe détruit ou affaiblit les acquis les plus récents du Parcours, et ceux-ci doivent être reconstruits. Le Parcours ne régresse pas à une phase antérieure (les fondamentaux survivent), mais il perd du temps. Les boucles allongent la durée de la phase au-delà de la norme endogène de ~200 ans.
+Ne pas confondre les boucles — mécanisme structurel où la phase ne peut pas avancer vers la suivante parce que les conditions de résolution ne sont pas réunies — avec de simples **perturbations intra-phase** (défaites militaires, crises dynastiques) qui ralentissent temporairement la progression sans modifier la dynamique de fond. Une perturbation fait trébucher le Parcours ; une boucle le fait tourner en rond.
 
 ## Reboot
 

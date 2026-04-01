@@ -71,7 +71,7 @@ En l'absence de perturbation externe, les phases ont des durées caractéristiqu
 
 Les écarts à ces durées sont significatifs et s'expliquent toujours par une perturbation d'un des deux moteurs. Par exemple :
 - **Israël antique** : la phase oligarchique dure ~245 ans au lieu de ~200, à cause du choc assyrien (-722) qui détruit le royaume d'Israël et retarde la construction de l'État central en Judée.
-- **France** : la phase oligarchique dure ~270 ans (1328-1598), à cause de la Guerre de Cent Ans qui interrompt l'essor oligarchique pendant ~116 ans.
+- **France** : la phase oligarchique dure ~270 ans (1328-1598), à cause de deux reflux liés à la Guerre de Cent Ans (Crécy-Poitiers ~1346-1364, Charles VI ~1392-1429) qui ralentissent l'essor oligarchique d'environ 55 ans.
 - **Angleterre** : la phase oligarchique dure ~213 ans (1272-1485), durée proche de la norme.
 
 ### Le clivage gauche-droite (Fabry & Portal)
