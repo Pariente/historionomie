@@ -161,12 +161,12 @@
 - description: Le premier reflux de l'essor oligarchique est provoqué par deux défaites militaires majeures face aux Anglais. À Crécy en 1346, l'armée française est décimée par les archers gallois. Dix ans plus tard, à Poitiers en 1356, le roi Jean II le Bon est lui-même capturé, laissant le royaume sans chef face à la Peste Noire, aux Jacqueries paysannes et à la tentative de coup d'État d'Étienne Marcel. Le traité de Brétigny (1360), qui cède un tiers du royaume à l'Angleterre, marque le point bas. Mais les institutions centrales — la monarchie des Valois, le Parlement de Paris, l'administration fiscale — survivent intactes, et Charles V relance l'essor dès 1364.
 - affected_motor: Construction de l'État central
 
-### Subphase : Essor oligarchique (reprise)
+### Subphase : Essor oligarchique
 - type: subphase
 - phase: oligarchique
 - start: ~1364
 - end: ~1392
-- title: Essor oligarchique (reprise)
+- title: Essor oligarchique
 - summary: Charles V incarne la reprise de l'essor oligarchique : il réforme l'armée, rétablit les finances et reconquiert méthodiquement le territoire perdu grâce à son connétable Du Guesclin. À sa mort en 1380, presque tout le terrain perdu a été regagné et les institutions centrales sont renforcées.
 - description: Charles V (1364-1380) relance vigoureusement l'essor oligarchique après le premier reflux. Il réforme l'armée en professionnalisant les troupes, rétablit les finances royales et confie à son connétable Du Guesclin une guerre d'usure méthodique qui évite les batailles rangées et reconquiert progressivement le territoire cédé aux Anglais. Les premières années du règne de Charles VI, avant sa folie (1380-1392), prolongent cette dynamique sous la régence des oncles du roi puis pendant son bref gouvernement personnel. Cette période confirme que l'essor oligarchique n'a jamais été interrompu par le premier reflux — la construction de l'État central a simplement trébuché avant de reprendre.
 
