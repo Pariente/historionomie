@@ -90,6 +90,7 @@
 - resolution: Guerre sociale — ni la faction pro-assyrienne (prébendière) ni la faction yahviste (patrimoniale) ne l'emporte. Josias émerge comme tiers et subordonne les réseaux lignagers au pouvoir administratif central.
 - resolution_conditions: Polarisation complète des factions (sous Manassé), épuisement du conflit, déclin de l'Assyrie (qui libère le champ), et disponibilité d'un jeune roi (Josias, 8 ans) qui n'est lié à aucune faction.
 - summary: La phase oligarchique voit l'émergence d'un véritable État central en Samarie sous Omri, son pic de puissance sous Jéroboam II, puis son transfert en Judée après le choc assyrien de -722, et enfin la guerre sociale entre faction pro-assyrienne et faction yahviste, résolue par l'émergence de Josias.
+- description: La phase oligarchique voit l'émergence du premier véritable État central d'Israël sous la dynastie omride, centré sur Samarie avec une administration permanente, un fisc organisé et une armée professionnelle capable de projeter 2 000 chars à 400 km de la capitale (Qarqar, -853). L'essor culmine sous Jéroboam II (~-770), qui porte le royaume à son extension maximale de la Syrie à la mer Morte. La polarisation s'installe ensuite : les prophètes Amos et Osée dénoncent les inégalités croissantes, traduisant les tensions structurelles d'une fin d'essor. Le choc assyrien de -722 détruit le royaume du Nord mais transfère le Parcours en Judée sans le faire redémarrer, allongeant la phase d'environ 45 ans. La guerre sociale oppose ensuite la faction pro-assyrienne de Manassé à la faction yahviste nationaliste, et se résout par l'émergence de Josias comme tiers.
 - deviation: +45 ans, causé par le choc assyrien (-722)
 
 ### Subphase : Essor oligarchique
@@ -99,6 +100,7 @@
 - end: ~-770
 - title: Essor oligarchique
 - summary: Omri fonde le premier véritable État central du royaume d'Israël en Samarie, doté d'une administration permanente, d'un fisc organisé et d'une armée professionnelle. L'expansion culmine sous Jéroboam II, qui porte le royaume à son extension maximale.
+- description: L'essor oligarchique du royaume d'Israël est porté par la dynastie omride, qui transforme une société encore largement tribale en un État territorial centralisé. Omri fonde Samarie comme capitale neutre (sans attache tribale), et son fils Ahab développe un réseau d'alliances diplomatiques et commerciales, dont le mariage avec Jézabel de Tyr. La stèle de Mesha et les ostraca de Samarie attestent d'un appareil fiscal et administratif sophistiqué. L'expansion culmine sous Jéroboam II, dont le règne prospère masque les tensions internes que les prophètes Amos et Osée dénoncent avec violence.
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
@@ -152,6 +154,7 @@
 - end: -641
 - title: Guerre sociale
 - summary: Le conflit entre la faction pro-assyrienne incarnée par Manassé et la faction yahviste nationaliste déchire la Judée pendant plus d'un demi-siècle, avant d'être résolu par l'émergence de Josias comme tiers qui transcende les deux camps.
+- description: La guerre sociale judéenne est structurée par le clivage entre deux factions nettement identifiables. La faction prébendière, incarnée par le roi Manassé, regroupe les élites marchandes urbaines pro-assyriennes et syncrétistes, enrichies par le commerce impérial. La faction patrimoniale rassemble les élites rurales yahvistes et nationalistes, ancrées dans les milieux prophétiques et sacerdotaux. Manassé impose des cultes assyriens au Temple et persécute ses opposants (massacres vers -672). L'assassinat de son successeur Amon en -641 ouvre la voie à Josias, qui émerge comme figure tierce — enfant-roi de huit ans, sans attache factionnelle — et résout la guerre sociale en concentrant le pouvoir.
 
 #### Saillant : Guerre sociale
 - type: saillant
@@ -175,6 +178,7 @@
 - resolution: AVORTÉE — la résolution (éclatement de la sédimentation) n'est jamais atteinte. La conquête babylonienne (-586) détruit l'État central avant que la phase ait pu se déployer.
 - resolution_conditions: Non atteintes. La phase n'a duré que 54 ans sur les ~200 nécessaires. Josias meurt à Megiddo (-609), et ses successeurs ne parviennent pas à maintenir l'élan.
 - summary: La première phase absolutiste, ouverte par la centralisation radicale de Josias, est brutalement interrompue après seulement 54 ans par la conquête babylonienne de -586, avant d'avoir pu accomplir sa mécanique complète.
+- description: La première phase absolutiste est ouverte par la centralisation radicale de Josias, qui profite du déclin assyrien pour mener un programme absolutiste classique : destruction des sanctuaires locaux, centralisation du culte au Temple, promulgation du Deutéronome comme loi unifiée, envoi d'agents royaux sur tout le territoire. Mais cette phase n'a que 54 ans — bien loin des 200 ans typiques — car la conquête babylonienne de -586 anéantit l'État central avant que la mécanique absolutiste ne puisse se déployer. La mort de Josias à Megiddo en -609, lors d'une tentative maladroite d'intercepter l'armée égyptienne, prive la Judée de son artisan, et ses successeurs ne parviennent pas à maintenir l'élan.
 - deviation: Interrompu par la conquête babylonienne
 
 ### Subphase : Absolutisation (interrompue)
@@ -184,6 +188,7 @@
 - end: -586
 - title: Absolutisation (interrompue)
 - summary: Josias mène une politique de centralisation sans précédent — culte unique au Temple, unification juridique par le Deutéronome, agents royaux sur tout le territoire — mais l'entreprise est anéantie par la conquête babylonienne avant d'avoir pu se consolider.
+- description: Le programme de Josias est un programme absolutiste classique : destruction systématique des bamot (sanctuaires locaux), centralisation du culte exclusivement au Temple de Jérusalem en -622, promulgation du Deutéronome comme loi unifiée du royaume, et envoi d'agents royaux sur tout le territoire. Le roi met la hiérarchie sacerdotale sous tutelle et s'arroge un droit d'inspection universel — la fusion du pouvoir politique et religieux caractéristique du début de la phase absolutiste. Mais cette absolutisation est brutalement interrompue par la conquête babylonienne, qui rase Jérusalem et déporte les élites en -586.
 
 #### Saillant : 1er monarque absolu
 - type: saillant
@@ -239,6 +244,7 @@
 - end: ~-430
 - title: Essor oligarchique
 - summary: L'essor oligarchique post-exil est marqué par la reconstruction du Temple, l'institution de la Knesset HaGuedola comme pacte oligarchique, la codification de la Torah par Esdras et la reconstruction matérielle de Jérusalem par Néhémie.
+- description: L'essor oligarchique post-exil bénéficie d'un redémarrage rapide grâce à la forte homogénéité culturelle préservée par les élites exilées à Babylone. Le Temple est reconstruit en -515, et la Knesset HaGuedola — Grande Assemblée de 120 membres — est instituée comme organe de gouvernement, constituant le pacte oligarchique. Esdras codifie la Torah comme loi suprême de la communauté, achevant l'homogénéisation juridique. Néhémie reconstruit les murailles de Jérusalem et réforme l'administration, consolidant les bases matérielles de l'État central reconstitué.
 
 #### Saillant : Pacte oligarchique
 - type: saillant
@@ -322,6 +328,7 @@
 - resolution: Éclatement de la sédimentation — la Grande Révolte de 66 explose l'Ancien Régime sadducéen devenu insoutenable (sédimentation des élites, pression fiscale, surproduction élitaire).
 - resolution_conditions: Sédimentation complète (les Sadducéens monopolisent le Temple et ses revenus), homogénéité culturelle maximale (alphabétisation synagogale, littérature apocalyptique), formation du bloc contestataire (Pharisiens ED + Zélotes EG vs Sadducéens), et crise de légitimité (brutalité des procurateurs romains).
 - summary: La deuxième phase absolutiste s'étend des Hasmonéens à Hérode et parcourt l'intégralité de la séquence typique — absolutisation, impérialisme absolutiste et Ancien Régime — en 206 ans, durée parfaitement conforme à la norme endogène.
+- description: La deuxième phase absolutiste traverse l'intégralité de la séquence typique en 206 ans. Simon Thassi inaugure l'absolutisation en concentrant entre ses mains la grande prêtrise, le commandement militaire et l'ethnarchie — fusion du pouvoir politique et religieux caractéristique du début de la phase. La révolte pharisienne contre Alexandre Jannée, écrasée dans le sang (800 crucifixions), clôt la dernière résistance oligarchique. Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent, une armée professionnelle de mercenaires et un monopole absolu de la force. Après sa mort en -4, le royaume est divisé puis passe sous procurateurs romains, ouvrant un Ancien Régime marqué par la sédimentation sadducéenne, la surproduction élitaire et la montée d'un bloc contestataire pharisien-zélote.
 - deviation: dans la norme (206 ans)
 
 ### Subphase : Absolutisation
@@ -331,6 +338,7 @@
 - end: -88
 - title: Absolutisation
 - summary: Simon Thassi concentre entre ses mains le pouvoir politique et religieux, puis ses successeurs hasmonéens consolident le monopole royal en écrasant la résistance pharisienne, dernier vestige de l'opposition oligarchique.
+- description: Simon Thassi reçoit le cumul héréditaire des fonctions de Grand Prêtre, stratège et ethnarque, fusionnant le pouvoir politique et religieux — un marqueur classique de l'absolutisation. Ses successeurs hasmonéens consolident ce monopole en écrasant méthodiquement l'opposition. La révolte pharisienne contre Alexandre Jannée est le dernier soubresaut de résistance oligarchique : les rebelles font appel au roi séleucide, mais le sentiment national ramène une partie d'entre eux dans le camp royal, signe que la conscience nationale dépasse désormais les clivages factionnels. Après l'écrasement de la rébellion et les 800 crucifixions, plus aucune faction ne conteste le monopole royal du pouvoir.
 
 #### Saillant : 1er monarque absolu
 - type: saillant
@@ -397,6 +405,7 @@
 - resolution: AVORTÉE — la résolution (subordination du pouvoir administratif à la représentation nationale) n'est jamais atteinte. Rome écrase la révolte en 70, détruit le Temple, et provoque un reboot vers la phase absolutiste.
 - resolution_conditions: Non atteintes. La RN est écrasée par une puissance extérieure (6 légions romaines sous Vespasien puis Titus) avant même le moment thermidorien. Le Parcours est interrompu, pas résolu.
 - summary: La Grande Révolte de 66-70 constitue une Révolution Nationale avortée : elle parcourt les trois premières étapes de la séquence typique (explosion, expérience parlementaire, phase aiguë) mais est écrasée par Rome avant d'atteindre le moment thermidorien.
+- description: La Grande Révolte de 66-70 présente tous les marqueurs d'une Révolution Nationale. L'Ancien Régime sadducéen explose quand le procurateur Florus provoque le basculement même des élites romanisées dans la révolte. Un gouvernement de coalition est instauré après la victoire de Beth Horon, avec frappe du shekel « Israël » — expérience parlementaire. Puis les Zélotes prennent le contrôle, éliminent les modérés et assassinent le Grand Prêtre Ananus — phase aiguë classique. Mais la RN est écrasée par six légions romaines sous Vespasien puis Titus avant le moment thermidorien. La destruction du Temple en 70 provoque un reboot, mais l'homogénéité culturelle est préservée par l'académie de Yavné, permettant un redémarrage en phase absolutiste.
 - deviation: Avortée après 4 ans (écrasée par Rome)
 
 ### Subphase : Révolution initiale (avortée)

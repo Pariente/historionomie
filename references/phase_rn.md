@@ -42,6 +42,7 @@ L'Ancien Régime est ruiné et discrédité. Une partie des élites lâche le r�
 - France : convocation des États généraux (1789), prise de la Bastille
 - Angleterre : Charles Ier tente de lever des impôts sans le Parlement (1640)
 - Israël : le massacre de Florus pousse les élites romanisées dans la révolte (66)
+- Venise : insurrection de mars 1848 — les arsenalotti prennent l'Arsenal, la garnison autrichienne capitule, Manin proclame la République de San Marco
 
 ### Saillant : Expérience parlementaire
 
@@ -51,6 +52,7 @@ Les élites qui ont renversé l'ancien ordre proposent un régime à base politi
 - France : Assemblée nationale constituante (1789-1791)
 - Angleterre : Long Parliament (1640-1648)
 - Israël : gouvernement provisoire de coalition (66-67), frappe du shekel « Israël »
+- Venise : République de San Marco (1848-1849) — assemblée élue au suffrage universel, factions concurrentes (républicains, fusionnistes, mazziniens), transferts de pouvoir entre factions
 
 ### Saillant : Phase aiguë
 
@@ -60,6 +62,7 @@ L'extrême-gauche (les révolutionnaires les plus radicaux) prend le contrôle e
 - France : la Terreur, Robespierre (1792-1794)
 - Angleterre : exécution de Charles Ier (1649)
 - Israël : les Zélotes éliminent les modérés (67-70)
+- Venise : amorce seulement — l'assemblée vote les « pouvoirs illimités » pour Manin (mars 1849), mais l'Autriche écrase la République avant que l'escalade ne se complète
 
 ### Saillant : Moment thermidorien
 
@@ -114,17 +117,27 @@ La Révolution Nationale peut être écrasée par une puissance extérieure avan
 
 **Exemple :**
 - Israël (prolongement) : la Grande Révolte de 66 suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome en 70 avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal.
+- Venise : la République de Manin (1848-1849) suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète.
+
+### Test discriminant : RN avortée vs révolte absolutiste
+
+Comment distinguer une RN avortée (comme Israël en 66 ou Venise en 1848) d'une révolte absolutiste (comme les Maccabées en -167 ou Bar Kokhba en 132) ?
+
+- **Révolte absolutiste** : un chef militaire ou charismatique, au statut héréditaire ou religieux, à l'autorité incontestée, mène la révolte de bout en bout. Pas de phase parlementaire, pas de factions concurrentes, pas d'assemblée élue. Exemples : Mattathias/Judah Maccabée (autorité sacerdotale héritée), Bar Kokhba (chef militaire endossé comme messie).
+- **RN avortée** : la révolte commence par une expérience parlementaire avec assemblée élue et factions concurrentes, puis escalade vers une phase aiguë. Le leadership est construit par l'action politique et l'élection, pas par l'héritage. Exemples : Grande Révolte de 66 (gouvernement de coalition), Venise 1848 (Manin élu, démissionne quand il perd la majorité, réélu, reçoit les pouvoirs illimités par vote).
+
+Le marqueur le plus discriminant est la nature du leadership : **autorité héritée/charismatique** (révolte absolutiste) vs **autorité construite par l'élection** (RN).
 
 ## Tableau récapitulatif
 
-| Sous-phase / Saillant | France | Angleterre | Israël (avortée) |
-|---|---|---|---|
-| **Révolution initiale** | 1789-1799 | 1640-1653 | 66-70 |
-| → Explosion de l'AR | 1789 | 1642 | 66 |
-| → Expérience parlementaire | 1789-1791 | 1640-1648 | 66-67 |
-| → Phase aiguë | 1792-1794 | 1649 | 67-70 |
-| → Moment thermidorien | 1794-1799 | 1649-1653 | — (écrasée) |
-| **Impérialiste Revanchard** | 1799-1815 | 1653-1658 | — |
-| → Émergence de l'IR | Bonaparte (1799) | Cromwell (1653) | — |
-| **Restauration** | 1815-1830 | 1660-1688 | — |
-| → Glorieuse Révolution | 1830 | 1688 | — |
+| Sous-phase / Saillant | France | Angleterre | Israël (avortée) | Venise (avortée) |
+|---|---|---|---|---|
+| **Révolution initiale** | 1789-1799 | 1640-1653 | 66-70 | 1848-1849 |
+| → Explosion de l'AR | 1789 | 1642 | 66 | mars 1848 |
+| → Expérience parlementaire | 1789-1791 | 1640-1648 | 66-67 | mars 1848 - août 1849 |
+| → Phase aiguë | 1792-1794 | 1649 | 67-70 | Amorce : mars 1849 (pouvoirs illimités) |
+| → Moment thermidorien | 1794-1799 | 1649-1653 | — (écrasée) | — (écrasée) |
+| **Impérialiste Revanchard** | 1799-1815 | 1653-1658 | — | — |
+| → Émergence de l'IR | Bonaparte (1799) | Cromwell (1653) | — | — |
+| **Restauration** | 1815-1830 | 1660-1688 | — | — |
+| → Glorieuse Révolution | 1830 | 1688 | — | — |

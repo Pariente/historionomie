@@ -47,6 +47,7 @@ Le premier souverain qui dispose d'un État central — impôt permanent, armée
 - Israël antique : Omri (-885)
 - France : Philippe VI de Valois (1328) — premier roi sous les règles codifiées (loi salique)
 - Angleterre : Édouard Ier (1272)
+- Venise : Domenico Contarini (~1043) / système — premier doge stable sous le régime post-dynastique, avec fisc commercial permanent, flotte permanente, administration en institutionnalisation. Le « monarque » vénitien est le système institutionnel plus que la personne du doge.
 
 ### Saillant : Pic oligarchique (milieu de phase environ, position à confirmer)
 
@@ -56,6 +57,7 @@ En milieu de phase apparaît souvent une figure exécutive particulièrement pui
 - Israël antique : Jéroboam II (~-770)
 - France : François Ier (~1515) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses).
 - Angleterre : Édouard III (~1350)
+- Venise : Enrico Dandolo (~1192-1205) — détournement de la IVe croisade, création du Stato da Màr. Pic oligarchique, pas absolutiste : Dandolo agit dans le cadre de la promissione ducale, et le système ne dépend pas de lui.
 
 **Note :** Ce saillant est bien identifié mais sa position chronologique précise au sein de la phase (milieu ? premier tiers ?) demande davantage d'exemples pour être stabilisée.
 
@@ -66,6 +68,7 @@ Le moment où l'expansion extérieure cesse de fonctionner et les tensions inter
 **Exemples :**
 - Israël antique : mort de Jéroboam II (~-746) — instabilité, pression assyrienne
 - France (Deblonde) : Traité de Cateau-Cambrésis (1559) — fin des Guerres d'Italie, mort d'Henri II
+- Venise : Agnadello / Ligue de Cambrai (1509) — Venise perd toute la Terraferma avant de la récupérer. Fin de l'expansion agressive ; les guerres deviennent purement défensives.
 
 ### Structure institutionnelle
 
@@ -108,10 +111,13 @@ Le progrès technique et l'homogénéisation socioculturelle font que l'administ
 **Exemples :**
 - Israël antique : dénonciation par les prophètes Amos et Osée (~-760 à -725) des inégalités sociales, de la corruption et du luxe scandaleux des élites
 - Israël antique (reboot) : affrontement Oniades (patrimoniale, sacerdotale) vs Tobiades (prébendière, hellénisée)
+- Venise (~1509-~1628) : le conflit giovani (prébendier — commerciaux, intellectuels, Sarpi) vs vecchi (patrimonial — riches, institutionnels, pro-papauté) est la polarisation vénitienne. La polarisation est retardée par les exutoires extérieurs (possessions lointaines) mais s'accélère après Agnadello (1509). La Correzione de 1582 (le Grand Conseil arrache des pouvoirs au Conseil des Dix) est la dernière réforme réussie contre l'exécutif. L'affaire Zeno (1628) est la dernière tentative, échouée.
 
 ## Sous-phase 3 : Guerre sociale
 
 On désigne par « guerre sociale » le conflit nécessaire entre factions à la fin de la phase oligarchique. Ce conflit ne prend pas nécessairement la forme d'une guerre conventionnelle : il peut consister en un climat de tensions extrêmes, ponctué d'épisodes de violence (assassinats, massacres, coups d'État).
+
+La guerre sociale ne prend pas nécessairement la forme d'un conflit armé avec des batailles rangées. Elle peut consister en un climat de tensions institutionnelles, de luttes de palais, d'assassinats et de tentatives de réforme avortées — c'est le cas en Israël antique (Manassé vs yahvistes) et à Venise (tensions entre factions et consolidation de l'exécutif, ~1628-1669).
 
 L'abandon progressif des clientèles rurales par les élites patrimoniales et des clientèles populaires par les élites prébendières rend ces populations disponibles pour des figures politiques « populistes » qui proposent de renverser radicalement les institutions et les élites en place.
 
@@ -132,6 +138,15 @@ C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.
 - Israël antique (prolongement) : Oniades vs Tobiades, ~-175 à -140. Ni l'une ni l'autre ne prend le pouvoir : c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées.
 - France : Guerres de Religion (~1562-1598). Ni la Ligue catholique ni les Princes protestants ne l'emportent : ce sont ceux qui soutiennent le Roi (Henri IV) qui gagnent. La monarchie capétienne est renforcée.
 - Angleterre : Guerre des Deux-Roses (~1455-1485). Ni les York ni les Lancaster ne gagnent : Henri VII crée une nouvelle dynastie (les Tudor).
+- Venise : tensions institutionnelles (~1628-1669). Après l'échec de la réforme Zeno (1628), l'exécutif (Inquisiteurs d'État) consolide son pouvoir sans opposition. La guerre de Candie (1645-1669) sert de véhicule à la concentration exécutive (délégation d'autorité en urgence permanente). La perte de la Crète (1669) force l'homogénéisation territoriale. Le « tiers » vénitien est institutionnel : les Inquisiteurs d'État, servis par la classe administrative des cittadini (analogue de la noblesse de robe). Ni les giovani ni les vecchi ne l'emportent : c'est l'appareil d'État.
+
+## L'expansion comme mécanisme anti-polarisation
+
+L'expansion extérieure peut considérablement retarder la polarisation des élites. Tant que les élites disposent de débouchés extérieurs (conquêtes, commerce, colonies), la lutte pour le contrôle exclusif de l'État central ne devient pas la question vitale — les tensions sont absorbées par l'exutoire extérieur.
+
+**Exemple :** Venise reste en phase oligarchique pendant ~637 ans (~1032-~1669) parce que l'expansion permanente (Stato da Màr post-1204, Terraferma 1404-1428, guerres ottomanes) fournit continuellement des débouchés. La polarisation (giovani/vecchi) ne commence sérieusement qu'après la fin de l'expansion agressive (Agnadello, 1509), et la guerre sociale ne se résout qu'après la perte de la plus grande colonie (Crète, 1669). C'est le mécanisme analogue aux « boucles » de la phase féodale : une condition non remplie (ici, la fin de l'expansion) empêche la transition.
+
+**Autres cas à explorer :** les empires coloniaux européens (Portugal, Espagne, Pays-Bas) ont-ils été maintenus en phase oligarchique par leur expansion ?
 
 ## Tableau récapitulatif
 
@@ -142,3 +157,4 @@ C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.
 | France (Deblonde) | Philippe VI (1328) | François Ier (~1515) | Guerres de Religion (~1562-1598) | Henri IV (1598) |
 | France (alternative) | Philippe Auguste (1180) | Philippe le Bel (~1300) | Guerres de Religion (~1562-1598) | Henri IV (1598) |
 | Angleterre | Édouard Ier (1272) | Édouard III (~1350) | Guerre des Deux-Roses (~1455-1485) | Henri VII (1485) |
+| Venise | Contarini (~1043) / système | Dandolo (~1192-1205) | ~1628-1669 | Inquisiteurs d'État (~1669) |

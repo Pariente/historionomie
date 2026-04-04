@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Venise (République de Venise)</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background:#fafafa; color:#222; line-height:1.5; }
+
+/* Header */
+.header { background:#fff; border-bottom:1px solid #ddd; padding:1.2rem 2rem; }
+.header h1 { font-size:1.6rem; color:#333; margin-bottom:0.3rem; }
+.header .subtitle { font-size:0.95rem; color:#666; }
+.header .meta-row { display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:0.5rem; font-size:0.85rem; color:#555; }
+.header .meta-row span { display:inline-flex; align-items:center; gap:0.3rem; }
+.meta-label { font-weight:600; color:#444; }
+
+/* Pre-phase note */
+.prephase-note { background:#f5f0e6; border-left:4px solid #bba87a; padding:0.8rem 1.2rem; margin:1rem 2rem; border-radius:0 4px 4px 0; font-size:0.9rem; color:#555; }
+.prephase-note strong { color:#7a6840; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.8rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2; }
+.phase-band-dates { font-size:0.65rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.7rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:18px; height:170px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.6rem; color:#a33; font-weight:600; white-space:nowrap;
+    position:absolute; bottom:4px; left:0; right:0; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); transform-origin:left;
+    left:50%; white-space:normal; }
+
+/* Pre-phase band */
+.prephase-band { position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
+    border-radius:6px; display:flex; align-items:center; justify-content:center; }
+.prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:150px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,0.3); }
+.saillant-marker:hover { transform:scale(1.2); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:14px; color:#fff; }
+.saillant-label { position:absolute; top:28px; left:-40px; width:80px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.5rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:-0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#555; display:block; }
+.saillant-label .saillant-date { font-size:0.5rem; color:#888; display:block; }
+.saillant-marker.avortement { background:#c0392b !important; }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.3);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(480px,90vw); background:#fff;
+    box-shadow:-4px 0 20px rgba(0,0,0,0.15); z-index:501; overflow-y:auto; padding:2rem;
+    display:none; }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+.detail-close { position:absolute; top:1rem; right:1rem; background:none; border:none;
+    font-size:1.5rem; cursor:pointer; color:#666; line-height:1; }
+.detail-close:hover { color:#333; }
+.detail-title { font-size:1.3rem; font-weight:700; margin-bottom:0.3rem; padding-right:2rem; }
+.detail-kind { display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px;
+    border-radius:10px; color:#fff; margin-bottom:0.8rem; }
+.detail-meta { font-size:0.85rem; color:#555; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+.detail-description { font-size:0.9rem; line-height:1.6; color:#333; margin-bottom:1rem;
+    border-left:3px solid #ddd; padding-left:1rem; }
+.detail-section { margin-bottom:0.8rem; }
+.detail-section-title { font-size:0.75rem; font-weight:700; color:#888; text-transform:uppercase;
+    letter-spacing:0.5px; margin-bottom:0.3rem; }
+.detail-section p { font-size:0.85rem; color:#444; line-height:1.5; }
+
+.confidence-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.7rem; font-weight:600; }
+.confidence-high { background:#d4edda; color:#155724; border:1px solid #28a745; }
+.confidence-medium { background:#fff3cd; color:#856404; border:1px dashed #ffc107; }
+.confidence-low { background:#f8d7da; color:#721c24; border:1px dotted #dc3545; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #eee; background:#fff; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #eee; margin-top:1rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Parcours de construction nationale — Venise (République de Venise)</h1>
+    <div class="subtitle">Parcours de Venise</div>
+    <div class="meta-row">
+        
+        <span><span class='meta-label'>Territoire :</span> Lagune vénitienne → Stato da Màr + Terraferma</span>
+        <span><span class='meta-label'>Statut :</span> Phase oligarchique (1032-~1669), phase absolutiste endogène puis sous domination étrangère (~1669-1848), RN avortée (1848-1849), absorption dans le Parcours italien (1866)</span>
+        <span><span class='meta-label'>Confiance :</span> medium</span>
+    </div>
+</div>
+
+
+        <div class="prephase-note">
+            <strong>Pré-phase : Peuplement de la lagune (452-~726)</strong><br>
+            <span>Les premières communautés de la lagune sont des réfugiés fuyant les invasions barbares — Huns d&#39;Attila (452), puis surtout Lombards d&#39;Alboïn (568-569). Les habitants d&#39;Altinum, Oderzo, Concordia et d&#39;autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum). Les tribuns forment un comité directeur sans chef unique. L&#39;ensemble reste dans l&#39;orbite byzantine, rattaché à l&#39;exarchat de Ravenne. Torcello, avec environ 20 000 habitants, est le centre dominant. L&#39;inaccessibilité du lagon confère une forteresse naturelle, mais aucune autorité supra-régionale ne s&#39;impose — c&#39;est la percolation.</span>
+        </div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:12.7789%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">600</div>
+        </div>
+        <div class="tick" style="left:26.3016%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">800</div>
+        </div>
+        <div class="tick" style="left:39.8242%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:53.3469%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:66.8695%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:80.3922%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:93.9148%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        
+        <div class="prephase-band" style="left:2.7721%;width:18.5260%;"
+            data-tooltip="Pré-phase : Peuplement de la lagune (452-~726)">
+            <span class="prephase-band-label">Pré-phase</span>
+        </div>
+        
+        <div class="phase-band" style="left:21.2982%;width:20.6897%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (~726 — ~1032)&#10;La phase féodale vénitienne s&#39;étend de l&#39;élection d&#39;Orso Ipato, premier doge historiquement attesté, jusqu&#39;à l&#39;abolition de la co-régence en 1032. Le pouvoir repose sur la personne du doge, se fragmente à chaque succession difficile, et les tentatives dynastiques échouent systématiquement devant la résistance des familles marchandes. Cinq boucles pic/crise ponctuent la phase."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#8B7355;">Phase féodale</div>
+            <div class="phase-band-dates">~726 — ~1032</div>
+        </div>
+        <div class="phase-band" style="left:41.9878%;width:43.0696%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (~1032 — ~1669)&#10;La phase oligarchique vénitienne est la plus longue jamais identifiée dans le cadre historionomique (~637 ans). L&#39;expansion permanente — Stato da Màr après la IVe croisade (1204), Terraferma (1404-1428), guerres ottomanes — fournit continuellement des exutoires extérieurs aux élites et retarde la polarisation. Ce n&#39;est qu&#39;après Agnadello (1509), quand l&#39;expansion agressive cesse, que la polarisation entre giovani et vecchi se cristallise lentement. La guerre sociale (~1628-1669), faite de tensions institutionnelles, de luttes de palais et d&#39;assassinats plutôt que de batailles rangées, est résolue par le triomphe de l&#39;appareil exécutif — les Inquisiteurs d&#39;État — sur les deux factions. La perte de la Crète (1669) scelle cette résolution en forçant l&#39;homogénéisation territoriale."
+            onclick="showDetail(10)">
+            <div class="phase-band-label" style="color:#2E8B57;">Phase oligarchique</div>
+            <div class="phase-band-dates">~1032 — ~1669</div>
+        </div>
+        <div class="phase-band" style="left:85.0575%;width:12.1028%;
+            background:#d9c2ea;border-top:3px dashed #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste — endogène puis sous domination étrangère&lt;/strong&gt; (~1669 — 1848)&#10;La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d&#39;État après 1669 et le pic absolutiste de Morosini (~1688). L&#39;absolutisme vénitien est institutionnel — ce n&#39;est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l&#39;absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l&#39;absolutisme, il l&#39;achève. L&#39;Ancien Régime se poursuit sous domination étrangère (1797-1848) avec le même mécanisme de sédimentation et de convergence du bloc contestataire."
+            onclick="showDetail(18)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Phase absolutiste — endogène puis sous domination étrangère</div>
+            <div class="phase-band-dates">~1669 — 1848</div>
+        </div>
+        <div class="phase-band" style="left:97.1602%;width:0.0676%;
+            background:#f4e7c5;border-top:3px dashed #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale avortée — République de San Marco&lt;/strong&gt; (1848 — 1849)&#10;En mars 1848, le bloc contestataire renverse le régime autrichien à Venise. Daniele Manin — avocat, bourgeoisie professionnelle, aucun lien avec l&#39;ancien patriciat — mobilise les arsenalotti, la bourgeoisie, les artisans et des soldats italiens déserteurs. Il proclame la République de San Marco le 22 mars 1848, instaurant une expérience parlementaire avec assemblée élue et factions concurrentes (républicains, fusionnistes, mazziniens). La République résiste 17 mois avant d&#39;être écrasée par l&#39;Autriche. C&#39;est structurellement identique à la RN avortée d&#39;Israël en 66-70 — et non à une révolte absolutiste (type Maccabées ou Bar Kokhba)."
+            onclick="showDetail(26)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale avortée — République de San Marco</div>
+            <div class="phase-band-dates">1848 — 1849</div>
+        </div>
+        
+        <div class="subphase-band" style="left:2.7721%;width:18.5260%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Percolation lagunaire&lt;/strong&gt; (452 — ~726)&#10;Communautés gouvernées par des tribuns locaux sans autorité centrale. Pas de structure supra-régionale."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Percolation lagunaire</span>
+        </div>
+        <div class="subphase-band" style="left:21.2982%;width:20.6897%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites — cinq boucles&lt;/strong&gt; (~726 — ~1032)&#10;Cinq cycles pic féodal / crise féodale (Galbaio, Partecipazio, Candiano, Orseolo), chaque tentative dynastique échouant devant la résistance des familles marchandes."
+            onclick="showDetail(2)">
+            <span class="subphase-label">Coagulation des élites — cinq boucles</span>
+        </div>
+        <div class="subphase-band" style="left:41.9878%;width:32.2515%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (~1032 — 1509)&#10;Construction institutionnelle et expansion massive. L&#39;essor est prolongé par les exutoires extérieurs (Stato da Màr, Terraferma, guerres ottomanes) qui empêchent la polarisation des élites pendant près de cinq siècles."
+            onclick="showDetail(11)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:74.2394%;width:8.0460%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (~1509 — ~1628)&#10;Après Agnadello, l&#39;expansion agressive cesse et les guerres deviennent défensives. La polarisation entre vecchi (pôle patrimonial) et giovani (pôle prébendier) se cristallise lentement autour de questions de politique étrangère, religieuse et institutionnelle."
+            onclick="showDetail(15)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band narrow" style="left:82.2853%;width:2.7721%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (~1628 — ~1669)&#10;La guerre sociale vénitienne n&#39;est pas un conflit armé mais une tension institutionnelle faite de luttes de palais, de purges et de consolidation de l&#39;appareil exécutif. Elle est résolue par le triomphe des Inquisiteurs d&#39;État — le « tiers » institutionnel — sur les deux factions, combiné avec la perte de la Crète (1669) qui force l&#39;homogénéisation territoriale."
+            onclick="showDetail(16)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band narrow" style="left:85.0575%;width:3.3130%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation — suprématie de l&#39;exécutif&lt;/strong&gt; (~1669 — ~1718)&#10;La suprématie des Inquisiteurs d&#39;État s&#39;installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n&#39;ont pas d&#39;assise territoriale. Le pic absolutiste est Morosini (~1688) : reconquête de la Morée, élection unanime au dogat depuis le champ de bataille. L&#39;expansion prend fin avec le traité de Passarowitz (1718)."
+            onclick="showDetail(19)">
+            <span class="subphase-label">Absolutisation — suprématie de l&#39;exécutif</span>
+        </div>
+        <div class="subphase-band" style="left:88.3705%;width:5.3414%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime endogène&lt;/strong&gt; (~1718 — 1797)&#10;Sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), investissement foncier (villas palladiennes). Contestations du régime (Correzione de 1761, Pisani-Contarini 1779) — pas des DGRO mais des défis de type polysynodie, écrasés par les Inquisiteurs. Le bloc élitaire se cristallise, le clivage gauche-droite saute."
+            onclick="showDetail(23)">
+            <span class="subphase-label">Ancien Régime endogène</span>
+        </div>
+        <div class="subphase-band narrow" style="left:93.7120%;width:3.4483%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime sous domination étrangère&lt;/strong&gt; (1797 — 1848)&#10;L&#39;Autriche exerce le pouvoir absolutiste sur le territoire vénitien. Le moteur culturel reste actif (dialecte, mémoire, identité), le moteur étatique est bloqué (pas d&#39;institutions autonomes). Le remplacement des élites s&#39;opère : la bourgeoisie professionnelle remplace le patriciat. Le bloc contestataire se cristallise : ED (« Viva San Marco ! ») et EG (Risorgimento) convergent contre le bloc élitaire autrichien. Le clivage gauche-droite saute."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Ancien Régime sous domination étrangère</span>
+        </div>
+        
+        <div class="perturbation-overlay" style="left:93.7120%;width:15.4834%;"
+            data-tooltip="&lt;strong&gt;Avortement — conquête par Bonaparte&lt;/strong&gt; (1797 — ?)&#10;Type : &#10;La conquête de Venise par Bonaparte en 1797 détruit les institutions vénitiennes : dissolution du Grand Conseil (12 mai 1797, vote 512 contre 20), Libro d&#39;Oro brûlé (4 juin), Bucintoro démantelé, 30 000 œuvres d&#39;art pillées. Le traité de Campo Formio cède Venise à l&#39;Autriche. C&#39;est un avortement au sens historionomique — destruction des institutions endogènes par une force extérieure."
+            onclick="showDetail(24)">
+            <span class="perturbation-label">Avortement — conquête par Bonaparte</span>
+        </div>
+        
+        <div class="saillant-group" style="left:21.2982%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Orso Ipato (~726)&#10;Orso Ipato est le premier doge historiquement attesté, élu en 726 contre la volonté de Byzance, exerçant une autorité militaire et politique réelle sur l&#39;ensemble de la lagune."
+                onclick="showDetail(3)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Orso Ipato</span><span class="saillant-date">~726</span></div>
+        </div>
+        <div class="saillant-group" style="left:23.8675%;top:265px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Maurizio Galbaio (~764)&#10;Premier doge à régner durablement (22 ans, 764-787), engageant Venise sur la voie de l&#39;indépendance et tentant la succession héréditaire par co-régence avec son fils Giovanni."
+                onclick="showDetail(4)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Maurizio Galbaio</span><span class="saillant-date">~764</span></div>
+        </div>
+        <div class="saillant-group" style="left:26.5720%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Crise féodale (~804)&#10;La faction pro-franque d&#39;Obelerio prend le pouvoir (804) et prête allégeance à Charlemagne. Pépin attaque le lagon (810) mais échoue à prendre Rialto. La Pax Nicephori (812-814) consacre l&#39;indépendance de fait de Venise. Capital transféré à Rialto."
+                onclick="showDetail(5)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure"></span><span class="saillant-date">~804</span></div>
+        </div>
+        <div class="saillant-group" style="left:27.0453%;top:330px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Agnello Partecipazio (~811)&#10;Fondateur de la dynastie Partecipazio, il transfère la capitale à Rialto, construit le premier palais ducal. Sa dynastie produit sept doges sur ~130 ans (~811-942)."
+                onclick="showDetail(6)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Agnello Partecipazio</span><span class="saillant-date">~811</span></div>
+        </div>
+        <div class="saillant-group" style="left:37.0521%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Pietro IV Candiano (~959)&#10;Pietro IV Candiano (959-976) tente d&#39;importer la féodalité terrienne à Venise (domaines continentaux, hommage à l&#39;empereur germanique). Révolte de 976 : palais ducal brûlé, doge tué. Rejet violent du modèle continental."
+                onclick="showDetail(7)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Pietro IV Candiano</span><span class="saillant-date">~959</span></div>
+        </div>
+        <div class="saillant-group" style="left:39.2157%;top:265px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Pietro II Orseolo (~991)&#10;Le doge le plus puissant de la période féodale : conquête de la Dalmatie (1000), privilèges commerciaux de Byzance (992), alliances dynastiques européennes. L&#39;apogée du pouvoir personnel déclenche la réaction qui aboutit au pacte de 1032."
+                onclick="showDetail(8)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Pietro II Orseolo</span><span class="saillant-date">~991</span></div>
+        </div>
+        <div class="saillant-group" style="left:41.9878%;top:200px;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Domenico Flabanico (doge de transition) (~1032)&#10;Après la chute des Orseolo (1026), l&#39;assemblée abolit la co-régence en 1032. Les oligarques codifient la structure de l&#39;exécutif : le doge ne pourra plus désigner son successeur. C&#39;est le moment où le pouvoir cesse d&#39;être personnel."
+                onclick="showDetail(9)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Domenico Flabanico (doge de transition)</span><span class="saillant-date">~1032</span></div>
+        </div>
+        <div class="saillant-group" style="left:42.7316%;top:330px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Domenico Contarini (premier doge stable sous le nouveau régime) (~1043)&#10;Domenico Contarini (doge 1043-1070) est le premier doge à gouverner de manière stable sous le régime post-dynastique, avec un fisc commercial permanent, une flotte permanente, et une administration en cours d&#39;institutionnalisation."
+                onclick="showDetail(12)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Domenico Contarini (premier doge stable sous le nouveau régime)</span><span class="saillant-date">~1043</span></div>
+        </div>
+        <div class="saillant-group" style="left:52.8059%;top:200px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Enrico Dandolo (~1192)&#10;Enrico Dandolo (doge 1192-1205), aveugle et octogénaire, détourne la IVe croisade vers Constantinople et crée l&#39;empire maritime vénitien. C&#39;est l&#39;apogée de la puissance vénitienne en phase oligarchique."
+                onclick="showDetail(13)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Enrico Dandolo</span><span class="saillant-date">~1192</span></div>
+        </div>
+        <div class="saillant-group" style="left:74.2394%;top:200px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Fin de l&#39;expansion (1509)&#10;La Ligue de Cambrai inflige à Venise la défaite d&#39;Agnadello (1509) : toute la Terraferma est perdue avant d&#39;être récupérée par la diplomatie. L&#39;épisode marque la fin de l&#39;expansion agressive — après cette date, les guerres deviennent défensives et la polarisation des élites peut commencer."
+                onclick="showDetail(14)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure"></span><span class="saillant-date">1509</span></div>
+        </div>
+        <div class="saillant-group" style="left:82.2853%;top:200px;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Guerre sociale (~1628)&#10;La guerre sociale vénitienne oppose les factions giovani (prébendière) et vecchi (patrimoniale) dans un conflit institutionnel fait de luttes de palais, de purges et de meurtres judiciaires. Elle est résolue par le triomphe de l&#39;appareil des Inquisiteurs d&#39;État — le « tiers » institutionnel — accéléré par la guerre de Candie (1645-1669) et scellé par la perte de la Crète (1669) qui force l&#39;homogénéisation territoriale."
+                onclick="showDetail(17)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure"></span><span class="saillant-date">~1628</span></div>
+        </div>
+        <div class="saillant-group" style="left:85.0575%;top:265px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;1er monarque absolu (~1669)&#10;Après la résolution de la guerre sociale (~1669), les Inquisiteurs d&#39;État exercent une suprématie de facto sur toutes les autres institutions vénitiennes. C&#39;est un absolutisme sans monarque — le pouvoir est concentré dans un appareil, pas dans une personne."
+                onclick="showDetail(20)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure"></span><span class="saillant-date">~1669</span></div>
+        </div>
+        <div class="saillant-group" style="left:86.3421%;top:200px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Francesco Morosini (~1688)&#10;Francesco Morosini reconquiert la Morée (1684-1699), est élu doge à l&#39;unanimité depuis le champ de bataille (~1688), porte le titre de « Peloponnesiaco ». C&#39;est le pic de prestige absolutiste — analogue à Louis XIV pour la France ou Élisabeth Ire pour l&#39;Angleterre."
+                onclick="showDetail(21)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Francesco Morosini</span><span class="saillant-date">~1688</span></div>
+        </div>
+        <div class="saillant-group" style="left:88.3705%;top:330px;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Fin de l&#39;expansion (1718)&#10;Le traité de Passarowitz (1718) entérine la perte de la Morée et marque la fin définitive de toute expansion vénitienne. À partir de cette date, le système entre en Ancien Régime."
+                onclick="showDetail(22)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure"></span><span class="saillant-date">1718</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond"><span class="material-icons" style="font-size:10px;color:#fff;">terrain</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;"><span class="material-icons" style="font-size:10px;color:#fff;">cancel</span></span>Avortement</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <button class="detail-close" onclick="closeDetail()">&times;</button>
+    <div id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 04/04/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','summary':'La phase féodale vénitienne s\'étend de l\'élection d\'Orso Ipato, premier doge historiquement attesté, jusqu\'à l\'abolition de la co-régence en 1032. Le pouvoir repose sur la personne du doge, se fragmente à chaque succession difficile, et les tentatives dynastiques échouent systématiquement devant la résistance des familles marchandes. Cinq boucles pic/crise ponctuent la phase.','description':'La phase féodale vénitienne est atypique dans sa forme mais classique dans sa dynamique. L\'absence de féodalité terrienne — la « vassalité » est commerciale, fondée sur les réseaux de commerce maritime et le contrôle des routes du sel — n\'empêche pas le mécanisme central de fonctionner : pouvoir personnel, alliances d\'homme à homme, fragmentation à chaque succession. Cinq boucles pic/crise ponctuent la phase : les dynasties Galbaio, Partecipazio, Candiano et Orseolo représentent autant de tentatives d\'héréditariser le pouvoir, chacune échouant devant la résistance des familles marchandes. La crise de 804-810, déclenchée par l\'attaque de Pépin dans le lagon, cristallise l\'identité vénitienne comme distincte des deux empires. Le pacte de 1032, qui abolit la co-régence, intervient quand les deux conditions de Deblonde sont réunies : homogénéité des familles marchandes après 300 ans de brassage lagunaire, et faiblesse post-Orseolo.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+106 ans par rapport à la norme (~200 ans). Au moins 5 boucles pic féodal / crise féodale, comparables au cas anglais (~500 ans, 5 boucles). L\'environnement commercial-maritime et les factions (pro-byzantines, pro-franques, dynastiques) retardent le pacte.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — les familles marchandes abolissent la co-régence et codifient l\'élection du doge (1032)','resolution_conditions':'Les grandes familles marchandes se perçoivent comme une classe homogène capable d\'agir collectivement, après ~300 ans de brassage dans l\'espace confiné du lagon et après l\'échec répété des tentatives dynastiques (Galbaio, Partecipazio, Candiano, Orseolo).','avortement':'','start':726,'end':1032,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Percolation lagunaire','summary':'Communautés gouvernées par des tribuns locaux sans autorité centrale. Pas de structure supra-régionale.','description':'Les premières communautés lagunaires sont des réfugiés fuyant les invasions barbares — Huns d\'Attila (452), puis Lombards d\'Alboïn (568-569). Les habitants d\'Altinum, Oderzo, Concordia et d\'autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum) qui forme un comité directeur sans chef unique, le tout dans l\'orbite byzantine. Aucune autorité supra-régionale ne s\'impose — c\'est la phase de percolation qui précède l\'éveil féodal.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':452,'end':726,'start_approx':false,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites — cinq boucles','summary':'Cinq cycles pic féodal / crise féodale (Galbaio, Partecipazio, Candiano, Orseolo), chaque tentative dynastique échouant devant la résistance des familles marchandes.','description':'La coagulation des élites vénitiennes s\'étend sur plus de trois siècles et produit au moins cinq boucles pic féodal / crise féodale, un nombre comparable au cas anglais. Les dynasties Galbaio (764-804), Partecipazio (811-942), Candiano (959-976) et Orseolo (991-1026) représentent chacune une tentative de concentrer et d\'héréditariser le pouvoir, qui échoue systématiquement devant la résistance des familles marchandes. La révolte de 976, où le palais ducal brûle et Pietro IV Candiano est tué pour avoir tenté d\'importer la féodalité terrienne continentale, illustre la violence de ces résistances. La dernière boucle — les Orseolo, qui portent le pouvoir personnel à son maximum avec la conquête de la Dalmatie — aboutit au pacte de 1032 quand les conditions de Deblonde convergent enfin.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':726,'end':1032,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','summary':'Orso Ipato est le premier doge historiquement attesté, élu en 726 contre la volonté de Byzance, exerçant une autorité militaire et politique réelle sur l\'ensemble de la lagune.','description':'Élu lors de la révolte contre l\'iconoclasme de Léon III, Orso Ipato réforme la marine vénitienne, envoie 80 navires reprendre Ravenne aux Lombards, et structure le jeu politique du lagon autour de sa personne. Byzance finit par le reconnaître (titres de hypatus et dux). Son assassinat en 737 lors d\'un conflit entre Eraclea et Equilio illustre la fragilité du pouvoir personnel.','figure':'Orso Ipato','confidence':'medium','alternatives':'Paolo Lucio Anafesto (697 — historicité très contestée). Maurizio Galbaio (764 — premier doge à exercer un pouvoir durable).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':726,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Premier doge à régner durablement (22 ans, 764-787), engageant Venise sur la voie de l\'indépendance et tentant la succession héréditaire par co-régence avec son fils Giovanni.','description':'','figure':'Maurizio Galbaio','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':764,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','summary':'La faction pro-franque d\'Obelerio prend le pouvoir (804) et prête allégeance à Charlemagne. Pépin attaque le lagon (810) mais échoue à prendre Rialto. La Pax Nicephori (812-814) consacre l\'indépendance de fait de Venise. Capital transféré à Rialto.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':804,'end':810,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Fondateur de la dynastie Partecipazio, il transfère la capitale à Rialto, construit le premier palais ducal. Sa dynastie produit sept doges sur ~130 ans (~811-942).','description':'','figure':'Agnello Partecipazio','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':811,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Pietro IV Candiano (959-976) tente d\'importer la féodalité terrienne à Venise (domaines continentaux, hommage à l\'empereur germanique). Révolte de 976 : palais ducal brûlé, doge tué. Rejet violent du modèle continental.','description':'','figure':'Pietro IV Candiano','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':959,'end':976,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','summary':'Le doge le plus puissant de la période féodale : conquête de la Dalmatie (1000), privilèges commerciaux de Byzance (992), alliances dynastiques européennes. L\'apogée du pouvoir personnel déclenche la réaction qui aboutit au pacte de 1032.','description':'','figure':'Pietro II Orseolo','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':991,'end':1009,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','summary':'Après la chute des Orseolo (1026), l\'assemblée abolit la co-régence en 1032. Les oligarques codifient la structure de l\'exécutif : le doge ne pourra plus désigner son successeur. C\'est le moment où le pouvoir cesse d\'être personnel.','description':'Le renversement des Orseolo en 1026 met fin à la dernière dynastie dogale. Domenico Flabanico, élu en 1032, est un doge délibérément faible, choisi pour incarner la rupture. La co-régence est abolie : aucun doge ne pourra associer un parent au pouvoir. Les conditions de Deblonde sont réunies : homogénéité (familles marchandes partageant 300 ans de culture lagunaire) + faiblesse (post-Orseolo). Ce pacte est fonctionnellement analogue à la loi salique (France, 1317) ou aux Ordonnances (Angleterre, 1311) : transition d\'un pouvoir fondé sur la personne vers un pouvoir fondé sur des règles.','figure':'Domenico Flabanico (doge de transition)','confidence':'medium','alternatives':'On pourrait placer le pacte en 1172 (création du Grand Conseil après l\'assassinat de Vitale II Michiel). Mais le test discriminant bascule dès 1032 : après cette date, le pouvoir survit aux successions sans fragmentation.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1032,'end':null,'start_approx':true,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','summary':'La phase oligarchique vénitienne est la plus longue jamais identifiée dans le cadre historionomique (~637 ans). L\'expansion permanente — Stato da Màr après la IVe croisade (1204), Terraferma (1404-1428), guerres ottomanes — fournit continuellement des exutoires extérieurs aux élites et retarde la polarisation. Ce n\'est qu\'après Agnadello (1509), quand l\'expansion agressive cesse, que la polarisation entre giovani et vecchi se cristallise lentement. La guerre sociale (~1628-1669), faite de tensions institutionnelles, de luttes de palais et d\'assassinats plutôt que de batailles rangées, est résolue par le triomphe de l\'appareil exécutif — les Inquisiteurs d\'État — sur les deux factions. La perte de la Crète (1669) scelle cette résolution en forçant l\'homogénéisation territoriale.','description':'La phase oligarchique vénitienne s\'explique par un mécanisme simple : l\'expansion permanente retarde la polarisation des élites en fournissant continuellement des exutoires extérieurs. L\'essor est porté par une construction institutionnelle rapide — Consilium Sapientium, Grand Conseil, Arsenal, promissione ducale — et par l\'expansion commerciale culminant avec le détournement de la IVe croisade (1204) et la création du Stato da Màr. La Serrata (1297) ferme le Grand Conseil aux ~200 familles du Libro d\'Oro, le Conseil des Dix (1310) sécurise l\'oligarchie contre les coups d\'État. La polarisation entre vecchi (patrimoniales) et giovani (prébendières) ne se cristallise qu\'après Agnadello (1509), quand l\'expansion agressive cesse. La guerre sociale (~1628-1669), faite de tensions institutionnelles plutôt que de batailles rangées, est résolue par le triomphe de l\'appareil exécutif — les Inquisiteurs d\'État — « tiers » institutionnel unique dans les parcours connus.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+437 ans par rapport à la norme (~200 ans). L\'expansion permanente (maritime puis terrestre) retarde la polarisation en fournissant des exutoires extérieurs. Les pertes progressives (Chypre 1573, Crète 1669) forcent l\'homogénéisation.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale (~1628-1669) résolue par le triomphe de l\'appareil des Inquisiteurs d\'État sur les factions giovani et vecchi, combiné avec la perte de la Crète (1669) qui force l\'homogénéisation territoriale. Le « tiers » vénitien n\'est pas une personne mais une institution : les Inquisiteurs d\'État, servie par la classe administrative des cittadini.','resolution_conditions':'','avortement':'','start':1032,'end':1669,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','summary':'Construction institutionnelle et expansion massive. L\'essor est prolongé par les exutoires extérieurs (Stato da Màr, Terraferma, guerres ottomanes) qui empêchent la polarisation des élites pendant près de cinq siècles.','description':'L\'essor oligarchique vénitien est porté par le commerce maritime. Après 1032, les doges sont élus et exercent un pouvoir encadré par des institutions en développement rapide : Consilium Sapientium (~1130), Grand Conseil (~1172), Quarantia (~1179), Avogadori de Comun. L\'Arsenal (1104) est le plus grand complexe industriel d\'Europe pré-moderne. La chrysobulle de 1082 (privilèges commerciaux de Byzance) structure un réseau commercial qui fait de Venise l\'intermédiaire incontournable entre l\'Orient et l\'Occident. La Serrata (1297) ferme le Grand Conseil, le Conseil des Dix (1310) le sécurise, la Terraferma est conquise (1404-1428). L\'essor ne s\'achève qu\'à Agnadello (1509), quand la Ligue de Cambrai démontre que l\'expansion agressive a atteint ses limites.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1032,'end':1509,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','summary':'Domenico Contarini (doge 1043-1070) est le premier doge à gouverner de manière stable sous le régime post-dynastique, avec un fisc commercial permanent, une flotte permanente, et une administration en cours d\'institutionnalisation.','description':'','figure':'Domenico Contarini (premier doge stable sous le nouveau régime)','confidence':'low','alternatives':'Le « 1er monarque oligarchique » vénitien est le système post-1032 plus que la personne du doge. Venise n\'a pas de roi — le pouvoir est collégial dès le début de la phase oligarchique. C\'est analogue à Israël post-exil, où la phase oligarchique progresse sans roi.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1043,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pic oligarchique','summary':'Enrico Dandolo (doge 1192-1205), aveugle et octogénaire, détourne la IVe croisade vers Constantinople et crée l\'empire maritime vénitien. C\'est l\'apogée de la puissance vénitienne en phase oligarchique.','description':'Dandolo est le premier doge à gouverner sous la promissione ducale, mais il est aussi le plus puissant. Le détournement de la croisade aboutit à la Partitio Romaniae (1204) : Venise obtient trois huitièmes de Constantinople, la Crète, l\'Eubée, les îles Ioniennes, et un réseau de comptoirs. Le doge prend le titre de « Seigneur d\'un quart et demi de l\'Empire romain ». Mais Dandolo agit dans le cadre oligarchique — il ne peut rien sans le Grand Conseil — et le système continue sans accroc après sa mort (1205). C\'est un pic oligarchique, pas absolutiste : le pouvoir ne se concentre pas dans une main, il s\'exerce collectivement.','figure':'Enrico Dandolo','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1192,'end':1205,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','summary':'La Ligue de Cambrai inflige à Venise la défaite d\'Agnadello (1509) : toute la Terraferma est perdue avant d\'être récupérée par la diplomatie. L\'épisode marque la fin de l\'expansion agressive — après cette date, les guerres deviennent défensives et la polarisation des élites peut commencer.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1509,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','summary':'Après Agnadello, l\'expansion agressive cesse et les guerres deviennent défensives. La polarisation entre vecchi (pôle patrimonial) et giovani (pôle prébendier) se cristallise lentement autour de questions de politique étrangère, religieuse et institutionnelle.','description':'La polarisation vénitienne est lente mais réelle. Les vecchi (familles les plus riches, contrôlant le Conseil des Dix et les Inquisiteurs, conservatrices, pro-papauté, pro-Espagne) voient leur pouvoir assis sur leur position institutionnelle héritée — c\'est le pôle patrimonial. Les giovani (familles moins riches mais commercialement actives, intellectuellement engagées autour du Ridotto Morosini, liées à Galilée et Sarpi, anti-papauté, anti-Habsbourg) tirent leur pouvoir du commerce et des réseaux — c\'est le pôle prébendier. La Correzione de 1582 est la dernière réforme réussie contre l\'exécutif, mais dès avril 1583, le Conseil des Dix rend les Inquisiteurs permanents, substituant le pouvoir de 15-20 membres dans trois personnes. La crise de l\'Interdit (1606-1607), la tentative d\'assassinat de Sarpi (1607), le meurtre judiciaire de Foscarini (1622) et l\'affaire Zeno (1628) marquent l\'escalade des tensions jusqu\'au point de rupture.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1509,'end':1628,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','summary':'La guerre sociale vénitienne n\'est pas un conflit armé mais une tension institutionnelle faite de luttes de palais, de purges et de consolidation de l\'appareil exécutif. Elle est résolue par le triomphe des Inquisiteurs d\'État — le « tiers » institutionnel — sur les deux factions, combiné avec la perte de la Crète (1669) qui force l\'homogénéisation territoriale.','description':'La guerre sociale vénitienne est atypique dans sa forme mais classique dans sa mécanique. Les deux factions (giovani et vecchi) sont bloquées dans un conflit que les voies institutionnelles ne peuvent plus résoudre. La résolution ne vient ni de la victoire de l\'une des factions, ni d\'un « grand homme » qui s\'impose comme tiers : elle vient du triomphe de l\'appareil exécutif lui-même. Les Inquisiteurs d\'État, servis par la classe administrative des cittadini, constituent le « tiers » vénitien — mais c\'est un tiers institutionnel, pas personnel. Pendant la guerre de Candie (1645-1669), les délégations d\'urgence renforcent massivement l\'exécutif. La loi de 1667 reconfirme l\'autorité des Inquisiteurs. La perte de la Crète (1669) scelle la résolution en éliminant le dernier grand exutoire extérieur et en forçant l\'homogénéisation du territoire. Ni les giovani ni les vecchi ne gagnent — c\'est l\'État qui l\'emporte.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1628,'end':1669,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','summary':'La guerre sociale vénitienne oppose les factions giovani (prébendière) et vecchi (patrimoniale) dans un conflit institutionnel fait de luttes de palais, de purges et de meurtres judiciaires. Elle est résolue par le triomphe de l\'appareil des Inquisiteurs d\'État — le « tiers » institutionnel — accéléré par la guerre de Candie (1645-1669) et scellé par la perte de la Crète (1669) qui force l\'homogénéisation territoriale.','description':'La guerre sociale vénitienne est atypique dans sa forme mais classique dans sa mécanique. Après l\'échec de l\'affaire Zeno (1628), les voies de réforme institutionnelle sont définitivement fermées. Les Inquisiteurs consolident leur emprise : surveillance, neutralisation des factions, purges (meurtre judiciaire de Foscarini, 1622 ; tentative d\'assassinat de Sarpi, 1607). La guerre de Candie (1645-1669) accélère le processus en imposant des délégations d\'urgence à l\'exécutif — Morosini signe la capitulation sans autorisation du Sénat. La résolution ne vient ni de la victoire d\'une faction ni d\'un « grand homme » : elle vient du triomphe de l\'appareil exécutif lui-même. Le « tiers » vénitien n\'est pas une personne (comme Henri IV ou Henri VII) mais une institution : les Inquisiteurs d\'État, servis par les cittadini.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1628,'end':1669,'start_approx':true,'end_approx':true},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste — endogène puis sous domination étrangère','summary':'La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d\'État après 1669 et le pic absolutiste de Morosini (~1688). L\'absolutisme vénitien est institutionnel — ce n\'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l\'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l\'absolutisme, il l\'achève. L\'Ancien Régime se poursuit sous domination étrangère (1797-1848) avec le même mécanisme de sédimentation et de convergence du bloc contestataire.','description':'L\'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d\'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (~1688), élu doge à l\'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le pic absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L\'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d\'Oro brûlé —, et l\'Ancien Régime se poursuit sous domination autrichienne avec le même mécanisme de sédimentation et de convergence du bloc contestataire jusqu\'à la RN de 1848.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'Dans la norme (~179 ans pour ~200 ans typiques).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Révolution Nationale avortée (1848)','resolution_conditions':'','avortement':'','start':1669,'end':1848,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation — suprématie de l\'exécutif','summary':'La suprématie des Inquisiteurs d\'État s\'installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n\'ont pas d\'assise territoriale. Le pic absolutiste est Morosini (~1688) : reconquête de la Morée, élection unanime au dogat depuis le champ de bataille. L\'expansion prend fin avec le traité de Passarowitz (1718).','description':'L\'absolutisation vénitienne est « fluide » — elle se fait sans le choc dramatique d\'une Dernière Grande Révolte Oligarchique (DGRO), parce que les patriciens n\'ont pas d\'assise territoriale depuis laquelle se révolter. Tous vivent dans le lagon, contrairement aux frondeurs français qui disposaient de Bordeaux ou aux lords anglais du Pilgrimage of Grace. La suprématie des Inquisiteurs s\'installe progressivement après 1669, fondée sur leur réseau de surveillance et sur la continuité administrative des cittadini. Le pic absolutiste est Francesco Morosini, dont la reconquête de la Morée (1684-1699) et l\'élection unanime au dogat depuis le champ de bataille portent le prestige de la République à son dernier sommet. L\'expansion prend fin définitivement avec le traité de Passarowitz (1718).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1669,'end':1718,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','summary':'Après la résolution de la guerre sociale (~1669), les Inquisiteurs d\'État exercent une suprématie de facto sur toutes les autres institutions vénitiennes. C\'est un absolutisme sans monarque — le pouvoir est concentré dans un appareil, pas dans une personne.','description':'Le « 1er monarque absolu » vénitien n\'est pas une personne mais une institution : les Inquisiteurs d\'État. Après 1669, leur autorité est incontestée. Le réseau de surveillance (bocche dei leoni, espions, rapports confidentiels) donne à trois magistrats — renouvelés annuellement mais disposant d\'une continuité institutionnelle grâce aux archives et à la classe administrative des cittadini — un pouvoir supérieur à celui de tout autre organe. Le Sénat et le Grand Conseil subsistent mais ne peuvent plus contester les décisions de l\'exécutif. Les Avogadori de Comun (magistrats contrôleurs) sont impuissants. C\'est l\'aboutissement du processus enclenché en 1583, quand les Inquisiteurs ont été rendus permanents.','figure':'','confidence':'medium','alternatives':'Il n\'y a pas de personne incarnant le « 1er monarque absolu » — c\'est l\'institution des Inquisiteurs d\'État, servie par la classe des cittadini, qui joue ce rôle. Le « tiers » vénitien est institutionnel, pas personnel.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1669,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Pic absolutiste','summary':'Francesco Morosini reconquiert la Morée (1684-1699), est élu doge à l\'unanimité depuis le champ de bataille (~1688), porte le titre de « Peloponnesiaco ». C\'est le pic de prestige absolutiste — analogue à Louis XIV pour la France ou Élisabeth Ire pour l\'Angleterre.','description':'Francesco Morosini est la figure la plus marquante de la phase absolutiste vénitienne. Général victorieux, il reconquiert la Morée (Péloponnèse) entre 1684 et 1699 dans une campagne brillante qui fait de Venise, pour la dernière fois, une puissance conquérante. En 1688, il est élu doge à l\'unanimité depuis le champ de bataille — fait sans précédent dans l\'histoire de la République. Son titre de « Peloponnesiaco » est le dernier titre de gloire vénitien. C\'est le même homme qui, en 1669, avait signé la capitulation de Candie sans autorisation du Sénat — un acte d\'exécutif pur qui illustre la nature de l\'absolutisme vénitien. Le pic Morosini est au Parcours vénitien ce que le règne de Louis XIV est au Parcours français : l\'apogée du prestige et de la puissance avant la sédimentation de l\'Ancien Régime.','figure':'Francesco Morosini','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1688,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fin de l\'expansion','summary':'Le traité de Passarowitz (1718) entérine la perte de la Morée et marque la fin définitive de toute expansion vénitienne. À partir de cette date, le système entre en Ancien Régime.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1718,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime endogène','summary':'Sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), investissement foncier (villas palladiennes). Contestations du régime (Correzione de 1761, Pisani-Contarini 1779) — pas des DGRO mais des défis de type polysynodie, écrasés par les Inquisiteurs. Le bloc élitaire se cristallise, le clivage gauche-droite saute.','description':'L\'Ancien Régime vénitien endogène présente tous les marqueurs classiques de la sédimentation absolutiste. Les barnabotti — nobles appauvris de la paroisse San Barnaba, conservant leurs droits de vote mais vendant leur soutien au plus offrant — incarnent la sclérose du système. Le patriciat décline numériquement de ~2500 (XVIe siècle) à ~1300 (1775). Parallèlement, le rayonnement culturel est à son apogée : Vivaldi compose à l\'Ospedale della Pietà, Canaletto peint les vedute qui définissent l\'image de Venise, Tiepolo décore les palais d\'Europe, Goldoni réinvente le théâtre. L\'investissement foncier en Terraferma (villas palladiennes) transforme la classe marchande en gentry rentière. Les contestations du régime — la Correzione de Querini (1761), l\'affaire Pisani-Contarini (1779) — ne sont pas des DGRO car les contestataires n\'ont pas d\'assise territoriale depuis laquelle se révolter : ce sont des défis de type polysynodie, des tentatives de redistribuer le pouvoir au sein de l\'élite, systématiquement écrasés par les Inquisiteurs.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1718,'end':1797,'start_approx':true,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'absolutiste','title':'Avortement — conquête par Bonaparte','summary':'La conquête de Venise par Bonaparte en 1797 détruit les institutions vénitiennes : dissolution du Grand Conseil (12 mai 1797, vote 512 contre 20), Libro d\'Oro brûlé (4 juin), Bucintoro démantelé, 30 000 œuvres d\'art pillées. Le traité de Campo Formio cède Venise à l\'Autriche. C\'est un avortement au sens historionomique — destruction des institutions endogènes par une force extérieure.','description':'Bonaparte ne « complète » pas l\'absolutisation vénitienne : il détruit les institutions qui portaient le Parcours. Le Grand Conseil vote sa propre dissolution sous la pression militaire. Le doge Ludovico Manin retire le corne ducal : « Tole, questa no la doperaremo pi. » Le Libro d\'Oro est brûlé en place Saint-Marc au pied d\'un Arbre de la Liberté. La peine de mort est décrétée pour quiconque crie « Viva San Marco ! ». Le traité de Campo Formio (17 octobre 1797) cède Venise à l\'Autriche sans consultation. L\'appareil des Inquisiteurs, le Sénat, le Conseil des Dix, la promissione ducale — tout est aboli. C\'est structurellement un avortement : la force extérieure anéantit les institutions, le Parcours est interrompu. La RN de 1848 se fera sous domination étrangère, dans un cadre institutionnel entièrement nouveau.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1797,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime sous domination étrangère','summary':'L\'Autriche exerce le pouvoir absolutiste sur le territoire vénitien. Le moteur culturel reste actif (dialecte, mémoire, identité), le moteur étatique est bloqué (pas d\'institutions autonomes). Le remplacement des élites s\'opère : la bourgeoisie professionnelle remplace le patriciat. Le bloc contestataire se cristallise : ED (« Viva San Marco ! ») et EG (Risorgimento) convergent contre le bloc élitaire autrichien. Le clivage gauche-droite saute.','description':'L\'Ancien Régime sous domination étrangère prolonge les mécanismes de sédimentation dans un cadre nouveau. L\'administration autrichienne exerce un pouvoir central absolu mais dépourvu de légitimité aux yeux de la population vénitienne. Les Congregazioni Centrali offrent un cadre consultatif minimal où grands propriétaires et bourgeois interagissent, mais sans pouvoir réel. Le remplacement des élites est le fait marquant de cette période : le patriciat est juridiquement aboli, mais ses membres conservent leurs biens et leurs réseaux ; c\'est la bourgeoisie professionnelle — héritière des cittadini — qui émerge comme nouvelle classe dirigeante. Le bloc contestataire se forme en combinant deux pôles : les ED (nostalgiques de la République, « Viva San Marco ! », anciens patriciens déclassés) et les EG (bourgeoisie libérale, républicains du Risorgimento, carbonari, intellectuels de l\'Ateneo Veneto). Les deux convergent contre le bloc élitaire (administration autrichienne + collaborateurs) : le clivage gauche-droite a sauté, comme dans tout Ancien Régime avancé.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1797,'end':1848,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale avortée — République de San Marco','summary':'En mars 1848, le bloc contestataire renverse le régime autrichien à Venise. Daniele Manin — avocat, bourgeoisie professionnelle, aucun lien avec l\'ancien patriciat — mobilise les arsenalotti, la bourgeoisie, les artisans et des soldats italiens déserteurs. Il proclame la République de San Marco le 22 mars 1848, instaurant une expérience parlementaire avec assemblée élue et factions concurrentes (républicains, fusionnistes, mazziniens). La République résiste 17 mois avant d\'être écrasée par l\'Autriche. C\'est structurellement identique à la RN avortée d\'Israël en 66-70 — et non à une révolte absolutiste (type Maccabées ou Bar Kokhba).','description':'La Révolution Nationale vénitienne de 1848 suit les premières étapes du schéma classique avant d\'être écrasée par l\'Autriche. En mars 1848, Daniele Manin — avocat sans lien avec l\'ancien patriciat — mobilise les arsenalotti, la bourgeoisie et des soldats italiens, proclame la République de San Marco et instaure une assemblée élue avec factions concurrentes (républicains, fusionnistes, mazziniens). Les transferts de pouvoir factionnels (Manin démissionne quand les fusionnistes l\'emportent, revient quand ils échouent) confirment qu\'il s\'agit d\'une dynamique parlementaire, non d\'une révolte absolutiste de type Maccabées. Le vote des « pouvoirs illimités » pour Manin en mars 1849 amorce la phase aiguë, mais l\'écrasement autrichien par siège, bombardement et blocus intervient avant que le processus ne se complète — structurellement identique à Israël en 66-70.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'Écrasée par l\'Autriche avant la complétion de la phase aiguë (comme Israël écrasé par Rome en 70)','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'AR','summary':'Le 22 mars 1848, Daniele Manin proclame la République de San Marco après la capitulation de la garnison autrichienne. Les arsenalotti s\'emparent de l\'Arsenal, les élites collaboratrices basculent, le régime autrichien s\'effondre à Venise.','description':'Manin (avocat, petit-fils d\'un juif converti, aucun lien avec l\'ancien patriciat) et Niccolò Tommaseo (linguiste dalmate) sont les figures centrales de l\'insurrection. Libérés de prison par une manifestation populaire le 17 mars, ils prennent la tête du mouvement en cinq jours. Le 22 mars, les arsenalotti — ouvriers de l\'Arsenal, seule force organisée du peuple vénitien — s\'emparent de leur lieu de travail. La garnison autrichienne capitule sans combat majeur. Manin proclame la République depuis la place Saint-Marc, invoquant le nom et les symboles de l\'ancienne République pour un projet nouveau. C\'est l\'explosion classique de l\'AR : perte simultanée de légitimité et de capacité financière du régime, basculement des élites, gouvernement de coalition élargie.','figure':'Daniele Manin','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':null,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','summary':'La République de San Marco est gouvernée par une assemblée élue avec des factions concurrentes (républicains, fusionnistes, mazziniens). Manin démissionne quand les fusionnistes l\'emportent (juillet 1848), revient quand ils échouent. Résiste 17 mois — la dernière république de 1848 à tomber en Europe.','description':'L\'expérience parlementaire vénitienne de 1848-1849 est remarquable par sa durée, sa stabilité relative, et sa dynamique factionnelle. L\'assemblée est élue au suffrage élargi et comprend des républicains (autour de Manin), des fusionnistes (partisans du rattachement au Piémont), et des mazziniens (républicains unitaires). Les transferts de pouvoir sont pacifiques : quand les fusionnistes l\'emportent en juillet 1848, Manin démissionne ; quand leur politique de rattachement au Piémont échoue avec la défaite de Custoza, il revient. Cette dynamique factionnelle est le marqueur discriminant d\'une RN par rapport à une révolte absolutiste, où le commandement serait unifié et charismatique. La République est la dernière à tomber dans toute l\'Europe de 1848 (22 août 1849), après Rome (3 juillet) et la Hongrie (13 août).','figure':'Daniele Manin','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':null,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','summary':'En mars 1849, l\'assemblée vote les « pouvoirs illimités » pour Manin — escalade vers la phase radicale, concentration du pouvoir face à l\'urgence. La RN est écrasée avant que ce processus ne puisse aboutir.','description':'Le vote des « pouvoirs illimités » pour Manin en mars 1849 marque le début de l\'escalade vers la phase aiguë de la Révolution Nationale. Face au siège autrichien, au blocus, et à l\'effondrement des espoirs de secours extérieur, l\'assemblée se résout à concentrer le pouvoir dans les mains d\'un seul homme. C\'est exactement la dynamique qui, dans les RN réussies, mène à la phase aiguë puis à l\'Impérialiste Revanchard. Mais l\'écrasement vient avant : bombardement, blocus alimentaire, épidémie de choléra. La République capitule le 22 août 1849. La phase aiguë est amorcée, pas complétée — comme à Jérusalem en 67-70, où les Zélotes commencent la radicalisation avant que Rome ne détruise la ville.','figure':'Daniele Manin','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':null,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Écrasement','summary':'L\'Autriche écrase la République par le siège, le bombardement, le blocus alimentaire et l\'épidémie de choléra. Venise capitule le 22 août 1849 — dernière république de 1848 à tomber en Europe. L\'écrasement est entièrement exogène.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':null,'end':null,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    let html = `<div class="detail-title">${e.title}</div>`;
+    html += `<span class="detail-kind" style="background:${color}">${kindLabel}</span>`;
+    if (e.phase) html += ` <span style="font-size:0.75rem;color:#666;">${phaseLabel}</span>`;
+    if (e.step) html += ` <span style="font-size:0.75rem;color:#888;">(étape ${e.step})</span>`;
+
+    html += `<div class="detail-meta">`;
+    html += `<div><strong>Dates :</strong> ${dates}</div>`;
+    if (e.figure) html += `<div><strong>Figure :</strong> ${e.figure}</div>`;
+    if (e.confidence) html += `<div><strong>Confiance :</strong> <span class="confidence-badge ${confClass}">${confLabel}</span></div>`;
+    if (e.deviation) html += `<div><strong>Déviation :</strong> ${e.deviation}</div>`;
+    if (e.typical_duration) html += `<div><strong>Durée typique :</strong> ${e.typical_duration}</div>`;
+    if (e.perturbation_type) html += `<div><strong>Type :</strong> ${e.perturbation_type}</div>`;
+    if (e.affected_motor) html += `<div><strong>Moteur affecté :</strong> ${e.affected_motor}</div>`;
+    html += `</div>`;
+
+    if (e.summary) {
+        html += `<div class="detail-section"><div class="detail-section-title">Résumé</div><p>${e.summary}</p></div>`;
+    }
+    if (e.description) {
+        html += `<div class="detail-section"><div class="detail-section-title">Description</div><div class="detail-description">${e.description}</div></div>`;
+    }
+    if (e.alternatives) {
+        html += `<div class="detail-section"><div class="detail-section-title">Alternatives</div><p style="font-style:italic;color:#666;">${e.alternatives}</p></div>`;
+    }
+    if (e.note) {
+        html += `<div class="detail-section"><div class="detail-section-title">Note</div><p style="color:#666;">${e.note}</p></div>`;
+    }
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#c0392b' : '#27ae60';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<div class="detail-section"><div class="detail-section-title">Résolution ${resIcon}</div><p style="color:${resColor};font-weight:600;">${e.resolution}</p></div>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<div class="detail-section"><div class="detail-section-title">Conditions de résolution</div><p style="color:#555;">${e.resolution_conditions}</p></div>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

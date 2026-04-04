@@ -73,6 +73,7 @@ Les écarts à ces durées sont significatifs et s'expliquent toujours par une p
 - **Israël antique** : la phase oligarchique dure ~245 ans au lieu de ~200, à cause du choc assyrien (-722) qui détruit le royaume d'Israël et retarde la construction de l'État central en Judée.
 - **France** : la phase oligarchique dure ~270 ans (1328-1598), à cause de deux reflux liés à la Guerre de Cent Ans (Crécy-Poitiers ~1346-1364, Charles VI ~1392-1429) qui ralentissent l'essor oligarchique d'environ 55 ans.
 - **Angleterre** : la phase oligarchique dure ~213 ans (1272-1485), durée proche de la norme.
+- **Venise** : la phase oligarchique dure ~637 ans (1032-~1669), à cause de l'expansion permanente (Stato da Màr, Terraferma) qui retarde la polarisation en fournissant des exutoires extérieurs aux élites. Les pertes territoriales progressives (Chypre 1573, Crète 1669) forcent l'homogénéisation.
 
 ### Le clivage gauche-droite (Fabry & Portal)
 
@@ -101,6 +102,7 @@ Le Parcours progresse quand l'un ou l'autre des deux moteurs avance. Une nation 
 - **Israël post-exil (-520)** : la nation est en phase oligarchique (Torah comme loi, Knesset haGuedola, Grand Prêtre), mais il n'y a pas de roi — le saillant « 1er monarque oligarchique » n'a pas de figure incarnée. Le Parcours progresse néanmoins.
 - **Allemagne pré-unification (~1713-1871)** : l'homogénéité culturelle est au niveau absolutiste (langue unifiée par Luther, Aufklärung, conscience nationale), mais il n'y a pas de monarque absolu unifié sur l'ensemble de la nation. Le saillant « 1er monarque absolu allemand » n'existe qu'au niveau prussien (Frédéric-Guillaume Ier), pas au niveau national.
 - **Italie pré-unification** : culturellement avancée (Dante, Renaissance, langue italienne), mais politiquement fragmentée — pas de saillants politiques unifiés avant le Risorgimento.
+- **Venise** : le « 1er monarque absolu » n'est pas une personne mais une institution — les Inquisiteurs d'État, devenus autonomes et dominant les factions patricienne. Le saillant « 1er monarque absolu » est institutionnel, pas personnel. Le Parcours progresse néanmoins vers l'absolutisme.
 
 Ce principe a une conséquence méthodologique : pour identifier la phase d'une nation fragmentée, on ne peut pas se fier uniquement aux saillants politiques — il faut aussi évaluer le degré d'homogénéité culturelle.
 
@@ -137,20 +139,20 @@ Le Parcours peut être perturbé par des chocs externes (conquêtes, occupations
 
 Voir `references/nations/*/parcours.md` pour le détail et `references/nations/*/justification.md` pour l'argumentation.
 
-| Saillant | Israël antique | Israël (prolongement) | France | Angleterre | Allemagne (Prusse) |
-|---|---|---|---|---|---|
-| Éveil féodal | Saül (~-1080) | — | Louis VI (~1108) | Guillaume (1066, reboot) | Rodolphe Ier (1273, reboot) |
-| Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Charles Quint (1519) |
-| Pacte oligarchique | — (non identifié) | — | Loi salique (1317) | Ordonnances (1311) | Augsbourg (1555) |
-| 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Grand Électeur (1640) |
-| Pic oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | — |
-| Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | — |
-| Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Conflit Électeur/États (~1660-1713) |
-| 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Frédéric-Guillaume Ier (1713) |
-| Dernière grande révolte olig. | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — |
-| Pic absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Frédéric le Grand (~1760) |
-| Fin de l'expansion (abs.) | — | Mort d'Hérode (-4) | Utrecht (1713) | — | — |
-| Ancien Régime | — (interrompu) | 4 à 66 | ~1715-1789 | ~1603-1642 | ~1890-1918 |
-| Début de la RN | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | Révolution de Novembre (1918) |
-| Impérialiste Revanchard | — | — | Bonaparte (1799) | Cromwell (1653) | Hitler (1933) |
-| Glorieuse Révolution | — | — | 1830 | 1688 | Réunification (1990) |
+| Saillant | Israël antique | Israël (prolongement) | France | Angleterre | Allemagne (Prusse) | Venise |
+|---|---|---|---|---|---|---|
+| Éveil féodal | Saül (~-1080) | — | Louis VI (~1108) | Guillaume (1066, reboot) | Rodolphe Ier (1273, reboot) | Orso Ipato (~726) |
+| Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Charles Quint (1519) | Orseolo (~991) |
+| Pacte oligarchique | — (non identifié) | — | Loi salique (1317) | Ordonnances (1311) | Augsbourg (1555) | Abolition co-régence (1032) |
+| 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Grand Électeur (1640) | Contarini (~1043) / système |
+| Pic oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | — | Dandolo (~1192-1205) |
+| Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | — | Agnadello (1509) |
+| Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Conflit Électeur/États (~1660-1713) | Tensions institutionnelles (~1628-1669) |
+| 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Frédéric-Guillaume Ier (1713) | Inquisiteurs d'État (~1669) |
+| Dernière grande révolte olig. | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — | — (pas d'assise territoriale) |
+| Pic absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Frédéric le Grand (~1760) | Morosini (~1688) |
+| Fin de l'expansion (abs.) | — | Mort d'Hérode (-4) | Utrecht (1713) | — | — | Passarowitz (1718) |
+| Ancien Régime | — (interrompu) | 4 à 66 | ~1715-1789 | ~1603-1642 | ~1890-1918 | ~1718-1848 |
+| Début de la RN | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | Révolution de Novembre (1918) | République de Manin (1848) |
+| Impérialiste Revanchard | — | — | Bonaparte (1799) | Cromwell (1653) | Hitler (1933) | — (RN avortée) |
+| Glorieuse Révolution | — | — | 1830 | 1688 | Réunification (1990) | — (absorbée dans Parcours italien, 1866) |

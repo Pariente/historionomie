@@ -222,7 +222,6 @@ def parse_element(heading: str, body_lines: list) -> dict:
         "resolution": fields.get("resolution", ""),
         "resolution_conditions": fields.get("resolution_conditions", ""),
         "avortement": fields.get("avortement", ""),
-        "narrative": fields.get("narrative", ""),
     }
 
 
@@ -367,7 +366,7 @@ def generate_html(data: dict) -> str:
         for key in ["kind", "type", "phase", "title", "summary", "description",
                      "figure", "confidence", "alternatives", "step", "deviation",
                      "typical_duration", "perturbation_type", "affected_motor", "note",
-                     "resolution", "resolution_conditions", "avortement", "narrative"]:
+                     "resolution", "resolution_conditions", "avortement"]:
             parts.append(f"'{key}':'{escape_js_string(str(e.get(key, '')))}'")
         parts.append(f"'start':{e['start'] if e['start'] is not None else 'null'}")
         parts.append(f"'end':{e['end'] if e['end'] is not None else 'null'}")
@@ -554,28 +553,6 @@ def generate_html(data: dict) -> str:
             <span class="prephase-band-label">Pré-phase</span>
         </div>"""
 
-    # Build narrative sections
-    narrative_html = ""
-    narrative_phases = [p for p in phases if p.get("narrative")]
-    if narrative_phases:
-        narrative_html = '\n<div class="narrative-section">\n<h2>Récit historionomique</h2>\n'
-        for p in narrative_phases:
-            color = PHASE_COLORS.get(p["phase"], "#999")
-            title = escape_html(p["title"])
-            start_label = format_year(p["start"], p["start_approx"])
-            end_label = format_year(p["end"], p["end_approx"]) if p["end"] else "en cours"
-            raw_narrative = p["narrative"].strip()
-            if raw_narrative.startswith("|"):
-                raw_narrative = raw_narrative[1:].strip()
-            paragraphs = raw_narrative.split("\n\n") if "\n\n" in raw_narrative else raw_narrative.split("\n")
-            paras_html = "".join(f"<p>{escape_html(para.strip())}</p>" for para in paragraphs if para.strip())
-            narrative_html += f"""
-<div class="narrative-phase">
-    <h3 style="color:{color}; border-left:4px solid {color}; padding-left:12px;">{title} ({start_label} — {end_label})</h3>
-    {paras_html}
-</div>"""
-        narrative_html += '\n</div>'
-
     gen_date = date.today().strftime("%d/%m/%Y")
 
     html = f"""<!DOCTYPE html>
@@ -707,13 +684,6 @@ body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; backgroun
 .legend-diamond .material-icons, .legend-diamond .material-symbols-outlined {{ font-size:10px; color:#fff; }}
 .legend-conf {{ display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }}
 
-/* Narrative */
-.narrative-section {{ padding:2rem; max-width:900px; margin:0 auto; }}
-.narrative-section h2 {{ font-size:1.4rem; color:#333; margin-bottom:1.5rem; border-bottom:2px solid #ddd; padding-bottom:0.5rem; }}
-.narrative-phase {{ margin-bottom:2rem; }}
-.narrative-phase h3 {{ font-size:1.1rem; margin-bottom:0.8rem; }}
-.narrative-phase p {{ font-size:0.9rem; color:#444; line-height:1.7; margin-bottom:0.8rem; text-align:justify; }}
-
 /* Footer */
 .footer {{ text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #eee; margin-top:1rem; }}
 
@@ -753,8 +723,6 @@ body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; backgroun
         {saillant_markers_html}
     </div>
 </div>
-
-{narrative_html}
 
 <div class="legend">
     <span class="legend-title">Phases :</span>

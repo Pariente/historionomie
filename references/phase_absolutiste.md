@@ -41,6 +41,7 @@ La figure qui résout la guerre sociale et inaugure la concentration du pouvoir.
 - Israël (prolongement) : Simon Thassi (-140) — cumul des fonctions de Grand Prêtre, stratège et ethnarque, rendu héréditaire
 - France : Henri IV (1598) — résolution des Guerres de Religion, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully)
 - Angleterre : Henri VII (1485) — création d'une nouvelle dynastie émancipée des York et des Lancaster
+- Venise : Inquisiteurs d'État (~1669) — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs d'État, rendus permanents en 1583 et devenus progressivement autonomes, ne s'identifient à aucune des factions (giovani/vecchi) et dominent les deux. Leur base est la classe administrative des cittadini (analogue de la noblesse de robe).
 
 ### Caractéristiques
 
@@ -69,6 +70,10 @@ Les grands féodaux et oligarques, mis au pas progressivement, se révoltent une
 - France : La Fronde (1648-1653) — Princes et parlementaires contre Mazarin. Dernier sursaut.
 - Angleterre : Henri VIII (~1534-1540) — dissolution des monastères, Pilgrimage of Grace écrasé
 
+**Cas particulier : absence de DGRO.** La Dernière Grande Révolte Oligarchique suppose que les oligarques disposent d'une **assise territoriale locale** depuis laquelle résister (Condé à Bordeaux, les seigneurs du Nord en Angleterre, les Pharisiens avec leur base populaire). Si les oligarques sont concentrés dans un seul lieu sans base territoriale propre, la DGRO est impossible — l'absolutisation est « fluide ».
+
+**Exemple :** À Venise, tous les patriciens vivent dans le lagon. Ils n'ont pas de seigneuries avec des clientèles armées — leurs propriétés de Terraferma sont des investissements agricoles, et le système de rotation des rettori empêche tout enracinement. L'absolutisation par les Inquisiteurs se fait sans DGRO. Les contestations ultérieures (Correzione de 1761, Pisani-Contarini 1779) sont des tentatives de type « Polysynodie » (contestation du régime par la classe administrative, comme la Polysynodie de 1715 en France ou l'Apology of the Commons de 1604 en Angleterre), pas des révoltes oligarchiques au sens strict.
+
 ### Marqueurs observables
 
 - Accroissement de la production réglementaire centrale au détriment des réglementations décentralisées
@@ -90,6 +95,7 @@ La figure qui incarne le sommet de la puissance absolutiste — expansion maxima
 - Israël (prolongement) : Hérode — reconstruction du Temple à une échelle monumentale, expansion territoriale maximale, cour somptueuse, élimination des Hasmonéens survivants
 - France : Louis XIV — Versailles, domestication de la noblesse par la cour, expansion territoriale, révocation de l'Édit de Nantes (homogénéisation forcée)
 - Angleterre : Élisabeth Ière — défaite de l'Armada espagnole, début de l'expansion coloniale, âge d'or culturel (Shakespeare), prestige maximal de la monarchie Tudor
+- Venise : Francesco Morosini (~1688) — reconquête de la Morée (1684-1699), élu doge à l'unanimité au premier tour alors qu'il commande la flotte en Égine. Titre de « Peloponnesiaco ». Prestige maximal. En 1669, il avait signé la reddition de Candie sans autorisation du Sénat — l'exécutif militaire agit souverainement.
 
 ### Marqueurs forts
 
@@ -113,6 +119,7 @@ Le pouvoir central atteint les limites de son expansion. Les guerres deviennent 
 - Israël (prolongement) : mort d'Hérode (-4) — le royaume est divisé, plus de conquêtes
 - France : Traité d'Utrecht (1713), mort de Louis XIV (1715) — fin de l'expansionnisme
 - Angleterre : fin du règne d'Élisabeth (~1603) — succession aux Stuart
+- Venise : traité de Passarowitz (1718) — perte définitive de la Morée, dernière possession lointaine. Venise se replie sur le lagon et le Veneto.
 
 ## Sous-phase 3 : Ancien Régime (~35 à 100 ans)
 
@@ -141,6 +148,7 @@ Cette recomposition est une condition nécessaire à l'éclatement de la Révolu
 - Israël (prolongement) : les Sadducéens (noblesse de robe, aristocratie sacerdotale pro-romaine) tiennent le pouvoir ; les Pharisiens (ED, nostalgiques hasmonéens) et les Zélotes (EG, révolutionnaires) forment le bloc contestataire
 - France : aristocratie de cour versaillaise sédimentée ; la bourgeoisie dynamique mais exclue du pouvoir forme le terreau de 1789
 - Angleterre : favoritisme Stuart (Buckingham), monopoles royaux ; les Puritains (EG) et l'opposition aristocratique traditionnelle convergent contre la cour
+- Venise : les barnabotti (ED, nobles appauvris nostalgiques de l'égalité patricienne) et la bourgeoisie intellectuelle (EG, réformateurs) convergent contre le bloc élitaire (familles riches contrôlant les Inquisiteurs). La Correzione de 1761 et le mouvement Pisani-Contarini de 1779 sont les manifestations de ce bloc contestataire.
 
 ### Marqueurs observables
 
@@ -148,6 +156,20 @@ Cette recomposition est une condition nécessaire à l'éclatement de la Révolu
 - Unification culturelle, production littéraire accrue, expansion de la langue nationale
 - Accroissement de l'alphabétisation
 - Construction d'infrastructures commerciales
+
+## Tentatives d'absolutisation avortées
+
+Avant que les conditions de la guerre sociale ne soient réunies, des figures individuelles peuvent tenter de rallier les clientèles exclues contre l'oligarchie — c'est-à-dire de forcer la transition vers l'absolutisme avant terme. Ces tentatives échouent systématiquement parce que les trois conditions nécessaires ne sont pas réunies simultanément :
+
+1. **L'administration centrale n'est pas assez autonome** pour servir de base au « tiers »
+2. **Les élites ne sont pas polarisées** — elles protègent collectivement le pacte oligarchique
+3. **Les clientèles populaires ne sont pas structurées** ou ne sont pas prêtes à suivre
+
+**Exemples :**
+- Venise — Marino Faliero (1355) : le doge tente de rallier les non-nobles. Les arsenalotti refusent. L'oligarchie est unie. Faliero est décapité.
+- Rome — les Gracques (133-121 av. J.-C.) : les tribuns tentent de rallier le peuple contre l'oligarchie sénatoriale. Tués. L'oligarchie est trop unie.
+- Rome — Cola di Rienzo (1347) : tente de rallier le peuple romain contre les barons. Chassé puis tué.
+- Florence — la révolte des Ciompi (1378) : les ouvriers de la laine prennent brièvement le pouvoir. L'oligarchie (Albizzi) les écrase. Mais Florence finira par s'absolutiser (Médicis) — les Ciompi sont une tentative prématurée.
 
 ## Tableau récapitulatif
 
@@ -157,3 +179,4 @@ Cette recomposition est une condition nécessaire à l'éclatement de la Révolu
 | Israël (prolongement) | Simon Thassi (-140) | Hérode (~-37 à -4) | 4 à 66 | Grande Révolte (66) |
 | France | Henri IV (1598) | Louis XIV (~1661-1715) | ~1715-1789 | 1789 |
 | Angleterre | Henri VII (1485) | Élisabeth Ière (~1558-1603) | ~1603-1642 | Guerre civile (1642) |
+| Venise | Inquisiteurs d'État (~1669) | Morosini (~1688) | ~1718-1848 | République de Manin (1848) |
