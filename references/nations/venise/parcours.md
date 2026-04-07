@@ -2,12 +2,20 @@
 
 ## Metadata
 - nation: Venise (République de Venise)
-- territory: Lagune vénitienne → Stato da Màr + Terraferma
+- territory: Vénétie
 - start: ~726
 - end: 1866 (absorption dans le Parcours italien)
-- status: Phase oligarchique (1032-~1669), phase absolutiste endogène puis sous domination étrangère (~1669-1848), RN avortée (1848-1849), absorption dans le Parcours italien (1866)
+- status: wip
 - subtitle: Du lagon des réfugiés à la Sérénissime, onze siècles sans roi
-- note: Le Parcours le plus long du corpus (1140 ans). La phase oligarchique (~637 ans) est la plus longue jamais identifiée — l'expansion permanente retarde la polarisation. L'absolutisme vénitien est unique : porté par une institution (les Inquisiteurs d'État), pas par un monarque. La RN de 1848 (République de Manin) est écrasée par l'Autriche, structurellement analogue à Israël en 66-70.
+- highlight_1: Le Parcours le plus long du corpus (~1140 ans) — la lagune, forteresse naturelle, protège les institutions de toute destruction exogène
+- highlight_2: Phase oligarchique de ~637 ans, la plus longue jamais identifiée — l'expansion permanente (Stato da Màr, Terraferma) sert de soupape de pression et retarde la polarisation
+- highlight_3: L'absolutisme vénitien est institutionnel, pas personnel — les Inquisiteurs d'État concentrent le pouvoir sans qu'aucun individu ne devienne monarque absolu, un cas unique dans le corpus
+- highlight_4: La Serrata del Maggior Consiglio (1297) ferme la classe dirigeante et cristallise le clivage patriciat/popolani — un pacte oligarchique visible et datable
+- highlight_5: La RN de 1848 (République de Manin) est écrasée par l'Autriche après 17 mois de résistance — structurellement analogue à la révolte juive de 66-70, même séquence explosion/siège/écrasement
+- highlight_6: Le Parcours s'achève par absorption dans le Parcours italien (1866), pas par résolution endogène — Venise ne termine jamais sa propre RN
+- question_1: L'expansion maritime (Stato da Màr) est-elle une simple soupape de pression retardant la polarisation, ou un mécanisme distinct qui altère structurellement la dynamique oligarchique ?
+- question_2: L'absolutisme institutionnel (Inquisiteurs d'État, Conseil des Dix) est-il fonctionnellement équivalent à l'absolutisme monarchique, ou constitue-t-il une forme alternative qui appelle un traitement théorique séparé ?
+- question_3: La peste de 1630 (~33% de mortalité) joue-t-elle le même rôle de prolongement qu'à Milan, ou accélère-t-elle au contraire la transition vers l'Ancien Régime vénitien ?
 - confidence: medium
 
 ---
@@ -54,6 +62,7 @@
 - type: saillant
 - start: ~726
 - figure: Orso Ipato
+- subtitle: Orso Ipato
 - title: Éveil féodal
 - confidence: medium
 - alternatives: Paolo Lucio Anafesto (697 — historicité très contestée). Maurizio Galbaio (764 — premier doge à exercer un pouvoir durable).
@@ -64,6 +73,7 @@
 - type: saillant
 - start: ~764
 - figure: Maurizio Galbaio
+- subtitle: Galbaio
 - title: Pic féodal
 - confidence: medium
 - summary: Premier doge à régner durablement (22 ans, 764-787), engageant Venise sur la voie de l'indépendance et tentant la succession héréditaire par co-régence avec son fils Giovanni.
@@ -73,6 +83,7 @@
 - avortement: true
 - start: ~804
 - end: ~810
+- subtitle: Crise franque
 - title: Crise féodale
 - confidence: high
 - summary: La faction pro-franque d'Obelerio prend le pouvoir (804) et prête allégeance à Charlemagne. Pépin attaque le lagon (810) mais échoue à prendre Rialto. La Pax Nicephori (812-814) consacre l'indépendance de fait de Venise. Capital transféré à Rialto.
@@ -81,6 +92,7 @@
 - type: saillant
 - start: ~811
 - figure: Agnello Partecipazio
+- subtitle: Partecipazio
 - title: Pic féodal
 - confidence: medium
 - summary: Fondateur de la dynastie Partecipazio, il transfère la capitale à Rialto, construit le premier palais ducal. Sa dynastie produit sept doges sur ~130 ans (~811-942).
@@ -90,6 +102,7 @@
 - start: ~959
 - end: 976
 - figure: Pietro IV Candiano
+- subtitle: Candiano
 - title: Pic féodal
 - confidence: high
 - summary: Pietro IV Candiano (959-976) tente d'importer la féodalité terrienne à Venise (domaines continentaux, hommage à l'empereur germanique). Révolte de 976 : palais ducal brûlé, doge tué. Rejet violent du modèle continental.
@@ -99,6 +112,7 @@
 - start: ~991
 - end: ~1009
 - figure: Pietro II Orseolo
+- subtitle: Orseolo
 - title: Pic féodal
 - confidence: high
 - summary: Le doge le plus puissant de la période féodale : conquête de la Dalmatie (1000), privilèges commerciaux de Byzance (992), alliances dynastiques européennes. L'apogée du pouvoir personnel déclenche la réaction qui aboutit au pacte de 1032.
@@ -107,6 +121,7 @@
 - type: saillant
 - start: ~1032
 - figure: Domenico Flabanico (doge de transition)
+- subtitle: Abolition co-régence
 - title: Pacte oligarchique
 - confidence: medium
 - alternatives: On pourrait placer le pacte en 1172 (création du Grand Conseil après l'assassinat de Vitale II Michiel). Mais le test discriminant bascule dès 1032 : après cette date, le pouvoir survit aux successions sans fragmentation.
@@ -141,6 +156,7 @@
 - type: saillant
 - start: ~1043
 - figure: Domenico Contarini (premier doge stable sous le nouveau régime)
+- subtitle: Contarini
 - title: 1er monarque oligarchique
 - confidence: low
 - alternatives: Le « 1er monarque oligarchique » vénitien est le système post-1032 plus que la personne du doge. Venise n'a pas de roi — le pouvoir est collégial dès le début de la phase oligarchique. C'est analogue à Israël post-exil, où la phase oligarchique progresse sans roi.
@@ -150,6 +166,7 @@
 - type: saillant
 - start: ~1440
 - figure: Francesco Foscari
+- subtitle: Foscari
 - title: Pic oligarchique
 - confidence: medium
 - alternatives: Enrico Dandolo (~1192-1205) — prestige extraordinaire (IVe croisade, création du Stato da Màr), mais Venise ne contrôle pas encore la Terraferma. Dandolo est le pic de la puissance maritime seule. Foscari est retenu car il incarne le pic de la puissance combinée (maritime + terrestre).
@@ -159,6 +176,7 @@
 #### Saillant : Fin de l'expansion — Agnadello
 - type: saillant
 - start: 1509
+- subtitle: Agnadello
 - title: Fin de l'expansion
 - confidence: high
 - summary: La Ligue de Cambrai inflige à Venise la défaite d'Agnadello (1509) : toute la Terraferma est perdue avant d'être récupérée par la diplomatie. L'épisode marque la fin de l'expansion agressive — après cette date, les guerres deviennent défensives et la polarisation des élites peut commencer.
@@ -186,6 +204,7 @@
 - type: saillant
 - start: ~1628
 - end: ~1669
+- subtitle: Giovani vs Vecchi
 - title: Guerre sociale
 - confidence: high
 - summary: La guerre sociale vénitienne oppose les factions giovani (prébendière) et vecchi (patrimoniale) dans un conflit institutionnel fait de luttes de palais, de purges et de meurtres judiciaires. Elle est résolue par le triomphe de l'appareil des Inquisiteurs d'État — le « tiers » institutionnel — accéléré par la guerre de Candie (1645-1669) et scellé par la perte de la Crète (1669) qui force l'homogénéisation territoriale.
@@ -225,6 +244,7 @@
 #### Saillant : 1er monarque absolu — Inquisiteurs d'État
 - type: saillant
 - start: ~1669
+- subtitle: Inquisiteurs d'État
 - title: 1er monarque absolu
 - confidence: medium
 - alternatives: Il n'y a pas de personne incarnant le « 1er monarque absolu » — c'est l'institution des Inquisiteurs d'État, servie par la classe des cittadini, qui joue ce rôle. Le « tiers » vénitien est institutionnel, pas personnel.
@@ -235,6 +255,7 @@
 - type: saillant
 - start: ~1688
 - figure: Francesco Morosini
+- subtitle: Morosini
 - title: Pic absolutiste
 - confidence: high
 - summary: Francesco Morosini reconquiert la Morée (1684-1699), est élu doge à l'unanimité depuis le champ de bataille (~1688), porte le titre de « Peloponnesiaco ». C'est le pic de prestige absolutiste — analogue à Louis XIV pour la France ou Élisabeth Ire pour l'Angleterre.
@@ -243,6 +264,7 @@
 #### Saillant : Fin de l'expansion — Passarowitz
 - type: saillant
 - start: 1718
+- subtitle: Passarowitz
 - title: Fin de l'expansion
 - confidence: high
 - summary: Le traité de Passarowitz (1718) entérine la perte de la Morée et marque la fin définitive de toute expansion vénitienne. À partir de cette date, le système entre en Ancien Régime.
@@ -250,7 +272,8 @@
 #### Saillant : Remontrance
 - type: saillant
 - start: 1761
-- figure: Correzione de Querini
+- figure: Angelo Querini
+- subtitle: Correzione de 1761
 - title: Remontrance
 - confidence: medium
 - alternatives: Pisani-Contarini (1779) — plus tardif, même mécanisme. La Correzione de 1761 est retenue car c'est la première tentative significative.
@@ -309,6 +332,7 @@
 - type: saillant
 - start: 1848
 - figure: Daniele Manin
+- subtitle: Insurrection de mars
 - title: Explosion de l'AR
 - confidence: high
 - summary: Le 22 mars 1848, Daniele Manin proclame la République de San Marco après la capitulation de la garnison autrichienne. Les arsenalotti s'emparent de l'Arsenal, les élites collaboratrices basculent, le régime autrichien s'effondre à Venise.
@@ -319,6 +343,7 @@
 - start: 1848
 - end: 1849
 - figure: Daniele Manin
+- subtitle: République de San Marco
 - title: Expérience parlementaire
 - confidence: high
 - summary: La République de San Marco est gouvernée par une assemblée élue avec des factions concurrentes (républicains, fusionnistes, mazziniens). Manin démissionne quand les fusionnistes l'emportent (juillet 1848), revient quand ils échouent. Résiste 17 mois — la dernière république de 1848 à tomber en Europe.
@@ -328,6 +353,7 @@
 - type: saillant
 - start: 1849
 - figure: Daniele Manin
+- subtitle: Pouvoirs illimités
 - title: Phase aiguë
 - confidence: medium
 - summary: En mars 1849, l'assemblée vote les « pouvoirs illimités » pour Manin — escalade vers la phase radicale, concentration du pouvoir face à l'urgence. La RN est écrasée avant que ce processus ne puisse aboutir.
@@ -336,6 +362,7 @@
 #### Saillant : Écrasement — capitulation de la République de San Marco
 - type: saillant
 - start: 1849
+- subtitle: Capitulation
 - title: Écrasement
 - confidence: high
 - summary: L'Autriche écrase la République par le siège, le bombardement, le blocus alimentaire et l'épidémie de choléra. Venise capitule le 22 août 1849 — dernière république de 1848 à tomber en Europe. L'écrasement est entièrement exogène.

@@ -2,11 +2,19 @@
 
 ## Metadata
 - nation: Angleterre
-- territory: Angleterre
+- territory: Île de Bretagne
 - start: ~829
-- status: Phase parlementaire
+- status: wip
+- highlight_1: Cinq boucles féodales sur 500 ans (829-1311) — l'hétérogénéité anglo-scandinave bloque le pacte à répétition, un record dans le corpus
+- highlight_2: Le reboot normand de 1066 remplace intégralement l'aristocratie et remet les compteurs à zéro — cas d'école de reboot par conquête
+- highlight_3: Appareil étatique précoce (Domesday Book, Exchequer, Common Law) mais moteur culturel bloqué — les élites parlent français pendant deux siècles
+- highlight_4: Phase absolutiste courte (~161 ans) par rapport aux ~200 ans typiques — les Tudors compriment l'absolutisation
+- highlight_5: Première Révolution Nationale d'Europe (1642-1688) — la matrice du modèle historionomique, avec les sept étapes canoniques
+- highlight_6: Cromwell comme Impérialiste Revanchard — prototype du rôle, avant Napoléon
+- question_1: La Magna Carta (1215) est-elle un proto-pacte oligarchique avorté ou un simple épisode féodal ? Son échec immédiat plaide pour le second, mais son héritage symbolique brouille la lecture
+- question_2: Faut-il compter la phase pré-féodale saxonne (avant Ecgberht) comme partie du Parcours, ou le Parcours commence-t-il réellement en 829 ?
+- question_3: La perte de la Normandie (1204) comme accélérateur d'homogénéisation — mécanisme spécifique à l'Angleterre ou généralisable à tout empire qui perd ses provinces continentales ?
 - subtitle: L'île qui a inventé le parlementarisme
-- note: Cinq siècles de boucles féodales (829-1311) — l'hétérogénéité anglo-scandinave bloque le pacte — brisés net par le reboot normand de 1066. Le Parcours redémarre et aboutit au premier parlementarisme moderne du monde (Glorieuse Révolution, 1688). La Révolution Nationale anglaise (1642-1688) est la matrice du modèle.
 - confidence: medium
 
 ---
@@ -37,6 +45,7 @@
 - type: saillant
 - start: ~829
 - figure: Ecgberht de Wessex
+- subtitle: Wessex
 - title: Éveil féodal
 - confidence: medium
 - summary: Ecgberht est le premier roi à imposer la suprématie du Wessex sur toute l'Angleterre, forçant les autres royaumes (Mercie, Northumbrie) à se positionner par rapport à lui.
@@ -47,6 +56,7 @@
 - start: ~927
 - end: 939
 - figure: Æthelstan
+- subtitle: Brunanburh
 - title: Pic féodal
 - confidence: high
 - summary: Premier roi à gouverner effectivement toute l'Angleterre. Il conquiert York, remporte Brunanburh et porte l'autorité royale personnelle à un niveau sans précédent.
@@ -57,6 +67,7 @@
 - start: ~959
 - end: 975
 - figure: Edgar le Pacifique
+- subtitle: Regularis Concordia
 - title: Pic féodal
 - confidence: medium
 - summary: Roi stable, réformes monétaires, Regularis Concordia. L'autorité royale est au maximum dans une Angleterre prospère. Mais la crise de succession à sa mort ne débouche sur aucun pacte.
@@ -66,6 +77,7 @@
 - type: saillant
 - avortement: true
 - start: 978
+- subtitle: Assassinat d'Edward
 - title: Crise féodale
 - confidence: medium
 - summary: L'assassinat d'Edward the Martyr ouvre une longue période d'instabilité sous Æthelred le Malavisé. Aucun pacte n'émerge — les élites sont trop hétérogènes (Anglo-Saxons + Scandinaves du Danelaw) pour se constituer en classe à l'échelle du royaume.
@@ -76,6 +88,7 @@
 - start: ~1016
 - end: 1035
 - figure: Cnut le Grand
+- subtitle: Empire anglo-scandinave
 - title: Pic féodal
 - confidence: medium
 - summary: Cnut bâtit un empire anglo-scandinave (Angleterre + Danemark + Norvège) et règne avec autorité. Mais l'augmentation d'échelle élève le seuil d'homogénéité requis pour un pacte, rendant celui-ci encore plus improbable.
@@ -85,6 +98,7 @@
 - type: saillant
 - avortement: true
 - start: 1035
+- subtitle: Fragmentation impériale
 - title: Crise féodale
 - confidence: medium
 - summary: La mort de Cnut provoque la fragmentation de l'empire anglo-scandinave. Les conditions du pacte ne sont toujours pas réunies : l'échelle est trop grande et les élites trop hétérogènes. Le Parcours revient en position de pic potentiel, mais la conquête normande interrompt le cycle.
@@ -119,6 +133,7 @@
 - type: saillant
 - start: 1066
 - figure: Guillaume le Conquérant
+- subtitle: Hastings
 - title: Éveil féodal
 - confidence: high
 - summary: Guillaume le Conquérant remplace intégralement l'aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal et réalise le Domesday Book. C'est l'éveil féodal de la seconde phase — le moment où un nouveau jeu commence.
@@ -128,6 +143,7 @@
 - type: saillant
 - start: ~1120
 - figure: Henri Ier
+- subtitle: L'Échiquier
 - title: Pic féodal
 - confidence: high
 - summary: Henri Ier crée l'Échiquier comme instrument fiscal permanent, réunifie l'Angleterre et la Normandie sous une seule couronne, et impose une paix royale remarquable. Le pouvoir est à son sommet — mais il est personnel.
@@ -138,6 +154,7 @@
 - avortement: true
 - start: 1135
 - end: 1154
+- subtitle: L'Anarchie
 - title: L'Anarchie
 - confidence: high
 - summary: Dix-neuf ans de guerre civile entre Étienne de Blois et Mathilde l'Emperesse. La faiblesse du souverain est présente, mais l'homogénéité des élites ne l'est pas — d'autant que l'Empire Plantagenêt est sur le point de se former, élevant l'échelle bien au-delà du cadre anglais.
@@ -147,6 +164,7 @@
 - type: saillant
 - start: ~1170
 - figure: Henri II Plantagenêt
+- subtitle: Common law
 - title: Pic féodal
 - confidence: high
 - summary: Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Mais il constitue simultanément l'Empire Plantagenêt (Angleterre + Normandie + Anjou + Aquitaine), ce qui augmente l'échelle du royaume et repousse le seuil d'homogénéité requis pour un pacte.
@@ -157,6 +175,7 @@
 - avortement: true
 - start: ~1205
 - figure: Jean sans Terre
+- subtitle: Magna Carta
 - title: Crise féodale
 - confidence: high
 - summary: Jean sans Terre ruine le système Plantagenêt : perte de la Normandie (1204), Magna Carta imposée (1215), guerre civile. Crise féodale avortée — l'homogénéité est encore insuffisante.
@@ -166,6 +185,7 @@
 - type: saillant
 - start: ~1295
 - figure: Édouard Ier
+- subtitle: Parlement modèle
 - title: Pic féodal
 - confidence: medium
 - alternatives: Dans certaines lectures, Édouard Ier est identifié comme le premier monarque oligarchique plutôt que le pic féodal. Argument Deblonde : son pouvoir est PERSONNEL — ses administrateurs sont ses créatures, pas une classe autonome. À sa mort, le système se fragmente.
@@ -186,6 +206,7 @@
 - start: 1307
 - end: 1327
 - figure: Édouard II
+- subtitle: Bannockburn
 - title: Crise féodale
 - confidence: high
 - summary: Le règne d'Édouard II concentre tous les marqueurs de la crise féodale : roi faible, favoris impopulaires, défaite militaire humiliante à Bannockburn, et finalement déposition et assassinat du souverain en 1327. Cette fois, la crise ne boucle pas — elle produit le pacte.
@@ -194,6 +215,7 @@
 #### Saillant : Pacte oligarchique
 - type: saillant
 - start: 1311
+- subtitle: Ordonnances de 1311
 - title: Pacte oligarchique
 - confidence: high
 - summary: Les Ordonnances de 1311, imposées par les Lords Ordainers à Édouard II, constituent le premier pacte oligarchique anglais en codifiant explicitement les contraintes pesant sur l'exécutif royal — contrôle des nominations, des finances et de la politique étrangère par les barons.
@@ -224,6 +246,7 @@
 - type: saillant
 - start: 1327
 - figure: Édouard III
+- subtitle: Avènement d'Édouard III
 - title: 1er monarque oligarchique
 - confidence: medium
 - alternatives: Dans certaines lectures, Édouard Ier est le premier monarque oligarchique. Argument Deblonde : Édouard Ier est le pic féodal (pouvoir personnel), Édouard III est le premier roi à gouverner dans un cadre institutionnel codifié par les Ordonnances de 1311 et la pratique parlementaire.
@@ -234,6 +257,7 @@
 - type: saillant
 - start: ~1415
 - figure: Henri V
+- subtitle: Azincourt
 - title: Pic oligarchique
 - confidence: high
 - summary: Henri V porte la monarchie oligarchique anglaise à son sommet absolu avec la victoire d'Azincourt (1415) et le Traité de Troyes (1420), qui lui accorde la couronne de France — un niveau de puissance qu'aucun roi d'Angleterre n'avait atteint ni n'atteindra après lui.
@@ -242,6 +266,7 @@
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: ~1421
+- subtitle: Baugé
 - title: Fin de l'expansion
 - confidence: high
 - summary: La bataille de Baugé (22 mars 1421) — première défaite anglaise en bataille rangée depuis Azincourt — brise le mythe d'invincibilité et marque le début du renversement de la dynamique d'expansion anglaise en France.
@@ -269,6 +294,7 @@
 - type: saillant
 - start: ~1455
 - end: 1485
+- subtitle: Guerre des Deux-Roses
 - title: Guerre sociale
 - confidence: high
 - summary: Les Guerres des Roses opposent la faction Lancaster (prébendière, patronage de cour) à la faction York (patrimoniale, grands domaines fonciers) dans un conflit qui décime les deux camps et permet l'émergence d'Henri Tudor comme tiers à Bosworth.
@@ -300,6 +326,7 @@
 - type: saillant
 - start: 1485
 - figure: Henri VII
+- subtitle: Bosworth
 - title: 1er monarque absolu
 - confidence: high
 - summary: Henri Tudor résout les Guerres des Roses en s'emparant du pouvoir comme figure tierce à Bosworth, puis brise le pouvoir des magnats, reconstruit le fisc et installe une nouvelle dynastie qui concentre le pouvoir au-delà de tout ce que les York ou les Lancaster avaient pu atteindre.
@@ -309,6 +336,7 @@
 - type: saillant
 - start: ~1536
 - figure: Henri VIII
+- subtitle: Pilgrimage of Grace
 - title: Dernière grande révolte oligarchique
 - confidence: high
 - summary: Le Pilgrimage of Grace de 1536, soulèvement massif du nord de l'Angleterre contre la dissolution des monastères et la rupture avec Rome, constitue la dernière tentative des anciennes élites oligarchiques de résister à l'absolutisation. Son écrasement clôt définitivement la transition.
@@ -327,6 +355,7 @@
 - type: saillant
 - start: ~1588
 - figure: Élisabeth Ière
+- subtitle: Invincible Armada
 - title: Pic absolutiste
 - confidence: high
 - summary: La défaite de l'Armada espagnole en 1588, l'expansion coloniale et l'éclat culturel de l'ère shakespearienne portent le prestige de la monarchie absolutiste anglaise à son sommet, avant que la mort d'Élisabeth en 1603 n'ouvre la phase de déclin.
@@ -335,7 +364,8 @@
 #### Saillant : Remontrance
 - type: saillant
 - start: 1604
-- figure: Apology of the Commons
+- figure: Jacques Ier
+- subtitle: Apology of the Commons
 - title: Remontrance
 - confidence: high
 - summary: En 1604, la Chambre des communes rédige l'Apology of the Commons (Form of Apology and Satisfaction), affirmant ses prérogatives face à Jacques Ier Stuart — liberté de parole, immunité parlementaire, contrôle fiscal. La remontrance est ignorée par le roi. L'échec marque l'entrée dans l'AR.
@@ -353,6 +383,7 @@
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: 1603
+- subtitle: Succession Stuart
 - title: Fin de l'expansion
 - confidence: high
 - summary: La mort d'Élisabeth Ière et la succession Stuart en 1603 ferment la soupape d'expansion élisabéthaine et ouvrent une période de sclérose où le système perd sa capacité à canaliser les tensions internes vers l'extérieur.
@@ -384,6 +415,7 @@
 - type: saillant
 - start: 1640
 - end: 1642
+- subtitle: Long Parlement
 - title: Explosion de l'AR
 - confidence: high
 - summary: Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentative du roi d'arrêter cinq parlementaires déclenche la guerre civile.
@@ -393,6 +425,7 @@
 - type: saillant
 - start: 1640
 - end: 1648
+- subtitle: New Model Army
 - title: Expérience parlementaire
 - confidence: high
 - summary: Le Long Parlement gouverne pendant la guerre civile en s'appuyant sur ses propres comités et sur la New Model Army, première tentative de substituer un gouvernement parlementaire au pouvoir royal.
@@ -402,6 +435,7 @@
 - type: saillant
 - start: 1648
 - end: 1649
+- subtitle: Exécution de Charles Ier
 - title: Phase aiguë
 - confidence: high
 - summary: L'Épuration de Pride expulse les modérés du Parlement, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649, et la monarchie est abolie au profit du Commonwealth.
@@ -410,6 +444,7 @@
 #### Saillant : Moment thermidorien
 - type: saillant
 - start: 1653
+- subtitle: Dissolution du Rump
 - title: Moment thermidorien
 - confidence: high
 - summary: Cromwell dissout le Rump Parliament en avril 1653, mettant fin à l'expérience parlementaire radicale et rétablissant un pouvoir exécutif fort sous la forme du Protectorat.
@@ -428,6 +463,7 @@
 - type: saillant
 - start: 1653
 - figure: Oliver Cromwell
+- subtitle: Protectorat
 - title: Impérialiste Revanchard
 - confidence: high
 - summary: Cromwell s'empare du pouvoir en dissolvant le Rump Parliament et en devenant Lord Protecteur, instaurant un régime méritocratique et impérialiste qui projette la puissance anglaise vers les Caraïbes et l'Europe.
@@ -445,6 +481,7 @@
 #### Saillant : Glorieuse Révolution
 - type: saillant
 - start: 1688
+- subtitle: Bill of Rights
 - title: Glorieuse Révolution
 - confidence: high
 - summary: L'invitation faite à Guillaume d'Orange de débarquer en Angleterre, la fuite de Jacques II et l'adoption du Bill of Rights en 1689 ancrent définitivement la souveraineté parlementaire dans la constitution anglaise.

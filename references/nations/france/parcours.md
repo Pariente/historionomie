@@ -2,12 +2,18 @@
 
 ## Metadata
 - nation: France
-- territory: Île-de-France → royaume de France
 - start: ~987
-- status: Phase parlementaire / technocratique
+- status: complet
 - subtitle: De l'Île-de-France au Roi-Soleil, sept siècles d'invention de l'État moderne
-- note: Le Parcours de référence du modèle historionomique. La France est le seul cas connu où la phase oligarchique avorte — le Traité de Troyes (1420) détruit le pacte de 1317 — puis reboot sur de nouvelles bases à Chinon (1428). La Révolution Nationale (1789-1830) traverse les sept étapes canoniques en quarante et un ans et sert de cas d'école pour l'ensemble du cadre.
 - confidence: medium
+- highlight_1: Seul cas connu de reboot oligarchique → oligarchique : le Traité de Troyes (1420) détruit le pacte de 1317, et un nouveau pacte est reconstitué à Chinon (1428) par une classe d'élites sociologiquement nouvelle (noblesse méridionale, bourgeoisie marchande).
+- highlight_2: Azincourt (1415) ne fait pas que ralentir l'essor — il décapite physiquement la noblesse du Nord : trois ducs, neuf comtes, le connétable, des lignages entiers éteints en une journée.
+- highlight_3: La RN française traverse les sept étapes canoniques en 41 ans (1789-1830) et sert de cas d'école au modèle historionomique tout entier.
+- highlight_4: Trois pics féodaux distincts (Philippe Auguste, Louis IX, Philippe le Bel), dont le dernier est si puissant qu'il a longtemps été confondu avec un pic oligarchique — le test décisif est que son pouvoir personnel ne survit pas à sa mort.
+- highlight_5: Toutes les phases endogènes respectent la durée typique de ~200 ans : féodale (220 ans), oligarchique [2] (178 ans), absolutiste (191 ans). Seule la première phase oligarchique est avortée à 92 ans.
+- question_1: Le pouvoir de Philippe le Bel est-il vraiment féodal ? L'ampleur de son appareil de légistes et la convocation des premiers États généraux (1302) pourraient signaler un proto-oligarchique.
+- question_2: Le Second Empire (1852-1870) est-il un simple accident parlementaire ou un véritable retour de l'IR, ce qui décalerait la Glorieuse Révolution à 1870 ?
+- question_3: La Ve République gaullienne marque-t-elle l'entrée en phase technocratique, ou le parlementarisme français est-il simplement sous une forme présidentialiste ?
 
 ---
 
@@ -56,6 +62,7 @@
 - type: saillant
 - start: 1108
 - figure: Louis VI le Gros
+- subtitle: Ban de 1124
 - title: Éveil féodal
 - confidence: medium
 - alternatives: Hugues Capet (987) — élu roi, titre juridique. Mais il n'exerce aucune autorité effective hors de l'Île-de-France.
@@ -66,6 +73,7 @@
 - type: saillant
 - start: 1214
 - figure: Philippe Auguste
+- subtitle: Bouvines
 - title: Pic féodal
 - confidence: high
 - summary: La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l'Île-de-France et de tripler le domaine royal.
@@ -75,6 +83,7 @@
 - type: saillant
 - start: ~1250
 - figure: Louis IX
+- subtitle: Croisades
 - title: Pic féodal
 - confidence: medium
 - summary: Louis IX porte le prestige personnel de la monarchie capétienne à un niveau sans égal en Europe — deux croisades, arbitre de la chrétienté, canonisé en 1297 — tout en étendant concrètement la présence de l'administration royale dans les provinces par ses enquêteurs.
@@ -84,6 +93,7 @@
 - type: saillant
 - start: ~1285
 - figure: Philippe le Bel
+- subtitle: Attentat d'Anagni
 - title: Pic féodal
 - confidence: medium
 - alternatives: Dans H1, Philippe le Bel est le pic oligarchique. Argument Deblonde : son pouvoir est PERSONNEL — les légistes sont ses créatures. À sa mort, le système se fragmente.
@@ -103,6 +113,7 @@
 - type: saillant
 - start: 1314
 - end: 1328
+- subtitle: Crise dynastique
 - title: Crise féodale
 - confidence: high
 - summary: Les trois fils de Philippe le Bel — Louis X, Philippe V et Charles IV — meurent successivement sans héritier mâle entre 1314 et 1328, créant un vide de pouvoir qui permet aux grands du royaume de reprendre l'initiative politique.
@@ -111,7 +122,8 @@
 #### Saillant : Pacte oligarchique
 - type: saillant
 - start: 1317
-- figure: Loi salique
+- figure: Philippe V
+- subtitle: Loi salique
 - title: Pacte oligarchique
 - confidence: medium
 - summary: En 1317, Philippe V convoque les États généraux pour légitimer sa propre succession et fait codifier la loi salique, transformant pour la première fois les règles de succession d'une tradition dynastique en une loi explicite adoptée par la communauté politique.
@@ -147,6 +159,7 @@
 - type: saillant
 - start: 1328
 - figure: Philippe VI
+- subtitle: Avènement des Valois
 - title: 1er monarque oligarchique
 - confidence: medium
 - summary: Philippe VI est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique directe des Capétiens.
@@ -186,7 +199,8 @@
 - type: saillant
 - avortement: true
 - start: 1420
-- figure: Traité de Troyes
+- figure: Charles VI
+- subtitle: Traité de Troyes
 - title: Avortement
 - confidence: high
 - summary: Le Traité de Troyes (21 mai 1420) annule la loi salique de 1317 en transférant la couronne de France à Henri V d'Angleterre, détruisant le pacte oligarchique qui fondait la phase.
@@ -222,7 +236,8 @@
 #### Saillant : Pacte oligarchique — États généraux de Chinon
 - type: saillant
 - start: 1428
-- figure: Chinon
+- figure:
+- subtitle: États généraux de Chinon
 - title: Pacte oligarchique
 - confidence: medium
 - alternatives: On pourrait placer le PO plus tôt (proclamation de la régence, décembre 1418) ou plus tard (sacre à Reims, juillet 1429). Chinon est retenu parce que c'est le moment de consentement collectif codifié — 200+ délégués, 32 cahiers, vote fiscal.
@@ -242,6 +257,7 @@
 - type: saillant
 - start: 1429
 - figure: Charles VII
+- subtitle: Sacre de Reims
 - title: 1er monarque oligarchique
 - confidence: high
 - summary: Charles VII est le premier roi de la seconde phase oligarchique, dont la légitimité repose sur le nouveau pacte de Chinon (1428) confirmé par le sacre à Reims (1429). Il reconstruit l'État central sur des bases entièrement nouvelles — armée permanente, taille permanente, contrôle de l'Église.
@@ -251,6 +267,7 @@
 - type: saillant
 - start: ~1515
 - figure: François Ier
+- subtitle: Concordat de Bologne
 - title: Pic oligarchique
 - confidence: high
 - summary: François Ier porte la monarchie oligarchique française à son apogée avec le Concordat de Bologne en 1516, qui lui donne le contrôle des nominations ecclésiastiques, la victoire de Marignan et l'éclat de la cour Renaissance, avant que la capture de Pavie en 1525 n'amorce le reflux.
@@ -259,6 +276,7 @@
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: 1559
+- subtitle: Cateau-Cambrésis
 - title: Fin de l'expansion
 - confidence: high
 - summary: Le Traité de Cateau-Cambrésis met fin aux Guerres d'Italie en 1559 et la mort accidentelle d'Henri II la même année ferme la soupape extérieure qui canalisait les tensions entre élites, laissant le clivage religieux devenir le conflit dominant.
@@ -286,7 +304,8 @@
 - type: saillant
 - start: 1562
 - end: 1598
-- figure: Guerres de Religion
+- figure:
+- subtitle: Guerres de Religion
 - title: Guerre sociale
 - confidence: high
 - summary: Les Guerres de Religion constituent la guerre sociale de la France, un affrontement de trente-six ans entre la Ligue catholique et les Princes protestants dont ni l'une ni l'autre faction ne sort victorieuse, ce qui permet l'émergence d'Henri IV comme figure de compromis.
@@ -320,6 +339,7 @@
 - type: saillant
 - start: 1598
 - figure: Henri IV
+- subtitle: Édit de Nantes
 - title: 1er monarque absolu
 - confidence: high
 - summary: Henri IV résout les Guerres de Religion en promulguant l'Édit de Nantes, acte d'autorité royale qui s'impose au-dessus des deux factions, et reconstruit le fisc avec Sully, incarnant le tiers qui émerge de la guerre sociale sans s'identifier à aucun camp.
@@ -329,7 +349,8 @@
 - type: saillant
 - start: 1648
 - end: 1653
-- figure: La Fronde
+- figure: Condé
+- subtitle: La Fronde
 - title: Dernière grande révolte oligarchique
 - confidence: high
 - summary: La Fronde (1648-1653) est le dernier sursaut de résistance oligarchique contre le pouvoir absolu en construction : les parlementaires puis les princes du sang se soulèvent contre Mazarin pendant la minorité de Louis XIV, mais leur échec clôt définitivement l'absolutisation.
@@ -348,6 +369,7 @@
 - type: saillant
 - start: ~1682
 - figure: Louis XIV
+- subtitle: Versailles
 - title: Pic absolutiste
 - confidence: high
 - summary: L'installation de la cour à Versailles en 1682, la Trêve de Ratisbonne en 1684 qui marque l'extension territoriale maximale et la révocation de l'Édit de Nantes en 1685 constituent le triple sommet du pouvoir absolu français, après quoi le déclin s'amorce irréversiblement.
@@ -356,6 +378,7 @@
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: 1713
+- subtitle: Traité d'Utrecht
 - title: Fin de l'expansion
 - confidence: high
 - summary: Le Traité d'Utrecht en 1713 solde la Guerre de Succession d'Espagne par des pertes territoriales et la mort de Louis XIV en 1715 clôt l'ère de l'impérialisme absolutiste, ouvrant la longue période de sclérose de l'Ancien Régime.
@@ -364,7 +387,8 @@
 #### Saillant : Remontrance
 - type: saillant
 - start: 1715
-- figure: Polysynodie
+- figure: Philippe d'Orléans
+- subtitle: Polysynodie
 - title: Remontrance
 - confidence: high
 - summary: À la mort de Louis XIV (1715), le Régent Philippe d'Orléans remplace les ministres par des conseils aristocratiques (Polysynodie). La haute noblesse tente de reprendre des prérogatives à l'exécutif centralisé. L'expérience échoue en 1718 — la dernière voie de réforme institutionnelle est fermée, l'AR commence.
@@ -406,6 +430,7 @@
 #### Saillant : Explosion de l'Ancien Régime
 - type: saillant
 - start: 1789
+- subtitle: Prise de la Bastille
 - title: Explosion de l'AR
 - confidence: high
 - summary: La convocation des États généraux pour résoudre la crise financière déclenche un basculement irrésistible : le tiers état et une partie de la noblesse libérale renversent l'ordre ancien en quelques semaines, de la prise de la Bastille le 14 juillet à l'abolition des privilèges dans la nuit du 4 août.
@@ -415,6 +440,7 @@
 - type: saillant
 - start: 1789
 - end: 1791
+- subtitle: Constitution de 1791
 - title: Expérience parlementaire
 - confidence: high
 - summary: L'Assemblée nationale constituante tente d'instaurer un régime parlementaire en adoptant la Déclaration des droits de l'homme et du citoyen puis la Constitution de 1791, qui établit une monarchie constitutionnelle fondée sur la séparation des pouvoirs.
@@ -425,6 +451,7 @@
 - start: 1792
 - end: 1794
 - figure: Robespierre
+- subtitle: La Terreur
 - title: Phase aiguë
 - confidence: high
 - summary: L'extrême-gauche structurelle prend le contrôle du pouvoir : la monarchie est abolie le 10 août 1792, la République est proclamée, Louis XVI est exécuté et le Comité de salut public dirigé par Robespierre instaure la Terreur, éliminant systématiquement les modérés.
@@ -433,6 +460,7 @@
 #### Saillant : Moment thermidorien
 - type: saillant
 - start: 1794
+- subtitle: 9 Thermidor
 - title: Moment thermidorien
 - confidence: high
 - summary: La chute de Robespierre le 9 thermidor an II (27 juillet 1794) marque le retour au pouvoir du centre et de la droite, qui purgent l'extrême-gauche et instaurent le Directoire, régime de compromis instable qui tente de stabiliser les acquis révolutionnaires sans la Terreur.
@@ -451,6 +479,7 @@
 - type: saillant
 - start: 1799
 - figure: Bonaparte
+- subtitle: 18 Brumaire
 - title: Impérialiste Revanchard
 - confidence: high
 - summary: Le coup d'État du 18 Brumaire le 9 novembre 1799 porte Bonaparte au pouvoir ; il instaure le Consulat puis l'Empire et réalise l'unification juridique définitive du pays par le Code civil, acte fondateur de l'État-nation moderne français.
@@ -468,6 +497,7 @@
 #### Saillant : Glorieuse Révolution
 - type: saillant
 - start: 1830
+- subtitle: Trois Glorieuses
 - title: Glorieuse Révolution
 - confidence: high
 - summary: Les Trois Glorieuses des 27, 28 et 29 juillet 1830 renversent Charles X et portent Louis-Philippe au pouvoir dans le cadre d'une monarchie constitutionnelle parlementaire, ancrant définitivement le principe de la souveraineté parlementaire dans la vie politique française.

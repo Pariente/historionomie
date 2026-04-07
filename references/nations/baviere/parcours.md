@@ -2,12 +2,20 @@
 
 ## Metadata
 - nation: Bavière (duché, puis électorat, puis royaume de Bavière)
-- territory: Alpes bavaroises → duché de Bavière → électorat → royaume
+- Bavière
 - start: ~1180
 - end: 1871 (absorption dans le Parcours allemand)
-- status: Phase absolutiste tardive → RN avortée (1848) → absorption dans le Parcours allemand (1871)
+- complet
+- highlight_1: Phase féodale à 3 boucles (partitions de 1255, 1349, 1392) sur 326 ans — l'héritage divisible Wittelsbach bloque la consolidation exactement comme les boucles anglo-saxonnes
+- highlight_2: Phase oligarchique la plus courte du corpus (91 ans) — la Contre-Réforme fournit un homogénéisateur culturel si puissant qu'elle comprime le cycle entier
+- highlight_3: Le doublement territorial napoléonien (1806) injecte un choc d'hétérogénéité en pleine phase absolutiste, forçant un second cycle impérialisme-AR — un cas unique de double AR
+- highlight_4: Les Wittelsbach règnent sans interruption de 1180 à 1918 (738 ans) — la plus longue continuité dynastique du corpus, traversant toutes les phases
+- highlight_5: La RN bavaroise (Eisner, République des Conseils, 1918-1919) est la plus radicale d'Allemagne mais la plus brève — écrasée en 26 jours et absorbée dans la RN allemande
+- highlight_6: Blenheim (1704) marque la fin de l'expansion absolutiste — la Bavière perd son indépendance militaire et ne la retrouve jamais
+- question_1: Le choc napoléonien de 1806 est-il un prolongement (hétérogénéisation sans destruction institutionnelle) ou un reboot partiel ? Les institutions absolutistes survivent mais le territoire double — quel est le bon diagnostic ?
+- question_2: La RN de 1918-1919 est-elle une RN bavaroise avortée ou simplement un épisode régional de la RN allemande ? L'État libre de Bavière a-t-il une dynamique propre ou est-il entièrement subordonné au cadre de Weimar ?
+- question_3: La phase oligarchique de 91 ans est-elle réellement comprimée ou manque-t-on un saillant antérieur qui repousserait le début de la phase ?
 - subtitle: Sept siècles de Wittelsbach, de la forêt bavaroise à l'Athènes sur l'Isar
-- note: Un Parcours marqué par des extrêmes. La phase féodale boucle trois fois (partitions de 1255, 1349, 1392) sur 326 ans. La phase oligarchique, accélérée par la Contre-Réforme, ne dure que 91 ans — la plus courte du corpus. La phase absolutiste connaît deux cycles d'impérialisme séparés par un choc d'hétérogénéité napoléonien (1806). La RN de 1918 (Eisner, République des Conseils) est absorbée dans la RN allemande.
 - confidence: medium
 
 ---
@@ -49,6 +57,7 @@
 - type: saillant
 - start: ~1204
 - figure: Louis Ier le Kelheimer
+- subtitle: Landshut
 - title: Éveil féodal
 - confidence: medium
 - alternatives: Otto Ier le Roux (1180) — premier Wittelsbach, mais trop faible (seuls 2 nobles lui rendent hommage). Arnulf « le Mauvais » (~907) — rétablit le duché-souche, mais le Parcours est interrompu par les Ottoniens.
@@ -60,6 +69,7 @@
 - start: ~1328
 - end: 1347
 - figure: Louis IV le Bavarois
+- subtitle: Empereur Wittelsbach
 - title: Pic féodal
 - confidence: high
 - summary: Louis IV, élu empereur du Saint-Empire en 1314, porte le pouvoir personnel Wittelsbach à un sommet sans précédent : il réunifie temporairement la Bavière (1340), codifie le Landrecht d'Haute-Bavière (~350 articles, 1334/36 et 1346) et accumule un empire Wittelsbach allant de la Hollande au Tyrol.
@@ -70,7 +80,8 @@
 - avortement: true
 - start: 1347
 - end: 1349
-- figure: Partition de 1349
+- figure:
+- subtitle: Partition de 1349
 - title: Crise féodale
 - confidence: high
 - summary: À la mort de Louis IV (1347), ses six fils survivants se partagent l'empire Wittelsbach. La Bavière est divisée en plusieurs entités. L'homogénéité est insuffisante pour produire un pacte → le Parcours boucle.
@@ -80,7 +91,8 @@
 - type: saillant
 - avortement: true
 - start: 1392
-- figure: Partition de 1392
+- figure:
+- subtitle: Partition de 1392
 - title: Crise féodale
 - confidence: high
 - summary: La Bavière est divisée en quatre duchés rivaux — Bavière-Straubing, Bavière-Landshut, Bavière-Ingolstadt, Bavière-Munich — chacun avec son propre duc, sa cour et son administration. C'est la fragmentation la plus destructrice du Parcours bavarois.
@@ -90,6 +102,7 @@
 - type: saillant
 - start: 1506
 - figure: Albert IV
+- subtitle: Primogéniture
 - title: Pacte oligarchique
 - confidence: medium
 - alternatives: L'Ottonische Handfeste de 1311 est un proto-pacte pour la Basse-Bavière seule — il ne couvre pas l'ensemble du territoire. Le Landrecht de 1346 codifie le droit mais ne codifie pas la structure de l'exécutif.
@@ -124,6 +137,7 @@
 - type: saillant
 - start: ~1508
 - figure: Guillaume IV
+- subtitle: Duché indivisible
 - title: 1er monarque oligarchique
 - confidence: medium
 - alternatives: Albert IV lui-même (1506-1508) — c'est lui qui promulgue la primogéniture, mais il meurt deux ans après.
@@ -134,6 +148,7 @@
 - type: saillant
 - start: ~1555
 - figure: Albert V
+- subtitle: Contre-Réforme
 - title: Pic oligarchique
 - confidence: medium
 - summary: Albert V (1550-1579) porte le pouvoir ducal oligarchique à son maximum en combinant le contrôle confessionnel (Jésuites) et la centralisation administrative, avant que sa répression des nobles protestants (1564) ne déclenche la polarisation.
@@ -161,6 +176,7 @@
 - type: saillant
 - start: ~1564
 - end: ~1597
+- subtitle: Faillite et tiers
 - title: Guerre sociale
 - confidence: medium
 - alternatives: On pourrait restreindre la guerre sociale à la période 1580-1597 (post-éradication de l'hérésie, quand le conflit devient purement institutionnel entre états et duc). Mais les événements de 1564 (suppression violente des nobles protestants) inaugurent le conflit factieux au sens historionomique.
@@ -195,6 +211,7 @@
 - type: saillant
 - start: 1597
 - figure: Maximilien Ier
+- subtitle: Bureaucratie nouvelle
 - title: 1er monarque absolu
 - confidence: high
 - summary: Maximilien Ier prend le pouvoir en 1597 face à un État en faillite et construit de toutes pièces un appareil bureaucratique moderne, neutralisant les Landstände en 1612 et obtenant la dignité électorale en 1623.
@@ -213,6 +230,7 @@
 - type: saillant
 - start: ~1756
 - figure: Maximilien III Joseph
+- subtitle: Codex Maximilianeus
 - title: Pic absolutiste
 - confidence: medium
 - alternatives: Max-Emmanuel (~1691) — prestige et projection extérieure maximaux, mais son édifice s'effondre à Blenheim. Maximilien III Joseph est retenu car il incarne la puissance intérieure consolidée maximale.
@@ -222,6 +240,7 @@
 #### Saillant : Fin de l'expansion — Blenheim
 - type: saillant
 - start: 1704
+- subtitle: Blenheim
 - title: Fin de l'expansion
 - confidence: high
 - summary: La bataille de Blenheim (13 août 1704) met fin à l'aventure impériale bavaroise et entraîne dix ans d'occupation autrichienne (1704-1714).
@@ -240,7 +259,8 @@
 - type: saillant
 - avortement: true
 - start: 1806
-- figure: Doublement du territoire
+- figure:
+- subtitle: Doublement du territoire
 - title: Choc d'hétérogénéité
 - confidence: high
 - summary: En 1806, Napoléon double le territoire bavarois (Franconie, Souabe), hétérogénéisant brutalement la société et défaisant la stratification pré-AR. Un second cycle d'impérialisme absolutiste commence.
@@ -269,6 +289,7 @@
 - type: saillant
 - start: ~1835
 - figure: Louis Ier
+- subtitle: Athènes sur l'Isar
 - title: Pic absolutiste
 - confidence: medium
 - alternatives: Montgelas (~1808) — modernisateur, mais opère sous pression napoléonienne, pas en position de puissance autonome. Louis Ier est retenu car il incarne la projection autonome du prestige bavarois.
@@ -278,7 +299,8 @@
 #### Saillant : Remontrance
 - type: saillant
 - start: 1848
-- figure: Landtag de 1848
+- figure:
+- subtitle: Landtag de 1848
 - title: Remontrance
 - confidence: high
 - summary: En mars 1848, l'abdication de Louis Ier ouvre une tentative de la classe parlementaire de s'imposer : suffrage égal, liberté de la presse, responsabilité ministérielle. Maximilien II vide les réformes de leur substance — la remontrance échoue et ouvre le second AR.
@@ -310,6 +332,7 @@
 - phase: rn
 - start: 1918
 - figure: Kurt Eisner
+- subtitle: 7 novembre 1918
 - title: Explosion de l'AR
 - confidence: high
 - summary: Le 7 novembre 1918, Kurt Eisner renverse Louis III — premier roi allemand à tomber, deux jours avant la révolution à Berlin.
@@ -318,7 +341,8 @@
 - type: saillant
 - phase: rn
 - start: 1919
-- figure: État libre de Bavière
+- figure:
+- subtitle: État libre de Bavière
 - title: Expérience parlementaire
 - confidence: high
 - summary: L'État libre de Bavière est proclamé. Élections du 12 janvier 1919. Factions concurrentes (USPD, SPD, BVP). Leadership construit par l'élection, pas par l'héritage.
@@ -328,6 +352,7 @@
 - phase: rn
 - start: 1919
 - figure: Toller / Leviné
+- subtitle: République des Conseils
 - title: Phase aiguë
 - confidence: high
 - summary: Après l'assassinat d'Eisner (21 février 1919), la République des Conseils est proclamée le 6 avril 1919. Armée rouge, contrôle ouvrier — la phase aiguë la plus radicale d'Allemagne en 1918-1919.
@@ -337,6 +362,7 @@
 - phase: rn
 - avortement: true
 - start: 1919
+- subtitle: Reichswehr
 - title: Écrasement
 - confidence: high
 - summary: Le 3 mai 1919, la Reichswehr et les Freikorps écrasent la République des Conseils. La RN bavaroise est absorbée dans la RN allemande (Weimar).

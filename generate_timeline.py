@@ -211,6 +211,7 @@ def parse_element(heading: str, body_lines: list) -> dict:
         "summary": fields.get("summary", ""),
         "description": fields.get("description", ""),
         "figure": fields.get("figure", ""),
+        "subtitle": fields.get("subtitle", ""),
         "confidence": fields.get("confidence", ""),
         "alternatives": fields.get("alternatives", ""),
         "step": fields.get("step", ""),
@@ -269,6 +270,7 @@ SAILLANT_ICONS = {
     "Magna Carta": "description",
     "Remontrance": "record_voice_over",
     "Choc d'hétérogénéité": "group_add",
+    "Accélérateur": "fast_forward",
 }
 SAILLANT_ICON_DEFAULT = "diamond"
 SAILLANT_ICON_AVORTEMENT = "cancel"
@@ -362,12 +364,23 @@ def generate_html(data: dict) -> str:
     status = meta.get("status", "")
     territory = meta.get("territory", "")
     meta_confidence = meta.get("confidence", "")
+    flag_url = meta.get("flag", "")
+    illustration_url = meta.get("illustration", "")
+
+    # Extract highlights and open questions from metadata
+    highlights = []
+    questions = []
+    for key, val in sorted(meta.items()):
+        if key.startswith("highlight") and val:
+            highlights.append(val)
+        if key.startswith("question") and val:
+            questions.append(val)
 
     # Build JSON data for JS
     elements_json_parts = []
     for i, e in enumerate(elements):
         parts = []
-        for key in ["kind", "type", "phase", "title", "summary", "description",
+        for key in ["kind", "type", "phase", "title", "subtitle", "summary", "description",
                      "figure", "confidence", "alternatives", "step", "deviation",
                      "typical_duration", "perturbation_type", "affected_motor", "note",
                      "resolution", "resolution_conditions", "avortement"]:
@@ -380,21 +393,33 @@ def generate_html(data: dict) -> str:
 
     elements_js = "[" + ",".join(elements_json_parts) + "]"
 
-    # Pre-phase info (legacy) + intro paragraph from note
-    prephase_html = ""
-    intro_note = data['metadata'].get('note', '')
-    if data.get("prephase") and not intro_note:
-        pp = data["prephase"]
-        prephase_html = f"""
-        <div class="prephase-note">
-            <strong>Pré-phase : {escape_html(pp['label'])}</strong><br>
-            <span>{escape_html(pp['description'])}</span>
+    # Briefing section (highlights + questions)
+    insight_icons = ["compress", "restart_alt", "coronavirus", "shield",
+                     "fast_forward", "cancel", "auto_awesome", "lightbulb"]
+    insights_html = ""
+    if highlights:
+        items = ""
+        for i, h in enumerate(highlights):
+            icon = insight_icons[i % len(insight_icons)]
+            items += f"""<div class="insight-item"><span class="material-icons">{icon}</span><span>{escape_html(h)}</span></div>"""
+        insights_html = f"""<div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid">{items}</div>
         </div>"""
-    elif intro_note:
-        prephase_html = f"""
-        <div class="prephase-note">
-            {escape_html(intro_note)}
+
+    questions_html = ""
+    if questions:
+        qs = ""
+        for i, q in enumerate(questions):
+            qs += f"""<div class="question-item"><span class="question-tag">Q{i+1}</span>{escape_html(q)}</div>"""
+        questions_html = f"""<div class="briefing-questions">
+            <div class="briefing-label">Questions ouvertes</div>
+            {qs}
         </div>"""
+
+    briefing_html = ""
+    if insights_html or questions_html:
+        briefing_html = f"""<div class="briefing">{insights_html}{questions_html}</div>"""
 
     # Build phase bands HTML
     phase_bands_html = ""
@@ -514,7 +539,10 @@ def generate_html(data: dict) -> str:
         color = PHASE_COLORS.get(s["phase"], "#333")
         offset = level_offsets[level]
 
-        figure_label = s["figure"] if s["figure"] else s["title"]
+        # subtitle (shown on frise) falls back to figure, then nothing
+        frise_subtitle = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else "")
+        # tooltip secondary line: subtitle or figure or title
+        tooltip_label = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else s["title"])
         start_label = format_year(s["start"], s["start_approx"])
 
         is_avortement = s.get("avortement") == "true"
@@ -527,11 +555,11 @@ def generate_html(data: dict) -> str:
         saillant_markers_html += f"""
         <div class="saillant-group" style="left:{left_pct:.4f}%;top:{200 + offset}px;">
             <div class="saillant-marker{avortement_class}" style="background:{bg_color};"
-                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(figure_label)} ({start_label})&#10;{escape_html(s['summary'])}"
+                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html(s['summary'])}"
                 onclick="showDetail({elements.index(s)})">
                 <span class="{'material-symbols-outlined' if icon_name in ('crown', 'skull') else 'material-icons'}">{icon_name}</span>
             </div>
-            <div class="saillant-label"><span class="saillant-title">{escape_html(s['title'])}</span><span class="saillant-figure">{escape_html(s['figure']) if s['figure'] else ''}</span><span class="saillant-date">{start_label}</span></div>
+            <div class="saillant-label"><span class="saillant-title">{escape_html(s['title'])}</span><span class="saillant-figure">{escape_html(frise_subtitle)}</span><span class="saillant-date">{start_label}</span></div>
         </div>"""
 
     # Tick marks
@@ -598,23 +626,38 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .navbar-links a {{ text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }}
 .navbar-links a:hover {{ color:#333; }}
 
-/* Header */
-.header {{ background:#fff; border-bottom:1px solid #e0dcd4; padding:1.5rem 2rem; }}
-.header-top {{ display:flex; justify-content:space-between; align-items:flex-start; gap:2rem; flex-wrap:wrap; }}
-.header-main {{ flex:1; }}
-.header h1 {{ font-family:'Newsreader', Georgia, serif; font-size:2.2rem; color:#1a1c1c; margin-bottom:0.3rem; font-weight:600; }}
-.header .subtitle {{ font-size:0.95rem; color:#888; font-style:italic; }}
-.header .meta-row {{ display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:0.6rem; font-size:0.82rem; color:#555; }}
-.header .meta-row span {{ display:inline-flex; align-items:center; gap:0.3rem; }}
-.meta-label {{ font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#999; }}
-.stat-boxes {{ display:flex; gap:0.8rem; flex-shrink:0; }}
-.stat-box {{ border:1px solid #e0dcd4; border-radius:6px; padding:0.5rem 1rem; text-align:center; min-width:80px; background:#faf8f4; }}
-.stat-box .stat-label {{ font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#999; }}
-.stat-box .stat-value {{ font-family:'Newsreader', Georgia, serif; font-size:1.4rem; font-weight:600; color:#715b3e; }}
+/* Header — briefing style */
+.header {{ background:#f7f5f0; padding:1.2rem 2rem 0; }}
+.header-title-row {{ display:flex; align-items:center; gap:0.6rem; margin-bottom:0.2rem; }}
+.header-title-row h1 {{ font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; }}
+.header-flag {{ height:18px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); }}
+.header-badge {{ display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; }}
+.badge-territory {{ background:#8B7355; color:#fff; }}
+.badge-status {{ background:#d4edda; color:#2d6a4f; }}
+.badge-status.wip {{ background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }}
+.header-subtitle-row {{ display:flex; align-items:flex-start; gap:1.5rem; margin-bottom:1rem; }}
+.header-subtitle-row .subtitle {{ flex:1; font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:0.95rem; color:#888; line-height:1.5; }}
+.header-illustration {{ width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }}
 
-/* Pre-phase note */
-.prephase-note {{ background:#f5f0e6; border-left:4px solid #bba87a; padding:0.8rem 1.2rem; margin:1rem 2rem; border-radius:0 4px 4px 0; font-size:0.88rem; color:#555; }}
-.prephase-note strong {{ color:#7a6840; }}
+/* Briefing grid */
+.briefing {{ display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:0.8rem 2rem 0.8rem;
+    border-top:1px solid #e0dcd4; }}
+.briefing-insights {{ }}
+.briefing-label {{ font-size:0.55rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em;
+    color:#999; margin-bottom:0.5rem; font-variant:all-small-caps; }}
+.insights-grid {{ display:grid; grid-template-columns:1fr 1fr; gap:0.3rem 1.5rem; }}
+.insight-item {{ display:flex; align-items:flex-start; gap:0.4rem; font-size:0.75rem; color:#4d453c;
+    line-height:1.4; padding:0.2rem 0; }}
+.insight-item .material-icons {{ font-size:14px; color:#8B7355; flex-shrink:0; margin-top:1px; }}
+.briefing-questions {{ border-left:1px solid #e0dcd4; padding-left:1.5rem; }}
+.question-item {{ font-family:'Newsreader', Georgia, serif; font-style:italic; font-size:0.8rem;
+    color:#888; line-height:1.45; margin-bottom:0.6rem; }}
+.question-tag {{ display:block; font-family:'Public Sans', sans-serif; font-style:normal;
+    font-size:0.5rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em;
+    color:#bbb; margin-bottom:0.15rem; font-variant:all-small-caps; }}
 
 /* Timeline container */
 .timeline-wrapper {{ padding:1.5rem 2rem 0.5rem; overflow-x:auto; }}
@@ -786,30 +829,18 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 </nav>
 
 <div class="header">
-    <div class="header-top">
-        <div class="header-main">
-            <h1>{escape_html(nation)}</h1>
-            <div class="subtitle">{escape_html(data['metadata'].get('subtitle', '') or data['title'])}</div>
-            <div class="meta-row">
-                {"<span><span class='meta-label'>Territoire</span> " + escape_html(territory) + "</span>" if territory else ""}
-                {"<span><span class='meta-label'>Statut</span> " + escape_html(status) + "</span>" if status else ""}
-            </div>
-        </div>
-        <div class="stat-boxes">
-            <div class="stat-box">
-                <div class="stat-label">Durée totale</div>
-                <div class="stat-value">{total_duration}</div>
-                <div class="stat-label">ans</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">Phases</div>
-                <div class="stat-value">{phase_count}</div>
-            </div>
-        </div>
+    <div class="header-title-row">
+        {"<img class='header-flag' src='" + escape_html(flag_url) + "' alt='drapeau'>" if flag_url else ""}
+        <h1>{escape_html(nation)}</h1>
+        {"<span class='header-badge badge-status" + (" wip" if status.lower() in ("wip", "en cours") else "") + "'>" + escape_html(status) + "</span>" if status else ""}
+    </div>
+    <div class="header-subtitle-row">
+        <div class="subtitle">{escape_html(data['metadata'].get('subtitle', '') or data['title'])}</div>
+        {"<img class='header-illustration' src='" + escape_html(illustration_url) + "' alt='illustration'>" if illustration_url else ""}
     </div>
 </div>
 
-{prephase_html}
+{briefing_html}
 
 <div class="timeline-wrapper">
     <div class="timeline-container" id="timeline">
@@ -989,7 +1020,8 @@ function showDetail(idx) {{
     html += `<section>`;
     html += `<span class="detail-section-label">Nom de l'événement</span>`;
     html += `<div class="detail-title">${{e.title}}</div>`;
-    if (conceptSubtitle) html += `<div class="detail-subtitle">${{conceptSubtitle}}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${{e.subtitle}}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${{conceptSubtitle}}</div>`;
     html += `</section>`;
 
     // Data cards — adapted for phases/subphases vs saillants

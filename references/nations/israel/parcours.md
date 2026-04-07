@@ -2,11 +2,20 @@
 
 ## Metadata
 - nation: Israël / Peuple juif
-- territory: Judée et Samarie (montagnes centrales du Levant)
+- Israël
 - start: ~-1100
-- status: Interrompu en 135 ; reprise au XIXe siècle (mouvement sioniste)
+- end: 135 (reprise au XIXe siècle avec le mouvement sioniste)
+- wip
+- highlight_1: Le Parcours le plus perturbé du corpus — deux reboots (Babylone -586, destruction du Temple 70), un prolongement (conquête macédonienne -332), un transfert territorial (choc assyrien -722) et une RN avortée (66-70)
+- highlight_2: Le choc assyrien de -722 transfère le Parcours de la Samarie vers la Judée sans le faire redémarrer — la phase oligarchique est allongée de 45 ans, pas interrompue
+- highlight_3: Le prolongement hellénistique (~192 ans) est le seul cas connu où une conquête étrangère recompose les factions en permanence sans détruire les institutions — les Oniades et Tobiades mettent 150 ans à se cristalliser
+- highlight_4: La phase absolutiste traverse deux fois le cycle complet — Josias ouvre la première (avortée après 54 ans par Babylone), Simon Thassi ouvre la seconde (206 ans, durée parfaitement conforme)
+- highlight_5: Bar Kokhva est un monarque absolu, pas un révolutionnaire national — la seule identification correcte exige de comprendre que le reboot de 70 ramène le Parcours en phase absolutiste, pas en RN
+- highlight_6: Le peuple juif préserve son homogénéité culturelle pendant 1800 ans d'exil après 135 — preuve que le Parcours est porté par un peuple, pas par un État
+- question_1: Le Parcours sioniste (XIXe-XXIe siècle) reprend-il en phase absolutiste (là où Bar Kokhva a été interrompu) ou en phase oligarchique (les institutions ayant été intégralement détruites) ?
+- question_2: Le parallèle David-Salomon / Charlemagne permet-il de trancher définitivement le débat minimaliste-maximaliste, ou l'argument structurel reste-t-il insuffisant face à l'archéologie ?
+- question_3: La Guerre de Kitos (115-117) est-elle purement une rébellion périphérique du Parcours romain, ou a-t-elle un effet mesurable sur le Parcours juif en diaspora ?
 - subtitle: Douze siècles de construction nationale, trois destructions, un peuple indestructible
-- note: Le Parcours le plus perturbé du corpus. Deux reboots majeurs (conquête babylonienne -586, destruction du Temple 70), un prolongement (conquête macédonienne -332), un transfert territorial (choc assyrien -722), et une RN avortée (Grande Révolte de 66-70, écrasée par Rome). Malgré ces chocs, le peuple juif reconstruit ses institutions à chaque fois — preuve que le Parcours est porté par un peuple, pas par un État.
 - confidence: high (cas de référence, article détaillé rédigé)
 
 ---
@@ -37,6 +46,7 @@
 - type: saillant
 - start: ~-1080
 - figure: Saül
+- subtitle: Victoire d'Ammon
 - title: Éveil féodal
 - confidence: high
 - summary: Saül est le premier « chef des chefs » d'Israël, acclamé roi par les tribus après une victoire militaire contre les Ammonites.
@@ -46,6 +56,7 @@
 - type: saillant
 - start: ~-1003
 - figure: David
+- subtitle: Conquête de Jérusalem
 - title: Pic féodal
 - confidence: high
 - summary: David est reconnu roi de tout Israël par les anciens du Nord, conquiert Jérusalem comme capitale neutre et écrase les Philistins, devenant le premier suzerain incontesté de l'ensemble des tribus.
@@ -55,6 +66,7 @@
 - type: saillant
 - start: ~-960
 - figure: Salomon
+- subtitle: Temple de Jérusalem
 - title: Pic féodal
 - confidence: high
 - summary: Salomon représente le pic de la phase féodale : un réseau lignager hérité de David, un charisme personnel fort, des réseaux commerciaux étendus avec Tyr et Saba, et la construction du Temple comme acte de légitimation symbolique. Mais l'édifice repose sur la personne du suzerain et se fragmente à sa mort.
@@ -74,6 +86,7 @@
 - type: saillant
 - start: ~-930
 - figure: Roboam
+- subtitle: Schisme des tribus
 - title: Crise féodale
 - confidence: high
 - summary: Roboam refuse de réduire la corvée malgré la demande des anciens du Nord, provoquant le schisme immédiat des dix tribus et la fragmentation de l'édifice salomonien.
@@ -107,6 +120,7 @@
 - type: saillant
 - start: -885
 - figure: Omri
+- subtitle: Fondation de Samarie
 - title: 1er monarque oligarchique
 - confidence: high
 - summary: Omri fonde l'État central du royaume d'Israël en Samarie, marquant le passage décisif d'une société tribale à un véritable État territorial doté d'une administration, d'un fisc et d'une armée permanente.
@@ -116,6 +130,7 @@
 - type: saillant
 - start: ~-770
 - figure: Jéroboam II
+- subtitle: Apogée de Samarie
 - title: Pic oligarchique
 - confidence: high
 - summary: Sous Jéroboam II, le royaume d'Israël atteint son extension maximale, de la Syrie à la mer Morte, avec une prospérité économique et une capacité administrative sans précédent.
@@ -124,6 +139,7 @@
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: ~-746
+- subtitle: Mort de Jéroboam II
 - title: Fin de l'expansion
 - confidence: medium
 - summary: La mort de Jéroboam II en -746 ouvre une période d'instabilité rapide au sein du royaume du Nord, avec cinq rois en vingt ans et une pression assyrienne croissante qui cristallise un clivage interne entre élites pro-assyriennes et nationalistes yahvistes.
@@ -161,6 +177,7 @@
 - type: saillant
 - start: -700
 - end: -641
+- subtitle: Manassé vs yahvistes
 - title: Guerre sociale
 - confidence: high
 - summary: La guerre sociale oppose la faction prébendière pro-assyrienne, incarnée par Manassé, à la faction patrimoniale yahviste et nationaliste, et se résout par l'émergence de Josias comme premier monarque absolu.
@@ -195,6 +212,7 @@
 - type: saillant
 - start: -640
 - figure: Josias
+- subtitle: Réforme du Temple
 - title: 1er monarque absolu
 - confidence: high
 - summary: Josias centralise le culte exclusivement au Temple de Jérusalem, détruit les sanctuaires locaux (bamot) et unifie le droit par la promulgation du Deutéronome, concentrant entre ses mains le pouvoir politique et religieux.
@@ -204,6 +222,7 @@
 - type: saillant
 - avortement: true
 - start: -586
+- subtitle: Chute de Jérusalem
 - title: Destruction du 1er Temple
 - confidence: high
 - summary: En -586, Nabuchodonosor II détruit Jérusalem et le Temple, massacre la population et déporte les élites à Babylone, provoquant un effondrement institutionnel et démographique total qui interrompt brutalement la phase absolutiste.
@@ -250,6 +269,7 @@
 #### Saillant : Pacte oligarchique
 - type: saillant
 - start: -516
+- subtitle: Knesset HaGuedola
 - title: Pacte oligarchique
 - confidence: high
 - summary: La création de la Knesset HaGuedola (Grande Assemblée de 120 membres) en -516 constitue le pacte oligarchique par lequel les élites codifient la structure du pouvoir et les rapports entre l'exécutif (le Grand Prêtre) et les différentes composantes de l'élite.
@@ -268,6 +288,7 @@
 - type: saillant
 - avortement: true
 - start: -332
+- subtitle: Conquête d'Alexandre
 - title: Invasion macédonienne
 - confidence: high
 - summary: La conquête d'Alexandre le Grand interrompt la guerre sociale avant sa résolution et ouvre le prolongement hellénistique.
@@ -311,6 +332,7 @@
 - type: saillant
 - start: -175
 - end: -140
+- subtitle: Révolte des Maccabées
 - title: Guerre sociale
 - confidence: high
 - summary: La crise hellénistique et la révolte maccabéenne constituent la guerre sociale de la phase oligarchique prolongée : le conflit entre Oniades et Tobiades dégénère sous la pression séleucide, et ce sont les Hasmonéens — figure tierce issue de la révolte rurale — qui en sortent vainqueurs.
@@ -345,6 +367,7 @@
 - type: saillant
 - start: -140
 - figure: Simon Thassi
+- subtitle: Cumul hasmonéen
 - title: 1er monarque absolu
 - confidence: high
 - summary: Simon Thassi reçoit le cumul héréditaire des fonctions de Grand Prêtre, stratège et ethnarque « pour toujours », fusionnant le pouvoir politique et religieux en une seule personne.
@@ -354,6 +377,7 @@
 - type: saillant
 - start: -94
 - figure: Alexandre Jannée
+- subtitle: Révolte pharisienne
 - title: Dernière grande révolte oligarchique
 - confidence: high
 - summary: La révolte pharisienne contre Alexandre Jannée est écrasée dans le sang — 800 rebelles crucifiés —, ce qui clôt définitivement l'absolutisation en éliminant la dernière résistance organisée des anciennes élites oligarchiques.
@@ -372,6 +396,7 @@
 - type: saillant
 - start: -20
 - figure: Hérode Ier
+- subtitle: Grand Temple d'Hérode
 - title: Pic absolutiste
 - confidence: high
 - summary: Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent — agrandissement considérable du Temple, fondation de Césarée, forteresses de Massada et Hérodion — une armée professionnelle de mercenaires et un monopole royal absolu de la force.
@@ -380,6 +405,7 @@
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: -4
+- subtitle: Mort d'Hérode
 - title: Fin de l'expansion
 - confidence: high
 - summary: La mort d'Hérode en -4 entraîne la division du royaume entre ses trois fils, puis la déposition d'Archélaüs et le passage de la Judée sous procurateurs romains, mettant fin à toute possibilité d'expansion.
@@ -421,6 +447,7 @@
 #### Saillant : Explosion de l'AR
 - type: saillant
 - start: 66
+- subtitle: Massacre de Florus
 - title: Explosion de l'AR
 - confidence: high
 - summary: Le massacre ordonné par le procurateur Florus provoque le basculement des élites romanisées elles-mêmes dans la révolte, signe que l'Ancien Régime a atteint le point de rupture où même ses bénéficiaires refusent de le défendre.
@@ -430,6 +457,7 @@
 - type: saillant
 - start: 66
 - end: 67
+- subtitle: Shekel d'Israël
 - title: Expérience parlementaire
 - confidence: high
 - summary: Un gouvernement provisoire de coalition réunissant Pharisiens, Sadducéens modérés et Zélotes est instauré après la victoire de Beth Horon, et la frappe du shekel inscrit « Israël » affirme une conscience nationale souveraine.
@@ -439,6 +467,7 @@
 - type: saillant
 - start: 67
 - end: 70
+- subtitle: Terreur zélote
 - title: Phase aiguë
 - confidence: high
 - summary: Trois factions armées s'affrontent à l'intérieur même de Jérusalem, les Zélotes éliminent les modérés, assassinent le Grand Prêtre et brûlent les réserves de nourriture, reproduisant le schéma classique de la prise de contrôle par l'extrême-gauche.
@@ -448,6 +477,7 @@
 - type: saillant
 - avortement: true
 - start: 70
+- subtitle: Destruction du Temple
 - title: Écrasement
 - confidence: high
 - summary: Titus assiège Jérusalem et détruit le Second Temple en 70, mettant fin à la RN avant qu'elle ne puisse atteindre le moment thermidorien et provoquant un reboot du Parcours.
@@ -486,6 +516,7 @@
 - type: saillant
 - start: 132
 - figure: Bar Kokhva
+- subtitle: Révolte de Bar Kokhva
 - title: 1er monarque absolu
 - confidence: high
 - summary: Bar Kokhva prend le titre de Nassi (prince), reçoit l'onction messianique de Rabbi Akiva et exerce un pouvoir absolu sans aucune consultation, incarnant non pas un révolutionnaire national mais un monarque absolu menant une guerre d'indépendance.
@@ -495,6 +526,7 @@
 - type: saillant
 - avortement: true
 - start: 135
+- subtitle: Aelia Capitolina
 - title: Liquidation définitive
 - confidence: high
 - summary: Hadrien écrase la révolte de Bar Kokhva, rase Jérusalem, interdit le judaïsme et renomme la province Syria Palaestina. Le Parcours antique d'Israël est définitivement interrompu.
