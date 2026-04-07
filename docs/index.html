@@ -6,6 +6,8 @@
 <title>Historionomie — Parcours de construction nationale</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
@@ -110,6 +112,17 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
 .compare-table .img-cell img { width:36px; height:36px; border-radius:4px; object-fit:cover; box-shadow:0 1px 6px rgba(0,0,0,0.12); display:block; }
 .compare-table .cell-empty { color:#ccc; font-style:italic; }
 
+/* Map */
+#map-section { margin-bottom:3rem; }
+#map-section .section-header { margin-bottom:1rem; }
+#nations-map { height:420px; border-radius:10px; border:1px solid rgba(209,196,185,0.3); box-shadow:0 2px 12px rgba(0,0,0,0.06); }
+.map-popup { font-family:'Public Sans', system-ui, sans-serif; text-align:center; }
+.map-popup h4 { font-family:'Newsreader', serif; font-size:1rem; margin:0 0 0.2rem; }
+.map-popup .map-dates { font-size:0.8rem; color:#8B7355; font-style:italic; margin-bottom:0.4rem; }
+.map-popup .map-desc { font-size:0.78rem; color:#666; line-height:1.4; max-width:220px; }
+.map-popup a { display:inline-block; margin-top:0.5rem; font-size:0.78rem; font-weight:600; color:#715b3e; text-decoration:none; }
+.map-popup a:hover { text-decoration:underline; }
+
 /* Footer */
 .footer { border-top:1px solid rgba(209,196,185,0.15); padding:3rem 0; text-align:center; }
 .footer p { font-size:0.82rem; color:#999; font-style:italic; margin-bottom:1rem; }
@@ -150,7 +163,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
 <section id="nations">
     <div class="section-header">
         <h2>Nations étudiées</h2>
-        <span class="count">5 entités</span>
+        <span class="count">6 entités</span>
     </div>
     <div class="nation-grid">
         <a class="nation-card" href="france.html">
@@ -208,7 +221,26 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
                 <div class="desc">Sept siècles de Wittelsbach, de la forêt bavaroise à l'Athènes sur l'Isar — un Parcours avorté par l'absorption dans l'Empire allemand.</div>
             </div>
         </a>
+        <a class="nation-card" href="milan.html">
+            <div class="nation-card-img">
+                <img alt="Milan — Façade du Dôme, peinture (1660)" src="https://commons.wikimedia.org/wiki/Special:FilePath/Milano_facciata_del_duomo_1660.jpg?width=640">
+                <span class="nation-card-badge badge-draft">Brouillon</span>
+            </div>
+            <div class="nation-card-body">
+                <div class="nation-icon"><img class="nation-flag" alt="Milan" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Duchy_of_Milan_(1450).svg?width=30"><h3>Milan</h3></div>
+                <div class="dates">~979 à 1848</div>
+                <div class="desc">De l'archevêque au duc, du duc au Sénat, du Sénat à l'Italie — neuf siècles de double cycle oligarchique-absolutiste sous domination étrangère.</div>
+            </div>
+        </a>
     </div>
+</section>
+
+<!-- Map -->
+<section id="map-section">
+    <div class="section-header">
+        <h2>Carte des nations étudiées</h2>
+    </div>
+    <div id="nations-map"></div>
 </section>
 
 <!-- Methodology teaser -->
@@ -378,5 +410,35 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
     </div>
 </footer>
 
+<script>
+const map = L.map('nations-map', { scrollWheelZoom: false }).setView([47, 8], 5);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 12
+}).addTo(map);
+
+const nations = [
+    { name:'France', lat:48.86, lng:2.35, dates:'~987 — 1830', href:'france.html', desc:'Le Parcours de référence du modèle historionomique.' },
+    { name:'Angleterre', lat:51.51, lng:-0.12, dates:'~829 — 1688', href:'angleterre.html', desc:'Cinq boucles féodales, puis l\'invention du parlementarisme.' },
+    { name:'Israël antique', lat:31.78, lng:35.23, dates:'~-1080 — 135', href:'israel.html', desc:'Le Parcours le plus perturbé — reboots, prolongements, transferts.' },
+    { name:'Venise', lat:45.44, lng:12.34, dates:'~726 — 1866', href:'venise.html', desc:'Onze siècles sans roi, un absolutisme institutionnel.' },
+    { name:'Bavière', lat:48.14, lng:11.58, dates:'~1180 — 1919', href:'baviere.html', desc:'Sept siècles de Wittelsbach, absorbés dans le Parcours allemand.' },
+    { name:'Milan', lat:45.46, lng:9.19, dates:'~979 — 1848', href:'milan.html', desc:'Double cycle oligarchique-absolutiste, reboot et absorption dans le Parcours italien.' }
+];
+
+const icon = L.divIcon({
+    className:'',
+    html:'<div style="width:12px;height:12px;background:#715b3e;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,0.3);"></div>',
+    iconSize:[12,12],
+    iconAnchor:[6,6],
+    popupAnchor:[0,-8]
+});
+
+nations.forEach(n => {
+    L.marker([n.lat, n.lng], { icon })
+        .addTo(map)
+        .bindPopup(`<div class="map-popup"><h4>${n.name}</h4><div class="map-dates">${n.dates}</div><div class="map-desc">${n.desc}</div><a href="${n.href}">Voir le parcours →</a></div>`, { maxWidth:250 });
+});
+</script>
 </body>
 </html>
