@@ -1,20 +1,16 @@
 # Parcours de la Bavière
 
 ## Metadata
-- nation: Bavière (duché, puis électorat, puis royaume de Bavière)
-- Bavière
-- start: ~1180
+- nation: Bavière
+- territory: Bavière
+- flag: images/baviere/flag.png
+- start: 1180
 - end: 1871 (absorption dans le Parcours allemand)
-- complet
-- highlight_1: Phase féodale à 3 boucles (partitions de 1255, 1349, 1392) sur 326 ans — l'héritage divisible Wittelsbach bloque la consolidation exactement comme les boucles anglo-saxonnes
-- highlight_2: Phase oligarchique la plus courte du corpus (91 ans) — la Contre-Réforme fournit un homogénéisateur culturel si puissant qu'elle comprime le cycle entier
-- highlight_3: Le doublement territorial napoléonien (1806) injecte un choc d'hétérogénéité en pleine phase absolutiste, forçant un second cycle impérialisme-AR — un cas unique de double AR
-- highlight_4: Les Wittelsbach règnent sans interruption de 1180 à 1918 (738 ans) — la plus longue continuité dynastique du corpus, traversant toutes les phases
-- highlight_5: La RN bavaroise (Eisner, République des Conseils, 1918-1919) est la plus radicale d'Allemagne mais la plus brève — écrasée en 26 jours et absorbée dans la RN allemande
-- highlight_6: Blenheim (1704) marque la fin de l'expansion absolutiste — la Bavière perd son indépendance militaire et ne la retrouve jamais
-- question_1: Le choc napoléonien de 1806 est-il un prolongement (hétérogénéisation sans destruction institutionnelle) ou un reboot partiel ? Les institutions absolutistes survivent mais le territoire double — quel est le bon diagnostic ?
-- question_2: La RN de 1918-1919 est-elle une RN bavaroise avortée ou simplement un épisode régional de la RN allemande ? L'État libre de Bavière a-t-il une dynamique propre ou est-il entièrement subordonné au cadre de Weimar ?
-- question_3: La phase oligarchique de 91 ans est-elle réellement comprimée ou manque-t-on un saillant antérieur qui repousserait le début de la phase ?
+- status: à valider
+- highlight_1: Phase féodale à 3 boucles (326 ans) | L'héritage divisible Wittelsbach bloque la consolidation sur trois siècles — partitions de 1255, 1349 et 1392. Le mécanisme est le même que les boucles anglo-saxonnes | https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig_der_Bayer.jpg?width=120 | feodale
+- highlight_2: Phase oligarchique la plus courte (91 ans) | La Contre-Réforme fournit un homogénéisateur culturel si puissant qu'elle comprime le cycle entier. Les Jésuites à Ingolstadt dès 1542 | https://commons.wikimedia.org/wiki/Special:FilePath/Joachim_von_Sandrart_-_Maximilian_I,_Elector_of_Bavaria.jpg?width=120 | oligarchique
+- highlight_3: Double AR napoléonien | Le doublement territorial de 1806 (Franconie, Souabe) injecte un choc d'hétérogénéité en pleine phase absolutiste, forçant un second cycle impérialisme-AR — un cas unique | https://commons.wikimedia.org/wiki/Special:FilePath/Bellotto_Schloss-Nymphenburg_Stadtseite.jpg?width=120 | absolutiste
+- highlight_4: RN avortée (1918-1919) | Eisner proclame la République, la République des Conseils dure 26 jours — la RN la plus radicale d'Allemagne mais la plus brève, absorbée dans la RN allemande | https://commons.wikimedia.org/wiki/Special:FilePath/Theresienwiese_1918.jpg?width=120 | rn
 - subtitle: Sept siècles de Wittelsbach, de la forêt bavaroise à l'Athènes sur l'Isar
 - confidence: medium
 
@@ -24,7 +20,7 @@
 - type: note
 - description: Les Agilolfings sont les premiers ducs de Bavière attestés. Garibald Ier (~555-591) est le premier duc historiquement documenté, régnant sous suzeraineté mérovingienne. La dynastie développe une proto-administration (la Lex Baiuvariorum est codifiée vers 743), contrôle l'épiscopat bavarois, et fonde des monastères. Tassilo III (~748-788) porte le pouvoir ducal à son apogée : il tient des synodes, lève des troupes, fonde l'abbaye de Kremsmünster (777). Mais en 788, Charlemagne dépose Tassilo au plaid d'Ingelheim, abolit la charge ducale, redistribue la Bavière en comtés administrés par des comtes francs, et nomme Gerold comme préfet. C'est un reboot institutionnel complet : la dynastie est éliminée, l'administration ducale détruite, les réseaux aristocratiques bavarois subordonnés directement à Aix-la-Chapelle. La Lex Baiuvariorum survit comme droit coutumier et l'Église bavaroise conserve ses structures, mais l'État ducal n'existe plus.
 
-## Pré-phase : Bavière impériale (788-~1180)
+## Pré-phase : Bavière impériale (788-1180)
 - type: note
 - description: Après le reboot carolingien, la Bavière traverse une longue période de subordination impériale. Le duché-souche (Stammesherzogtum) renaît sous les Luitpoldiens après l'effondrement carolingien : Arnulf « le Mauvais » (~907-937) rétablit l'autorité ducale après la catastrophe de Presbourg (907, armée bavaroise anéantie par les Hongrois) et exerce un pouvoir quasi-royal à Ratisbonne. Mais les Ottoniens reprennent le contrôle en 947, et la Bavière devient un apanage impérial confié à diverses dynasties au gré des intérêts de l'empereur. La Carinthie est séparée en 976. Les Welfs (1070-1180) culminent avec Henri le Lion, qui cumule la Bavière et la Saxe et fonde Munich (~1157-1158), mais sa chute en 1180 ampute le territoire et le transfère aux Wittelsbach. Pendant cette période, l'identité culturelle bavaroise persiste (langue, droit, Église), mais il n'y a pas de Parcours institutionnel autonome — le duché change de mains trop souvent pour permettre un développement continu de l'État central.
 
@@ -33,31 +29,31 @@
 ## Phase : Féodale
 - type: phase
 - phase: feodale
-- start: ~1180
-- end: ~1506
+- start: 1180
+- end: 1506
 - title: Phase féodale
 - typical_duration: ~200 ans
 - actual_duration: ~326 ans
 - resolution: Pacte oligarchique — les états (Landstände) et le duc codifient la primogéniture (1506), rendant le duché indivisible
 - resolution_conditions: Homogénéité des élites bavaroises à l'échelle du duché réunifié (après les guerres de succession et 300 ans de brassage Wittelsbach) + lassitude collective des partitions qui avaient fragmenté le pays pendant 250 ans. Le pacte survient juste après la guerre de Succession de Landshut (1503-1505), dans un contexte où la nécessité d'indivisibilité fait consensus.
-- summary: La phase féodale bavaroise est portée par les Wittelsbach, qui reçoivent un duché amputé en 1180 et doivent construire leur légitimité à partir de presque rien — seuls deux nobles rendent hommage à Otto Ier lors de son premier Landtag à Ratisbonne. La phase est marquée par un pic féodal spectaculaire (Louis IV, empereur, ~1328-1347) suivi de partitions répétées (1255, 1349, 1392) qui fragmentent le duché en jusqu'à quatre entités rivales. Ces partitions sont les boucles de la phase féodale bavaroise : l'héritage divisible empêche la consolidation étatique, exactement comme les boucles anglo-saxonnes. Ce n'est qu'après la guerre de Succession de Landshut (1503-1505) et le décret de primogéniture (1506) que le pacte oligarchique s'impose enfin.
+- summary: La phase féodale bavaroise est portée par les Wittelsbach, qui reçoivent un duché amputé en 1180 et doivent construire leur légitimité à partir de presque rien — seuls deux nobles rendent hommage à Otto Ier lors de son premier Landtag à Ratisbonne. La phase est marquée par un pic féodal spectaculaire (Louis IV, empereur, 1328-1347) suivi de partitions répétées (1255, 1349, 1392) qui fragmentent le duché en jusqu'à quatre entités rivales. Ces partitions sont les boucles de la phase féodale bavaroise : l'héritage divisible empêche la consolidation étatique, exactement comme les boucles anglo-saxonnes. Ce n'est qu'après la guerre de Succession de Landshut (1503-1505) et le décret de primogéniture (1506) que le pacte oligarchique s'impose enfin.
 - description: Les Wittelsbach commencent de zéro. Otto Ier le Roux (1180-1183) reçoit un duché réduit par rapport au territoire welfe et fait face à une aristocratie majoritairement hostile. Son fils Louis Ier le Kelheimer (~1183-1231) est le véritable fondateur : il fonde des villes (Landshut 1204, Straubing 1218), acquiert le Palatinat du Rhin (1214), et amorce la centralisation en confiant les terres nouvellement acquises non à des vassaux mais à des ministériaux (Dienstmannen). Louis II le Sévère crée les Vicedomsämter (~1280) et promeut la paix territoriale (Landfrieden). Louis IV, élu empereur en 1314, porte le pouvoir Wittelsbach à son maximum historique : il réunifie temporairement la Bavière (1340), codifie le Landrecht d'Haute-Bavière (1334/36, 1346) et accumule un immense territoire. Mais tout repose sur sa personne : à sa mort (1347), ses six fils se partagent les domaines et déclenchent un cycle de partitions (1349, 1392) et de guerres internes (Bavière-Ingolstadt contre Bavière-Munich, 1420-1422). L'Ottonische Handfeste (1311) et les chartes de privilèges successives (64 entre 1311 et 1565) renforcent les Landstände, mais l'homogénéité reste insuffisante à l'échelle d'une Bavière fragmentée. Ce n'est qu'après la guerre de Succession de Landshut (1503-1505), qui réunifie le duché par les armes, que la primogéniture de 1506 codifie l'indivisibilité — les conditions de Deblonde sont enfin réunies.
 - deviation: +126 ans par rapport à la norme (~200 ans). Au moins 3 boucles (partitions de 1255, 1349, 1392), comparables au cas anglais (~500 ans, 5 boucles) et vénitien (~306 ans, 5 boucles). L'héritage divisible Wittelsbach empêche la consolidation étatique exactement comme l'hétérogénéité culturelle bloquait l'Angleterre anglo-saxonne.
 
-### Subphase : Coagulation des élites (~1180-~1506)
+### Subphase : Coagulation des élites (1180-1506)
 - type: subphase
 - phase: feodale
-- start: ~1180
-- end: ~1506
+- start: 1180
+- end: 1506
 - title: Coagulation des élites
 - summary: Les Wittelsbach construisent leur pouvoir progressivement à partir de 1180, mais les partitions dynastiques (1255, 1349, 1392) fragmentent le duché à chaque génération. L'homogénéité progresse néanmoins grâce à la langue commune, l'Église catholique, et les interactions croissantes entre les élites des duchés fragmentés.
 - description: La coagulation bavaroise est structurée par la tension entre deux forces contradictoires. D'un côté, les Wittelsbach construisent des outils de centralisation — Vicedomsämter, Landrecht, Landgerichte, paix territoriale — qui homogénéisent progressivement les élites. De l'autre, l'héritage divisible fragmente le duché à chaque succession difficile, créant des duchés rivaux (Haute-Bavière/Basse-Bavière en 1255, quatre duchés en 1392) avec leurs propres cours, administrations et fiscs. Les Landstände (noblesse, clergé, villes), renforcés par les privilèges arrachés aux ducs affaiblis par les partitions, deviennent une force politique majeure : « le gouvernement du pays et le contrôle de ses finances passèrent principalement entre les mains du Landtag » (Britannica). Chaque boucle partition/guerre/réunification renforce paradoxalement l'homogénéité en forçant les élites à interagir et à développer une conscience de classe pan-bavaroise. La guerre de Succession de Landshut (1503-1505) est la crise finale qui force le pacte.
 
 #### Saillant : Éveil féodal
 - type: saillant
-- start: ~1204
+- start: 1204
 - figure: Louis Ier le Kelheimer
-- subtitle: Landshut
+- subtitle: Louis Ier le Kelheimer
 - title: Éveil féodal
 - confidence: medium
 - alternatives: Otto Ier le Roux (1180) — premier Wittelsbach, mais trop faible (seuls 2 nobles lui rendent hommage). Arnulf « le Mauvais » (~907) — rétablit le duché-souche, mais le Parcours est interrompu par les Ottoniens.
@@ -66,10 +62,10 @@
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~1328
+- start: 1328
 - end: 1347
 - figure: Louis IV le Bavarois
-- subtitle: Empereur Wittelsbach
+- subtitle: Louis IV le Bavarois
 - title: Pic féodal
 - confidence: high
 - summary: Louis IV, élu empereur du Saint-Empire en 1314, porte le pouvoir personnel Wittelsbach à un sommet sans précédent : il réunifie temporairement la Bavière (1340), codifie le Landrecht d'Haute-Bavière (~350 articles, 1334/36 et 1346) et accumule un empire Wittelsbach allant de la Hollande au Tyrol.
@@ -114,20 +110,20 @@
 ## Phase : Oligarchique
 - type: phase
 - phase: oligarchique
-- start: ~1506
-- end: ~1597
+- start: 1506
+- end: 1597
 - title: Phase oligarchique
 - typical_duration: ~200 ans
 - actual_duration: ~91 ans
-- resolution: Guerre sociale (~1564-1597) résolue par l'émergence de Maximilien Ier, qui construit un appareil bureaucratique entièrement nouveau transcendant les factions. Ni la noblesse protestante (patrimoniale) ni la vieille cour catholique endettée (prébendière) ne l'emportent — c'est l'État qui triomphe.
+- resolution: Guerre sociale (1564-1597) résolue par l'émergence de Maximilien Ier, qui construit un appareil bureaucratique entièrement nouveau transcendant les factions. Ni la noblesse protestante (patrimoniale) ni la vieille cour catholique endettée (prébendière) ne l'emportent — c'est l'État qui triomphe.
 - summary: La phase oligarchique bavaroise est la plus courte identifiée dans les parcours connus (~91 ans). Après la primogéniture de 1506, l'essor est porté par la Contre-Réforme qui fournit un puissant outil d'homogénéisation culturelle (Jésuites à Ingolstadt dès 1542, uniformité confessionnelle imposée avant 1580). La polarisation entre noblesse territoriale partiellement protestante et administration ducale catholique éclate sous Albert V (1564 : répression des nobles protestants). La résolution vient de Maximilien Ier (1597), qui hérite d'un État en faillite et construit de toutes pièces un appareil administratif centralisé, neutralisant définitivement les Landstände en 1612.
 - description: La brièveté de la phase oligarchique bavaroise (~91 ans contre ~200 ans typiques) s'explique par trois facteurs convergents. Premièrement, la très longue phase féodale (~326 ans) a produit des élites déjà fortement homogénéisées — la nécessité de pacte unanime sur la primogéniture en est la preuve. Deuxièmement, la Contre-Réforme agit comme un accélérateur d'homogénéisation culturelle sans équivalent dans les autres parcours : les Jésuites s'installent dès 1542, l'hérésie est éradiquée avant 1580, et le catholicisme devient idéologie d'État — uniformisant les élites bien plus vite que les processus endogènes habituels. Troisièmement, le territoire compact de la Bavière (pas d'empire maritime comme Venise, pas de guerres de projection comme la France) empêche les exutoires extérieurs qui retardent la polarisation. La faction patrimoniale (noblesse terrienne, partiellement protestante, contrôlant le Landtag) et la faction prébendière (administration ducale, Jésuites, officiers catholiques dépendant du pouvoir central) entrent en conflit ouvert sous Albert V (1564). Guillaume V (1579-1597) ruine l'État par ses dépenses ecclésiastiques, disqualifiant la vieille garde prébendière. Maximilien Ier (1597) émerge comme un tiers : ni champion de la noblesse terrienne ni continuateur de la cour endettée, il bâtit un État neuf et subordonne les deux factions à son appareil bureaucratique.
 - deviation: -109 ans par rapport à la norme (~200 ans). Accélération par la Contre-Réforme (homogénéisation confessionnelle) et le territoire compact.
 
-### Subphase : Essor oligarchique (~1506-~1550)
+### Subphase : Essor oligarchique (1506-~1550)
 - type: subphase
 - phase: oligarchique
-- start: ~1506
+- start: 1506
 - end: ~1550
 - title: Essor oligarchique
 - summary: Consolidation du duché réunifié sous Guillaume IV (1508-1550). Les Jésuites arrivent dès 1542, la Contre-Réforme s'amorce. Le pouvoir ducal se renforce, mais les Landstände conservent un véritable pouvoir fiscal.
@@ -135,9 +131,9 @@
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
-- start: ~1508
+- start: 1508
 - figure: Guillaume IV
-- subtitle: Duché indivisible
+- subtitle: Guillaume IV
 - title: 1er monarque oligarchique
 - confidence: medium
 - alternatives: Albert IV lui-même (1506-1508) — c'est lui qui promulgue la primogéniture, mais il meurt deux ans après.
@@ -146,36 +142,36 @@
 
 #### Saillant : Pic oligarchique
 - type: saillant
-- start: ~1555
+- start: 1555
 - figure: Albert V
-- subtitle: Contre-Réforme
+- subtitle: Albert V
 - title: Pic oligarchique
 - confidence: medium
 - summary: Albert V (1550-1579) porte le pouvoir ducal oligarchique à son maximum en combinant le contrôle confessionnel (Jésuites) et la centralisation administrative, avant que sa répression des nobles protestants (1564) ne déclenche la polarisation.
 - description: Albert V est le duc le plus puissant de la phase oligarchique bavaroise. Il combine un réseau confessionnel efficace (les Jésuites, solidement implantés à Ingolstadt depuis 1542, deviennent l'ossature idéologique de l'État), une administration en consolidation rapide, et un contrôle croissant sur l'Église bavaroise. Son pouvoir est à son apogée au début des années 1560, avant que la répression des nobles protestants (1564) ne transforme le consensus oligarchique en conflit factieux. Le parallèle avec François Ier en France est partiel : comme François Ier, Albert V pousse la centralisation au point de provoquer la polarisation religieuse qui mène à la guerre sociale. Mais la compression temporelle est extrême — en Bavière, le pic et le début de la polarisation sont séparés de quelques années à peine.
 
-### Subphase : Polarisation des élites (~1550-~1564)
+### Subphase : Polarisation des élites (~1550-1564)
 - type: subphase
 - phase: oligarchique
 - start: ~1550
-- end: ~1564
+- end: 1564
 - title: Polarisation
 - summary: Sous Albert V (1550-1579), la polarisation éclate entre une noblesse territoriale partiellement convertie au protestantisme et une administration ducale catholique soutenue par les Jésuites. Albert V réprime les nobles protestants par la force en 1564.
 - description: Albert V approfondit la Contre-Réforme avec une intensité qui polarise radicalement les élites. La haute noblesse et les bourgeois des grandes villes (dont Munich) se sont partiellement convertis au protestantisme et utilisent leurs droits fiscaux au Landtag comme levier pour exiger la liberté religieuse. C'est la faction patrimoniale : élites dont le revenu repose sur un patrimoine foncier propre, indépendant du pouvoir ducal, et qui contestent l'autorité centrale au nom de leurs droits traditionnels. Face à eux, l'administration ducale, les Jésuites et les officiers catholiques forment la faction prébendière, dépendante du pouvoir central et liée à la Contre-Réforme. En 1564, Albert V tranche le conflit par la force : il fait perquisitionner les châteaux de nobles protestants (notamment Ladislaus von Fraunberg), qualifie leurs contacts avec des princes protestants étrangers de « conspiration », et écrase le protestantisme politique en Bavière. Tous les fonctionnaires et professeurs doivent prêter serment de conformité au Concile de Trente. L'hérésie est complètement éradiquée avant 1580. Le catholicisme est devenu idéologie d'État.
 
-### Subphase : Guerre sociale (~1564-~1597)
+### Subphase : Guerre sociale (1564-1597)
 - type: subphase
 - phase: oligarchique
-- start: ~1564
-- end: ~1597
+- start: 1564
+- end: 1597
 - title: Guerre sociale
 - summary: Le conflit entre la noblesse territoriale et l'administration ducale catholique ne se résout pas par la victoire d'une faction : les nobles protestants sont écrasés (1564), mais la cour catholique de Guillaume V (1579-1597) sombre dans l'endettement. Maximilien Ier émerge comme tiers en 1597, transcendant les deux factions par un appareil bureaucratique neuf.
 - description: La guerre sociale bavaroise est atypique par sa brièveté et par l'enchevêtrement du conflit confessionnel et du conflit de classes. La suppression des nobles protestants par Albert V (1564) élimine la branche la plus visible de la faction patrimoniale, mais ne résout pas le conflit fondamental : la noblesse terrienne conserve son patrimoine et ses droits au Landtag, même reconvertie au catholicisme. Sous Guillaume V (1579-1597), la faction prébendière historique — la cour catholique et les institutions jésuites — se disqualifie en accumulant une dette colossale (1 663 500 florins de dettes contre 1 220 florins en caisse en 1597). Guillaume V abdique. Ni la noblesse patrimoniale (écrasée confessionnellement) ni la vieille cour prébendière (ruinée financièrement) ne sont en position de prendre le pouvoir. C'est Maximilien Ier qui émerge comme tiers : il ne s'identifie à aucune des anciennes factions, construit un appareil bureaucratique entièrement neuf (85 tribunaux régionaux, 4 Rentämter, Hofkammer, Hofrat, Conseil secret), et subordonne les deux factions à cet appareil. En 1612, il cesse de convoquer les Landstände — la neutralisation est complète.
 
 #### Saillant : Guerre sociale
 - type: saillant
-- start: ~1564
-- end: ~1597
+- start: 1564
+- end: 1597
 - subtitle: Faillite et tiers
 - title: Guerre sociale
 - confidence: medium
@@ -188,21 +184,21 @@
 ## Phase : Absolutiste
 - type: phase
 - phase: absolutiste
-- start: ~1597
+- start: 1597
 - end: 1918
 - title: Phase absolutiste
 - typical_duration: ~200 ans
 - actual_duration: ~321 ans
 - resolution: Explosion de l'Ancien Régime (1918) → RN avortée (absorbée dans la RN allemande)
-- summary: La phase absolutiste bavaroise est la plus longue du Parcours. L'absolutisation (~1597-1679) est l'œuvre de Maximilien Ier. L'impérialisme absolutiste (~1679-~1848) culmine sous Max-Emmanuel (~1691, pic absolutiste), est brisé par Blenheim (1704), rebondit sous Maximilien III Joseph (absolutisme éclairé), puis connaît un prolongement majeur : le doublement napoléonien du territoire (1806, Franconie et Souabe) hétérogénéise la société et relance la dynamique impérialiste. Les réformes Montgelas (1799-1817) ventilent les élites. La Polysynodie de 1848 (la classe parlementaire tente de prendre des prérogatives au roi) échoue et ouvre l'Ancien Régime (~1848-1918). L'absorption dans l'Empire allemand (1871) gèle le Parcours. L'AR explose en 1918 (Eisner, République des Conseils).
+- summary: La phase absolutiste bavaroise est la plus longue du Parcours. L'absolutisation (1597-1679) est l'œuvre de Maximilien Ier. L'impérialisme absolutiste (1679-1848) culmine sous Max-Emmanuel (1691, pic absolutiste), est brisé par Blenheim (1704), rebondit sous Maximilien III Joseph (absolutisme éclairé), puis connaît un prolongement majeur : le doublement napoléonien du territoire (1806, Franconie et Souabe) hétérogénéise la société et relance la dynamique impérialiste. Les réformes Montgelas (1799-1817) ventilent les élites. La Polysynodie de 1848 (la classe parlementaire tente de prendre des prérogatives au roi) échoue et ouvre l'Ancien Régime (1848-1918). L'absorption dans l'Empire allemand (1871) gèle le Parcours. L'AR explose en 1918 (Eisner, République des Conseils).
 - description: L'allongement considérable de la phase (+121 ans) s'explique par l'accumulation de perturbations qui ralentissent la dynamique sans l'interrompre : guerre de Trente Ans (~30% de pertes démographiques), occupations autrichiennes (1704-1714, 1742-1745), et surtout le prolongement napoléonien de 1806. Le doublement du territoire (Franconie, Souabe — gains permanents confirmés au Congrès de Vienne) hétérogénéise la société bavaroise, ralentissant le moteur culturel et relançant l'impérialisme absolutiste sous une forme modernisatrice (réformes Montgelas). La Polysynodie de 1848 — tentative de la classe parlementaire de s'imposer face au roi — échoue comme toutes les Polysynodies et marque le vrai début de l'AR. L'absorption dans l'Empire allemand (1871) gèle ensuite le Parcours : la Bavière est suffisamment homogène pour une RN, mais la réalité politique est bloquée par la suzeraineté prussienne. L'AR se maintient artificiellement pendant 47 ans (1871-1918) avant d'exploser.
 - deviation: +121 ans par rapport à la norme (~200 ans). Prolongement napoléonien (1806, hétérogénéisation territoriale, ~70 ans d'effet), guerre de Trente Ans (~30 ans d'effet), occupations autrichiennes (~20 ans d'effet cumulé).
 
-### Subphase : Absolutisation (~1597-~1679)
+### Subphase : Absolutisation (1597-1679)
 - type: subphase
 - phase: absolutiste
-- start: ~1597
-- end: ~1679
+- start: 1597
+- end: 1679
 - title: Absolutisation
 - summary: Maximilien Ier construit l'appareil étatique bavarois de toutes pièces (1597-1651) : bureaucratie hiérarchique, neutralisation des Landstände (1612), dignité électorale (1623). Ferdinand-Marie reconstruit après la guerre de Trente Ans.
 - description: L'absolutisation bavaroise est l'œuvre d'un seul homme : Maximilien Ier. Prenant le pouvoir face à 1 663 500 florins de dettes et 1 220 florins en caisse, il réforme l'intégralité de l'administration. Il crée une hiérarchie bureaucratique à trois niveaux : 85 tribunaux régionaux à la base, 4 Rentämter au milieu, et au sommet les organes centraux — Hofkammer, Hofrat, Conseil spirituel, Conseil de guerre, et Conseil secret (Geheimer Rat). En 1612, il cesse de convoquer les Landstände. En 1623, il obtient la dignité électorale. La guerre de Trente Ans dévaste le pays (~30% de pertes démographiques) mais les institutions survivent. Ferdinand-Marie (1651-1679) reconstruit : modernisation de l'armée, premier code gouvernemental (Regierungskodex), politique de paix extérieure. L'absence de DGRO s'explique par l'insuffisance de la base territoriale aristocratique (les Wittelsbach ont substitué des ministériaux aux vassaux depuis le XIIIe siècle) et le contexte d'urgence de la guerre de Trente Ans — parallèle partiel avec Venise, où l'absence d'assise territoriale des patriciens rend la DGRO impossible.
@@ -211,29 +207,29 @@
 - type: saillant
 - start: 1597
 - figure: Maximilien Ier
-- subtitle: Bureaucratie nouvelle
+- subtitle: Maximilien Ier
 - title: 1er monarque absolu
 - confidence: high
 - summary: Maximilien Ier prend le pouvoir en 1597 face à un État en faillite et construit de toutes pièces un appareil bureaucratique moderne, neutralisant les Landstände en 1612 et obtenant la dignité électorale en 1623.
 - description: Maximilien Ier est le 1er monarque absolu bavarois. Il ne s'identifie à aucune des factions de la guerre sociale. Il tire sa légitimité de son efficacité administrative. La neutralisation des Landstände (1612) est le marqueur décisif. Le parallèle avec Henri IV en France est frappant : même contexte (État en faillite après un conflit confessionnel), même méthode (reconstruction administrative de fond en comble), même résultat (subordination des factions à l'appareil central).
 
-### Subphase : Impérialisme absolutiste (~1679-~1777)
+### Subphase : Impérialisme absolutiste (1679-1777)
 - type: subphase
 - phase: absolutiste
-- start: ~1679
-- end: ~1777
+- start: 1679
+- end: 1777
 - title: Impérialisme absolutiste
-- summary: Premier cycle. Max-Emmanuel porte la Bavière au sommet (pic absolutiste ~1691, gouverneur des Pays-Bas espagnols). Blenheim (1704) brise l'élan. Occupation autrichienne (1704-1714). Charles VII (1742) atteint le titre impérial sans le pouvoir. Maximilien III Joseph (1745-1777) incarne l'absolutisme éclairé tardif.
+- summary: Premier cycle. Max-Emmanuel porte la Bavière au sommet (pic absolutiste 1691, gouverneur des Pays-Bas espagnols). Blenheim (1704) brise l'élan. Occupation autrichienne (1704-1714). Charles VII (1742) atteint le titre impérial sans le pouvoir. Maximilien III Joseph (1745-1777) incarne l'absolutisme éclairé tardif.
 - description: Max-Emmanuel (1679-1704) — gouverneur des Pays-Bas espagnols, guerrier ottoman, bâtisseur de Nymphenburg et Schleissheim — porte la Bavière au pic absolutiste. Blenheim (13 août 1704) met la Bavière hors jeu et entraîne dix ans d'occupation autrichienne (1704-1714), le Sendlinger Mordweihnacht (25 décembre 1705, ~1 100 insurgés massacrés), puis la restauration (Rastatt 1714). Charles VII (1742-1745), élu empereur du Saint-Empire, est immédiatement occupé par l'Autriche — triomphe pyrrhique. Maximilien III Joseph (1745-1777) tourne les moyens de l'État vers l'intérieur : Codex Maximilianeus (1756), Académie des Sciences (1759), école obligatoire (1771), abolition de la censure jésuite. C'est un impérialisme absolutiste reconverti vers l'intérieur, analogue à Frédéric le Grand en Prusse.
 
 #### Saillant : Pic absolutiste
 - type: saillant
-- start: ~1756
+- start: 1756
 - figure: Maximilien III Joseph
-- subtitle: Codex Maximilianeus
+- subtitle: Maximilien III Joseph
 - title: Pic absolutiste
 - confidence: medium
-- alternatives: Max-Emmanuel (~1691) — prestige et projection extérieure maximaux, mais son édifice s'effondre à Blenheim. Maximilien III Joseph est retenu car il incarne la puissance intérieure consolidée maximale.
+- alternatives: Max-Emmanuel (1691) — prestige et projection extérieure maximaux, mais son édifice s'effondre à Blenheim. Maximilien III Joseph est retenu car il incarne la puissance intérieure consolidée maximale.
 - summary: Maximilien III Joseph (1745-1777) porte l'État bavarois à son maximum d'efficacité et de sophistication : Codex Maximilianeus (1756), Académie des Sciences (1759), école obligatoire (1771), abolition de la censure jésuite — le pouvoir central le plus consolidé de l'histoire bavaroise.
 - description: Maximilien III Joseph est le pic absolutiste du premier cycle. Privé de toute possibilité d'expansion extérieure après l'échec de Charles VII, il tourne les moyens de l'État vers l'intérieur avec une efficacité remarquable. Le Codex Maximilianeus bavaricus civilis (1756) est la codification juridique la plus complète d'Allemagne avant le Code Napoléon. L'Académie des Sciences de Munich (1759) place la Bavière sur la carte intellectuelle européenne. L'école obligatoire (1771) est un instrument d'homogénéisation culturelle sans précédent. L'abolition de la censure jésuite libère la production intellectuelle. C'est l'analogue d'Élisabeth Ière en Angleterre : le pouvoir domestique consolidé au maximum, la projection culturelle plutôt que militaire, le moment de puissance effective maximale avant la sclérose.
 
@@ -246,10 +242,10 @@
 - summary: La bataille de Blenheim (13 août 1704) met fin à l'aventure impériale bavaroise et entraîne dix ans d'occupation autrichienne (1704-1714).
 - description: L'armée franco-bavaroise est écrasée par Marlborough et le Prince Eugène. La Bavière est occupée par l'Autriche pendant dix ans (1704-1714), provoquant le soulèvement paysan de 1705-1706 (Sendlinger Mordweihnacht). Max-Emmanuel est restauré par le traité de Rastatt (1714). L'expérience impériale de Charles VII (1742-1745) est un dernier sursaut pyrrhique.
 
-### Subphase : Ancien Régime [1] (~1777-1806)
+### Subphase : Ancien Régime [1] (1777-1806)
 - type: subphase
 - phase: absolutiste
-- start: ~1777
+- start: 1777
 - end: 1806
 - title: Ancien Régime
 - summary: Charles-Théodore (1777-1799), impopulaire et étranger au pays, ouvre un premier Ancien Régime : sclérose, stratification sociale, perte de dynamisme. Mais le doublement napoléonien du territoire (1806) avorte cet AR en hétérogénéisant la société et en relançant un second cycle d'impérialisme.
@@ -276,20 +272,20 @@
 - description: Le prolongement napoléonien reboot la sous-phase d'impérialisme absolutiste. L'expansion territoriale double le territoire et intègre des populations franconniennes et souabes. Montgelas (1799-1817) fait les réformes pour intégrer ces territoires — imposition uniforme, sécularisation, cadastre, abolition du servage, constitution (1818). Ces réformes ventilent les élites et réduisent la pression révolutionnaire. L'effet combiné prolonge la phase absolutiste d'environ 70 ans.
 - affected_motor: Homogénéisation culturelle (hétérogénéisée par l'intégration de la Franconie et de la Souabe)
 
-### Subphase : Impérialisme absolutiste [2] (1806-~1848)
+### Subphase : Impérialisme absolutiste [2] (1806-1848)
 - type: subphase
 - phase: absolutiste
 - start: 1806
-- end: ~1848
+- end: 1848
 - title: Impérialisme absolutiste
 - summary: Second cycle. Montgelas projette la puissance étatique vers l'intérieur : intégration territoriale, réforme administrative, uniformisation juridique, constitution (1818). La Remontrance de 1848 échoue et ouvre le second AR.
 - description: Le second cycle d'impérialisme absolutiste est dirigé vers l'intérieur plutôt que vers la conquête. Montgelas (1799-1817) modernise radicalement l'État : imposition de la noblesse et du clergé, sécularisation des biens ecclésiastiques, cadastre complet, abolition du servage (1808), constitution de 1808 puis de 1818 (parlement bicaméral). Le royaume de Bavière (1806) projette un prestige nouveau. C'est l'analogue fonctionnel de l'impérialisme classique : l'État se projette avec la même énergie, mais vers l'homogénéisation plutôt que vers l'expansion. Après le renvoi de Montgelas (1817), Louis Ier (1825-1848) s'aliène toutes les factions. L'affaire Lola Montez (1846-1848) cristallise l'opposition. La Remontrance de 1848 — le Landtag vote des réformes ambitieuses après l'abdication de Louis Ier, mais Maximilien II les vide de leur substance — clôt le second cycle.
 
 #### Saillant : Pic absolutiste (2e cycle)
 - type: saillant
-- start: ~1835
+- start: 1835
 - figure: Louis Ier
-- subtitle: Athènes sur l'Isar
+- subtitle: Louis Ier
 - title: Pic absolutiste
 - confidence: medium
 - alternatives: Montgelas (~1808) — modernisateur, mais opère sous pression napoléonienne, pas en position de puissance autonome. Louis Ier est retenu car il incarne la projection autonome du prestige bavarois.
@@ -306,10 +302,10 @@
 - summary: En mars 1848, l'abdication de Louis Ier ouvre une tentative de la classe parlementaire de s'imposer : suffrage égal, liberté de la presse, responsabilité ministérielle. Maximilien II vide les réformes de leur substance — la remontrance échoue et ouvre le second AR.
 - description: La remontrance bavaroise de 1848 clôt le second cycle d'impérialisme. Le 20 mars 1848, Louis Ier abdique (affaire Montez). Le Landtag vote des réformes substantielles : abolition des restrictions féodales, liberté de la presse, suffrage égal, responsabilité ministérielle. Mais Maximilien II restaure l'ordre conservateur. C'est structurellement une remontrance — la classe parlementaire tente de prendre des prérogatives au monarque absolu et échoue. L'échec ouvre le second Ancien Régime.
 
-### Subphase : Ancien Régime [2] (~1848-1918)
+### Subphase : Ancien Régime [2] (1848-1918)
 - type: subphase
 - phase: absolutiste
-- start: ~1848
+- start: 1848
 - end: 1918
 - title: Ancien Régime
 - summary: L'AR commence après l'échec de la Polysynodie de 1848. Maximilien II restaure l'ordre conservateur. L'absorption dans l'Empire allemand (1871) gèle le Parcours. La sédimentation des élites se poursuit pendant 70 ans avant l'explosion de 1918.
@@ -373,19 +369,19 @@
 
 | Saillant | Bavière |
 |---|---|
-| Éveil féodal | Louis Ier le Kelheimer (~1204) |
-| Pic féodal | Louis IV le Bavarois (~1328-1347) |
+| Éveil féodal | Louis Ier le Kelheimer (1204) |
+| Pic féodal | Louis IV le Bavarois (1328-1347) |
 | Pacte oligarchique | Primogéniture (1506) |
-| 1er monarque oligarchique | Guillaume IV (~1508) |
-| Pic oligarchique | Albert V (~1555) |
-| Guerre sociale | ~1564-1597 |
+| 1er monarque oligarchique | Guillaume IV (1508) |
+| Pic oligarchique | Albert V (1555) |
+| Guerre sociale | 1564-1597 |
 | 1er monarque absolu | Maximilien Ier (1597) |
-| Pic absolutiste [1] | Maximilien III Joseph (~1756) |
+| Pic absolutiste [1] | Maximilien III Joseph (1756) |
 | Fin de l'expansion | Blenheim (1704) |
 | Choc d'hétérogénéité | Doublement napoléonien (1806) |
-| Pic absolutiste [2] | Louis Ier (~1835) |
+| Pic absolutiste [2] | Louis Ier (1835) |
 | Remontrance | 1848 (échoue) |
-| Ancien Régime | ~1848-1918 |
+| Ancien Régime | 1848-1918 |
 | Explosion de l'AR | Eisner (7 nov 1918) |
 | Expérience parlementaire | État libre (1919) |
 | Phase aiguë | République des Conseils (avril 1919) |

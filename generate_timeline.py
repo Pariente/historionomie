@@ -347,7 +347,7 @@ def generate_html(data: dict) -> str:
             max_year = max(max_year, current_year)
 
     # Add padding
-    year_padding = max(20, int((max_year - min_year) * 0.03))
+    year_padding = max(5, int((max_year - min_year) * 0.01))
     timeline_start = min_year - year_padding
     timeline_end = max_year + year_padding
     timeline_span = timeline_end - timeline_start
@@ -401,7 +401,28 @@ def generate_html(data: dict) -> str:
         items = ""
         for i, h in enumerate(highlights):
             icon = insight_icons[i % len(insight_icons)]
-            items += f"""<div class="insight-item"><span class="material-icons">{icon}</span><span>{escape_html(h)}</span></div>"""
+            # Support "Title | Description | image_url | phase" format
+            parts = [p.strip() for p in h.split(" | ")]
+            img_url = None
+            phase_color = None
+            # Extract phase (last segment if it matches a known phase)
+            if len(parts) >= 2 and parts[-1] in PHASE_COLORS:
+                phase_color = PHASE_COLORS[parts[-1]]
+                parts = parts[:-1]
+            # Extract image (last segment if URL or path)
+            if len(parts) >= 3 and (parts[-1].startswith("http") or parts[-1].startswith("images/")):
+                img_url = parts[-1]
+                parts = parts[:-1]
+            dot_html = f'<span style="width:10px;height:10px;border-radius:50%;background:{phase_color};flex-shrink:0;margin-top:3px;"></span>' if phase_color else ""
+            if len(parts) >= 2:
+                h_html = f'<span class="insight-title">{dot_html}{escape_html(parts[0])}</span><span class="insight-desc">{escape_html(parts[1])}</span>'
+            else:
+                h_html = f'<span class="insight-desc">{escape_html(h)}</span>'
+            if img_url:
+                icon_html = f'<img class="insight-img" src="{img_url}" alt="">'
+            else:
+                icon_html = f'<span class="material-icons">{icon}</span>'
+            items += f"""<div class="insight-item">{icon_html}<div>{h_html}</div></div>"""
         insights_html = f"""<div class="briefing-insights">
             <div class="briefing-label">Faits marquants</div>
             <div class="insights-grid">{items}</div>
@@ -411,7 +432,12 @@ def generate_html(data: dict) -> str:
     if questions:
         qs = ""
         for i, q in enumerate(questions):
-            qs += f"""<div class="question-item"><span class="question-tag">Q{i+1}</span>{escape_html(q)}</div>"""
+            # Support "Title | Description" format for titled questions
+            if " | " in q:
+                q_title, q_desc = q.split(" | ", 1)
+                qs += f"""<div class="question-item"><span class="question-tag">{escape_html(q_title)}</span><span class="question-text">{escape_html(q_desc)}</span></div>"""
+            else:
+                qs += f"""<div class="question-item"><span class="question-tag">Q{i+1}</span><span class="question-text">{escape_html(q)}</span></div>"""
         questions_html = f"""<div class="briefing-questions">
             <div class="briefing-label">Questions ouvertes</div>
             {qs}
@@ -419,7 +445,8 @@ def generate_html(data: dict) -> str:
 
     briefing_html = ""
     if insights_html or questions_html:
-        briefing_html = f"""<div class="briefing">{insights_html}{questions_html}</div>"""
+        grid_class = "briefing" if questions_html else "briefing briefing-full"
+        briefing_html = f"""<div class="{grid_class}">{insights_html}{questions_html}</div>"""
 
     # Build phase bands HTML
     phase_bands_html = ""
@@ -515,7 +542,7 @@ def generate_html(data: dict) -> str:
     # Assign stagger levels (0-4): default to row 0, bump down only if conflict
     # A saillant "occupies" a horizontal band of ~7% around its position
     MAX_ROWS = 6
-    ROW_HEIGHT = 80  # px per row
+    ROW_HEIGHT = 90  # px per row
     CONFLICT_RADIUS = 5  # % of timeline width — two saillants within this range conflict
 
     levels = []
@@ -616,7 +643,7 @@ def generate_html(data: dict) -> str:
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
 <style>
 * {{ margin:0; padding:0; box-sizing:border-box; }}
-body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f7f5f0; color:#1a1c1c; line-height:1.5; }}
+body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }}
 .font-headline {{ font-family: 'Newsreader', Georgia, serif; }}
 
 /* Navbar */
@@ -627,37 +654,43 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .navbar-links a:hover {{ color:#333; }}
 
 /* Header — briefing style */
-.header {{ background:#f7f5f0; padding:1.2rem 2rem 0; }}
-.header-title-row {{ display:flex; align-items:center; gap:0.6rem; margin-bottom:0.2rem; }}
-.header-title-row h1 {{ font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; }}
-.header-flag {{ height:18px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); }}
+.header {{ background:#f9f9f9; padding:1.5rem 2rem 0; }}
+.header-title-row {{ display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }}
+.header-title-row h1 {{ font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }}
+.header-flag {{ height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }}
 .header-badge {{ display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
-    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; }}
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }}
 .badge-territory {{ background:#8B7355; color:#fff; }}
 .badge-status {{ background:#d4edda; color:#2d6a4f; }}
 .badge-status.wip {{ background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }}
-.header-subtitle-row {{ display:flex; align-items:flex-start; gap:1.5rem; margin-bottom:1rem; }}
-.header-subtitle-row .subtitle {{ flex:1; font-family:'Newsreader', Georgia, serif; font-style:italic;
-    font-size:0.95rem; color:#888; line-height:1.5; }}
+.header-subtitle {{ font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }}
 .header-illustration {{ width:110px; height:75px; object-fit:cover; border-radius:4px;
     box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }}
 
 /* Briefing grid */
-.briefing {{ display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:0.8rem 2rem 0.8rem;
+.briefing {{ display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
     border-top:1px solid #e0dcd4; }}
+.briefing.briefing-full {{ grid-template-columns:1fr; }}
+.briefing-full .insights-grid {{ grid-template-columns:1fr 1fr 1fr; }}
 .briefing-insights {{ }}
-.briefing-label {{ font-size:0.55rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em;
-    color:#999; margin-bottom:0.5rem; font-variant:all-small-caps; }}
-.insights-grid {{ display:grid; grid-template-columns:1fr 1fr; gap:0.3rem 1.5rem; }}
-.insight-item {{ display:flex; align-items:flex-start; gap:0.4rem; font-size:0.75rem; color:#4d453c;
-    line-height:1.4; padding:0.2rem 0; }}
-.insight-item .material-icons {{ font-size:14px; color:#8B7355; flex-shrink:0; margin-top:1px; }}
-.briefing-questions {{ border-left:1px solid #e0dcd4; padding-left:1.5rem; }}
-.question-item {{ font-family:'Newsreader', Georgia, serif; font-style:italic; font-size:0.8rem;
-    color:#888; line-height:1.45; margin-bottom:0.6rem; }}
-.question-tag {{ display:block; font-family:'Public Sans', sans-serif; font-style:normal;
-    font-size:0.5rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em;
-    color:#bbb; margin-bottom:0.15rem; font-variant:all-small-caps; }}
+.briefing-label {{ font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }}
+.insights-grid {{ display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }}
+.insight-item {{ display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }}
+.insight-item .insight-title {{ display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }}
+.insight-item .insight-desc {{ display:block; color:#666; font-size:0.73rem; }}
+.insight-item .material-icons {{ font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }}
+.insight-item .insight-img {{ width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }}
+.briefing-questions {{ padding-left:1.5rem; border-left:1px solid #e0dcd4; }}
+.question-item {{ font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }}
+.question-tag {{ display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }}
+.question-item .question-text {{ font-family:'Newsreader', Georgia, serif; font-style:italic; }}
 
 /* Timeline container */
 .timeline-wrapper {{ padding:1.5rem 2rem 0.5rem; overflow-x:auto; }}
@@ -795,7 +828,7 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .detail-divider {{ border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }}
 
 /* Legend */
-.legend {{ padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f7f5f0; }}
+.legend {{ padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }}
 .legend-title {{ font-size:0.8rem; font-weight:700; color:#555; }}
 .legend-item {{ display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }}
 .legend-swatch {{ width:16px; height:16px; border-radius:3px; flex-shrink:0; }}
@@ -832,12 +865,9 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
     <div class="header-title-row">
         {"<img class='header-flag' src='" + escape_html(flag_url) + "' alt='drapeau'>" if flag_url else ""}
         <h1>{escape_html(nation)}</h1>
-        {"<span class='header-badge badge-status" + (" wip" if status.lower() in ("wip", "en cours") else "") + "'>" + escape_html(status) + "</span>" if status else ""}
+        {"<span class='header-badge badge-status" + (" wip" if status.lower() in ("wip", "en cours", "à valider") else "") + "'>" + escape_html(status) + "</span>" if status else ""}
     </div>
-    <div class="header-subtitle-row">
-        <div class="subtitle">{escape_html(data['metadata'].get('subtitle', '') or data['title'])}</div>
-        {"<img class='header-illustration' src='" + escape_html(illustration_url) + "' alt='illustration'>" if illustration_url else ""}
-    </div>
+    <div class="header-subtitle">{escape_html(data['metadata'].get('subtitle', '') or data['title'])}</div>
 </div>
 
 {briefing_html}

@@ -1,26 +1,22 @@
 # Parcours de Venise
 
 ## Metadata
-- nation: Venise (République de Venise)
+- nation: Venise (Vénétie)
 - territory: Vénétie
-- start: ~726
+- flag: images/venise/flag.png
+- start: 726
 - end: 1866 (absorption dans le Parcours italien)
-- status: wip
+- status: à valider
 - subtitle: Du lagon des réfugiés à la Sérénissime, onze siècles sans roi
-- highlight_1: Le Parcours le plus long du corpus (~1140 ans) — la lagune, forteresse naturelle, protège les institutions de toute destruction exogène
-- highlight_2: Phase oligarchique de ~637 ans, la plus longue jamais identifiée — l'expansion permanente (Stato da Màr, Terraferma) sert de soupape de pression et retarde la polarisation
-- highlight_3: L'absolutisme vénitien est institutionnel, pas personnel — les Inquisiteurs d'État concentrent le pouvoir sans qu'aucun individu ne devienne monarque absolu, un cas unique dans le corpus
-- highlight_4: La Serrata del Maggior Consiglio (1297) ferme la classe dirigeante et cristallise le clivage patriciat/popolani — un pacte oligarchique visible et datable
-- highlight_5: La RN de 1848 (République de Manin) est écrasée par l'Autriche après 17 mois de résistance — structurellement analogue à la révolte juive de 66-70, même séquence explosion/siège/écrasement
-- highlight_6: Le Parcours s'achève par absorption dans le Parcours italien (1866), pas par résolution endogène — Venise ne termine jamais sa propre RN
-- question_1: L'expansion maritime (Stato da Màr) est-elle une simple soupape de pression retardant la polarisation, ou un mécanisme distinct qui altère structurellement la dynamique oligarchique ?
-- question_2: L'absolutisme institutionnel (Inquisiteurs d'État, Conseil des Dix) est-il fonctionnellement équivalent à l'absolutisme monarchique, ou constitue-t-il une forme alternative qui appelle un traitement théorique séparé ?
-- question_3: La peste de 1630 (~33% de mortalité) joue-t-elle le même rôle de prolongement qu'à Milan, ou accélère-t-elle au contraire la transition vers l'Ancien Régime vénitien ?
+- highlight_1: Le Parcours le plus long du corpus | ~1140 ans — la lagune, forteresse naturelle, protège les institutions de toute destruction exogène. Cinq boucles féodales, une phase oligarchique de 637 ans | https://commons.wikimedia.org/wiki/Special:FilePath/Accademia_-_Miracle_of_the_Holy_Cross_at_Rialto_by_Vittore_Carpaccio.jpg?width=120 | feodale
+- highlight_2: Expansion permanente comme anti-polarisation | L'expansion maritime (Stato da Màr, IVe croisade 1204, Terraferma) fournit des exutoires aux élites et retarde la polarisation pendant des siècles | https://commons.wikimedia.org/wiki/Special:FilePath/Eug%C3%A8ne_Ferdinand_Victor_Delacroix_012.jpg?width=120 | oligarchique
+- highlight_3: Absolutisme institutionnel unique | Les Inquisiteurs d'État concentrent le pouvoir sans qu'aucun individu ne devienne monarque absolu — un cas unique dans le corpus | https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Heintz_dJ_Sala_Maggior_Consiglio_Venezia.jpg?width=120 | absolutiste
+- highlight_4: RN avortée (1848) | La République de Manin est écrasée par l'Autriche après 17 mois — le Parcours s'achève par absorption dans le Parcours italien (1866) | https://commons.wikimedia.org/wiki/Special:FilePath/Daniele_Manin_Repubblica_di_Venezia.jpg?width=120 | rn
 - confidence: medium
 
 ---
 
-## Pré-phase : Peuplement de la lagune (452-~726)
+## Pré-phase : Peuplement de la lagune (452-726)
 - type: note
 - description: Les premières communautés de la lagune sont des réfugiés fuyant les invasions barbares — Huns d'Attila (452), puis surtout Lombards d'Alboïn (568-569). Les habitants d'Altinum, Oderzo, Concordia et d'autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum). Les tribuns forment un comité directeur sans chef unique. L'ensemble reste dans l'orbite byzantine, rattaché à l'exarchat de Ravenne. Torcello, avec environ 20 000 habitants, est le centre dominant. L'inaccessibilité du lagon confère une forteresse naturelle, mais aucune autorité supra-régionale ne s'impose — c'est la percolation.
 
@@ -29,8 +25,8 @@
 ## Phase : Féodale
 - type: phase
 - phase: feodale
-- start: ~726
-- end: ~1032
+- start: 726
+- end: 1032
 - title: Phase féodale
 - typical_duration: ~200 ans
 - actual_duration: ~306 ans
@@ -40,27 +36,27 @@
 - description: La phase féodale vénitienne est atypique dans sa forme mais classique dans sa dynamique. L'absence de féodalité terrienne — la « vassalité » est commerciale, fondée sur les réseaux de commerce maritime et le contrôle des routes du sel — n'empêche pas le mécanisme central de fonctionner : pouvoir personnel, alliances d'homme à homme, fragmentation à chaque succession. Cinq boucles pic/crise ponctuent la phase : les dynasties Galbaio, Partecipazio, Candiano et Orseolo représentent autant de tentatives d'héréditariser le pouvoir, chacune échouant devant la résistance des familles marchandes. La crise de 804-810, déclenchée par l'attaque de Pépin dans le lagon, cristallise l'identité vénitienne comme distincte des deux empires. Le pacte de 1032, qui abolit la co-régence, intervient quand les deux conditions de Deblonde sont réunies : homogénéité des familles marchandes après 300 ans de brassage lagunaire, et faiblesse post-Orseolo.
 - deviation: +106 ans par rapport à la norme (~200 ans). Au moins 5 boucles pic féodal / crise féodale, comparables au cas anglais (~500 ans, 5 boucles). L'environnement commercial-maritime et les factions (pro-byzantines, pro-franques, dynastiques) retardent le pacte.
 
-### Subphase : Percolation lagunaire (452-~726)
+### Subphase : Percolation lagunaire (452-726)
 - type: subphase
 - phase: feodale
 - start: 452
-- end: ~726
+- end: 726
 - title: Percolation lagunaire
 - summary: Communautés gouvernées par des tribuns locaux sans autorité centrale. Pas de structure supra-régionale.
 - description: Les premières communautés lagunaires sont des réfugiés fuyant les invasions barbares — Huns d'Attila (452), puis Lombards d'Alboïn (568-569). Les habitants d'Altinum, Oderzo, Concordia et d'autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum) qui forme un comité directeur sans chef unique, le tout dans l'orbite byzantine. Aucune autorité supra-régionale ne s'impose — c'est la phase de percolation qui précède l'éveil féodal.
 
-### Subphase : Coagulation des élites (~726-~1032)
+### Subphase : Coagulation des élites (726-1032)
 - type: subphase
 - phase: feodale
-- start: ~726
-- end: ~1032
+- start: 726
+- end: 1032
 - title: Coagulation des élites — cinq boucles
 - summary: Cinq cycles pic féodal / crise féodale (Galbaio, Partecipazio, Candiano, Orseolo), chaque tentative dynastique échouant devant la résistance des familles marchandes.
 - description: La coagulation des élites vénitiennes s'étend sur plus de trois siècles et produit au moins cinq boucles pic féodal / crise féodale, un nombre comparable au cas anglais. Les dynasties Galbaio (764-804), Partecipazio (811-942), Candiano (959-976) et Orseolo (991-1026) représentent chacune une tentative de concentrer et d'héréditariser le pouvoir, qui échoue systématiquement devant la résistance des familles marchandes. La révolte de 976, où le palais ducal brûle et Pietro IV Candiano est tué pour avoir tenté d'importer la féodalité terrienne continentale, illustre la violence de ces résistances. La dernière boucle — les Orseolo, qui portent le pouvoir personnel à son maximum avec la conquête de la Dalmatie — aboutit au pacte de 1032 quand les conditions de Deblonde convergent enfin.
 
 #### Saillant : Éveil féodal — Orso Ipato
 - type: saillant
-- start: ~726
+- start: 726
 - figure: Orso Ipato
 - subtitle: Orso Ipato
 - title: Éveil féodal
@@ -71,7 +67,7 @@
 
 #### Saillant : Pic féodal — Galbaio
 - type: saillant
-- start: ~764
+- start: 764
 - figure: Maurizio Galbaio
 - subtitle: Galbaio
 - title: Pic féodal
@@ -81,8 +77,8 @@
 #### Saillant : Crise féodale — crise franque
 - type: saillant
 - avortement: true
-- start: ~804
-- end: ~810
+- start: 804
+- end: 810
 - subtitle: Crise franque
 - title: Crise féodale
 - confidence: high
@@ -90,16 +86,16 @@
 
 #### Saillant : Pic féodal — Partecipazio
 - type: saillant
-- start: ~811
+- start: 811
 - figure: Agnello Partecipazio
 - subtitle: Partecipazio
 - title: Pic féodal
 - confidence: medium
-- summary: Fondateur de la dynastie Partecipazio, il transfère la capitale à Rialto, construit le premier palais ducal. Sa dynastie produit sept doges sur ~130 ans (~811-942).
+- summary: Fondateur de la dynastie Partecipazio, il transfère la capitale à Rialto, construit le premier palais ducal. Sa dynastie produit sept doges sur ~130 ans (811-942).
 
 #### Saillant : Pic féodal — Candiano
 - type: saillant
-- start: ~959
+- start: 959
 - end: 976
 - figure: Pietro IV Candiano
 - subtitle: Candiano
@@ -109,8 +105,8 @@
 
 #### Saillant : Pic féodal — Orseolo
 - type: saillant
-- start: ~991
-- end: ~1009
+- start: 991
+- end: 1009
 - figure: Pietro II Orseolo
 - subtitle: Orseolo
 - title: Pic féodal
@@ -119,7 +115,7 @@
 
 #### Saillant : Pacte oligarchique — abolition de la co-régence
 - type: saillant
-- start: ~1032
+- start: 1032
 - figure: Domenico Flabanico (doge de transition)
 - subtitle: Abolition co-régence
 - title: Pacte oligarchique
@@ -133,20 +129,20 @@
 ## Phase : Oligarchique
 - type: phase
 - phase: oligarchique
-- start: ~1032
-- end: ~1669
+- start: 1032
+- end: 1669
 - title: Phase oligarchique
 - typical_duration: ~200 ans
 - actual_duration: ~637 ans
-- resolution: Guerre sociale (~1628-1669) résolue par le triomphe de l'appareil des Inquisiteurs d'État sur les factions giovani et vecchi, combiné avec la perte de la Crète (1669) qui force l'homogénéisation territoriale. Le « tiers » vénitien n'est pas une personne mais une institution : les Inquisiteurs d'État, servie par la classe administrative des cittadini.
-- summary: La phase oligarchique vénitienne est la plus longue jamais identifiée dans le cadre historionomique (~637 ans). L'expansion permanente — Stato da Màr après la IVe croisade (1204), Terraferma (1404-1428), guerres ottomanes — fournit continuellement des exutoires extérieurs aux élites et retarde la polarisation. Ce n'est qu'après Agnadello (1509), quand l'expansion agressive cesse, que la polarisation entre giovani et vecchi se cristallise lentement. La guerre sociale (~1628-1669), faite de tensions institutionnelles, de luttes de palais et d'assassinats plutôt que de batailles rangées, est résolue par le triomphe de l'appareil exécutif — les Inquisiteurs d'État — sur les deux factions. La perte de la Crète (1669) scelle cette résolution en forçant l'homogénéisation territoriale.
-- description: La phase oligarchique vénitienne s'explique par un mécanisme simple : l'expansion permanente retarde la polarisation des élites en fournissant continuellement des exutoires extérieurs. L'essor est porté par une construction institutionnelle rapide — Consilium Sapientium, Grand Conseil, Arsenal, promissione ducale — et par l'expansion commerciale culminant avec le détournement de la IVe croisade (1204) et la création du Stato da Màr. La Serrata (1297) ferme le Grand Conseil aux ~200 familles du Libro d'Oro, le Conseil des Dix (1310) sécurise l'oligarchie contre les coups d'État. La polarisation entre vecchi (patrimoniales) et giovani (prébendières) ne se cristallise qu'après Agnadello (1509), quand l'expansion agressive cesse. La guerre sociale (~1628-1669), faite de tensions institutionnelles plutôt que de batailles rangées, est résolue par le triomphe de l'appareil exécutif — les Inquisiteurs d'État — « tiers » institutionnel unique dans les parcours connus.
+- resolution: Guerre sociale (1628-1669) résolue par le triomphe de l'appareil des Inquisiteurs d'État sur les factions giovani et vecchi, combiné avec la perte de la Crète (1669) qui force l'homogénéisation territoriale. Le « tiers » vénitien n'est pas une personne mais une institution : les Inquisiteurs d'État, servie par la classe administrative des cittadini.
+- summary: La phase oligarchique vénitienne est la plus longue jamais identifiée dans le cadre historionomique (~637 ans). L'expansion permanente — Stato da Màr après la IVe croisade (1204), Terraferma (1404-1428), guerres ottomanes — fournit continuellement des exutoires extérieurs aux élites et retarde la polarisation. Ce n'est qu'après Agnadello (1509), quand l'expansion agressive cesse, que la polarisation entre giovani et vecchi se cristallise lentement. La guerre sociale (1628-1669), faite de tensions institutionnelles, de luttes de palais et d'assassinats plutôt que de batailles rangées, est résolue par le triomphe de l'appareil exécutif — les Inquisiteurs d'État — sur les deux factions. La perte de la Crète (1669) scelle cette résolution en forçant l'homogénéisation territoriale.
+- description: La phase oligarchique vénitienne s'explique par un mécanisme simple : l'expansion permanente retarde la polarisation des élites en fournissant continuellement des exutoires extérieurs. L'essor est porté par une construction institutionnelle rapide — Consilium Sapientium, Grand Conseil, Arsenal, promissione ducale — et par l'expansion commerciale culminant avec le détournement de la IVe croisade (1204) et la création du Stato da Màr. La Serrata (1297) ferme le Grand Conseil aux ~200 familles du Libro d'Oro, le Conseil des Dix (1310) sécurise l'oligarchie contre les coups d'État. La polarisation entre vecchi (patrimoniales) et giovani (prébendières) ne se cristallise qu'après Agnadello (1509), quand l'expansion agressive cesse. La guerre sociale (1628-1669), faite de tensions institutionnelles plutôt que de batailles rangées, est résolue par le triomphe de l'appareil exécutif — les Inquisiteurs d'État — « tiers » institutionnel unique dans les parcours connus.
 - deviation: +437 ans par rapport à la norme (~200 ans). L'expansion permanente (maritime puis terrestre) retarde la polarisation en fournissant des exutoires extérieurs. Les pertes progressives (Chypre 1573, Crète 1669) forcent l'homogénéisation.
 
-### Subphase : Essor oligarchique (~1032-1509)
+### Subphase : Essor oligarchique (1032-1509)
 - type: subphase
 - phase: oligarchique
-- start: ~1032
+- start: 1032
 - end: 1509
 - title: Essor oligarchique
 - summary: Construction institutionnelle et expansion massive. L'essor est prolongé par les exutoires extérieurs (Stato da Màr, Terraferma, guerres ottomanes) qui empêchent la polarisation des élites pendant près de cinq siècles.
@@ -154,7 +150,7 @@
 
 #### Saillant : 1er monarque oligarchique — Contarini / système post-1032
 - type: saillant
-- start: ~1043
+- start: 1043
 - figure: Domenico Contarini (premier doge stable sous le nouveau régime)
 - subtitle: Contarini
 - title: 1er monarque oligarchique
@@ -164,7 +160,7 @@
 
 #### Saillant : Pic oligarchique — Foscari et l'apogée de la Terraferma
 - type: saillant
-- start: ~1440
+- start: 1440
 - figure: Francesco Foscari
 - subtitle: Foscari
 - title: Pic oligarchique
@@ -181,29 +177,29 @@
 - confidence: high
 - summary: La Ligue de Cambrai inflige à Venise la défaite d'Agnadello (1509) : toute la Terraferma est perdue avant d'être récupérée par la diplomatie. L'épisode marque la fin de l'expansion agressive — après cette date, les guerres deviennent défensives et la polarisation des élites peut commencer.
 
-### Subphase : Polarisation des élites (~1509-~1628)
+### Subphase : Polarisation des élites (1509-1628)
 - type: subphase
 - phase: oligarchique
-- start: ~1509
-- end: ~1628
+- start: 1509
+- end: 1628
 - title: Polarisation des élites
 - summary: Après Agnadello, l'expansion agressive cesse et les guerres deviennent défensives. La polarisation entre vecchi (pôle patrimonial) et giovani (pôle prébendier) se cristallise lentement autour de questions de politique étrangère, religieuse et institutionnelle.
 - description: La polarisation vénitienne est lente mais réelle. Les vecchi (familles les plus riches, contrôlant le Conseil des Dix et les Inquisiteurs, conservatrices, pro-papauté, pro-Espagne) voient leur pouvoir assis sur leur position institutionnelle héritée — c'est le pôle patrimonial. Les giovani (familles moins riches mais commercialement actives, intellectuellement engagées autour du Ridotto Morosini, liées à Galilée et Sarpi, anti-papauté, anti-Habsbourg) tirent leur pouvoir du commerce et des réseaux — c'est le pôle prébendier. La Correzione de 1582 est la dernière réforme réussie contre l'exécutif, mais dès avril 1583, le Conseil des Dix rend les Inquisiteurs permanents, substituant le pouvoir de 15-20 membres dans trois personnes. La crise de l'Interdit (1606-1607), la tentative d'assassinat de Sarpi (1607), le meurtre judiciaire de Foscarini (1622) et l'affaire Zeno (1628) marquent l'escalade des tensions jusqu'au point de rupture.
 
 
-### Subphase : Guerre sociale (~1628-~1669)
+### Subphase : Guerre sociale (1628-1669)
 - type: subphase
 - phase: oligarchique
-- start: ~1628
-- end: ~1669
+- start: 1628
+- end: 1669
 - title: Guerre sociale
 - summary: La guerre sociale vénitienne n'est pas un conflit armé mais une tension institutionnelle faite de luttes de palais, de purges et de consolidation de l'appareil exécutif. Elle est résolue par le triomphe des Inquisiteurs d'État — le « tiers » institutionnel — sur les deux factions, combiné avec la perte de la Crète (1669) qui force l'homogénéisation territoriale.
 - description: La guerre sociale vénitienne est atypique dans sa forme mais classique dans sa mécanique. Les deux factions (giovani et vecchi) sont bloquées dans un conflit que les voies institutionnelles ne peuvent plus résoudre. La résolution ne vient ni de la victoire de l'une des factions, ni d'un « grand homme » qui s'impose comme tiers : elle vient du triomphe de l'appareil exécutif lui-même. Les Inquisiteurs d'État, servis par la classe administrative des cittadini, constituent le « tiers » vénitien — mais c'est un tiers institutionnel, pas personnel. Pendant la guerre de Candie (1645-1669), les délégations d'urgence renforcent massivement l'exécutif. La loi de 1667 reconfirme l'autorité des Inquisiteurs. La perte de la Crète (1669) scelle la résolution en éliminant le dernier grand exutoire extérieur et en forçant l'homogénéisation du territoire. Ni les giovani ni les vecchi ne gagnent — c'est l'État qui l'emporte.
 
 #### Saillant : Guerre sociale — giovani vs vecchi / triomphe des Inquisiteurs
 - type: saillant
-- start: ~1628
-- end: ~1669
+- start: 1628
+- end: 1669
 - subtitle: Giovani vs Vecchi
 - title: Guerre sociale
 - confidence: high
@@ -215,14 +211,14 @@
 ## Phase : Absolutiste
 - type: phase
 - phase: absolutiste
-- start: ~1669
+- start: 1669
 - end: 1848
 - title: Phase absolutiste — endogène puis sous domination étrangère
 - typical_duration: ~200 ans
 - actual_duration: ~179 ans
 - resolution: Révolution Nationale avortée (1848)
-- summary: La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d'État après 1669 et le pic absolutiste de Morosini (~1688). L'absolutisme vénitien est institutionnel — ce n'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l'absolutisme, il l'achève. L'Ancien Régime se poursuit sous domination étrangère (1797-1848) avec le même mécanisme de sédimentation et de convergence du bloc contestataire.
-- description: L'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (~1688), élu doge à l'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le pic absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d'Oro brûlé —, et l'Ancien Régime se poursuit sous domination autrichienne avec le même mécanisme de sédimentation et de convergence du bloc contestataire jusqu'à la RN de 1848.
+- summary: La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d'État après 1669 et le pic absolutiste de Morosini (1688). L'absolutisme vénitien est institutionnel — ce n'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l'absolutisme, il l'achève. L'Ancien Régime se poursuit sous domination étrangère (1797-1848) avec le même mécanisme de sédimentation et de convergence du bloc contestataire.
+- description: L'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (1688), élu doge à l'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le pic absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d'Oro brûlé —, et l'Ancien Régime se poursuit sous domination autrichienne avec le même mécanisme de sédimentation et de convergence du bloc contestataire jusqu'à la RN de 1848.
 - deviation: Dans la norme (~179 ans pour ~200 ans typiques).
 - confidence: medium
 - markers: |
@@ -232,33 +228,33 @@
     - Judiciaire subordonné (Avogadori impuissants face aux Inquisiteurs)
     - Polarisation décroissante (post-giovani/vecchi → consensus autour de l'appareil)
 
-### Subphase : Absolutisation (~1669-~1718)
+### Subphase : Absolutisation (1669-1718)
 - type: subphase
 - phase: absolutiste
-- start: ~1669
-- end: ~1718
+- start: 1669
+- end: 1718
 - title: Absolutisation — suprématie de l'exécutif
-- summary: La suprématie des Inquisiteurs d'État s'installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n'ont pas d'assise territoriale. Le pic absolutiste est Morosini (~1688) : reconquête de la Morée, élection unanime au dogat depuis le champ de bataille. L'expansion prend fin avec le traité de Passarowitz (1718).
+- summary: La suprématie des Inquisiteurs d'État s'installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n'ont pas d'assise territoriale. Le pic absolutiste est Morosini (1688) : reconquête de la Morée, élection unanime au dogat depuis le champ de bataille. L'expansion prend fin avec le traité de Passarowitz (1718).
 - description: L'absolutisation vénitienne est « fluide » — elle se fait sans le choc dramatique d'une Dernière Grande Révolte Oligarchique (DGRO), parce que les patriciens n'ont pas d'assise territoriale depuis laquelle se révolter. Tous vivent dans le lagon, contrairement aux frondeurs français qui disposaient de Bordeaux ou aux lords anglais du Pilgrimage of Grace. La suprématie des Inquisiteurs s'installe progressivement après 1669, fondée sur leur réseau de surveillance et sur la continuité administrative des cittadini. Le pic absolutiste est Francesco Morosini, dont la reconquête de la Morée (1684-1699) et l'élection unanime au dogat depuis le champ de bataille portent le prestige de la République à son dernier sommet. L'expansion prend fin définitivement avec le traité de Passarowitz (1718).
 
 #### Saillant : 1er monarque absolu — Inquisiteurs d'État
 - type: saillant
-- start: ~1669
+- start: 1669
 - subtitle: Inquisiteurs d'État
 - title: 1er monarque absolu
 - confidence: medium
 - alternatives: Il n'y a pas de personne incarnant le « 1er monarque absolu » — c'est l'institution des Inquisiteurs d'État, servie par la classe des cittadini, qui joue ce rôle. Le « tiers » vénitien est institutionnel, pas personnel.
-- summary: Après la résolution de la guerre sociale (~1669), les Inquisiteurs d'État exercent une suprématie de facto sur toutes les autres institutions vénitiennes. C'est un absolutisme sans monarque — le pouvoir est concentré dans un appareil, pas dans une personne.
+- summary: Après la résolution de la guerre sociale (1669), les Inquisiteurs d'État exercent une suprématie de facto sur toutes les autres institutions vénitiennes. C'est un absolutisme sans monarque — le pouvoir est concentré dans un appareil, pas dans une personne.
 - description: Le « 1er monarque absolu » vénitien n'est pas une personne mais une institution : les Inquisiteurs d'État. Après 1669, leur autorité est incontestée. Le réseau de surveillance (bocche dei leoni, espions, rapports confidentiels) donne à trois magistrats — renouvelés annuellement mais disposant d'une continuité institutionnelle grâce aux archives et à la classe administrative des cittadini — un pouvoir supérieur à celui de tout autre organe. Le Sénat et le Grand Conseil subsistent mais ne peuvent plus contester les décisions de l'exécutif. Les Avogadori de Comun (magistrats contrôleurs) sont impuissants. C'est l'aboutissement du processus enclenché en 1583, quand les Inquisiteurs ont été rendus permanents.
 
 #### Saillant : Pic absolutiste — Morosini
 - type: saillant
-- start: ~1688
+- start: 1688
 - figure: Francesco Morosini
 - subtitle: Morosini
 - title: Pic absolutiste
 - confidence: high
-- summary: Francesco Morosini reconquiert la Morée (1684-1699), est élu doge à l'unanimité depuis le champ de bataille (~1688), porte le titre de « Peloponnesiaco ». C'est le pic de prestige absolutiste — analogue à Louis XIV pour la France ou Élisabeth Ire pour l'Angleterre.
+- summary: Francesco Morosini reconquiert la Morée (1684-1699), est élu doge à l'unanimité depuis le champ de bataille (1688), porte le titre de « Peloponnesiaco ». C'est le pic de prestige absolutiste — analogue à Louis XIV pour la France ou Élisabeth Ire pour l'Angleterre.
 - description: Francesco Morosini est la figure la plus marquante de la phase absolutiste vénitienne. Général victorieux, il reconquiert la Morée (Péloponnèse) entre 1684 et 1699 dans une campagne brillante qui fait de Venise, pour la dernière fois, une puissance conquérante. En 1688, il est élu doge à l'unanimité depuis le champ de bataille — fait sans précédent dans l'histoire de la République. Son titre de « Peloponnesiaco » est le dernier titre de gloire vénitien. C'est le même homme qui, en 1669, avait signé la capitulation de Candie sans autorisation du Sénat — un acte d'exécutif pur qui illustre la nature de l'absolutisme vénitien. Le pic Morosini est au Parcours vénitien ce que le règne de Louis XIV est au Parcours français : l'apogée du prestige et de la puissance avant la sédimentation de l'Ancien Régime.
 
 #### Saillant : Fin de l'expansion — Passarowitz
@@ -280,10 +276,10 @@
 - summary: En 1761, Angelo Querini mène une tentative de réforme institutionnelle (Correzione) visant à redistribuer le pouvoir au sein du patriciat. Les Inquisiteurs d'État écrasent la tentative. L'échec confirme l'entrée en Ancien Régime.
 - description: La Correzione de 1761 est la remontrance vénitienne. Angelo Querini, patricien réformateur, tente de redistribuer le pouvoir au sein du Grand Conseil en limitant l'autorité des Inquisiteurs d'État et en ouvrant les charges aux nobles appauvris (barnabotti). C'est la tentative de la classe patricienne de reprendre des prérogatives à l'appareil exécutif absolutiste. Les Inquisiteurs écrasent la tentative. Le mouvement Pisani-Contarini (1779) est une réplique qui échoue de même. Ces contestations ne sont pas des DGRO (les contestataires n'ont pas d'assise territoriale) mais des remontrances : la classe administrative/patricienne tente de prendre des prérogatives au pouvoir absolu, et échoue. Structurellement identique à la Polysynodie française (1715), l'Apology of the Commons anglaise (1604), et la remontrance bavaroise (1848).
 
-### Subphase : Ancien Régime endogène (~1718-1797)
+### Subphase : Ancien Régime endogène (1718-1797)
 - type: subphase
 - phase: absolutiste
-- start: ~1718
+- start: 1718
 - end: 1797
 - title: Ancien Régime endogène
 - summary: Sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), investissement foncier (villas palladiennes). Contestations du régime (Correzione de 1761, Pisani-Contarini 1779) — remontrances écrasées par les Inquisiteurs. Le bloc élitaire se cristallise, le clivage gauche-droite saute.
@@ -369,10 +365,14 @@
 
 ---
 
-## Absorption dans le Parcours italien (1866)
-- type: note
+#### Saillant : Avortement — Absorption dans le Parcours italien
+- type: saillant
+- avortement: true
 - start: 1866
-- title: Fin du Parcours vénitien séparé
+- figure: Victor Emmanuel II
+- subtitle: Plébiscite de 1866
+- title: Avortement
+- confidence: high
 - summary: Après l'échec de la RN de 1848, Manin rallie depuis son exil parisien le monarchisme piémontais. Le plébiscite du 21-22 octobre 1866 (quasi-unanime) entérine l'annexion. Le Parcours vénitien en tant que Parcours national séparé s'achève — l'identité vénitienne devient une composante du Parcours national italien.
 - description: |
     La RN avortée de 1848 confronte les Vénitiens à un choix : tenter de nouveau seuls, ou rejoindre un mouvement plus large. Manin tranche depuis son exil parisien — seul Victor-Emmanuel peut libérer l'Italie. L'identité vénitienne cesse d'être le vecteur d'un Parcours national séparé et devient une composante du Parcours italien. Le plébiscite de 1866 (après la cession autrichienne à la France, immédiatement rétrocédée à l'Italie) est quasi-unanime pour l'annexion. Les deux moteurs (État central et homogénéisation culturelle) fonctionnent désormais à l'échelle italienne, pas vénitienne.
@@ -383,16 +383,16 @@
 
 | Saillant | Venise |
 |---|---|
-| Éveil féodal | Orso Ipato (~726) |
-| Pic féodal | Galbaio (~764), Partecipazio (~811), Candiano (~959), Orseolo (~991) |
-| Crise féodale | Crise franque (~804-810) |
+| Éveil féodal | Orso Ipato (726) |
+| Pic féodal | Galbaio (764), Partecipazio (811), Candiano (959), Orseolo (991) |
+| Crise féodale | Crise franque (804-810) |
 | Pacte oligarchique | Abolition de la co-régence (1032) |
-| 1er monarque oligarchique | Contarini (~1043) / système post-1032 |
-| Pic oligarchique | Foscari (~1440) |
+| 1er monarque oligarchique | Contarini (1043) / système post-1032 |
+| Pic oligarchique | Foscari (1440) |
 | Fin de l'expansion | Agnadello (1509) |
-| Guerre sociale | Giovani vs vecchi / triomphe des Inquisiteurs (~1628-1669) |
-| 1er monarque absolu | Inquisiteurs d'État (~1669) |
-| Pic absolutiste | Morosini (~1688) |
+| Guerre sociale | Giovani vs vecchi / triomphe des Inquisiteurs (1628-1669) |
+| 1er monarque absolu | Inquisiteurs d'État (1669) |
+| Pic absolutiste | Morosini (1688) |
 | Fin de l'expansion | Passarowitz (1718) |
 | Avortement | Conquête par Bonaparte (1797) |
 | Explosion de l'AR | Insurrection de mars 1848 |
@@ -422,9 +422,9 @@
 |---|---|---|---|
 | Phase oligarchique | ~270 ans | ~213 ans | ~637 ans |
 | Fin de l'expansion | Cateau-Cambrésis (1559) | ? | Agnadello (1509) |
-| Guerre sociale | Guerres de Religion (1562-1598) | Guerre des Roses (1455-1485) | Tensions institutionnelles (~1628-1669) |
-| 1er monarque absolu | Henri IV (1598) | Henri VII (1485) | Inquisiteurs (~1669) |
-| Pic absolutiste | Louis XIV (~1661-1715) | Élisabeth Ire (~1558-1603) | Morosini (~1688) |
+| Guerre sociale | Guerres de Religion (1562-1598) | Guerre des Roses (1455-1485) | Tensions institutionnelles (1628-1669) |
+| 1er monarque absolu | Henri IV (1598) | Henri VII (1485) | Inquisiteurs (1669) |
+| Pic absolutiste | Louis XIV (~1661-1715) | Élisabeth Ire (~1558-1603) | Morosini (1688) |
 | DGRO | Fronde (1648-1653) | Pilgrimage of Grace (1536) | Aucune (pas d'assise territoriale) |
 | Phase absolutiste | ~191 ans | ~157 ans | ~179 ans |
 | Avortement | — | — | Bonaparte (1797) |

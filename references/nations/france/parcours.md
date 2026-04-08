@@ -2,18 +2,14 @@
 
 ## Metadata
 - nation: France
+- flag: images/france/flag.png
 - start: ~987
 - status: complet
-- subtitle: De l'Île-de-France au Roi-Soleil, sept siècles d'invention de l'État moderne
+- subtitle: De Louis XV à Macron : vite-mon-ancien-regime.gouv.fr
 - confidence: medium
-- highlight_1: Seul cas connu de reboot oligarchique → oligarchique : le Traité de Troyes (1420) détruit le pacte de 1317, et un nouveau pacte est reconstitué à Chinon (1428) par une classe d'élites sociologiquement nouvelle (noblesse méridionale, bourgeoisie marchande).
-- highlight_2: Azincourt (1415) ne fait pas que ralentir l'essor — il décapite physiquement la noblesse du Nord : trois ducs, neuf comtes, le connétable, des lignages entiers éteints en une journée.
-- highlight_3: La RN française traverse les sept étapes canoniques en 41 ans (1789-1830) et sert de cas d'école au modèle historionomique tout entier.
-- highlight_4: Trois pics féodaux distincts (Philippe Auguste, Louis IX, Philippe le Bel), dont le dernier est si puissant qu'il a longtemps été confondu avec un pic oligarchique — le test décisif est que son pouvoir personnel ne survit pas à sa mort.
-- highlight_5: Toutes les phases endogènes respectent la durée typique de ~200 ans : féodale (220 ans), oligarchique [2] (178 ans), absolutiste (191 ans). Seule la première phase oligarchique est avortée à 92 ans.
-- question_1: Le pouvoir de Philippe le Bel est-il vraiment féodal ? L'ampleur de son appareil de légistes et la convocation des premiers États généraux (1302) pourraient signaler un proto-oligarchique.
-- question_2: Le Second Empire (1852-1870) est-il un simple accident parlementaire ou un véritable retour de l'IR, ce qui décalerait la Glorieuse Révolution à 1870 ?
-- question_3: La Ve République gaullienne marque-t-elle l'entrée en phase technocratique, ou le parlementarisme français est-il simplement sous une forme présidentialiste ?
+- highlight_1: Le miracle capétien | La percolation française dure près de 120 ans (987-1108) : les Capétiens portent le titre royal sans pouvoir réel, mais la continuité dynastique ininterrompue et la consolidation silencieuse de l'Île-de-France préparent l'éveil féodal de Louis VI | https://commons.wikimedia.org/wiki/Special:FilePath/Hugues_capet.jpg?width=120 | prefeodale
+- highlight_2: Crécy-Poitiers : un contre-temps (1346-1364) | Les chevauchées anglaises infligent des défaites spectaculaires mais les institutions survivent. Charles V reconstruit — l'essor oligarchique reprend. C'est un ralentissement, pas un reboot | https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_crecy_froissart.jpg?width=120 | oligarchique
+- highlight_3: Azincourt-Troyes : un reboot (1415-1420) | Azincourt décapite physiquement la noblesse du Nord, la guerre civile Armagnacs-Bourguignons déchire les élites, et le Traité de Troyes (1420) annule la loi salique elle-même. Les institutions sont détruites — c'est un reboot oligarchique, et la France compte donc deux pactes oligarchiques | https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_Agincourt,_St._Alban%27s_Chronicle_by_Thomas_Walsingham.jpg?width=120 | oligarchique
 
 ---
 
@@ -32,7 +28,7 @@
 - start: ~987
 - end: 1108
 - title: Percolation élitaire
-- summary: Le pouvoir est fragmenté entre les grands vassaux. Les Capétiens survivent par la continuité dynastique mais ne structurent pas encore le jeu politique. La percolation s'achève quand Louis VI (~1108) est assez fort pour convoquer le ban et que les vassaux viennent.
+- summary: Le pouvoir est fragmenté entre les grands vassaux. Les Capétiens survivent par la continuité dynastique mais ne structurent pas encore le jeu politique. La percolation s'achève quand Louis VI (1108) est assez fort pour convoquer le ban et que les vassaux viennent.
 
 ---
 
@@ -45,7 +41,7 @@
 - typical_duration: ~200 ans
 - resolution: Pacte oligarchique — les grands seigneurs codifient collectivement les règles de succession (loi salique, 1317)
 - resolution_conditions: Conscience de classe des seigneurs féodaux (homogénéité culturelle suffisante entre eux pour se percevoir comme un groupe capable d'agir collectivement). Atteinte en France grâce à 200 ans de brassage capétien et à la fusion progressive de l'aristocratie autour de la cour de Paris.
-- summary: La phase féodale française s'étend de l'avènement de Louis VI le Gros, premier Capétien à exercer une autorité effective au-delà de l'Île-de-France, jusqu'à l'extinction des Capétiens directs et l'accession de Philippe VI en 1328. Elle se décompose en deux sous-phases : une longue coagulation des élites (~1108-1314), ponctuée par deux pics féodaux (Philippe Auguste, Philippe le Bel) qui accélèrent l'homogénéisation baronniale, puis une bascule oligarchique rapide (1314-1328) déclenchée par la crise dynastique post-Philippe le Bel.
+- summary: La phase féodale française s'étend de l'avènement de Louis VI le Gros, premier Capétien à exercer une autorité effective au-delà de l'Île-de-France, jusqu'à l'extinction des Capétiens directs et l'accession de Philippe VI en 1328. Elle se décompose en deux sous-phases : une longue coagulation des élites (1108-1314), ponctuée par deux pics féodaux (Philippe Auguste, Philippe le Bel) qui accélèrent l'homogénéisation baronniale, puis une bascule oligarchique rapide (1314-1328) déclenchée par la crise dynastique post-Philippe le Bel.
 - description: La phase féodale française s'étend sur deux cent vingt ans, de l'avènement de Louis VI le Gros, premier Capétien à exercer une autorité effective au-delà de l'Île-de-France, jusqu'à l'accession de Philippe VI en 1328. Elle est structurée par la rivalité entre Capétiens et Plantagenêt, qui force les élites à se positionner et accélère leur homogénéisation culturelle. Deux pics féodaux — Philippe Auguste, qui triple le domaine royal et remporte Bouvines (1214), et Philippe le Bel, qui impose un autoritarisme personnel fondé sur ses légistes — cristallisent l'opposition baronniale et répandent l'administration royale. Mais le pouvoir reste fondamentalement personnel : il se fragmente à chaque mort de roi fort. C'est la crise dynastique de 1314-1328 — trois fils de Philippe le Bel morts sans héritier mâle — qui force les grands du royaume à codifier les règles de succession par la loi salique, achevant la coagulation et ouvrant la phase oligarchique.
 - deviation: dans la norme (~220 ans)
 
@@ -62,7 +58,7 @@
 - type: saillant
 - start: 1108
 - figure: Louis VI le Gros
-- subtitle: Ban de 1124
+- subtitle: Louis VI le Gros
 - title: Éveil féodal
 - confidence: medium
 - alternatives: Hugues Capet (987) — élu roi, titre juridique. Mais il n'exerce aucune autorité effective hors de l'Île-de-France.
@@ -73,7 +69,7 @@
 - type: saillant
 - start: 1214
 - figure: Philippe Auguste
-- subtitle: Bouvines
+- subtitle: Philippe Auguste
 - title: Pic féodal
 - confidence: high
 - summary: La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l'Île-de-France et de tripler le domaine royal.
@@ -81,9 +77,9 @@
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~1250
+- start: 1250
 - figure: Louis IX
-- subtitle: Croisades
+- subtitle: Louis IX
 - title: Pic féodal
 - confidence: medium
 - summary: Louis IX porte le prestige personnel de la monarchie capétienne à un niveau sans égal en Europe — deux croisades, arbitre de la chrétienté, canonisé en 1297 — tout en étendant concrètement la présence de l'administration royale dans les provinces par ses enquêteurs.
@@ -91,9 +87,9 @@
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~1285
+- start: 1285
 - figure: Philippe le Bel
-- subtitle: Attentat d'Anagni
+- subtitle: Philippe le Bel
 - title: Pic féodal
 - confidence: medium
 - alternatives: Dans H1, Philippe le Bel est le pic oligarchique. Argument Deblonde : son pouvoir est PERSONNEL — les légistes sont ses créatures. À sa mort, le système se fragmente.
@@ -113,7 +109,7 @@
 - type: saillant
 - start: 1314
 - end: 1328
-- subtitle: Crise dynastique
+- subtitle: Les Rois Maudits
 - title: Crise féodale
 - confidence: high
 - summary: Les trois fils de Philippe le Bel — Louis X, Philippe V et Charles IV — meurent successivement sans héritier mâle entre 1314 et 1328, créant un vide de pouvoir qui permet aux grands du royaume de reprendre l'initiative politique.
@@ -142,7 +138,7 @@
 - observed_duration: ~92 ans
 - resolution: AVORTÉE — le Traité de Troyes (1420) annule le pacte oligarchique de 1317 en transférant la couronne à Henri V d'Angleterre. La phase est interrompue pendant l'essor, avant d'atteindre la polarisation ou la guerre sociale.
 - resolution_conditions: Non atteintes. La phase est avortée par la combinaison de la guerre civile Armagnacs-Bourguignons, de la destruction de la noblesse du Nord à Azincourt (1415), et du Traité de Troyes (1420) qui annule formellement la loi salique.
-- summary: La première phase oligarchique s'étend de l'avènement de Philippe VI en 1328 jusqu'à l'annulation du pacte oligarchique par le Traité de Troyes en 1420. L'essor est ralenti par un premier reflux (Crécy-Poitiers, ~1346-1364) mais reprend vigoureusement sous Charles V. Le deuxième choc est fatal : la folie de Charles VI déchaîne la guerre civile Armagnacs-Bourguignons, Azincourt (1415) décapite la noblesse du Nord, et le Traité de Troyes (1420) annule la loi salique elle-même — détruisant le fondement juridique de la phase.
+- summary: La première phase oligarchique s'étend de l'avènement de Philippe VI en 1328 jusqu'à l'annulation du pacte oligarchique par le Traité de Troyes en 1420. L'essor est ralenti par un premier reflux (Crécy-Poitiers, 1346-1364) mais reprend vigoureusement sous Charles V. Le deuxième choc est fatal : la folie de Charles VI déchaîne la guerre civile Armagnacs-Bourguignons, Azincourt (1415) décapite la noblesse du Nord, et le Traité de Troyes (1420) annule la loi salique elle-même — détruisant le fondement juridique de la phase.
 - description: La première phase oligarchique française ne dépasse jamais l'essor. Philippe VI inaugure un cadre institutionnel solide — baillis, Parlement de Paris, administration fiscale — mais la prétention d'Édouard III au trône déclenche la Guerre de Cent Ans dès 1337. Un premier reflux (Crécy 1346, Poitiers 1356) ralentit l'essor sans le briser — les institutions survivent et Charles V reconquiert le terrain perdu. Mais le deuxième choc est d'une nature différente : la folie de Charles VI (1392) déchaîne la guerre civile Armagnacs-Bourguignons, qui détruit les institutions oligarchiques par des purges croisées. Azincourt (1415) fauche la noblesse du Nord — trois ducs, neuf comtes, le connétable, l'amiral, des lignages entiers éteints — et le Traité de Troyes (1420), ratifié par les États généraux et le Parlement de Paris bourguignon, annule explicitement la loi salique en transférant la couronne à un souverain étranger. Ce n'est plus un reflux mais un avortement : le pacte oligarchique de 1317 est formellement détruit.
 - deviation: Avortée après 92 ans (destruction du PO par le Traité de Troyes)
 
@@ -150,7 +146,7 @@
 - type: subphase
 - phase: oligarchique
 - start: 1328
-- end: ~1346
+- end: 1346
 - title: Essor oligarchique
 - summary: Philippe VI, premier roi dont la légitimité repose sur les règles codifiées de la loi salique, inaugure l'essor oligarchique. Jean II le Bon achète le Dauphiné en 1349, première extension du domaine royal hors du périmètre capétien. L'essor est ralenti dès 1346 par le premier reflux de la Guerre de Cent Ans.
 - description: Philippe VI accède au trône en 1328 en vertu de la loi salique fraîchement codifiée, inaugurant la branche des Valois dans un cadre où le pouvoir royal est désormais encadré par des normes institutionnelles. Il hérite d'un appareil étatique solide — baillis, Parlement de Paris, administration fiscale — et l'essor s'amorce immédiatement avec l'achat du Dauphiné en 1349, première extension du domaine royal hors du périmètre capétien historique. Mais la prétention d'Édouard III au trône de France déclenche en 1337 la Guerre de Cent Ans, qui frappe l'essor dès 1346 avec le désastre de Crécy.
@@ -159,7 +155,7 @@
 - type: saillant
 - start: 1328
 - figure: Philippe VI
-- subtitle: Avènement des Valois
+- subtitle: Philippe VI
 - title: 1er monarque oligarchique
 - confidence: medium
 - summary: Philippe VI est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique directe des Capétiens.
@@ -167,8 +163,8 @@
 
 ### Perturbation : GCA : 1er reflux
 - type: perturbation
-- start: ~1346
-- end: ~1364
+- start: 1346
+- end: 1364
 - title: Conquêtes anglaises
 - summary: La chevalerie française est écrasée à Crécy en 1346 puis à Poitiers en 1356, où Jean II le Bon est capturé par les Anglais, plongeant le royaume dans le chaos pendant près de vingt ans avant que Charles V ne relance l'essor.
 - description: Le premier reflux de l'essor oligarchique est provoqué par deux défaites militaires majeures face aux Anglais. À Crécy en 1346, l'armée française est décimée par les archers gallois. Dix ans plus tard, à Poitiers en 1356, le roi Jean II le Bon est lui-même capturé, laissant le royaume sans chef face à la Peste Noire, aux Jacqueries paysannes et à la tentative de coup d'État d'Étienne Marcel. Le traité de Brétigny (1360), qui cède un tiers du royaume à l'Angleterre, marque le point bas. Mais les institutions centrales — la monarchie des Valois, le Parlement de Paris, l'administration fiscale — survivent intactes, et Charles V relance l'essor dès 1364.
@@ -177,8 +173,8 @@
 ### Subphase : Essor oligarchique
 - type: subphase
 - phase: oligarchique
-- start: ~1364
-- end: ~1392
+- start: 1364
+- end: 1392
 - title: Essor oligarchique
 - summary: Charles V incarne la reprise de l'essor oligarchique : il réforme l'armée, rétablit les finances et reconquiert méthodiquement le territoire perdu grâce à son connétable Du Guesclin. À sa mort en 1380, presque tout le terrain perdu a été regagné et les institutions centrales sont renforcées.
 - description: Charles V (1364-1380) relance vigoureusement l'essor oligarchique après le premier reflux. Il réforme l'armée en professionnalisant les troupes, rétablit les finances royales et confie à son connétable Du Guesclin une guerre d'usure méthodique qui évite les batailles rangées et reconquiert progressivement le territoire cédé aux Anglais. Les premières années du règne de Charles VI, avant sa folie (1380-1392), prolongent cette dynamique sous la régence des oncles du roi puis pendant son bref gouvernement personnel. Cette période confirme que l'essor oligarchique n'a jamais été interrompu par le premier reflux — la construction de l'État central a simplement trébuché avant de reprendre.
@@ -188,7 +184,7 @@
 - perturbation_type: reboot
 - reboot_from: oligarchique
 - reboot_to: oligarchique
-- start: ~1392
+- start: 1392
 - end: 1420
 - title: Effondrement des institutions
 - summary: La folie de Charles VI (1392) déchaîne la guerre civile Armagnacs-Bourguignons, qui détruit les institutions oligarchiques par des purges croisées. Azincourt (1415) décapite la noblesse du Nord — une part significative des élites est physiquement éliminée. Le Traité de Troyes (1420) annule la loi salique, détruisant le pacte oligarchique de 1317. Les institutions sont détruites, les élites sont purgées, le PO n'existe plus : c'est un reboot.
@@ -221,14 +217,14 @@
 - resolution: Guerre sociale — ni la Ligue catholique (patrimoniale) ni les Princes protestants (prébendière) ne l'emportent. Henri IV émerge comme tiers et subordonne les anciens réseaux lignagers au pouvoir administratif central.
 - resolution_conditions: Polarisation complète des deux factions, épuisement mutuel après 36 ans de Guerres de Religion, et disponibilité d'un tiers (Henri IV, protestant converti) qui ne s'identifie à aucune faction.
 - summary: La seconde phase oligarchique commence formellement en 1420, quand l'effondrement du pacte de 1317 impose la reconstruction d'un nouveau cadre. Le nouveau pacte est constitué aux États généraux de Chinon (1428), où les élites méridionales codifient collectivement leur soutien à Charles VII. L'essor est le plus vigoureux de tout le Parcours — compagnies d'ordonnance, taille permanente, Pragmatique Sanction, centralisation agressive de Louis XI, puis les Guerres d'Italie portent l'essor à son apogée sous François Ier. La phase traverse ensuite la séquence complète : polarisation autour du clivage religieux (à partir des années 1530), puis guerre sociale (Guerres de Religion, 1562-1598) résolue par Henri IV.
-- description: Le reboot oligarchique français est un cas unique dans les parcours connus : un reboot de la phase oligarchique vers la phase oligarchique, provoqué non par une conquête étrangère mais par la destruction interne du pacte fondateur et des élites qui le portaient. La reconstruction est rapide (~8 ans de 1420 à 1428) grâce à la préservation de l'homogénéité culturelle et du savoir-faire administratif. Les élites méridionales reconstituent l'appareil d'État autour de Charles VII — Parlement de Poitiers, Chambre des comptes de Bourges, États généraux quasi annuels — puis codifient leur pacte à Chinon (1428). L'essor qui suit est le plus vigoureux de tout le Parcours français : Pragmatique Sanction de Bourges (1438), taille permanente sans consentement récurrent (1439), compagnies d'ordonnance (1445), Jacques Cœur finance la reconquête. Louis XI soumet la Bourgogne et rattache la Provence. Les Guerres d'Italie portent le pic oligarchique sous François Ier (~1515). La Réforme calviniste structure ensuite la polarisation entre faction prébendière et patrimoniale, et les Guerres de Religion (1562-1598) constituent la guerre sociale, résolue par Henri IV comme tiers.
+- description: Le reboot oligarchique français est un cas unique dans les parcours connus : un reboot de la phase oligarchique vers la phase oligarchique, provoqué non par une conquête étrangère mais par la destruction interne du pacte fondateur et des élites qui le portaient. La reconstruction est rapide (~8 ans de 1420 à 1428) grâce à la préservation de l'homogénéité culturelle et du savoir-faire administratif. Les élites méridionales reconstituent l'appareil d'État autour de Charles VII — Parlement de Poitiers, Chambre des comptes de Bourges, États généraux quasi annuels — puis codifient leur pacte à Chinon (1428). L'essor qui suit est le plus vigoureux de tout le Parcours français : Pragmatique Sanction de Bourges (1438), taille permanente sans consentement récurrent (1439), compagnies d'ordonnance (1445), Jacques Cœur finance la reconquête. Louis XI soumet la Bourgogne et rattache la Provence. Les Guerres d'Italie portent le pic oligarchique sous François Ier (1515). La Réforme calviniste structure ensuite la polarisation entre faction prébendière et patrimoniale, et les Guerres de Religion (1562-1598) constituent la guerre sociale, résolue par Henri IV comme tiers.
 - deviation: -22 ans (~178 ans). Le redémarrage est rapide grâce à la préservation de l'homogénéité culturelle et du savoir-faire administratif.
 
 ### Subphase : Reconstruction du PO
 - type: subphase
 - phase: oligarchique
 - start: 1418
-- end: ~1429
+- end: 1429
 - title: Nouveau PO
 - summary: Entre 1418 et 1429, les élites méridionales reconstituent l'appareil d'État autour du Dauphin — Parlement de Poitiers, Chambre des comptes de Bourges, États généraux quasi annuels — et codifient leur soutien collectif aux États généraux de Chinon (1428). La victoire de Baugé (1421) donne au Dauphin sa crédibilité militaire. Le sacre de Reims (1429) parachève la légitimation.
 - description: La reconstruction du pacte oligarchique est un processus d'une dizaine d'années, porté par une classe dirigeante sociologiquement nouvelle — noblesse méridionale, bourgeoisie marchande montante, magistrats transfuges. Fait remarquable : le Dauphin commence à reconstruire l'appareil d'État *avant même* la destruction formelle du PO par le Traité de Troyes (1420). Dès septembre 1418, après la prise de Paris par les Bourguignons, il crée le Parlement de Poitiers par ordonnance, se concevant comme le Parlement de Paris en exil et revendiquant la continuité juridique (suprema curia). En décembre 1418, il se proclame régent à Bourges. C'est que l'effondrement des institutions est déjà en cours — la guerre civile, la prise de Paris, la purge des Armagnacs ont de facto détruit le cadre institutionnel du nord bien avant que Troyes ne l'entérine juridiquement. Le Dauphin ne reconstruit pas après la catastrophe : il reconstruit *pendant* la catastrophe, ce qui explique la rapidité du reboot. La Chambre des comptes est transférée en 1421. La bataille de Baugé (22 mars 1421) — première défaite anglaise en bataille rangée depuis Azincourt, où le duc de Clarence est tué — brise le mythe d'invincibilité anglaise et donne au Dauphin une crédibilité militaire. Des États généraux sont convoqués quasi annuellement (1423, 1424, 1425, 1427, 1428). Le moment décisif est les États généraux de Chinon (septembre 1428) : plus de 200 délégués — nobles, clergé, représentants des villes — votent 500 000 livres tournois et présentent 32 cahiers de doléances demandant une monnaie unifiée, des réformes commerciales et la répression du brigandage. C'est le nouveau pacte oligarchique : les élites codifient collectivement les conditions de leur obéissance. Le sacre à Reims en juillet 1429, rendu possible par les fonds votés à Chinon, parachève la légitimation.
@@ -248,7 +244,7 @@
 - type: subphase
 - phase: oligarchique
 - start: 1429
-- end: ~1530
+- end: 1530
 - title: Essor oligarchique
 - summary: Charles VII reconstruit l'appareil étatique avec une énergie remarquable — Pragmatique Sanction de Bourges (1438), taille permanente (1439), compagnies d'ordonnance (1445) — puis Louis XI centralise agressivement (soumission de la Bourgogne, rattachement de la Provence), et les Guerres d'Italie portent l'essor à son apogée sous François Ier.
 - description: L'essor de la seconde phase oligarchique est le plus vigoureux de tout le Parcours français. La Pragmatique Sanction de Bourges (1438) affirme l'autorité royale sur l'Église — texte fondateur du gallicanisme. Les États généraux d'Orléans (1439) rendent la taille permanente sans consentement récurrent des États — les élites abandonnent leur droit de consentement fiscal en échange d'un État central capable de garantir l'ordre. Les compagnies d'ordonnance (1445) créent la première armée permanente. Jacques Cœur, argentier du roi, finance la reconquête de la Normandie et de la Guyenne. Louis XI (1461-1483) poursuit avec une centralisation agressive : soumission de la Bourgogne, rattachement de la Provence et de l'Anjou. Les Guerres d'Italie portent l'essor à son apogée sous François Ier.
@@ -257,7 +253,7 @@
 - type: saillant
 - start: 1429
 - figure: Charles VII
-- subtitle: Sacre de Reims
+- subtitle: Charles VII
 - title: 1er monarque oligarchique
 - confidence: high
 - summary: Charles VII est le premier roi de la seconde phase oligarchique, dont la légitimité repose sur le nouveau pacte de Chinon (1428) confirmé par le sacre à Reims (1429). Il reconstruit l'État central sur des bases entièrement nouvelles — armée permanente, taille permanente, contrôle de l'Église.
@@ -265,9 +261,9 @@
 
 #### Saillant : Pic oligarchique
 - type: saillant
-- start: ~1515
+- start: 1515
 - figure: François Ier
-- subtitle: Concordat de Bologne
+- subtitle: François Ier
 - title: Pic oligarchique
 - confidence: high
 - summary: François Ier porte la monarchie oligarchique française à son apogée avec le Concordat de Bologne en 1516, qui lui donne le contrôle des nominations ecclésiastiques, la victoire de Marignan et l'éclat de la cour Renaissance, avant que la capture de Pavie en 1525 n'amorce le reflux.
@@ -285,8 +281,8 @@
 ### Subphase : Polarisation des élites
 - type: subphase
 - phase: oligarchique
-- start: ~1530
-- end: ~1562
+- start: 1530
+- end: 1562
 - title: Polarisation des élites
 - summary: À partir des années 1530, le calvinisme se répand en France et structure un nouveau clivage au sein des élites, entre une faction prébendière — officiers royaux, légistes, bourgeoisie administrative — et une faction patrimoniale — grande noblesse terrienne. La fin des Guerres d'Italie en 1559 ferme la soupape extérieure et accélère cette polarisation.
 - description: La polarisation des élites françaises se cristallise autour du clivage religieux introduit par la Réforme calviniste à partir des années 1530. La faction prébendière — officiers royaux, légistes, bourgeoisie administrative et financiers ��� est généralement proche du pouvoir royal et reste catholique. La faction patrimoniale — grande noblesse terrienne représentée par les Guise, les Montmorency, les Condé et les princes du sang — se divise, certaines maisons se convertissant au protestantisme tandis que d'autres restent catholiques mais s'opposent néanmoins au pouvoir central. Le Traité de Cateau-Cambrésis en 1559 met fin aux Guerres d'Italie, supprimant la soupape extérieure qui absorbait les tensions. La mort d'Henri II la même année et la faiblesse de ses successeurs laissent le champ libre à l'affrontement entre factions, et la polarisation s'accélère vers le conflit armé.
@@ -330,7 +326,7 @@
 - type: subphase
 - phase: absolutiste
 - start: 1598
-- end: ~1661
+- end: 1661
 - title: Absolutisation
 - summary: Henri IV résout les Guerres de Religion par l'Édit de Nantes et pose les bases du pouvoir absolu, que Richelieu consolide méthodiquement en écrasant l'État huguenot et les révoltes nobiliaires, avant que la Fronde ne constitue le dernier soubresaut de résistance oligarchique.
 - description: L'absolutisation française est portée par trois figures. Henri IV pose les bases en imposant l'Édit de Nantes et en reconstruisant le fisc avec Sully. Richelieu (1624-1642) la systématise en écrasant l'État huguenot au siège de La Rochelle, en réprimant les révoltes nobiliaires, et en créant les intendants qui court-circuitent les pouvoirs locaux. Mazarin poursuit la même trajectoire mais doit affronter la Fronde (1648-1653), dernier soubresaut de résistance oligarchique dont l'échec démontre que ni les parlementaires ni les princes du sang ne peuvent plus inverser le cours de l'absolutisation.
@@ -339,7 +335,7 @@
 - type: saillant
 - start: 1598
 - figure: Henri IV
-- subtitle: Édit de Nantes
+- subtitle: Henri IV
 - title: 1er monarque absolu
 - confidence: high
 - summary: Henri IV résout les Guerres de Religion en promulguant l'Édit de Nantes, acte d'autorité royale qui s'impose au-dessus des deux factions, et reconstruit le fisc avec Sully, incarnant le tiers qui émerge de la guerre sociale sans s'identifier à aucun camp.
@@ -360,16 +356,16 @@
 - type: subphase
 - phase: absolutiste
 - start: 1661
-- end: ~1715
+- end: 1715
 - title: Impérialisme absolutiste
 - summary: Louis XIV porte le pouvoir absolu à son apogée en domestiquant la noblesse à Versailles, en étendant le territoire français à son maximum et en imposant l'homogénéisation religieuse par la révocation de l'Édit de Nantes, avant que l'épuisement militaire et financier ne marque le début du déclin.
 - description: Louis XIV porte le pouvoir absolu à son apogée en combinant trois leviers : la domestication de la noblesse à Versailles (1682), qui transforme les grands seigneurs en aristocratie de cour dépendante de la faveur royale ; l'extension territoriale maximale consacrée par la Trêve de Ratisbonne (1684) ; et l'homogénéisation religieuse forcée par la révocation de l'Édit de Nantes (1685). L'administration royale — Colbert, Louvois, Vauban — fonctionne comme une machine étatique d'une efficacité sans précédent. Mais après ce triple sommet, les guerres de la Ligue d'Augsbourg et de Succession d'Espagne épuisent le royaume, et le Traité d'Utrecht (1713) puis la mort de Louis XIV (1715) clôturent l'ère impériale.
 
 #### Saillant : Pic absolutiste
 - type: saillant
-- start: ~1682
+- start: 1682
 - figure: Louis XIV
-- subtitle: Versailles
+- subtitle: Louis XIV
 - title: Pic absolutiste
 - confidence: high
 - summary: L'installation de la cour à Versailles en 1682, la Trêve de Ratisbonne en 1684 qui marque l'extension territoriale maximale et la révocation de l'Édit de Nantes en 1685 constituent le triple sommet du pouvoir absolu français, après quoi le déclin s'amorce irréversiblement.
@@ -397,7 +393,7 @@
 ### Subphase : Ancien Régime
 - type: subphase
 - phase: absolutiste
-- start: ~1715
+- start: 1715
 - end: 1789
 - title: Ancien Régime
 - summary: Pendant les soixante-quatorze ans de l'Ancien Régime, les élites de cour se sédimentent, la mobilité sociale se fige et un bloc contestataire se forme progressivement, composé de la bourgeoisie exclue du pouvoir et de la petite noblesse déclassée, dans un contexte de croissance économique et de bouillonnement intellectuel des Lumières.

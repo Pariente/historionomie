@@ -3,17 +3,13 @@
 ## Metadata
 - nation: Angleterre
 - territory: Île de Bretagne
-- start: ~829
-- status: wip
-- highlight_1: Cinq boucles féodales sur 500 ans (829-1311) — l'hétérogénéité anglo-scandinave bloque le pacte à répétition, un record dans le corpus
-- highlight_2: Le reboot normand de 1066 remplace intégralement l'aristocratie et remet les compteurs à zéro — cas d'école de reboot par conquête
-- highlight_3: Appareil étatique précoce (Domesday Book, Exchequer, Common Law) mais moteur culturel bloqué — les élites parlent français pendant deux siècles
-- highlight_4: Phase absolutiste courte (~161 ans) par rapport aux ~200 ans typiques — les Tudors compriment l'absolutisation
-- highlight_5: Première Révolution Nationale d'Europe (1642-1688) — la matrice du modèle historionomique, avec les sept étapes canoniques
-- highlight_6: Cromwell comme Impérialiste Revanchard — prototype du rôle, avant Napoléon
-- question_1: La Magna Carta (1215) est-elle un proto-pacte oligarchique avorté ou un simple épisode féodal ? Son échec immédiat plaide pour le second, mais son héritage symbolique brouille la lecture
-- question_2: Faut-il compter la phase pré-féodale saxonne (avant Ecgberht) comme partie du Parcours, ou le Parcours commence-t-il réellement en 829 ?
-- question_3: La perte de la Normandie (1204) comme accélérateur d'homogénéisation — mécanisme spécifique à l'Angleterre ou généralisable à tout empire qui perd ses provinces continentales ?
+- flag: images/angleterre/flag.png
+- start: 829
+- status: complet
+- highlight_1: Cinq boucles féodales (829-1311) | L'hétérogénéité anglo-scandinave bloque le pacte à répétition sur 500 ans — un record dans le corpus. Le moteur étatique avance (Domesday Book, Exchequer) mais le moteur culturel est bloqué | https://commons.wikimedia.org/wiki/Special:FilePath/Egbert_of_Wessex.jpg?width=120 | feodale
+- highlight_2: Reboot normand (1066) | Guillaume remplace intégralement l'aristocratie et remet les compteurs à zéro — cas d'école de reboot par conquête. Les élites parlent français pendant deux siècles | https://commons.wikimedia.org/wiki/Special:FilePath/Bayeux_Tapestry_scene57_Harold_death.jpg?width=120 | feodale
+- highlight_3: Guerre des Deux-Roses (1455-1485) | La guerre sociale anglaise — ni York ni Lancaster ne l'emporte, c'est Henri VII qui crée une nouvelle dynastie et inaugure l'absolutisme | https://commons.wikimedia.org/wiki/Special:FilePath/Plucking_the_Red_and_White_Roses%2C_by_Henry_Payne.jpg?width=120 | oligarchique
+- highlight_4: Première RN d'Europe (1642-1688) | La matrice du modèle historionomique — les sept étapes canoniques en 46 ans, avec Cromwell comme prototype de l'Impérialiste Revanchard | https://commons.wikimedia.org/wiki/Special:FilePath/CromwellDissolvingLongParliament.jpg?width=120 | rn
 - subtitle: L'île qui a inventé le parlementarisme
 - confidence: medium
 
@@ -22,20 +18,20 @@
 ## Phase : Féodale [1] (avortée)
 - type: phase
 - phase: feodale
-- start: ~829
+- start: 829
 - end: 1066
 - title: Phase féodale
 - typical_duration: ~200 ans
 - observed_duration: ~237 ans
 - resolution: AVORTÉE — la phase boucle deux fois (pic → crise → nouveau pic → crise) sans jamais produire de pacte oligarchique. L'hétérogénéité culturelle entre Anglo-Saxons et Scandinaves du Danelaw empêche les élites de se percevoir comme une classe homogène à l'échelle du royaume, condition nécessaire au pacte (Deblonde). Sous Cnut, l'augmentation d'échelle (empire anglo-scandinave) élève encore le seuil d'homogénéité requis. La conquête normande de 1066 met fin à cette phase sans la résoudre.
 - resolution_conditions: Non atteintes. Le pacte oligarchique exige deux conditions simultanées (Deblonde) : homogénéité des élites à l'échelle du royaume ET moment de faiblesse du souverain. La première condition n'est jamais remplie — les élites sont trop hétérogènes culturellement (Anglo-Saxons + Scandinaves), et l'empire de Cnut élève encore l'échelle requise.
-- summary: La première phase féodale anglaise s'étend d'Ecgberht de Wessex (~829) jusqu'à la conquête normande de 1066. Elle produit plusieurs pics féodaux successifs — Æthelstan, Edgar, Cnut — mais chaque crise qui suit la mort du roi fort avorte, parce que les élites sont trop hétérogènes pour former une conscience de classe capable d'imposer un pacte. La phase boucle deux fois avant d'être interrompue par le reboot normand.
+- summary: La première phase féodale anglaise s'étend d'Ecgberht de Wessex (829) jusqu'à la conquête normande de 1066. Elle produit plusieurs pics féodaux successifs — Æthelstan, Edgar, Cnut — mais chaque crise qui suit la mort du roi fort avorte, parce que les élites sont trop hétérogènes pour former une conscience de classe capable d'imposer un pacte. La phase boucle deux fois avant d'être interrompue par le reboot normand.
 - description: La première phase féodale anglaise s'étend sur plus de deux siècles sans jamais produire de pacte oligarchique. Trois pics féodaux successifs — Æthelstan, qui gouverne toute l'Angleterre après la conquête d'York (927) et remporte Brunanburh (937) ; Edgar le Pacifique, qui porte l'autorité royale à un sommet stable ; et Cnut le Grand, qui bâtit un empire anglo-scandinave — portent chacun le pouvoir personnel à son maximum, mais chaque crise post-mortem avorte sans pacte. Le problème fondamental est l'hétérogénéité culturelle entre les élites anglo-saxonnes et les élites scandinaves du Danelaw, qui empêche la formation d'une conscience de classe à l'échelle du royaume. Sous Cnut, l'augmentation d'échelle (empire couvrant l'Angleterre, le Danemark et la Norvège) élève encore le seuil d'homogénéité requis. La conquête normande de 1066 interrompt cette phase sans la résoudre — c'est un reboot qui remet les compteurs à zéro.
 
 ### Subphase : Coagulation des élites
 - type: subphase
 - phase: feodale
-- start: ~829
+- start: 829
 - end: 1066
 - title: Coagulation des élites
 - summary: D'Ecgberht de Wessex à la conquête normande. La coagulation produit trois pics féodaux (Æthelstan, Edgar, Cnut) entrecoupés de crises qui avortent systématiquement, parce que l'hétérogénéité culturelle entre Anglo-Saxons et Scandinaves du Danelaw empêche les élites de former une conscience de classe à l'échelle du royaume. Sous Cnut, l'augmentation d'échelle (empire anglo-scandinave) éloigne encore la possibilité du pacte. La phase est interrompue par le reboot normand sans jamais produire de bascule oligarchique.
@@ -43,9 +39,9 @@
 
 #### Saillant : Éveil féodal
 - type: saillant
-- start: ~829
+- start: 829
 - figure: Ecgberht de Wessex
-- subtitle: Wessex
+- subtitle: Ecgberht
 - title: Éveil féodal
 - confidence: medium
 - summary: Ecgberht est le premier roi à imposer la suprématie du Wessex sur toute l'Angleterre, forçant les autres royaumes (Mercie, Northumbrie) à se positionner par rapport à lui.
@@ -56,7 +52,7 @@
 - start: ~927
 - end: 939
 - figure: Æthelstan
-- subtitle: Brunanburh
+- subtitle: Æthelstan
 - title: Pic féodal
 - confidence: high
 - summary: Premier roi à gouverner effectivement toute l'Angleterre. Il conquiert York, remporte Brunanburh et porte l'autorité royale personnelle à un niveau sans précédent.
@@ -67,7 +63,7 @@
 - start: ~959
 - end: 975
 - figure: Edgar le Pacifique
-- subtitle: Regularis Concordia
+- subtitle: Edgar le Pacifique
 - title: Pic féodal
 - confidence: medium
 - summary: Roi stable, réformes monétaires, Regularis Concordia. L'autorité royale est au maximum dans une Angleterre prospère. Mais la crise de succession à sa mort ne débouche sur aucun pacte.
@@ -88,7 +84,7 @@
 - start: ~1016
 - end: 1035
 - figure: Cnut le Grand
-- subtitle: Empire anglo-scandinave
+- subtitle: Cnut le Grand
 - title: Pic féodal
 - confidence: medium
 - summary: Cnut bâtit un empire anglo-scandinave (Angleterre + Danemark + Norvège) et règne avec autorité. Mais l'augmentation d'échelle élève le seuil d'homogénéité requis pour un pacte, rendant celui-ci encore plus improbable.
@@ -110,14 +106,14 @@
 - type: phase
 - phase: feodale
 - start: 1066
-- end: ~1327
+- end: 1327
 - title: Phase féodale (reboot)
 - typical_duration: ~200 ans
 - observed_duration: ~261 ans
 - resolution: Pacte oligarchique — les Ordonnances de 1311 codifient les pouvoirs du roi et les droits des barons, marquant le passage d'un pouvoir personnel à un pouvoir encadré par des règles institutionnelles.
 - resolution_conditions: Les deux conditions du pacte (Deblonde) sont enfin réunies simultanément sous Édouard II : (1) homogénéité des élites à l'échelle du royaume, acquise progressivement après la perte de la Normandie (1204) qui force les barons à se penser comme anglais ; (2) moment de faiblesse du souverain, fourni par l'incompétence d'Édouard II et sa dépendance envers ses favoris.
 - deviation: +61 ans (~261 ans). Expliqué par deux facteurs. D'abord, l'hétérogénéité culturelle introduite par la conquête normande : les élites francophones et la population anglophone ne fusionnent que progressivement. Ensuite, l'Empire Plantagenêt d'Henri II élève l'échelle du royaume (Angleterre + Normandie + Anjou + Aquitaine), ce qui repousse le seuil d'homogénéité requis pour le pacte. Ce n'est qu'après la perte de la Normandie en 1204, qui ramène l'échelle au niveau anglais, que l'homogénéisation peut s'achever et que les conditions du pacte deviennent atteignables.
-- summary: La seconde phase féodale anglaise commence avec la conquête normande de 1066, qui remplace intégralement l'aristocratie anglo-saxonne par une noblesse normande francophone et introduit un nouveau système féodal. Elle se décompose en deux sous-phases : une longue coagulation des élites (1066-1307), ponctuée par trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l'Anarchie, Jean sans Terre), où l'homogénéisation est accélérée par la perte de la Normandie (1204) ; puis une bascule oligarchique (1307-~1327) sous Édouard II, dont la faiblesse permet aux barons — désormais homogènes à l'échelle anglaise — d'imposer les Ordonnances de 1311.
+- summary: La seconde phase féodale anglaise commence avec la conquête normande de 1066, qui remplace intégralement l'aristocratie anglo-saxonne par une noblesse normande francophone et introduit un nouveau système féodal. Elle se décompose en deux sous-phases : une longue coagulation des élites (1066-1307), ponctuée par trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l'Anarchie, Jean sans Terre), où l'homogénéisation est accélérée par la perte de la Normandie (1204) ; puis une bascule oligarchique (1307-1327) sous Édouard II, dont la faiblesse permet aux barons — désormais homogènes à l'échelle anglaise — d'imposer les Ordonnances de 1311.
 - description: La seconde phase féodale commence avec le remplacement intégral de l'aristocratie par les Normands, qui introduisent un nouveau système féodal et une hétérogénéité culturelle profonde entre élites francophones et population anglophone. Trois pics féodaux (Henri Ier, Henri II, Édouard Ier) alternent avec des crises qui avortent faute d'homogénéité suffisante. L'Empire Plantagenêt d'Henri II élève l'échelle du royaume bien au-delà du cadre anglais, repoussant le seuil du pacte. Le tournant est la perte de la Normandie en 1204, qui force les barons à se penser comme anglais. Il faut encore un siècle pour que l'homogénéisation aboutisse, et c'est sous Édouard II — roi faible, dominé par ses favoris — que les deux conditions du pacte (Deblonde) convergent enfin : les Ordonnances de 1311 codifient les pouvoirs du roi et la déposition d'Édouard II en 1327 constitue un précédent constitutionnel majeur.
 
 ### Subphase : Coagulation des élites
@@ -133,7 +129,7 @@
 - type: saillant
 - start: 1066
 - figure: Guillaume le Conquérant
-- subtitle: Hastings
+- subtitle: Guillaume le Conquérant
 - title: Éveil féodal
 - confidence: high
 - summary: Guillaume le Conquérant remplace intégralement l'aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal et réalise le Domesday Book. C'est l'éveil féodal de la seconde phase — le moment où un nouveau jeu commence.
@@ -141,9 +137,9 @@
 
 #### Saillant : Pic féodal — Henri Ier
 - type: saillant
-- start: ~1120
+- start: 1120
 - figure: Henri Ier
-- subtitle: L'Échiquier
+- subtitle: Henri Ier
 - title: Pic féodal
 - confidence: high
 - summary: Henri Ier crée l'Échiquier comme instrument fiscal permanent, réunifie l'Angleterre et la Normandie sous une seule couronne, et impose une paix royale remarquable. Le pouvoir est à son sommet — mais il est personnel.
@@ -162,9 +158,9 @@
 
 #### Saillant : Pic féodal — Henri II
 - type: saillant
-- start: ~1170
+- start: 1170
 - figure: Henri II Plantagenêt
-- subtitle: Common law
+- subtitle: Henri II Plantagenêt
 - title: Pic féodal
 - confidence: high
 - summary: Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Mais il constitue simultanément l'Empire Plantagenêt (Angleterre + Normandie + Anjou + Aquitaine), ce qui augmente l'échelle du royaume et repousse le seuil d'homogénéité requis pour un pacte.
@@ -183,9 +179,9 @@
 
 #### Saillant : Pic féodal — Édouard Ier
 - type: saillant
-- start: ~1295
+- start: 1295
 - figure: Édouard Ier
-- subtitle: Parlement modèle
+- subtitle: Édouard Ier
 - title: Pic féodal
 - confidence: medium
 - alternatives: Dans certaines lectures, Édouard Ier est identifié comme le premier monarque oligarchique plutôt que le pic féodal. Argument Deblonde : son pouvoir est PERSONNEL — ses administrateurs sont ses créatures, pas une classe autonome. À sa mort, le système se fragmente.
@@ -196,7 +192,7 @@
 - type: subphase
 - phase: feodale
 - start: 1307
-- end: ~1327
+- end: 1327
 - title: Bascule oligarchique
 - summary: La mort d'Édouard Ier en 1307 ouvre une crise profonde sous Édouard II, roi faible et dépendant de ses favoris. Cette fois, les deux conditions du pacte sont réunies simultanément : l'homogénéité des élites à l'échelle anglaise (acquise après 1204) et le moment de faiblesse du souverain. Les barons imposent les Ordonnances de 1311 — premier pacte oligarchique anglais.
 - description: Édouard II hérite en 1307 d'un royaume dont la puissance reposait entièrement sur la personne de son père. Son règne est un désastre : il s'aliène immédiatement les barons en élevant son favori Pierre Gaveston, qui est finalement capturé et exécuté par les lords en 1312. Le désastre militaire de Bannockburn en 1314, où l'armée anglaise est écrasée par les Écossais de Robert Bruce, achève de discréditer le roi. Puis les Despensers, nouveaux favoris, provoquent une rébellion menée par la reine Isabelle et Roger Mortimer, qui déposent et assassinent Édouard II en 1327. C'est le moment où les deux conditions du pacte (Deblonde) convergent enfin : les élites anglaises, homogènes à l'échelle du royaume depuis la fusion culturelle post-1204, font face à un souverain manifestement faible. Contrairement à l'Anarchie de 1135 — où la faiblesse existait mais pas l'homogénéité — et contrairement au règne d'Édouard Ier — où l'homogénéité existait mais pas la faiblesse —, la conjonction des deux conditions permet cette fois la formation du pacte.
@@ -225,7 +221,7 @@
 ## Phase : Oligarchique
 - type: phase
 - phase: oligarchique
-- start: ~1327
+- start: 1327
 - end: 1485
 - title: Phase oligarchique
 - typical_duration: ~200 ans
@@ -236,7 +232,7 @@
 ### Subphase : Essor oligarchique
 - type: subphase
 - phase: oligarchique
-- start: ~1327
+- start: 1327
 - end: ~1421
 - title: Essor oligarchique
 - summary: L'essor oligarchique anglais s'étend sur près d'un siècle, d'Édouard III à Henri V. Édouard III projette la puissance anglaise vers la France (Crécy, Poitiers, Ordre de la Jarretière). Après un reflux sous Richard II et Henri IV, Henri V porte l'essor à son sommet avec Azincourt (1415) et le Traité de Troyes (1420). La défaite de Baugé (1421) marque la fin de l'expansion.
@@ -246,7 +242,7 @@
 - type: saillant
 - start: 1327
 - figure: Édouard III
-- subtitle: Avènement d'Édouard III
+- subtitle: Édouard III
 - title: 1er monarque oligarchique
 - confidence: medium
 - alternatives: Dans certaines lectures, Édouard Ier est le premier monarque oligarchique. Argument Deblonde : Édouard Ier est le pic féodal (pouvoir personnel), Édouard III est le premier roi à gouverner dans un cadre institutionnel codifié par les Ordonnances de 1311 et la pratique parlementaire.
@@ -257,7 +253,7 @@
 - type: saillant
 - start: ~1415
 - figure: Henri V
-- subtitle: Azincourt
+- subtitle: Henri V
 - title: Pic oligarchique
 - confidence: high
 - summary: Henri V porte la monarchie oligarchique anglaise à son sommet absolu avec la victoire d'Azincourt (1415) et le Traité de Troyes (1420), qui lui accorde la couronne de France — un niveau de puissance qu'aucun roi d'Angleterre n'avait atteint ni n'atteindra après lui.
@@ -276,7 +272,7 @@
 - type: subphase
 - phase: oligarchique
 - start: ~1421
-- end: ~1455
+- end: 1455
 - title: Polarisation des élites
 - summary: Après Baugé et la mort d'Henri V (1422), la minorité d'Henri VI et la perte progressive des territoires français cristallisent deux factions rivales — Lancaster (prébendière, patronage de cour) et York (patrimoniale, grands domaines fonciers) — dont l'affrontement devient inévitable.
 - description: La polarisation des élites anglaises se structure rapidement après la fin de l'expansion. La mort d'Henri V en 1422 laisse le trône à Henri VI, infant de neuf mois. La longue minorité, puis le règne personnel d'un roi faible et probablement atteint de maladie mentale, ouvrent un vide de pouvoir qui permet aux factions de se cristalliser. La faction Lancaster, au pouvoir, s'appuie sur le patronage de cour et les ressources de l'État central pour maintenir un réseau de fidélité — c'est la faction prébendière au sens weberien. La faction York, menée par Richard d'York, regroupe les grands magnats terriens dont la puissance repose sur leurs domaines fonciers dans le nord et l'ouest — c'est la faction patrimoniale. La perte progressive des conquêtes françaises — Orléans (1429), Paris (1436), Normandie (1450), Bordeaux (1453) — accélère la polarisation en privant la noblesse de ses débouchés extérieurs et en discréditant le pouvoir lancastrien. Le conflit évolue inexorablement vers la guerre ouverte.
@@ -284,7 +280,7 @@
 ### Subphase : Guerre sociale
 - type: subphase
 - phase: oligarchique
-- start: ~1455
+- start: 1455
 - end: 1485
 - title: Guerre sociale
 - summary: Les Guerres des Roses constituent la guerre sociale du Parcours anglais, un affrontement de trente ans entre York et Lancaster dont ni l'un ni l'autre ne sort définitivement vainqueur, ce qui permet l'émergence d'Henri Tudor comme figure tierce à Bosworth en 1485.
@@ -292,7 +288,7 @@
 
 #### Saillant : Guerre sociale
 - type: saillant
-- start: ~1455
+- start: 1455
 - end: 1485
 - subtitle: Guerre des Deux-Roses
 - title: Guerre sociale
@@ -326,7 +322,7 @@
 - type: saillant
 - start: 1485
 - figure: Henri VII
-- subtitle: Bosworth
+- subtitle: Henri VII
 - title: 1er monarque absolu
 - confidence: high
 - summary: Henri Tudor résout les Guerres des Roses en s'emparant du pouvoir comme figure tierce à Bosworth, puis brise le pouvoir des magnats, reconstruit le fisc et installe une nouvelle dynastie qui concentre le pouvoir au-delà de tout ce que les York ou les Lancaster avaient pu atteindre.
@@ -346,7 +342,7 @@
 - type: subphase
 - phase: absolutiste
 - start: ~1558
-- end: ~1603
+- end: 1603
 - title: Impérialisme absolutiste
 - summary: Le règne d'Élisabeth Ière porte la puissance absolutiste anglaise à son sommet avec la défaite de l'Armada espagnole en 1588, l'expansion coloniale vers la Virginie et les Indes orientales, la domestication de l'aristocratie à la cour et l'éclat culturel de l'ère shakespearienne.
 - description: Élisabeth Ière règne de 1558 à 1603 et incarne le pic absolutiste anglais. Elle hérite d'un appareil étatique considérablement renforcé par son père Henri VIII et sa demi-sœur Marie, et le porte à son maximum de prestige. La défaite de l'Invincible Armada en 1588 est le moment de gloire suprême : l'Angleterre, petite île protestante, repousse la plus grande puissance catholique du monde, ce qui transforme la conscience nationale. L'expansion coloniale s'amorce avec les premières tentatives de colonisation en Virginie et la fondation de la Compagnie des Indes orientales en 1600. L'aristocratie est domestiquée par le système du patronage élisabéthain, qui subordonne l'avancement social à la faveur royale. Shakespeare, Marlowe, Spenser et les autres produisent une littérature d'une richesse inégalée qui témoigne de la vitalité culturelle du moment. Comme dans tout pic absolutiste, cependant, la réussite même du système porte en elle les germes de son déclin : la concentration du pouvoir autour de la personne de la reine, restée sans héritier, crée une angoisse successorale qui pèse sur les dernières années du règne.
@@ -355,7 +351,7 @@
 - type: saillant
 - start: ~1588
 - figure: Élisabeth Ière
-- subtitle: Invincible Armada
+- subtitle: Élisabeth Ière
 - title: Pic absolutiste
 - confidence: high
 - summary: La défaite de l'Armada espagnole en 1588, l'expansion coloniale et l'éclat culturel de l'ère shakespearienne portent le prestige de la monarchie absolutiste anglaise à son sommet, avant que la mort d'Élisabeth en 1603 n'ouvre la phase de déclin.
@@ -374,7 +370,7 @@
 ### Subphase : Ancien Régime
 - type: subphase
 - phase: absolutiste
-- start: ~1603
+- start: 1603
 - end: 1642
 - title: Ancien Régime
 - summary: L'accession des Stuarts en 1603 ouvre l'Ancien Régime anglais : une nouvelle dynastie dépourvue de la légitimité institutionnelle des Tudors, confrontée à une société en mutation rapide où un bloc contestataire se forme — puritains et gentry exclue contre le parti de cour — jusqu'à l'explosion de la guerre civile en 1642.

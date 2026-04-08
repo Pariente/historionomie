@@ -1,20 +1,16 @@
 # Parcours de l'Israël antique
 
 ## Metadata
-- nation: Israël / Peuple juif
-- Israël
-- start: ~-1100
+- nation: Israël
+- territory: Israël
+- flag: images/israel/flag.png
+- start: -1100
 - end: 135 (reprise au XIXe siècle avec le mouvement sioniste)
-- wip
-- highlight_1: Le Parcours le plus perturbé du corpus — deux reboots (Babylone -586, destruction du Temple 70), un prolongement (conquête macédonienne -332), un transfert territorial (choc assyrien -722) et une RN avortée (66-70)
-- highlight_2: Le choc assyrien de -722 transfère le Parcours de la Samarie vers la Judée sans le faire redémarrer — la phase oligarchique est allongée de 45 ans, pas interrompue
-- highlight_3: Le prolongement hellénistique (~192 ans) est le seul cas connu où une conquête étrangère recompose les factions en permanence sans détruire les institutions — les Oniades et Tobiades mettent 150 ans à se cristalliser
-- highlight_4: La phase absolutiste traverse deux fois le cycle complet — Josias ouvre la première (avortée après 54 ans par Babylone), Simon Thassi ouvre la seconde (206 ans, durée parfaitement conforme)
-- highlight_5: Bar Kokhva est un monarque absolu, pas un révolutionnaire national — la seule identification correcte exige de comprendre que le reboot de 70 ramène le Parcours en phase absolutiste, pas en RN
-- highlight_6: Le peuple juif préserve son homogénéité culturelle pendant 1800 ans d'exil après 135 — preuve que le Parcours est porté par un peuple, pas par un État
-- question_1: Le Parcours sioniste (XIXe-XXIe siècle) reprend-il en phase absolutiste (là où Bar Kokhva a été interrompu) ou en phase oligarchique (les institutions ayant été intégralement détruites) ?
-- question_2: Le parallèle David-Salomon / Charlemagne permet-il de trancher définitivement le débat minimaliste-maximaliste, ou l'argument structurel reste-t-il insuffisant face à l'archéologie ?
-- question_3: La Guerre de Kitos (115-117) est-elle purement une rébellion périphérique du Parcours romain, ou a-t-elle un effet mesurable sur le Parcours juif en diaspora ?
+- status: complet
+- highlight_1: Le Parcours le plus perturbé du corpus | Deux reboots (Babylone -586, destruction du Temple 70), un prolongement (conquête macédonienne -332), un transfert territorial (choc assyrien -722) et une RN avortée (66-70) | https://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Hayez_017.jpg?width=120 | absolutiste
+- highlight_2: Transfert territorial (-722) | Le choc assyrien transfère le Parcours de la Samarie vers la Judée sans le faire redémarrer — la phase oligarchique est allongée, pas interrompue | https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Saul_and_David.jpg?width=120 | oligarchique
+- highlight_3: Double cycle absolutiste | Josias ouvre le premier (avorté après 54 ans par Babylone), Simon Thassi ouvre le second (206 ans, durée conforme). Bar Kokhva est un monarque absolu, pas un révolutionnaire national | https://commons.wikimedia.org/wiki/Special:FilePath/Stattler-Machabeusze.jpg?width=120 | absolutiste
+- highlight_4: Un peuple indestructible | Le peuple juif préserve son homogénéité culturelle pendant 1800 ans d'exil après 135 — preuve que le Parcours est porté par un peuple, pas par un État | https://commons.wikimedia.org/wiki/Special:FilePath/Arthur_Szyk_(1894-1951)._Bar_Kochba_(1927),_Paris.jpg?width=120 | rn
 - subtitle: Douze siècles de construction nationale, trois destructions, un peuple indestructible
 - confidence: high (cas de référence, article détaillé rédigé)
 
@@ -23,30 +19,30 @@
 ## Phase : Féodale
 - type: phase
 - phase: feodale
-- start: ~-1100
+- start: -1100
 - end: -885
 - title: Phase féodale
 - typical_duration: ~200 ans
 - resolution: Émergence d'Omri (-885) et fondation de l'État central en Samarie. Pas de pacte oligarchique identifiable dans les sources — la transition se fait par la construction progressive d'un appareil étatique, pas par un acte ponctuel de codification.
 - resolution_conditions: Épuisement de la compétition féodale post-schisme (45 ans de coups et d'assassinats), homogénéisation culturelle accélérée par la réduction du territoire (perte de la Judée), émergence d'un chef militaire sans attache tribale identifiable (Omri, sar ha-tsava).
-- summary: La phase féodale d'Israël s'étend des Juges à Omri. Elle se décompose en deux sous-phases : une coagulation des élites (~-1100 à ~-930), ponctuée par deux pics féodaux (David, Salomon) qui accélèrent l'homogénéisation tribale, puis une bascule oligarchique (~-930 à -885) déclenchée par le schisme de Roboam et résolue par l'émergence d'Omri. Elle dure environ 215 ans, ce qui est parfaitement dans la norme endogène.
+- summary: La phase féodale d'Israël s'étend des Juges à Omri. Elle se décompose en deux sous-phases : une coagulation des élites (-1100 à -930), ponctuée par deux pics féodaux (David, Salomon) qui accélèrent l'homogénéisation tribale, puis une bascule oligarchique (-930 à -885) déclenchée par le schisme de Roboam et résolue par l'émergence d'Omri. Elle dure environ 215 ans, ce qui est parfaitement dans la norme endogène.
 - deviation: dans la norme (~215 ans)
 - description: Le collapsus de l'Âge du Bronze au XIIe siècle av. J.-C. libère le Levant de la tutelle égyptienne et permet l'installation des Peuples de la Mer sur les côtes (Philistins), tandis que des groupes nomades et semi-nomades se sédentarisent dans les montagnes de Judée et de Samarie. L'homogénéité culturelle est faible : une conscience ethnique et religieuse partagée existe (absence d'ossements de porc, structures architecturales similaires), mais le yahvisme n'est pas encore exclusif et aucun État central n'existe. Le territoire moteur est la Samarie, dont la population est environ quatre fois supérieure à celle de la Judée. La société est organisée en tribus (shevatim), clans (mishpahot) et maisons paternelles (batei avot), avec des anciens (zekenim) siégeant en conseils locaux et des chefs de guerre charismatiques — les Juges — mobilisés en temps de crise sur la base de liens personnels de fidélité, caractéristiques d'une société féodale.
 
 ### Subphase : Coagulation des élites
 - type: subphase
 - phase: feodale
-- start: ~-1100
-- end: ~-930
+- start: -1100
+- end: -930
 - title: Coagulation des élites
 - summary: Des Juges à la mort de Salomon. Les réseaux tribaux se coagulent autour de deux blocs (Nord/Sud), avec deux pics féodaux (David, Salomon) qui accélèrent l'homogénéisation.
 - description: La coagulation des élites israélites s'étend sur environ 170 ans, de l'époque des Juges jusqu'à la mort de Salomon. Le mécanisme central est le même qu'ailleurs : les pics féodaux — moments où un suzerain charismatique impose sa prééminence personnelle — accélèrent l'homogénéisation culturelle en forçant les tribus à se positionner par rapport à un pouvoir central. Saül cristallise la bipolarité Nord/Sud en devenant le premier chef supra-régional ; David la résout temporairement en conquérant Jérusalem comme capitale neutre et en unifiant les tribus sous son autorité contractuelle ; Salomon porte l'édifice à son sommet en construisant le Temple et en développant un réseau commercial ambitieux. Mais chaque pic repose sur la personne du suzerain, et chaque mort du suzerain teste le degré de coagulation atteint. La coagulation est ici remarquablement rapide — environ 170 ans — parce que le clivage tribal préexiste au Parcours et n'a pas besoin d'être construit ex nihilo, et parce que la pression philistine extérieure accélère la solidarité inter-tribale.
 
 #### Saillant : Éveil féodal
 - type: saillant
-- start: ~-1080
+- start: -1080
 - figure: Saül
-- subtitle: Victoire d'Ammon
+- subtitle: Saül
 - title: Éveil féodal
 - confidence: high
 - summary: Saül est le premier « chef des chefs » d'Israël, acclamé roi par les tribus après une victoire militaire contre les Ammonites.
@@ -54,9 +50,9 @@
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~-1003
+- start: -1003
 - figure: David
-- subtitle: Conquête de Jérusalem
+- subtitle: David
 - title: Pic féodal
 - confidence: high
 - summary: David est reconnu roi de tout Israël par les anciens du Nord, conquiert Jérusalem comme capitale neutre et écrase les Philistins, devenant le premier suzerain incontesté de l'ensemble des tribus.
@@ -64,9 +60,9 @@
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~-960
+- start: -960
 - figure: Salomon
-- subtitle: Temple de Jérusalem
+- subtitle: Salomon
 - title: Pic féodal
 - confidence: high
 - summary: Salomon représente le pic de la phase féodale : un réseau lignager hérité de David, un charisme personnel fort, des réseaux commerciaux étendus avec Tyr et Saba, et la construction du Temple comme acte de légitimation symbolique. Mais l'édifice repose sur la personne du suzerain et se fragmente à sa mort.
@@ -76,7 +72,7 @@
 ### Subphase : Bascule oligarchique
 - type: subphase
 - phase: feodale
-- start: ~-930
+- start: -930
 - end: -885
 - title: Bascule oligarchique
 - summary: Le schisme de -930 est une crise féodale classique. Les 45 ans suivants sont du chaos féodal (coups, assassinats, compétition entre chefs rivaux). Omri (-885) émerge et fonde l'État central en Samarie.
@@ -84,7 +80,7 @@
 
 #### Saillant : Crise féodale
 - type: saillant
-- start: ~-930
+- start: -930
 - figure: Roboam
 - subtitle: Schisme des tribus
 - title: Crise féodale
@@ -104,14 +100,14 @@
 - resolution: Guerre sociale — ni la faction pro-assyrienne (prébendière) ni la faction yahviste (patrimoniale) ne l'emporte. Josias émerge comme tiers et subordonne les réseaux lignagers au pouvoir administratif central.
 - resolution_conditions: Polarisation complète des factions (sous Manassé), épuisement du conflit, déclin de l'Assyrie (qui libère le champ), et disponibilité d'un jeune roi (Josias, 8 ans) qui n'est lié à aucune faction.
 - summary: La phase oligarchique voit l'émergence d'un véritable État central en Samarie sous Omri, son pic de puissance sous Jéroboam II, puis son transfert en Judée après le choc assyrien de -722, et enfin la guerre sociale entre faction pro-assyrienne et faction yahviste, résolue par l'émergence de Josias.
-- description: La phase oligarchique voit l'émergence du premier véritable État central d'Israël sous la dynastie omride, centré sur Samarie avec une administration permanente, un fisc organisé et une armée professionnelle capable de projeter 2 000 chars à 400 km de la capitale (Qarqar, -853). L'essor culmine sous Jéroboam II (~-770), qui porte le royaume à son extension maximale de la Syrie à la mer Morte. La polarisation s'installe ensuite : les prophètes Amos et Osée dénoncent les inégalités croissantes, traduisant les tensions structurelles d'une fin d'essor. Le choc assyrien de -722 détruit le royaume du Nord mais transfère le Parcours en Judée sans le faire redémarrer, allongeant la phase d'environ 45 ans. La guerre sociale oppose ensuite la faction pro-assyrienne de Manassé à la faction yahviste nationaliste, et se résout par l'émergence de Josias comme tiers.
+- description: La phase oligarchique voit l'émergence du premier véritable État central d'Israël sous la dynastie omride, centré sur Samarie avec une administration permanente, un fisc organisé et une armée professionnelle capable de projeter 2 000 chars à 400 km de la capitale (Qarqar, -853). L'essor culmine sous Jéroboam II (-770), qui porte le royaume à son extension maximale de la Syrie à la mer Morte. La polarisation s'installe ensuite : les prophètes Amos et Osée dénoncent les inégalités croissantes, traduisant les tensions structurelles d'une fin d'essor. Le choc assyrien de -722 détruit le royaume du Nord mais transfère le Parcours en Judée sans le faire redémarrer, allongeant la phase d'environ 45 ans. La guerre sociale oppose ensuite la faction pro-assyrienne de Manassé à la faction yahviste nationaliste, et se résout par l'émergence de Josias comme tiers.
 - deviation: +45 ans, causé par le choc assyrien (-722)
 
 ### Subphase : Essor oligarchique
 - type: subphase
 - phase: oligarchique
 - start: -885
-- end: ~-770
+- end: -770
 - title: Essor oligarchique
 - summary: Omri fonde le premier véritable État central du royaume d'Israël en Samarie, doté d'une administration permanente, d'un fisc organisé et d'une armée professionnelle. L'expansion culmine sous Jéroboam II, qui porte le royaume à son extension maximale.
 - description: L'essor oligarchique du royaume d'Israël est porté par la dynastie omride, qui transforme une société encore largement tribale en un État territorial centralisé. Omri fonde Samarie comme capitale neutre (sans attache tribale), et son fils Ahab développe un réseau d'alliances diplomatiques et commerciales, dont le mariage avec Jézabel de Tyr. La stèle de Mesha et les ostraca de Samarie attestent d'un appareil fiscal et administratif sophistiqué. L'expansion culmine sous Jéroboam II, dont le règne prospère masque les tensions internes que les prophètes Amos et Osée dénoncent avec violence.
@@ -120,17 +116,17 @@
 - type: saillant
 - start: -885
 - figure: Omri
-- subtitle: Fondation de Samarie
+- subtitle: Omri
 - title: 1er monarque oligarchique
 - confidence: high
 - summary: Omri fonde l'État central du royaume d'Israël en Samarie, marquant le passage décisif d'une société tribale à un véritable État territorial doté d'une administration, d'un fisc et d'une armée permanente.
-- description: Omri transforme le royaume d'Israël en un véritable État territorial centré sur Samarie, avec une administration centrale, une fiscalité organisée et une armée permanente. La stèle de Mesha, source extra-biblique majeure, décrit les conquêtes omrides en Moab, Galaad et Ammon. Son fils Ahab poursuit cette politique par des alliances matrimoniales stratégiques, épousant notamment Jézabel, princesse de Tyr. En -853, lors de la bataille de Qarqar contre l'Assyrie, Ahab déploie 2 000 chars et 10 000 fantassins à 400 km de sa capitale — un effort logistique qui atteste d'un appareil étatique sophistiqué. Les ostraca de Samarie (~-770) confirment l'existence d'un système fiscal permanent et structuré.
+- description: Omri transforme le royaume d'Israël en un véritable État territorial centré sur Samarie, avec une administration centrale, une fiscalité organisée et une armée permanente. La stèle de Mesha, source extra-biblique majeure, décrit les conquêtes omrides en Moab, Galaad et Ammon. Son fils Ahab poursuit cette politique par des alliances matrimoniales stratégiques, épousant notamment Jézabel, princesse de Tyr. En -853, lors de la bataille de Qarqar contre l'Assyrie, Ahab déploie 2 000 chars et 10 000 fantassins à 400 km de sa capitale — un effort logistique qui atteste d'un appareil étatique sophistiqué. Les ostraca de Samarie (-770) confirment l'existence d'un système fiscal permanent et structuré.
 
 #### Saillant : Pic oligarchique
 - type: saillant
-- start: ~-770
+- start: -770
 - figure: Jéroboam II
-- subtitle: Apogée de Samarie
+- subtitle: Jéroboam II
 - title: Pic oligarchique
 - confidence: high
 - summary: Sous Jéroboam II, le royaume d'Israël atteint son extension maximale, de la Syrie à la mer Morte, avec une prospérité économique et une capacité administrative sans précédent.
@@ -138,7 +134,7 @@
 
 #### Saillant : Fin de l'expansion
 - type: saillant
-- start: ~-746
+- start: -746
 - subtitle: Mort de Jéroboam II
 - title: Fin de l'expansion
 - confidence: medium
@@ -148,7 +144,7 @@
 ### Subphase : Polarisation des élites
 - type: subphase
 - phase: oligarchique
-- start: ~-770
+- start: -770
 - end: -722
 - title: Polarisation des élites
 - summary: Les prophètes Amos et Osée dénoncent les inégalités sociales, la corruption et le luxe des élites, traduisant les tensions caractéristiques d'une fin de phase oligarchique où les bénéfices de l'expansion ne profitent plus qu'à une minorité.
@@ -161,7 +157,7 @@
 - end: -700
 - title: Choc assyrien
 - summary: En -722, Sargon II anéantit le royaume d'Israël, provoquant une fuite massive de population vers la Judée et transférant le Parcours de la Samarie vers Jérusalem sans le faire redémarrer.
-- description: Le royaume d'Israël est anéanti par Sargon II en -722. Sa population fuit massivement vers la Judée, jusqu'alors pauvre et peu urbanisée. Il ne s'agit pas d'un reboot, car les institutions du royaume d'Israël ne sont pas transférées en tant que telles : c'est le Parcours lui-même — porté par la population et ses élites — qui se transfère sur un nouveau territoire. Ce transfert prend environ une génération (~-722 à ~-700), le temps que les réfugiés samaritains s'intègrent en Judée et que l'urbanisation de Jérusalem s'accélère de façon spectaculaire. La phase oligarchique est allongée d'environ 45 ans, mais elle ne repart pas de zéro : les acquis en matière d'homogénéité culturelle et de savoir-faire administratif sont préservés.
+- description: Le royaume d'Israël est anéanti par Sargon II en -722. Sa population fuit massivement vers la Judée, jusqu'alors pauvre et peu urbanisée. Il ne s'agit pas d'un reboot, car les institutions du royaume d'Israël ne sont pas transférées en tant que telles : c'est le Parcours lui-même — porté par la population et ses élites — qui se transfère sur un nouveau territoire. Ce transfert prend environ une génération (-722 à -700), le temps que les réfugiés samaritains s'intègrent en Judée et que l'urbanisation de Jérusalem s'accélère de façon spectaculaire. La phase oligarchique est allongée d'environ 45 ans, mais elle ne repart pas de zéro : les acquis en matière d'homogénéité culturelle et de savoir-faire administratif sont préservés.
 - affected_motor: Construction de l'État central (transfert géographique)
 
 ### Subphase : Guerre sociale
@@ -212,7 +208,7 @@
 - type: saillant
 - start: -640
 - figure: Josias
-- subtitle: Réforme du Temple
+- subtitle: Josias
 - title: 1er monarque absolu
 - confidence: high
 - summary: Josias centralise le culte exclusivement au Temple de Jérusalem, détruit les sanctuaires locaux (bamot) et unifie le droit par la promulgation du Deutéronome, concentrant entre ses mains le pouvoir politique et religieux.
@@ -251,7 +247,7 @@
 - end: -332
 - title: Phase oligarchique (reboot)
 - typical_duration: ~200 ans
-- resolution: AVORTÉE — la guerre sociale est engagée (~-350) mais interrompue par la conquête macédonienne (-332) avant d'être résolue. La polarisation reprend sous le prolongement hellénistique.
+- resolution: AVORTÉE — la guerre sociale est engagée (-350) mais interrompue par la conquête macédonienne (-332) avant d'être résolue. La polarisation reprend sous le prolongement hellénistique.
 - resolution_conditions: Non atteintes. Les deux factions (pro-achéménide vs nationaliste yahviste) n'ont pas eu le temps d'épuiser leur affrontement. L'intervention extérieure (Alexandre) reshufflle les cartes.
 - summary: Après le retour d'exil, Israël reconstruit son État central autour du Temple, codifie la Torah comme loi suprême et établit un pacte oligarchique par la Knesset HaGuedola. La guerre sociale est engagée mais interrompue par la conquête macédonienne avant d'être résolue.
 - deviation: dans la norme (188 ans, interrompu avant résolution de la guerre sociale)
@@ -292,7 +288,7 @@
 - title: Invasion macédonienne
 - confidence: high
 - summary: La conquête d'Alexandre le Grand interrompt la guerre sociale avant sa résolution et ouvre le prolongement hellénistique.
-- description: La guerre sociale entre faction pro-achéménide et faction nationaliste yahviste était engagée depuis ~-350 (l'assassinat de Joshua par Johanan dans le Temple illustre l'intensité du conflit). Mais la conquête macédonienne de -332 interrompt le processus avant toute résolution : les circuits achéménides sur lesquels reposait la puissance des prébendières sont détruits, et la société est brutalement exposée à un nouveau cadre culturel — l'hellénisme — qui recompose entièrement les clivages. Le Parcours ne régresse pas (les institutions survivent), mais la polarisation reprend à zéro sous le prolongement hellénistique.
+- description: La guerre sociale entre faction pro-achéménide et faction nationaliste yahviste était engagée depuis -350 (l'assassinat de Joshua par Johanan dans le Temple illustre l'intensité du conflit). Mais la conquête macédonienne de -332 interrompt le processus avant toute résolution : les circuits achéménides sur lesquels reposait la puissance des prébendières sont détruits, et la société est brutalement exposée à un nouveau cadre culturel — l'hellénisme — qui recompose entièrement les clivages. Le Parcours ne régresse pas (les institutions survivent), mais la polarisation reprend à zéro sous le prolongement hellénistique.
 
 ---
 
@@ -318,7 +314,7 @@
 - end: -175
 - title: Polarisation des élites (prolongée)
 - summary: Pendant plus de 150 ans, la polarisation des élites est prolongée par l'hellénisation constante qui recompose les factions : les Oniades (faction patrimoniale, sacerdotale, yahviste) s'opposent progressivement aux Tobiades (faction prébendière, financière, hellénisée), mais le clivage met longtemps à se stabiliser.
-- description: Les institutions judéennes survivent à la conquête : le Grand Prêtre conserve son autorité, la Gerousia formalise les conseils d'anciens (~-200). Mais les circuits commerciaux se réorientent vers le monde grec, et les Tobiades se reconstituent dans les circuits ptolémaïques dès ~-259, devenant fermiers d'impôts et financiers intégrés aux réseaux hellénistiques. L'hellénisation progressive — langue grecque, gymnases, éphébie sous les Séleucides — recompose constamment le paysage des élites. La faction patrimoniale est incarnée par les Oniades, grands prêtres légitimes issus de l'aristocratie sacerdotale et foncière, ancrés dans le yahvisme traditionnel. La faction prébendière est incarnée par les Tobiades, enrichis par la fiscalité impériale et culturellement hellénisés. Ce n'est qu'après un siècle et demi de recomposition que ces deux factions sont suffisamment cristallisées pour qu'une guerre sociale puisse enfin éclater.
+- description: Les institutions judéennes survivent à la conquête : le Grand Prêtre conserve son autorité, la Gerousia formalise les conseils d'anciens (-200). Mais les circuits commerciaux se réorientent vers le monde grec, et les Tobiades se reconstituent dans les circuits ptolémaïques dès ~-259, devenant fermiers d'impôts et financiers intégrés aux réseaux hellénistiques. L'hellénisation progressive — langue grecque, gymnases, éphébie sous les Séleucides — recompose constamment le paysage des élites. La faction patrimoniale est incarnée par les Oniades, grands prêtres légitimes issus de l'aristocratie sacerdotale et foncière, ancrés dans le yahvisme traditionnel. La faction prébendière est incarnée par les Tobiades, enrichis par la fiscalité impériale et culturellement hellénisés. Ce n'est qu'après un siècle et demi de recomposition que ces deux factions sont suffisamment cristallisées pour qu'une guerre sociale puisse enfin éclater.
 
 ### Subphase : Guerre sociale
 - type: subphase
@@ -367,7 +363,7 @@
 - type: saillant
 - start: -140
 - figure: Simon Thassi
-- subtitle: Cumul hasmonéen
+- subtitle: Simon Thassi
 - title: 1er monarque absolu
 - confidence: high
 - summary: Simon Thassi reçoit le cumul héréditaire des fonctions de Grand Prêtre, stratège et ethnarque « pour toujours », fusionnant le pouvoir politique et religieux en une seule personne.
@@ -396,11 +392,11 @@
 - type: saillant
 - start: -20
 - figure: Hérode Ier
-- subtitle: Grand Temple d'Hérode
+- subtitle: Hérode Ier
 - title: Pic absolutiste
 - confidence: high
 - summary: Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent — agrandissement considérable du Temple, fondation de Césarée, forteresses de Massada et Hérodion — une armée professionnelle de mercenaires et un monopole royal absolu de la force.
-- description: Le règne d'Hérode Ier (~-37 à -4) représente l'acmé de la puissance absolutiste judéenne. Après avoir éliminé tous ses rivaux, Hérode déploie un faste royal sans précédent : agrandissement considérable du Temple (travaux majeurs achevés entre ~-20 et ~-15), fondation de Césarée Maritime, reconstruction de Samarie (rebaptisée Sébaste), construction des forteresses de Massada et d'Hérodion. Son armée professionnelle, composée de mercenaires gaulois, thraces et germains, lui assure un monopole absolu de la force. L'acmé de puissance se situe autour de -20, moment où convergent le prestige monumental, la capacité militaire et le contrôle territorial maximal — c'est le marqueur classique du pic absolutiste, comparable à Louis XIV ou Soliman le Magnifique.
+- description: Le règne d'Hérode Ier (-37 à -4) représente l'acmé de la puissance absolutiste judéenne. Après avoir éliminé tous ses rivaux, Hérode déploie un faste royal sans précédent : agrandissement considérable du Temple (travaux majeurs achevés entre -20 et ~-15), fondation de Césarée Maritime, reconstruction de Samarie (rebaptisée Sébaste), construction des forteresses de Massada et d'Hérodion. Son armée professionnelle, composée de mercenaires gaulois, thraces et germains, lui assure un monopole absolu de la force. L'acmé de puissance se situe autour de -20, moment où convergent le prestige monumental, la capacité militaire et le contrôle territorial maximal — c'est le marqueur classique du pic absolutiste, comparable à Louis XIV ou Soliman le Magnifique.
 
 #### Saillant : Fin de l'expansion
 - type: saillant

@@ -4,18 +4,13 @@
 - nation: Milan (Lombardie)
 - territory: Lombardie
 - flag: images/milan/flag.png
-- illustration: images/milan/duomo.jpg
 - start: 888
 - end: 1849 (RN avortée → absorption dans le Parcours italien)
-- status: wip
-- highlight_1: Phase féodale exceptionnellement courte (~118 ans) — la concentration urbaine et l'identité ambrosienne compriment le processus
-- highlight_2: Les guerres d'Italie (1499) avortent l'Ancien Régime des Sforza et reboote le Parcours en phase oligarchique — un cas unique dans le corpus
-- highlight_3: La peste de 1630 (~46% de mortalité) prolonge la phase oligarchique sans détruire les institutions — le Sénat continue de siéger
-- highlight_4: La domination espagnole puis autrichienne ne perturbe pas le Parcours — Milan conserve ses institutions oligarchiques sous les deux empires
-- highlight_5: Napoléon comprime ~100 ans d'absolutisation et de centralisation en 20 ans — le seul cas d'accélérateur exogène du corpus
-- highlight_6: RN avortée en 1848 — les Cinque Giornate ouvrent le cycle, mais Custoza l'écrase et le vote de fusion avec le Piémont absorbe le Parcours
-- question_1: 1848 — RN milanaise avortée ou épisode d'une méta-RN nord-italienne ? Le vote de fusion avec le Piémont (561 002 contre 681) suggère une absorption volontaire
-- question_2: Le Parcours piémontais/italien est-il la continuation du Parcours lombard, ou un Parcours distinct qui l'absorbe ?
+- status: à valider
+- highlight_1: Phase féodale courte (118 ans) | La concentration urbaine et l'identité ambrosienne compriment le processus — Milan est l'une des cinq plus grandes villes d'Europe au XIe siècle | https://commons.wikimedia.org/wiki/Special:FilePath/Milano_facciata_del_duomo_1660.jpg?width=120 | feodale
+- highlight_2: Reboot par les guerres d'Italie (1499) | L'AR des Sforza est avorté par l'invasion française — le Parcours reboote en phase oligarchique. Le Sénat remplace le Consiglio Segreto | https://commons.wikimedia.org/wiki/Special:FilePath/La_battaglia_di_Legnano_di_Amos_Cassoli.jpg?width=120 | oligarchique
+- highlight_3: Peste de 1630 et domination étrangère | 46% de mortalité mais les institutions survivent — le Sénat continue de siéger. La domination espagnole puis autrichienne ne perturbe pas le Parcours | https://commons.wikimedia.org/wiki/Special:FilePath/A_monk_visiting_the_victims_of_the_great_plague_of_Milan_in_Wellcome_V0010582.jpg?width=120 | oligarchique
+- highlight_4: RN avortée (1848) | Les Cinque Giornate ouvrent le cycle, mais Custoza l'écrase et le vote de fusion avec le Piémont (561 002 contre 681) absorbe le Parcours dans le Parcours italien | https://commons.wikimedia.org/wiki/Special:FilePath/Episodio_delle_cinque_giornate_(Baldassare_Verazzi).jpg?width=120 | rn
 - subtitle: De l'archevêque au duc, du duc au Sénat, du Sénat à l'Italie — neuf siècles de construction nationale lombarde
 - confidence: medium
 
@@ -119,18 +114,18 @@
 - description: Le système communal est un des plus sophistiqués d'Europe : consuls (1097), podestariat (1186), Credenza di Sant'Ambrogio (1198), capitanat du peuple (1240). La destruction par Barberousse (1162) est une perturbation intra-phase qui renforce paradoxalement l'identité. La Paix de Constance (1183) est le pic oligarchique. Cortenuova (1237) marque la fin de l'expansion. La guerre sociale oppose la Credenza/Della Torre (prébendière, artisans, guildes) aux capitanei/Visconti (patrimoniale, foncière). Ottone Visconti, archevêque nommé par le pape, tranche à Desio (1277) et crée un régime nouveau — la signoria.
 - deviation: -20 ans. Écart modéré.
 
-### Subphase : Essor oligarchique (1097-1237)
+### Subphase : Essor oligarchique (1097-1200)
 - type: subphase
 - phase: oligarchique
 - start: 1097
-- end: 1237
+- end: 1200
 - title: Essor oligarchique
 - summary: Construction institutionnelle rapide (consuls, podestà, conseils) et expansion militaire. Milan mène la Ligue lombarde, triomphe à Legnano (1176), obtient la reconnaissance impériale de l'autonomie communale (Constance, 1183). La destruction par Barberousse (1162) est une perturbation intra-phase qui renforce paradoxalement l'identité.
 
 #### Saillant : 1er monarque oligarchique — le système communal
 - type: saillant
 - start: 1097
-- subtitle: Système communal
+- subtitle: Commune de Milan
 - title: 1er monarque oligarchique
 - confidence: medium
 - summary: Le système communal (1097) fonctionne comme un « monarque oligarchique » collectif — fisc permanent (estimo, douanes), milices permanentes, administration institutionnalisée (consuls, podestà, conseils). Comme Venise, le « monarque » est le système, pas une personne.
@@ -139,7 +134,7 @@
 - type: saillant
 - start: 1183
 - figure: Ligue lombarde
-- subtitle: Paix de Constance
+- subtitle: Ligue lombarde
 - title: Pic oligarchique
 - confidence: medium
 - summary: La Paix de Constance (1183) consacre l'auto-gouvernement des cités lombardes. Milan est au sommet de son prestige communal — leader de la Ligue, vainqueur de Legnano (1176).
@@ -206,7 +201,7 @@
 - type: saillant
 - start: 1277
 - figure: Ottone Visconti
-- subtitle: Desio
+- subtitle: Ottone Visconti
 - title: 1er monarque absolu
 - confidence: medium
 - alternatives: Matteo I (1287) est l'alternative — premier seigneur effectif avec succession héréditaire et vicariat impérial. Mais c'est Ottone qui résout la guerre sociale, ce qui est le critère définitoire du 1er monarque absolu.
@@ -235,7 +230,7 @@
 - start: 1395
 - end: 1402
 - figure: Gian Galeazzo Visconti
-- subtitle: Premier duc de Milan
+- subtitle: Gian Galeazzo Visconti
 - title: Pic absolutiste
 - confidence: high
 - summary: Premier duc de Milan (1395), 26 villes, Consiglio Segreto, 2M florins de revenus annuels. En passe d'unifier l'Italie du nord quand il meurt (1402). L'effondrement immédiat confirme le caractère personnel de l'absolutisme.
@@ -335,7 +330,7 @@
 - start: 1564
 - end: 1584
 - figure: Carlo Borromeo
-- subtitle: Contre-Réforme
+- subtitle: Carlo Borromeo
 - title: Pic oligarchique
 - confidence: medium
 - summary: Carlo Borromeo (archevêque 1564-1584) porte le Milan espagnol à son prestige maximal. Il incarne l'homogénéisation culturelle (Contre-Réforme, visite pastorale de chaque paroisse, séminaires, discipline liturgique). Son autorité morale surpasse celle du gouverneur espagnol. Canonisé en 1610, il devient le patron de Milan — figure d'identité lombarde par excellence.
@@ -407,11 +402,11 @@
 - title: Absolutisation napoléonienne
 - summary: Napoléon absolutise Milan en 9 ans. Tous les marqueurs confirmés : préfets, centralisation fiscale (Prina), conscription, abolition du patriciat, nouvelle noblesse de service, Concordat (1803). La proclamation du Royaume d'Italie (1805) marque le passage à l'impérialisme.
 
-#### Saillant : Accélérateur — Campagne d'Italie
+#### Saillant : Accélérateur — Occupation napoléonienne
 - type: saillant
 - start: 1796
 - figure: Napoléon Bonaparte
-- subtitle: Campagne d'Italie
+- subtitle: Occupation napoléonienne
 - title: Accélérateur
 - confidence: high
 - summary: L'intervention de Napoléon (1796) accélère brutalement la construction de l'État central. En 18 ans, il comprime un processus qui prend normalement ~200 ans : abolition du patriciat, préfets, Code civil, centralisation fiscale, conscription, nouvelle noblesse de service. C'est le symétrique du choc d'hétérogénéité — au lieu de ralentir le Parcours en hétérogénéisant la société, l'accélérateur avance le Parcours en important un modèle étatique mature depuis l'extérieur. Le moteur de construction de l'État central fait un bond en avant exogène.
@@ -420,7 +415,7 @@
 - type: saillant
 - start: 1796
 - figure: Napoléon Bonaparte
-- subtitle: Campagne d'Italie
+- subtitle: Napoléon
 - title: 1er monarque absolu
 - confidence: high
 - summary: Napoléon résout la guerre sociale en détruisant les deux factions — il abolit le patriciat foncier (patrimoniale) et supplante la bourgeoisie réformatrice (prébendière) par son propre appareil. Il n'est d'aucune des deux factions : c'est un conquérant étranger devenu souverain, qui s'appuie sur un modèle d'État centralisé rodé en France. L'absolutisation est exogène mais structurellement complète — les huit marqueurs sont confirmés en 18 ans.
@@ -438,7 +433,7 @@
 - start: 1810
 - end: 1812
 - figure: Eugène de Beauharnais
-- subtitle: Royaume d'Italie
+- subtitle: Eugène de Beauharnais
 - title: Pic absolutiste
 - confidence: medium
 - summary: Le Royaume d'Italie atteint son apogée vers 1810-1812 : 6,7 millions d'habitants, 24 départements, expansion maximale (Vénétie, Marches, Trentin), armée de 80 000-90 000 hommes atteignant la parité qualitative avec les unités françaises, revenus fiscaux au maximum (1,3% d'impôt non collecté en 1808). L'impérialisme absolutiste est au zénith — mais sous tutelle impériale française.
