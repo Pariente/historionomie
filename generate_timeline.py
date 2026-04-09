@@ -1091,6 +1091,7 @@ function showDetail(idx) {{
         'Phase aiguë': 'L\\'extrême-gauche prend le contrôle et élimine les modérés',
         'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\\'extrême-gauche',
         'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
         'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
         'Écrasement': 'La Révolution Nationale est interrompue avant d\\'aboutir',
         'Choc d\\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',

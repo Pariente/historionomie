@@ -490,6 +490,15 @@
 - summary: La Restauration ramène les Bourbons au pouvoir avec Louis XVIII puis Charles X, dans le cadre de la Charte de 1814 qui établit un régime à base élargie mais pas encore pleinement parlementaire, avec un suffrage censitaire très étroit qui exclut la majeure partie de la population de la vie politique.
 - description: La Restauration des Bourbons après Waterloo ne constitue pas un retour à l'Ancien Régime : la Charte de 1814 maintient les acquis fondamentaux de la Révolution — égalité devant la loi, libertés individuelles, Code civil — tout en rétablissant la monarchie dans un cadre constitutionnel. Louis XVIII gouverne avec prudence dans le cadre de la Charte, mais le suffrage censitaire étroit limite la participation politique à une petite élite de propriétaires. L'accession de Charles X en 1824 et sa tentative de restauration autoritaire avec les ordonnances de juillet 1830 provoquent la réaction qui aboutit à la Glorieuse Révolution française.
 
+#### Saillant : Restauration
+- type: saillant
+- start: 1815
+- subtitle: Charte de 1814
+- title: Restauration
+- confidence: high
+- summary: La chute de Napoléon et le Congrès de Vienne ramènent les Bourbons au pouvoir avec Louis XVIII. La Charte de 1814 établit un régime constitutionnel qui maintient les acquis fondamentaux de la Révolution — égalité devant la loi, Code civil, libertés individuelles — tout en rétablissant la monarchie dans un cadre à base élargie.
+- description: La Restauration de 1815 ne constitue pas un retour à l'Ancien Régime : la Charte de 1814, octroyée par Louis XVIII, maintient l'essentiel des acquis révolutionnaires et napoléoniens — égalité civile, Code civil, libertés fondamentales, vente des biens nationaux. Le roi gouverne dans un cadre constitutionnel avec deux chambres, mais le suffrage censitaire très étroit (environ 90 000 électeurs sur 30 millions d'habitants) limite la participation politique à une mince élite de grands propriétaires. Louis XVIII gouverne avec prudence et pragmatisme, mais l'accession de Charles X en 1824 marque un virage réactionnaire. Sa tentative de restauration autoritaire — sacre médiéval à Reims, loi du milliard des émigrés, ordonnances de Saint-Cloud — provoque la réaction libérale qui aboutit aux Trois Glorieuses de 1830.
+
 #### Saillant : Glorieuse Révolution
 - type: saillant
 - start: 1830

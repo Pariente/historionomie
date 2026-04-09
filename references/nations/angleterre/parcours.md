@@ -497,6 +497,15 @@
 - summary: Charles II est restauré en 1660 dans le cadre de la Déclaration de Breda, qui maintient les acquis fondamentaux de la Révolution tout en rétablissant la monarchie. Mais Jacques II, en tentant de restaurer le catholicisme et l'absolutisme, provoque la crise finale qui aboutit à la Glorieuse Révolution de 1688.
 - description: La Restauration de 1660 ne constitue pas un retour à l'Ancien Régime Stuart : la Déclaration de Breda garantit la liberté de conscience, le maintien des propriétés acquises pendant la Révolution et l'amnistie générale. Charles II gouverne avec habileté dans un cadre à base élargie mais pas encore pleinement parlementaire, naviguant entre la cour, le Parlement et la mémoire de la guerre civile. Le Habeas Corpus Act de 1679 et l'Exclusion Crisis de 1679-1681 — tentative parlementaire d'exclure le catholique Jacques du trône — montrent que le Parlement dispose désormais d'un poids politique irréversible. L'accession de Jacques II en 1685 et sa tentative de restauration catholique — Declaration of Indulgence, nomination de catholiques aux postes clés, rapprochement avec Louis XIV — provoquent la réaction qui aboutit à la Glorieuse Révolution, moment où le parlementarisme s'ancre définitivement dans la vie politique anglaise.
 
+#### Saillant : Restauration
+- type: saillant
+- start: 1660
+- subtitle: Déclaration de Breda
+- title: Restauration
+- confidence: high
+- summary: Charles II est restauré sur le trône en 1660 dans le cadre de la Déclaration de Breda, qui garantit l'amnistie générale, la liberté de conscience et le maintien des propriétés acquises pendant la Révolution. La monarchie revient, mais les acquis fondamentaux de la guerre civile sont préservés.
+- description: La Restauration de 1660 ne constitue pas un retour au pouvoir personnel des Stuarts d'avant 1640 : la Déclaration de Breda, négociée avant le retour de Charles II, garantit l'amnistie, la liberté religieuse et la sécurité des propriétés acquises pendant l'Interregnum. Le Parlement conserve un poids politique irréversible — le roi ne peut plus gouverner sans lui. Charles II navigue avec habileté entre la cour, le Parlement et la mémoire de la guerre civile, mais la question religieuse reste le point de fracture. Le Habeas Corpus Act de 1679 renforce les libertés individuelles, et l'Exclusion Crisis de 1679-1681 — tentative parlementaire d'exclure le catholique Jacques du trône — révèle la profondeur du clivage. L'accession de Jacques II en 1685 et sa tentative de restauration catholique et absolutiste provoquent la crise finale qui aboutit à la Glorieuse Révolution.
+
 #### Saillant : Glorieuse Révolution
 - type: saillant
 - start: 1688
