@@ -2,34 +2,57 @@
 
 ## Metadata
 - nation: Suisse
+- flag: images/suisse/flag.png
 - territory: Confédération suisse
-- start: ~1291
+- start: ~1230
 - status: proposition
-- subtitle: De la Ligue des Waldstätten à la démocratie directe — un Parcours sans monarque
+- subtitle: Le Dubaï du XVIIIème siècle, avec des référendums
 - confidence: medium
-- highlight_1: Éveil féodal collégial (1291) | Le Bundesbrief est un pacte entre communautés libres, pas un serment de vassalité. Le « centre » qui émerge de la percolation n'est pas un suzerain mais une alliance — le premier Parcours entièrement républicain | | feodale
-- highlight_2: L'exutoire mercenaire (1474-1515) | Le système mercenaire suisse (Reislauferei) joue exactement le rôle de l'expansion maritime vénitienne : il canalise l'énergie compétitive des élites vers l'étranger et retarde la polarisation domestique pendant près de deux siècles | | oligarchique
-- highlight_3: Absolutisme sans monarque (~1712-1798) | Les patriciats cantonaux (les « Gnädige Herren » de Berne) forment un absolutisme institutionnel et trans-confessionnel. Le « 1er monarque absolu » est une classe, pas une personne — comme les Inquisiteurs d'État vénitiens | | absolutiste
-- highlight_4: RN sans IR (1798-1848) | La séquence Helvétique-Médiation-Restauration-Sonderbund suit les étapes canoniques avec une précision remarquable, mais sans Impérialiste Revanchard — la Suisse est trop petite pour l'impérialisme revanchard. La Guerre du Sonderbund (27 jours, ~100 morts) est la Glorieuse Révolution la moins sanglante du corpus | | rn
+- highlight_1: Un Parcours sans monarque | Ni suzerain féodal (le Bundesbrief est un pacte entre communautés libres), ni monarque oligarchique (la Tagsatzung est un congrès), ni monarque absolu (les patriciats cantonaux sont une classe, pas une personne). Le premier Parcours entièrement républicain du corpus | https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Swiss_R%C3%BCtlischwur.jpg/500px-Swiss_R%C3%BCtlischwur.jpg | feodale
+- highlight_2: Une petite UE médiévale | L'« État central » de la phase oligarchique est le proto-État confédéral : la Tagsatzung et les baillages communs (Gemeine Herrschaften). C'est le contrôle de ce proto-État — faible mais réel — qui constitue l'enjeu de la guerre sociale (Villmergen 1656-1712) | https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Stammbaum_CH_Kantone.jpg/500px-Stammbaum_CH_Kantone.jpg | oligarchique
+- question_1: Parcours cantonaux parallèles ? | Chaque canton (Berne, Zurich, Lucerne, etc.) a-t-il son propre Parcours — avec ses propres phases oligarchique et absolutiste — synchrone du méta-parcours confédéral, et fusionnant dans la RN commune de 1798 ? Si oui, Berne serait le parcours cantonal le plus avancé et le centre de gravité du méta-parcours, comme la Prusse l'est pour l'Allemagne.
+- highlight_3: Un long Thermidor, pas d'IR | La RN suisse n'a pas d'Impérialiste Revanchard — la phase IR est structurellement absorbée par le protectorat napoléonien (Médiation, 1803-1815). Le Thermidor dure 12 ans, adossé à la puissance de Napoléon. Quand il tombe, la RN reprend son cours endogène. La Guerre du Sonderbund (27 jours, ~100 morts) est la Glorieuse Révolution la moins sanglante du corpus | https://upload.wikimedia.org/wikipedia/commons/a/a7/Mediationsakte.jpg | rn
 
 ---
 
 ## Note préliminaire : l'unité d'analyse
 
-Le Parcours suisse est porté par un peuple — les Eidgenossen, les « Confédérés » — et non par un État, puisqu'il n'existe pas d'État central suisse avant 1848. Les deux moteurs du Parcours opèrent à des échelles différentes :
+Le Parcours suisse est un méta-parcours confédéral. Chaque canton (Berne, Zurich, Lucerne, etc.) a son propre parcours interne, mais c'est le niveau confédéral que nous suivons ici, avec Berne comme centre de gravité — de même que le parcours allemand suit le niveau national avec la Prusse comme centre de gravité, et que le parcours italien suit le niveau national avec le Piémont comme centre de gravité.
 
-- **Construction de l'État central** : opère au niveau cantonal. Les cantons urbains (Berne, Zurich, Lucerne) développent chacun leur propre fisc, armée et administration. Le niveau confédéral (la Tagsatzung) reste un congrès diplomatique sans pouvoir exécutif.
+Les deux moteurs opèrent à des échelles partiellement distinctes :
+
+- **Construction de l'État central** : opère à deux niveaux. Au niveau cantonal, les cantons urbains (Berne, Zurich, Lucerne) développent chacun leur propre fisc, armée et administration. Au niveau confédéral, un proto-État existe dès le début du XVe siècle : la Tagsatzung (diète confédérale) et les baillages communs (Gemeine Herrschaften), territoires administrés conjointement par les cantons souverains qui y envoient des baillis en rotation. Ce proto-État est faible (pas de pouvoir exécutif, décisions à l'unanimité), mais réel — une sorte d'UE médiévale. C'est le contrôle de ce proto-État qui constitue l'enjeu de la compétition entre factions pendant la phase oligarchique.
 - **Homogénéisation culturelle** : opère au niveau confédéral. La conscience « Eidgenossen » émerge progressivement à travers les victoires militaires communes, les mythes fondateurs (Guillaume Tell), et les institutions confédérales, malgré le multilinguisme et le clivage confessionnel.
 
-Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le moteur étatique, l'espace culturel allemand porte le moteur culturel) et au cas vénitien (le doge n'est pas un monarque mais le système institutionnel porte le Parcours). La phase de chaque saillant est déterminée par l'état combiné des deux moteurs au niveau confédéral, même quand les saillants politiques n'existent qu'au niveau cantonal.
+À partir de 1798 (invasion française), le méta-parcours acquiert son propre État : la République helvétique, puis la Confédération de 1847. Les parcours cantonaux s'y fondent.
+
+---
+
+## Phase : Pré-féodale
+- type: phase
+- phase: prefeodale
+- start: ~1230
+- end: 1291
+- title: Pré-féodale
+- summary: Soixante ans de percolation dans les Waldstätten. Les trois communautés forestières (Uri, Schwyz, Unterwalden) obtiennent individuellement l'immunité impériale et sont connectées par la route du Gothard, mais ne forment pas encore d'alliance politique structurée. Aucune autorité supra-régionale ne s'impose.
+- description: Avant 1291, les trois communautés forestières existent comme des micro-pouvoirs autonomes, sans lien politique formel. Leur situation géographique — elles contrôlent les accès au col du Saint-Gothard, principale route commerciale entre l'Italie et l'Allemagne — leur confère une importance stratégique qui motive les empereurs à leur accorder l'immunité impériale directe (Reichsfreiheit). Uri obtient cette immunité en 1230, Schwyz en 1240. Cette immunité les soustrait à tout seigneur intermédiaire, notamment les Habsbourg qui contrôlent les territoires environnants. Les communautés partagent un mode de vie alpin et des institutions similaires (Landsgemeinde), mais ne se perçoivent pas encore comme un ensemble politique. C'est la percolation — les éléments sont en place, mais le jeu politique n'est pas encore structuré.
+
+### Subphase : Percolation élitaire (~1230-1291)
+- type: subphase
+- phase: prefeodale
+- start: ~1230
+- end: 1291
+- title: Percolation élitaire
+- summary: Les communautés des Waldstätten sont autonomes mais séparées. Elles obtiennent individuellement l'immunité impériale (Uri 1230, Schwyz 1240) et sont connectées par la route commerciale du col du Gothard, mais ne forment pas encore d'alliance politique structurée.
+- description: Avant 1291, les trois communautés forestières (Uri, Schwyz, Unterwalden) existent comme des micro-pouvoirs autonomes, sans lien politique formel. Leur situation géographique — elles contrôlent les accès au col du Saint-Gothard, principale route commerciale entre l'Italie et l'Allemagne — leur confère une importance stratégique qui motive les empereurs à leur accorder l'immunité impériale directe (Reichsfreiheit). Cette immunité les soustrait à tout seigneur intermédiaire, notamment les Habsbourg qui contrôlent les territoires environnants. L'élection de Rodolphe Ier de Habsbourg comme roi des Romains (1273) change la donne : le suzerain impérial est désormais aussi le voisin menaçant. Sa mort en 1291 et la querelle de succession entre son fils Albert et Adolphe de Nassau créent un vide de pouvoir qui catalyse l'alliance.
 
 ---
 
 ## Phase : Féodale
 - type: phase
 - phase: feodale
-- start: ~1291
-- end: ~1481
+- start: 1291
+- end: 1481
 - title: Phase féodale
 - typical_duration: ~200 ans
 - actual_duration: ~190 ans
@@ -38,15 +61,6 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - summary: La phase féodale suisse s'étend du Bundesbrief (1291), qui forme la première alliance permanente des trois cantons forestiers, jusqu'à la Stanser Verkommnis (1481), qui codifie les rapports entre cantons après la crise provoquée par les Guerres de Bourgogne. La phase est marquée par l'originalité radicale de son éveil féodal — un pacte entre communautés libres, pas un serment de vassalité — et par deux pics féodaux spectaculaires (Sempach 1386, Guerres de Bourgogne 1474-1477) qui accélèrent l'homogénéisation en forgeant une identité militaire commune. La phase aboutit au premier essai, sans boucle, dans une durée proche de la norme.
 - description: La phase féodale suisse se distingue de tous les autres parcours connus par la nature de son éveil. Les Waldstätten (Uri, Schwyz, Unterwalden) ne sont pas des seigneuries féodales mais des communautés rurales libres, dotées d'immunité impériale directe (Reichsfreiheit), gouvernées par des assemblées de citoyens (Landsgemeinde). Le Bundesbrief de 1291 n'est pas un serment de vassalité mais un pacte de défense mutuelle entre égaux — le refus de tout juge extérieur, la résolution collective des conflits. L'alliance s'étend progressivement par des traités bilatéraux (Lucerne 1332, Zurich 1351, Berne 1353), chaque canton conservant sa souveraineté et ses institutions propres. Les victoires militaires communes contre les Habsbourg (Morgarten 1315, Sempach 1386, Näfels 1388) puis contre la Bourgogne (Grandson, Morat, Nancy, 1476-1477) forgent une identité guerrière partagée et accélèrent l'homogénéisation des élites à l'échelle confédérale. La crise post-Bourgogne (dispute sur le butin entre cantons urbains et ruraux, 1477-1481) est résolue par la Stanser Verkommnis (1481), grâce à la médiation de l'ermite Nicolas de Flüe (Bruder Klaus) — les cantons codifient leurs rapports pour la première fois.
 - deviation: dans la norme (~190 ans)
-
-### Subphase : Percolation (~avant 1291)
-- type: subphase
-- phase: feodale
-- start: ~1230
-- end: ~1291
-- title: Percolation
-- summary: Les communautés des Waldstätten sont autonomes mais séparées. Elles obtiennent individuellement l'immunité impériale (Uri 1230, Schwyz 1240) et sont connectées par la route commerciale du col du Gothard, mais ne forment pas encore d'alliance politique structurée.
-- description: Avant 1291, les trois communautés forestières (Uri, Schwyz, Unterwalden) existent comme des micro-pouvoirs autonomes, sans lien politique formel. Leur situation géographique — elles contrôlent les accès au col du Saint-Gothard, principale route commerciale entre l'Italie et l'Allemagne — leur confère une importance stratégique qui motive les empereurs à leur accorder l'immunité impériale directe (Reichsfreiheit). Cette immunité les soustrait à tout seigneur intermédiaire, notamment les Habsbourg qui contrôlent les territoires environnants. L'élection de Rodolphe Ier de Habsbourg comme roi des Romains (1273) change la donne : le suzerain impérial est désormais aussi le voisin menaçant. Sa mort en 1291 et la querelle de succession entre son fils Albert et Adolphe de Nassau créent un vide de pouvoir qui catalyse l'alliance.
 
 ### Subphase : Coagulation des élites (1291-1481)
 - type: subphase
@@ -115,21 +129,21 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 ## Phase : Oligarchique
 - type: phase
 - phase: oligarchique
-- start: ~1481
-- end: ~1712
+- start: 1481
+- end: 1712
 - title: Phase oligarchique
 - typical_duration: ~200 ans
 - actual_duration: ~231 ans
-- resolution: Guerre sociale confessionnelle (1529-1712) résolue par la Deuxième Guerre de Villmergen (1712), qui établit la parité confessionnelle et permet au système patricien trans-confessionnel de s'imposer comme pouvoir dominant dans les deux camps. Le « tiers » n'est pas une figure personnelle mais une classe — le patriciat — qui transcende le clivage confessionnel.
-- resolution_conditions: La résolution n'est possible qu'après que la polarisation confessionnelle a épuisé les deux factions. Le système mercenaire comme exutoire (analogue à l'expansion maritime vénitienne) retarde la résolution de plus d'un siècle en canalisant l'énergie compétitive des élites vers l'étranger.
-- summary: La phase oligarchique suisse s'étend de la Stanser Verkommnis (1481) jusqu'à la Deuxième Guerre de Villmergen (1712). L'essor est vigoureux mais bref (1481-1515), porté par l'expansion à 13 cantons et l'apogée du système mercenaire. La défaite de Marignan (1515) met fin à l'expansion militaire suisse et inaugure la neutralité. La Réforme (1519-1531) scinde la Confédération en deux blocs confessionnels et déclenche une polarisation qui durera deux siècles, prolongée par l'exutoire mercenaire. La guerre sociale confessionnelle (Guerres de Kappel 1529-1531, Guerres de Villmergen 1656-1712) se résout par l'établissement de la parité confessionnelle en 1712.
-- description: La phase oligarchique suisse est la plus longue après Venise (~637 ans). Son allongement de ~31 ans par rapport à la norme s'explique par l'exutoire mercenaire (Reislauferei), qui joue structurellement le même rôle que l'expansion maritime vénitienne : en canalisant l'énergie compétitive des élites vers l'étranger (les capitulations mercenaires avec la France, l'Empire, le Pape enrichissent les familles dirigeantes et maintiennent une pression fiscale basse), le système retarde la polarisation intérieure. La Confédération après 1481 dispose d'institutions oligarchiques embryonnaires : la Tagsatzung se réunit régulièrement, les baillages communs (Gemeine Herrschaften) sont administrés conjointement par rotation de baillis (Landvögte). Mais il n'y a pas de fisc central, pas d'armée permanente confédérale, pas d'administration centrale — ces structures n'existent qu'au niveau cantonal. La Réforme (Zwingli à Zurich 1519, Calvin à Genève 1536) scinde la Confédération en deux camps irréconciliables qui paralysent le fonctionnement de la Tagsatzung pendant deux siècles. La polarisation suit la ligne prébendière/patrimoniale : les cantons protestants (Zurich, Berne, Bâle, Schaffhouse) sont urbains, commerciaux, connectés aux réseaux internationaux ; les cantons catholiques (les Waldstätten, Lucerne, Fribourg, Soleure) sont ruraux, traditionnels, liés aux Habsbourg et au Pape.
-- deviation: +31 ans par rapport à la norme (~200 ans). Allongement modéré, explicable par l'exutoire mercenaire et la paralysie confessionnelle.
+- resolution: Guerre sociale (1653-1712) résolue par la Deuxième Guerre de Villmergen (1712). Les cantons protestants (Berne, Zurich) prennent le contrôle des baillages communs, brisant l'hégémonie catholique. Le « tiers » qui émerge n'est pas une figure personnelle mais une classe — le patriciat trans-confessionnel — dont la logique de pouvoir transcende le clivage confessionnel.
+- resolution_conditions: La résolution n'est possible qu'après que la polarisation confessionnelle a épuisé les deux factions. Le système mercenaire (Reislauferei) et la faiblesse du proto-État confédéral retardent l'escalade : tant que l'enjeu (le contrôle de la Tagsatzung et des baillages communs) est modeste et que l'exutoire mercenaire canalise l'énergie compétitive, les factions n'ont pas de raison d'escalader.
+- summary: La phase oligarchique suisse s'étend de la Stanser Verkommnis (1481) jusqu'à la Deuxième Guerre de Villmergen (1712). L'« État central » de cette phase est le proto-État confédéral : la Tagsatzung comme organe délibératif et les baillages communs (Gemeine Herrschaften) comme territoires administrés conjointement par les cantons souverains. C'est le contrôle de ce proto-État qui constitue l'enjeu de la compétition entre factions — une sorte d'UE médiévale. L'essor est bref mais explosif (1481-1515), porté par l'expansion à 13 cantons et l'apogée militaire. La Réforme (1519-1531) scinde la Confédération en deux blocs confessionnels qui se disputent le contrôle de la Tagsatzung et des baillages communs. La polarisation est longue (1515-1653), gelée par la faiblesse de l'enjeu et l'exutoire mercenaire. La guerre sociale (1653-1712) est le conflit ouvert pour le contrôle du proto-État.
+- description: La phase oligarchique suisse se distingue par la nature de son « État central ». Il n'existe pas d'appareil étatique confédéral classique (fisc, armée, administration unifiés) — ceux-ci n'existent qu'au niveau cantonal (Berne, Zurich, Lucerne). Mais la Confédération dispose d'un proto-État réel : la Tagsatzung (diète confédérale, début XVe siècle) siège régulièrement, chaque canton délègue deux représentants ; les baillages communs (Gemeine Herrschaften) — Argovie, Thurgovie, Tessin, comté de Baden, entre autres — sont des territoires administrés conjointement par les cantons souverains, qui y envoient des baillis (Landvögte) en rotation bisannuelle. Ce proto-État est faible (pas de pouvoir exécutif, décisions à l'unanimité) mais réel : il administre des territoires, lève des revenus, envoie des fonctionnaires. C'est le contrôle de ce proto-État qui constitue l'enjeu de la guerre sociale. La Réforme (Zwingli à Zurich 1519, Calvin à Genève 1536) structure les deux factions : les cantons protestants (Zurich, Berne, Bâle, Schaffhouse) — urbains, commerciaux, connectés aux réseaux internationaux (prébendière) — contre les cantons catholiques (Waldstätten, Lucerne, Fribourg, Soleure) — ruraux, traditionnels, liés aux Habsbourg et au Pape (patrimoniale). Les catholiques contrôlent la Tagsatzung (majorité numérique depuis Kappel 1531) et dominent l'administration des baillages communs. Les protestants, plus riches et plus peuplés, contestent cette hégémonie. L'allongement de la phase (+31 ans par rapport à la norme) s'explique par deux facteurs : la faiblesse du proto-État (l'enjeu ne vaut pas une guerre) et l'exutoire mercenaire (qui canalise l'énergie compétitive des élites vers l'étranger).
+- deviation: +31 ans par rapport à la norme (~200 ans). Allongement modéré, explicable par la faiblesse du proto-État confédéral et l'exutoire mercenaire.
 
-### Subphase : Essor oligarchique (~1481-1515)
+### Subphase : Essor oligarchique (1481-1515)
 - type: subphase
 - phase: oligarchique
-- start: ~1481
+- start: 1481
 - end: 1515
 - title: Essor oligarchique
 - summary: Expansion rapide de la Confédération de 10 à 13 cantons (Bâle, Schaffhouse, Appenzell rejoignent entre 1501 et 1513). Les guerres d'Italie projettent la puissance militaire suisse au-delà des Alpes. Le système mercenaire enrichit les élites dirigeantes et confère à la Confédération une influence internationale disproportionnée.
@@ -138,13 +152,13 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 #### Saillant : 1er monarque oligarchique
 - type: saillant
 - start: ~1501
-- figure: Le système des XIII cantons / la Tagsatzung
-- subtitle: Le système des XIII cantons
+- figure: La Tagsatzung et les baillages communs
+- subtitle: Tagsatzung
 - title: 1er monarque oligarchique
-- confidence: low
-- alternatives: On pourrait placer ce saillant dès 1481 (la Stanser Verkommnis crée le cadre institutionnel). On pourrait aussi arguer qu'il n'y a pas de « 1er monarque oligarchique » au sens classique, puisque la Confédération n'a jamais de fisc central, d'armée permanente ou d'administration centrale au niveau confédéral. Mais le framework autorise explicitement les saillants institutionnels plutôt que personnels (cf. Venise), et la Confédération dispose après 1501 d'un système de gouvernance des baillages communs, d'arbitrage confédéral, et de mobilisation militaire coordonnée qui constitue un État embryonnaire.
-- summary: Le « monarque oligarchique » suisse n'est pas une personne mais un système : la Confédération des Treize Cantons, avec la Tagsatzung comme organe délibératif, les baillages communs comme administration partagée, et le système de mobilisation militaire cantonale. Comme pour Venise, le Parcours est porté par un système institutionnel, pas par un individu.
-- description: La Confédération suisse après 1501 présente les traits minimaux de la phase oligarchique, mais exclusivement au niveau cantonal pour les marqueurs institutionnels. Au niveau confédéral, la Tagsatzung siège plusieurs fois par an, chaque canton délègue deux représentants, les décisions requièrent l'unanimité sur la plupart des sujets. Les baillages communs (Gemeine Herrschaften) — Argovie, Thurgovie, Tessin, entre autres — sont administrés conjointement par les cantons souverains qui y envoient des baillis (Landvögte) en rotation bisannuelle. Le système de mobilisation permet de lever jusqu'à 36 000 hommes pour la défense confédérale. Au niveau cantonal, les institutions sont bien développées : Berne dispose d'un Conseil des Deux-Cents, d'un fisc cantonal, d'une administration de ses territoires sujets (Vaud, Argovie). La confiance est basse parce que les marqueurs institutionnels centraux classiques (fisc, armée, administration permanents et unifiés) n'existent qu'au niveau cantonal.
+- confidence: medium
+- alternatives: On pourrait placer ce saillant dès 1481 (la Stanser Verkommnis crée le cadre institutionnel) ou dès 1415 (conquête de l'Argovie, premier baillage commun). Le choix de ~1501 correspond au moment où la Confédération atteint 13 cantons et où le système des baillages communs est pleinement opérationnel.
+- summary: Le « monarque oligarchique » suisse est le proto-État confédéral : la Tagsatzung comme organe délibératif et les baillages communs (Gemeine Herrschaften) comme territoires administrés conjointement. Ce proto-État est faible comparé aux appareils cantonaux (pas de fisc unifié, pas d'armée permanente), mais il est réel : il administre des territoires, lève des revenus, envoie des fonctionnaires (baillis). C'est une sorte d'UE médiévale — et c'est le contrôle de ce proto-État qui constitue l'enjeu de la compétition entre factions pour le reste de la phase.
+- description: Le proto-État confédéral s'est constitué progressivement à partir du début du XVe siècle. L'Argovie (conquise en 1415) est le premier baillage commun ; la Thurgovie, le Tessin, le comté de Baden et d'autres territoires suivent. Après l'expansion à 13 cantons (1501-1513), le système est pleinement opérationnel : la Tagsatzung siège plusieurs fois par an, chaque canton délègue deux représentants, les baillages communs sont administrés par des baillis (Landvögte) en rotation bisannuelle entre les cantons souverains. Le système de mobilisation militaire cantonale permet de lever jusqu'à 36 000 hommes. Les marqueurs institutionnels classiques (fisc, armée, administration permanents et unifiés) n'existent qu'au niveau cantonal — Berne, Zurich et Lucerne disposent chacune de leur propre appareil étatique. Mais le proto-État confédéral est l'institution supra-cantonale dont le contrôle structure la compétition politique entre cantons, et c'est à ce niveau que se jouera la guerre sociale.
 
 #### Saillant : Pic oligarchique
 - type: saillant
@@ -167,63 +181,54 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - summary: La bataille de Marignan (13-14 septembre 1515) est la défaite décisive des Confédérés face à François Ier de France. L'artillerie française cause des pertes considérables lors d'un combat acharné de deux jours. C'est la dernière fois qu'une armée confédérale combat à l'étranger.
 - description: Marignan est le tournant stratégique du Parcours suisse — l'analogue de Cateau-Cambrésis pour la France (1559) ou d'Agnadello pour Venise (1509). L'armée confédérale est vaincue par François Ier grâce à la supériorité de l'artillerie française, dans un combat de deux jours extraordinairement sanglant. Les Suisses perdent entre 6 000 et 10 000 hommes. La « Paix perpétuelle » (Traité de Fribourg, 1516) formalise les relations franco-suisses : les Suisses renoncent à Milan en échange de pensions et de privilèges commerciaux. Après 1515, la Confédération ne mène plus jamais de guerre offensive à l'étranger comme force unifiée. La neutralité suisse, qui deviendra la marque identitaire du pays, commence ici. L'expansion extérieure cesse de fonctionner comme exutoire pour les ambitions collectives — désormais, seul le système mercenaire (individuel et cantonal, pas confédéral) continue de canaliser l'énergie militaire vers l'étranger.
 
-### Subphase : Polarisation des élites (1529-1656)
+### Subphase : Polarisation des élites (1515-1653)
 - type: subphase
 - phase: oligarchique
-- start: 1529
-- end: 1656
-- title: Polarisation confessionnelle
-- summary: La Réforme protestante (Zwingli à Zurich 1519, Calvin à Genève 1536) scinde la Confédération en deux blocs confessionnels irréconciliables. Les Guerres de Kappel (1529, 1531) établissent une hégémonie catholique qui paralyse le système confédéral. Le système mercenaire prolonge cette paralysie en fournissant un exutoire aux ambitions des élites.
-- description: La polarisation suisse est d'une longueur exceptionnelle (~127 ans) mais s'explique par des mécanismes bien identifiés. La Réforme divise la Confédération en deux camps qui recoupent partiellement le clivage urbain-rural : les cantons protestants (Zurich, Berne, Bâle, Schaffhouse) sont majoritairement urbains, commerciaux, connectés aux réseaux internationaux ; les cantons catholiques (les Waldstätten, Lucerne, Zoug, Fribourg, Soleure) sont majoritairement ruraux, traditionnels, liés aux Habsbourg et au Pape. Ce clivage correspond à la distinction prébendière/patrimoniale : les élites protestantes tirent leur pouvoir du commerce et des réseaux étatiques, les élites catholiques d'un patrimoine foncier et de traditions locales. Les Guerres de Kappel (1529, 1531) se soldent par la victoire catholique et la mort de Zwingli à Kappel am Albis (1531). Le Deuxième Paix de Kappel établit un statu quo confessionnel qui fige la carte religieuse et donne aux catholiques la majorité à la Tagsatzung. Pendant 125 ans (1531-1656), les deux blocs coexistent dans une guerre froide, le clivage confessionnel empêchant toute action collective. La Guerre de Trente Ans (1618-1648) est soigneusement évitée — les deux camps savent qu'y participer déchirerait la Confédération. Le Traité de Westphalie (1648), grâce au diplomate Johann Rudolf Wettstein, reconnaît formellement l'indépendance suisse vis-à-vis du Saint-Empire. Le système mercenaire absorbe l'énergie compétitive : la compétition pour les pensions étrangères (France vs Empire vs Pape) devient un axe majeur de rivalité entre cantons, mais elle se joue à l'étranger plutôt qu'à l'intérieur.
+- start: 1515
+- end: 1653
+- title: Polarisation des élites
+- summary: La Réforme protestante (Zwingli à Zurich 1519, Calvin à Genève 1536) scinde la Confédération en deux blocs qui se disputent le contrôle du proto-État confédéral (Tagsatzung + baillages communs). Les Guerres de Kappel (1529, 1531) donnent aux catholiques la majorité à la Tagsatzung et le contrôle des baillages communs. La polarisation est longue (138 ans) parce que l'enjeu est modeste (proto-État faible) et l'exutoire mercenaire canalise les tensions.
+- description: La polarisation suisse est d'une longueur exceptionnelle (~138 ans) mais s'explique par deux mécanismes : la faiblesse de l'enjeu et l'exutoire mercenaire. La Réforme divise la Confédération en deux factions qui correspondent à la distinction prébendière/patrimoniale : les cantons protestants (Zurich, Berne, Bâle, Schaffhouse) sont majoritairement urbains, commerciaux, connectés aux réseaux internationaux (prébendière) ; les cantons catholiques (Waldstätten, Lucerne, Zoug, Fribourg, Soleure) sont majoritairement ruraux, traditionnels, liés aux Habsbourg et au Pape (patrimoniale). L'enjeu de la compétition est le contrôle du proto-État confédéral : la Tagsatzung et les baillages communs. Les Guerres de Kappel (1529, 1531) se soldent par la victoire catholique et la mort de Zwingli à Kappel am Albis (1531). La Deuxième Paix de Kappel fige la carte confessionnelle et donne aux catholiques la majorité à la Tagsatzung et le contrôle des baillages communs — les catholiques dominent le proto-État. Les protestants, plus riches et plus peuplés, contestent cette hégémonie mais n'escaladent pas : le proto-État est trop faible pour que l'enjeu justifie une guerre, et le système mercenaire canalise l'énergie compétitive vers l'étranger. La Guerre de Trente Ans (1618-1648) est soigneusement évitée — les deux camps savent qu'y participer déchirerait la Confédération. Le Traité de Westphalie (1648), grâce au diplomate bâlois Johann Rudolf Wettstein, reconnaît formellement l'indépendance suisse vis-à-vis du Saint-Empire.
 
-### Subphase : Guerre sociale (1656-1712)
+### Subphase : Guerre sociale (1653-1712)
 - type: subphase
 - phase: oligarchique
-- start: 1656
+- start: 1653
 - end: 1712
-- title: Guerre sociale confessionnelle
-- summary: Les deux Guerres de Villmergen (1656, 1712) constituent la guerre sociale suisse. La Première Guerre de Villmergen (1656) se solde par une victoire catholique qui maintient le statu quo. La Deuxième Guerre de Villmergen (1712) renverse l'hégémonie catholique et établit la parité confessionnelle — le « tiers » qui émerge est le système patricien trans-confessionnel.
-- description: La guerre sociale suisse est atypique par sa durée (56 ans entre les deux Guerres de Villmergen, 183 ans si l'on inclut les Guerres de Kappel) et par son mode de résolution. Les deux factions sont identifiables : les cantons catholiques (patrimoniale — ruraux, terriens, traditionnels, liés aux Habsbourg et au Pape) et les cantons protestants (prébendière — urbains, commerciaux, liés à la France et aux Pays-Bas). La Première Guerre de Villmergen (janvier 1656) est déclenchée par les persécutions anti-protestantes à Schwyz. Les catholiques l'emportent malgré une infériorité numérique. Le Troisième Landfrieden maintient le statu quo. La Deuxième Guerre de Villmergen (mai-août 1712) est déclenchée par les travaux forcés imposés aux protestants du Toggenbourg par les autorités catholiques de Saint-Gall. Cette fois, les protestants (Zurich et Berne en tête) l'emportent décisivement. Le Traité d'Aarau (11 août 1712) met fin à l'hégémonie catholique et établit la parité confessionnelle. La résolution n'est pas la victoire d'un camp sur l'autre mais la neutralisation du clivage confessionnel lui-même : après 1712, la question confessionnelle cesse d'être le clivage structurant de la politique suisse. Le « tiers » qui émerge est sociologique plutôt que personnel : le système patricien, qui s'est progressivement constitué dans les deux camps (Berne protestante et Lucerne catholique ont toutes deux des patriciats fermés), s'impose comme le pouvoir dominant. Ni les « vieux catholiques » ni les « réformateurs protestants » ne l'emportent — ce sont les familles patriciennes, trans-confessionnelles dans leur logique de classe, qui consolident le pouvoir.
+- title: Guerre sociale
+- summary: La guerre sociale suisse est le conflit ouvert pour le contrôle du proto-État confédéral (Tagsatzung + baillages communs). Elle s'ouvre avec la Guerre des Paysans (1653), se poursuit par les deux Guerres de Villmergen (1656, 1712), et se résout par le transfert du contrôle des baillages communs aux cantons protestants (Berne, Zurich). Le « tiers » qui émerge est le patriciat trans-confessionnel.
+- description: La guerre sociale suisse se déroule en trois temps et porte sur un enjeu précis : le contrôle du proto-État confédéral. En 1653, la Guerre des Paysans — déclenchée par une dévaluation monétaire bernoise — s'étend de l'Entlebuch (Lucerne, catholique) à l'Emmental (Berne, protestant). Les paysans de la Ligue de Huttwil contestent le droit même des patriciats à gouverner. Le fait décisif est la réponse : Berne et Lucerne, malgré leur rivalité confessionnelle, coopèrent pour écraser la révolte — la solidarité de classe des patriciats est déjà plus forte que le clivage confessionnel. Trois ans plus tard, la Première Guerre de Villmergen (1656) éclate : les catholiques l'emportent et maintiennent leur contrôle de la Tagsatzung et des baillages communs. Le Troisième Landfrieden fige les positions. Enfin, la Deuxième Guerre de Villmergen (1712), déclenchée par les persécutions du Toggenbourg, renverse l'hégémonie catholique. Le Traité d'Aarau (1712) transfère le contrôle des baillages communs (Freie Ämter, Thurgovie, vallée du Rhin, Sargans, comté de Baden) aux cantons protestants — Berne et Zurich dominent désormais le proto-État. La Tagsatzung est déplacée de Baden à Frauenfeld. La résolution n'est pas la victoire d'une confession sur l'autre mais l'émergence d'un « tiers » sociologique : le patriciat trans-confessionnel, dont la logique de classe transcende le clivage confessionnel.
 
 #### Saillant : Guerre sociale
 - type: saillant
-- start: 1656
+- start: 1653
 - end: 1712
-- subtitle: Guerres de Villmergen
+- subtitle: Guerre des Paysans — Guerres de Villmergen
 - title: Guerre sociale
 - confidence: medium
-- alternatives: On pourrait élargir la guerre sociale à 1529-1712 (incluant les Guerres de Kappel). Argument pour : la polarisation confessionnelle est continue depuis 1529. Argument contre : les Guerres de Kappel sont trop tôt dans la phase oligarchique (l'essor est à peine terminé) et correspondent mieux à la polarisation qu'à la guerre sociale proprement dite. La guerre sociale au sens strict — conflit actif entre deux factions aboutissant à l'émergence d'un tiers — commence avec la Première Guerre de Villmergen (1656).
-- summary: La guerre sociale suisse oppose les cantons catholiques (patrimoniale) et les cantons protestants (prébendière) dans deux guerres inter-cantonales (1656, 1712). La résolution vient de l'établissement de la parité confessionnelle (1712), qui neutralise le clivage confessionnel et permet au système patricien trans-confessionnel de s'imposer.
-- description: La guerre sociale suisse est la plus longue identifiée dans les parcours connus (56 ans si l'on compte les deux Guerres de Villmergen, 183 ans si l'on remonte aux Guerres de Kappel). Son allongement s'explique par la structure décentralisée de la Confédération (pas de mécanisme central pour forcer la résolution), par l'exutoire mercenaire (qui absorbe l'énergie compétitive), et par la neutralité suisse (pas de pression extérieure pour trancher). La résolution est analogue aux autres cas mais avec un « tiers » sociologique plutôt que personnel : ni les catholiques (patrimoniale) ni les protestants (prébendière) ne l'emportent définitivement — ce sont les patriciats cantonaux, dont la logique de classe transcende le clivage confessionnel, qui s'imposent comme le pouvoir dominant. Ce « tiers » institutionnel est comparable aux Inquisiteurs d'État vénitiens : une classe administrative qui tire son pouvoir de sa position dans l'appareil étatique plutôt que de son appartenance factionnelle.
-
-#### Saillant : Pivot interne
-- type: saillant
-- start: 1653
-- subtitle: Guerre des Paysans
-- title: Guerre des Paysans suisse
-- confidence: medium
-- summary: La Guerre des Paysans de 1653 est la plus grande révolte populaire de l'Ancien Régime confédéral. Elle est écrasée par les autorités patriciennes — mais le fait essentiel est que les patriciats catholique (Lucerne) et protestant (Berne) coopèrent pour la réprimer, démontrant leur solidarité trans-confessionnelle de classe.
-- description: En 1653, une dévaluation de la monnaie bernoise déclenche une révolte fiscale qui s'étend de la vallée de l'Entlebuch (Lucerne, catholique) à l'Emmental (Berne, protestant), puis à Soleure, Bâle et Argovie. Les paysans s'organisent dans la Ligue de Huttwil (Huttwiler Bund) et, fait sans précédent, contestent le droit même des autorités patriciennes à gouverner — un acte de remise en cause radicale de l'ordre établi. Les autorités urbaines de Lucerne et de Berne coopèrent pour écraser la révolte : six meneurs sont décapités, un est pendu. Cette coopération trans-confessionnelle des patriciats est révélatrice : en 1653, la solidarité de classe des élites dirigeantes est déjà plus forte que le clivage confessionnel. La Guerre des Paysans n'est pas la guerre sociale elle-même (c'est une révolte populaire, pas un conflit entre factions élitaires) mais elle annonce la résolution : le « tiers » patricien est déjà en train de se constituer en tant que classe trans-confessionnelle.
+- alternatives: On pourrait restreindre la guerre sociale aux seules Guerres de Villmergen (1656-1712), en excluant la Guerre des Paysans de 1653 au motif qu'il s'agit d'une révolte populaire et non d'un conflit inter-élitaire. Argument contre : la Guerre des Paysans est le moment où le mécanisme de la guerre sociale devient visible — l'abandon des clientèles populaires par les deux factions et la cristallisation du tiers patricien trans-confessionnel. On pourrait aussi élargir à 1529-1712 (incluant les Guerres de Kappel). Argument contre : les Guerres de Kappel sont trop tôt dans la phase (l'essor est à peine terminé) et correspondent mieux à la polarisation.
+- summary: La guerre sociale suisse est le conflit pour le contrôle du proto-État confédéral. La Guerre des Paysans (1653) révèle la solidarité de classe trans-confessionnelle des patriciats. Les deux Guerres de Villmergen (1656, 1712) sont le conflit inter-élitaire pour le contrôle de la Tagsatzung et des baillages communs. La résolution (1712) transfère le contrôle des baillages communs aux cantons protestants (Berne, Zurich).
+- description: La guerre sociale suisse dure 59 ans (1653-1712), porte sur un enjeu concret — le contrôle du proto-État confédéral (Tagsatzung + baillages communs) — et se déroule en trois épisodes. La Guerre des Paysans (1653) est le catalyseur : les clientèles populaires délaissées par les deux factions élitaires se révoltent, et la coopération trans-confessionnelle des patriciats (Berne et Lucerne) pour les réprimer révèle que le « tiers » est déjà en formation. La Première Guerre de Villmergen (1656) est la phase aiguë inter-élitaire : les cantons catholiques (patrimoniale) l'emportent et maintiennent leur contrôle des baillages communs. La Deuxième Guerre de Villmergen (1712) est la résolution : les protestants l'emportent décisivement, le Traité d'Aarau transfère le contrôle des baillages communs (Freie Ämter, Thurgovie, vallée du Rhin, Sargans, comté de Baden) à Berne et Zurich, et la Tagsatzung est déplacée de Baden à Frauenfeld. Le « tiers » qui émerge est le patriciat trans-confessionnel : ni les « vieux catholiques » ni les « réformateurs protestants » ne l'emportent en tant que faction confessionnelle — c'est la logique de classe patricienne, constituée dans les deux camps, qui s'impose. Ce « tiers » institutionnel est comparable aux Inquisiteurs d'État vénitiens.
 
 ---
 
 ## Phase : Absolutiste
 - type: phase
 - phase: absolutiste
-- start: ~1712
+- start: 1712
 - end: 1798
 - title: Phase absolutiste
 - typical_duration: ~200 ans
 - actual_duration: ~86 ans
 - resolution: Interrompue par l'invasion française de 1798, qui déclenche la Révolution Nationale
 - summary: La phase absolutiste suisse est la plus courte du corpus (~86 ans), interrompue exogènement par l'invasion napoléonienne. Elle se distingue par un absolutisme cantonal et non confédéral : les patriciats urbains (Berne, Lucerne, Fribourg, Soleure) exercent un pouvoir incontesté sur leurs territoires respectifs, mais aucun pouvoir central ne s'impose au niveau confédéral. L'absolutisme suisse est institutionnel et trans-confessionnel, analogue aux Inquisiteurs d'État vénitiens. La phase connaît un Ancien Régime bref (1760-1798) caractérisé par la sclérose patricienne, la sédimentation des élites et l'émergence d'un bloc contestataire éclairé (Rousseau, Société Helvétique).
-- description: L'absolutisme suisse opère au niveau cantonal, pas confédéral. Après la résolution de la guerre sociale confessionnelle (1712), les patriciats de Berne, Lucerne, Fribourg et Soleure atteignent une domination incontestée sur leurs territoires. Berne est le cas paradigmatique : la loi constitutionnelle de 1643 a formalisé la classe de familles éligibles au Grand Conseil ; les « Gnädige Herren » (Gracieuses Seigneuries) administrent le plus grand État-cité au nord des Alpes, avec des territoires sujets vastes (Vaud, Argovie), un fisc efficace, et une bureaucratie développée. Des processus analogues se déroulent à Lucerne (catholique) et à Fribourg (la « Lettre des Deux-Cents » de 1627, fermeture définitive en 1684). L'absolutisme suisse n'a pas de DGRO (Dernière Grande Révolte Oligarchique) — les patriciens sont concentrés dans les villes sans base territoriale de contestation, exactement comme à Venise. La Guerre des Paysans de 1653, antérieure à la phase absolutiste stricto sensu, est la dernière tentative de défi populaire. La phase est interrompue après seulement 86 ans par l'invasion française de 1798, qui détruit l'Ancien Régime confédéral. Sans Napoléon, la phase absolutiste aurait vraisemblablement duré 150-200 ans, avec un Ancien Régime plus mûr et une RN endogène.
+- description: L'absolutisme suisse opère au niveau cantonal, pas confédéral. Après la résolution de la guerre sociale (1712), les patriciats de Berne, Lucerne, Fribourg et Soleure atteignent une domination incontestée sur leurs territoires. Berne est le cas paradigmatique : la loi constitutionnelle de 1643 a formalisé la classe de familles éligibles au Grand Conseil ; les « Gnädige Herren » (Gracieuses Seigneuries) administrent le plus grand État-cité au nord des Alpes, avec des territoires sujets vastes (Vaud, Argovie), un fisc efficace, et une bureaucratie développée. Des processus analogues se déroulent à Lucerne (catholique) et à Fribourg (la « Lettre des Deux-Cents » de 1627, fermeture définitive en 1684). L'absolutisme suisse n'a pas de DGRO (Dernière Grande Révolte Oligarchique) — les patriciens sont concentrés dans les villes sans base territoriale de contestation, exactement comme à Venise. La Guerre des Paysans de 1653, antérieure à la phase absolutiste stricto sensu, est la dernière tentative de défi populaire. La phase est interrompue après seulement 86 ans par l'invasion française de 1798, qui détruit l'Ancien Régime confédéral. Sans Napoléon, la phase absolutiste aurait vraisemblablement duré 150-200 ans, avec un Ancien Régime plus mûr et une RN endogène.
 - deviation: -114 ans par rapport à la norme (~200 ans). Phase interrompue exogènement par l'invasion française de 1798, exactement comme la phase absolutiste d'Israël antique (Josias, -640) est interrompue par l'Égypte en -609 (31 ans seulement).
 
-### Subphase : Absolutisation (~1712-~1760)
+### Subphase : Absolutisation (1712-~1760)
 - type: subphase
 - phase: absolutiste
-- start: ~1712
+- start: 1712
 - end: ~1760
 - title: Absolutisation
 - summary: Après 1712, les patriciats cantonaux consolident un pouvoir incontesté. Le clivage confessionnel étant neutralisé, la logique de classe patricienne s'impose dans les deux camps. Les cantons urbains développent une administration efficace de leurs territoires sujets.
@@ -231,7 +236,7 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 
 #### Saillant : 1er monarque absolu
 - type: saillant
-- start: ~1712
+- start: 1712
 - figure: Le système patricien
 - subtitle: Les « Gnädige Herren »
 - title: 1er monarque absolu
@@ -240,10 +245,10 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - summary: Le « 1er monarque absolu » suisse n'est pas une personne mais un système : le patriciat trans-confessionnel qui, après la résolution du clivage confessionnel (1712), exerce un pouvoir incontesté au niveau cantonal. C'est un absolutisme institutionnel, analogue aux Inquisiteurs d'État vénitiens.
 - description: L'identification du « 1er monarque absolu » suisse est le point le plus incertain du Parcours. La confiance est basse parce que l'absolutisme opère au niveau cantonal et non confédéral, et parce qu'il n'y a pas de figure personnelle (pas de Henri IV, pas de Josias, pas de Maximilien Ier). Le parallèle le plus pertinent est Venise, où les Inquisiteurs d'État constituent un « monarque absolu » institutionnel. De même, le patriciat suisse est une classe qui exerce un pouvoir absolu sans être incarnée par un seul individu. La fermeture des patriciats (Berne 1643, Fribourg 1627-1684, Lucerne fin XVIIe) est un processus progressif qui atteint son aboutissement après la résolution du clivage confessionnel (1712). Après cette date, aucune force — ni confessionnelle, ni populaire, ni institutionnelle — ne peut contester le pouvoir patricien dans les cantons urbains.
 
-### Subphase : Impérialisme absolutiste / Pic absolutiste (~1712-~1760)
+### Subphase : Impérialisme absolutiste / Pic absolutiste (1712-~1760)
 - type: subphase
 - phase: absolutiste
-- start: ~1712
+- start: 1712
 - end: ~1760
 - title: Impérialisme absolutiste
 - summary: L'impérialisme suisse est entièrement intérieur — il prend la forme de la consolidation administrative des territoires sujets et du rayonnement culturel des Lumières suisses. Le pic absolutiste se situe vers 1740-1760, quand Berne est au sommet de sa puissance et de son prestige.
@@ -284,7 +289,7 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - type: phase
 - phase: rn
 - start: 1798
-- end: 1848
+- end: 1847
 - title: Révolution Nationale
 - typical_duration: 25-80 ans
 - actual_duration: ~50 ans
@@ -293,19 +298,19 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - description: La RN suisse est déclenchée exogènement — l'invasion française de mars 1798 détruit l'Ancien Régime confédéral — mais les conditions endogènes sont réunies : sédimentation élitaire, bloc contestataire éclairé, frustrations populaires (affaires Chenaux et Stäfa). La République helvétique (1798-1803) impose une centralisation radicale sur le modèle français : abolition de la souveraineté cantonale, des droits féodaux, des territoires sujets. C'est l'expérience parlementaire — une assemblée élue gouverne, l'égalité civique est proclamée. Mais la centralisation est rejetée par les cantons ruraux et les populations traditionnelles. La phase aiguë se manifeste dans le Stecklikrieg (« Guerre des Bâtons », 1802) — une guerre civile entre fédéralistes (ruraux, conservateurs) et unitaires (centralisateurs). Napoléon intervient comme Thermidor : l'Acte de Médiation (1803) restaure le fédéralisme tout en conservant les acquis libéraux (abolition des territoires sujets, 6 nouveaux cantons). La Restauration (1815) ramène les conservateurs au pouvoir. La vague libérale de 1830 (Régénération) polarise les cantons entre libéraux et conservateurs, menant à la formation du Sonderbund (1845) et à sa défaite militaire en 27 jours (novembre 1847). La Constitution de 1848 est la Glorieuse Révolution suisse.
 - deviation: dans la norme (~50 ans)
 
-### Subphase : Révolution initiale (1798-1803)
+### Subphase : Révolution initiale (1798-1815)
 - type: subphase
 - phase: rn
 - start: 1798
-- end: 1803
+- end: 1815
 - title: Révolution initiale
-- summary: De l'invasion française (mars 1798) à l'Acte de Médiation (février 1803). La séquence explosion → expérience parlementaire → phase aiguë → moment thermidorien se déroule en 5 ans — plus rapide que la France (10 ans, 1789-1799) mais plus lente que l'Angleterre si l'on compare en proportion.
+- summary: De l'invasion française (mars 1798) à la chute de Napoléon (1815). La séquence explosion → expérience parlementaire → phase aiguë se déroule en 5 ans (1798-1803). Le moment thermidorien (Acte de Médiation, 1803) dure ensuite 12 ans, anormalement long parce qu'il est adossé à la puissance napoléonienne. Quand Napoléon tombe, le compromis thermidorien tombe avec lui et la Restauration commence (Congrès de Vienne, 1815). Pas d'Impérialiste Revanchard — la Suisse est trop petite pour l'impérialisme revanchard, et la phase IR est structurellement absorbée par le protectorat napoléonien.
 
-#### Saillant : Explosion de l'Ancien Régime
+#### Saillant : Explosion de l'AR
 - type: saillant
 - start: 1798
-- subtitle: Invasion française et République helvétique
-- title: Explosion de l'Ancien Régime
+- subtitle: Invasion française
+- title: Explosion de l'AR
 - confidence: high
 - summary: Le 5 mars 1798, les troupes françaises envahissent la Suisse. Le 12 avril, 121 délégués cantonaux proclament la République helvétique, « une et indivisible ». L'Ancien Régime confédéral est détruit en quelques semaines : souveraineté cantonale abolie, droits féodaux abrogés, distinction entre cantons souverains et territoires sujets supprimée.
 - description: L'explosion de l'Ancien Régime suisse est la plus brutale du corpus : elle est provoquée par une invasion étrangère, non par un effondrement intérieur. Les troupes françaises du Directoire envahissent la Suisse en mars 1798, renversant en quelques semaines un système vieux de trois siècles. La résistance est réelle mais vaine : les cantons centraux (Uri, Schwyz, Nidwald) lèvent une armée d'environ 10 000 hommes sous Alois von Reding pour résister à l'envahisseur, mais la disproportion des forces est écrasante. La République helvétique, proclamée le 12 avril 1798, impose une constitution unitaire sur le modèle français : abolition de la souveraineté cantonale, des droits féodaux, des territoires sujets ; égalité civique, centralisation administrative, uniformisation juridique. Le trésor bernois (6 millions de francs) est saisi par les Français. C'est un basculement total : les élites qui soutenaient l'Ancien Régime basculent dans l'opposition (les patriciens bernois sont dépossédés), un gouvernement de coalition élargie remplace l'exécutif absolutiste — les marqueurs nécessaires de la RN sont réunis.
@@ -337,7 +342,7 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - title: Moment thermidorien
 - confidence: high
 - summary: Le 19 février 1803, Napoléon impose l'Acte de Médiation qui dissout la République helvétique et restaure le fédéralisme suisse. « La nature a fait votre État fédératif, vouloir la vaincre n'est pas d'un sage. » C'est un Thermidor imposé de l'extérieur — Napoléon joue le rôle que le Directoire joue en France après la Terreur.
-- description: L'Acte de Médiation est le moment thermidorien de la RN suisse, avec une particularité unique : c'est une puissance étrangère (Napoléon) qui l'impose, pas une faction intérieure. Napoléon convoque les délégués suisses à Paris, écoute les doléances des deux camps, et rédige un compromis qui restaure la souveraineté cantonale tout en conservant les acquis libéraux essentiels : abolition des territoires sujets, création de six nouveaux cantons (Saint-Gall, Grisons, Argovie, Thurgovie, Tessin, Vaud), égalité des anciens sujets. L'Acte stabilise la Suisse en donnant satisfaction aux fédéralistes (retour à l'autonomie cantonale) et aux libéraux (maintien de l'égalité civique). Napoléon formule la doctrine qui restera la clé de voûte de la politique suisse : « la nature a fait votre État fédératif ». C'est un acte de modération imposé — un Thermidor qui met fin à la radicalisation et ouvre une période de stabilité relative sous protectorat français.
+- description: L'Acte de Médiation est le moment thermidorien de la RN suisse, avec une particularité unique : c'est une puissance étrangère (Napoléon) qui l'impose, pas une faction intérieure. Napoléon convoque les délégués suisses à Paris, écoute les doléances des deux camps, et rédige un compromis qui restaure la souveraineté cantonale tout en conservant les acquis libéraux essentiels : abolition des territoires sujets, création de six nouveaux cantons (Saint-Gall, Grisons, Argovie, Thurgovie, Tessin, Vaud), égalité des anciens sujets. L'Acte stabilise la Suisse en donnant satisfaction aux fédéralistes (retour à l'autonomie cantonale) et aux libéraux (maintien de l'égalité civique). Napoléon formule la doctrine qui restera la clé de voûte de la politique suisse : « la nature a fait votre État fédératif ». Ce Thermidor est anormalement long (1803-1815) parce qu'il est adossé à la puissance napoléonienne : tant que Napoléon tient, le compromis tient. La Suisse est un protectorat français stable, ses troupes servent dans la Grande Armée (notamment à la Bérézina, 1812), et la séquence RN est en suspens. Quand Napoléon tombe (1814-1815), le compromis thermidorien tombe avec lui et la Restauration commence au Congrès de Vienne. La RN suisse n'a pas d'Impérialiste Revanchard : la Suisse est trop petite pour produire un IR endogène, et la phase IR est structurellement absorbée par le protectorat napoléonien.
 
 ### Subphase : Restauration (1815-1847)
 - type: subphase
@@ -345,22 +350,21 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 - start: 1815
 - end: 1847
 - title: Restauration
-- summary: Le Congrès de Vienne (1815) restaure un ordre conservateur : le Pacte fédéral de 1815 renforce l'autonomie cantonale, les patriciats retrouvent partiellement le pouvoir, la neutralité suisse est garantie internationalement. Trois nouveaux cantons sont ajoutés (Valais, Neuchâtel, Genève), portant le total à 22.
-- description: La Restauration suisse suit la chute de Napoléon (1814-1815). Le Pacte fédéral de 1815, négocié au Congrès de Vienne, restaure une large autonomie cantonale et ramène au pouvoir les anciennes élites patriciennes dans plusieurs cantons. Les acquis de l'ère helvétique sont partiellement maintenus (les anciens territoires sujets restent des cantons autonomes) mais le conservatisme domine. La neutralité suisse est formellement garantie par les puissances européennes — c'est un acquis durable qui deviendra l'un des piliers de l'identité nationale. Trois nouveaux cantons rejoignent la Confédération (Valais, Neuchâtel, Genève), portant le total à 22. La période 1815-1830 est une restauration au sens plein : le pouvoir est entre les mains des conservateurs, les réformes sont bloquées, le système ressemble partiellement à l'Ancien Régime.
+- summary: Le Congrès de Vienne (1815) restaure un ordre conservateur : le Pacte fédéral de 1815 renforce l'autonomie cantonale, les patriciats retrouvent partiellement le pouvoir, la neutralité suisse est garantie internationalement. À partir de 1830, la Régénération libérale secoue les cantons protestants et prépare l'affrontement final avec le bloc conservateur (Sonderbund, 1845).
+- description: La Restauration suisse suit la chute de Napoléon (1814-1815). Le Pacte fédéral de 1815, négocié au Congrès de Vienne, restaure une large autonomie cantonale et ramène au pouvoir les anciennes élites patriciennes dans plusieurs cantons. Les acquis de l'ère helvétique sont partiellement maintenus (les anciens territoires sujets restent des cantons autonomes) mais le conservatisme domine. La neutralité suisse est formellement garantie par les puissances européennes — c'est un acquis durable qui deviendra l'un des piliers de l'identité nationale. Trois nouveaux cantons rejoignent la Confédération (Valais, Neuchâtel, Genève), portant le total à 22. La période 1815-1830 est une restauration au sens plein : le pouvoir est entre les mains des conservateurs, les réformes sont bloquées, le système ressemble partiellement à l'Ancien Régime. À partir de 1830, la Révolution de Juillet en France déclenche la Régénération : dans les cantons protestants, le peuple rural marche sur les villes et impose des constitutions cantonales garantissant la liberté de la presse, le suffrage élargi, la responsabilité ministérielle. Cela provoque une réaction conservatrice dans les cantons catholiques : l'invitation des Jésuites par Lucerne (1844) cristallise l'opposition. Sept cantons catholiques conservateurs — Lucerne, Fribourg, Valais, Uri, Schwyz, Unterwald, Zoug — forment le Sonderbund (« alliance séparée ») en 1845, en violation du Pacte fédéral qui interdit les alliances séparées. La majorité libérale de la Tagsatzung vote la dissolution du Sonderbund le 21 octobre 1847.
 
-### Subphase : Régénération et Glorieuse Révolution (1830-1848)
-- type: subphase
-- phase: rn
-- start: 1830
-- end: 1848
-- title: Régénération et Glorieuse Révolution
-- summary: La Révolution de Juillet 1830 en France déclenche une vague libérale en Suisse. Dans les cantons protestants, le peuple rural impose des constitutions libérales. Les cantons conservateurs (catholiques) résistent et forment le Sonderbund (1845). La guerre du Sonderbund (novembre 1847, 27 jours, ~100 morts) et la Constitution fédérale de 1848 ancrent le parlementarisme — c'est la Glorieuse Révolution suisse.
-- description: La Régénération (1830-1848) est la réplique de la révolution initiale qui complète la RN et ancre le parlementarisme — exactement comme la Glorieuse Révolution anglaise (1688) ou les Trois Glorieuses françaises (1830). La Révolution de Juillet 1830 déclenche une vague libérale dans les cantons protestants : le peuple rural marche sur les villes et impose des constitutions cantonales garantissant la liberté de la presse, le suffrage élargi, la responsabilité ministérielle. Cela provoque une réaction conservatrice dans les cantons catholiques : l'invitation des Jésuites par le canton de Lucerne (1844) cristallise l'opposition. Sept cantons catholiques conservateurs — Lucerne, Fribourg, Valais, Uri, Schwyz, Unterwald, Zoug — forment le Sonderbund (« alliance séparée ») en 1845, en violation du Pacte fédéral de 1815 qui interdit les alliances séparées. La majorité libérale de la Tagsatzung vote la dissolution du Sonderbund le 21 octobre 1847. Le général Guillaume Henri Dufour mène une armée fédérale de 100 000 hommes contre les forces du Sonderbund. La campagne dure 27 jours (3-29 novembre 1847) et fait environ 100 morts — c'est la Glorieuse Révolution la moins sanglante du corpus. Dufour insiste sur un traitement humanitaire des vaincus, préfigurant la Croix-Rouge qu'il co-fondera en 1863 avec Henry Dunant. La Constitution fédérale de 1848, adoptée le 12 septembre, crée un État fédéral avec un parlement bicaméral (Conseil national, Conseil des États), un exécutif collégial de 7 membres (Conseil fédéral), un marché commun (abolition des douanes internes), une armée fédérale, et une monnaie unique (le franc suisse, 1850).
+#### Saillant : Restauration
+- type: saillant
+- start: 1815
+- subtitle: Pacte fédéral
+- title: Restauration
+- confidence: high
+- summary: Le Congrès de Vienne (1815) met fin au protectorat napoléonien et restaure un ordre conservateur. Le Pacte fédéral de 1815 renforce l'autonomie cantonale, les patriciats retrouvent partiellement le pouvoir, et la neutralité suisse est garantie internationalement par les grandes puissances. Trois nouveaux cantons (Valais, Neuchâtel, Genève) portent le total à 22.
+- description: La Restauration suisse marque la fin du long Thermidor napoléonien (1803-1815). Le Pacte fédéral de 1815, négocié au Congrès de Vienne, remplace l'Acte de Médiation et restaure une large autonomie cantonale. Les anciennes élites patriciennes reviennent au pouvoir dans plusieurs cantons. Les acquis fondamentaux de l'ère helvétique sont toutefois maintenus : les anciens territoires sujets restent des cantons autonomes, l'égalité civique n'est pas formellement révoquée. La neutralité suisse est formellement garantie par les puissances européennes — un acquis durable. La période 1815-1830 est une restauration au sens plein, suivie à partir de 1830 par la Régénération libérale qui prépare l'affrontement final avec le bloc conservateur.
 
 #### Saillant : Glorieuse Révolution
 - type: saillant
 - start: 1847
-- end: 1848
 - figure: Guillaume Henri Dufour
 - subtitle: Sonderbund et Constitution
 - title: Glorieuse Révolution
@@ -373,7 +377,7 @@ Ce dédoublement d'échelle est analogue au cas allemand (la Prusse porte le mot
 ## Phase : Parlementaire
 - type: phase
 - phase: parlementaire
-- start: 1848
+- start: 1847
 - title: Phase parlementaire
 - summary: La Suisse entre en phase parlementaire avec la Constitution de 1848 et développe le système de démocratie directe le plus abouti au monde.
 - description: La Constitution de 1848 subordonne le pouvoir administratif à la représentation nationale. Le Conseil national (chambre basse) est la source ultime du pouvoir. Le Conseil fédéral (exécutif collégial de 7 membres) est élu par l'Assemblée fédérale (les deux chambres réunies). La révision constitutionnelle de 1874 introduit le référendum facultatif ; l'initiative populaire est ajoutée en 1891. La Suisse développe un système unique de démocratie directe qui donne au peuple un pouvoir de veto (référendum) et de proposition (initiative) permanent. La « formule magique » (répartition des sièges du Conseil fédéral entre les principaux partis), adoptée en 1959, institutionnalise le consensus comme mode de gouvernement. La stabilité est remarquable : la Suisse n'a connu aucune rupture institutionnelle depuis 1848, traversant deux guerres mondiales sans y participer. C'est l'un des parcours les plus réussis du corpus en termes de stabilité post-RN.

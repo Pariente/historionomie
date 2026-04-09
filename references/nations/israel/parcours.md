@@ -9,9 +9,11 @@
 - status: complet
 - highlight_1: Le Parcours le plus perturbé du corpus | Deux reboots (Babylone -586, destruction du Temple 70), un prolongement (conquête macédonienne -332), un transfert territorial (choc assyrien -722) et une RN avortée (66-70) | https://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Hayez_017.jpg?width=120 | absolutiste
 - highlight_2: Transfert territorial (-722) | Le choc assyrien transfère le Parcours de la Samarie vers la Judée sans le faire redémarrer — la phase oligarchique est allongée, pas interrompue | https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Saul_and_David.jpg?width=120 | oligarchique
-- highlight_3: Double cycle absolutiste | Josias ouvre le premier (avorté après 54 ans par Babylone), Simon Thassi ouvre le second (206 ans, durée conforme). Bar Kokhva est un monarque absolu, pas un révolutionnaire national | https://commons.wikimedia.org/wiki/Special:FilePath/Stattler-Machabeusze.jpg?width=120 | absolutiste
-- highlight_4: Un peuple indestructible | Le peuple juif préserve son homogénéité culturelle pendant 1800 ans d'exil après 135 — preuve que le Parcours est porté par un peuple, pas par un État | https://commons.wikimedia.org/wiki/Special:FilePath/Arthur_Szyk_(1894-1951)._Bar_Kochba_(1927),_Paris.jpg?width=120 | rn
-- subtitle: Douze siècles de construction nationale, trois destructions, un peuple indestructible
+- highlight_3: Hellénisation : hétérogénéisation | La conquête macédonienne (-332) hétérogénéise la société judéenne — langue grecque, institutions hellénistiques, élites acculturées — et prolonge la phase oligarchique en retardant la polarisation | https://commons.wikimedia.org/wiki/Special:FilePath/Stattler-Machabeusze.jpg?width=120 | oligarchique
+- highlight_4: Kitos : un phénomène du Parcours romain | La guerre de Kitos (115-117) mobilise les communautés juives de diaspora à l'apogée absolutiste de Trajan — c'est une rébellion périphérique du Parcours romain, pas du Parcours juif | https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Lawrence_Alma-Tadema,_RA,_OM_-_The_Triumph_of_Titus_-_The_Flavians_-_Walters_3731.jpg?width=120 | absolutiste
+- highlight_5: Bar Kokhva : un monarque absolu | Bar Kokhva exerce un pouvoir absolutiste pur — titre de Nassi, frappe monétaire, exécution sans procès — c'est un monarque absolu menant une guerre d'indépendance, pas un impérialiste revanchard | https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_and_workshop_002.jpg?width=120 | absolutiste
+- highlight_6: Un peuple indestructible | Le peuple juif préserve son homogénéité culturelle pendant 1800 ans d'exil après 135 — preuve que le Parcours est porté par un peuple, pas par un État | https://commons.wikimedia.org/wiki/Special:FilePath/Tissot_The_Flight_of_the_Prisoners.jpg?width=120 | rn
+- subtitle: Salomon, vous êtes un pic féodal ?!
 - confidence: high (cas de référence, article détaillé rédigé)
 
 ---
@@ -341,14 +343,14 @@
 - phase: absolutiste
 - occurrence: 2
 - start: -140
-- end: 66
+- end: 135
 - title: Phase absolutiste (2e occurrence)
 - typical_duration: ~200 ans
-- resolution: Éclatement de la sédimentation — la Grande Révolte de 66 explose l'Ancien Régime sadducéen devenu insoutenable (sédimentation des élites, pression fiscale, surproduction élitaire).
-- resolution_conditions: Sédimentation complète (les Sadducéens monopolisent le Temple et ses revenus), homogénéité culturelle maximale (alphabétisation synagogale, littérature apocalyptique), formation du bloc contestataire (Pharisiens ED + Zélotes EG vs Sadducéens), et crise de légitimité (brutalité des procurateurs romains).
-- summary: La deuxième phase absolutiste s'étend des Hasmonéens à Hérode et parcourt l'intégralité de la séquence typique — absolutisation, impérialisme absolutiste et Ancien Régime — en 206 ans, durée parfaitement conforme à la norme endogène.
-- description: La deuxième phase absolutiste traverse l'intégralité de la séquence typique en 206 ans. Simon Thassi inaugure l'absolutisation en concentrant entre ses mains la grande prêtrise, le commandement militaire et l'ethnarchie — fusion du pouvoir politique et religieux caractéristique du début de la phase. La révolte pharisienne contre Alexandre Jannée, écrasée dans le sang (800 crucifixions), clôt la dernière résistance oligarchique. Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent, une armée professionnelle de mercenaires et un monopole absolu de la force. Après sa mort en -4, le royaume est divisé puis passe sous procurateurs romains, ouvrant un Ancien Régime marqué par la sédimentation sadducéenne, la surproduction élitaire et la montée d'un bloc contestataire pharisien-zélote.
-- deviation: dans la norme (206 ans)
+- resolution: AVORTÉE — le Parcours est interrompu par la liquidation hadrienne (135). Le peuple juif préserve son homogénéité culturelle en exil pendant 1800 ans, permettant une reprise au XIXe siècle.
+- resolution_conditions: Non atteintes. Hadrien déploie 6 légions, rase Jérusalem, interdit le judaïsme. La destruction est si totale que le Parcours ne peut pas reprendre sur ce territoire — mais le peuple préserve son homogénéité culturelle en exil.
+- summary: La deuxième phase absolutiste s'étend des Hasmonéens à Bar Kokhva et parcourt l'intégralité de la séquence typique — absolutisation, impérialisme absolutiste, Ancien Régime — en 275 ans, traversant la RN avortée de 66-70 sans que celle-ci ne brise la phase. Le reboot post-70 ramène le Parcours en phase absolutiste, et Bar Kokhva (132) incarne un bref impérialisme absolutiste avant la liquidation hadrienne.
+- description: La deuxième phase absolutiste s'étend sur 275 ans, de Simon Thassi à Bar Kokhva. Simon Thassi inaugure l'absolutisation en concentrant entre ses mains la grande prêtrise, le commandement militaire et l'ethnarchie. La révolte pharisienne contre Alexandre Jannée, écrasée dans le sang (800 crucifixions), clôt la dernière résistance oligarchique. Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent, une armée professionnelle de mercenaires et un monopole absolu de la force. Après sa mort en -4, le royaume passe sous procurateurs romains, ouvrant un Ancien Régime marqué par la sédimentation sadducéenne et la montée du bloc contestataire pharisien-zélote. La RN avortée de 66-70 traverse la phase sans la briser : la destruction du Temple provoque un reboot qui ramène le Parcours en phase absolutiste, l'homogénéité culturelle étant préservée par l'académie de Yavné. Bar Kokhva (132-135) incarne un bref impérialisme absolutiste avant la liquidation définitive par Hadrien.
+- deviation: Prolongée (~275 ans pour ~200 ans typiques) — le reboot de 70 relance la phase absolutiste au lieu de la clore.
 
 ### Subphase : Absolutisation
 - type: subphase
@@ -407,7 +409,7 @@
 - summary: La mort d'Hérode en -4 entraîne la division du royaume entre ses trois fils, puis la déposition d'Archélaüs et le passage de la Judée sous procurateurs romains, mettant fin à toute possibilité d'expansion.
 - description: La mort d'Hérode en -4 révèle la fragilité d'un pouvoir construit autour d'un seul homme. Le royaume est divisé entre ses trois fils : Archélaüs reçoit la Judée, Antipas la Galilée, Philippe la Trachonitide. Archélaüs, incapable de maintenir l'ordre (massacre de 3 000 Juifs lors de la Pâque), est déposé par Rome en l'an 6 et remplacé par des procurateurs romains. L'expansion est définitivement terminée : le territoire est désormais encadré par Rome, et aucun souverain judéen ne dispose plus des moyens de projeter sa puissance vers l'extérieur. Le Parcours entre dans la phase d'Ancien Régime.
 
-### Subphase : Ancien Régime
+### Subphase : Ancien Régime (4-66)
 - type: subphase
 - phase: absolutiste
 - start: 4
@@ -415,6 +417,15 @@
 - title: Ancien Régime
 - summary: L'Ancien Régime judéen présente tous les marqueurs classiques : sédimentation de l'aristocratie sadducéenne, pression fiscale écrasante, surproduction élitaire, littérature contestataire (apocalyptique et messianique), et formation d'un bloc contestataire pharisien-zélote face au bloc élitaire sadducéen et pro-romain.
 - description: L'aristocratie sacerdotale sadducéenne contrôle le Temple et ses revenus considérables, tandis que les grands prêtres s'approprient les dîmes des prêtres ordinaires (Josèphe, Antiquités XX, 8-9). La population est écrasée par la pression fiscale romaine et sacerdotale combinée. La surproduction élitaire — trop d'élites pour trop peu de positions — alimente une littérature apocalyptique et messianique qui exprime l'attente d'un renversement radical de l'ordre établi. Les synagogues se diffusent et l'alphabétisation religieuse progresse, portant l'homogénéité culturelle à son maximum — mais cette homogénéité alimente paradoxalement la contestation en donnant au peuple un cadre idéologique commun pour penser sa révolte. Le bloc contestataire réunit les Pharisiens (extrême-droite structurelle, nostalgiques de l'ordre hasmonéen) et les Zélotes (extrême-gauche, révolutionnaires prêts à renverser la table), face au bloc élitaire des Sadducéens et de l'aristocratie pro-romaine.
+
+### Subphase : Ancien Régime exogène (70-132)
+- type: subphase
+- phase: absolutiste
+- start: 70
+- end: 132
+- title: Ancien Régime exogène
+- summary: Après le reboot de 70, l'AR se poursuit sous domination romaine directe. L'académie de Yavné préserve l'homogénéité culturelle, le vide oligarchique est total (toutes les anciennes factions éliminées sauf les Pharisiens), et la domination romaine maintient les conditions d'un Ancien Régime exogène jusqu'à la révolte de Bar Kokhva (132).
+- description: La destruction du Temple en 70 anéantit les réseaux du pouvoir central — Temple, Sanhédrin, Grand Sacerdoce, fiscalité autonome — mais l'homogénéité culturelle est préservée et même renforcée par l'académie de Yavné. Yohanan ben Zakkaï y fonde un centre d'étude qui fixe le canon biblique, standardise la liturgie et poursuit la codification halakhique. Cette autorité est purement normative — elle ne repose sur aucune infrastructure matérielle, ce qui la rend indestructible par la force militaire. Le reboot ramène le Parcours en phase absolutiste car les conditions y sont réunies : le vide oligarchique est total, un pouvoir central fort existe (Rome), et l'homogénéité culturelle est au maximum. L'AR exogène se poursuit sous domination romaine jusqu'à la révolte de Bar Kokhva (132).
 
 ---
 
@@ -431,12 +442,12 @@
 - description: La Grande Révolte de 66-70 présente tous les marqueurs d'une Révolution Nationale. L'Ancien Régime sadducéen explose quand le procurateur Florus provoque le basculement même des élites romanisées dans la révolte. Un gouvernement de coalition est instauré après la victoire de Beth Horon, avec frappe du shekel « Israël » — expérience parlementaire. Puis les Zélotes prennent le contrôle, éliminent les modérés et assassinent le Grand Prêtre Ananus — phase aiguë classique. Mais la RN est écrasée par six légions romaines sous Vespasien puis Titus avant le moment thermidorien. La destruction du Temple en 70 provoque un reboot, mais l'homogénéité culturelle est préservée par l'académie de Yavné, permettant un redémarrage en phase absolutiste.
 - deviation: Avortée après 4 ans (écrasée par Rome)
 
-### Subphase : Révolution initiale (avortée)
+### Subphase : Révolution initiale
 - type: subphase
 - phase: rn
 - start: 66
 - end: 70
-- title: Révolution initiale (avortée)
+- title: Révolution initiale
 - summary: La RN parcourt en quatre ans seulement les étapes de l'explosion, de l'expérience parlementaire et de la phase aiguë, mais l'écrasement romain empêche toute suite : il n'y a ni moment thermidorien, ni Impérialiste Revanchard, ni Restauration, ni Glorieuse Révolution.
 - description: La Révolution Nationale judéenne traverse les trois premières étapes de la séquence typique en un temps extrêmement compressé — quatre ans seulement. L'explosion de l'Ancien Régime, l'expérience parlementaire et la phase aiguë s'enchaînent sans répit. Mais l'intervention militaire romaine écrase la révolte avant qu'elle ne puisse atteindre le moment thermidorien, c'est-à-dire la purge de l'extrême-gauche par le centre et la droite. La RN est donc avortée : aucune des étapes ultérieures — Impérialiste Revanchard, Restauration, Glorieuse Révolution — ne peut se produire. C'est cette interruption qui explique le reboot vers la phase absolutiste.
 
@@ -453,7 +464,7 @@
 - type: saillant
 - start: 66
 - end: 67
-- subtitle: Shekel d'Israël
+- subtitle: Gouvernement de coalition
 - title: Expérience parlementaire
 - confidence: high
 - summary: Un gouvernement provisoire de coalition réunissant Pharisiens, Sadducéens modérés et Zélotes est instauré après la victoire de Beth Horon, et la frappe du shekel inscrit « Israël » affirme une conscience nationale souveraine.
@@ -479,34 +490,14 @@
 - summary: Titus assiège Jérusalem et détruit le Second Temple en 70, mettant fin à la RN avant qu'elle ne puisse atteindre le moment thermidorien et provoquant un reboot du Parcours.
 - description: Titus assiège Jérusalem pendant plusieurs mois avant de prendre la ville et de détruire le Second Temple. Les pertes sont massives — 600 000 à 1 000 000 de morts selon Josèphe. Massada, dernier bastion zélote, tombe en 74. L'écrasement est total : toutes les factions politiques sont éliminées, sauf les Pharisiens. Ce sont ces derniers, sous la conduite de Yohanan ben Zakkaï, qui refondent le judaïsme sur l'étude de la Torah et le culte synagogal, préservant ainsi l'homogénéité culturelle malgré la destruction institutionnelle. C'est cette préservation culturelle qui explique que le reboot ne ramène le Parcours qu'à la phase absolutiste, et non à une phase antérieure.
 
----
-
-## Perturbation : Guerre de Kitos
-- type: perturbation
-- perturbation_type: rebellion_peripherique
-- start: 115
-- end: 117
-- title: Guerre de Kitos
-- summary: La guerre de Kitos est une rébellion périphérique du Parcours romain, non du Parcours juif : elle mobilise les communautés juives de diaspora à l'apogée absolutiste de Trajan, tandis que la Judée elle-même n'est pas ou très marginalement impliquée.
-- description: Le soulèvement de 115-117 embrase simultanément les communautés juives de Cyrénaïque, d'Égypte et de Chypre, mais la Judée n'est pas ou très marginalement impliquée. Ce soulèvement survient au moment précis de la campagne parthique de Trajan, c'est-à-dire à l'apogée absolutiste de l'Empire romain. C'est le schéma classique de la rébellion périphérique : à l'acmé de la puissance impériale, l'État central provoque à ses marges les conditions de sa propre contestation. Cet événement relève donc du Parcours romain, non du Parcours juif, et ne doit pas être confondu avec une étape du Parcours national d'Israël.
-
----
-
-## Phase : Absolutiste [3] (Reboot)
-- type: phase
+### Subphase : Impérialisme absolutiste (reboot)
+- type: subphase
 - phase: absolutiste
-- occurrence: 3
-- perturbation_origin: reboot
-- reboot_from: rn
-- start: 70
+- start: 132
 - end: 135
-- title: Phase absolutiste (reboot)
-- typical_duration: ~200 ans
-- resolution: AVORTÉE — le Parcours est définitivement interrompu par la liquidation hadrienne (135). Le peuple juif préserve son homogénéité culturelle en exil pendant 1800 ans, permettant une reprise au XIXe siècle.
-- resolution_conditions: Non atteintes. Hadrien déploie 6 légions, rase Jérusalem, interdit le judaïsme. La destruction est si totale que le Parcours ne peut pas reprendre sur ce territoire.
-- summary: Le reboot post-70 fait régresser le Parcours de la RN vers la phase absolutiste. Le vide oligarchique, la présence d'un pouvoir central fort (Rome) et la préservation de l'homogénéité culturelle par l'académie de Yavné créent directement les conditions d'entrée en phase absolutiste, mais celle-ci est définitivement interrompue par la liquidation hadrienne de 135.
-- deviation: Interrompu après 65 ans (liquidation définitive par Hadrien)
-- description: La destruction du Second Temple en 70 anéantit les réseaux du pouvoir central — Temple, Sanhédrin, Grand Sacerdoce, fiscalité autonome — mais l'homogénéité culturelle est préservée et même renforcée par l'académie de Yavné. Yohanan ben Zakkaï y fonde un centre d'étude qui fixe le canon biblique, standardise la liturgie et poursuit la codification halakhique. Cette autorité est purement normative — elle ne repose sur aucune infrastructure matérielle, ce qui la rend indestructible par la force militaire. Le Parcours, après le reboot, entre directement en phase absolutiste car les conditions y sont réunies : le vide oligarchique est total (toutes les anciennes factions sont éliminées), un pouvoir central fort existe (Rome), et l'homogénéité culturelle est au maximum. Mais cette phase n'a le temps de produire qu'un seul saillant — Bar Kokhva — avant d'être définitivement interrompue par Hadrien en 135.
+- title: Impérialisme absolutiste (reboot)
+- summary: Après le reboot de 70, Bar Kokhva incarne un bref impérialisme absolutiste — titre de Nassi, onction messianique, frappe monétaire autonome — avant la liquidation par Hadrien en 135.
+- description: Le reboot de 70 ramène le Parcours en phase absolutiste. L'académie de Yavné préserve l'homogénéité culturelle, et le vide oligarchique total (toutes les anciennes factions éliminées) crée les conditions d'un nouveau cycle absolutiste. Bar Kokhva (132-135) en est le seul saillant : il exerce un pouvoir absolutiste pur (titre de Nassi, frappe monétaire, réquisitions, exécution sans procès) dans le cadre d'une guerre d'indépendance. C'est un impérialisme absolutiste compressé — la tentative de reconquête du territoire — avant la liquidation définitive par Hadrien.
 
 #### Saillant : 1er monarque absolu
 - type: saillant
@@ -518,12 +509,12 @@
 - summary: Bar Kokhva prend le titre de Nassi (prince), reçoit l'onction messianique de Rabbi Akiva et exerce un pouvoir absolu sans aucune consultation, incarnant non pas un révolutionnaire national mais un monarque absolu menant une guerre d'indépendance.
 - description: Bar Kokhva s'attribue le titre de Nassi (prince) et reçoit l'onction messianique de Rabbi Akiva, ce qui lui confère une légitimité à la fois politique et religieuse. Son exercice du pouvoir est entièrement absolutiste : frappe monétaire autonome, réquisitions, ordres sans consultation, exécution de Rabbi Éléazar de Modi'in sans procès — preuve que l'exécutif contrôle la hiérarchie ecclésiastique. Il est essentiel de comprendre que Bar Kokhva n'est pas un révolutionnaire national au sens de la RN : c'est un monarque absolu menant une guerre d'indépendance, ce qui correspond exactement à la position du Parcours après le reboot de 70.
 
-#### Saillant : Liquidation définitive
+#### Saillant : Liquidation
 - type: saillant
 - avortement: true
 - start: 135
 - subtitle: Aelia Capitolina
-- title: Liquidation définitive
+- title: Liquidation
 - confidence: high
-- summary: Hadrien écrase la révolte de Bar Kokhva, rase Jérusalem, interdit le judaïsme et renomme la province Syria Palaestina. Le Parcours antique d'Israël est définitivement interrompu.
-- description: Hadrien déploie six légions sous le commandement de Sextus Julius Severus. Betar est capturée, Bar Kokhva tué. Le judaïsme est interdit, Rabbi Akiva exécuté, Jérusalem rasée et rebâtie sous le nom d'Aelia Capitolina, la province renommée Syria Palaestina — une damnatio memoriae à l'échelle d'une province. Le Parcours antique est terminé. Mais l'académie se reconstitue à Ousha puis à Tibériade, Rabbi Yehouda HaNassi rédige la Mishna (fin du IIe siècle), et le peuple juif préserve son homogénéité culturelle pendant 1800 ans en exil — rendant possible la reprise du Parcours au XIXe siècle avec le mouvement sioniste.
+- summary: Hadrien écrase la révolte de Bar Kokhva, rase Jérusalem, interdit le judaïsme et renomme la province Syria Palaestina. Le Parcours antique d'Israël est interrompu.
+- description: Hadrien déploie six légions sous le commandement de Sextus Julius Severus. Betar est capturée, Bar Kokhva tué. Le judaïsme est interdit, Rabbi Akiva exécuté, Jérusalem rasée et rebâtie sous le nom d'Aelia Capitolina, la province renommée Syria Palaestina — une damnatio memoriae à l'échelle d'une province. Mais l'académie se reconstitue à Ousha puis à Tibériade, Rabbi Yehouda HaNassi rédige la Mishna (fin du IIe siècle), et le peuple juif préserve son homogénéité culturelle pendant 1800 ans en exil — rendant possible la reprise du Parcours au XIXe siècle avec le mouvement sioniste.

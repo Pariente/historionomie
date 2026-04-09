@@ -1,25 +1,39 @@
 # Parcours de Venise
 
 ## Metadata
-- nation: Venise (Vénétie)
+- nation: Venise
 - territory: Vénétie
 - flag: images/venise/flag.png
 - start: 726
 - end: 1866 (absorption dans le Parcours italien)
 - status: à valider
-- subtitle: Du lagon des réfugiés à la Sérénissime, onze siècles sans roi
-- highlight_1: Le Parcours le plus long du corpus | ~1140 ans — la lagune, forteresse naturelle, protège les institutions de toute destruction exogène. Cinq boucles féodales, une phase oligarchique de 637 ans | https://commons.wikimedia.org/wiki/Special:FilePath/Accademia_-_Miracle_of_the_Holy_Cross_at_Rialto_by_Vittore_Carpaccio.jpg?width=120 | feodale
-- highlight_2: Expansion permanente comme anti-polarisation | L'expansion maritime (Stato da Màr, IVe croisade 1204, Terraferma) fournit des exutoires aux élites et retarde la polarisation pendant des siècles | https://commons.wikimedia.org/wiki/Special:FilePath/Eug%C3%A8ne_Ferdinand_Victor_Delacroix_012.jpg?width=120 | oligarchique
-- highlight_3: Absolutisme institutionnel unique | Les Inquisiteurs d'État concentrent le pouvoir sans qu'aucun individu ne devienne monarque absolu — un cas unique dans le corpus | https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Heintz_dJ_Sala_Maggior_Consiglio_Venezia.jpg?width=120 | absolutiste
-- highlight_4: RN avortée (1848) | La République de Manin est écrasée par l'Autriche après 17 mois — le Parcours s'achève par absorption dans le Parcours italien (1866) | https://commons.wikimedia.org/wiki/Special:FilePath/Daniele_Manin_Repubblica_di_Venezia.jpg?width=120 | rn
-- question_1: 1848 : une RN nord-italienne & une RN vénitienne ? | Les événements de 1848-1849 à Venise sont-ils une RN proprement vénitienne (bloc contestataire endogène, clivage gauche-droite qui saute, expérience parlementaire autonome) ou une composante locale de la RN nord-italienne plus large ? La République de San Marco a ses propres factions (républicains vs fusionnistes), sa propre assemblée, son propre IR potentiel (Manin aux pouvoirs illimités) — mais elle s'inscrit aussi dans le Printemps des peuples et le Risorgimento. Les deux lectures ne sont pas mutuellement exclusives : il peut y avoir superposition de deux Parcours en phase RN simultanée.
+- subtitle: Who would win: la Serenissima, or a Corsican badboy?
+- highlight_1: 637 ans de phase oligarchique | Tant que l'expansion territoriale (Stato da Màr, IVe croisade, Terraferma) offre des exutoires aux élites, la polarisation ne se fait pas et l'essor oligarchique se prolonge. Un record de durée dans le corpus. | https://commons.wikimedia.org/wiki/Special:FilePath/Eug%C3%A8ne_Ferdinand_Victor_Delacroix_012.jpg?width=120 | oligarchique
+- highlight_2: Inquisiteurs d'État : un monarque absolu | Le triumvirat concentre le pouvoir de surveillance, de censure et de répression sans qu'aucun individu ne devienne souverain — un absolutisme institutionnel unique dans le corpus | https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Heintz_dJ_Sala_Maggior_Consiglio_Venezia.jpg?width=120 | absolutiste
+- highlight_3: Bonaparte : destruction sans recul | Bonaparte détruit toutes les institutions endogènes (Grand Conseil, Libro d'Oro, Inquisiteurs) mais ne fait que prolonger l'Ancien Régime sous domination étrangère — française puis autrichienne. L'homogénéité culturelle survit intacte. | https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg?width=120 | absolutiste
+- highlight_4: 1848 : une RN avortée | La RN vénitienne échoue parce qu'elle advient à l'intérieur de l'Empire autrichien, alors en phase absolutiste — le rapport de forces est structurellement insurmontable. La République de Manin est écrasée après 17 mois. | https://commons.wikimedia.org/wiki/Special:FilePath/Daniele_Manin_Repubblica_di_Venezia.jpg?width=120 | rn
+- question_1: 1848 : deux RN superposées ? | La RN vénitienne est-elle une RN proprement vénitienne (bloc contestataire endogène, factions autonomes, expérience parlementaire propre), ou bien la RN nord-italienne qui se joue localement à Venise, ou bien les deux à la fois ? La superposition de deux Parcours en phase RN simultanée est possible.
 - confidence: medium
 
 ---
 
-## Pré-phase : Peuplement de la lagune (452-726)
-- type: note
+## Phase : Pré-féodale
+- type: phase
+- phase: prefeodale
+- start: 452
+- end: 726
+- title: Pré-féodale
+- summary: Près de trois siècles de percolation lagunaire. Les réfugiés des invasions barbares s'installent sur les îles de la lagune, chaque île élit un tribun, mais aucune autorité supra-régionale ne s'impose. L'ensemble reste dans l'orbite byzantine.
 - description: Les premières communautés de la lagune sont des réfugiés fuyant les invasions barbares — Huns d'Attila (452), puis surtout Lombards d'Alboïn (568-569). Les habitants d'Altinum, Oderzo, Concordia et d'autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum). Les tribuns forment un comité directeur sans chef unique. L'ensemble reste dans l'orbite byzantine, rattaché à l'exarchat de Ravenne. Torcello, avec environ 20 000 habitants, est le centre dominant. L'inaccessibilité du lagon confère une forteresse naturelle, mais aucune autorité supra-régionale ne s'impose — c'est la percolation.
+
+### Subphase : Percolation lagunaire (452-726)
+- type: subphase
+- phase: prefeodale
+- start: 452
+- end: 726
+- title: Percolation lagunaire
+- summary: Communautés gouvernées par des tribuns locaux sans autorité centrale. Pas de structure supra-régionale.
+- description: Les premières communautés lagunaires sont des réfugiés fuyant les invasions barbares — Huns d'Attila (452), puis Lombards d'Alboïn (568-569). Les habitants d'Altinum, Oderzo, Concordia et d'autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum) qui forme un comité directeur sans chef unique, le tout dans l'orbite byzantine. Aucune autorité supra-régionale ne s'impose — c'est la phase de percolation qui précède l'éveil féodal.
 
 ---
 
@@ -37,21 +51,12 @@
 - description: La phase féodale vénitienne est atypique dans sa forme mais classique dans sa dynamique. L'absence de féodalité terrienne — la « vassalité » est commerciale, fondée sur les réseaux de commerce maritime et le contrôle des routes du sel — n'empêche pas le mécanisme central de fonctionner : pouvoir personnel, alliances d'homme à homme, fragmentation à chaque succession. Cinq boucles pic/crise ponctuent la phase : les dynasties Galbaio, Partecipazio, Candiano et Orseolo représentent autant de tentatives d'héréditariser le pouvoir, chacune échouant devant la résistance des familles marchandes. La crise de 804-810, déclenchée par l'attaque de Pépin dans le lagon, cristallise l'identité vénitienne comme distincte des deux empires. Le pacte de 1032, qui abolit la co-régence, intervient quand les deux conditions de Deblonde sont réunies : homogénéité des familles marchandes après 300 ans de brassage lagunaire, et faiblesse post-Orseolo.
 - deviation: +106 ans par rapport à la norme (~200 ans). Au moins 5 boucles pic féodal / crise féodale, comparables au cas anglais (~500 ans, 5 boucles). L'environnement commercial-maritime et les factions (pro-byzantines, pro-franques, dynastiques) retardent le pacte.
 
-### Subphase : Percolation lagunaire (452-726)
-- type: subphase
-- phase: feodale
-- start: 452
-- end: 726
-- title: Percolation lagunaire
-- summary: Communautés gouvernées par des tribuns locaux sans autorité centrale. Pas de structure supra-régionale.
-- description: Les premières communautés lagunaires sont des réfugiés fuyant les invasions barbares — Huns d'Attila (452), puis Lombards d'Alboïn (568-569). Les habitants d'Altinum, Oderzo, Concordia et d'autres cités romaines de Vénétie se réfugient sur les îles de Torcello, Murano, Burano et le Lido. Chaque île élit un tribun (tribuni maritimorum) qui forme un comité directeur sans chef unique, le tout dans l'orbite byzantine. Aucune autorité supra-régionale ne s'impose — c'est la phase de percolation qui précède l'éveil féodal.
-
 ### Subphase : Coagulation des élites (726-1032)
 - type: subphase
 - phase: feodale
 - start: 726
 - end: 1032
-- title: Coagulation des élites — cinq boucles
+- title: Coagulation élitaire
 - summary: Cinq cycles pic féodal / crise féodale (Galbaio, Partecipazio, Candiano, Orseolo), chaque tentative dynastique échouant devant la résistance des familles marchandes.
 - description: La coagulation des élites vénitiennes s'étend sur plus de trois siècles et produit au moins cinq boucles pic féodal / crise féodale, un nombre comparable au cas anglais. Les dynasties Galbaio (764-804), Partecipazio (811-942), Candiano (959-976) et Orseolo (991-1026) représentent chacune une tentative de concentrer et d'héréditariser le pouvoir, qui échoue systématiquement devant la résistance des familles marchandes. La révolte de 976, où le palais ducal brûle et Pietro IV Candiano est tué pour avoir tenté d'importer la féodalité terrienne continentale, illustre la violence de ces résistances. La dernière boucle — les Orseolo, qui portent le pouvoir personnel à son maximum avec la conquête de la Dalmatie — aboutit au pacte de 1032 quand les conditions de Deblonde convergent enfin.
 
@@ -213,14 +218,14 @@
 - type: phase
 - phase: absolutiste
 - start: 1669
-- end: 1848
+- end: 1866
 - title: Phase absolutiste — endogène puis sous domination étrangère
 - typical_duration: ~200 ans
-- actual_duration: ~179 ans
-- resolution: Révolution Nationale avortée (1848)
-- summary: La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d'État après 1669 et le pic absolutiste de Morosini (1688). L'absolutisme vénitien est institutionnel — ce n'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l'absolutisme, il l'achève. L'Ancien Régime se poursuit sous domination étrangère (1797-1848) avec le même mécanisme de sédimentation et de convergence du bloc contestataire.
-- description: L'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (1688), élu doge à l'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le pic absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d'Oro brûlé —, et l'Ancien Régime se poursuit sous domination autrichienne avec le même mécanisme de sédimentation et de convergence du bloc contestataire jusqu'à la RN de 1848.
-- deviation: Dans la norme (~179 ans pour ~200 ans typiques).
+- actual_duration: ~197 ans
+- resolution: Absorption dans le Parcours italien (1866)
+- summary: La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d'État après 1669 et le pic absolutiste de Morosini (1688). L'absolutisme vénitien est institutionnel — ce n'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l'absolutisme, il l'achève. L'Ancien Régime se poursuit sous domination étrangère (1797-1866), traversant la RN avortée de 1848-1849 sans que celle-ci ne brise la phase absolutiste : l'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin.
+- description: L'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (1688), élu doge à l'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le pic absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d'Oro brûlé —, et l'Ancien Régime se poursuit sous domination autrichienne. La RN avortée de 1848-1849 ne brise pas la phase absolutiste : elle la traverse. L'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin, et l'AR exogène reprend jusqu'au plébiscite de 1866 qui absorbe Venise dans le Parcours italien. La durée totale (~197 ans) est dans la norme des ~200 ans typiques.
+- deviation: Dans la norme (~197 ans pour ~200 ans typiques).
 - confidence: medium
 - markers: |
     Marqueurs d'absolutisme présents :
@@ -229,14 +234,14 @@
     - Judiciaire subordonné (Avogadori impuissants face aux Inquisiteurs)
     - Polarisation décroissante (post-giovani/vecchi → consensus autour de l'appareil)
 
-### Subphase : Absolutisation (1669-1718)
+### Subphase : Absolutisation (1669-1688)
 - type: subphase
 - phase: absolutiste
 - start: 1669
-- end: 1718
-- title: Absolutisation — suprématie de l'exécutif
-- summary: La suprématie des Inquisiteurs d'État s'installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n'ont pas d'assise territoriale. Le pic absolutiste est Morosini (1688) : reconquête de la Morée, élection unanime au dogat depuis le champ de bataille. L'expansion prend fin avec le traité de Passarowitz (1718).
-- description: L'absolutisation vénitienne est « fluide » — elle se fait sans le choc dramatique d'une Dernière Grande Révolte Oligarchique (DGRO), parce que les patriciens n'ont pas d'assise territoriale depuis laquelle se révolter. Tous vivent dans le lagon, contrairement aux frondeurs français qui disposaient de Bordeaux ou aux lords anglais du Pilgrimage of Grace. La suprématie des Inquisiteurs s'installe progressivement après 1669, fondée sur leur réseau de surveillance et sur la continuité administrative des cittadini. Le pic absolutiste est Francesco Morosini, dont la reconquête de la Morée (1684-1699) et l'élection unanime au dogat depuis le champ de bataille portent le prestige de la République à son dernier sommet. L'expansion prend fin définitivement avec le traité de Passarowitz (1718).
+- end: 1688
+- title: Absolutisation
+- summary: La suprématie des Inquisiteurs d'État s'installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n'ont pas d'assise territoriale depuis laquelle se révolter.
+- description: L'absolutisation vénitienne est « fluide » — elle se fait sans le choc dramatique d'une Dernière Grande Révolte Oligarchique (DGRO), parce que les patriciens n'ont pas d'assise territoriale depuis laquelle se révolter. Tous vivent dans le lagon, contrairement aux frondeurs français qui disposaient de Bordeaux ou aux lords anglais du Pilgrimage of Grace. La suprématie des Inquisiteurs s'installe progressivement après 1669, fondée sur leur réseau de surveillance et sur la continuité administrative des cittadini.
 
 #### Saillant : 1er monarque absolu — Inquisiteurs d'État
 - type: saillant
@@ -277,33 +282,43 @@
 - summary: En 1761, Angelo Querini mène une tentative de réforme institutionnelle (Correzione) visant à redistribuer le pouvoir au sein du patriciat. Les Inquisiteurs d'État écrasent la tentative. L'échec confirme l'entrée en Ancien Régime.
 - description: La Correzione de 1761 est la remontrance vénitienne. Angelo Querini, patricien réformateur, tente de redistribuer le pouvoir au sein du Grand Conseil en limitant l'autorité des Inquisiteurs d'État et en ouvrant les charges aux nobles appauvris (barnabotti). C'est la tentative de la classe patricienne de reprendre des prérogatives à l'appareil exécutif absolutiste. Les Inquisiteurs écrasent la tentative. Le mouvement Pisani-Contarini (1779) est une réplique qui échoue de même. Ces contestations ne sont pas des DGRO (les contestataires n'ont pas d'assise territoriale) mais des remontrances : la classe administrative/patricienne tente de prendre des prérogatives au pouvoir absolu, et échoue. Structurellement identique à la Polysynodie française (1715), l'Apology of the Commons anglaise (1604), et la remontrance bavaroise (1848).
 
-### Subphase : Ancien Régime endogène (1718-1797)
+### Subphase : Impérialisme absolutiste (1688-1761)
 - type: subphase
 - phase: absolutiste
-- start: 1718
+- start: 1688
+- end: 1761
+- title: Impérialisme absolutiste
+- summary: Morosini porte le prestige vénitien à son dernier sommet (reconquête de la Morée, élection unanime au dogat). L'expansion prend fin avec Passarowitz (1718). La Correzione de 1761 — tentative du patriciat de redistribuer le pouvoir — marque la remontrance et ouvre l'Ancien Régime.
+- description: La sous-phase d'impérialisme absolutiste s'ouvre avec Francesco Morosini, dont la reconquête de la Morée (1684-1699) et l'élection unanime au dogat depuis le champ de bataille portent le prestige de la République à son dernier sommet. L'expansion prend fin définitivement avec le traité de Passarowitz (1718), qui entérine la perte de la Morée. Après cette date, le système entre en sédimentation progressive : le patriciat décline numériquement, les barnabotti apparaissent, le rayonnement culturel s'intensifie (Vivaldi, Canaletto, Tiepolo). La Correzione de 1761 — tentative d'Angelo Querini de redistribuer le pouvoir au sein du patriciat — est la remontrance qui clôt cette sous-phase et ouvre l'Ancien Régime.
+
+### Subphase : Ancien Régime (1761-1797)
+- type: subphase
+- phase: absolutiste
+- start: 1761
 - end: 1797
-- title: Ancien Régime endogène
-- summary: Sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), investissement foncier (villas palladiennes). Contestations du régime (Correzione de 1761, Pisani-Contarini 1779) — remontrances écrasées par les Inquisiteurs. Le bloc élitaire se cristallise, le clivage gauche-droite saute.
-- description: L'Ancien Régime vénitien endogène présente tous les marqueurs classiques de la sédimentation absolutiste. Les barnabotti — nobles appauvris de la paroisse San Barnaba, conservant leurs droits de vote mais vendant leur soutien au plus offrant — incarnent la sclérose du système. Le patriciat décline numériquement de ~2500 (XVIe siècle) à ~1300 (1775). Parallèlement, le rayonnement culturel est à son apogée : Vivaldi compose à l'Ospedale della Pietà, Canaletto peint les vedute qui définissent l'image de Venise, Tiepolo décore les palais d'Europe, Goldoni réinvente le théâtre. L'investissement foncier en Terraferma (villas palladiennes) transforme la classe marchande en gentry rentière. Les contestations du régime — la Correzione de Querini (1761), l'affaire Pisani-Contarini (1779) — ne sont pas des DGRO car les contestataires n'ont pas d'assise territoriale depuis laquelle se révolter : ce sont des défis de type polysynodie, des tentatives de redistribuer le pouvoir au sein de l'élite, systématiquement écrasés par les Inquisiteurs.
+- title: Ancien Régime
+- summary: Sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Goldoni, Tiepolo), investissement foncier (villas palladiennes). Le bloc élitaire se cristallise, le clivage gauche-droite saute.
+- description: L'Ancien Régime vénitien commence avec l'échec de la Correzione de 1761 et présente tous les marqueurs classiques de la sédimentation absolutiste. Les barnabotti — nobles appauvris de la paroisse San Barnaba, conservant leurs droits de vote mais vendant leur soutien au plus offrant — incarnent la sclérose du système. Le patriciat décline numériquement de ~2500 (XVIe siècle) à ~1300 (1775). Le rayonnement culturel est à son apogée : Goldoni réinvente le théâtre, Tiepolo décore les palais d'Europe. L'investissement foncier en Terraferma (villas palladiennes) transforme la classe marchande en gentry rentière. L'affaire Pisani-Contarini (1779) est une réplique de la remontrance qui échoue de même. Le bloc élitaire se cristallise, le clivage gauche-droite saute.
 
-### Perturbation : Avortement — conquête par Bonaparte (1797)
-- type: perturbation
-- subtype: avortement
+#### Saillant : Avortement — conquête par Bonaparte
+- type: saillant
+- avortement: true
 - start: 1797
-- end: 1798
-- title: Avortement — conquête par Bonaparte
+- figure: Napoléon Bonaparte
+- subtitle: Chute de la République
+- title: Avortement
 - confidence: high
-- summary: La conquête de Venise par Bonaparte en 1797 détruit les institutions endogènes vénitiennes : dissolution du Grand Conseil (12 mai 1797), Libro d'Oro brûlé (4 juin), traité de Campo Formio (17 octobre) cédant Venise à l'Autriche. Mais l'homogénéité culturelle vénitienne — langue, mémoire, conscience identitaire — survit intacte, et l'administration autrichienne impose un pouvoir absolutiste de substitution. Le Parcours ne recule pas : l'AR se poursuit sous domination étrangère.
-- description: Bonaparte détruit les institutions endogènes de la République — Grand Conseil dissous sous la pression militaire (vote 512 contre 20, 12 mai 1797), Libro d'Oro brûlé en place Saint-Marc (4 juin), appareil des Inquisiteurs, Sénat, Conseil des Dix, promissione ducale abolis, peine de mort décrétée pour quiconque crie « Viva San Marco ! ». Le doge Ludovico Manin retire le corne ducal : « Tole, questa no la doperaremo pi. » Le traité de Campo Formio (17 octobre 1797) cède Venise à l'Autriche sans consultation. L'administration autrichienne est pleinement installée en janvier 1798. C'est un avortement des institutions endogènes, mais **pas un reboot** : l'homogénéité culturelle vénitienne — langue vénitienne, mémoire républicaine, conscience identitaire distincte, réseaux sociaux — survit intacte. Et l'Autriche fournit un pouvoir absolutiste de substitution (administration centralisée, fisc, justice) qui maintient les conditions de l'AR. Le Parcours ne recule pas d'une phase — il continue en AR sous domination étrangère, avec le même mécanisme de sédimentation et la même formation du bloc contestataire. C'est ce qui rend la RN de 1848 possible : l'homogénéité est préservée, les conditions de l'AR persistent, et le bloc contestataire se cristallise sous domination autrichienne exactement comme il se serait cristallisé sous domination endogène.
+- summary: Bonaparte détruit toutes les institutions endogènes vénitiennes — dissolution du Grand Conseil, Libro d'Oro brûlé, traité de Campo Formio cédant Venise à l'Autriche. Venise bascule sous un Ancien Régime de domination étrangère.
+- description: En mai 1797, Bonaparte contraint le Grand Conseil à voter sa propre dissolution (512 contre 20). Le Libro d'Oro est brûlé en place Saint-Marc, l'appareil des Inquisiteurs, le Sénat, le Conseil des Dix sont abolis, la peine de mort est décrétée pour quiconque crie « Viva San Marco ! ». Le doge Ludovico Manin retire le corne ducal : « Tole, questa no la doperaremo pi. » Le traité de Campo Formio (17 octobre 1797) cède Venise à l'Autriche sans consultation. C'est un avortement des institutions endogènes, mais pas un reboot : l'homogénéité culturelle survit intacte, et l'Autriche fournit un pouvoir absolutiste de substitution. L'AR se poursuit sous domination étrangère.
 
-### Subphase : Ancien Régime sous domination étrangère (1797-1848)
+### Subphase : Ancien Régime exogène (1797-1866)
 - type: subphase
 - phase: absolutiste
 - start: 1797
-- end: 1848
-- title: Ancien Régime sous domination étrangère
-- summary: L'Autriche exerce le pouvoir absolutiste sur le territoire vénitien. Le moteur culturel reste actif (dialecte, mémoire, identité), le moteur étatique est bloqué (pas d'institutions autonomes). Le remplacement des élites s'opère : la bourgeoisie professionnelle remplace le patriciat. Le bloc contestataire se cristallise : ED (« Viva San Marco ! ») et EG (Risorgimento) convergent contre le bloc élitaire autrichien. Le clivage gauche-droite saute.
-- description: L'Ancien Régime sous domination étrangère prolonge les mécanismes de sédimentation dans un cadre nouveau. L'administration autrichienne exerce un pouvoir central absolu mais dépourvu de légitimité aux yeux de la population vénitienne. Les Congregazioni Centrali offrent un cadre consultatif minimal où grands propriétaires et bourgeois interagissent, mais sans pouvoir réel. Le remplacement des élites est le fait marquant de cette période : le patriciat est juridiquement aboli, mais ses membres conservent leurs biens et leurs réseaux ; c'est la bourgeoisie professionnelle — héritière des cittadini — qui émerge comme nouvelle classe dirigeante. Le bloc contestataire se forme en combinant deux pôles : les ED (nostalgiques de la République, « Viva San Marco ! », anciens patriciens déclassés) et les EG (bourgeoisie libérale, républicains du Risorgimento, carbonari, intellectuels de l'Ateneo Veneto). Les deux convergent contre le bloc élitaire (administration autrichienne + collaborateurs) : le clivage gauche-droite a sauté, comme dans tout Ancien Régime avancé.
+- end: 1866
+- title: Ancien Régime exogène
+- summary: L'Autriche exerce le pouvoir absolutiste sur le territoire vénitien. Le moteur culturel reste actif (dialecte, mémoire, identité), le moteur étatique est bloqué (pas d'institutions autonomes). Le remplacement des élites s'opère : la bourgeoisie professionnelle remplace le patriciat. Le bloc contestataire se cristallise : ED (« Viva San Marco ! ») et EG (Risorgimento) convergent contre le bloc élitaire autrichien. Le clivage gauche-droite saute. La RN avortée de 1848-1849 traverse cette sous-phase sans la briser — l'Autriche rétablit son pouvoir immédiatement après l'écrasement. La sous-phase s'achève par le plébiscite de 1866 qui absorbe Venise dans le Parcours italien.
+- description: L'Ancien Régime sous domination étrangère prolonge les mécanismes de sédimentation dans un cadre nouveau. L'administration autrichienne exerce un pouvoir central absolu mais dépourvu de légitimité aux yeux de la population vénitienne. Les Congregazioni Centrali offrent un cadre consultatif minimal où grands propriétaires et bourgeois interagissent, mais sans pouvoir réel. Le remplacement des élites est le fait marquant de cette période : le patriciat est juridiquement aboli, mais ses membres conservent leurs biens et leurs réseaux ; c'est la bourgeoisie professionnelle — héritière des cittadini — qui émerge comme nouvelle classe dirigeante. Le bloc contestataire se forme en combinant deux pôles : les ED (nostalgiques de la République, « Viva San Marco ! », anciens patriciens déclassés) et les EG (bourgeoisie libérale, républicains du Risorgimento, carbonari, intellectuels de l'Ateneo Veneto). Les deux convergent contre le bloc élitaire (administration autrichienne + collaborateurs) : le clivage gauche-droite a sauté, comme dans tout Ancien Régime avancé. La RN avortée de 1848-1849 ne brise pas l'AR exogène : elle le traverse. L'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin, et les mêmes mécanismes (sédimentation, bloc contestataire, absence de légitimité) reprennent jusqu'au plébiscite de 1866.
 
 ---
 
@@ -358,13 +373,12 @@
 
 #### Saillant : Écrasement — capitulation de la République de San Marco
 - type: saillant
+- avortement: true
 - start: 1849
 - subtitle: Capitulation
 - title: Écrasement
 - confidence: high
 - summary: L'Autriche écrase la République par le siège, le bombardement, le blocus alimentaire et l'épidémie de choléra. Venise capitule le 22 août 1849 — dernière république de 1848 à tomber en Europe. L'écrasement est entièrement exogène.
-
----
 
 #### Saillant : Avortement — Absorption dans le Parcours italien
 - type: saillant

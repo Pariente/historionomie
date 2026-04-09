@@ -459,12 +459,7 @@ def generate_html(data: dict) -> str:
         left_pct = ((start - timeline_start) / timeline_span) * 100
         width_pct = ((end - start) / timeline_span) * 100
 
-        conf = p.get("confidence", "high")
         border_style = "solid"
-        if conf == "medium":
-            border_style = "dashed"
-        elif conf == "low":
-            border_style = "dotted"
 
         start_label = format_year(p["start"], p["start_approx"])
         end_label = format_year(p["end"], p["end_approx"]) if p["end"] else "en cours"
@@ -477,13 +472,38 @@ def generate_html(data: dict) -> str:
         else:
             phase_display = PHASE_LABELS.get(p["phase"], p["title"])
 
-        phase_bands_html += f"""
-        <div class="phase-band" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;
+        # Add narrow-indicator for phases too small to see/click
+        NARROW_PHASE_ICONS = {
+            "prefeodale": "shield",
+            "feodale": "shield",
+            "oligarchique": "gavel",
+            "absolutiste": "crown",
+            "rn": "bolt",
+            "parlementaire": "account_balance",
+            "technocratique": "precision_manufacturing",
+        }
+        is_narrow = width_pct < 2
+        narrow_indicator = ""
+        if is_narrow:
+            mid_pct = left_pct + width_pct / 2
+            pin_icon = NARROW_PHASE_ICONS.get(p["phase"], "circle")
+            narrow_indicator = f"""
+        <div class="narrow-indicator" style="left:{mid_pct:.4f}%; top:-8px;"
+            data-tooltip="&lt;strong&gt;{escape_html(p['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html(p['summary'])}"
+            onclick="showDetail({elements.index(p)})">
+            <div class="narrow-indicator-pin" style="background:{color};">
+                <span class="material-icons">{pin_icon}</span>
+            </div>
+        </div>"""
+
+        narrow_class = " phase-narrow" if is_narrow else ""
+        phase_bands_html += f"""{narrow_indicator}
+        <div class="phase-band{narrow_class}" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;
             background:{bg};border-top:3px {border_style} {color};border-right:1px solid #fff;"
             data-tooltip="&lt;strong&gt;{escape_html(p['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html(p['summary'])}"
             onclick="showDetail({elements.index(p)})">
-            <div class="phase-band-label" style="color:{color};">{escape_html(phase_display)}</div>
-            <div class="phase-band-dates">{start_label} — {end_label}</div>
+            {"" if is_narrow else f'<div class="phase-band-label" style="color:{color};">{escape_html(phase_display)}</div>'}
+            {"" if is_narrow else f'<div class="phase-band-dates">{start_label} — {end_label}</div>'}
         </div>"""
 
     # Build subphase bands
@@ -681,6 +701,7 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .phase-band {{ position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
     display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
     transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }}
+.phase-band.phase-narrow {{ min-width:4px; }}
 .phase-band:hover {{ filter:brightness(0.95); }}
 .phase-band-label {{ font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
     overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
@@ -709,6 +730,14 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }}
 .perturbation-overlay.narrow .perturbation-label {{ font-size:0.45rem; }}
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator {{ position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }}
+.narrow-indicator-pin {{ width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }}
+.narrow-indicator-pin .material-icons {{ font-size:10px; color:#fff; transform:rotate(45deg); }}
+.narrow-indicator:hover .narrow-indicator-pin {{ transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }}
 
 /* Pre-phase band */
 .prephase-band {{ position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;

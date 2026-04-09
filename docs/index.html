@@ -42,7 +42,7 @@ body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; col
 /* Nation grid */
 .nation-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem; margin-bottom:4rem; }
 .nation-card { border-radius:8px; overflow:hidden; position:relative; box-shadow:0 1px 3px rgba(0,0,0,0.04); transition:box-shadow 0.2s, transform 0.2s; text-decoration:none; color:inherit; display:block; height:200px; }
-.nation-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); transform:translateY(-2px); }
+.nation-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); filter:saturate(1.2); }
 .nation-card-img { position:absolute; inset:0; }
 .nation-card-img img { width:100%; height:100%; object-fit:cover; filter:sepia(0.4); transition:filter 0.5s; }
 .nation-card:hover .nation-card-img img { filter:sepia(0); }
@@ -84,31 +84,34 @@ body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; col
 .saillant-list { margin-left:1.5rem; display:flex; flex-direction:column; gap:0.4rem; }
 details summary::-webkit-details-marker { display:none; }
 details[open] summary .expand-icon { transform:rotate(90deg); }
-.saillant-details { background:#f3f3f3; border-radius:6px; padding:0.6rem 0.8rem; }
-.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; }
-.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.6rem; }
-.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1.1rem; }
-.saillant-details summary .saillant-left span:last-child { font-size:0.85rem; font-weight:700; }
-.saillant-details summary .expand-icon { font-size:1.1rem; color:#999; transition:transform 0.2s; }
-.saillant-details .saillant-body { margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid rgba(209,196,185,0.3); }
-.saillant-details .saillant-body p { font-size:0.82rem; color:#555; line-height:1.6; margin-bottom:0.6rem; }
-.cell-empty { color:#ccc; font-style:italic; }
+/* Saillant accordion */
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+.cell-empty { color:#bbb; font-style:italic; }
+
 /* Comparison tables */
-.compare-table { border-radius:10px; overflow:hidden; box-shadow:0 2px 16px rgba(139,115,85,0.08); margin:0.8rem 0 0.3rem; border:1px solid rgba(209,196,185,0.25); background:#fff; }
+.compare-table { margin:0; border:none; background:none; border-radius:0; overflow:visible; box-shadow:none; }
 .compare-table table { width:100%; border-collapse:collapse; margin:0; font-size:0.78rem; }
-.compare-table th { background:linear-gradient(180deg, #f5f0e8 0%, #ede7dd 100%); font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:#8B7355; padding:0.55rem 0.7rem; border:none; border-bottom:2px solid rgba(139,115,85,0.12); }
-.compare-table td { padding:0.5rem 0.7rem; border:none; border-bottom:1px solid rgba(209,196,185,0.18); vertical-align:middle; color:#555; }
-.compare-table tbody tr:last-child td { border-bottom:none; }
-.compare-table tbody tr { transition:background 0.2s ease; }
-.compare-table tbody tr:hover { background:rgba(139,115,85,0.04); }
-.compare-table .nation-cell { font-weight:600; color:#333; white-space:nowrap; }
-.compare-table .flag-cell { width:20px; padding:0.3rem 0.2rem 0.3rem 0.7rem; }
-.compare-table .flag-cell img { height:14px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); display:block; }
-.compare-table .date-cell { font-weight:600; color:#8B7355; white-space:nowrap; font-variant-numeric:tabular-nums; text-align:right; }
-.compare-table .figure-cell { font-weight:600; color:#333; }
-.compare-table .desc-cell { color:#777; font-size:0.72rem; line-height:1.45; }
-.compare-table .img-cell { width:36px; padding:0.3rem; }
-.compare-table .img-cell img { width:36px; height:36px; border-radius:4px; object-fit:cover; box-shadow:0 1px 6px rgba(0,0,0,0.12); display:block; }
+.compare-table thead { display:none; }
+.compare-table td { padding:0.45rem 0.5rem 0.45rem 0; border:none; vertical-align:middle; color:#4d453c; }
+.compare-table tbody tr { border-bottom:1px solid rgba(209,196,185,0.15); }
+.compare-table tbody tr:last-child { border-bottom:none; }
+.compare-table .nation-cell { font-weight:600; color:#1a1c1c; white-space:nowrap; font-size:0.78rem; }
+.compare-table .flag-cell { width:18px; padding:0.4rem 0.3rem 0.4rem 0; }
+.compare-table .flag-cell img { height:13px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); display:block; }
+.compare-table .date-cell { font-weight:700; color:#8B7355; white-space:nowrap; font-variant-numeric:tabular-nums; text-align:right; padding-right:0.6rem; font-size:0.76rem; }
+.compare-table .figure-cell { font-weight:600; color:#1a1c1c; font-size:0.78rem; }
+.compare-table .desc-cell { color:#7f756b; font-size:0.72rem; line-height:1.4; font-style:italic; }
+.compare-table .img-cell { width:32px; padding:0.3rem 0.4rem 0.3rem 0; }
+.compare-table .img-cell img { width:32px; height:32px; border-radius:50%; object-fit:cover; display:block; }
 .compare-table .cell-empty { color:#ccc; font-style:italic; }
 
 /* Map */

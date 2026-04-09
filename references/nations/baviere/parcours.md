@@ -7,11 +7,11 @@
 - start: 1180
 - end: 1871 (absorption dans le Parcours allemand)
 - status: à valider
-- highlight_1: Phase féodale à 3 boucles (326 ans) | L'héritage divisible Wittelsbach bloque la consolidation sur trois siècles — partitions de 1255, 1349 et 1392. Le mécanisme est le même que les boucles anglo-saxonnes | https://commons.wikimedia.org/wiki/Special:FilePath/Ludwig_der_Bayer.jpg?width=120 | feodale
-- highlight_2: Phase oligarchique la plus courte (91 ans) | La Contre-Réforme fournit un homogénéisateur culturel si puissant qu'elle comprime le cycle entier. Les Jésuites à Ingolstadt dès 1542 | https://commons.wikimedia.org/wiki/Special:FilePath/Joachim_von_Sandrart_-_Maximilian_I,_Elector_of_Bavaria.jpg?width=120 | oligarchique
-- highlight_3: Double AR napoléonien | Le doublement territorial de 1806 (Franconie, Souabe) injecte un choc d'hétérogénéité en pleine phase absolutiste, forçant un second cycle impérialisme-AR — un cas unique | https://commons.wikimedia.org/wiki/Special:FilePath/Bellotto_Schloss-Nymphenburg_Stadtseite.jpg?width=120 | absolutiste
-- highlight_4: RN avortée (1918-1919) | Eisner proclame la République, la République des Conseils dure 26 jours — la RN la plus radicale d'Allemagne mais la plus brève, absorbée dans la RN allemande | https://commons.wikimedia.org/wiki/Special:FilePath/Theresienwiese_1918.jpg?width=120 | rn
-- subtitle: Sept siècles de Wittelsbach, de la forêt bavaroise à l'Athènes sur l'Isar
+- highlight_1: Une phase féodale marquée par les partitions | L'héritage divisible des Wittelsbach repartage le duché à chaque génération (1255, 1349, 1392), annulant la centralisation acquise. Trois boucles et 326 ans avant le pacte de primogéniture (1506) | images/baviere/ludwig-der-bayer.jpg | feodale
+- highlight_2: Une phase oligarchique comprimée par la Contre-Réforme | 91 ans au lieu de ~200. La Contre-Réforme (Jésuites à Ingolstadt dès 1542) accélère brutalement le moteur culturel et comprime le cycle entier | images/baviere/maximilien-ier.jpg | oligarchique
+- highlight_3: Choc d'hétérogénéité (1806) | Le doublement napoléonien du territoire (Franconie protestante, Souabe) hétérogénéise la société en plein AR, forçant un second cycle d'impérialisme tourné vers l'intérieur. Un cas unique dans le corpus | images/baviere/maximilien-I-joseph.jpg | absolutiste
+- highlight_4: La RN bavaroise avortée par la RN allemande | La Bavière entre en RN de façon autonome (Eisner, deux jours avant Berlin) et atteint la phase aiguë (République des Conseils). Mais la RN est écrasée et absorbée dans la RN allemande — seul cas d'avortement par une nation englobante | images/baviere/kurt-eisner.jpg | rn
+- subtitle: Richelieu a dit qu'on devait être copains
 - confidence: medium
 
 ---
@@ -74,8 +74,7 @@
 #### Saillant : Crise féodale — partition de 1349
 - type: saillant
 - avortement: true
-- start: 1347
-- end: 1349
+- start: 1349
 - figure:
 - subtitle: Partition de 1349
 - title: Crise féodale
@@ -93,6 +92,28 @@
 - confidence: high
 - summary: La Bavière est divisée en quatre duchés rivaux — Bavière-Straubing, Bavière-Landshut, Bavière-Ingolstadt, Bavière-Munich — chacun avec son propre duc, sa cour et son administration. C'est la fragmentation la plus destructrice du Parcours bavarois.
 - description: La partition de 1392 est le nadir de la phase féodale bavaroise. Quatre duchés Wittelsbach coexistent et se font concurrence : Bavière-Straubing, Bavière-Landshut, Bavière-Ingolstadt et Bavière-Munich. Les ducs s'affrontent dans des guerres internes (guerre civile Bavière-Ingolstadt contre Bavière-Munich, 1420-1422) et drainent les ressources du pays. Paradoxalement, cette fragmentation renforce les Landstände : les ducs affaiblis doivent négocier avec leurs états pour obtenir des revenus, ce qui donne aux assemblées un pouvoir fiscal et politique considérable — entre 1311 et 1565, 64 chartes de privilèges sont octroyées. L'homogénéité progresse malgré la fragmentation, car les élites des quatre duchés partagent la même langue, la même religion et les mêmes réseaux familiaux. Mais elle reste insuffisante pour un pacte tant que le pouvoir reste divisible.
+
+#### Saillant : Pic féodal (tardif)
+- type: saillant
+- start: 1450
+- end: 1503
+- figure: Ludwig IX der Reiche
+- subtitle: Ludwig IX der Reiche
+- title: Pic féodal
+- confidence: high
+- summary: Ludwig IX der Reiche de Bavière-Landshut (1450-1479) porte le pouvoir féodal Wittelsbach à son maximum tardif : il absorbe Bavière-Ingolstadt (1447), bat le margrave de Hohenzollern et l'Empereur dans la guerre bavaroise (1459-1463), et projette Landshut comme pair des rois (Noces de Landshut, 1475). Son fils Georges (1479-1503) prolonge le pic.
+- description: Ludwig IX est le pic féodal fonctionnel du Parcours bavarois — celui qui précède directement la crise finale. Bavière-Landshut est de loin le plus riche et le mieux administré des duchés Wittelsbach : revenus miniers (argent et cuivre de Rattenberg et Kitzbühel), agriculture fertile, routes commerciales. Ludwig IX absorbe Bavière-Ingolstadt (1447), puis bat le margrave Albert Achilles de Hohenzollern et résiste à l'Empereur Frédéric III dans la guerre bavaroise (1459-1463, paix de Prague). Les Noces de Landshut (1475) — son fils Georges épouse Hedwige Jagellon, fille du roi de Pologne — sont la démonstration de prestige la plus spectaculaire de l'Allemagne du XVe siècle. Mais le pouvoir reste fondamentalement féodal : l'administration est développée (chancellerie, Hofrat, fiscalité) mais dépend de la personne du duc. Georges (1479-1503) prolonge le pic, mais ses trois fils meurent en bas âge. À sa mort sans héritier mâle (1503), l'édifice s'effondre — exactement comme à la mort de chaque pic féodal. La différence, cette fois, c'est que l'homogénéité est mûre.
+
+#### Saillant : Crise féodale — guerre de Succession de Landshut
+- type: saillant
+- start: 1503
+- end: 1505
+- figure: Albert IV
+- subtitle: Guerre de Landshut
+- title: Crise féodale
+- confidence: high
+- summary: La mort sans héritier mâle de Georges le Riche de Bavière-Landshut (1503) déclenche une guerre ouverte entre les deux dernières branches Wittelsbach. Albert IV de Bavière-Munich l'emporte avec l'aide impériale et réunifie le duché par les armes — créant le moment de faiblesse nécessaire au pacte.
+- description: C'est la crise féodale finale du Parcours bavarois — celle qui débouche sur le pacte parce que les deux conditions de Deblonde sont enfin réunies simultanément. L'homogénéité est là : après 300 ans de brassage entre les élites des duchés fragmentés (même langue, même religion, mêmes réseaux familiaux, 64 chartes de privilèges communes), les oligarques se perçoivent comme une classe pan-bavaroise. Et la faiblesse du suzerain est là : Albert IV sort victorieux mais épuisé, endetté, dépendant des Landstände pour financer la reconstruction. Le pacte suit dans la foulée (1506) — exactement comme en France (mort de Philippe le Bel 1314 → loi salique 1317) et en Angleterre (faiblesse d'Édouard II 1307 → Ordonnances 1311). La séquence crise→pacte en 1 an confirme que l'homogénéité était mûre et n'attendait que l'occasion.
 
 #### Saillant : Pacte oligarchique
 - type: saillant
