@@ -105,8 +105,8 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     border-radius:6px; display:flex; align-items:center; justify-content:center; }
 .prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
 
-/* Saillant markers — diamond shape */
-.saillant-group { position:absolute; top:150px; z-index:10; }
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
 .saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
     margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
     justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
@@ -372,7 +372,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             <span class="perturbation-label">Éclipse napoléonienne</span>
         </div>
         
-        <div class="saillant-group" style="left:0.9375%;top:200px;">
+        <div class="saillant-group" style="left:0.9375%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Thomas II (1233)&#10;Thomas II (1233-1259) est le premier seigneur de Piémont, recevant les terres piémontaises en apanage après la partition de 1233. Il tente d&#39;occuper Turin (1250) mais se heurte à la résistance de l&#39;évêque et de la commune. Son gouvernement est personnel, sans institutions permanentes, mais il crée l&#39;entité politique piémontaise dans laquelle les communes, l&#39;évêque et les seigneurs locaux doivent désormais se positionner."
                 onclick="showDetail(2)">
@@ -380,7 +380,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Thomas II</span><span class="saillant-date">1233</span></div>
         </div>
-        <div class="saillant-group" style="left:10.6250%;top:200px;">
+        <div class="saillant-group" style="left:10.6250%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Philippe Ier (1295)&#10;Philippe Ier d&#39;Achaïe (r. 1282-1334) porte le pouvoir personnel piémontais à son maximum. Long règne de 52 ans. Il épouse Isabelle de Villehardouin (1301), obtenant le titre de « prince d&#39;Achaïe » (purement nominal — il perd le Péloponnèse en 1307). En Piémont, il crée les premiers outils proto-étatiques : les parlamenta (assemblées pour négocier les subsides) et le focaticum (impôt par foyer), premier système fiscal distinct des obligations féodales pures."
                 onclick="showDetail(3)">
@@ -388,7 +388,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Philippe Ier</span><span class="saillant-date">1295</span></div>
         </div>
-        <div class="saillant-group" style="left:20.6250%;top:200px;">
+        <div class="saillant-group" style="left:20.6250%;">
             <div class="saillant-marker avortement" style="background:#c0392b;"
                 data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Rébellion de Jacques (1359)&#10;Jacques d&#39;Achaïe (r. 1334-1367) conteste la suzeraineté de la branche principale et s&#39;allie aux Visconti. En 1359-1360, Amédée VI le Comte Vert l&#39;écrase : siège de Pignerol, capture, déclaration de traîtrise, emprisonnement. Jacques récupère ses possessions sous des conditions de vassalité très lourdes. Avant 1360, la relation Piémont/Savoie était ambiguë ; après, la subordination est formalisée. Pas de pacte — le Parcours boucle."
                 onclick="showDetail(4)">
@@ -396,7 +396,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Rébellion de Jacques</span><span class="saillant-date">1359</span></div>
         </div>
-        <div class="saillant-group" style="left:23.9062%;top:290px;">
+        <div class="saillant-group" style="left:23.9062%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Amédée d&#39;Achaïe (1380)&#10;Amédée d&#39;Achaïe (r. 1367-1402) est le dernier prince stable. Élevé à Chambéry sous la tutelle d&#39;Amédée VI, il est un vassal loyal. Il développe une administration mixte : focaticum régulier, levées ad hoc, garnisons locales. Stabilité et consolidation sans ambitions de rupture."
                 onclick="showDetail(5)">
@@ -404,7 +404,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Amédée d&#39;Achaïe</span><span class="saillant-date">1380</span></div>
         </div>
-        <div class="saillant-group" style="left:29.8438%;top:200px;">
+        <div class="saillant-group" style="left:29.8438%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Extinction de la branche (1418)&#10;Louis d&#39;Achaïe (r. 1402-1418), dernier prince de la branche, meurt sans héritiers le 11 décembre 1418, ayant désigné Amédée VIII comme successeur. La succession est pacifique — pas de résistance des élites piémontaises. L&#39;ordre féodal piémontais (185 ans de princes d&#39;Achaïe) s&#39;éteint littéralement. Les conditions du pacte sont réunies : homogénéité des élites piémontaises (parlamenta, focaticum, 185 ans de brassage) + Amédée VIII, nouveau en Piémont, doit négocier l&#39;intégration avec les élites locales."
                 onclick="showDetail(6)">
@@ -412,7 +412,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Extinction de la branche</span><span class="saillant-date">1418</span></div>
         </div>
-        <div class="saillant-group" style="left:31.7188%;top:290px;">
+        <div class="saillant-group" style="left:31.7188%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Statuta Sabaudiae (1430)&#10;Amédée VIII réunifie les branches (1418), obtient le titre ducal (1416), crée le Principat de Piémont comme unité administrative distincte (1424), et codifie les Statuta Sabaudiae (1430) — 350+ articles en 5 livres. Les Statuta incluent une réserve pour les capitula du Piémont. Les États se réunissent en assemblées séparées (cismontains pour le Piémont, ultramontains pour la Savoie). C&#39;est un pacte mutuel : codification + reconnaissance de la particularité piémontaise en échange de l&#39;acceptation de l&#39;autorité ducale."
                 onclick="showDetail(7)">
@@ -420,7 +420,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Statuta Sabaudiae</span><span class="saillant-date">1430</span></div>
         </div>
-        <div class="saillant-group" style="left:31.7188%;top:380px;">
+        <div class="saillant-group" style="left:31.7188%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Amédée VIII (1430)&#10;Amédée VIII est le premier souverain régnant sous un cadre institutionnel codifié (Statuta Sabaudiae, 1430), disposant d&#39;une Camera dei Conti permanente, d&#39;une administration en châtellenies, et d&#39;un territoire indivisible intégrant le Principat de Piémont (1424). Le « monarque » est encore fortement personnel (Amédée VIII abdique en 1440 pour devenir antipape Félix V), mais le cadre institutionnel lui survit."
                 onclick="showDetail(10)">
@@ -428,7 +428,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Amédée VIII</span><span class="saillant-date">1430</span></div>
         </div>
-        <div class="saillant-group" style="left:48.2812%;top:200px;">
+        <div class="saillant-group" style="left:48.2812%;">
             <div class="saillant-marker avortement" style="background:#c0392b;"
                 data-tooltip="&lt;strong&gt;Avortement&lt;/strong&gt;&#10;Guerres d&#39;Italie (1536)&#10;L&#39;invasion française (1536) met fin au 1er cycle oligarchique. Charles III est exilé. Les institutions des Statuta Sabaudiae sont remplacées par l&#39;administration française. La noblesse piémontaise conserve ses terres et ses réseaux mais perd ses institutions. Le Parcours est rebooté au début de la phase oligarchique."
                 onclick="showDetail(11)">
@@ -436,7 +436,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Avortement</span><span class="saillant-figure">Guerres d&#39;Italie</span><span class="saillant-date">1536</span></div>
         </div>
-        <div class="saillant-group" style="left:51.8750%;top:290px;">
+        <div class="saillant-group" style="left:51.8750%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Emmanuel Philibert (1559)&#10;Emmanuel Philibert (r. 1553-1580) est le 1er monarque oligarchique du 2e cycle. Victorieux à Saint-Quentin (1557), il récupère ses territoires au Traité de Cateau-Cambrésis (1559) et reconstruit l&#39;État de zéro. Capitale déplacée de Chambéry à Turin (1562), Sénats (1559-1560), Ordini Nuovi (1561), première armée permanente piémontaise, fiscalité systématique (gabella del sale, tasso). Le déplacement à Turin est l&#39;acte le plus significatif : à partir de 1562, le Parcours est piémontais."
                 onclick="showDetail(16)">
@@ -444,7 +444,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Emmanuel Philibert</span><span class="saillant-date">1559</span></div>
         </div>
-        <div class="saillant-group" style="left:52.1875%;top:380px;">
+        <div class="saillant-group" style="left:52.1875%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Ordini Nuovi (1561)&#10;Les Ordini Nuovi (1561) remplacent les Statuta Sabaudiae et codifient le nouveau cadre institutionnel piémontais. C&#39;est le pacte oligarchique du 2e cycle — la codification des règles de l&#39;exécutif après le reboot."
                 onclick="showDetail(15)">
@@ -452,7 +452,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Ordini Nuovi</span><span class="saillant-date">1561</span></div>
         </div>
-        <div class="saillant-group" style="left:58.2812%;top:200px;">
+        <div class="saillant-group" style="left:58.2812%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Charles Emmanuel Ier (1600)&#10;Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l&#39;expansionniste agressif qui porte l&#39;énergie oligarchique à son maximum. Saisie du marquisat de Saluzzo (1588, confirmée par le Traité de Lyon 1601 en échange de la Bresse, du Bugey et du Gex), tentatives sur Genève, alternance d&#39;alliances française et espagnole, guerres constantes. Tant que l&#39;expansion fournit un exutoire, la polarisation interne est retardée."
                 onclick="showDetail(17)">
@@ -460,7 +460,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Charles Emmanuel Ier</span><span class="saillant-date">1600</span></div>
         </div>
-        <div class="saillant-group" style="left:62.9687%;top:290px;">
+        <div class="saillant-group" style="left:62.9687%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Fin de l&#39;expansion (1630)&#10;Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l&#39;expansionniste agressif : saisie du marquisat de Saluzzo (1588, confirmée par le Traité de Lyon 1601 en échange de la Bresse, du Bugey et du Gex), tentatives sur Genève, alternance d&#39;alliances française et espagnole. Après sa mort (1630), la posture devient défensive et les tensions internes prennent le relais."
                 onclick="showDetail(18)">
@@ -468,7 +468,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Fin de l&#39;expansion</span><span class="saillant-date">1630</span></div>
         </div>
-        <div class="saillant-group" style="left:64.0625%;top:200px;">
+        <div class="saillant-group" style="left:64.0625%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Madamisti vs Principisti (1637)&#10;Conflit factieux entre les Madamisti (prébendière — nouvelles familles administratives/de cour, dépendantes du pouvoir central, pro-françaises) et les Principisti (patrimoniale — vieille noblesse piémontaise territoriale, pro-espagnole). Guerre ouverte (1637-1642), puis tutelle française. Résolu par Victor Amédée II (1696) qui brise les deux factions et crée un appareil centralisé. Le « tiers » est le souverain lui-même, appuyé sur une administration réformée."
                 onclick="showDetail(21)">
@@ -476,7 +476,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Madamisti vs Principisti</span><span class="saillant-date">1637</span></div>
         </div>
-        <div class="saillant-group" style="left:73.2812%;top:200px;">
+        <div class="saillant-group" style="left:73.2812%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Victor Amédée II (1696)&#10;Victor Amédée II (r. 1675-1730) résout le conflit factionnel, subordonne les deux factions (Madamisti et Principisti), et crée un appareil centralisé. Geoffrey Symcox titre sa monographie de référence « Victor Amadeus II: Absolutism in the Savoyard State ». L&#39;absolutisation est complète vers 1720 (secrétariats, abolition de la Chambre des comptes, titre royal)."
                 onclick="showDetail(24)">
@@ -484,7 +484,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Victor Amédée II</span><span class="saillant-date">1696</span></div>
         </div>
-        <div class="saillant-group" style="left:77.3438%;top:290px;">
+        <div class="saillant-group" style="left:77.3438%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Dernière grande révolte oligarchique&lt;/strong&gt;&#10;Affaire Graneri (1722)&#10;En 1722-1723, le Sénat de Turin refuse unanimement d&#39;enregistrer (interinare) un édit royal dans l&#39;affaire Revello. Le second président du Sénat, Maurizio Ignazio Graneri, accuse le roi de chercher « un prétexte pour démanteler le Sénat ». Victor Amédée II écrase la résistance : Graneri est arrêté (25 octobre 1723), suspendu de toutes ses charges, exilé à Cherasco, et interdit d&#39;écrire ou de consulter — même en privé. Il n&#39;est libéré qu&#39;en avril 1725. Après cette date, le Sénat ne conteste plus jamais la couronne."
                 onclick="showDetail(25)">
@@ -492,7 +492,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Dernière grande révolte oligarchique</span><span class="saillant-figure">Affaire Graneri</span><span class="saillant-date">1722</span></div>
         </div>
-        <div class="saillant-group" style="left:78.5938%;top:200px;">
+        <div class="saillant-group" style="left:78.5938%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Charles Emmanuel III (1730)&#10;Charles Emmanuel III (r. 1730-1773) porte le Piémont-Sardaigne au sommet de sa puissance. Guerre de Succession de Pologne : occupe Milan, victoire de Guastalla (1734), gains de Novara et Tortona (Traité de Vienne 1738). Guerre de Succession d&#39;Autriche : victoire éclatante d&#39;Assietta (1747), récupération de la Savoie et de Nice, gain de Vigevano (Traité d&#39;Aix-la-Chapelle 1748). Prestige militaire maximal."
                 onclick="showDetail(27)">
@@ -500,7 +500,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Charles Emmanuel III</span><span class="saillant-date">1730</span></div>
         </div>
-        <div class="saillant-group" style="left:81.4062%;top:380px;">
+        <div class="saillant-group" style="left:81.4062%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Aix-la-Chapelle (1748)&#10;Le Traité d&#39;Aix-la-Chapelle (1748) entérine les derniers gains territoriaux piémontais (Vigevano) et marque la fin définitive de l&#39;expansion. Après cette date, le système entre en Ancien Régime."
                 onclick="showDetail(28)">
@@ -508,7 +508,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Aix-la-Chapelle</span><span class="saillant-date">1748</span></div>
         </div>
-        <div class="saillant-group" style="left:92.8125%;top:200px;">
+        <div class="saillant-group" style="left:92.8125%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Remontrance&lt;/strong&gt;&#10;Révolte libérale (1821)&#10;En mars 1821, des officiers libéraux de la garnison d&#39;Alessandria se soulèvent et exigent la Constitution espagnole de 1812. Victor Emmanuel Ier abdique. Charles Albert, régent, accepte brièvement la constitution puis se rétracte. Charles Félix écrase la révolte avec l&#39;aide autrichienne (bataille de Novara, 8 avril 1821). La voie de réforme institutionnelle est fermée. L&#39;AR se poursuit et s&#39;approfondit."
                 onclick="showDetail(32)">
@@ -516,7 +516,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Remontrance</span><span class="saillant-figure">Révolte libérale</span><span class="saillant-date">1821</span></div>
         </div>
-        <div class="saillant-group" style="left:99.0625%;top:200px;">
+        <div class="saillant-group" style="left:99.0625%;">
             <div class="saillant-marker avortement" style="background:#c0392b;"
                 data-tooltip="&lt;strong&gt;Avortement&lt;/strong&gt;&#10;Unification italienne (1861)&#10;En 1861, le Piémont absorbe les parcours de Milan, Venise, Naples et des autres États italiens pour créer le Royaume d&#39;Italie. Le Statuto Albertino — concession d&#39;AR, pas produit d&#39;une RN — devient la constitution italienne. Le Parcours piémontais s&#39;achève par absorption dans le Parcours italien. Le Piémont ne vit jamais sa propre RN. L&#39;Italie hérite du cadre absolutiste piémontais et entre immédiatement dans son propre AR (1861-1918). La RN est italienne (1918-19, Mussolini comme IR, République de 1946 comme GR)."
                 onclick="showDetail(33)">
@@ -576,6 +576,68 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
     });
     el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
 });
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 6;
+    const BASE_TOP = 200;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
 
 // Detail panel
 function formatYear(yr, approx) {

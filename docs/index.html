@@ -41,20 +41,19 @@ body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; col
 
 /* Nation grid */
 .nation-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem; margin-bottom:4rem; }
-.nation-card { background:#fff; border-radius:8px; overflow:hidden; border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.04); transition:box-shadow 0.2s, transform 0.2s; text-decoration:none; color:inherit; display:flex; flex-direction:column; }
+.nation-card { border-radius:8px; overflow:hidden; position:relative; box-shadow:0 1px 3px rgba(0,0,0,0.04); transition:box-shadow 0.2s, transform 0.2s; text-decoration:none; color:inherit; display:block; height:200px; }
 .nation-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); transform:translateY(-2px); }
-.nation-card-img { height:180px; overflow:hidden; position:relative; }
+.nation-card-img { position:absolute; inset:0; }
 .nation-card-img img { width:100%; height:100%; object-fit:cover; filter:sepia(0.4); transition:filter 0.5s; }
 .nation-card:hover .nation-card-img img { filter:sepia(0); }
-.nation-card-badge { position:absolute; top:12px; right:12px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border-radius:20px; }
+.nation-card-badge { position:absolute; top:12px; right:12px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border-radius:20px; z-index:2; }
 .badge-complete { background:#8B7355; color:#fff; }
 .badge-draft { background:#e2e2e2; color:#666; }
-.nation-card-body { padding:1.3rem 1.5rem; flex:1; display:flex; flex-direction:column; }
-.nation-card-body .nation-icon { display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem; }
-.nation-flag { height:16px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); }
-.nation-card-body h3 { font-family:'Newsreader', serif; font-size:1.2rem; font-weight:600; }
-.nation-card-body .dates { font-size:0.85rem; color:#888; font-style:italic; margin-bottom:0.6rem; }
-.nation-card-body .desc { font-size:0.85rem; color:#666; line-height:1.6; }
+.nation-card-body { position:absolute; bottom:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:0.7rem 1rem; background:rgba(0,0,0,0.55); z-index:2; }
+.nation-card-body .nation-icon { display:flex; align-items:center; gap:0.5rem; }
+.nation-flag { height:16px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(255,255,255,0.15); }
+.nation-card-body h3 { font-family:'Newsreader', serif; font-size:1.1rem; font-weight:600; color:#fff; }
+.nation-card-body .dates { font-size:0.8rem; color:rgba(255,255,255,0.85); font-family:'IBM Plex Mono', 'Courier New', monospace; }
 
 /* Methodology section */
 .methodology { margin:3rem 0 5rem; display:grid; grid-template-columns:1fr; gap:2rem; }
@@ -163,7 +162,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
 <section id="nations">
     <div class="section-header">
         <h2>Nations étudiées</h2>
-        <span class="count">7 entités</span>
+        <span class="count">8 entités</span>
     </div>
     <div class="nation-grid">
         <a class="nation-card" href="france.html">
@@ -173,8 +172,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="France" src="images/france/flag.png"><h3>France</h3></div>
-                <div class="dates">987 à 1830</div>
-                <div class="desc">De l'Île-de-France au Roi-Soleil, sept siècles d'invention de l'État moderne. Le Parcours de référence du modèle historionomique.</div>
+                <div class="dates">1108 — 1830</div>
             </div>
         </a>
         <a class="nation-card" href="angleterre.html">
@@ -184,8 +182,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Angleterre" src="images/angleterre/flag.png"><h3>Angleterre</h3></div>
-                <div class="dates">829 à 1688</div>
-                <div class="desc">Cinq siècles de boucles féodales brisés par la conquête normande, puis un Parcours complet qui invente le parlementarisme moderne.</div>
+                <div class="dates">829 — 1688</div>
             </div>
         </a>
         <a class="nation-card" href="israel.html">
@@ -195,8 +192,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Israël" src="images/israel/flag.png"><h3>Israël</h3></div>
-                <div class="dates">-1080 à 135</div>
-                <div class="desc">Le Parcours le plus perturbé du corpus — reboots, prolongement, transfert territorial — et pourtant le peuple survit à chaque destruction.</div>
+                <div class="dates">-1080 — 135</div>
             </div>
         </a>
         <a class="nation-card" href="venise.html">
@@ -206,8 +202,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Venise" src="images/venise/flag.png"><h3>Venise</h3></div>
-                <div class="dates">726 à 1866</div>
-                <div class="desc">Du lagon des réfugiés à la Sérénissime, onze siècles sans roi — où l'absolutisme est porté par une institution, pas par un homme.</div>
+                <div class="dates">726 — 1866</div>
             </div>
         </a>
         <a class="nation-card" href="baviere.html">
@@ -217,8 +212,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Bavière" src="images/baviere/flag.png"><h3>Bavière</h3></div>
-                <div class="dates">1180 à 1919</div>
-                <div class="desc">Sept siècles de Wittelsbach, de la forêt bavaroise à l'Athènes sur l'Isar — un Parcours avorté par l'absorption dans l'Empire allemand.</div>
+                <div class="dates">1204 — 1919</div>
             </div>
         </a>
         <a class="nation-card" href="milan.html">
@@ -228,8 +222,17 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Milan" src="images/milan/flag.png"><h3>Milan</h3></div>
-                <div class="dates">979 à 1848</div>
-                <div class="desc">De l'archevêque au duc, du duc au Sénat, du Sénat à l'Italie — neuf siècles de double cycle oligarchique-absolutiste sous domination étrangère.</div>
+                <div class="dates">979 — 1848</div>
+            </div>
+        </a>
+        <a class="nation-card" href="suisse.html">
+            <div class="nation-card-img">
+                <img alt="Suisse — Vue de Berne, Joseph Plepp (~1640)" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bern_vom_Muristalden_aus.jpg?width=640">
+                <span class="nation-card-badge badge-draft">Proposition</span>
+            </div>
+            <div class="nation-card-body">
+                <div class="nation-icon"><img class="nation-flag" alt="Suisse" src="images/suisse/flag.png"><h3>Suisse</h3></div>
+                <div class="dates">1291 — 1848</div>
             </div>
         </a>
         <a class="nation-card" href="piemont.html">
@@ -239,8 +242,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             </div>
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Piémont" src="images/piemont/flag.png"><h3>Piémont</h3></div>
-                <div class="dates">1233 à 1861</div>
-                <div class="desc">Des cols alpins à l'unification italienne — huit siècles de construction nationale savoyard-piémontaise, absorbée dans le Parcours italien.</div>
+                <div class="dates">1233 — 1861</div>
             </div>
         </a>
     </div>
@@ -433,6 +435,7 @@ const nations = [
     { name:'Venise', lat:45.44, lng:12.34, dates:'726 — 1866', href:'venise.html', desc:'Onze siècles sans roi, un absolutisme institutionnel.' },
     { name:'Bavière', lat:48.14, lng:11.58, dates:'1180 — 1919', href:'baviere.html', desc:'Sept siècles de Wittelsbach, absorbés dans le Parcours allemand.' },
     { name:'Milan', lat:45.46, lng:9.19, dates:'979 — 1848', href:'milan.html', desc:'Double cycle oligarchique-absolutiste, reboot et absorption dans le Parcours italien.' },
+    { name:'Suisse', lat:46.95, lng:7.45, dates:'1291 — 1848', href:'suisse.html', desc:'Le premier Parcours entièrement républicain — un absolutisme sans monarque.' },
     { name:'Piémont', lat:45.07, lng:7.69, dates:'1233 — 1861', href:'piemont.html', desc:'Des cols alpins à l\'unification italienne, absorbé dans le Parcours italien.' }
 ];
 

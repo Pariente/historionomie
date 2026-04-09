@@ -8,8 +8,9 @@
 - status: complet
 - highlight_1: Cinq boucles féodales (829-1311) | L'hétérogénéité anglo-scandinave bloque le pacte à répétition sur 500 ans — un record dans le corpus. Le moteur étatique avance (Domesday Book, Exchequer) mais le moteur culturel est bloqué | https://commons.wikimedia.org/wiki/Special:FilePath/Egbert_of_Wessex.jpg?width=120 | feodale
 - highlight_2: Reboot normand (1066) | Guillaume remplace intégralement l'aristocratie et remet les compteurs à zéro — cas d'école de reboot par conquête. Les élites parlent français pendant deux siècles | https://commons.wikimedia.org/wiki/Special:FilePath/Bayeux_Tapestry_scene57_Harold_death.jpg?width=120 | feodale
-- highlight_3: Guerre des Deux-Roses (1455-1485) | La guerre sociale anglaise — ni York ni Lancaster ne l'emporte, c'est Henri VII qui crée une nouvelle dynastie et inaugure l'absolutisme | https://commons.wikimedia.org/wiki/Special:FilePath/Plucking_the_Red_and_White_Roses%2C_by_Henry_Payne.jpg?width=120 | oligarchique
-- highlight_4: Première RN d'Europe (1642-1688) | La matrice du modèle historionomique — les sept étapes canoniques en 46 ans, avec Cromwell comme prototype de l'Impérialiste Revanchard | https://commons.wikimedia.org/wiki/Special:FilePath/CromwellDissolvingLongParliament.jpg?width=120 | rn
+- highlight_3: Courte phase oligarchique (~158 ans) | La géographie insulaire protège des invasions continentales, la longue phase féodale a déjà construit un appareil institutionnel avancé (Échiquier, common law, Parlement), et la perte des territoires continentaux accélère la polarisation en fermant la soupape extérieure. | images/angleterre/edouard-iii.jpg | oligarchique
+- highlight_4: Courte phase absolutiste (~157 ans) | L'insularité facilite le contrôle du territoire, la Réforme henricienne accélère brutalement l'absolutisation (rupture avec Rome, dissolution des monastères), et la transition dynastique Tudor-Stuart affaiblit prématurément le système. | images/angleterre/henri-viii.jpg | absolutiste
+- highlight_5: 1ère RN du cycle civilisationnel | La matrice du modèle historionomique — première nation à accomplir sa Révolution Nationale depuis la fin de l'Empire romain. | https://commons.wikimedia.org/wiki/Special:FilePath/CromwellDissolvingLongParliament.jpg?width=120 | rn
 - subtitle: L'île qui a inventé le parlementarisme
 - confidence: medium
 
@@ -34,6 +35,7 @@
 - start: 829
 - end: 1066
 - title: Coagulation des élites
+- figure: Ecgberht de Wessex
 - summary: D'Ecgberht de Wessex à la conquête normande. La coagulation produit trois pics féodaux (Æthelstan, Edgar, Cnut) entrecoupés de crises qui avortent systématiquement, parce que l'hétérogénéité culturelle entre Anglo-Saxons et Scandinaves du Danelaw empêche les élites de former une conscience de classe à l'échelle du royaume. Sous Cnut, l'augmentation d'échelle (empire anglo-scandinave) éloigne encore la possibilité du pacte. La phase est interrompue par le reboot normand sans jamais produire de bascule oligarchique.
 - description: La coagulation des élites anglo-saxonnes s'étend sur près de 237 ans sans jamais aboutir. Le mécanisme est celui de la boucle avortée : chaque pic féodal (Æthelstan, Edgar, Cnut) porte le pouvoir personnel du suzerain à son maximum, mais la crise qui suit la mort du roi fort ne débouche pas sur un pacte, parce que le seuil d'homogénéité n'est jamais atteint. Le problème fondamental est double. D'une part, la présence du Danelaw — territoire scandinave au nord et à l'est de l'Angleterre — introduit une hétérogénéité culturelle profonde entre les élites anglo-saxonnes et les élites scandinaves. D'autre part, l'empire de Cnut élève l'échelle du royaume en englobant l'Angleterre, le Danemark et la Norvège, ce qui repousse le seuil d'homogénéité requis bien au-delà de ce qui est atteignable. La coagulation boucle deux fois (Æthelstan → crise → Edgar → crise → Cnut → crise) sans jamais franchir le seuil — un cas d'école de phase avortée par déficit d'homogénéisation.
 
@@ -73,6 +75,7 @@
 - type: saillant
 - avortement: true
 - start: 978
+- figure: Æthelred II
 - subtitle: Assassinat d'Edward
 - title: Crise féodale
 - confidence: medium
@@ -94,6 +97,7 @@
 - type: saillant
 - avortement: true
 - start: 1035
+- figure: Edward le Confesseur
 - subtitle: Fragmentation impériale
 - title: Crise féodale
 - confidence: medium
@@ -122,6 +126,7 @@
 - start: 1066
 - end: 1307
 - title: Coagulation des élites
+- figure: Guillaume le Conquérant
 - summary: De Guillaume le Conquérant à Édouard Ier. Trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l'Anarchie, Jean sans Terre). L'homogénéisation progresse lentement — accélérée par la perte de la Normandie (1204) qui force les barons à se penser comme anglais.
 - description: La coagulation des élites post-normandes s'étend sur 241 ans, soit bien au-delà de la durée typique, en raison de deux facteurs qui retardent l'homogénéisation. D'abord, la conquête normande introduit une hétérogénéité culturelle profonde entre l'aristocratie francophone et la population anglophone — une fracture qui mettra des générations à se résorber. Ensuite, l'Empire Plantagenêt d'Henri II élève l'échelle du royaume en englobant des territoires continentaux (Normandie, Anjou, Aquitaine), ce qui repousse le seuil d'homogénéité requis pour un pacte bien au-delà du cadre anglais. Le mécanisme est celui de l'alternance entre pics et crises avortées : Henri Ier porte le pouvoir personnel à un sommet, mais l'Anarchie qui suit sa mort ne produit pas de pacte ; Henri II reconstruit un édifice encore plus impressionnant, mais la crise sous Jean sans Terre avorte elle aussi. Le tournant est la perte de la Normandie en 1204 : en privant les barons de leurs terres continentales, Philippe Auguste les force à choisir l'Angleterre et à se penser comme anglais — ce qui lance enfin l'homogénéisation à l'échelle du royaume. Il faut encore un siècle (1204-1307) pour que cette homogénéisation aboutisse. Édouard Ier porte le dernier pic féodal vers 1295, exactement contemporain de Philippe le Bel en France.
 
@@ -150,6 +155,7 @@
 - avortement: true
 - start: 1135
 - end: 1154
+- figure: Étienne de Blois
 - subtitle: L'Anarchie
 - title: L'Anarchie
 - confidence: high
@@ -169,7 +175,7 @@
 #### Saillant : Crise féodale
 - type: saillant
 - avortement: true
-- start: ~1205
+- start: 1205
 - figure: Jean sans Terre
 - subtitle: Magna Carta
 - title: Crise féodale
@@ -194,6 +200,7 @@
 - start: 1307
 - end: 1327
 - title: Bascule oligarchique
+- figure: Édouard II
 - summary: La mort d'Édouard Ier en 1307 ouvre une crise profonde sous Édouard II, roi faible et dépendant de ses favoris. Cette fois, les deux conditions du pacte sont réunies simultanément : l'homogénéité des élites à l'échelle anglaise (acquise après 1204) et le moment de faiblesse du souverain. Les barons imposent les Ordonnances de 1311 — premier pacte oligarchique anglais.
 - description: Édouard II hérite en 1307 d'un royaume dont la puissance reposait entièrement sur la personne de son père. Son règne est un désastre : il s'aliène immédiatement les barons en élevant son favori Pierre Gaveston, qui est finalement capturé et exécuté par les lords en 1312. Le désastre militaire de Bannockburn en 1314, où l'armée anglaise est écrasée par les Écossais de Robert Bruce, achève de discréditer le roi. Puis les Despensers, nouveaux favoris, provoquent une rébellion menée par la reine Isabelle et Roger Mortimer, qui déposent et assassinent Édouard II en 1327. C'est le moment où les deux conditions du pacte (Deblonde) convergent enfin : les élites anglaises, homogènes à l'échelle du royaume depuis la fusion culturelle post-1204, font face à un souverain manifestement faible. Contrairement à l'Anarchie de 1135 — où la faiblesse existait mais pas l'homogénéité — et contrairement au règne d'Édouard Ier — où l'homogénéité existait mais pas la faiblesse —, la conjonction des deux conditions permet cette fois la formation du pacte.
 
@@ -211,6 +218,7 @@
 #### Saillant : Pacte oligarchique
 - type: saillant
 - start: 1311
+- figure: Thomas de Lancaster
 - subtitle: Ordonnances de 1311
 - title: Pacte oligarchique
 - confidence: high
@@ -233,8 +241,9 @@
 - type: subphase
 - phase: oligarchique
 - start: 1327
-- end: ~1421
+- end: 1421
 - title: Essor oligarchique
+- figure: Édouard III
 - summary: L'essor oligarchique anglais s'étend sur près d'un siècle, d'Édouard III à Henri V. Édouard III projette la puissance anglaise vers la France (Crécy, Poitiers, Ordre de la Jarretière). Après un reflux sous Richard II et Henri IV, Henri V porte l'essor à son sommet avec Azincourt (1415) et le Traité de Troyes (1420). La défaite de Baugé (1421) marque la fin de l'expansion.
 - description: L'essor oligarchique anglais est remarquablement vigoureux et long. Édouard III dispose dès son accession d'un appareil étatique fonctionnel — l'Échiquier gère les finances, les tribunaux de common law administrent la justice, le Parlement vote les impôts selon des procédures établies — et il s'en sert pour projeter la puissance anglaise vers l'extérieur. La Guerre de Cent Ans, lancée en 1337, sert de soupape pour les tensions internes en offrant à la noblesse des perspectives de conquête et de butin. Les victoires de Crécy (1346) et de Poitiers (1356), l'Ordre de la Jarretière fondé en 1348 et le Traité de Brétigny (1360) marquent une première apogée. Après un reflux — perte des territoires sous Charles V de France, déposition de Richard II (1399), instabilité sous Henri IV — l'essor reprend spectaculairement sous Henri V, dont la victoire d'Azincourt (1415) et le Traité de Troyes (1420) portent la puissance anglaise à un niveau sans précédent : la couronne de France elle-même est promise au roi d'Angleterre. Mais Édouard III comme Henri V dépendent du Parlement pour la fiscalité de guerre — c'est le marqueur d'un pouvoir oligarchique, non absolu.
 
@@ -251,7 +260,7 @@
 
 #### Saillant : Pic oligarchique
 - type: saillant
-- start: ~1415
+- start: 1415
 - figure: Henri V
 - subtitle: Henri V
 - title: Pic oligarchique
@@ -261,7 +270,7 @@
 
 #### Saillant : Fin de l'expansion
 - type: saillant
-- start: ~1421
+- start: 1421
 - subtitle: Baugé
 - title: Fin de l'expansion
 - confidence: high
@@ -271,9 +280,10 @@
 ### Subphase : Polarisation des élites
 - type: subphase
 - phase: oligarchique
-- start: ~1421
+- start: 1421
 - end: 1455
 - title: Polarisation des élites
+- figure: Henri VI
 - summary: Après Baugé et la mort d'Henri V (1422), la minorité d'Henri VI et la perte progressive des territoires français cristallisent deux factions rivales — Lancaster (prébendière, patronage de cour) et York (patrimoniale, grands domaines fonciers) — dont l'affrontement devient inévitable.
 - description: La polarisation des élites anglaises se structure rapidement après la fin de l'expansion. La mort d'Henri V en 1422 laisse le trône à Henri VI, infant de neuf mois. La longue minorité, puis le règne personnel d'un roi faible et probablement atteint de maladie mentale, ouvrent un vide de pouvoir qui permet aux factions de se cristalliser. La faction Lancaster, au pouvoir, s'appuie sur le patronage de cour et les ressources de l'État central pour maintenir un réseau de fidélité — c'est la faction prébendière au sens weberien. La faction York, menée par Richard d'York, regroupe les grands magnats terriens dont la puissance repose sur leurs domaines fonciers dans le nord et l'ouest — c'est la faction patrimoniale. La perte progressive des conquêtes françaises — Orléans (1429), Paris (1436), Normandie (1450), Bordeaux (1453) — accélère la polarisation en privant la noblesse de ses débouchés extérieurs et en discréditant le pouvoir lancastrien. Le conflit évolue inexorablement vers la guerre ouverte.
 
@@ -283,6 +293,7 @@
 - start: 1455
 - end: 1485
 - title: Guerre sociale
+- figure: Henri VII
 - summary: Les Guerres des Roses constituent la guerre sociale du Parcours anglais, un affrontement de trente ans entre York et Lancaster dont ni l'un ni l'autre ne sort définitivement vainqueur, ce qui permet l'émergence d'Henri Tudor comme figure tierce à Bosworth en 1485.
 - description: Les Guerres des Roses sont le conflit le plus destructeur pour la noblesse anglaise depuis la conquête normande. La faction Lancaster, appuyée sur le patronage royal et les ressources de l'État, affronte la faction York, dont la puissance repose sur d'immenses domaines fonciers dans le nord et l'ouest. Le conflit connaît de multiples renversements — Édouard IV prend le pouvoir en 1461, est brièvement renversé en 1470, le reprend en 1471 — et décime les deux camps. Conformément au schéma classique de la guerre sociale, la résolution vient d'un tiers : Henri Tudor, dont la légitimité dynastique est ténue (gallois, descendant par les femmes des Lancaster), s'impose à Bosworth en 1485 sans être identifié à aucune faction.
 
@@ -290,6 +301,7 @@
 - type: saillant
 - start: 1455
 - end: 1485
+- figure: Henri VII
 - subtitle: Guerre des Deux-Roses
 - title: Guerre sociale
 - confidence: high
@@ -313,8 +325,9 @@
 - type: subphase
 - phase: absolutiste
 - start: 1485
-- end: ~1558
+- end: 1558
 - title: Absolutisation
+- figure: Henri VIII
 - summary: Henri VII brise le pouvoir des magnats issus des Guerres des Roses et reconstruit le fisc royal, puis Henri VIII accomplit l'absolutisation la plus radicale de l'histoire anglaise en rompant avec Rome, en dissolvant les monastères et en écrasant la dernière révolte oligarchique du Pilgrimage of Grace.
 - description: L'absolutisation anglaise est remarquablement rapide et brutale. Henri VII (1485-1509) commence par briser méthodiquement le pouvoir des grands magnats survivants des Guerres des Roses, utilisant la Chambre étoilée comme instrument de justice royale et accumulant un trésor considérable grâce à une fiscalité agressive gérée par des administrateurs professionnels — Empson et Dudley — qui ne doivent rien à la noblesse traditionnelle. Henri VIII (1509-1547) porte l'absolutisation à son paroxysme : l'Acte de Suprématie de 1534 fait du roi le chef de l'Église d'Angleterre, rompant avec Rome et fusionnant le pouvoir politique et religieux en une seule personne. La dissolution des monastères entre 1536 et 1541 constitue la plus grande redistribution de terres depuis la conquête normande, transférant un quart des terres cultivées du royaume à la Couronne puis à une nouvelle classe de propriétaires terriens dépendants du roi. Le Pilgrimage of Grace de 1536, dernière grande révolte des élites du nord contre la politique henricienne, est écrasé sans pitié.
 
@@ -330,7 +343,7 @@
 
 #### Saillant : Dernière grande révolte oligarchique
 - type: saillant
-- start: ~1536
+- start: 1536
 - figure: Henri VIII
 - subtitle: Pilgrimage of Grace
 - title: Dernière grande révolte oligarchique
@@ -341,15 +354,16 @@
 ### Subphase : Impérialisme absolutiste
 - type: subphase
 - phase: absolutiste
-- start: ~1558
+- start: 1558
 - end: 1603
 - title: Impérialisme absolutiste
+- figure: Élisabeth Ière
 - summary: Le règne d'Élisabeth Ière porte la puissance absolutiste anglaise à son sommet avec la défaite de l'Armada espagnole en 1588, l'expansion coloniale vers la Virginie et les Indes orientales, la domestication de l'aristocratie à la cour et l'éclat culturel de l'ère shakespearienne.
 - description: Élisabeth Ière règne de 1558 à 1603 et incarne le pic absolutiste anglais. Elle hérite d'un appareil étatique considérablement renforcé par son père Henri VIII et sa demi-sœur Marie, et le porte à son maximum de prestige. La défaite de l'Invincible Armada en 1588 est le moment de gloire suprême : l'Angleterre, petite île protestante, repousse la plus grande puissance catholique du monde, ce qui transforme la conscience nationale. L'expansion coloniale s'amorce avec les premières tentatives de colonisation en Virginie et la fondation de la Compagnie des Indes orientales en 1600. L'aristocratie est domestiquée par le système du patronage élisabéthain, qui subordonne l'avancement social à la faveur royale. Shakespeare, Marlowe, Spenser et les autres produisent une littérature d'une richesse inégalée qui témoigne de la vitalité culturelle du moment. Comme dans tout pic absolutiste, cependant, la réussite même du système porte en elle les germes de son déclin : la concentration du pouvoir autour de la personne de la reine, restée sans héritier, crée une angoisse successorale qui pèse sur les dernières années du règne.
 
 #### Saillant : Pic absolutiste
 - type: saillant
-- start: ~1588
+- start: 1588
 - figure: Élisabeth Ière
 - subtitle: Élisabeth Ière
 - title: Pic absolutiste
@@ -373,12 +387,14 @@
 - start: 1603
 - end: 1642
 - title: Ancien Régime
+- figure: Charles Ier
 - summary: L'accession des Stuarts en 1603 ouvre l'Ancien Régime anglais : une nouvelle dynastie dépourvue de la légitimité institutionnelle des Tudors, confrontée à une société en mutation rapide où un bloc contestataire se forme — puritains et gentry exclue contre le parti de cour — jusqu'à l'explosion de la guerre civile en 1642.
 - description: La mort d'Élisabeth en 1603 et l'accession de Jacques Ier Stuart, roi d'Écosse devenu roi d'Angleterre, marquent l'entrée dans l'Ancien Régime. Jacques Ier théorise le droit divin des rois dans un contexte où le Parlement anglais a une tradition de participation bien plus robuste que les assemblées écossaises. Ses favoris — Buckingham surtout — monopolisent le patronage royal et aliènent la gentry qui se trouve exclue des circuits de pouvoir. La vente de titres de noblesse dévalue l'honneur aristocratique. Charles Ier poursuit cette trajectoire en accentuant les tensions : sa « règle personnelle » de 1629 à 1640 — onze ans de gouvernement sans Parlement — ses levées fiscales contestées comme le Ship Money, et les réformes laudiennes qui tentent de rapprocher l'Église anglicane du catholicisme provoquent la cristallisation d'un bloc contestataire. Ce bloc réunit les puritains — extrême-gauche structurelle, qui veulent purifier l'Église et la société — et la gentry exclue du patronage de cour — extrême-droite structurelle, nostalgique d'un ordre antérieur où elle avait sa place. Face à eux, le bloc élitaire de cour — les bénéficiaires du système Stuart — tient le centre. La tentative de Charles Ier d'imposer le Prayer Book aux Écossais en 1637 provoque la révolte des Covenanters, qui l'oblige à rappeler le Parlement, déclenchant la crise finale.
 
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: 1603
+- figure: Jacques Ier
 - subtitle: Succession Stuart
 - title: Fin de l'expansion
 - confidence: high
@@ -404,6 +420,7 @@
 - start: 1640
 - end: 1653
 - title: Révolution initiale
+- figure: Charles Ier
 - summary: La crise éclate avec le Long Parlement de 1640, qui démantèle les instruments du pouvoir personnel de Charles Ier. La guerre civile, l'exécution du roi en 1649 et la proclamation du Commonwealth traversent les quatre premières étapes de la Révolution Nationale à un rythme accéléré.
 - description: La convocation du Long Parlement en novembre 1640, rendue nécessaire par la révolte écossaise des Covenanters, déclenche un basculement irrésistible. Le Parlement abolit la Chambre étoilée et la Cour de la Haute Commission, exécute le comte de Strafford — principal ministre et homme de confiance de Charles Ier — et impose le Triennial Act. La tentative de Charles Ier d'arrêter cinq membres du Parlement en janvier 1642 provoque la rupture définitive et le déclenchement de la guerre civile. Le Parlement gouverne pendant la guerre grâce à la New Model Army créée en 1645 sous la direction d'Oliver Cromwell et Thomas Fairfax. L'Épuration de Pride en décembre 1648 marque le basculement vers la phase aiguë : les presbytériens modérés sont expulsés, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649 — acte régicide qui radicalise irréversiblement le processus révolutionnaire. Le Commonwealth est proclamé et la monarchie abolie.
 
@@ -411,7 +428,8 @@
 - type: saillant
 - start: 1640
 - end: 1642
-- subtitle: Long Parlement
+- figure: Charles Ier
+- subtitle: Guerre civile
 - title: Explosion de l'AR
 - confidence: high
 - summary: Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentative du roi d'arrêter cinq parlementaires déclenche la guerre civile.
@@ -421,7 +439,8 @@
 - type: saillant
 - start: 1640
 - end: 1648
-- subtitle: New Model Army
+- figure: John Pym
+- subtitle: Long Parlement
 - title: Expérience parlementaire
 - confidence: high
 - summary: Le Long Parlement gouverne pendant la guerre civile en s'appuyant sur ses propres comités et sur la New Model Army, première tentative de substituer un gouvernement parlementaire au pouvoir royal.
@@ -431,6 +450,7 @@
 - type: saillant
 - start: 1648
 - end: 1649
+- figure: Oliver Cromwell
 - subtitle: Exécution de Charles Ier
 - title: Phase aiguë
 - confidence: high
@@ -440,6 +460,7 @@
 #### Saillant : Moment thermidorien
 - type: saillant
 - start: 1653
+- figure: Oliver Cromwell
 - subtitle: Dissolution du Rump
 - title: Moment thermidorien
 - confidence: high
@@ -452,6 +473,7 @@
 - start: 1653
 - end: 1660
 - title: Impérialiste Revanchard
+- figure: Oliver Cromwell
 - summary: Cromwell, devenu Lord Protecteur, incarne la figure de l'Impérialiste Revanchard : il restaure la verticalité du pouvoir, ventile les élites par la méritocratie militaire, projette la puissance anglaise vers l'extérieur et unifie administrativement les Îles Britanniques, avant de mourir en 1658 sans successeur capable.
 - description: Oliver Cromwell est l'Impérialiste Revanchard du Parcours anglais, figure autoritaire qui renoue avec la verticalité du pouvoir après le chaos révolutionnaire. Devenu Lord Protecteur en décembre 1653, il gouverne avec l'appui de l'armée et d'un réseau de Major-Generals qui administrent directement les régions — préfiguration du système préfectoral napoléonien. L'armée elle-même est une machine méritocratique : les officiers sont promus selon leurs capacités, non leur naissance, ce qui ventile les élites en renouvelant la classe dirigeante. Sur le plan extérieur, Cromwell projette la puissance anglaise en conquérant la Jamaïque en 1655, en imposant le respect aux puissances européennes et en unifiant administrativement l'Angleterre, l'Écosse et l'Irlande. Mais comme tout Impérialiste Revanchard, son régime ne lui survit pas : sa mort en 1658 est suivie de l'effondrement rapide du Protectorat sous son fils Richard, incapable de maintenir l'allégeance de l'armée.
 
@@ -471,12 +493,14 @@
 - start: 1660
 - end: 1688
 - title: Restauration
+- figure: Guillaume III d'Orange
 - summary: Charles II est restauré en 1660 dans le cadre de la Déclaration de Breda, qui maintient les acquis fondamentaux de la Révolution tout en rétablissant la monarchie. Mais Jacques II, en tentant de restaurer le catholicisme et l'absolutisme, provoque la crise finale qui aboutit à la Glorieuse Révolution de 1688.
 - description: La Restauration de 1660 ne constitue pas un retour à l'Ancien Régime Stuart : la Déclaration de Breda garantit la liberté de conscience, le maintien des propriétés acquises pendant la Révolution et l'amnistie générale. Charles II gouverne avec habileté dans un cadre à base élargie mais pas encore pleinement parlementaire, naviguant entre la cour, le Parlement et la mémoire de la guerre civile. Le Habeas Corpus Act de 1679 et l'Exclusion Crisis de 1679-1681 — tentative parlementaire d'exclure le catholique Jacques du trône — montrent que le Parlement dispose désormais d'un poids politique irréversible. L'accession de Jacques II en 1685 et sa tentative de restauration catholique — Declaration of Indulgence, nomination de catholiques aux postes clés, rapprochement avec Louis XIV — provoquent la réaction qui aboutit à la Glorieuse Révolution, moment où le parlementarisme s'ancre définitivement dans la vie politique anglaise.
 
 #### Saillant : Glorieuse Révolution
 - type: saillant
 - start: 1688
+- figure: Guillaume III d'Orange
 - subtitle: Bill of Rights
 - title: Glorieuse Révolution
 - confidence: high

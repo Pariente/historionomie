@@ -100,6 +100,17 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
 .perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
 
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator-line { position:absolute; width:1px; left:9px; }
+.narrow-indicator-label { position:absolute; white-space:nowrap; font-size:0.6rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:0.5px; left:26px; top:2px; }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
 /* Pre-phase band */
 .prephase-band { position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
     border-radius:6px; display:flex; align-items:center; justify-content:center; }
@@ -298,6 +309,16 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             onclick="showDetail(18)">
             <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
             <div class="phase-band-dates">1669 — 1848</div>
+        </div>
+        <!-- Narrow-phase indicator for RN -->
+        <div class="narrow-indicator" style="left:97.7809%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale avortée — République de San Marco&lt;/strong&gt; (1848 — 1849)&#10;En mars 1848, le bloc contestataire renverse le régime autrichien à Venise. Daniele Manin — avocat, bourgeoisie professionnelle, aucun lien avec l&#39;ancien patriciat — mobilise les arsenalotti, la bourgeoisie, les artisans et des soldats italiens déserteurs. Il proclame la République de San Marco le 22 mars 1848, instaurant une expérience parlementaire avec assemblée élue et factions concurrentes (républicains, fusionnistes, mazziniens). La République résiste 17 mois avant d&#39;être écrasée par l&#39;Autriche."
+            onclick="showDetail(27)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="narrow-indicator-line" style="background:#D4A017; top:20px; height:160px;"></div>
+            <span class="narrow-indicator-label" style="color:#D4A017;">RN (1848–1849)</span>
         </div>
         <div class="phase-band" style="left:97.7809%;width:0.0693%;
             background:#f4e7c5;border-top:3px dashed #D4A017;border-right:1px solid #fff;"

@@ -533,38 +533,14 @@ def generate_html(data: dict) -> str:
             <span class="perturbation-label">{escape_html(pt['title'])}</span>
         </div>"""
 
-    # Build saillant markers — with staggered labels to avoid overlap
-    # Sort saillants by start date and assign vertical levels
+    # Build saillant markers — row assignment is done in JS after measuring real label widths
     dated_saillants = [(s, ((s["start"] - timeline_start) / timeline_span) * 100)
                        for s in saillants if s["start"] is not None]
     dated_saillants.sort(key=lambda x: x[1])
 
-    # Assign stagger levels (0-4): default to row 0, bump down only if conflict
-    # A saillant "occupies" a horizontal band of ~7% around its position
-    MAX_ROWS = 6
-    ROW_HEIGHT = 90  # px per row
-    CONFLICT_RADIUS = 5  # % of timeline width — two saillants within this range conflict
-
-    levels = []
-    for i, (s, pct) in enumerate(dated_saillants):
-        # Check which rows are occupied by NEARBY saillants only
-        occupied_rows = set()
-        for j in range(i):
-            _, prev_pct = dated_saillants[j]
-            if abs(pct - prev_pct) < CONFLICT_RADIUS:
-                occupied_rows.add(levels[j])
-        # Pick the lowest free row
-        level = 0
-        while level in occupied_rows and level < MAX_ROWS - 1:
-            level += 1
-        levels.append(level)
-
-    level_offsets = {i: i * ROW_HEIGHT for i in range(MAX_ROWS)}
-
     saillant_markers_html = ""
-    for (s, left_pct), level in zip(dated_saillants, levels):
+    for (s, left_pct) in dated_saillants:
         color = PHASE_COLORS.get(s["phase"], "#333")
-        offset = level_offsets[level]
 
         # subtitle (shown on frise) falls back to figure, then nothing
         frise_subtitle = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else "")
@@ -580,7 +556,7 @@ def generate_html(data: dict) -> str:
             icon_name = SAILLANT_ICONS.get(s["title"], SAILLANT_ICON_DEFAULT)
         bg_color = "#c0392b" if is_avortement else color
         saillant_markers_html += f"""
-        <div class="saillant-group" style="left:{left_pct:.4f}%;top:{200 + offset}px;">
+        <div class="saillant-group" style="left:{left_pct:.4f}%;">
             <div class="saillant-marker{avortement_class}" style="background:{bg_color};"
                 data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html(s['summary'])}"
                 onclick="showDetail({elements.index(s)})">
@@ -739,8 +715,8 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
     border-radius:6px; display:flex; align-items:center; justify-content:center; }}
 .prephase-band-label {{ font-size:0.75rem; color:#998866; font-weight:600; }}
 
-/* Saillant markers — diamond shape */
-.saillant-group {{ position:absolute; top:150px; z-index:10; }}
+/* Saillant markers */
+.saillant-group {{ position:absolute; top:200px; z-index:10; }}
 .saillant-marker {{ width:24px; height:24px; cursor:pointer; border-radius:50%;
     margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
     justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }}
@@ -932,6 +908,68 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {{
     }});
     el.addEventListener('mouseleave', () => {{ tooltip.style.display = 'none'; }});
 }});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {{
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 6;
+    const BASE_TOP = 200;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {{
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return {{ left: left - MARGIN, right: right + MARGIN }};
+    }});
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {{
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {{
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }}
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }}
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {{
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }}
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {{
+        container.style.minHeight = neededHeight + 'px';
+    }}
+}})();
 
 // Detail panel
 function formatYear(yr, approx) {{

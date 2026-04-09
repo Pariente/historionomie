@@ -105,8 +105,8 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     border-radius:6px; display:flex; align-items:center; justify-content:center; }
 .prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
 
-/* Saillant markers — diamond shape */
-.saillant-group { position:absolute; top:150px; z-index:10; }
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
 .saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
     margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
     justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
@@ -238,7 +238,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 
 <div class="briefing briefing-full"><div class="briefing-insights">
             <div class="briefing-label">Faits marquants</div>
-            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hugues_capet.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#A0A0A0;flex-shrink:0;margin-top:3px;"></span>Le miracle capétien</span><span class="insight-desc">La percolation française dure près de 120 ans (987-1108) : les Capétiens portent le titre royal sans pouvoir réel, mais la continuité dynastique ininterrompue et la consolidation silencieuse de l&#39;Île-de-France préparent l&#39;éveil féodal de Louis VI</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_crecy_froissart.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Crécy-Poitiers : un contre-temps (1346-1364)</span><span class="insight-desc">Les chevauchées anglaises infligent des défaites spectaculaires mais les institutions survivent. Charles V reconstruit — l&#39;essor oligarchique reprend. C&#39;est un ralentissement, pas un reboot</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_Agincourt,_St._Alban%27s_Chronicle_by_Thomas_Walsingham.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Azincourt-Troyes : un reboot (1415-1420)</span><span class="insight-desc">Azincourt décapite physiquement la noblesse du Nord, la guerre civile Armagnacs-Bourguignons déchire les élites, et le Traité de Troyes (1420) annule la loi salique elle-même. Les institutions sont détruites — c&#39;est un reboot oligarchique, et la France compte donc deux pactes oligarchiques</span></div></div></div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hugues_capet.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#A0A0A0;flex-shrink:0;margin-top:3px;"></span>Le miracle capétien</span><span class="insight-desc">La percolation française dure près de 120 ans (987-1108) : les Capétiens portent le titre royal sans pouvoir réel, mais la continuité dynastique ininterrompue et la consolidation silencieuse de l&#39;Île-de-France préparent l&#39;éveil féodal de Louis VI</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_crecy_froissart.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Crécy-Poitiers : un contre-temps</span><span class="insight-desc">Les chevauchées anglaises infligent des défaites spectaculaires mais les institutions survivent. Charles V reconstruit — l&#39;essor oligarchique reprend. C&#39;est un ralentissement, pas un reboot</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_Agincourt,_St._Alban%27s_Chronicle_by_Thomas_Walsingham.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Azincourt-Troyes : un reboot</span><span class="insight-desc">Azincourt décapite physiquement la noblesse du Nord, la guerre civile Armagnacs-Bourguignons déchire les élites, et le Traité de Troyes (1420) annule la loi salique elle-même. Les institutions sont détruites — c&#39;est un reboot oligarchique, et la France compte donc deux pactes oligarchiques</span></div></div></div>
         </div></div>
 
 <div class="timeline-wrapper">
@@ -422,7 +422,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             <span class="perturbation-label">Effondrement des institutions</span>
         </div>
         
-        <div class="saillant-group" style="left:12.3702%;top:200px;">
+        <div class="saillant-group" style="left:12.3702%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Louis VI le Gros (1108)&#10;Louis VI le Gros est le premier Capétien à exercer une autorité supra-régionale effective, en pacifiant l&#39;Île-de-France et en convoquant avec succès le ban royal en 1124 contre la menace impériale germanique."
                 onclick="showDetail(4)">
@@ -430,7 +430,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Louis VI le Gros</span><span class="saillant-date">1108</span></div>
         </div>
-        <div class="saillant-group" style="left:22.3796%;top:200px;">
+        <div class="saillant-group" style="left:22.3796%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Philippe Auguste (1214)&#10;La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l&#39;Île-de-France et de tripler le domaine royal."
                 onclick="showDetail(5)">
@@ -438,7 +438,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Philippe Auguste</span><span class="saillant-date">1214</span></div>
         </div>
-        <div class="saillant-group" style="left:25.7790%;top:290px;">
+        <div class="saillant-group" style="left:25.7790%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Louis IX (1250)&#10;Louis IX porte le prestige personnel de la monarchie capétienne à un niveau sans égal en Europe — deux croisades, arbitre de la chrétienté, canonisé en 1297 — tout en étendant concrètement la présence de l&#39;administration royale dans les provinces par ses enquêteurs."
                 onclick="showDetail(6)">
@@ -446,7 +446,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Louis IX</span><span class="saillant-date">1250</span></div>
         </div>
-        <div class="saillant-group" style="left:29.0840%;top:200px;">
+        <div class="saillant-group" style="left:29.0840%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Philippe le Bel (1285)&#10;Philippe le Bel pousse le pouvoir royal personnel à son maximum en s&#39;appuyant sur ses légistes pour affronter la papauté et convoquer les premiers États généraux, mais ce pouvoir ne survit pas à sa mort, ce qui confirme son caractère féodal plutôt qu&#39;oligarchique."
                 onclick="showDetail(7)">
@@ -454,7 +454,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Philippe le Bel</span><span class="saillant-date">1285</span></div>
         </div>
-        <div class="saillant-group" style="left:31.8225%;top:290px;">
+        <div class="saillant-group" style="left:31.8225%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Les Rois Maudits (1314)&#10;Les trois fils de Philippe le Bel — Louis X, Philippe V et Charles IV — meurent successivement sans héritier mâle entre 1314 et 1328, créant un vide de pouvoir qui permet aux grands du royaume de reprendre l&#39;initiative politique."
                 onclick="showDetail(9)">
@@ -462,7 +462,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Les Rois Maudits</span><span class="saillant-date">1314</span></div>
         </div>
-        <div class="saillant-group" style="left:32.1058%;top:380px;">
+        <div class="saillant-group" style="left:32.1058%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Loi salique (1317)&#10;En 1317, Philippe V convoque les États généraux pour légitimer sa propre succession et fait codifier la loi salique, transformant pour la première fois les règles de succession d&#39;une tradition dynastique en une loi explicite adoptée par la communauté politique."
                 onclick="showDetail(10)">
@@ -470,7 +470,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Loi salique</span><span class="saillant-date">1317</span></div>
         </div>
-        <div class="saillant-group" style="left:33.1445%;top:470px;">
+        <div class="saillant-group" style="left:33.1445%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Philippe VI (1328)&#10;Philippe VI est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique directe des Capétiens."
                 onclick="showDetail(13)">
@@ -478,7 +478,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Philippe VI</span><span class="saillant-date">1328</span></div>
         </div>
-        <div class="saillant-group" style="left:41.8319%;top:200px;">
+        <div class="saillant-group" style="left:41.8319%;">
             <div class="saillant-marker avortement" style="background:#c0392b;"
                 data-tooltip="&lt;strong&gt;Avortement&lt;/strong&gt;&#10;Traité de Troyes (1420)&#10;Le Traité de Troyes (21 mai 1420) annule la loi salique de 1317 en transférant la couronne de France à Henri V d&#39;Angleterre, détruisant le pacte oligarchique qui fondait la phase."
                 onclick="showDetail(17)">
@@ -486,7 +486,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Avortement</span><span class="saillant-figure">Traité de Troyes</span><span class="saillant-date">1420</span></div>
         </div>
-        <div class="saillant-group" style="left:42.5873%;top:290px;">
+        <div class="saillant-group" style="left:42.5873%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;États généraux de Chinon (1428)&#10;Les États généraux de Chinon (septembre 1428) constituent le nouveau pacte oligarchique : plus de 200 délégués codifient collectivement leur soutien à Charles VII, votent 500 000 livres tournois et présentent 32 cahiers de doléances fixant les conditions de leur obéissance."
                 onclick="showDetail(20)">
@@ -494,7 +494,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">États généraux de Chinon</span><span class="saillant-date">1428</span></div>
         </div>
-        <div class="saillant-group" style="left:42.6818%;top:380px;">
+        <div class="saillant-group" style="left:42.6818%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Charles VII (1429)&#10;Charles VII est le premier roi de la seconde phase oligarchique, dont la légitimité repose sur le nouveau pacte de Chinon (1428) confirmé par le sacre à Reims (1429). Il reconstruit l&#39;État central sur des bases entièrement nouvelles — armée permanente, taille permanente, contrôle de l&#39;Église."
                 onclick="showDetail(22)">
@@ -502,7 +502,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Charles VII</span><span class="saillant-date">1429</span></div>
         </div>
-        <div class="saillant-group" style="left:50.8026%;top:200px;">
+        <div class="saillant-group" style="left:50.8026%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;François Ier (1515)&#10;François Ier porte la monarchie oligarchique française à son apogée avec le Concordat de Bologne en 1516, qui lui donne le contrôle des nominations ecclésiastiques, la victoire de Marignan et l&#39;éclat de la cour Renaissance, avant que la capture de Pavie en 1525 n&#39;amorce le reflux."
                 onclick="showDetail(23)">
@@ -510,7 +510,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">François Ier</span><span class="saillant-date">1515</span></div>
         </div>
-        <div class="saillant-group" style="left:54.9575%;top:290px;">
+        <div class="saillant-group" style="left:54.9575%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Cateau-Cambrésis (1559)&#10;Le Traité de Cateau-Cambrésis met fin aux Guerres d&#39;Italie en 1559 et la mort accidentelle d&#39;Henri II la même année ferme la soupape extérieure qui canalisait les tensions entre élites, laissant le clivage religieux devenir le conflit dominant."
                 onclick="showDetail(24)">
@@ -518,7 +518,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Cateau-Cambrésis</span><span class="saillant-date">1559</span></div>
         </div>
-        <div class="saillant-group" style="left:55.2408%;top:380px;">
+        <div class="saillant-group" style="left:55.2408%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Guerres de Religion (1562)&#10;Les Guerres de Religion constituent la guerre sociale de la France, un affrontement de trente-six ans entre la Ligue catholique et les Princes protestants dont ni l&#39;une ni l&#39;autre faction ne sort victorieuse, ce qui permet l&#39;émergence d&#39;Henri IV comme figure de compromis."
                 onclick="showDetail(27)">
@@ -526,7 +526,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Guerres de Religion</span><span class="saillant-date">1562</span></div>
         </div>
-        <div class="saillant-group" style="left:58.6402%;top:200px;">
+        <div class="saillant-group" style="left:58.6402%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Henri IV (1598)&#10;Henri IV résout les Guerres de Religion en promulguant l&#39;Édit de Nantes, acte d&#39;autorité royale qui s&#39;impose au-dessus des deux factions, et reconstruit le fisc avec Sully, incarnant le tiers qui émerge de la guerre sociale sans s&#39;identifier à aucun camp."
                 onclick="showDetail(30)">
@@ -534,7 +534,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Henri IV</span><span class="saillant-date">1598</span></div>
         </div>
-        <div class="saillant-group" style="left:63.3617%;top:290px;">
+        <div class="saillant-group" style="left:63.3617%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Dernière grande révolte oligarchique&lt;/strong&gt;&#10;La Fronde (1648)&#10;La Fronde (1648-1653) est le dernier sursaut de résistance oligarchique contre le pouvoir absolu en construction : les parlementaires puis les princes du sang se soulèvent contre Mazarin pendant la minorité de Louis XIV, mais leur échec clôt définitivement l&#39;absolutisation."
                 onclick="showDetail(31)">
@@ -542,7 +542,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Dernière grande révolte oligarchique</span><span class="saillant-figure">La Fronde</span><span class="saillant-date">1648</span></div>
         </div>
-        <div class="saillant-group" style="left:66.5722%;top:200px;">
+        <div class="saillant-group" style="left:66.5722%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Louis XIV (1682)&#10;L&#39;installation de la cour à Versailles en 1682, la Trêve de Ratisbonne en 1684 qui marque l&#39;extension territoriale maximale et la révocation de l&#39;Édit de Nantes en 1685 constituent le triple sommet du pouvoir absolu français, après quoi le déclin s&#39;amorce irréversiblement."
                 onclick="showDetail(33)">
@@ -550,7 +550,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Louis XIV</span><span class="saillant-date">1682</span></div>
         </div>
-        <div class="saillant-group" style="left:69.4995%;top:290px;">
+        <div class="saillant-group" style="left:69.4995%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Traité d&#39;Utrecht (1713)&#10;Le Traité d&#39;Utrecht en 1713 solde la Guerre de Succession d&#39;Espagne par des pertes territoriales et la mort de Louis XIV en 1715 clôt l&#39;ère de l&#39;impérialisme absolutiste, ouvrant la longue période de sclérose de l&#39;Ancien Régime."
                 onclick="showDetail(34)">
@@ -558,7 +558,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Traité d&#39;Utrecht</span><span class="saillant-date">1713</span></div>
         </div>
-        <div class="saillant-group" style="left:69.6884%;top:380px;">
+        <div class="saillant-group" style="left:69.6884%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Remontrance&lt;/strong&gt;&#10;Polysynodie (1715)&#10;À la mort de Louis XIV (1715), le Régent Philippe d&#39;Orléans remplace les ministres par des conseils aristocratiques (Polysynodie). La haute noblesse tente de reprendre des prérogatives à l&#39;exécutif centralisé. L&#39;expérience échoue en 1718 — la dernière voie de réforme institutionnelle est fermée, l&#39;AR commence."
                 onclick="showDetail(35)">
@@ -566,7 +566,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Remontrance</span><span class="saillant-figure">Polysynodie</span><span class="saillant-date">1715</span></div>
         </div>
-        <div class="saillant-group" style="left:76.6761%;top:200px;">
+        <div class="saillant-group" style="left:76.6761%;">
             <div class="saillant-marker" style="background:#D4A017;"
                 data-tooltip="&lt;strong&gt;Explosion de l&#39;AR&lt;/strong&gt;&#10;Prise de la Bastille (1789)&#10;La convocation des États généraux pour résoudre la crise financière déclenche un basculement irrésistible : le tiers état et une partie de la noblesse libérale renversent l&#39;ordre ancien en quelques semaines, de la prise de la Bastille le 14 juillet à l&#39;abolition des privilèges dans la nuit du 4 août."
                 onclick="showDetail(39)">
@@ -574,7 +574,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;AR</span><span class="saillant-figure">Prise de la Bastille</span><span class="saillant-date">1789</span></div>
         </div>
-        <div class="saillant-group" style="left:76.6761%;top:290px;">
+        <div class="saillant-group" style="left:76.6761%;">
             <div class="saillant-marker" style="background:#D4A017;"
                 data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Constitution de 1791 (1789)&#10;L&#39;Assemblée nationale constituante tente d&#39;instaurer un régime parlementaire en adoptant la Déclaration des droits de l&#39;homme et du citoyen puis la Constitution de 1791, qui établit une monarchie constitutionnelle fondée sur la séparation des pouvoirs."
                 onclick="showDetail(40)">
@@ -582,7 +582,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Constitution de 1791</span><span class="saillant-date">1789</span></div>
         </div>
-        <div class="saillant-group" style="left:76.9594%;top:380px;">
+        <div class="saillant-group" style="left:76.9594%;">
             <div class="saillant-marker" style="background:#D4A017;"
                 data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;La Terreur (1792)&#10;L&#39;extrême-gauche structurelle prend le contrôle du pouvoir : la monarchie est abolie le 10 août 1792, la République est proclamée, Louis XVI est exécuté et le Comité de salut public dirigé par Robespierre instaure la Terreur, éliminant systématiquement les modérés."
                 onclick="showDetail(41)">
@@ -590,7 +590,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">La Terreur</span><span class="saillant-date">1792</span></div>
         </div>
-        <div class="saillant-group" style="left:77.1483%;top:470px;">
+        <div class="saillant-group" style="left:77.1483%;">
             <div class="saillant-marker" style="background:#D4A017;"
                 data-tooltip="&lt;strong&gt;Moment thermidorien&lt;/strong&gt;&#10;9 Thermidor (1794)&#10;La chute de Robespierre le 9 thermidor an II (27 juillet 1794) marque le retour au pouvoir du centre et de la droite, qui purgent l&#39;extrême-gauche et instaurent le Directoire, régime de compromis instable qui tente de stabiliser les acquis révolutionnaires sans la Terreur."
                 onclick="showDetail(42)">
@@ -598,7 +598,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Moment thermidorien</span><span class="saillant-figure">9 Thermidor</span><span class="saillant-date">1794</span></div>
         </div>
-        <div class="saillant-group" style="left:77.6204%;top:560px;">
+        <div class="saillant-group" style="left:77.6204%;">
             <div class="saillant-marker" style="background:#D4A017;"
                 data-tooltip="&lt;strong&gt;Impérialiste Revanchard&lt;/strong&gt;&#10;18 Brumaire (1799)&#10;Le coup d&#39;État du 18 Brumaire le 9 novembre 1799 porte Bonaparte au pouvoir ; il instaure le Consulat puis l&#39;Empire et réalise l&#39;unification juridique définitive du pays par le Code civil, acte fondateur de l&#39;État-nation moderne français."
                 onclick="showDetail(44)">
@@ -606,7 +606,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Impérialiste Revanchard</span><span class="saillant-figure">18 Brumaire</span><span class="saillant-date">1799</span></div>
         </div>
-        <div class="saillant-group" style="left:80.5477%;top:650px;">
+        <div class="saillant-group" style="left:80.5477%;">
             <div class="saillant-marker" style="background:#D4A017;"
                 data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Trois Glorieuses (1830)&#10;Les Trois Glorieuses des 27, 28 et 29 juillet 1830 renversent Charles X et portent Louis-Philippe au pouvoir dans le cadre d&#39;une monarchie constitutionnelle parlementaire, ancrant définitivement le principe de la souveraineté parlementaire dans la vie politique française."
                 onclick="showDetail(46)">
@@ -666,6 +666,68 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
     });
     el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
 });
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 6;
+    const BASE_TOP = 200;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
 
 // Detail panel
 function formatYear(yr, approx) {
