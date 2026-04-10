@@ -57,6 +57,14 @@ La méthode la plus efficace pour mapper le Parcours d'une nation non encore ana
 6. **Chercher la RN** — si elle a eu lieu.
 7. **Vérifier les durées** — tout écart significatif par rapport aux ~200 ans typiques signale une perturbation à identifier.
 
+**Règle d'or : le test discriminant prime sur les durées.** Ne pas ajuster l'identification des saillants pour obtenir des durées typiques. Appliquer d'abord le test discriminant de chaque transition de phase, puis expliquer les écarts de durée par des perturbations. Les durées atypiques sont toujours le signal d'une perturbation — pas d'une erreur d'identification. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme : revérifier le test discriminant.
+
+**Vérifications de cohérence (à appliquer avant de finaliser) :**
+
+1. **Le test discriminant a-t-il été appliqué à la bonne échelle ?** Si la nation est ou a été une monarchie composite (ex. : Espagne habsbourgeoise, Saint-Empire), l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau.
+2. **L'expansion a-t-elle été attribuée à la bonne phase ?** L'expansion prolonge la phase EN COURS au moment où elle commence (cf. Venise). Vérifier via le test discriminant que la phase identifiée est bien celle qui est en cours.
+3. **La guerre sociale se joue-t-elle à l'échelle pertinente ?** Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale, pas seulement régionale.
+
 ### Durées typiques endogènes
 
 En l'absence de perturbation externe, les phases ont des durées caractéristiques :

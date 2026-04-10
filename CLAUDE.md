@@ -92,6 +92,18 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 - Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, chercher un choc externe.
 - Ce choc a-t-il détruit les institutions (→ reboot) ou simplement hétérogénéisé la société (→ prolongement) ?
 
+### Étape 2bis : Vérifier la cohérence des identifications
+
+Avant de produire les fichiers, appliquer ces contrôles de cohérence :
+
+1. **Le test discriminant a-t-il été appliqué à la bonne échelle ?** Si la nation est ou a été une monarchie composite (ex. : Espagne, Saint-Empire), l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau. Le pic oligarchique peut être très puissant dans le noyau sans que la phase absolutiste ait commencé à l'échelle nationale.
+
+2. **L'expansion a-t-elle été attribuée à la bonne phase ?** L'expansion (coloniale, impériale, Reconquista) prolonge toujours la phase EN COURS au moment où elle commence. Vérifier via le test discriminant que la phase identifiée est bien celle qui est en cours. Erreur typique : attribuer l'exutoire colonial à la phase absolutiste alors que la phase oligarchique n'est pas encore terminée.
+
+3. **Les durées atypiques ont-elles été expliquées par des perturbations, pas par des ajustements d'identification ?** Le test discriminant PRIME SUR les durées. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme — revérifier le test discriminant. Les durées atypiques sont le signal d'une perturbation, pas d'une erreur d'identification.
+
+4. **La guerre sociale se joue-t-elle à l'échelle pertinente ?** Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale, pas seulement régionale.
+
 ### Étape 3 : Produire le fichier `parcours.md`
 
 Créer le fichier structuré `references/nations/<nation>/parcours.md` avec :

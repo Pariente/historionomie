@@ -13,9 +13,15 @@ Le **bloc contestataire** (ED + EG) a-t-il **renversé le bloc élitaire** ? Le 
 - **Non** → phase absolutiste. Le pouvoir central contrôle la situation, même si la contestation monte (Ancien Régime).
 - **Oui** → Révolution Nationale. L'ordre ancien a explosé.
 
+### Échelle d'application du test
+
+Le test s'applique à l'échelle **nationale** — c'est-à-dire à l'échelle de l'entité dont on suit le Parcours. Dans une monarchie composite (ex. : Espagne habsbourgeoise, Saint-Empire), l'administration centrale doit avoir préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau. Si le noyau est absolutisé mais que des entités associées conservent leurs propres institutions (fueros, Cortès, droit propre), le test N'EST PAS passé.
+
+**Exemple :** Les Rois Catholiques (1479) absolutisent la Castille, mais la Couronne d'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques — qui sont le pic oligarchique.
+
 ### Marqueurs nécessaires
 
-- L'administration centrale a préséance incontestée sur les administrations locales
+- L'administration centrale a préséance incontestée sur les administrations locales (à l'échelle nationale)
 - L'exécutif peut agir sans frein juridique des oligarques (guerre, impôts, justice)
 - Une figure ou dynastie issue de la guerre sociale, qui ne s'identifie à aucune des anciennes factions
 

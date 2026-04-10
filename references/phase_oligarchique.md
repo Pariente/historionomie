@@ -19,6 +19,8 @@ L'**administration centrale** a-t-elle **préséance de facto** sur les administ
 - **Non** → phase oligarchique. L'État central existe mais doit composer avec les pouvoirs locaux. Les oligarques disposent de leurs propres appareils fiscaux, militaires et judiciaires.
 - **Oui** → phase absolutiste. L'administration centrale s'est imposée ; les administrations locales sont devenues ses supplétifs.
 
+**Échelle d'application :** Le test s'applique à l'échelle nationale. Dans une monarchie composite, si le noyau est absolutisé mais que des entités associées conservent leurs propres institutions, le test reste négatif — la nation est encore en phase oligarchique. L'expansion (coloniale, impériale) prolonge alors la phase oligarchique, pas la phase absolutiste (qui n'a pas encore commencé).
+
 ### Marqueurs nécessaires
 
 - Fisc permanent central (même coexistant avec des fiscs locaux)
@@ -146,7 +148,11 @@ L'expansion extérieure peut considérablement retarder la polarisation des éli
 
 **Exemple :** Venise reste en phase oligarchique pendant ~637 ans (~1032-~1669) parce que l'expansion permanente (Stato da Màr post-1204, Terraferma 1404-1428, guerres ottomanes) fournit continuellement des débouchés. La polarisation (giovani/vecchi) ne commence sérieusement qu'après la fin de l'expansion agressive (Agnadello, 1509), et la guerre sociale ne se résout qu'après la perte de la plus grande colonie (Crète, 1669). C'est le mécanisme analogue aux « boucles » de la phase féodale : une condition non remplie (ici, la fin de l'expansion) empêche la transition.
 
-**Autres cas à explorer :** les empires coloniaux européens (Portugal, Espagne, Pays-Bas) ont-ils été maintenus en phase oligarchique par leur expansion ?
+**L'expansion prolonge la phase EN COURS, quelle qu'elle soit.** Il faut vérifier que la phase à laquelle on attribue le prolongement est bien celle qui est en cours au moment de l'expansion (via le test discriminant). L'empire colonial espagnol prolonge la phase OLIGARCHIQUE (pas l'absolutiste), parce que la phase absolutiste n'a pas encore commencé au moment où l'expansion coloniale bat son plein — les fueros aragonais sont encore intacts et le test discriminant absolutiste n'est pas passé à l'échelle nationale.
+
+**Cas confirmé — Espagne :** la phase oligarchique dure ~345 ans (1369-1714), prolongée par la Reconquista (exutoire pendant la fin de la féodale et le début de l'oligarchique), l'empire colonial américain (exutoire à partir de 1521), et le choc d'hétérogénéité habsbourgeois (1516, qui repousse le seuil d'homogénéité en intégrant les Pays-Bas, l'Italie et les Amériques). La guerre sociale est la Guerre de Succession d'Espagne (1700-1714), qui oppose les élites centralisatrices castillanes (prébendière, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, pro-Habsbourg). Philippe V, prince français (tiers extérieur aux factions espagnoles), résout le conflit par les décrets de Nueva Planta (1716).
+
+**Autres cas à explorer :** les empires coloniaux du Portugal et des Pays-Bas ont-ils été maintenus en phase oligarchique par leur expansion ?
 
 ## Tableau récapitulatif
 

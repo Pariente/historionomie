@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Espagne</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Pre-phase band */
+.prephase-band { position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
+    border-radius:6px; display:flex; align-items:center; justify-content:center; }
+.prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/espagne/flag.png' alt='drapeau'>
+        <h1>Espagne</h1>
+        <span class='header-badge badge-status'>proposition</span>
+    </div>
+    <div class="header-subtitle">¡Heil, Pepito!</div>
+</div>
+
+<div class="briefing"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Las_Navas_de_Tolosa.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#8B7355;flex-shrink:0;margin-top:3px;"></span>La Reconquista prolonge la féodale, l&#39;empire colonial prolonge l&#39;oligarchique</span><span class="insight-desc">L&#39;expansion prolonge toujours la phase en cours. La Reconquista prolonge la phase féodale (~134 ans). L&#39;empire colonial et le choc habsbourgeois prolongent la phase oligarchique (~145 ans). C&#39;est le même mécanisme que l&#39;expansion vénitienne — l&#39;Espagne est la Venise de l&#39;Atlantique</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Philip_V_of_Spain.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>La Guerre de Succession d&#39;Espagne = la guerre sociale</span><span class="insight-desc">Le conflit qui résout la phase oligarchique n&#39;est PAS la guerre civile castillane du XVe siècle — c&#39;est la GSE (1700-1714), qui oppose les élites centralisatrices castillanes (prébendière) aux élites autonomistes aragonaises (patrimoniale) à l&#39;échelle nationale. Philippe V, prince français (tiers extérieur), résout le conflit par les décrets de Nueva Planta</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Isabel_la_Católica-2.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Les Rois Catholiques : pic oligarchique, pas 1er monarque absolu</span><span class="insight-desc">Isabelle et Ferdinand sont immensément puissants mais opèrent DANS le cadre de la monarchie composite — les fueros aragonais sont intacts. Le test discriminant absolutiste n&#39;est passé à l&#39;échelle nationale qu&#39;après Nueva Planta (1716). Les Rois Catholiques sont l&#39;analogue de François Ier en France — pic de puissance oligarchique, pas début de l&#39;absolutisme</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Constitución_española_de_1978.JPG?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px;"></span>Un IR contraint, une RN de 47 ans</span><span class="insight-desc">La RN commence en 1931 (chute de la monarchie), pas en 1808. Franco est un IR contraint (incapable de se projeter vers l&#39;extérieur) qui sert aussi de longue Restauration. La Transition démocratique (1978) est la Glorieuse Révolution. Durée : ~47 ans — dans la norme</span></div></div></div>
+        </div><div class="briefing-questions">
+            <div class="briefing-label">Questions ouvertes</div>
+            <div class="question-item"><span class="question-tag">Les conflits du XVe siècle (Luna vs Infants, Farsa de Ávila) — polarisation intra-oligarchique ou guerre sociale ?</span><span class="question-text">L&#39;hypothèse retenue (polarisation intra-oligarchique) repose sur le fait que la guerre sociale doit se jouer à l&#39;échelle NATIONALE. Les conflits du XVe siècle sont castillans. La GSE (1700-1714) est espagnole. Mais les conflits castillans ressemblent beaucoup à une guerre sociale — l&#39;identification mérite discussion.</span></div><div class="question-item"><span class="question-tag">L&#39;IR contraint est-il généralisable ?</span><span class="question-text">Franco ne peut pas projeter sa puissance vers l&#39;extérieur et cumule IR + Restauration. Ce concept s&#39;appliquerait-il à d&#39;autres petites nations voisines de grandes puissances ?</span></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:7.1685%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:25.0896%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:43.0108%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:60.9319%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:78.8530%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        <div class="tick" style="left:96.7742%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">2000</div>
+        </div>
+        
+        
+        <div class="phase-band" style="left:0.8961%;width:9.4086%;
+            background:#e7e7e7;border-top:3px solid #A0A0A0;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Pré-féodale&lt;/strong&gt; (~930 — ~1035)&#10;Cent ans d&#39;incubation castillane au sein du royaume de León. Le comté de Castille existe comme entité autonome sous Fernán González (~930), mais reste formellement subordonné à León."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#A0A0A0;">Pré-féodale</div>
+            <div class="phase-band-dates">~930 — ~1035</div>
+        </div>
+        <div class="phase-band" style="left:10.3047%;width:29.9283%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (~1035 — ~1369)&#10;La phase féodale castillane est prolongée par deux mécanismes : l&#39;oscillation Castille-León (boucles en 1065 et 1157) et la Reconquista comme exutoire permanent. La Reconquista joue le même rôle que l&#39;expansion maritime pour la phase oligarchique vénitienne : elle absorbe l&#39;énergie des élites et retarde la cristallisation interne. Le pacte ne survient que quand l&#39;expansion majeure s&#39;achève (~1262) et que les élites ont eu ~100 ans pour s&#39;homogénéiser à la nouvelle échelle. Pierre Ier (1350-1369), dernier pic féodal autoritaire, est renversé par l&#39;oligarchie, ouvrant la voie au pacte."
+            onclick="showDetail(2)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">~1035 — ~1369</div>
+        </div>
+        <div class="phase-band" style="left:40.2330%;width:30.9140%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (~1369 — ~1714)&#10;La phase oligarchique espagnole dure ~345 ans (1369-1714), prolongée par l&#39;expansion (Reconquista finale, empire colonial, empire habsbourgeois) — exactement comme l&#39;expansion maritime prolonge la phase oligarchique vénitienne (~637 ans). L&#39;essor est rapide (Audiencia, Consejo Real, alcabala permanente). Les Rois Catholiques (~1492) sont le pic oligarchique — immensément puissants mais opérant dans le cadre de la monarchie composite. Le choc d&#39;hétérogénéité habsbourgeois (1516) explose l&#39;échelle et prolonge la phase. Les corrections d&#39;échelle (1556, 1640, 1648, 1714) ramènent l&#39;Espagne vers son échelle naturelle. La guerre sociale est la GSE (1700-1714), résolue par Philippe V."
+            onclick="showDetail(13)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">~1369 — ~1714</div>
+        </div>
+        <div class="phase-band" style="left:71.1470%;width:19.4444%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (~1714 — 1931)&#10;La phase absolutiste espagnole commence avec Philippe V et la Nueva Planta (1714-1716) et dure ~217 ans — quasi dans la norme. L&#39;absolutisation est rapide (~56 ans). Charles III (~1770) est le pic absolutiste. L&#39;empire colonial prolonge légèrement l&#39;impérialisme. La Gloriosa (1868) est la remontrance — son échec ouvre l&#39;AR. Le turno pacífico (1874-1931) est le système d&#39;AR. Le Désastre de 1898 accélère la sclérose en éliminant le dernier exutoire colonial. AR : ~57 ans, dans la norme."
+            onclick="showDetail(23)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">~1714 — 1931</div>
+        </div>
+        <div class="phase-band" style="left:90.5914%;width:4.2115%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale&lt;/strong&gt; (1931 — 1978)&#10;La RN espagnole commence en 1931 (chute de la monarchie) et s&#39;achève en 1978 (Constitution) — ~47 ans, dans la norme. Franco est un IR contraint (incapable de projeter sa puissance vers l&#39;extérieur) qui cumule les rôles d&#39;IR et de Restauration. La Transition (1978) est la Glorieuse Révolution."
+            onclick="showDetail(31)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale</div>
+            <div class="phase-band-dates">1931 — 1978</div>
+        </div>
+        <div class="phase-band" style="left:94.8029%;width:4.3011%;
+            background:#c6e3ff;border-top:3px solid #1E90FF;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase parlementaire&lt;/strong&gt; (1978 — en cours)&#10;L&#39;Espagne entre dans la phase parlementaire avec la Constitution de 1978. Le système des communautés autonomes accommode l&#39;hétérogénéité régionale dans un cadre parlementaire."
+            onclick="showDetail(39)">
+            <div class="phase-band-label" style="color:#1E90FF;">Parlementaire</div>
+            <div class="phase-band-dates">1978 — en cours</div>
+        </div>
+        
+        <div class="subphase-band" style="left:0.8961%;width:9.4086%;
+            background:#d4d4d4;border-bottom:2px solid #A0A0A0;"
+            data-tooltip="&lt;strong&gt;Percolation élitaire&lt;/strong&gt; (~930 — ~1035)&#10;Le comté de Castille est autonome de facto mais subordonné à León. Fernán González (~930) est le précurseur. La percolation s&#39;achève quand Ferdinand Ier (1035) hérite du comté et conquiert León, devenant le premier roi de Castille."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Percolation élitaire</span>
+        </div>
+        <div class="subphase-band" style="left:10.3047%;width:29.9283%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (~1035 — ~1369)&#10;De Ferdinand Ier au règlement trastámara. Six pics féodaux, deux boucles (1065, 1157), la Reconquista comme accélérateur culturel et retardateur politique. La crise d&#39;Alphonse X (1282) est avortée (pas de codification). Pierre Ier (1350-1369) est le dernier pic féodal autoritaire."
+            onclick="showDetail(3)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:40.2330%;width:19.6237%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (~1369 — ~1588)&#10;D&#39;Henri II à l&#39;Armada. L&#39;appareil d&#39;État se consolide rapidement : Audiencia (1371), Consejo Real (1385), alcabala permanente (1393), corregidores (~1393). Les Rois Catholiques (~1492) portent la puissance à son maximum (letrados, Inquisition, conquête de Grenade, découverte de l&#39;Amérique) — pic oligarchique. Le choc d&#39;hétérogénéité habsbourgeois (1516) explose l&#39;échelle, mais l&#39;expansion (colonies, guerres européennes) fournit un exutoire formidable qui prolonge l&#39;essor, exactement comme l&#39;expansion maritime prolonge l&#39;essor oligarchique vénitien. Philippe II (~1580) porte l&#39;empire à son apogée mais opère toujours dans la monarchie composite (fueros aragonais intacts). L&#39;Armada (1588) marque la fin de l&#39;expansion et le tournant vers la polarisation."
+            onclick="showDetail(14)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:59.8566%;width:10.0358%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (~1588 — ~1700)&#10;Après les révoltes de 1640 (Catalogne, Portugal), la polarisation entre les deux modèles d&#39;organisation de l&#39;État devient la question centrale. Les élites castillanes (centralisatrices, dépendantes de l&#39;État central = prébendières) s&#39;opposent aux élites aragonaises/catalanes (autonomistes, fondées sur les fueros = patrimoniales). L&#39;affrontement est structurel : la question est de savoir si l&#39;Espagne sera un État centralisé (modèle castillan/français) ou une monarchie composite (modèle habsbourgeois/aragonais)."
+            onclick="showDetail(19)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:69.8925%;width:1.2545%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1700 — 1714)&#10;La Guerre de Succession d&#39;Espagne (1700-1714) est la guerre sociale espagnole. Elle oppose les élites centralisatrices castillanes (prébendière, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, pro-Habsbourg). Philippe V, prince français (tiers extérieur), résout le conflit par les décrets de Nueva Planta (1707-1716)."
+            onclick="showDetail(21)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:71.1470%;width:5.0179%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (~1714 — ~1770)&#10;Philippe V (1700-1746) impose le modèle centralisé français : intendants, secrétaires d&#39;État, droit castillan sur tout le territoire. Ferdinand VI (1746-1759) consolide. Pas de DGRO identifiable — les oligarques aragonais/catalans n&#39;ont plus d&#39;assise territoriale après Nueva Planta, exactement comme les patriciens vénitiens n&#39;ont pas de seigneuries depuis lesquelles résister. L&#39;absolutisation est « fluide » (comme à Venise)."
+            onclick="showDetail(24)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band" style="left:76.1649%;width:9.3190%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (~1770 — ~1874)&#10;Charles III (~1770) est le pic absolutiste — réformes bourboniennes, expulsion des Jésuites, domestication complète des élites. L&#39;empire colonial prolonge l&#39;impérialisme. La perte des colonies américaines (1808-1826) accélère le déclin. La Gloriosa (1868) est la remontrance — elle échoue et son échec (Restauration, 1874) marque l&#39;entrée en AR."
+            onclick="showDetail(26)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band" style="left:85.4839%;width:5.1075%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime&lt;/strong&gt; (~1874 — 1931)&#10;L&#39;AR commence avec la Restauration (1874), après l&#39;échec de la remontrance (La Gloriosa). Le turno pacífico de Cánovas est le système d&#39;AR — pseudo-parlementaire, exclusionnaire, élections manipulées. Le Désastre de 1898 (perte de Cuba, Philippines) élimine le dernier exutoire colonial et accélère la sclérose. Primo de Rivera (1923-1930) échoue à sauver le régime. L&#39;explosion survient en 1931. Durée : ~57 ans — dans la norme (35-100 ans)."
+            onclick="showDetail(30)">
+            <span class="subphase-label">Ancien Régime</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:90.5914%;width:0.7168%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1931 — 1939)&#10;Explosion (1931) → expérience parlementaire (Seconde République, 1931-1936) → phase aiguë (Guerre civile, 1936-1939). Séquence rapide (8 ans), comparable à la France (1789-1799, 10 ans) et à l&#39;Angleterre (1642-1649, 7 ans)."
+            onclick="showDetail(32)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band narrow" style="left:91.3082%;width:3.2258%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;IR contraint et Restauration&lt;/strong&gt; (1939 — 1975)&#10;Franco cumule les rôles d&#39;IR et de Restauration. IR contraint : il ne peut pas projeter la puissance vers l&#39;extérieur. Il maintient l&#39;ordre, modernise l&#39;économie, crée les conditions de la Glorieuse Révolution."
+            onclick="showDetail(36)">
+            <span class="subphase-label">IR contraint et Restauration</span>
+        </div>
+        
+        
+        <div class="saillant-group" style="left:10.3047%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Ferdinand Ier (~1035)&#10;Ferdinand Ier (r. 1035-1065) est le premier roi de Castille. Il hérite du comté, conquiert León (1037), et impose tribut aux royaumes musulmans de Tolède, Saragosse et Séville. Pour la première fois, un chef castillan structure le jeu politique à l&#39;échelle de la péninsule."
+                onclick="showDetail(4)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Ferdinand Ier</span><span class="saillant-date">~1035</span></div>
+        </div>
+        <div class="saillant-group" style="left:14.7849%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Alphonse VI — Tolède (~1085)&#10;Alphonse VI (r. 1072-1109) réunifie Castille et León, conquiert Tolède (1085) — l&#39;ancienne capitale wisigothique — et se proclame « Imperator totius Hispaniae ». Premier pouvoir véritablement supra-régional du Parcours."
+                onclick="showDetail(5)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Alphonse VI — Tolède</span><span class="saillant-date">~1085</span></div>
+        </div>
+        <div class="saillant-group" style="left:21.2366%;">
+            <div class="saillant-marker avortement" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Division de 1157 (1157)&#10;Alphonse VII « l&#39;Empereur » (r. 1126-1157) divise délibérément ses royaumes entre ses deux fils : Sanche III (Castille) et Ferdinand II (León). Castille et León restent séparés pendant 73 ans (1157-1230). Boucle féodale — l&#39;échelle est trop grande pour l&#39;homogénéité réelle."
+                onclick="showDetail(6)">
+                <span class="material-icons">cancel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Division de 1157</span><span class="saillant-date">1157</span></div>
+        </div>
+        <div class="saillant-group" style="left:27.7778%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Ferdinand III — Union définitive (~1230)&#10;Ferdinand III (r. 1217/1230-1252) réalise l&#39;union définitive de Castille et León (1230) et conquiert Cordoue (1236), Jaén (1246) et Séville (1248). Le territoire castillan double. L&#39;union, cette fois, est permanente."
+                onclick="showDetail(7)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Ferdinand III — Union définitive</span><span class="saillant-date">~1230</span></div>
+        </div>
+        <div class="saillant-group" style="left:30.9140%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Alphonse X le Sage (~1265)&#10;Alphonse X (r. 1252-1284) entreprend les Siete Partidas (~1265, code juridique le plus complet d&#39;Europe) et le Fuero Real. Mais la noblesse se rebelle (1272) et la crise de 1282 renverse Alphonse au profit de son fils Sanche. Le pouvoir ne survit pas à la crise — c&#39;est un pic féodal, pas un monarque oligarchique."
+                onclick="showDetail(8)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Alphonse X le Sage</span><span class="saillant-date">~1265</span></div>
+        </div>
+        <div class="saillant-group" style="left:32.4373%;">
+            <div class="saillant-marker avortement" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Rébellion de Sanche (1282)&#10;En 1282, les Cortès de Valladolid agissent collectivement pour déclarer Alphonse X inapte. Action collective majeure, mais pas de codification juridique durable — pas de nouveau cadre légal pour l&#39;exercice du pouvoir. Le Parcours continue dans la phase féodale."
+                onclick="showDetail(9)">
+                <span class="material-icons">cancel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Rébellion de Sanche</span><span class="saillant-date">1282</span></div>
+        </div>
+        <div class="saillant-group" style="left:37.6344%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Alphonse XI (~1340)&#10;Alphonse XI (r. 1312-1350) impose l&#39;alcabala (1342), codifie le droit (Ordenamiento de Alcalá, 1348), crée les regimientos (1345), remporte le Salado (1340). Mais il meurt de la peste en 1350 — son œuvre est personnelle et fragile."
+                onclick="showDetail(10)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Alphonse XI</span><span class="saillant-date">~1340</span></div>
+        </div>
+        <div class="saillant-group" style="left:38.5305%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Guerre civile trastámara (1350)&#10;Pierre Ier « le Cruel » (1350-1369) tente de centraliser en s&#39;appuyant sur le peuple et la communauté juive contre la noblesse — un Faliero castillan. L&#39;oligarchie, menée par Henri de Trastámara et soutenue par la France (du Guesclin), le renverse et le tue à Montiel (1369). La crise produit le pacte : Henri II, usurpateur, doit négocier."
+                onclick="showDetail(11)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Guerre civile trastámara</span><span class="saillant-date">1350</span></div>
+        </div>
+        <div class="saillant-group" style="left:40.2330%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Règlement trastámara (1369)&#10;Le règlement trastámara (1369-1371) est le pacte oligarchique castillan. Les mercedes enriqueñas codifient le rapport couronne-noblesse. Les Cortès de Toro (1371) créent l&#39;Audiencia. Un nouveau principe de succession est établi : la légitimité par le soutien de la communauté politique, pas uniquement par la naissance."
+                onclick="showDetail(12)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Règlement trastámara</span><span class="saillant-date">1369</span></div>
+        </div>
+        <div class="saillant-group" style="left:40.2330%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Henri II (1369)&#10;Henri II (r. 1369-1379) est le premier roi qui règne sous le cadre du pacte trastámara. Ses successeurs (Jean Ier, Henri III) consolident les institutions : Consejo Real (1385), alcabala permanente (1393), corregidores."
+                onclick="showDetail(15)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Henri II</span><span class="saillant-date">1369</span></div>
+        </div>
+        <div class="saillant-group" style="left:51.2545%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Rois Catholiques (~1492)&#10;Les Rois Catholiques (Isabelle de Castille, r. 1474-1504, et Ferdinand d&#39;Aragon, r. 1479-1516) sont le pic oligarchique espagnol — la figure exécutive la plus puissante dans le cadre de la monarchie composite. Letrados au Consejo Real, corregidores dans chaque ville, ordres militaires incorporés, Inquisition sous contrôle royal, conquête de Grenade (1492), découverte de l&#39;Amérique. Mais les fueros aragonais restent intacts — le test absolutiste n&#39;est PAS passé."
+                onclick="showDetail(16)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Rois Catholiques</span><span class="saillant-date">~1492</span></div>
+        </div>
+        <div class="saillant-group" style="left:53.4050%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Choc d&#39;hétérogénéité&lt;/strong&gt;&#10;Héritage habsbourgeois (1516)&#10;En 1516, Charles Quint hérite de la Castille + Aragon + Pays-Bas + Lombardie + Naples/Sicile + Amériques. En 1519, il est élu empereur. L&#39;échelle de la polité explose. C&#39;est un choc d&#39;hétérogénéité massif, analogue au doublement napoléonien bavarois (1806), qui prolonge la phase oligarchique en repoussant le seuil d&#39;homogénéité. Les corrections d&#39;échelle progressives (1556, 1640, 1648, 1714) ramènent lentement l&#39;Espagne vers son échelle naturelle."
+                onclick="showDetail(17)">
+                <span class="material-icons">group_add</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Choc d&#39;hétérogénéité</span><span class="saillant-figure">Héritage habsbourgeois</span><span class="saillant-date">1516</span></div>
+        </div>
+        <div class="saillant-group" style="left:59.8566%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;L&#39;Invincible Armada (1588)&#10;La défaite de l&#39;Armada (1588) marque le tournant de l&#39;impérialisme habsbourgeois. Les guerres deviennent défensives. Les corrections d&#39;échelle s&#39;accélèrent (Portugal 1640, Pays-Bas 1648, Utrecht 1714). La polarisation interne peut se développer."
+                onclick="showDetail(18)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">L&#39;Invincible Armada</span><span class="saillant-date">1588</span></div>
+        </div>
+        <div class="saillant-group" style="left:64.5161%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Corrections d&#39;échelle&lt;/strong&gt;&#10;Portugal + Catalogne (1640)&#10;En 1640, le Portugal fait sécession (définitive) et la Catalogne se soumet temporairement à la France (1640-1659). Ce sont des corrections d&#39;échelle : les morceaux trop hétérogènes se détachent, ramenant l&#39;Espagne vers sa taille naturelle. Le Portugal est perdu définitivement — correction d&#39;échelle analogue à la perte de la Normandie par les Plantagenêt (1204)."
+                onclick="showDetail(20)">
+                <span class="material-icons">diamond</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Corrections d&#39;échelle</span><span class="saillant-figure">Portugal + Catalogne</span><span class="saillant-date">1640</span></div>
+        </div>
+        <div class="saillant-group" style="left:69.8925%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Guerre de Succession d&#39;Espagne (1700)&#10;La GSE (1700-1714) oppose les élites centralisatrices castillanes (prébendière, dépendantes de l&#39;État central, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, fondées sur les fueros, pro-Habsbourg). Ni l&#39;une ni l&#39;autre ne l&#39;emporte en tant que telle — c&#39;est Philippe V, prince français (tiers extérieur aux factions espagnoles), qui impose un ordre nouveau par la Nueva Planta. Structurellement analogue aux Guerres de Religion françaises (Henri IV, tiers) et à la Guerre des Deux-Roses anglaise (Henri VII, tiers)."
+                onclick="showDetail(22)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Guerre de Succession d&#39;Espagne</span><span class="saillant-date">1700</span></div>
+        </div>
+        <div class="saillant-group" style="left:71.1470%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Philippe V (1714)&#10;Philippe V (r. 1700-1746), prince français de la maison de Bourbon, est le 1er monarque absolu espagnol. Il résout la guerre sociale (GSE) et impose l&#39;administration centrale sur tout le territoire par les décrets de Nueva Planta (1707-1716). Nouvelle dynastie, nouveau modèle administratif (français), abolition des fueros — c&#39;est la rupture absolutiste."
+                onclick="showDetail(25)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Philippe V</span><span class="saillant-date">1714</span></div>
+        </div>
+        <div class="saillant-group" style="left:76.1649%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Charles III (~1770)&#10;Charles III (r. 1759-1788) incarne le sommet de l&#39;absolutisme espagnol. Réformes bourboniennes complètes, expulsion des Jésuites (1767), libre commerce colonial (1778), domestication des élites (Aranda, Campomanes, Floridablanca). Premier monarque véritablement absolu sur tout le territoire et au sommet de sa maîtrise administrative."
+                onclick="showDetail(27)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Charles III</span><span class="saillant-date">~1770</span></div>
+        </div>
+        <div class="saillant-group" style="left:84.9462%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Remontrance&lt;/strong&gt;&#10;La Gloriosa + Sexenio (1868)&#10;La Gloriosa (1868) et le Sexenio Democrático (1868-1874) sont la remontrance espagnole — la dernière tentative de la classe parlementaire d&#39;imposer un régime constitutionnel. Constitution de 1869, suffrage universel, Amadeo Ier, Première République. L&#39;expérience échoue : le pronunciamiento de Martínez Campos (1874) réimpose l&#39;ancien ordre. L&#39;échec marque l&#39;entrée en Ancien Régime — le turno pacífico (1874-1931) est le système sclérosé final."
+                onclick="showDetail(28)">
+                <span class="material-icons">record_voice_over</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Remontrance</span><span class="saillant-figure">La Gloriosa + Sexenio</span><span class="saillant-date">1868</span></div>
+        </div>
+        <div class="saillant-group" style="left:87.6344%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Désastre de 1898 (1898)&#10;La perte de Cuba, des Philippines et de Porto Rico (1898) élimine le dernier exutoire colonial. L&#39;effondrement avait commencé en 1808 (perte des colonies américaines). Après 1898, le Parcours ACCÉLÈRE : l&#39;AR ne dure que ~33 ans. Analogue de Passarowitz (1718) pour Venise."
+                onclick="showDetail(29)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Désastre de 1898</span><span class="saillant-date">1898</span></div>
+        </div>
+        <div class="saillant-group" style="left:90.5914%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Explosion de l&#39;Ancien Régime&lt;/strong&gt;&#10;Chute de la monarchie (1931)&#10;En avril 1931, les élections municipales révèlent un soutien massif aux républicains. Alphonse XIII part en exil. La Seconde République est proclamée le 14 avril."
+                onclick="showDetail(33)">
+                <span class="material-icons">diamond</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;Ancien Régime</span><span class="saillant-figure">Chute de la monarchie</span><span class="saillant-date">1931</span></div>
+        </div>
+        <div class="saillant-group" style="left:90.5914%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Seconde République (1931)&#10;La Seconde République (1931-1936) — suffrage universel, constitution démocratique, factions concurrentes. Biennio reformista (1931-1933), biennio negro (1933-1936), Front populaire (1936). La polarisation est extrême."
+                onclick="showDetail(34)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Seconde République</span><span class="saillant-date">1931</span></div>
+        </div>
+        <div class="saillant-group" style="left:91.0394%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Guerre civile (1936)&#10;La Guerre civile (1936-1939) est la phase aiguë. Républicains contre Nationalistes. ~500 000 morts. L&#39;EG (anarchistes CNT-FAI, POUM) et l&#39;ED (Phalange, carlistes) dominent, les modérés sont éliminés."
+                onclick="showDetail(35)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">Guerre civile</span><span class="saillant-date">1936</span></div>
+        </div>
+        <div class="saillant-group" style="left:91.3082%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Impérialiste Revanchard&lt;/strong&gt;&#10;Franco (1939)&#10;Franco (r. 1939-1975) est l&#39;IR contraint. Il émerge de la phase aiguë, concentre le pouvoir personnel, fusionne les factions (Phalange, carlistes, monarchistes, militaires, Église). Le revanchisme est frustré (Espagne trop faible). Le tournant technocratique (Opus Dei, années 1960) ventile les élites et modernise l&#39;économie. Franco meurt dans son lit — le seul IR du corpus qui n&#39;est ni vaincu ni renversé."
+                onclick="showDetail(37)">
+                <span class="material-icons">military_tech</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Impérialiste Revanchard</span><span class="saillant-figure">Franco</span><span class="saillant-date">1939</span></div>
+        </div>
+        <div class="saillant-group" style="left:94.8029%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Transition démocratique (1978)&#10;La Transition (1975-1978) est la Glorieuse Révolution espagnole. Juan Carlos orchestre le démantèlement du régime. Suárez fait voter la Loi de Réforme par les Cortès franquistes. La Constitution de 1978 (88,5 % au référendum) établit la monarchie parlementaire. Le 23-F (1981) échoue et consolide l&#39;ordre nouveau."
+                onclick="showDetail(38)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Transition démocratique</span><span class="saillant-date">1978</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond"><span class="material-icons" style="font-size:10px;color:#fff;">terrain</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;"><span class="material-icons" style="font-size:10px;color:#fff;">cancel</span></span>Avortement</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 10/04/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'prefeodale','title':'Pré-féodale','subtitle':'','summary':'Cent ans d\'incubation castillane au sein du royaume de León. Le comté de Castille existe comme entité autonome sous Fernán González (~930), mais reste formellement subordonné à León.','description':'Avant 1035, la Castille n\'est pas un royaume mais un comté à l\'intérieur du royaume de León. Fernán González (~930-970) unifie les petits comtés castillans et obtient une autonomie de facto, rendant le comté héréditaire — il est le fondateur de la Castille en tant qu\'entité politique distincte. Mais son autorité reste limitée au nord de la Castille et il ne structure pas le jeu politique au-delà de son comté. La Castille de cette époque est un espace de frontière (marca), marqué par la Reconquista, avec une société plus libre et plus militarisée que le reste du monde ibérique chrétien. Le régime des behetrías (villages dont les habitants choisissent leur seigneur) donne aux paysans castillans une mobilité sociale inhabituelle.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':930,'end':1035,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'prefeodale','title':'Percolation élitaire','subtitle':'','summary':'Le comté de Castille est autonome de facto mais subordonné à León. Fernán González (~930) est le précurseur. La percolation s\'achève quand Ferdinand Ier (1035) hérite du comté et conquiert León, devenant le premier roi de Castille.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':930,'end':1035,'start_approx':true,'end_approx':true},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','subtitle':'','summary':'La phase féodale castillane est prolongée par deux mécanismes : l\'oscillation Castille-León (boucles en 1065 et 1157) et la Reconquista comme exutoire permanent. La Reconquista joue le même rôle que l\'expansion maritime pour la phase oligarchique vénitienne : elle absorbe l\'énergie des élites et retarde la cristallisation interne. Le pacte ne survient que quand l\'expansion majeure s\'achève (~1262) et que les élites ont eu ~100 ans pour s\'homogénéiser à la nouvelle échelle. Pierre Ier (1350-1369), dernier pic féodal autoritaire, est renversé par l\'oligarchie, ouvrant la voie au pacte.','description':'La phase présente deux caractéristiques distinctives. D\'une part, l\'oscillation Castille-León — chaque roi fort unifie les deux couronnes, puis le système se fragmente à sa mort (Ferdinand Ier divise en 1065, Alphonse VII divise en 1157). Ce sont des boucles féodales : l\'échelle augmente au-delà du seuil d\'homogénéité, le pacte est impossible, l\'entité se scinde. D\'autre part, la Reconquista fournit un exutoire permanent : les élites investissent leur énergie dans la conquête. L\'union définitive (Ferdinand III, 1230) et la fin de la grande Reconquista (~1262) stabilisent l\'échelle, mais il faut encore ~100 ans pour que l\'homogénéité mûrisse. Pierre Ier (1350-1369) tente de centraliser en s\'appuyant sur le peuple et les juifs contre l\'oligarchie — c\'est un Faliero castillan. Son renversement par Henri de Trastámara ouvre le pacte.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+134 ans par rapport à la norme (~200 ans). Reconquista (~100 ans) + deux boucles Castille-León (~80 ans cumulées de séparation).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — le règlement trastámara (1369-1371) codifie le rapport couronne-noblesse par les mercedes enriqueñas et crée l\'Audiencia (justice royale permanente). Henri II, usurpateur ayant besoin de légitimation, négocie le cadre avec la noblesse. Un nouveau principe de succession est établi.','resolution_conditions':'Homogénéité des élites castillanes à l\'échelle du royaume (334 ans de brassage féodal, renforcé par la Reconquista). Faiblesse maximale de l\'exécutif (Henri II est un usurpateur, un bâtard qui doit payer le soutien de la noblesse).','avortement':'','start':1035,'end':1369,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'De Ferdinand Ier au règlement trastámara. Six pics féodaux, deux boucles (1065, 1157), la Reconquista comme accélérateur culturel et retardateur politique. La crise d\'Alphonse X (1282) est avortée (pas de codification). Pierre Ier (1350-1369) est le dernier pic féodal autoritaire.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1035,'end':1369,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Ferdinand Ier','summary':'Ferdinand Ier (r. 1035-1065) est le premier roi de Castille. Il hérite du comté, conquiert León (1037), et impose tribut aux royaumes musulmans de Tolède, Saragosse et Séville. Pour la première fois, un chef castillan structure le jeu politique à l\'échelle de la péninsule.','description':'Ferdinand Ier transforme la Castille d\'un comté frontalier en un royaume dominant. Après avoir conquis León à la bataille de Tamarón (1037), il impose le système des parias — tribut annuel payé par les taifas musulmanes. Le Concile de Coyanza (1050) confirme les lois et réforme l\'Église sous l\'autorité royale. Mais tout repose sur sa personne : à sa mort (1065), il divise ses domaines entre ses trois fils. L\'édifice se fragmente immédiatement — caractéristique féodale par excellence.','figure':'Ferdinand Ier','confidence':'medium','alternatives':'Fernán González (~930) — premier comte autonome, mais n\'opère qu\'à l\'échelle d\'un comté. Alphonse VI (1072) — premier pouvoir véritablement supra-régional (conquête de Tolède), mais Ferdinand Ier est déjà roi de Castille et de León et force les taifas à payer tribut.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1035,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Alphonse VI — Tolède','summary':'Alphonse VI (r. 1072-1109) réunifie Castille et León, conquiert Tolède (1085) — l\'ancienne capitale wisigothique — et se proclame « Imperator totius Hispaniae ». Premier pouvoir véritablement supra-régional du Parcours.','description':'','figure':'Alphonse VI','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1085,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Division de 1157','summary':'Alphonse VII « l\'Empereur » (r. 1126-1157) divise délibérément ses royaumes entre ses deux fils : Sanche III (Castille) et Ferdinand II (León). Castille et León restent séparés pendant 73 ans (1157-1230). Boucle féodale — l\'échelle est trop grande pour l\'homogénéité réelle.','description':'','figure':'Alphonse VII','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'true','start':1157,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Ferdinand III — Union définitive','summary':'Ferdinand III (r. 1217/1230-1252) réalise l\'union définitive de Castille et León (1230) et conquiert Cordoue (1236), Jaén (1246) et Séville (1248). Le territoire castillan double. L\'union, cette fois, est permanente.','description':'','figure':'Ferdinand III','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1230,'end':1252,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Alphonse X le Sage','summary':'Alphonse X (r. 1252-1284) entreprend les Siete Partidas (~1265, code juridique le plus complet d\'Europe) et le Fuero Real. Mais la noblesse se rebelle (1272) et la crise de 1282 renverse Alphonse au profit de son fils Sanche. Le pouvoir ne survit pas à la crise — c\'est un pic féodal, pas un monarque oligarchique.','description':'','figure':'Alphonse X','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1265,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Rébellion de Sanche','summary':'En 1282, les Cortès de Valladolid agissent collectivement pour déclarer Alphonse X inapte. Action collective majeure, mais pas de codification juridique durable — pas de nouveau cadre légal pour l\'exercice du pouvoir. Le Parcours continue dans la phase féodale.','description':'','figure':'Sanche IV','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'true','start':1282,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Alphonse XI','summary':'Alphonse XI (r. 1312-1350) impose l\'alcabala (1342), codifie le droit (Ordenamiento de Alcalá, 1348), crée les regimientos (1345), remporte le Salado (1340). Mais il meurt de la peste en 1350 — son œuvre est personnelle et fragile.','description':'','figure':'Alphonse XI','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1340,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Guerre civile trastámara','summary':'Pierre Ier « le Cruel » (1350-1369) tente de centraliser en s\'appuyant sur le peuple et la communauté juive contre la noblesse — un Faliero castillan. L\'oligarchie, menée par Henri de Trastámara et soutenue par la France (du Guesclin), le renverse et le tue à Montiel (1369). La crise produit le pacte : Henri II, usurpateur, doit négocier.','description':'','figure':'Pierre Ier / Henri II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1350,'end':1369,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','subtitle':'Règlement trastámara','summary':'Le règlement trastámara (1369-1371) est le pacte oligarchique castillan. Les mercedes enriqueñas codifient le rapport couronne-noblesse. Les Cortès de Toro (1371) créent l\'Audiencia. Un nouveau principe de succession est établi : la légitimité par le soutien de la communauté politique, pas uniquement par la naissance.','description':'Le pacte est structurellement analogue à la loi salique française (1317), aux Ordonnances anglaises (1311), ou à la primogéniture bavaroise (1506). Henri II, usurpateur, est dans la position de faiblesse qui force la négociation. Les mercedes créent la nobleza nueva — des familles dont la richesse dépend de la faveur royale. L\'Audiencia institutionnalise la justice royale. Le Consejo Real (1385, sous Jean Ier) et l\'alcabala permanente (1393, sous Henri III) complètent le dispositif.','figure':'Henri II de Trastámara','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1369,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'La phase oligarchique espagnole dure ~345 ans (1369-1714), prolongée par l\'expansion (Reconquista finale, empire colonial, empire habsbourgeois) — exactement comme l\'expansion maritime prolonge la phase oligarchique vénitienne (~637 ans). L\'essor est rapide (Audiencia, Consejo Real, alcabala permanente). Les Rois Catholiques (~1492) sont le pic oligarchique — immensément puissants mais opérant dans le cadre de la monarchie composite. Le choc d\'hétérogénéité habsbourgeois (1516) explose l\'échelle et prolonge la phase. Les corrections d\'échelle (1556, 1640, 1648, 1714) ramènent l\'Espagne vers son échelle naturelle. La guerre sociale est la GSE (1700-1714), résolue par Philippe V.','description':'**Test discriminant (oligarchique vs absolutiste)** : l\'administration centrale N\'A PAS préséance sur les administrations locales avant 1716. Les Cortès d\'Aragon, de Catalogne et de Valence conservent leurs pouvoirs, monnaie, droit et douanes. Philippe II lui-même ne peut pas toucher les fueros aragonais (il choisit de ne pas les abolir après la révolte de 1591). Les Rois Catholiques absolutisent la Castille mais PAS l\'Espagne. Le test n\'est passé qu\'après les décrets de Nueva Planta (1716). **Le prolongement par l\'expansion** est le trait structurel dominant. Trois exutoires se cumulent : (1) la fin de la Reconquista (Grenade 1492) absorbe les tensions pendant l\'essor ; (2) l\'empire colonial fournit revenus, carrières et focus extérieur ; (3) l\'empire habsbourgeois européen (Pays-Bas, Italie, Saint-Empire) absorbe l\'énergie impériale. Tant que les exutoires fonctionnent, la polarisation interne ne peut pas atteindre le point de rupture.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+145 ans par rapport à la norme (~200 ans). Prolongement par expansion (Reconquista, empire colonial, empire habsbourgeois). Comparable à Venise (+437 ans de prolongement par expansion maritime).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale — la Guerre de Succession d\'Espagne (1700-1714) oppose les élites centralisatrices castillanes (prébendière, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, pro-Habsbourg). Philippe V, prince français (tiers extérieur aux factions espagnoles), résout le conflit par les décrets de Nueva Planta (1716).','resolution_conditions':'Les corrections d\'échelle progressives (1556, 1640, 1648) ont réduit l\'empire à la péninsule ibérique. La polarisation entre centralistes castillans et autonomistes aragonais atteint son paroxysme à la mort de Charles II (1700). La succession est l\'occasion d\'un affrontement final entre les deux modèles (centralisation vs monarchie composite).','avortement':'','start':1369,'end':1714,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'D\'Henri II à l\'Armada. L\'appareil d\'État se consolide rapidement : Audiencia (1371), Consejo Real (1385), alcabala permanente (1393), corregidores (~1393). Les Rois Catholiques (~1492) portent la puissance à son maximum (letrados, Inquisition, conquête de Grenade, découverte de l\'Amérique) — pic oligarchique. Le choc d\'hétérogénéité habsbourgeois (1516) explose l\'échelle, mais l\'expansion (colonies, guerres européennes) fournit un exutoire formidable qui prolonge l\'essor, exactement comme l\'expansion maritime prolonge l\'essor oligarchique vénitien. Philippe II (~1580) porte l\'empire à son apogée mais opère toujours dans la monarchie composite (fueros aragonais intacts). L\'Armada (1588) marque la fin de l\'expansion et le tournant vers la polarisation.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1369,'end':1588,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Henri II','summary':'Henri II (r. 1369-1379) est le premier roi qui règne sous le cadre du pacte trastámara. Ses successeurs (Jean Ier, Henri III) consolident les institutions : Consejo Real (1385), alcabala permanente (1393), corregidores.','description':'','figure':'Henri II de Trastámara','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1369,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pic oligarchique','subtitle':'Rois Catholiques','summary':'Les Rois Catholiques (Isabelle de Castille, r. 1474-1504, et Ferdinand d\'Aragon, r. 1479-1516) sont le pic oligarchique espagnol — la figure exécutive la plus puissante dans le cadre de la monarchie composite. Letrados au Consejo Real, corregidores dans chaque ville, ordres militaires incorporés, Inquisition sous contrôle royal, conquête de Grenade (1492), découverte de l\'Amérique. Mais les fueros aragonais restent intacts — le test absolutiste n\'est PAS passé.','description':'Les Rois Catholiques sont structurellement analogues à François Ier en France (pic oligarchique français, ~1515) : immensément puissants, ils renforcent massivement l\'État central mais opèrent dans le cadre oligarchique. François Ier a le Concordat de Bologne et les guerres d\'Italie, mais le Parlement de Paris conserve ses prérogatives. Les Rois Catholiques ont les letrados et l\'Inquisition, mais les Cortès d\'Aragon conservent les leurs. Dans les deux cas, le pic est suivi d\'un reflux et d\'une polarisation croissante. En France, les Guerres de Religion. En Espagne, les tensions Castille-Aragon sous les Habsbourg.','figure':'Isabelle Ière et Ferdinand V','confidence':'medium','alternatives':'Philippe II (~1580) — extension territoriale maximale, Siècle d\'Or. Mais Philippe II opère APRÈS le choc d\'hétérogénéité habsbourgeois (1516), dans une phase d\'expansion qui dilue la puissance « nationale ». Les Rois Catholiques représentent le maximum de la puissance ESPAGNOLE dans le cadre oligarchique. Álvaro de Luna (~1440) est un candidat alternatif pour un pic castillan antérieur.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1492,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Choc d\'hétérogénéité','subtitle':'Héritage habsbourgeois','summary':'En 1516, Charles Quint hérite de la Castille + Aragon + Pays-Bas + Lombardie + Naples/Sicile + Amériques. En 1519, il est élu empereur. L\'échelle de la polité explose. C\'est un choc d\'hétérogénéité massif, analogue au doublement napoléonien bavarois (1806), qui prolonge la phase oligarchique en repoussant le seuil d\'homogénéité. Les corrections d\'échelle progressives (1556, 1640, 1648, 1714) ramènent lentement l\'Espagne vers son échelle naturelle.','description':'L\'héritage habsbourgeois est le choc d\'hétérogénéité le plus massif du corpus. Charles gouverne simultanément Castillans, Aragonais, Catalans, Flamands, Lombards, Napolitains, Amérindiens, et (comme empereur) Allemands et Autrichiens. L\'expansion prolonge la phase oligarchique en cours en fournissant des exutoires massifs : l\'argent américain finance l\'État sans taxation intérieure, les guerres européennes absorbent l\'énergie des élites, l\'administration coloniale offre des carrières. Les corrections d\'échelle (partition habsbourgeoise 1556, perte du Portugal 1640, perte des Pays-Bas 1648, Utrecht 1714) ramènent lentement l\'Espagne vers sa taille naturelle. Chaque correction ACCÉLÈRE le Parcours.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1516,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','subtitle':'L\'Invincible Armada','summary':'La défaite de l\'Armada (1588) marque le tournant de l\'impérialisme habsbourgeois. Les guerres deviennent défensives. Les corrections d\'échelle s\'accélèrent (Portugal 1640, Pays-Bas 1648, Utrecht 1714). La polarisation interne peut se développer.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1588,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'Après les révoltes de 1640 (Catalogne, Portugal), la polarisation entre les deux modèles d\'organisation de l\'État devient la question centrale. Les élites castillanes (centralisatrices, dépendantes de l\'État central = prébendières) s\'opposent aux élites aragonaises/catalanes (autonomistes, fondées sur les fueros = patrimoniales). L\'affrontement est structurel : la question est de savoir si l\'Espagne sera un État centralisé (modèle castillan/français) ou une monarchie composite (modèle habsbourgeois/aragonais).','description':'La polarisation espagnole se cristallise autour de la tentative d\'Olivares (1620s-1630s) d\'imposer la Union de Armas — un programme explicite de centralisation forçant les royaumes d\'Aragon, de Catalogne et de Valence à contribuer aux guerres de l\'empire au même titre que la Castille. C\'est l\'affrontement prébendière/patrimoniale au niveau national : les élites castillanes (dont le pouvoir dépend de l\'administration centrale) veulent la centralisation ; les élites aragonaises/catalanes (dont le pouvoir repose sur les fueros) la refusent. L\'échec d\'Olivares provoque les révoltes de 1640 : la Catalogne se soumet temporairement à la France (1640-1659), le Portugal fait sécession définitivement (correction d\'échelle). La polarisation se résout par la guerre de succession.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1588,'end':1700,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Corrections d\'échelle','subtitle':'Portugal + Catalogne','summary':'En 1640, le Portugal fait sécession (définitive) et la Catalogne se soumet temporairement à la France (1640-1659). Ce sont des corrections d\'échelle : les morceaux trop hétérogènes se détachent, ramenant l\'Espagne vers sa taille naturelle. Le Portugal est perdu définitivement — correction d\'échelle analogue à la perte de la Normandie par les Plantagenêt (1204).','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1640,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'La Guerre de Succession d\'Espagne (1700-1714) est la guerre sociale espagnole. Elle oppose les élites centralisatrices castillanes (prébendière, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, pro-Habsbourg). Philippe V, prince français (tiers extérieur), résout le conflit par les décrets de Nueva Planta (1707-1716).','description':'Charles II, dernier Habsbourg, meurt sans héritier en 1700. La guerre oppose Philippe de Bourbon (soutenu par la France et la Castille) à l\'archiduc Charles (soutenu par l\'Angleterre, l\'Autriche, et les royaumes de la Couronne d\'Aragon). C\'est une guerre sociale au sens du cadre : deux factions d\'élites (Castillans centralisateurs vs Aragonais autonomistes) s\'affrontent, et un TIERS (Philippe V, prince français qui n\'est d\'aucune faction espagnole) résout le conflit en imposant un ordre nouveau. Philippe V abolit les fueros par les décrets de Nueva Planta (Valence/Aragon 1707, Majorque 1715, Catalogne 1716) et impose le modèle centralisé français. Le Pays basque et la Navarre conservent leurs fueros (ayant soutenu Philippe V).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1700,'end':1714,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Guerre de Succession d\'Espagne','summary':'La GSE (1700-1714) oppose les élites centralisatrices castillanes (prébendière, dépendantes de l\'État central, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, fondées sur les fueros, pro-Habsbourg). Ni l\'une ni l\'autre ne l\'emporte en tant que telle — c\'est Philippe V, prince français (tiers extérieur aux factions espagnoles), qui impose un ordre nouveau par la Nueva Planta. Structurellement analogue aux Guerres de Religion françaises (Henri IV, tiers) et à la Guerre des Deux-Roses anglaise (Henri VII, tiers).','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1700,'end':1714,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','subtitle':'','summary':'La phase absolutiste espagnole commence avec Philippe V et la Nueva Planta (1714-1716) et dure ~217 ans — quasi dans la norme. L\'absolutisation est rapide (~56 ans). Charles III (~1770) est le pic absolutiste. L\'empire colonial prolonge légèrement l\'impérialisme. La Gloriosa (1868) est la remontrance — son échec ouvre l\'AR. Le turno pacífico (1874-1931) est le système d\'AR. Le Désastre de 1898 accélère la sclérose en éliminant le dernier exutoire colonial. AR : ~57 ans, dans la norme.','description':'**Test discriminant (absolutiste vs RN)** : le bloc contestataire N\'A PAS renversé le bloc élitaire avant 1931. La classe administrative/militaire conserve le contrôle même pendant les turbulences du XIXe siècle. Les événements de 1808-1898 (Cadix, guerres carlistes, La Gloriosa, pronunciamientos) sont des conflits INTRA-absolutistes — la classe militaire/administrative ne perd jamais le contrôle. Le turno pacífico (1874-1931) est le dernier système d\'AR. **L\'empire colonial** prolonge l\'impérialisme : revenus, carrières, focus extérieur. La perte progressive (1808-1826 : Amérique ; 1898 : Cuba, Philippines) ACCÉLÈRE le Parcours — exactement comme la perte des possessions vénitiennes accélère chaque transition.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+17 ans par rapport à la norme (~200 ans). Prolongement modéré par l\'exutoire colonial.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Explosion de l\'Ancien Régime (1931) — les élections municipales révèlent le rejet de la monarchie, Alphonse XIII part, la Seconde République est proclamée.','resolution_conditions':'L\'exutoire colonial a totalement disparu (Désastre de 1898). La sédimentation des élites est achevée. Le turno pacífico est discrédité. Primo de Rivera (1923-1930) a échoué.','avortement':'','start':1714,'end':1931,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'Philippe V (1700-1746) impose le modèle centralisé français : intendants, secrétaires d\'État, droit castillan sur tout le territoire. Ferdinand VI (1746-1759) consolide. Pas de DGRO identifiable — les oligarques aragonais/catalans n\'ont plus d\'assise territoriale après Nueva Planta, exactement comme les patriciens vénitiens n\'ont pas de seigneuries depuis lesquelles résister. L\'absolutisation est « fluide » (comme à Venise).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1714,'end':1770,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Philippe V','summary':'Philippe V (r. 1700-1746), prince français de la maison de Bourbon, est le 1er monarque absolu espagnol. Il résout la guerre sociale (GSE) et impose l\'administration centrale sur tout le territoire par les décrets de Nueva Planta (1707-1716). Nouvelle dynastie, nouveau modèle administratif (français), abolition des fueros — c\'est la rupture absolutiste.','description':'Philippe V est structurellement analogue à Henri IV en France (1598) et Henri VII en Angleterre (1485). Comme eux, il est d\'une NOUVELLE DYNASTIE (les Bourbons français remplacent les Habsbourg espagnols). Comme eux, il ne s\'identifie à aucune des factions espagnoles — il est un prince français qui apporte un modèle administratif entièrement étranger. Les décrets de Nueva Planta (Valence/Aragon 1707, Majorque 1715, Catalogne 1716) abolissent les fueros et imposent l\'administration castillane partout. Pour la première fois, l\'administration centrale a préséance incontestée sur TOUTES les administrations locales. Le test discriminant absolutiste est passé à l\'échelle nationale.','figure':'Philippe V','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1714,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'Charles III (~1770) est le pic absolutiste — réformes bourboniennes, expulsion des Jésuites, domestication complète des élites. L\'empire colonial prolonge l\'impérialisme. La perte des colonies américaines (1808-1826) accélère le déclin. La Gloriosa (1868) est la remontrance — elle échoue et son échec (Restauration, 1874) marque l\'entrée en AR.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1770,'end':1874,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Pic absolutiste','subtitle':'Charles III','summary':'Charles III (r. 1759-1788) incarne le sommet de l\'absolutisme espagnol. Réformes bourboniennes complètes, expulsion des Jésuites (1767), libre commerce colonial (1778), domestication des élites (Aranda, Campomanes, Floridablanca). Premier monarque véritablement absolu sur tout le territoire et au sommet de sa maîtrise administrative.','description':'','figure':'Charles III','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1770,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Remontrance','subtitle':'La Gloriosa + Sexenio','summary':'La Gloriosa (1868) et le Sexenio Democrático (1868-1874) sont la remontrance espagnole — la dernière tentative de la classe parlementaire d\'imposer un régime constitutionnel. Constitution de 1869, suffrage universel, Amadeo Ier, Première République. L\'expérience échoue : le pronunciamiento de Martínez Campos (1874) réimpose l\'ancien ordre. L\'échec marque l\'entrée en Ancien Régime — le turno pacífico (1874-1931) est le système sclérosé final.','description':'La Gloriosa est structurellement analogue à la Polysynodie française (1715), à l\'Apology of the Commons anglaise (1604), à la Correzione vénitienne (1761) ou au Landtag bavarois de 1848 : la classe administrative et parlementaire tente de redistribuer le pouvoir en sa faveur. En Espagne, la tentative va plus loin que dans les autres cas — une véritable révolution, une nouvelle constitution, un roi constitutionnel (Amadeo Ier), puis une république. Mais le résultat est le même : l\'exécutif reprend le contrôle (pronunciamiento de Martínez Campos, 29 décembre 1874) et installe le système de la Restauration. La dernière voie de réforme institutionnelle est fermée — l\'Espagne entre en Ancien Régime.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1868,'end':1874,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fin de l\'expansion','subtitle':'Désastre de 1898','summary':'La perte de Cuba, des Philippines et de Porto Rico (1898) élimine le dernier exutoire colonial. L\'effondrement avait commencé en 1808 (perte des colonies américaines). Après 1898, le Parcours ACCÉLÈRE : l\'AR ne dure que ~33 ans. Analogue de Passarowitz (1718) pour Venise.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1898,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime','subtitle':'','summary':'L\'AR commence avec la Restauration (1874), après l\'échec de la remontrance (La Gloriosa). Le turno pacífico de Cánovas est le système d\'AR — pseudo-parlementaire, exclusionnaire, élections manipulées. Le Désastre de 1898 (perte de Cuba, Philippines) élimine le dernier exutoire colonial et accélère la sclérose. Primo de Rivera (1923-1930) échoue à sauver le régime. L\'explosion survient en 1931. Durée : ~57 ans — dans la norme (35-100 ans).','description':'Le turno pacífico (1874-1931) est structurellement le système d\'AR espagnol : alternance gérée entre conservateurs (Cánovas) et libéraux (Sagasta), élections manipulées par le caciquisme, exclusion des républicains, socialistes et régionalistes. Le système fonctionne tant que l\'exutoire colonial résiduel (Cuba, Philippines) absorbe une partie des tensions. Le Désastre de 1898 élimine le dernier exutoire — les symptômes classiques d\'AR s\'accélèrent : sédimentation des élites, surproduction élitaire (plus de carrières coloniales), contestation croissante (anarchisme catalan, socialisme asturien, nationalisme basque et catalan). La Génération de 98 (Unamuno, Ortega y Gasset) interroge l\'identité nationale — analogue des Lumières françaises. Primo de Rivera (1923-1930) tente de sauver le régime par la dictature militaire — il échoue et entraîne la monarchie dans sa chute.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1874,'end':1931,'start_approx':true,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale','subtitle':'','summary':'La RN espagnole commence en 1931 (chute de la monarchie) et s\'achève en 1978 (Constitution) — ~47 ans, dans la norme. Franco est un IR contraint (incapable de projeter sa puissance vers l\'extérieur) qui cumule les rôles d\'IR et de Restauration. La Transition (1978) est la Glorieuse Révolution.','description':'**Franco comme IR contraint.** Franco émerge de la phase aiguë (guerre civile), concentre le pouvoir personnel, fusionne les factions. Mais l\'Espagne de 1939 est trop faible pour projeter sa puissance — le différentiel avec ses voisins l\'en empêche. Franco remplit simultanément le rôle d\'IR et de Restauration : il maintient l\'ordre, modernise l\'économie (technocrates Opus Dei, années 1960), et crée les conditions sociales de la Glorieuse Révolution. **L\'IR contraint est un cas nouveau** : quand la nation est trop faible pour l\'expansion extérieure, l\'IR et la Restauration se superposent en une seule période.','figure':'','confidence':'','alternatives':'','step':'','deviation':'dans la norme (~47 ans, entre 25 et 80).','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Glorieuse Révolution — la Transition démocratique (1975-1978) et la Constitution de 1978 ancrent définitivement le parlementarisme.','resolution_conditions':'L\'IR contraint (Franco) meurt en 1975. La modernisation économique des années 1960 a créé une classe moyenne urbaine qui exige la participation politique. La Constitution de 1978 est approuvée par référendum (88,5 %).','avortement':'','start':1931,'end':1978,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Explosion (1931) → expérience parlementaire (Seconde République, 1931-1936) → phase aiguë (Guerre civile, 1936-1939). Séquence rapide (8 ans), comparable à la France (1789-1799, 10 ans) et à l\'Angleterre (1642-1649, 7 ans).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1931,'end':1939,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'Ancien Régime','subtitle':'Chute de la monarchie','summary':'En avril 1931, les élections municipales révèlent un soutien massif aux républicains. Alphonse XIII part en exil. La Seconde République est proclamée le 14 avril.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1931,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Seconde République','summary':'La Seconde République (1931-1936) — suffrage universel, constitution démocratique, factions concurrentes. Biennio reformista (1931-1933), biennio negro (1933-1936), Front populaire (1936). La polarisation est extrême.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1931,'end':1936,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'Guerre civile','summary':'La Guerre civile (1936-1939) est la phase aiguë. Républicains contre Nationalistes. ~500 000 morts. L\'EG (anarchistes CNT-FAI, POUM) et l\'ED (Phalange, carlistes) dominent, les modérés sont éliminés.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1936,'end':1939,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'IR contraint et Restauration','subtitle':'','summary':'Franco cumule les rôles d\'IR et de Restauration. IR contraint : il ne peut pas projeter la puissance vers l\'extérieur. Il maintient l\'ordre, modernise l\'économie, crée les conditions de la Glorieuse Révolution.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1939,'end':1975,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Impérialiste Revanchard','subtitle':'Franco','summary':'Franco (r. 1939-1975) est l\'IR contraint. Il émerge de la phase aiguë, concentre le pouvoir personnel, fusionne les factions (Phalange, carlistes, monarchistes, militaires, Église). Le revanchisme est frustré (Espagne trop faible). Le tournant technocratique (Opus Dei, années 1960) ventile les élites et modernise l\'économie. Franco meurt dans son lit — le seul IR du corpus qui n\'est ni vaincu ni renversé.','description':'','figure':'Francisco Franco','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1939,'end':1975,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','subtitle':'Transition démocratique','summary':'La Transition (1975-1978) est la Glorieuse Révolution espagnole. Juan Carlos orchestre le démantèlement du régime. Suárez fait voter la Loi de Réforme par les Cortès franquistes. La Constitution de 1978 (88,5 % au référendum) établit la monarchie parlementaire. Le 23-F (1981) échoue et consolide l\'ordre nouveau.','description':'','figure':'Juan Carlos Ier / Adolfo Suárez','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1978,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'parlementaire','title':'Phase parlementaire','subtitle':'','summary':'L\'Espagne entre dans la phase parlementaire avec la Constitution de 1978. Le système des communautés autonomes accommode l\'hétérogénéité régionale dans un cadre parlementaire.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1978,'end':null,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 6;
+    const BASE_TOP = 200;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Pic oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Pic absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description">${e.description}</div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>
