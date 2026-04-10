@@ -49,7 +49,7 @@ body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; col
 .nation-card-badge { position:absolute; top:12px; right:12px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border-radius:20px; z-index:2; }
 .badge-complete { background:#8B7355; color:#fff; }
 .badge-draft { background:#e2e2e2; color:#666; }
-.nation-card-body { position:absolute; bottom:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:0.7rem 1rem; background:rgba(0,0,0,0.55); z-index:2; }
+.nation-card-body { position:absolute; bottom:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:0.5rem 1rem; background:rgba(0,0,0,0.55); z-index:2; }
 .nation-card-body .nation-icon { display:flex; align-items:center; gap:0.5rem; }
 .nation-flag { height:16px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(255,255,255,0.15); }
 .nation-card-body h3 { font-family:'Newsreader', serif; font-size:1.1rem; font-weight:600; color:#fff; }
@@ -159,7 +159,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
 <section id="nations">
     <div class="section-header">
         <h2>Nations étudiées</h2>
-        <span class="count">8 entités</span>
+        <span class="count">9 entités</span>
     </div>
     <div class="nation-grid">
         <a class="nation-card" href="france.html">
@@ -190,6 +190,16 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
             <div class="nation-card-body">
                 <div class="nation-icon"><img class="nation-flag" alt="Israël" src="images/israel/flag.png"><h3>Israël</h3></div>
                 <div class="dates">-1080 — 135</div>
+            </div>
+        </a>
+        <a class="nation-card" href="espagne.html">
+            <div class="nation-card-img">
+                <img alt="Espagne — Palais Royal de Madrid, Antonio Joli (~1753)" src="https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_Joli_P._Real_Madrid_ca.1753.jpg?width=640">
+                <span class="nation-card-badge badge-complete">Complet</span>
+            </div>
+            <div class="nation-card-body">
+                <div class="nation-icon"><img class="nation-flag" alt="Espagne" src="images/espagne/flag.png"><h3>Espagne</h3></div>
+                <div class="dates">1035 — 1978</div>
             </div>
         </a>
         <a class="nation-card" href="venise.html">
@@ -398,12 +408,26 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
     <!-- ==================== PERTURBATIONS ==================== -->
     <div class="phase-card" style="border-left:4px solid #ba1a1a;">
         <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.6rem;"><span style="width:10px;height:10px;border-radius:50%;background:#ba1a1a;flex-shrink:0;"></span><h2 style="color:#ba1a1a;">Perturbations</h2></div>
-        <p>Le Parcours peut être perturbé par des chocs externes. L'effet dépend de ce qu'ils font aux deux moteurs : destruction des institutions (reboot) ou hétérogénéisation de la société (prolongement).</p>
-        <div class="saillant-list" style="margin-left:0;">
-            <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">restart_alt</span><span>Reboot</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Destruction des institutions. Le Parcours régresse à une phase antérieure. Ex. : conquête babylonienne (-586), conquête normande (1066).</p></div></details>
-            <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">pause</span><span>Prolongement</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Hétérogénéisation sans destruction. Le Parcours stagne le temps que l'homogénéité rattrape. Ex. : conquête macédonienne (-332).</p></div></details>
-            <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">group_add</span><span>Choc d'hétérogénéité</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Expansion territoriale hétérogénéisante. Peut avorter une sous-phase en cours. Ex. : doublement napoléonien de la Bavière (1806).</p></div></details>
-            <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">fast_forward</span><span>Accélérateur</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Importation exogène d'un modèle étatique mature qui comprime le Parcours. Le symétrique du choc d'hétérogénéité : au lieu de ralentir le Parcours, il l'accélère. Ex. : Napoléon à Milan (1796) comprime ~200 ans d'absolutisation en 18 ans en important l'appareil centralisé français.</p></div></details>
+        <p>Le Parcours peut être perturbé par des événements qui modifient sa vitesse. Une perturbation se décompose en un <strong>mécanisme</strong> (la cause) et un <strong>effet</strong> (ce qui arrive au Parcours). Sur la frise, l'icône encode le mécanisme, la couleur encode l'effet.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.2rem;">
+            <div>
+                <h4 style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:0.6rem;">Mécanismes (icône)</h4>
+                <div class="saillant-list" style="margin-left:0;">
+                    <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">open_in_full</span><span>Choc d'hétérogénéité</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Expansion territoriale ou afflux culturel qui ajoute de la diversité. Repousse le seuil d'homogénéité. Ex. : héritage habsbourgeois (1516), doublement napoléonien de la Bavière (1806), conquête macédonienne (-332).</p></div></details>
+                    <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">bolt</span><span>Choc exogène</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Événement extérieur ponctuel. Le mécanisme le plus polyvalent — son effet dépend de ce qu'il frappe : destruction des institutions (reboot), gel temporaire (prolongement), modernisation forcée (accélération), transition bloquée (avortement). Ex. : conquête babylonienne, Napoléon à Milan, Custoza.</p></div></details>
+                    <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">close</span><span>Insuffisance interne</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Les conditions internes ne sont pas réunies pour passer à la phase suivante. Le Parcours avorte et recommence la sous-phase. Ex. : crises féodales sans pacte (Angleterre), absolutisation avortée (Faliero, Pierre Ier), partitions bavaroises.</p></div></details>
+                    <details class="saillant-details"><summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">compress</span><span>Correction d'échelle</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Perte de territoire qui ramène la polité vers son échelle naturelle. Accélère le Parcours en supprimant l'exutoire. Ex. : sécession du Portugal (1640), traité d'Utrecht (1714), perte de l'empire colonial américain (1808-1826).</p></div></details>
+                </div>
+            </div>
+            <div>
+                <h4 style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:0.6rem;">Effets (couleur)</h4>
+                <div class="saillant-list" style="margin-left:0;">
+                    <details class="saillant-details"><summary><span class="saillant-left"><span style="width:10px;height:10px;border-radius:2px;background:#E67E22;flex-shrink:0;"></span><span>Prolongement</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>La phase en cours est rallongée. La société doit rattraper un déficit d'homogénéité ou absorber un gel temporaire. Ex. : conquête macédonienne (-332), héritage habsbourgeois (1516).</p></div></details>
+                    <details class="saillant-details"><summary><span class="saillant-left"><span style="width:10px;height:10px;border-radius:2px;background:#2980B9;flex-shrink:0;"></span><span>Accélération</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>La phase en cours est raccourcie. L'exutoire est supprimé ou un modèle étatique mature est importé. Ex. : Napoléon à Milan (1796), traité d'Utrecht (1714), perte de l'empire colonial espagnol (1808-1826).</p></div></details>
+                    <details class="saillant-details"><summary><span class="saillant-left"><span style="width:10px;height:10px;border-radius:2px;background:#c0392b;flex-shrink:0;"></span><span>Avortement</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Le passage à la phase suivante est bloqué. Les conditions ne sont pas réunies ou une intervention extérieure empêche la transition. Ex. : crises féodales anglaises, chute de Venise (1797), Custoza (1849).</p></div></details>
+                    <details class="saillant-details"><summary><span class="saillant-left"><span style="width:10px;height:10px;border-radius:2px;background:#8B0000;flex-shrink:0;"></span><span>Reboot</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary><div class="saillant-body"><p>Destruction des institutions et/ou des réseaux humains. Le Parcours régresse à une phase antérieure. Ex. : conquête babylonienne (-586), conquête normande (1066), guerres d'Italie à Milan (1499).</p></div></details>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -419,7 +443,7 @@ details[open] summary .expand-icon { transform:rotate(90deg); }
 </footer>
 
 <script>
-const map = L.map('nations-map', { scrollWheelZoom: false }).setView([47, 8], 5);
+const map = L.map('nations-map', { scrollWheelZoom: false }).setView([42, 10], 4);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
     maxZoom: 12
@@ -433,7 +457,8 @@ const nations = [
     { name:'Bavière', lat:48.14, lng:11.58, dates:'1180 — 1919', href:'baviere.html', desc:'Sept siècles de Wittelsbach, absorbés dans le Parcours allemand.' },
     { name:'Milan', lat:45.46, lng:9.19, dates:'979 — 1848', href:'milan.html', desc:'Double cycle oligarchique-absolutiste, reboot et absorption dans le Parcours italien.' },
     { name:'Suisse', lat:46.95, lng:7.45, dates:'1291 — 1848', href:'suisse.html', desc:'Le premier Parcours entièrement républicain — un absolutisme sans monarque.' },
-    { name:'Piémont', lat:45.07, lng:7.69, dates:'1233 — 1861', href:'piemont.html', desc:'Des cols alpins à l\'unification italienne, absorbé dans le Parcours italien.' }
+    { name:'Piémont', lat:45.07, lng:7.69, dates:'1233 — 1861', href:'piemont.html', desc:'Des cols alpins à l\'unification italienne, absorbé dans le Parcours italien.' },
+    { name:'Espagne', lat:40.42, lng:-3.70, dates:'1035 — 1978', href:'espagne.html', desc:'La Venise de l\'Atlantique — l\'expansion prolonge la phase oligarchique de 145 ans.' }
 ];
 
 const icon = L.divIcon({

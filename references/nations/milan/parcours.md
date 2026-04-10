@@ -1,7 +1,7 @@
 # Parcours de Milan (Lombardie)
 
 ## Metadata
-- nation: Milan (Lombardie)
+- nation: Milan
 - territory: Lombardie
 - flag: images/milan/flag.png
 - start: 888
@@ -11,7 +11,7 @@
 - highlight_2: Reboot par les guerres d'Italie (1499) | L'AR des Sforza est avorté par l'invasion française — le Parcours reboote en phase oligarchique. Le Sénat remplace le Consiglio Segreto | https://commons.wikimedia.org/wiki/Special:FilePath/La_battaglia_di_Legnano_di_Amos_Cassoli.jpg?width=120 | oligarchique
 - highlight_3: Peste de 1630 et domination étrangère | 46% de mortalité mais les institutions survivent — le Sénat continue de siéger. La domination espagnole puis autrichienne ne perturbe pas le Parcours | https://commons.wikimedia.org/wiki/Special:FilePath/A_monk_visiting_the_victims_of_the_great_plague_of_Milan_in_Wellcome_V0010582.jpg?width=120 | oligarchique
 - highlight_4: RN avortée (1848) | Les Cinque Giornate ouvrent le cycle, mais Custoza l'écrase et le vote de fusion avec le Piémont (561 002 contre 681) absorbe le Parcours dans le Parcours italien | https://commons.wikimedia.org/wiki/Special:FilePath/Episodio_delle_cinque_giornate_(Baldassare_Verazzi).jpg?width=120 | rn
-- subtitle: De l'archevêque au duc, du duc au Sénat, du Sénat à l'Italie — neuf siècles de construction nationale lombarde
+- subtitle: 1861 - 979 = 882, soit pas tout à fait mille ans
 - confidence: medium
 
 ---
@@ -262,24 +262,26 @@
 - title: Ancien Régime
 - summary: La Paix de Lodi (1454) stabilise le duché. Les Sforza consolident les institutions (Consiglio Segreto comme magistrature suprême) et développent un mécénat extraordinaire (Léonard, Bramante). Mais la sédimentation des élites, la pression fiscale de Ludovico il Moro et le mécontentement populaire préparent un AR qui sera avorté par les guerres d'Italie. Le fait que la population accueille les Français (1499) « exaspérée par la fiscalité oppressive » est un marqueur d'AR — mais l'explosion est exogène (invasion), pas endogène (révolution).
 
-#### Saillant : Avortement — invasion française
+#### Saillant : Invasion française
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: reboot
 - start: 1499
 - figure: Ludovico il Moro
-- subtitle: Invasion française
-- title: Avortement
+- subtitle: Chute des Sforza
+- title: Invasion française
 - confidence: high
 - summary: L'invasion de Louis XII (septembre 1499) met fin à l'Ancien Régime des Sforza. Ludovico il Moro fuit à Innsbruck. La population accueille les Français, « exaspérée par la fiscalité oppressive ». L'AR n'explose pas de l'intérieur — il est avorté par le choc exogène des guerres d'Italie, qui reboote Milan en phase oligarchique.
 
 ---
 
-## Perturbation : Reboot — guerres d'Italie (1499-1535)
+## Perturbation : Guerres d'Italie (1499-1535)
 - type: perturbation
-- perturbation_type: reboot
+- mechanism: choc_exogene
+- effect: reboot
 - start: 1499
 - end: 1535
-- depth: Absolutiste → oligarchique (régression d'une phase)
 - title: Guerres d'Italie
 - summary: Les guerres d'Italie (1499-1535) détruisent l'appareil absolutiste Visconti/Sforza et le remplacent par un système oligarchique. Le Consiglio Segreto est aboli par Louis XII et remplacé par le Sénat de Milan (1499), organe judiciaire avec droit de veto. La dynastie Sforza disparaît (1535). Neuf changements de gouvernement en 35 ans. Le substrat oligarchique — patriciat, autonomie des villes, tradition communale — refait surface.
 - description: Le reboot est d'une phase (absolutiste → oligarchique), conformément au cadre : l'État central est détruit mais les structures d'élite survivent. Les institutions absolutistes (Consiglio Segreto, chancellerie ducale centralisée, système des referendari) sont remplacées par des institutions oligarchiques (Sénat avec droit de veto et d'interinazione, Conseil des 60 Décurions qui nomme ses propres membres, autonomie fiscale des villes). Le patriciat milanais, qui avait été domestiqué par les Visconti/Sforza, retrouve un pouvoir autonome. Le parallèle avec Israël en -586 est structurel : l'État absolutiste est détruit par une puissance étrangère, les élites survivent, le Parcours redémarre en phase oligarchique.
@@ -345,7 +347,8 @@
 
 ### Perturbation : Peste de 1630
 - type: perturbation
-- perturbation_type: prolongement
+- mechanism: choc_exogene
+- effect: prolongement
 - start: 1630
 - end: 1640
 - title: Peste de 1630
@@ -402,12 +405,15 @@
 - title: Absolutisation napoléonienne
 - summary: Napoléon absolutise Milan en 9 ans. Tous les marqueurs confirmés : préfets, centralisation fiscale (Prina), conscription, abolition du patriciat, nouvelle noblesse de service, Concordat (1803). La proclamation du Royaume d'Italie (1805) marque le passage à l'impérialisme.
 
-#### Saillant : Accélérateur — Occupation napoléonienne
+#### Saillant : Absolutisation forcée — Occupation napoléonienne
 - type: saillant
+- perturbation: true
+- mechanism: choc_exogene
+- effect: acceleration
 - start: 1796
 - figure: Napoléon Bonaparte
-- subtitle: Occupation napoléonienne
-- title: Accélérateur
+- subtitle: Absolutisation forcée
+- title: Occupation napoléonienne
 - confidence: high
 - summary: L'intervention de Napoléon (1796) accélère brutalement la construction de l'État central. En 18 ans, il comprime un processus qui prend normalement ~200 ans : abolition du patriciat, préfets, Code civil, centralisation fiscale, conscription, nouvelle noblesse de service. C'est le symétrique du choc d'hétérogénéité — au lieu de ralentir le Parcours en hétérogénéisant la société, l'accélérateur avance le Parcours en important un modèle étatique mature depuis l'extérieur. Le moteur de construction de l'État central fait un bond en avant exogène.
 
@@ -488,7 +494,9 @@
 
 #### Saillant : Écrasement — Custoza
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1849
 - figure: Radetzky
 - subtitle: Custoza / Novara

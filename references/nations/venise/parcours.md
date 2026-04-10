@@ -82,7 +82,9 @@
 
 #### Saillant : Crise féodale — crise franque
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 804
 - end: 810
 - subtitle: Crise franque
@@ -300,13 +302,15 @@
 - summary: Sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Goldoni, Tiepolo), investissement foncier (villas palladiennes). Le bloc élitaire se cristallise, le clivage gauche-droite saute.
 - description: L'Ancien Régime vénitien commence avec l'échec de la Correzione de 1761 et présente tous les marqueurs classiques de la sédimentation absolutiste. Les barnabotti — nobles appauvris de la paroisse San Barnaba, conservant leurs droits de vote mais vendant leur soutien au plus offrant — incarnent la sclérose du système. Le patriciat décline numériquement de ~2500 (XVIe siècle) à ~1300 (1775). Le rayonnement culturel est à son apogée : Goldoni réinvente le théâtre, Tiepolo décore les palais d'Europe. L'investissement foncier en Terraferma (villas palladiennes) transforme la classe marchande en gentry rentière. L'affaire Pisani-Contarini (1779) est une réplique de la remontrance qui échoue de même. Le bloc élitaire se cristallise, le clivage gauche-droite saute.
 
-#### Saillant : Avortement — conquête par Bonaparte
+#### Saillant : Chute de la République
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1797
 - figure: Napoléon Bonaparte
-- subtitle: Chute de la République
-- title: Avortement
+- subtitle: Conquête par Bonaparte
+- title: Chute de la République
 - confidence: high
 - summary: Bonaparte détruit toutes les institutions endogènes vénitiennes — dissolution du Grand Conseil, Libro d'Oro brûlé, traité de Campo Formio cédant Venise à l'Autriche. Venise bascule sous un Ancien Régime de domination étrangère.
 - description: En mai 1797, Bonaparte contraint le Grand Conseil à voter sa propre dissolution (512 contre 20). Le Libro d'Oro est brûlé en place Saint-Marc, l'appareil des Inquisiteurs, le Sénat, le Conseil des Dix sont abolis, la peine de mort est décrétée pour quiconque crie « Viva San Marco ! ». Le doge Ludovico Manin retire le corne ducal : « Tole, questa no la doperaremo pi. » Le traité de Campo Formio (17 octobre 1797) cède Venise à l'Autriche sans consultation. C'est un avortement des institutions endogènes, mais pas un reboot : l'homogénéité culturelle survit intacte, et l'Autriche fournit un pouvoir absolutiste de substitution. L'AR se poursuit sous domination étrangère.
@@ -373,20 +377,24 @@
 
 #### Saillant : Écrasement — capitulation de la République de San Marco
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1849
 - subtitle: Capitulation
 - title: Écrasement
 - confidence: high
 - summary: L'Autriche écrase la République par le siège, le bombardement, le blocus alimentaire et l'épidémie de choléra. Venise capitule le 22 août 1849 — dernière république de 1848 à tomber en Europe. L'écrasement est entièrement exogène.
 
-#### Saillant : Avortement — Absorption dans le Parcours italien
+#### Saillant : Absorption dans le Parcours italien
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1866
 - figure: Victor Emmanuel II
 - subtitle: Plébiscite de 1866
-- title: Avortement
+- title: Absorption dans le Parcours italien
 - confidence: high
 - summary: Après l'échec de la RN de 1848, Manin rallie depuis son exil parisien le monarchisme piémontais. Le plébiscite du 21-22 octobre 1866 (quasi-unanime) entérine l'annexion. Le Parcours vénitien en tant que Parcours national séparé s'achève — l'identité vénitienne devient une composante du Parcours national italien.
 - description: |

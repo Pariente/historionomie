@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Chili</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Pre-phase band */
+.prephase-band { position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
+    border-radius:6px; display:flex; align-items:center; justify-content:center; }
+.prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/chili/flag.png' alt='drapeau'>
+        <h1>Chili</h1>
+        <span class='header-badge badge-status'>proposition</span>
+    </div>
+    <div class="header-subtitle">Salpêtre, cuivre et Cordillère : le Parcours compressé</div>
+</div>
+
+<div class="briefing"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><span class="material-icons">compress</span><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#A0A0A0;flex-shrink:0;margin-top:3px;"></span>La percolation la plus longue du corpus</span><span class="insight-desc">270 ans de formation de la société créole sous domination espagnole (1541-1810). L&#39;identité chilienne se forge dans les haciendas de la Vallée Centrale, les cabildos de Santiago et la frontière permanente du Biobío — mais il n&#39;y a jamais de centre politique autonome. Quand l&#39;indépendance libère le Parcours, l&#39;homogénéité est déjà très avancée</span></div></div><div class="insight-item"><span class="material-icons">restart_alt</span><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#8B7355;flex-shrink:0;margin-top:3px;"></span>La phase féodale la plus courte du corpus (~23 ans)</span><span class="insight-desc">De la Première Junta (1810) à la Constitution de 1833. L&#39;extrême compression s&#39;explique par l&#39;héritage colonial : l&#39;élite créole est déjà un groupe homogène avec 270 ans de brassage derrière elle. La phase aboutit au premier essai, sans boucle</span></div></div><div class="insight-item"><span class="material-icons">coronavirus</span><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Balmaceda : une tentative d&#39;absolutisation avortée (1891)</span><span class="insight-desc">Le président Balmaceda tente d&#39;absolutiser en utilisant les revenus du salpêtre pour centraliser l&#39;État et imposer son successeur. Le Congrès (oligarchie unie) l&#39;écrase — exactement comme Faliero à Venise (1355). Les conditions de la guerre sociale ne sont pas réunies</span></div></div><div class="insight-item"><span class="material-icons">shield</span><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;margin-top:3px;"></span>Question ouverte : Allende/Pinochet</span><span class="insight-desc">La période 1970-1990 est-elle une RN (Allende = explosion de l&#39;AR, Pinochet = IR) ou une crise intra-absolutiste ? La réponse détermine où le Chili se situe aujourd&#39;hui dans son Parcours</span></div></div></div>
+        </div><div class="briefing-questions">
+            <div class="briefing-label">Questions ouvertes</div>
+            <div class="question-item"><span class="question-tag">Phase féodale de 23 ans : est-ce défendable ?</span><span class="question-text">Aucun précédent dans le corpus. La compression extrême est-elle un artefact du cadre (le Parcours devrait commencer plus tôt dans la période coloniale) ou un vrai phénomène (l&#39;héritage colonial compresse réellement les premières phases) ?</span></div><div class="question-item"><span class="question-tag">Allende/Pinochet : RN ou crise absolutiste ?</span><span class="question-text">Si RN : Allende = explosion de l&#39;AR, Pinochet = IR, 1990 = Glorieuse Révolution, Chili en phase parlementaire. Si crise absolutiste : Pinochet = restauration de l&#39;ordre absolutiste, Chili encore en AR, RN à venir.</span></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:2.8283%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1550</div>
+        </div>
+        <div class="tick" style="left:12.9293%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:23.0303%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1650</div>
+        </div>
+        <div class="tick" style="left:33.1313%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1700</div>
+        </div>
+        <div class="tick" style="left:43.2323%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1750</div>
+        </div>
+        <div class="tick" style="left:53.3333%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        <div class="tick" style="left:63.4343%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1850</div>
+        </div>
+        <div class="tick" style="left:73.5354%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1900</div>
+        </div>
+        <div class="tick" style="left:83.6364%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1950</div>
+        </div>
+        <div class="tick" style="left:93.7374%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">2000</div>
+        </div>
+        
+        
+        <div class="phase-band" style="left:1.0101%;width:54.3434%;
+            background:#e7e7e7;border-top:3px solid #A0A0A0;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Percolation coloniale&lt;/strong&gt; (~1541 — 1810)&#10;Deux cent soixante-dix ans de formation de la société créole chilienne sous domination espagnole. Le peuple chilien émerge progressivement dans les haciendas de la Vallée Centrale, les cabildos de Santiago et sur la frontière militaire du Biobío. Le moteur culturel avance régulièrement, mais il n&#39;y a jamais de centre politique chilien autonome."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#A0A0A0;">Pré-féodale</div>
+            <div class="phase-band-dates">~1541 — 1810</div>
+        </div>
+        <div class="phase-band" style="left:55.3535%;width:4.6465%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (1810 — 1833)&#10;La phase féodale la plus courte du corpus (~23 ans). De la Première Junta (1810) à la Constitution de 1833. La Première Junta est l&#39;éveil féodal — pour la première fois, un centre politique chilien autonome structure le jeu. O&#39;Higgins (1817-1823) porte le pouvoir personnel à son maximum (pic féodal). Sa chute (1823) ouvre une crise féodale de sept ans (Pipiolos vs Pelucones), résolue par la victoire conservatrice de Lircay (1830) et le pacte de 1833."
+            onclick="showDetail(3)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">1810 — 1833</div>
+        </div>
+        <div class="phase-band" style="left:60.0000%;width:20.0000%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (1833 — 1932)&#10;Phase oligarchique compressée (~99 ans). L&#39;essor est porté par la « République conservatrice » (1833-1861) et la « République libérale » (1861-1891), avec un pic spectaculaire lors de la Guerre du Pacifique (1879-1884) qui étend le territoire d&#39;un tiers. La tentative d&#39;absolutisation de Balmaceda (1891) échoue — l&#39;oligarchie unie l&#39;écrase lors de la Guerre civile. La République parlementaire (1891-1925) est l&#39;apogée du pouvoir oligarchique. La guerre sociale (1891-1932) se résout par la Constitution de 1925 et la stabilisation de 1932."
+            onclick="showDetail(10)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">1833 — 1932</div>
+        </div>
+        <div class="phase-band" style="left:80.0000%;width:18.9899%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (1932 — en cours)&#10;La phase absolutiste chilienne s&#39;ouvre en 1932 avec la stabilisation du régime sous la Constitution de 1925. Le « 1er monarque absolu » est la présidence forte de la Constitution de 1925 — un cadre institutionnel, pas une personne. L&#39;absolutisation est portée par l&#39;expansion de l&#39;État (CORFO, sécurité sociale, éducation, réforme agraire). Le pic absolutiste est atteint sous Eduardo Frei Montalva (1964-1970), dont la « Révolution dans la Liberté » représente le sommet de l&#39;intervention étatique. La période qui suit est une question ouverte : l&#39;épisode Allende/Pinochet (1970-1990) est-il le début de la RN ou une crise intra-absolutiste ?"
+            onclick="showDetail(19)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1932 — en cours</div>
+        </div>
+        
+        <div class="subphase-band" style="left:1.0101%;width:32.1212%;
+            background:#d4d4d4;border-bottom:2px solid #A0A0A0;"
+            data-tooltip="&lt;strong&gt;Formation de la société coloniale&lt;/strong&gt; (~1541 — ~1700)&#10;De la fondation de Santiago (1541) à la consolidation du système de hacienda (~1700). L&#39;encomienda structure la société initiale, puis cède la place à la hacienda comme base économique. Le Désastre de Curalaba (1598) fixe la frontière du Biobío et concentre la colonisation dans la Vallée Centrale."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Formation de la société coloniale</span>
+        </div>
+        <div class="subphase-band" style="left:33.1313%;width:22.2222%;
+            background:#d4d4d4;border-bottom:2px solid #A0A0A0;"
+            data-tooltip="&lt;strong&gt;Maturation créole&lt;/strong&gt; (~1700 — 1810)&#10;L&#39;identité créole se distingue progressivement de l&#39;identité espagnole. La croissance démographique et économique s&#39;accélère au XVIIIe siècle. Les réformes Bourbon (années 1760) modernisent l&#39;administration mais accroissent les tensions entre créoles et péninsulaires. L&#39;expulsion des Jésuites (1767) provoque un ressentiment créole. Le cabildo de Santiago devient le foyer de l&#39;aspiration autonomiste."
+            onclick="showDetail(2)">
+            <span class="subphase-label">Maturation créole</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:55.3535%;width:2.6263%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Indépendance et pic féodal&lt;/strong&gt; (1810 — 1823)&#10;De la Première Junta (1810) à la chute d&#39;O&#39;Higgins (1823). Le jeu politique chilien autonome s&#39;ouvre. La Patria Vieja (1810-1814) et la Reconquista espagnole (1814-1817) structurent le conflit patriotes/loyalistes. O&#39;Higgins, victorieux à Chacabuco (1817), concentre le pouvoir comme Directeur Suprême — mais son pouvoir est personnel et ne survit pas à sa chute."
+            onclick="showDetail(4)">
+            <span class="subphase-label">Indépendance et pic féodal</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:57.9798%;width:2.0202%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Bascule oligarchique&lt;/strong&gt; (1823 — 1833)&#10;Sept ans d&#39;instabilité (1823-1830) suivis de trois ans de codification (1830-1833). La chute d&#39;O&#39;Higgins fragmente le pouvoir entre Pipiolos (libéraux) et Pelucones (conservateurs). La victoire conservatrice de Lircay (1830) et l&#39;influence de Diego Portales ouvrent la voie à la Constitution de 1833 — le pacte oligarchique chilien."
+            onclick="showDetail(7)">
+            <span class="subphase-label">Bascule oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:60.0000%;width:5.4545%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (1833 — ~1860)&#10;La « République conservatrice » — trois présidents successifs de dix ans chacun (Prieto, Bulnes, Montt). L&#39;État se construit : fisc permanent (droits de douane, revenus miniers), armée professionnalisée, administration centralisée (intendentes nommés par le président). Expansion vers le sud (colonisation de la région des Lacs, colonisation allemande à partir de 1848) et vers le nord (découverte d&#39;argent à Chañarcillo, 1832, boom du cuivre). Guerre victorieuse contre la Confédération péruano-bolivienne (1836-1839, victoire décisive à Yungay). Portales est assassiné le 6 juin 1837 mais le système qu&#39;il a créé survit — preuve de la solidité institutionnelle. Les guerres civiles de 1851 (révolte de Concepción et La Serena contre la centralisation de Montt) et 1859 (Pedro León Gallo, magnat minier d&#39;Atacama, lève une armée à ses frais) sont des révoltes provinciales et minières contre Santiago — elles échouent mais donnent naissance au Parti radical."
+            onclick="showDetail(11)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:65.4545%;width:6.2626%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (~1860 — 1891)&#10;Les réformes libérales des années 1860-1880 polarisent l&#39;élite entre conservateurs (patrimoniale — hacendados, Église) et libéraux (prébendière — élite minière, commerciale, professionnelle). La Guerre du Pacifique (1879-1884) unit temporairement les factions, mais l&#39;afflux de revenus du salpêtre après la guerre exacerbe les tensions sur le contrôle de la richesse nationale. Le conflit éclate ouvertement en 1891."
+            onclick="showDetail(13)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:71.7172%;width:8.2828%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1891 — 1932)&#10;La Guerre civile de 1891 ouvre quarante et un ans de conflit entre les factions oligarchiques, aggravé par la montée de la « question sociale ». La République parlementaire (1891-1925) voit les deux factions partager le pouvoir tandis que les clientèles populaires (ouvriers, classes moyennes) sont abandonnées. La crise des années 1920-1932 (Alessandri, coups militaires, Ibáñez, crise économique) est résolue par la Constitution de 1925 et la stabilisation de 1932."
+            onclick="showDetail(17)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:80.0000%;width:5.2525%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1932 — ~1958)&#10;L&#39;État central acquiert une supériorité incontestée. Alessandri (2e présidence, 1932-1938) stabilise le système. Aguirre Cerda (1938-1941) crée le Frente Popular et CORFO (1939), faisant de l&#39;État un acteur économique direct. Le Parti radical domine la politique (1938-1952). L&#39;ancienne oligarchie est domestiquée — elle conserve ses terres et ses richesses mais perd le contrôle politique."
+            onclick="showDetail(20)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:85.2525%;width:2.4242%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (~1958 — ~1970)&#10;L&#39;État chilien atteint le sommet de son intervention dans la société. Jorge Alessandri (1958-1964) et surtout Eduardo Frei Montalva (1964-1970) projettent la puissance étatique au maximum : réforme agraire, Chileanisation du cuivre, expansion de l&#39;éducation et du logement, syndicalisation rurale. C&#39;est le pic absolutiste chilien."
+            onclick="showDetail(22)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band" style="left:87.6768%;width:11.3131%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime (question ouverte)&lt;/strong&gt; (~1970 — en cours)&#10;Le système absolutiste montre les signes classiques de l&#39;Ancien Régime : sédimentation des élites, surproduction élitaire, convergence des extrêmes. Le clivage gauche-droite saute : le bloc élitaire (DC + centre-droit) fait face au bloc contestataire (EG + ED). La période Allende/Pinochet (1970-1990) est la grande question ouverte du Parcours chilien : est-ce le début de la RN, ou une crise intra-absolutiste ?"
+            onclick="showDetail(24)">
+            <span class="subphase-label">Ancien Régime (question ouverte)</span>
+        </div>
+        
+        
+        <div class="saillant-group" style="left:55.3535%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Première Junta (1810)&#10;La Première Junta du 18 septembre 1810, réunie au cabildo de Santiago devant ~400 notables — propriétaires terriens, clergé, officiers militaires, représentant moins de 1% de la population coloniale —, est le premier acte politique autonome de l&#39;élite créole chilienne. Formellement constituée au nom du roi prisonnier Ferdinand VII, elle crée de facto le premier centre politique chilien indépendant. Mateo de Toro y Zambrano (82 ans, comte de la Conquista) est élu président, mais le pouvoir réel est exercé par Juan Martínez de Rozas."
+                onclick="showDetail(5)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Première Junta</span><span class="saillant-date">1810</span></div>
+        </div>
+        <div class="saillant-group" style="left:56.7677%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;O&#39;Higgins (1817)&#10;O&#39;Higgins, victorieux à Chacabuco (1817), concentre le pouvoir comme Directeur Suprême du Chili. Son règne de six ans est le pic de pouvoir personnel le plus intense de la phase féodale — mais tout repose sur sa personne. À sa chute (1823), le système se fragmente immédiatement, confirmant le caractère féodal du pouvoir."
+                onclick="showDetail(6)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">O&#39;Higgins</span><span class="saillant-date">1817</span></div>
+        </div>
+        <div class="saillant-group" style="left:57.9798%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Pipiolos vs Pelucones (1823)&#10;La chute d&#39;O&#39;Higgins (janvier 1823) ouvre une période de sept ans d&#39;instabilité : constitutions avortées, présidents éphémères, factions rivales. Les Pipiolos (libéraux) et les Pelucones (conservateurs) s&#39;affrontent pour le contrôle du nouvel État. La crise est résolue par la victoire conservatrice à la bataille de Lircay (17 avril 1830)."
+                onclick="showDetail(8)">
+                <span class="material-symbols-outlined">swords</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Pipiolos vs Pelucones</span><span class="saillant-date">1823</span></div>
+        </div>
+        <div class="saillant-group" style="left:59.5960%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Prieto / Portales (1831)&#10;Joaquín Prieto est le premier président élu sous le cadre institutionnel codifié par le pacte de 1833, mais c&#39;est Diego Portales — ministre tout-puissant, jamais président — qui incarne le véritable architecte de l&#39;État oligarchique. Portales crée le système, Prieto le préside."
+                onclick="showDetail(12)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Prieto / Portales</span><span class="saillant-date">1831</span></div>
+        </div>
+        <div class="saillant-group" style="left:60.0000%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Constitution de 1833 (1833)&#10;La Constitution de 1833, rédigée sous l&#39;influence de Diego Portales et Mariano Egaña, codifie pour la première fois les règles du jeu politique chilien : présidence forte (mandat de 5 ans renouvelable une fois), suffrage censitaire, catholicisme d&#39;État, séparation des pouvoirs avec prédominance de l&#39;exécutif. C&#39;est le texte constitutionnel le plus durable d&#39;Amérique latine — il reste en vigueur jusqu&#39;en 1925."
+                onclick="showDetail(9)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Constitution de 1833</span><span class="saillant-date">1833</span></div>
+        </div>
+        <div class="saillant-group" style="left:69.2929%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Guerre du Pacifique (1879)&#10;La Guerre du Pacifique (1879-1884) porte le Chili à son apogée oligarchique. Le territoire s&#39;étend d&#39;un tiers vers le nord (conquête d&#39;Atacama, de Tarapacá et d&#39;Antofagasta aux dépens du Pérou et de la Bolivie). Les revenus du salpêtre transforment les finances publiques. Le prestige national est au sommet."
+                onclick="showDetail(14)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Guerre du Pacifique</span><span class="saillant-date">1879</span></div>
+        </div>
+        <div class="saillant-group" style="left:70.3030%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Fin des guerres territoriales (1884)&#10;La fin de la Guerre du Pacifique (1884) et l&#39;achèvement de l&#39;Occupation de l&#39;Araucanie (1883) ferment définitivement la soupape expansionniste. Le Traité de 1881 avec l&#39;Argentine confirme la souveraineté chilienne sur le détroit de Magellan mais cède la Patagonie orientale. Après 1884, toute l&#39;énergie des élites se tourne vers l&#39;intérieur."
+                onclick="showDetail(15)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Fin des guerres territoriales</span><span class="saillant-date">1884</span></div>
+        </div>
+        <div class="saillant-group" style="left:70.7071%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Tentative d&#39;absolutisation avortée&lt;/strong&gt;&#10;Balmaceda (1886)&#10;Le président Balmaceda (1886-1891) tente d&#39;absolutiser en utilisant les revenus du salpêtre pour financer une infrastructure d&#39;État massive (chemins de fer, écoles, ports) et en imposant son successeur. Le Congrès, représentant l&#39;oligarchie unie (conservateurs ET libéraux), refuse de voter le budget. Le conflit dégénère en guerre civile (1891). Balmaceda perd, se réfugie à l&#39;ambassade d&#39;Argentine et se suicide. La tentative échoue — l&#39;oligarchie est trop unie."
+                onclick="showDetail(16)">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Tentative d&#39;absolutisation avortée</span><span class="saillant-figure">Balmaceda</span><span class="saillant-date">1886</span></div>
+        </div>
+        <div class="saillant-group" style="left:71.7172%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;De Balmaceda au Frente Popular (1891)&#10;Quarante et un ans de conflit entre la faction patrimoniale (hacendados conservateurs) et la faction prébendière (élite minière/commerciale libérale), aggravé par la montée des clientèles populaires délaissées. Ni l&#39;une ni l&#39;autre faction ne l&#39;emporte — le tiers qui émerge est la classe moyenne organisée dans le Parti radical, soutenue par les militaires et le mouvement ouvrier."
+                onclick="showDetail(18)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">De Balmaceda au Frente Popular</span><span class="saillant-date">1891</span></div>
+        </div>
+        <div class="saillant-group" style="left:80.0000%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Constitution de 1925 (1932)&#10;Le « 1er monarque absolu » chilien est institutionnel, pas personnel : c&#39;est la présidence forte de la Constitution de 1925, telle qu&#39;elle se stabilise en 1932 sous la seconde présidence d&#39;Arturo Alessandri. Le cadre concentre le pouvoir exécutif au-dessus des anciennes factions oligarchiques et survit à des transitions multiples entre présidents d&#39;idéologies très différentes."
+                onclick="showDetail(21)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Constitution de 1925</span><span class="saillant-date">1932</span></div>
+        </div>
+        <div class="saillant-group" style="left:86.4646%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Frei Montalva (1964)&#10;Eduardo Frei Montalva (1964-1970) incarne le pic absolutiste chilien avec sa « Révolution dans la Liberté » : réforme agraire, Chileanisation du cuivre, expansion de l&#39;éducation et du logement, syndicalisation rurale. L&#39;État atteint le sommet de son emprise sur la société."
+                onclick="showDetail(23)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Frei Montalva</span><span class="saillant-date">1964</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 11/04/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'prefeodale','title':'Percolation coloniale','subtitle':'','summary':'Deux cent soixante-dix ans de formation de la société créole chilienne sous domination espagnole. Le peuple chilien émerge progressivement dans les haciendas de la Vallée Centrale, les cabildos de Santiago et sur la frontière militaire du Biobío. Le moteur culturel avance régulièrement, mais il n\'y a jamais de centre politique chilien autonome.','description':'La percolation chilienne est la plus longue du corpus (~270 ans). Pedro de Valdivia fonde Santiago en 1541, et la société coloniale se structure autour de trois éléments : l\'encomienda puis la hacienda (base économique), le cabildo (institution politique créole), et la frontière du Biobío (identité militaire). Le Désastre de Curalaba (1598) fixe la frontière méridionale et concentre la société coloniale dans la Vallée Centrale, entre Santiago et Concepción. La Real Audiencia de Santiago est créée le 17 février 1609 par Philippe III, donnant au Chili une armature judiciaire permanente. En janvier 1603, Philippe III autorise la création de l\'Ejército de Arauco — 1 500 soldats professionnels salariés, la seule armée permanente de toute l\'Amérique espagnole. Le Real Situado (subside annuel du Pérou, ~185 000 pesos/an, financé par l\'argent de Potosí) finance cette armée de frontière. Les réformes Bourbon du milieu du XVIIIe siècle divisent le Chili en intendances et modernisent l\'administration, mais accroissent aussi les tensions entre créoles et péninsulaires. À la fin de la période coloniale, la population est d\'environ 500 000 habitants — ~300 000 métis et ~150 000 créoles — formant une société culturellement distincte de la métropole espagnole.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1541,'end':1810,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'prefeodale','title':'Formation de la société coloniale','subtitle':'','summary':'De la fondation de Santiago (1541) à la consolidation du système de hacienda (~1700). L\'encomienda structure la société initiale, puis cède la place à la hacienda comme base économique. Le Désastre de Curalaba (1598) fixe la frontière du Biobío et concentre la colonisation dans la Vallée Centrale.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1541,'end':1700,'start_approx':true,'end_approx':true},{'kind':'subphase','type':'subphase','phase':'prefeodale','title':'Maturation créole','subtitle':'','summary':'L\'identité créole se distingue progressivement de l\'identité espagnole. La croissance démographique et économique s\'accélère au XVIIIe siècle. Les réformes Bourbon (années 1760) modernisent l\'administration mais accroissent les tensions entre créoles et péninsulaires. L\'expulsion des Jésuites (1767) provoque un ressentiment créole. Le cabildo de Santiago devient le foyer de l\'aspiration autonomiste.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1700,'end':1810,'start_approx':true,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','subtitle':'','summary':'La phase féodale la plus courte du corpus (~23 ans). De la Première Junta (1810) à la Constitution de 1833. La Première Junta est l\'éveil féodal — pour la première fois, un centre politique chilien autonome structure le jeu. O\'Higgins (1817-1823) porte le pouvoir personnel à son maximum (pic féodal). Sa chute (1823) ouvre une crise féodale de sept ans (Pipiolos vs Pelucones), résolue par la victoire conservatrice de Lircay (1830) et le pacte de 1833.','description':'**Test discriminant (féodal vs oligarchique)** : le pouvoir central NE SURVIT PAS à la chute d\'O\'Higgins. Quand il abdique en 1823, le système qu\'il a construit s\'effondre — sept ans d\'instabilité, constitutions avortées (1823, 1826, 1828), présidents éphémères. C\'est le diagnostic féodal : le pouvoir est personnel, pas institutionnel. **Pourquoi la phase est-elle si courte ?** L\'extrême compression s\'explique par la percolation coloniale de 270 ans. L\'élite créole arrive à l\'indépendance avec une homogénéité culturelle déjà très avancée — langue commune, religion commune, conscience de classe forgée dans les cabildos et les haciendas, expérience institutionnelle héritée de l\'administration coloniale. La condition d\'homogénéité de Deblonde est pré-chargée. La condition de faiblesse est fournie par la chute d\'O\'Higgins (1823) et l\'instabilité qui suit. Les deux conditions sont réunies rapidement, et le pacte aboutit au premier essai — exactement comme en France (1108-1317, pacte au premier essai), mais en beaucoup plus rapide parce que le seuil d\'homogénéité est déjà atteint.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-177 ans par rapport à la norme (~200 ans). Compression extrême par l\'héritage colonial (270 ans de percolation pré-chargent l\'homogénéité).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — les élites créoles codifient la structure de l\'exécutif par la Constitution de 1833, établissant une présidence forte, un fisc permanent, et un cadre institutionnel qui survit aux transitions de pouvoir.','resolution_conditions':'Homogénéité des élites créoles à l\'échelle nationale (forgée par 270 ans de brassage colonial dans les cabildos, les haciendas et sur la frontière). Moment de faiblesse après la chute d\'O\'Higgins (1823) et sept ans d\'instabilité (Pipiolos vs Pelucones). La victoire conservatrice de Lircay (1830) et l\'influence de Portales fournissent le cadre pour la codification.','avortement':'','start':1810,'end':1833,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Indépendance et pic féodal','subtitle':'','summary':'De la Première Junta (1810) à la chute d\'O\'Higgins (1823). Le jeu politique chilien autonome s\'ouvre. La Patria Vieja (1810-1814) et la Reconquista espagnole (1814-1817) structurent le conflit patriotes/loyalistes. O\'Higgins, victorieux à Chacabuco (1817), concentre le pouvoir comme Directeur Suprême — mais son pouvoir est personnel et ne survit pas à sa chute.','description':'La Première Junta du 18 septembre 1810, formellement constituée au nom de Ferdinand VII, est l\'acte fondateur du Parcours chilien autonome. Pour la première fois, l\'élite créole agit comme une force politique indépendante. José Miguel Carrera (1811-1813) puis Bernardo O\'Higgins rivalisent pour le leadership — la Patria Vieja est une période de percolation féodale accélérée. La Reconquista espagnole (1814-1817), après la défaite de Rancagua, est un revers temporaire qui ne détruit pas l\'homogénéité culturelle créole. O\'Higgins, revenu avec San Martín après la victoire de Chacabuco (12 février 1817), devient Directeur Suprême et concentre le pouvoir. Il abolit les titres de noblesse et les majorats, fonde des écoles, soutient l\'expédition péruvienne de San Martín — mais il s\'aliène les libéraux par son autoritarisme, les conservateurs par son anticléricalisme, et les propriétaires terriens par ses réformes agraires. En janvier 1823, des troupes provinciales le forcent à abdiquer.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1810,'end':1823,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Première Junta','summary':'La Première Junta du 18 septembre 1810, réunie au cabildo de Santiago devant ~400 notables — propriétaires terriens, clergé, officiers militaires, représentant moins de 1% de la population coloniale —, est le premier acte politique autonome de l\'élite créole chilienne. Formellement constituée au nom du roi prisonnier Ferdinand VII, elle crée de facto le premier centre politique chilien indépendant. Mateo de Toro y Zambrano (82 ans, comte de la Conquista) est élu président, mais le pouvoir réel est exercé par Juan Martínez de Rozas.','description':'La Première Junta du 18 septembre 1810 est l\'éveil féodal chilien. Elle est convoquée après que la nouvelle de la dissolution de la Junta Central espagnole est parvenue à Santiago, et réunit ~350 notables au cabildo. Mateo de Toro y Zambrano, le gouverneur intérimaire, en est élu président. Pour la première fois dans l\'histoire du Chili, l\'élite créole agit de manière autonome — elle ne reçoit pas ses ordres de Madrid ou de Lima, elle se les donne elle-même. Le jeu politique se structure : les patriotes, les loyalistes, et les modérés doivent se positionner par rapport à cette nouvelle autorité. C\'est structurellement analogue au Bundesbrief suisse (1291) — un acte collectif qui crée un centre politique, pas un chef personnel qui s\'impose. Mais contrairement à la Suisse, où la percolation dure ~60 ans (1230-1291), la percolation chilienne a duré ~270 ans — le seuil est largement dépassé.','figure':'Mateo de Toro y Zambrano / élite créole','confidence':'medium','alternatives':'Bernardo O\'Higgins (1817) — premier leader chilien avec un pouvoir effectif au niveau national. Mais la Junta de 1810 est le moment où le jeu politique autonome commence — tous les acteurs (patriotes, royalistes, modérés) doivent se positionner par rapport à elle.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1810,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'O\'Higgins','summary':'O\'Higgins, victorieux à Chacabuco (1817), concentre le pouvoir comme Directeur Suprême du Chili. Son règne de six ans est le pic de pouvoir personnel le plus intense de la phase féodale — mais tout repose sur sa personne. À sa chute (1823), le système se fragmente immédiatement, confirmant le caractère féodal du pouvoir.','description':'Bernardo O\'Higgins est le pic féodal du Parcours chilien. Fils illégitime d\'Ambrosio O\'Higgins, ancien gouverneur espagnol du Chili, il est élevé en Angleterre et revient au Chili avec des idées républicaines. Après la Reconquista espagnole (1814-1817), il s\'allie à José de San Martín et remporte la bataille de Chacabuco le 12 février 1817. Proclamé Directeur Suprême, il déclare l\'indépendance le 12 février 1818 et remporte la bataille décisive de Maipú le 5 avril 1818. Son pouvoir est considérable — il abolit les titres de noblesse, supprime les majorats (entails), crée des écoles, et finance l\'expédition libératrice du Pérou — mais il est fondamentalement personnel. O\'Higgins s\'aliène systématiquement toutes les factions : les libéraux par son autoritarisme, les conservateurs par son anticléricalisme, les hacendados par ses réformes agraires. En janvier 1823, des troupes provinciales marchent sur Santiago et le forcent à abdiquer. Le système s\'effondre immédiatement — preuve que le pouvoir reposait sur la personne, pas sur les institutions.','figure':'Bernardo O\'Higgins','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1817,'end':1823,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Bascule oligarchique','subtitle':'','summary':'Sept ans d\'instabilité (1823-1830) suivis de trois ans de codification (1830-1833). La chute d\'O\'Higgins fragmente le pouvoir entre Pipiolos (libéraux) et Pelucones (conservateurs). La victoire conservatrice de Lircay (1830) et l\'influence de Diego Portales ouvrent la voie à la Constitution de 1833 — le pacte oligarchique chilien.','description':'La bascule oligarchique chilienne suit exactement le schéma de Deblonde : faiblesse du suzerain (chute d\'O\'Higgins, 1823) + homogénéité des oligarques (270 ans de brassage colonial). Le résultat est un pacte rapide — dix ans seulement entre la crise et la codification. La période 1823-1830 voit se succéder constitutions avortées (Constitution moraliste de Egaña, 1823 ; Constitution fédéraliste de Infante, 1826 ; Constitution libérale de Pinto, 1828) et présidents éphémères — Ramón Freire, le plus durable, ne parvient pas à maintenir la stabilité. Trois factions se cristallisent : les **Pipiolos** (libéraux, fédéralistes, anticléricaux — jeunes aristocrates éclairés, fonctionnaires, miliciens), les **Pelucones** (conservateurs, centralistes, pro-Église — grands propriétaires terriens, vieille élite) et les **Estanqueros** (marchands, partisans d\'un État autoritaire et centralisé), menés par Diego Portales, qui s\'allient aux Pelucones. La bataille de Lircay (17 avril 1830) tranche en faveur des Pelucones. Diego Portales, homme d\'affaires et agnostique personnel qui reconnaît néanmoins le rôle de l\'Église comme facteur de stabilité, impose une vision d\'« république autocratique » centralisée. La Constitution de 1833 codifie ce nouvel ordre.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1823,'end':1833,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Pipiolos vs Pelucones','summary':'La chute d\'O\'Higgins (janvier 1823) ouvre une période de sept ans d\'instabilité : constitutions avortées, présidents éphémères, factions rivales. Les Pipiolos (libéraux) et les Pelucones (conservateurs) s\'affrontent pour le contrôle du nouvel État. La crise est résolue par la victoire conservatrice à la bataille de Lircay (17 avril 1830).','description':'La crise féodale chilienne est remarquablement brève (7 ans) mais intense. Trois constitutions sont adoptées et abandonnées en cinq ans (1823, 1826, 1828), aucune ne parvenant à stabiliser le système. Ramón Freire, le leader le plus durable de la période, oscille entre les factions sans parvenir à les réconcilier. L\'abolition de l\'esclavage (1823) est la seule réforme durable de la période. Le conflit entre Pipiolos (partisans d\'un régime fédéral, libéral, anticlérical) et Pelucones (partisans d\'un État central fort, conservateur, pro-Église) structure le jeu politique mais ne produit pas de pacte — le pouvoir change de mains par la force, pas par la codification. Ce n\'est qu\'après la victoire décisive de Lircay (1830) que les conditions du pacte sont réunies : les Pelucones contrôlent le pouvoir, et Diego Portales peut imposer sa vision institutionnelle.','figure':'Ramón Freire','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1823,'end':1830,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','subtitle':'Constitution de 1833','summary':'La Constitution de 1833, rédigée sous l\'influence de Diego Portales et Mariano Egaña, codifie pour la première fois les règles du jeu politique chilien : présidence forte (mandat de 5 ans renouvelable une fois), suffrage censitaire, catholicisme d\'État, séparation des pouvoirs avec prédominance de l\'exécutif. C\'est le texte constitutionnel le plus durable d\'Amérique latine — il reste en vigueur jusqu\'en 1925.','description':'La Constitution de 1833 est le pacte oligarchique chilien — le moment où les élites codifient collectivement la structure de l\'exécutif. Le texte concentre l\'autorité dans le gouvernement national et, plus précisément, dans les mains du président : celui-ci nomme les juges, les fonctionnaires provinciaux (intendentes) et les membres du cabinet ; dispose d\'un droit de veto législatif ; peut déclarer l\'état de siège et suspendre les libertés politiques. Le Sénat (élu indirectement, mandat de 9 ans, conditions de propriété) et la Chambre des députés (élue directement, mandat de 3 ans) encadrent l\'exécutif mais ne le dominent pas. Le suffrage est restreint aux hommes de plus de 21 ans, lettrés et propriétaires. Le catholicisme est religion d\'État et la pratique d\'autres religions est interdite, même en privé. Ce cadre produit trois décennies de stabilité remarquable : trois présidents consécutifs (Prieto, Bulnes, Montt), chacun servant deux mandats de cinq ans. Le test discriminant est satisfait : après 1833, les institutions survivent aux transitions de pouvoir — preuve que le système est oligarchique, pas féodal.','figure':'Diego Portales / Mariano Egaña','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1833,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'Phase oligarchique compressée (~99 ans). L\'essor est porté par la « République conservatrice » (1833-1861) et la « République libérale » (1861-1891), avec un pic spectaculaire lors de la Guerre du Pacifique (1879-1884) qui étend le territoire d\'un tiers. La tentative d\'absolutisation de Balmaceda (1891) échoue — l\'oligarchie unie l\'écrase lors de la Guerre civile. La République parlementaire (1891-1925) est l\'apogée du pouvoir oligarchique. La guerre sociale (1891-1932) se résout par la Constitution de 1925 et la stabilisation de 1932.','description':'**Test discriminant (oligarchique vs absolutiste)** : l\'administration centrale N\'A PAS préséance sur les administrations locales. Le président de la Constitution de 1833 est très puissant, mais le Congrès vote le budget, les hacendados contrôlent leurs territoires, et l\'Église a une indépendance institutionnelle. Le président doit COMPOSER avec les oligarques — les trois décennies conservatrices (1831-1861) fonctionnent grâce à un consensus entre le président et l\'élite terrienne. Quand ce consensus se rompt (réforme libérale des années 1860-1880, Balmaceda en 1891), c\'est le Congrès (les oligarques) qui l\'emporte. **Pourquoi la phase est courte (~99 ans).** La compression s\'explique par les mêmes facteurs que la phase féodale : l\'homogénéité héritée de la période coloniale, la compacité géographique du territoire (la Vallée Centrale), et l\'expansion rapide et décisive (Guerre du Pacifique, Occupation de l\'Araucanie) qui comprime le cycle essor-polarisation-guerre sociale. Cas comparable : la Bavière (~91 ans pour la phase oligarchique, compressée par la Contre-Réforme).','figure':'','confidence':'','alternatives':'','step':'','deviation':'-101 ans par rapport à la norme (~200 ans). Compression par l\'héritage colonial et l\'expansion rapide.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale — ni les hacendados conservateurs (patrimoniale) ni l\'élite minière/commerciale libérale (prébendière) ne l\'emportent. La crise des années 1920 est résolue par la Constitution de 1925 (présidence forte au-dessus des factions) et l\'arrivée de la classe moyenne au pouvoir.','resolution_conditions':'Polarisation complète entre faction patrimoniale (hacendados) et prébendière (élite minière/libérale), épuisement mutuel pendant la République parlementaire (1891-1925), disponibilité d\'un tiers (classe moyenne + militaire) qui ne s\'identifie à aucune faction.','avortement':'','start':1833,'end':1932,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'La « République conservatrice » — trois présidents successifs de dix ans chacun (Prieto, Bulnes, Montt). L\'État se construit : fisc permanent (droits de douane, revenus miniers), armée professionnalisée, administration centralisée (intendentes nommés par le président). Expansion vers le sud (colonisation de la région des Lacs, colonisation allemande à partir de 1848) et vers le nord (découverte d\'argent à Chañarcillo, 1832, boom du cuivre). Guerre victorieuse contre la Confédération péruano-bolivienne (1836-1839, victoire décisive à Yungay). Portales est assassiné le 6 juin 1837 mais le système qu\'il a créé survit — preuve de la solidité institutionnelle. Les guerres civiles de 1851 (révolte de Concepción et La Serena contre la centralisation de Montt) et 1859 (Pedro León Gallo, magnat minier d\'Atacama, lève une armée à ses frais) sont des révoltes provinciales et minières contre Santiago — elles échouent mais donnent naissance au Parti radical.','description':'**Marqueurs de l\'essor oligarchique présents** : fisc permanent central (droits de douane + revenus miniers) coexistant avec les revenus locaux des haciendas. Armée permanente soldée par l\'exécutif (héritée des guerres d\'indépendance, professionnalisée). Administration centrale (intendentes, gobernadores, juges nommés par le président). Codification du droit (Constitution de 1833). Coexistence avec des pouvoirs locaux autonomes (hacendados contrôlant leurs domaines, Église contrôlant l\'éducation et l\'état civil). **L\'expansion extérieure comme moteur.** L\'essor est dynamique : guerre contre la Confédération péruano-bolivienne (1836-1839, victoire à Yungay), occupation du Détroit de Magellan (1843), fondation de l\'Université du Chili (1842), colonisation allemande de la région des Lacs (1848), début de l\'exploitation minière d\'Atacama. Diego Portales est assassiné lors d\'une mutinerie militaire en 1837, mais le système institutionnel qu\'il a créé survit intégralement — c\'est la preuve la plus nette que le Chili est passé en phase oligarchique. Le pouvoir ne dépend plus de la personne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1833,'end':1860,'start_approx':false,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Prieto / Portales','summary':'Joaquín Prieto est le premier président élu sous le cadre institutionnel codifié par le pacte de 1833, mais c\'est Diego Portales — ministre tout-puissant, jamais président — qui incarne le véritable architecte de l\'État oligarchique. Portales crée le système, Prieto le préside.','description':'Le « 1er monarque oligarchique » chilien est une dyade : Joaquín Prieto, président de 1831 à 1841, et Diego Portales, ministre de l\'Intérieur et des Affaires étrangères, qui est le véritable architecte du système. Portales est un cas unique : homme d\'affaires agnostique, il n\'est ni hacendado ni militaire, mais il comprend que la stabilité institutionnelle prime sur l\'idéologie. Il crée un système centralisé, impersonnel et provisoire — il veut préparer le Chili à une future démocratie. L\'État dispose d\'un fisc permanent (douanes, mines), d\'une armée professionnalisée (héritée des guerres d\'indépendance), et d\'une administration centralisée (intendentes nommés par le président). Portales est assassiné en 1837 lors d\'une mutinerie militaire — mais le système survit. C\'est le test décisif : l\'État fonctionne sans la personne qui l\'a créé. Prieto termine son second mandat (1841) et transmet pacifiquement le pouvoir à Manuel Bulnes — la première transition pacifique de l\'histoire du Chili.','figure':'Joaquín Prieto / Diego Portales','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1831,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'Les réformes libérales des années 1860-1880 polarisent l\'élite entre conservateurs (patrimoniale — hacendados, Église) et libéraux (prébendière — élite minière, commerciale, professionnelle). La Guerre du Pacifique (1879-1884) unit temporairement les factions, mais l\'afflux de revenus du salpêtre après la guerre exacerbe les tensions sur le contrôle de la richesse nationale. Le conflit éclate ouvertement en 1891.','description':'La polarisation chilienne s\'articule autour de deux axes. Le premier est le clivage religieux : les réformes libérales des années 1870-1880 (registre civil, mariage civil, cimetières laïques) attaquent les prérogatives de l\'Église, fracturant l\'alliance conservatrice-libérale qui avait fonctionné sous la République conservatrice. Le second est le clivage économique : l\'économie du salpêtre, née de la Guerre du Pacifique, crée une nouvelle classe d\'industriels et de financiers dont les intérêts divergent de ceux des hacendados traditionnels. La Guerre du Pacifique (1879-1884) fonctionne comme mécanisme anti-polarisation — l\'expansion extérieure canalise les tensions — mais une fois la guerre terminée, les revenus du salpêtre deviennent l\'enjeu central. Qui les contrôle ? Le président (Balmaceda) veut les utiliser pour construire l\'État. Le Congrès (oligarques des deux factions) veut les distribuer selon ses intérêts. L\'affrontement est inévitable.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1860,'end':1891,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pic oligarchique','subtitle':'Guerre du Pacifique','summary':'La Guerre du Pacifique (1879-1884) porte le Chili à son apogée oligarchique. Le territoire s\'étend d\'un tiers vers le nord (conquête d\'Atacama, de Tarapacá et d\'Antofagasta aux dépens du Pérou et de la Bolivie). Les revenus du salpêtre transforment les finances publiques. Le prestige national est au sommet.','description':'La Guerre du Pacifique est le pic oligarchique chilien — le moment où la nation projette sa puissance militaire au maximum et acquiert les ressources qui transformeront sa trajectoire. L\'armée et la marine chiliennes, financées par l\'État central, écrasent le Pérou et la Bolivie en moins de cinq ans. Les provinces d\'Atacama, Tarapacá et Antofagasta (riches en salpêtre et en cuivre) sont annexées, étendant le territoire d\'environ un tiers. Le trésor national croît de 900% entre 1879 et 1902. Les exportations de salpêtre deviennent la première source de revenus de l\'État, passant de quasi-nulles avant la guerre à plus de 50% des dépenses publiques dans les années 1890-1920. Le capital britannique domine le secteur — John Thomas North, le « Roi du salpêtre », contrôle banques, approvisionnement en eau et chemins de fer à Tarapacá. Simultanément, l\'Occupation de l\'Araucanie (1861-1883) intègre le territoire mapuche au sud du Biobío. Après 1884, il n\'y a plus d\'expansion possible — la soupape extérieure est fermée, et les tensions internes prennent le relais.','figure':'Aníbal Pinto / Domingo Santa María','confidence':'medium','alternatives':'Manuel Montt (1851-1861), dernier grand président conservateur, pourrait aussi être le pic. Mais la Guerre du Pacifique représente le maximum absolu d\'expansion, de prestige et de revenus — les trois marqueurs du pic.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1879,'end':1884,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','subtitle':'Fin des guerres territoriales','summary':'La fin de la Guerre du Pacifique (1884) et l\'achèvement de l\'Occupation de l\'Araucanie (1883) ferment définitivement la soupape expansionniste. Le Traité de 1881 avec l\'Argentine confirme la souveraineté chilienne sur le détroit de Magellan mais cède la Patagonie orientale. Après 1884, toute l\'énergie des élites se tourne vers l\'intérieur.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1884,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Tentative d\'absolutisation avortée','subtitle':'Balmaceda','summary':'Le président Balmaceda (1886-1891) tente d\'absolutiser en utilisant les revenus du salpêtre pour financer une infrastructure d\'État massive (chemins de fer, écoles, ports) et en imposant son successeur. Le Congrès, représentant l\'oligarchie unie (conservateurs ET libéraux), refuse de voter le budget. Le conflit dégénère en guerre civile (1891). Balmaceda perd, se réfugie à l\'ambassade d\'Argentine et se suicide. La tentative échoue — l\'oligarchie est trop unie.','description':'La tentative de Balmaceda est un cas d\'école de tentative d\'absolutisation avortée, structurellement analogue à Marino Faliero à Venise (1355) ou aux Gracques à Rome. Balmaceda dispose d\'un programme cohérent : utiliser la rente du salpêtre pour construire un État central capable de s\'émanciper du Congrès oligarchique. Il investit massivement dans l\'infrastructure (plus de 1 300 km de voies ferrées, ports, écoles — les dépenses d\'éducation sont multipliées par huit entre 1886 et 1889), crée un Ministère de l\'Industrie et des Travaux Publics (1887), et cherche à briser le monopole ferroviaire de John Thomas North dans la zone du salpêtre. Mais les trois conditions nécessaires à l\'absolutisation ne sont pas réunies : (1) l\'administration centrale n\'est pas assez autonome — elle dépend du financement voté par le Congrès ; (2) les élites ne sont pas polarisées — conservateurs et libéraux s\'unissent contre Balmaceda ; (3) les clientèles populaires ne sont pas structurées — il n\'y a pas encore de mouvement ouvrier organisé capable de soutenir le président. Le clivage de la Guerre civile de 1891 n\'est pas entre deux factions oligarchiques (comme dans une guerre sociale) mais entre le président et l\'oligarchie unie. La Marine rejoint le Congrès, l\'Armée reste loyale à Balmaceda, mais les forces congressistes l\'emportent.','figure':'José Manuel Balmaceda','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1886,'end':1891,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'La Guerre civile de 1891 ouvre quarante et un ans de conflit entre les factions oligarchiques, aggravé par la montée de la « question sociale ». La République parlementaire (1891-1925) voit les deux factions partager le pouvoir tandis que les clientèles populaires (ouvriers, classes moyennes) sont abandonnées. La crise des années 1920-1932 (Alessandri, coups militaires, Ibáñez, crise économique) est résolue par la Constitution de 1925 et la stabilisation de 1932.','description':'La guerre sociale chilienne est longue (~41 ans, comparable à Venise ~41 ans et au Piémont ~59 ans) et se décompose en deux temps. **Premier temps (1891-1920) : République parlementaire.** Après la victoire du Congrès en 1891, le Chili entre dans une période de domination oligarchique sans précédent. Le président devient une figure cérémonielle ; le Congrès, contrôlé par les hacendados et les barons du salpêtre, dirige le pays. Les cabinets changent au gré des majorités congressistes (plus de 120 cabinets en 34 ans). Le système repose sur un clientélisme corrompu et des caciques provinciaux. Mais pendant ce temps, les clientèles populaires sont abandonnées : la « question sociale » (conditions de travail dans les mines, urbanisation, inflation) est ignorée. Le massacre de Santa María de Iquique (1907 — plus de 2 000 ouvriers du salpêtre et leurs familles tués par l\'armée) en est le symbole tragique. Le Parti démocrate (artisans), le Parti radical (classes moyennes), et le Parti ouvrier socialiste (POS, 1912, devenu Parti communiste en 1922) structurent ces clientèles délaissées. **Second temps (1920-1932) : crise aiguë.** Arturo Alessandri (1920) est élu sur un programme réformiste — « évolution pour éviter la révolution ». Mais le Congrès bloque toutes ses réformes. En 1924, les militaires interviennent directement (« bruit de sabres »). En 1925, Alessandri revient et fait adopter la Constitution de 1925, qui rétablit une présidence forte et sépare l\'Église et l\'État. Carlos Ibáñez del Campo (1927-1931) gouverne en dictateur militaire pendant quatre ans. La Grande Dépression frappe le Chili plus durement que tout autre pays au monde (la Société des Nations le déclare le pays dont le commerce est le plus touché — les exportations de cuivre et de salpêtre chutent de 89% entre 1929 et 1932, le chômage atteint ~300 000 personnes soit 25% de la main-d\'œuvre). Brève République socialiste (4 juin — 13 septembre 1932, 100 jours). Puis Alessandri est réélu (1932) et stabilise le système sous la Constitution de 1925. **Résolution.** Ni les conservateurs (hacendados) ni les libéraux (élite minière) ne contrôlent le nouveau système. La présidence forte de la Constitution de 1925 est au-dessus des factions. Le Parti radical (classe moyenne, laïque, modernisateur) devient la force pivot — le « tiers » qui fédère les clientèles délaissées et accède au pouvoir en 1938 avec le Frente Popular.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1891,'end':1932,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'De Balmaceda au Frente Popular','summary':'Quarante et un ans de conflit entre la faction patrimoniale (hacendados conservateurs) et la faction prébendière (élite minière/commerciale libérale), aggravé par la montée des clientèles populaires délaissées. Ni l\'une ni l\'autre faction ne l\'emporte — le tiers qui émerge est la classe moyenne organisée dans le Parti radical, soutenue par les militaires et le mouvement ouvrier.','description':'La guerre sociale chilienne est atypique par sa longueur et sa résolution graduelle. Elle commence par la Guerre civile de 1891, qui est un conflit entre le président et le Congrès oligarchique — pas encore entre deux factions oligarchiques rivales. Mais la République parlementaire qui suit (1891-1925) voit les deux factions (patrimoniale : hacendados, Église ; prébendière : barons du salpêtre, bourgeoisie libérale) partager le pouvoir tout en abandonnant leurs clientèles populaires. Le massacre de Santa María de Iquique (1907) illustre cette désertion. Les clientèles délaissées se structurent progressivement (POS 1912, PC 1922, Parti radical). La crise de 1920-1932 est la phase aiguë : Alessandri mobilise les clientèles délaissées (1920), les militaires interviennent au-dessus des factions (1924-1925), Ibáñez gouverne en dictateur (1927-1931), puis la stabilisation de 1932 installe un nouveau régime. Le parallèle le plus proche est la Venise de la guerre giovani/vecchi (~1628-1669, 41 ans), où la résolution est également graduelle et institutionnelle plutôt que personnelle.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1891,'end':1932,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','subtitle':'','summary':'La phase absolutiste chilienne s\'ouvre en 1932 avec la stabilisation du régime sous la Constitution de 1925. Le « 1er monarque absolu » est la présidence forte de la Constitution de 1925 — un cadre institutionnel, pas une personne. L\'absolutisation est portée par l\'expansion de l\'État (CORFO, sécurité sociale, éducation, réforme agraire). Le pic absolutiste est atteint sous Eduardo Frei Montalva (1964-1970), dont la « Révolution dans la Liberté » représente le sommet de l\'intervention étatique. La période qui suit est une question ouverte : l\'épisode Allende/Pinochet (1970-1990) est-il le début de la RN ou une crise intra-absolutiste ?','description':'**Test discriminant (absolutiste vs oligarchique)** : l\'administration centrale A préséance sur les administrations locales. Après 1932, le président peut agir sans le veto du Congrès dans de nombreux domaines. Les intendentes sont nommés par le président. L\'État intervient directement dans l\'économie (CORFO, 1939). L\'Église est séparée de l\'État (1925). Les hacendados perdent progressivement leur pouvoir local (réforme agraire, 1962-1973). Le test est satisfait. **Le 1er monarque absolu est institutionnel.** Comme pour Venise (Inquisiteurs d\'État), le « monarque absolu » chilien n\'est pas une personne mais un cadre : la présidence forte de la Constitution de 1925, stabilisée en 1932. Arturo Alessandri (2e présidence, 1932-1938) est la figure qui incarne cette stabilisation — mais le cadre lui survit, traversant des présidents aussi différents qu\'Aguirre Cerda (Frente Popular), González Videla (centre), Ibáñez (populiste), Frei (réformiste chrétien), et Allende (socialiste). C\'est l\'institution qui absorbe — pas la personne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'Non mesurable (phase en cours — ~94 ans en 2026).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Non résolue (en cours)','resolution_conditions':'','avortement':'','start':1932,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'L\'État central acquiert une supériorité incontestée. Alessandri (2e présidence, 1932-1938) stabilise le système. Aguirre Cerda (1938-1941) crée le Frente Popular et CORFO (1939), faisant de l\'État un acteur économique direct. Le Parti radical domine la politique (1938-1952). L\'ancienne oligarchie est domestiquée — elle conserve ses terres et ses richesses mais perd le contrôle politique.','description':'L\'absolutisation chilienne est portée par l\'expansion du rôle de l\'État dans l\'économie et la société. Arturo Alessandri, dans sa seconde présidence (1932-1938), stabilise le système constitutionnel et crée la Banque centrale. Pedro Aguirre Cerda (1938-1941), premier président du Frente Popular (Radicaux + Socialistes + Communistes), crée la CORFO (Corporación de Fomento de la Producción, 1939) — l\'agence de développement étatique qui lance l\'industrialisation par substitution des importations (ISI). La CORFO crée des entreprises publiques dans l\'acier (CAP), l\'électricité (ENDESA), le pétrole (ENAP), et le sucre (IANSA). La sécurité sociale, l\'éducation publique et le système de santé se développent. L\'ancienne aristocratie terrienne est intégrée au système : elle conserve ses haciendas mais perd le contrôle politique qu\'elle exerçait sous la République parlementaire. Le Parti radical — force du centre, laïque, classe moyenne — est le véhicule de cette absolutisation, exactement comme la noblesse de robe en France ou les cittadini à Venise.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1932,'end':1958,'start_approx':false,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Constitution de 1925','summary':'Le « 1er monarque absolu » chilien est institutionnel, pas personnel : c\'est la présidence forte de la Constitution de 1925, telle qu\'elle se stabilise en 1932 sous la seconde présidence d\'Arturo Alessandri. Le cadre concentre le pouvoir exécutif au-dessus des anciennes factions oligarchiques et survit à des transitions multiples entre présidents d\'idéologies très différentes.','description':'La Constitution de 1925 crée un exécutif renforcé par rapport à la Constitution de 1833 : séparation de l\'Église et de l\'État, pouvoirs budgétaires accrus pour le président, fin du système parlementaire de facto qui donnait au Congrès la préséance. Arturo Alessandri, dans sa seconde présidence (1932-1938), stabilise ce cadre après dix ans de crise (1924-1932). Il n\'est pas purement identifié avec l\'ancienne oligarchie — il est un réformiste de la classe moyenne qui a fait sa carrière en mobilisant les clientèles populaires (1920), puis s\'est recentré en gouvernant de manière plus conservatrice. Le système qu\'il stabilise est au-dessus des anciennes factions : il survivra à des présidents radicaux (Aguirre Cerda, Ríos), conservateurs (Alessandri Jr.), populistes (Ibáñez 2e), réformistes (Frei), et socialistes (Allende). Le parallèle vénitien est pertinent : comme les Inquisiteurs d\'État ne sont ni giovani ni vecchi, la présidence forte de 1925 n\'est ni conservatrice ni libérale — elle absorbe tous les courants.','figure':'Arturo Alessandri (2e présidence) / Constitution de 1925','confidence':'low','alternatives':'Carlos Ibáñez del Campo (1927-1931) — militaire, au-dessus des factions, centralise l\'État. Mais son régime ne dure que 4 ans et tombe avec la crise économique. Pedro Aguirre Cerda (1938) — Frente Popular, crée CORFO, brise l\'oligarchie. Mais il est identifié avec le centre-gauche, pas un pur « tiers ». La présidence forte de la Constitution de 1925 comme institution est la lecture la plus robuste.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1932,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'L\'État chilien atteint le sommet de son intervention dans la société. Jorge Alessandri (1958-1964) et surtout Eduardo Frei Montalva (1964-1970) projettent la puissance étatique au maximum : réforme agraire, Chileanisation du cuivre, expansion de l\'éducation et du logement, syndicalisation rurale. C\'est le pic absolutiste chilien.','description':'L\'impérialisme absolutiste chilien ne prend pas la forme de guerres extérieures (le Chili n\'est pas assez puissant pour cela) mais d\'une expansion INTÉRIEURE de l\'État — une révolution sociale menée par l\'exécutif. Eduardo Frei Montalva (1964-1970) incarne ce sommet avec sa « Révolution dans la Liberté » : la loi de réforme agraire de 1967 redistribue les haciendas aux paysans (domestication définitive de l\'aristocratie terrienne — l\'équivalent de Versailles pour la noblesse française), la Chileanisation du cuivre (l\'État prend 51% des grandes mines d\'Anaconda et Kennecott), l\'expansion massive de l\'éducation (construction de milliers d\'écoles), et la syndicalisation rurale (pour la première fois, les paysans ont le droit de se syndiquer). L\'État atteint chaque recoin de la société — mais il commence aussi à se sédimenter : les partis politiques contrôlent l\'accès aux ressources, les élites administratives se figent, et les exclus du système (extrême gauche, extrême droite) deviennent de plus en plus vocaux.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1958,'end':1970,'start_approx':true,'end_approx':true},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Pic absolutiste','subtitle':'Frei Montalva','summary':'Eduardo Frei Montalva (1964-1970) incarne le pic absolutiste chilien avec sa « Révolution dans la Liberté » : réforme agraire, Chileanisation du cuivre, expansion de l\'éducation et du logement, syndicalisation rurale. L\'État atteint le sommet de son emprise sur la société.','description':'Eduardo Frei Montalva est élu en 1964 avec le programme le plus ambitieux de l\'histoire du Chili. Sa « Révolution dans la Liberté » (Revolución en Libertad) vise à transformer la société par l\'action de l\'État, sans recourir au marxisme. La réforme agraire de 1967 redistribue les terres des grands domaines aux paysans — c\'est la domestication finale de l\'aristocratie terrienne, l\'équivalent chilien de la révocation de l\'Édit de Nantes ou de la dissolution des monastères sous Henri VIII. La Chileanisation du cuivre (1966-1969) fait entrer l\'État dans l\'industrie extractive à hauteur de 51%. L\'éducation passe de l\'Église à l\'État. La syndicalisation rurale (1967) étend le bras de l\'État aux campagnes les plus reculées. Mais dès 1967, Frei affronte l\'opposition des deux côtés : la gauche juge ses réformes insuffisantes, la droite les juge excessives. C\'est le signe de l\'entrée en Ancien Régime : le système absolutiste a atteint ses limites, les élites se sédimentent, et les exclus des deux extrêmes convergent.','figure':'Eduardo Frei Montalva','confidence':'medium','alternatives':'Salvador Allende (1970-1973) pourrait être le pic si on considère que la nationalisation totale du cuivre (1971) et les réformes radicales représentent l\'extension maximale de l\'État. Mais Allende opère déjà dans un contexte de crise et de contestation — il est plus probablement un symptôme de l\'AR qu\'un pic.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1964,'end':1970,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime (question ouverte)','subtitle':'','summary':'Le système absolutiste montre les signes classiques de l\'Ancien Régime : sédimentation des élites, surproduction élitaire, convergence des extrêmes. Le clivage gauche-droite saute : le bloc élitaire (DC + centre-droit) fait face au bloc contestataire (EG + ED). La période Allende/Pinochet (1970-1990) est la grande question ouverte du Parcours chilien : est-ce le début de la RN, ou une crise intra-absolutiste ?','description':'**Les marqueurs de l\'AR sont présents dès ~1970.** Sédimentation des élites : les partis politiques (DC, PC, PS, PN) contrôlent l\'accès aux ressources et aux postes, formant une classe politique de plus en plus fermée. Surproduction élitaire : l\'expansion universitaire des années 1960 produit plus de diplômés que le système ne peut absorber, créant une classe de jeunes éduqués frustrés — terreau des mouvements radicaux (MIR, Patria y Libertad). Le clivage gauche-droite saute : le centre-gauche (DC) et le centre-droit (PN) partagent de fait les mêmes intérêts de classe ; l\'extrême-gauche (MIR, aile dure du PS) et l\'extrême-droite (Patria y Libertad, secteurs militaires) convergent dans la contestation du système — par des voies diamétralement opposées. **L\'épisode Allende (1970-1973)** illustre la convergence contestataire : Allende est élu avec 36% des voix par une coalition étroite (Unidad Popular) qui propose de renverser l\'ordre existant. Le programme — nationalisation totale du cuivre, accélération de la réforme agraire, secteur social de l\'économie — est une attaque frontale contre le bloc élitaire. La première année produit des résultats spectaculaires (12% de croissance industrielle, 8,6% de PIB, chômage à 3,8%), mais ces résultats ne sont pas soutenables. Dès 1972, l\'inflation atteint 140%, les pénuries se multiplient, et la polarisation s\'exacerbe. **Le coup de Pinochet (11 septembre 1973)** est l\'objet de deux lectures incompatibles dans le cadre historionomique, toutes deux argumentables. **Lecture A (crise intra-absolutiste)** : Pinochet est la restauration de l\'ordre absolutiste par la force. Il restructure le système (réformes néolibérales des Chicago Boys, Constitution de 1980) mais ne change pas la nature du régime — l\'État reste dominant, l\'exécutif reste au-dessus des factions. Le retour à la démocratie (1990) restaure une version modifiée de l\'ordre absolutiste. Le Chili est encore en AR — la RN n\'a pas commencé. **Lecture B (début de la RN)** : Allende (1970) = explosion de l\'AR. Allende (1970-1973) = expérience parlementaire. 1972-1973 = phase aiguë. Pinochet = IR (figure autoritaire qui renoue avec la verticalité du pouvoir, pratique la ventilation des élites — Chicago Boys —, et mine sa propre coalition par la purge permanente). 1990 = début de la Restauration. La Glorieuse Révolution n\'a peut-être pas encore eu lieu — ou le processus constituant de 2019-2022 en est une tentative avortée. Sous cette lecture, le Chili serait en Restauration ou en phase parlementaire naissante.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1970,'end':null,'start_approx':true,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 6;
+    const BASE_TOP = 200;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Pic oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Pic absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description">${e.description}</div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

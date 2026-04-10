@@ -73,7 +73,9 @@
 
 #### Saillant : Crise féodale — post-Edgar
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 978
 - figure: Æthelred II
 - subtitle: Assassinat d'Edward
@@ -95,7 +97,9 @@
 
 #### Saillant : Crise féodale — post-Cnut
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1035
 - figure: Edward le Confesseur
 - subtitle: Fragmentation impériale
@@ -152,7 +156,9 @@
 
 #### Saillant : L'Anarchie
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1135
 - end: 1154
 - figure: Étienne de Blois
@@ -174,7 +180,9 @@
 
 #### Saillant : Crise féodale
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1205
 - figure: Jean sans Terre
 - subtitle: Magna Carta

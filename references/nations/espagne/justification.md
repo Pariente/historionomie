@@ -114,12 +114,10 @@ France et Espagne suivent la même séquence, avec ~148 ans de décalage. Le ret
 
 ## 9. Questions ouvertes
 
-1. **La DGRO est-elle identifiable ?** La chute de Barcelone (11 septembre 1714) est la dernière résistance armée des autonomistes aragonais. C'est un candidat possible, mais l'assise territoriale des oligarques est déjà détruite par Nueva Planta. La DGRO pourrait être absente (comme à Venise).
+1. **Pourquoi pas de DGRO ?** La chute de Barcelone (11 septembre 1714) est la dernière résistance armée des autonomistes aragonais, mais l'assise territoriale des oligarques est déjà détruite par Nueva Planta — ce n'est pas une révolte oligarchique, c'est une capitulation. L'absence de DGRO rappelle Venise : quand la guerre sociale est suffisamment décisive, l'oligarchie n'a plus les moyens d'une dernière révolte.
 
 2. **L'IR contraint est-il généralisable ?** Franco ne peut pas projeter sa puissance vers l'extérieur. Ce concept s'appliquerait-il à d'autres petites nations voisines de grandes puissances ?
 
 3. **Les empires coloniaux européens prolongent-ils systématiquement la phase en cours ?** Le Portugal et les Pays-Bas sont des cas comparatifs à analyser.
 
-4. **La remontrance espagnole est-elle identifiable ?** Aucun événement ponctuel ne se dégage. Le Motín de Esquilache (1766) est un candidat faible.
-
-5. **Les conflits du XVe siècle (Luna/Infants, Farsa de Ávila) sont-ils vraiment de la polarisation intra-oligarchique ?** Ils ressemblent beaucoup à une guerre sociale. L'argument pour la GSE comme vraie guerre sociale repose sur le critère d'échelle (nationale vs castillane), mais la question mérite d'être discutée.
+4. **Les conflits du XVe siècle (Luna/Infants, Farsa de Ávila) sont-ils vraiment de la polarisation intra-oligarchique ?** Ils ressemblent beaucoup à une guerre sociale. L'argument pour la GSE comme vraie guerre sociale repose sur le critère d'échelle (nationale vs castillane), mais la question mérite d'être discutée.

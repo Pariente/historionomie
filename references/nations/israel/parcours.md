@@ -154,7 +154,8 @@
 
 ### Perturbation : Choc assyrien
 - type: perturbation
-- perturbation_type: transfert
+- mechanism: choc_exogene
+- effect: prolongement
 - start: -722
 - end: -700
 - title: Choc assyrien
@@ -218,7 +219,9 @@
 
 #### Saillant : Destruction du 1er Temple
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: reboot
 - start: -586
 - subtitle: Chute de Jérusalem
 - title: Destruction du 1er Temple
@@ -228,11 +231,10 @@
 
 ### Perturbation : Exil babylonien
 - type: perturbation
-- perturbation_type: reboot
+- mechanism: choc_exogene
+- effect: reboot
 - start: -586
 - end: -520
-- reboot_from: absolutiste
-- reboot_to: oligarchique
 - title: Exil babylonien
 - summary: L'exil babylonien dure 66 ans et constitue un reboot qui fait régresser le Parcours de la phase absolutiste vers la phase oligarchique. Cependant, la préservation partielle de l'homogénéité culturelle à Babylone permet un redémarrage rapide au retour.
 - description: L'exil à Babylone s'étend de -586 à -520, soit environ 66 ans. Les institutions de l'État judéen sont entièrement détruites, ce qui impose un reboot du Parcours. Toutefois, les élites exilées à Babylone conservent une forte homogénéité culturelle : elles maintiennent leurs structures communautaires, leur identité religieuse et leurs traditions juridiques. Cette préservation culturelle est décisive, car elle permet un redémarrage rapide lorsque l'édit de Cyrus (-539) autorise le retour. Les premières vagues de retour — Sheshbatzar en -538, Zorobabel en -520 — marquent le début de la reconstruction de l'État, mais le Parcours reprend en phase oligarchique, non en phase absolutiste, car l'appareil central de Josias a été intégralement détruit.
@@ -284,7 +286,9 @@
 
 #### Saillant : Invasion macédonienne
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
 - start: -332
 - subtitle: Conquête d'Alexandre
 - title: Invasion macédonienne
@@ -482,7 +486,9 @@
 
 #### Saillant : Écrasement
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: reboot
 - start: 70
 - subtitle: Destruction du Temple
 - title: Écrasement
@@ -511,7 +517,9 @@
 
 #### Saillant : Liquidation
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 135
 - subtitle: Aelia Capitolina
 - title: Liquidation

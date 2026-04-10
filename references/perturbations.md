@@ -11,13 +11,14 @@ Le Parcours de construction nationale peut être perturbé par des événements 
 | **Avortement** | Le passage à la phase suivante est bloqué | 🔴 rouge |
 | **Reboot** | Redémarrage de la phase ou retour à une phase antérieure | 🟤 cramoisi |
 
-## Les 3 mécanismes + 1 état continu
+## Les 4 mécanismes + 1 état continu
 
 | Mécanisme | Type | Icône (frise) | Effets possibles | Exemples |
 |---|---|---|---|---|
 | **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` | Prolongement 🟠 | Habsburg 1516, Bavière 1806, hellénisation -332 |
 | **Choc exogène** | Ponctuel | `bolt` | Les 4 effets (selon ce que le choc fait) | Voir grille ci-dessous |
 | **Insuffisance interne** | Ponctuel | `close` | Avortement 🔴 | Crises féodales sans PO, absolutisation avortée (Faliero, Pierre Ier) |
+| **Correction d'échelle** | Ponctuel ou graduel | `compress` | Accélération 🔵 | Perte empire colonial espagnol (1808-1826), Portugal 1640, Utrecht 1714 |
 | **Exutoire** | **Continu** | *(pas de marqueur — implicite)* | Prolongement 🟠 | Venise Stato da Màr, colonies espagnoles, Reconquista, Reislauferei suisse |
 
 Le **choc d'hétérogénéité** ajoute de la diversité vers l'intérieur (gain territorial, afflux culturel). L'**exutoire** projette l'énergie vers l'extérieur (empire, colonies, mercenariat). Les deux produisent un prolongement mais par des voies différentes : le choc repousse le seuil d'homogénéité, l'exutoire absorbe les tensions élitaires. Ils coexistent souvent (l'héritage habsbourgeois crée à la fois l'hétérogénéité et l'exutoire).

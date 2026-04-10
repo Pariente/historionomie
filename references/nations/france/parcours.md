@@ -192,15 +192,15 @@
 - description: Cette perturbation est qualitativement différente du premier reflux (Crécy-Poitiers). Le premier reflux ralentissait l'essor sans toucher au pacte — les institutions survivaient intactes. Ici, trois mécanismes convergent pour détruire les fondements mêmes de la phase oligarchique. Premièrement, la folie de Charles VI (1392) crée un vide de pouvoir qui déchaîne la guerre civile Armagnacs-Bourguignons — purges croisées, assassinats politiques (Jean sans Peur, 1419), éclatement territorial, politisation populaire — détruisant les institutions centrales par l'intérieur. Deuxièmement, Azincourt (25 octobre 1415) fauche la noblesse du Nord : trois ducs (Alençon, Bar, Brabant), neuf comtes, le connétable d'Albret, l'amiral, le maître des arbalétriers Rambures (tué avec ses trois fils), les baillis de neuf grandes villes — des lignages entiers sont éteints, et c'est toute l'ossature administrative et seigneuriale de la Neustrie qui est pulvérisée en une journée. Troisièmement, le Traité de Troyes (1420), ratifié par les États généraux et le Parlement de Paris sous contrôle bourguignon, annule explicitement la loi salique en transférant la couronne à Henri V d'Angleterre. Les institutions oligarchiques détruisent leur propre pacte fondateur. C'est un reboot au sens technique : les institutions sont détruites, les élites sont purgées, le PO n'existe plus — tout est à refaire.
 - affected_motor: Construction de l'État central (destruction des institutions + destruction du PO + élimination des élites)
 
-#### Saillant : Reboot — Traité de Troyes
+#### Saillant : Traité de Troyes
 - type: saillant
 - perturbation: true
 - mechanism: choc_exogene
 - effect: reboot
 - start: 1420
 - figure: Charles VI
-- subtitle: Traité de Troyes
-- title: Reboot
+- subtitle: Effondrement Valois
+- title: Traité de Troyes
 - confidence: high
 - summary: Le Traité de Troyes (21 mai 1420) annule la loi salique de 1317 en transférant la couronne de France à Henri V d'Angleterre, détruisant le pacte oligarchique qui fondait la phase.
 - description: Le Traité de Troyes, signé le 21 mai 1420, déshérite le Dauphin Charles et transfère la couronne à Henri V d'Angleterre par le mariage avec Catherine de Valois. Il est ratifié par les États généraux et le Parlement de Paris sous contrôle bourguignon — ce sont les institutions oligarchiques elles-mêmes qui détruisent leur propre pacte fondateur. La loi salique de 1317, qui codifiait les règles de succession adoptées collectivement par les élites, est explicitement renversée par les pairs de France. C'est la destruction formelle du pacte oligarchique. La phase est avortée — elle n'a jamais dépassé l'essor.

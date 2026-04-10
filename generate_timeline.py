@@ -223,6 +223,10 @@ def parse_element(heading: str, body_lines: list) -> dict:
         "resolution": fields.get("resolution", ""),
         "resolution_conditions": fields.get("resolution_conditions", ""),
         "avortement": fields.get("avortement", ""),
+        # New perturbation fields
+        "perturbation": fields.get("perturbation", ""),
+        "mechanism": fields.get("mechanism", ""),
+        "effect": fields.get("effect", ""),
     }
 
 
@@ -269,11 +273,27 @@ SAILLANT_ICONS = {
     "Réduction d'échelle": "compress",
     "Magna Carta": "description",
     "Remontrance": "record_voice_over",
+    "Crise féodale": "swords",
     "Choc d'hétérogénéité": "group_add",
     "Accélérateur": "fast_forward",
 }
 SAILLANT_ICON_DEFAULT = "diamond"
-SAILLANT_ICON_AVORTEMENT = "cancel"
+SAILLANT_ICON_AVORTEMENT = "cancel"  # legacy, used as fallback
+
+# New perturbation system: mechanism → icon, effect → color
+PERTURBATION_EFFECT_COLORS = {
+    "prolongement": "#E67E22",   # orange
+    "acceleration": "#2980B9",   # blue
+    "avortement": "#c0392b",     # red
+    "reboot": "#8B0000",         # dark red / crimson
+}
+
+PERTURBATION_MECHANISM_ICONS = {
+    "choc_heterogeneite": "open_in_full",
+    "choc_exogene": "bolt",
+    "insuffisance_interne": "close",
+    "correction_echelle": "compress",
+}
 
 PHASE_LABELS = {
     "prefeodale": "Pré-féodale",
@@ -568,19 +588,30 @@ def generate_html(data: dict) -> str:
         tooltip_label = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else s["title"])
         start_label = format_year(s["start"], s["start_approx"])
 
-        is_avortement = s.get("avortement") == "true"
-        avortement_class = " avortement" if is_avortement else ""
-        if is_avortement:
-            icon_name = SAILLANT_ICON_AVORTEMENT
+        is_perturbation = s.get("perturbation") == "true" or s.get("avortement") == "true"
+        mechanism = s.get("mechanism", "")
+        effect = s.get("effect", "")
+
+        if is_perturbation:
+            # New system: color from effect, icon from mechanism (with reboot override)
+            bg_color = PERTURBATION_EFFECT_COLORS.get(effect, "#c0392b")
+            if effect == "reboot":
+                icon_name = "restart_alt"
+            else:
+                icon_name = PERTURBATION_MECHANISM_ICONS.get(mechanism, SAILLANT_ICON_AVORTEMENT)
+            marker_class = " perturbation-marker"
         else:
+            bg_color = color
             icon_name = SAILLANT_ICONS.get(s["title"], SAILLANT_ICON_DEFAULT)
-        bg_color = "#c0392b" if is_avortement else color
+            marker_class = ""
+
+        icon_class = 'material-symbols-outlined' if icon_name in ('crown', 'skull', 'swords') else 'material-icons'
         saillant_markers_html += f"""
         <div class="saillant-group" style="left:{left_pct:.4f}%;">
-            <div class="saillant-marker{avortement_class}" style="background:{bg_color};"
+            <div class="saillant-marker{marker_class}" style="background:{bg_color};"
                 data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html(s['summary'])}"
                 onclick="showDetail({elements.index(s)})">
-                <span class="{'material-symbols-outlined' if icon_name in ('crown', 'skull') else 'material-icons'}">{icon_name}</span>
+                <span class="{icon_class}">{icon_name}</span>
             </div>
             <div class="saillant-label"><span class="saillant-title">{escape_html(s['title'])}</span><span class="saillant-figure">{escape_html(frise_subtitle)}</span><span class="saillant-date">{start_label}</span></div>
         </div>"""
@@ -758,6 +789,9 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .saillant-label .saillant-figure {{ font-size:0.6rem; color:#666; display:block; }}
 .saillant-label .saillant-date {{ font-size:0.55rem; color:#999; display:block; font-weight:600; }}
 .saillant-marker.avortement {{ background:#c0392b !important; }}
+.saillant-marker.perturbation-marker {{ width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }}
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined {{ transform:rotate(-45deg); font-size:10px; }}
 .saillant-marker.selected {{ box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }}
 
 /* Tooltip */
@@ -891,8 +925,11 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 <div class="legend">
     <span class="legend-title">Phases :</span>
     {"".join(f'<span class="legend-item"><span class="legend-swatch" style="background:{very_light_hex(c)};border:2px solid {c};"></span>{PHASE_LABELS.get(k, k)}</span>' for k, c in PHASE_COLORS.items())}
-    <span class="legend-item"><span class="legend-diamond"><span class="material-icons" style="font-size:10px;color:#fff;">terrain</span></span>Saillant</span>
-    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;"><span class="material-icons" style="font-size:10px;color:#fff;">cancel</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>

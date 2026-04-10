@@ -128,6 +128,9 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 .saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
 .saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
 .saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
 .saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
 
 /* Tooltip */
@@ -182,7 +185,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 /* Figure card */
 .detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
     border-radius:10px; padding:0.8rem 1rem; }
-.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; object-position:top; flex-shrink:0;
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
     }
 .detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
     display:flex; align-items:center; justify-content:center; flex-shrink:0; }
@@ -423,7 +426,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Crise ville-campagne (1477)&#10;Après les Guerres de Bourgogne, le partage du butin et l&#39;admission de nouveaux cantons urbains (Fribourg, Soleure) déclenchent une crise profonde entre cantons urbains et ruraux qui menace l&#39;existence même de la Confédération."
                 onclick="showDetail(7)">
-                <span class="material-icons">bolt</span>
+                <span class="material-symbols-outlined">swords</span>
             </div>
             <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Crise ville-campagne</span><span class="saillant-date">1477</span></div>
         </div>
@@ -545,8 +548,11 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 <div class="legend">
     <span class="legend-title">Phases :</span>
     <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
-    <span class="legend-item"><span class="legend-diamond"><span class="material-icons" style="font-size:10px;color:#fff;">terrain</span></span>Saillant</span>
-    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;"><span class="material-icons" style="font-size:10px;color:#fff;">cancel</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -557,7 +563,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 </div>
 
 <div class="footer">
-    Généré par le skill Historionomie — 10/04/2026
+    Généré par le skill Historionomie — 11/04/2026
 </div>
 
 <script>
@@ -745,6 +751,7 @@ function showDetail(idx) {
         'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
         'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
         'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
         'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
         'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
         'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',

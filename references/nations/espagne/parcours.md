@@ -8,12 +8,10 @@
 - status: proposition
 - subtitle: ¡Heil, Pepito!
 - confidence: medium
-- highlight_1: La Reconquista prolonge la féodale, l'empire colonial prolonge l'oligarchique | L'expansion prolonge toujours la phase en cours. La Reconquista prolonge la phase féodale (~134 ans). L'empire colonial et le choc habsbourgeois prolongent la phase oligarchique (~145 ans). C'est le même mécanisme que l'expansion vénitienne — l'Espagne est la Venise de l'Atlantique | https://commons.wikimedia.org/wiki/Special:FilePath/Las_Navas_de_Tolosa.jpg?width=120 | feodale
-- highlight_2: La Guerre de Succession d'Espagne = la guerre sociale | Le conflit qui résout la phase oligarchique n'est PAS la guerre civile castillane du XVe siècle — c'est la GSE (1700-1714), qui oppose les élites centralisatrices castillanes (prébendière) aux élites autonomistes aragonaises (patrimoniale) à l'échelle nationale. Philippe V, prince français (tiers extérieur), résout le conflit par les décrets de Nueva Planta | https://commons.wikimedia.org/wiki/Special:FilePath/Philip_V_of_Spain.jpg?width=120 | oligarchique
-- highlight_3: Les Rois Catholiques : pic oligarchique, pas 1er monarque absolu | Isabelle et Ferdinand sont immensément puissants mais opèrent DANS le cadre de la monarchie composite — les fueros aragonais sont intacts. Le test discriminant absolutiste n'est passé à l'échelle nationale qu'après Nueva Planta (1716). Les Rois Catholiques sont l'analogue de François Ier en France — pic de puissance oligarchique, pas début de l'absolutisme | https://commons.wikimedia.org/wiki/Special:FilePath/Isabel_la_Católica-2.jpg?width=120 | oligarchique
-- highlight_4: Un IR contraint, une RN de 47 ans | La RN commence en 1931 (chute de la monarchie), pas en 1808. Franco est un IR contraint (incapable de se projeter vers l'extérieur) qui sert aussi de longue Restauration. La Transition démocratique (1978) est la Glorieuse Révolution. Durée : ~47 ans — dans la norme | https://commons.wikimedia.org/wiki/Special:FilePath/Constitución_española_de_1978.JPG?width=120 | rn
-- question_1: Les conflits du XVe siècle (Luna vs Infants, Farsa de Ávila) — polarisation intra-oligarchique ou guerre sociale ? | L'hypothèse retenue (polarisation intra-oligarchique) repose sur le fait que la guerre sociale doit se jouer à l'échelle NATIONALE. Les conflits du XVe siècle sont castillans. La GSE (1700-1714) est espagnole. Mais les conflits castillans ressemblent beaucoup à une guerre sociale — l'identification mérite discussion.
-- question_2: L'IR contraint est-il généralisable ? | Franco ne peut pas projeter sa puissance vers l'extérieur et cumule IR + Restauration. Ce concept s'appliquerait-il à d'autres petites nations voisines de grandes puissances ?
+- highlight_1: La Reconquista prolonge la phase féodale | L'expansion continue de la Reconquista (~1035-1262) joue pour la féodale castillane le même rôle que l'expansion maritime pour Venise : un exutoire extérieur qui retarde la cristallisation du pacte. La phase féodale dure 334 ans au lieu de 200 — prolongée par la Reconquista et les boucles Castille-León | https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg/3840px-La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg | feodale
+- highlight_2: L'héritage habsbourgeois et l'empire colonial prolongent la phase oligarchique | Le choc d'hétérogénéité habsbourgeois (1516) explose l'échelle de la polité. L'empire colonial fournit un exutoire massif. Ensemble, ils prolongent la phase oligarchique de ~145 ans — le même mécanisme que l'expansion maritime vénitienne. L'Espagne est la Venise de l'Atlantique | https://commons.wikimedia.org/wiki/Special:FilePath/Philip_V_of_Spain.jpg?width=120 | oligarchique
+- highlight_3: Un IR contraint, une RN de 47 ans | La RN commence en 1931 (chute de la monarchie), pas en 1808. Franco est un IR contraint (incapable de se projeter vers l'extérieur) qui sert aussi de longue Restauration. La Transition démocratique (1978) est la Glorieuse Révolution. Durée : ~47 ans — dans la norme | https://upload.wikimedia.org/wikipedia/commons/c/cf/RETRATO_DEL_GRAL._FRANCISCO_FRANCO_BAHAMONDE_%28adjusted_levels%29.jpg | rn
+- question_1: Pourquoi pas de DGRO ? | La chute de Barcelone (1714) est la dernière résistance armée des autonomistes aragonais, mais l'assise territoriale des oligarques est déjà détruite par Nueva Planta — c'est une capitulation, pas une révolte oligarchique. L'absence de DGRO rappelle Venise : quand la guerre sociale est suffisamment décisive, l'oligarchie n'a plus les moyens d'une dernière révolte.
 
 ---
 
@@ -49,7 +47,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - type: phase
 - phase: feodale
 - start: ~1035
-- end: ~1369
+- end: 1369
 - title: Phase féodale
 - typical_duration: ~200 ans
 - actual_duration: ~334 ans
@@ -59,11 +57,11 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - description: La phase présente deux caractéristiques distinctives. D'une part, l'oscillation Castille-León — chaque roi fort unifie les deux couronnes, puis le système se fragmente à sa mort (Ferdinand Ier divise en 1065, Alphonse VII divise en 1157). Ce sont des boucles féodales : l'échelle augmente au-delà du seuil d'homogénéité, le pacte est impossible, l'entité se scinde. D'autre part, la Reconquista fournit un exutoire permanent : les élites investissent leur énergie dans la conquête. L'union définitive (Ferdinand III, 1230) et la fin de la grande Reconquista (~1262) stabilisent l'échelle, mais il faut encore ~100 ans pour que l'homogénéité mûrisse. Pierre Ier (1350-1369) tente de centraliser en s'appuyant sur le peuple et les juifs contre l'oligarchie — c'est un Faliero castillan. Son renversement par Henri de Trastámara ouvre le pacte.
 - deviation: +134 ans par rapport à la norme (~200 ans). Reconquista (~100 ans) + deux boucles Castille-León (~80 ans cumulées de séparation).
 
-### Subphase : Coagulation des élites (1035-1369)
+### Subphase : Coagulation des élites (1035-1350)
 - type: subphase
 - phase: feodale
 - start: ~1035
-- end: ~1369
+- end: 1350
 - title: Coagulation des élites
 - summary: De Ferdinand Ier au règlement trastámara. Six pics féodaux, deux boucles (1065, 1157), la Reconquista comme accélérateur culturel et retardateur politique. La crise d'Alphonse X (1282) est avortée (pas de codification). Pierre Ier (1350-1369) est le dernier pic féodal autoritaire.
 
@@ -80,7 +78,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~1085
+- start: 1085
 - figure: Alphonse VI
 - subtitle: Alphonse VI — Tolède
 - title: Pic féodal
@@ -89,7 +87,9 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 
 #### Saillant : Crise féodale — Division de 1157
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1157
 - figure: Alphonse VII
 - subtitle: Division de 1157
@@ -99,8 +99,8 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~1230
-- end: ~1252
+- start: 1230
+- end: 1252
 - figure: Ferdinand III
 - subtitle: Ferdinand III — Union définitive
 - title: Pic féodal
@@ -118,7 +118,9 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 
 #### Saillant : Crise féodale — 1282 (avortée)
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1282
 - figure: Sanche IV
 - subtitle: Rébellion de Sanche
@@ -128,7 +130,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 
 #### Saillant : Pic féodal
 - type: saillant
-- start: ~1340
+- start: 1340
 - figure: Alphonse XI
 - subtitle: Alphonse XI
 - title: Pic féodal
@@ -145,6 +147,14 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - confidence: high
 - summary: Pierre Ier « le Cruel » (1350-1369) tente de centraliser en s'appuyant sur le peuple et la communauté juive contre la noblesse — un Faliero castillan. L'oligarchie, menée par Henri de Trastámara et soutenue par la France (du Guesclin), le renverse et le tue à Montiel (1369). La crise produit le pacte : Henri II, usurpateur, doit négocier.
 
+### Subphase : Bascule oligarchique (1350-1371)
+- type: subphase
+- phase: feodale
+- start: 1350
+- end: 1371
+- title: Bascule oligarchique
+- summary: Pierre Ier (1350-1369) tente de centraliser — c'est un Faliero castillan. Son renversement par Henri de Trastámara (1369) ouvre la négociation du cadre légal : mercedes enriqueñas, Cortès de Toro (1371, Audiencia permanente), nouveau principe de succession.
+
 #### Saillant : Pacte oligarchique
 - type: saillant
 - start: 1369
@@ -160,8 +170,8 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 ## Phase : Oligarchique
 - type: phase
 - phase: oligarchique
-- start: ~1369
-- end: ~1714
+- start: 1369
+- end: 1714
 - title: Phase oligarchique
 - typical_duration: ~200 ans
 - actual_duration: ~345 ans
@@ -171,13 +181,13 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - description: **Test discriminant (oligarchique vs absolutiste)** : l'administration centrale N'A PAS préséance sur les administrations locales avant 1716. Les Cortès d'Aragon, de Catalogne et de Valence conservent leurs pouvoirs, monnaie, droit et douanes. Philippe II lui-même ne peut pas toucher les fueros aragonais (il choisit de ne pas les abolir après la révolte de 1591). Les Rois Catholiques absolutisent la Castille mais PAS l'Espagne. Le test n'est passé qu'après les décrets de Nueva Planta (1716). **Le prolongement par l'expansion** est le trait structurel dominant. Trois exutoires se cumulent : (1) la fin de la Reconquista (Grenade 1492) absorbe les tensions pendant l'essor ; (2) l'empire colonial fournit revenus, carrières et focus extérieur ; (3) l'empire habsbourgeois européen (Pays-Bas, Italie, Saint-Empire) absorbe l'énergie impériale. Tant que les exutoires fonctionnent, la polarisation interne ne peut pas atteindre le point de rupture.
 - deviation: +145 ans par rapport à la norme (~200 ans). Prolongement par expansion (Reconquista, empire colonial, empire habsbourgeois). Comparable à Venise (+437 ans de prolongement par expansion maritime).
 
-### Subphase : Essor oligarchique (1369-~1588)
+### Subphase : Essor oligarchique (1369-~1640)
 - type: subphase
 - phase: oligarchique
-- start: ~1369
-- end: ~1588
+- start: 1369
+- end: 1640
 - title: Essor oligarchique
-- summary: D'Henri II à l'Armada. L'appareil d'État se consolide rapidement : Audiencia (1371), Consejo Real (1385), alcabala permanente (1393), corregidores (~1393). Les Rois Catholiques (~1492) portent la puissance à son maximum (letrados, Inquisition, conquête de Grenade, découverte de l'Amérique) — pic oligarchique. Le choc d'hétérogénéité habsbourgeois (1516) explose l'échelle, mais l'expansion (colonies, guerres européennes) fournit un exutoire formidable qui prolonge l'essor, exactement comme l'expansion maritime prolonge l'essor oligarchique vénitien. Philippe II (~1580) porte l'empire à son apogée mais opère toujours dans la monarchie composite (fueros aragonais intacts). L'Armada (1588) marque la fin de l'expansion et le tournant vers la polarisation.
+- summary: D'Henri II aux révoltes de 1640. L'appareil d'État se consolide : Audiencia (1371), Consejo Real (1385), alcabala permanente (1393), corregidores (~1393). Les Rois Catholiques (~1492) portent la puissance à son maximum — pic oligarchique. Le choc d'hétérogénéité habsbourgeois (1516) explose l'échelle, l'expansion (colonies, guerres européennes) fournit un exutoire qui prolonge l'essor. Philippe II (~1580) porte l'empire à son apogée mais opère toujours dans la monarchie composite. L'Armada (1588) marque la fin de l'expansion offensive, mais l'exutoire continue (gestion défensive de l'empire). La polarisation ne se cristallise qu'avec les révoltes de 1640.
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
@@ -188,22 +198,37 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - confidence: medium
 - summary: Henri II (r. 1369-1379) est le premier roi qui règne sous le cadre du pacte trastámara. Ses successeurs (Jean Ier, Henri III) consolident les institutions : Consejo Real (1385), alcabala permanente (1393), corregidores.
 
+#### Saillant : Union Castille-Aragon
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1479
+- subtitle: Ferdinand & Isabelle
+- title: Union Castille-Aragon
+- confidence: high
+- summary: L'union des couronnes de Castille et d'Aragon (1479) change l'échelle du Parcours : de la Castille seule à l'Espagne (Castille + Aragon + Catalogne + Valence + Majorque). C'est un choc d'hétérogénéité qui repousse le seuil d'homogénéité — les fueros aragonais, les Cortès catalanes, le droit valencien ajoutent une diversité institutionnelle massive. C'est précisément ce choc qui empêche les Rois Catholiques d'être absolutistes à l'échelle nationale : ils absolutisent la Castille mais PAS l'Aragon.
+- description: L'union des couronnes est le moment où le Parcours change d'échelle. Avant 1479, le Parcours est castillan. Après 1479, il est espagnol — mais l'Espagne est une monarchie composite où chaque couronne conserve ses institutions. Le test discriminant absolutiste (l'administration centrale a préséance sur TOUTES les administrations locales) ne peut pas être passé à cette nouvelle échelle tant que les fueros existent. L'absolutisation est repoussée de 237 ans (de 1479 à 1716). C'est exactement le mécanisme de l'accroissement d'échelle décrit dans le cadre : quand l'échelle augmente, le seuil d'homogénéité remonte.
+
 #### Saillant : Pic oligarchique
 - type: saillant
-- start: ~1492
+- start: 1492
 - figure: Isabelle Ière et Ferdinand V
 - subtitle: Rois Catholiques
 - title: Pic oligarchique
 - confidence: medium
-- alternatives: Philippe II (~1580) — extension territoriale maximale, Siècle d'Or. Mais Philippe II opère APRÈS le choc d'hétérogénéité habsbourgeois (1516), dans une phase d'expansion qui dilue la puissance « nationale ». Les Rois Catholiques représentent le maximum de la puissance ESPAGNOLE dans le cadre oligarchique. Álvaro de Luna (~1440) est un candidat alternatif pour un pic castillan antérieur.
+- alternatives: Philippe II (~1580) — extension territoriale maximale, Siècle d'Or. Mais Philippe II opère APRÈS le choc d'hétérogénéité habsbourgeois (1516), dans une phase d'expansion qui dilue la puissance « nationale ». Les Rois Catholiques représentent le maximum de la puissance ESPAGNOLE dans le cadre oligarchique.
 - summary: Les Rois Catholiques (Isabelle de Castille, r. 1474-1504, et Ferdinand d'Aragon, r. 1479-1516) sont le pic oligarchique espagnol — la figure exécutive la plus puissante dans le cadre de la monarchie composite. Letrados au Consejo Real, corregidores dans chaque ville, ordres militaires incorporés, Inquisition sous contrôle royal, conquête de Grenade (1492), découverte de l'Amérique. Mais les fueros aragonais restent intacts — le test absolutiste n'est PAS passé.
 - description: Les Rois Catholiques sont structurellement analogues à François Ier en France (pic oligarchique français, ~1515) : immensément puissants, ils renforcent massivement l'État central mais opèrent dans le cadre oligarchique. François Ier a le Concordat de Bologne et les guerres d'Italie, mais le Parlement de Paris conserve ses prérogatives. Les Rois Catholiques ont les letrados et l'Inquisition, mais les Cortès d'Aragon conservent les leurs. Dans les deux cas, le pic est suivi d'un reflux et d'une polarisation croissante. En France, les Guerres de Religion. En Espagne, les tensions Castille-Aragon sous les Habsbourg.
 
-#### Saillant : Choc d'hétérogénéité — héritage habsbourgeois
+#### Saillant : Héritage habsbourgeois
 - type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
 - start: 1516
-- subtitle: Héritage habsbourgeois
-- title: Choc d'hétérogénéité
+- subtitle: Charles Quint
+- title: Héritage habsbourgeois
 - confidence: high
 - summary: En 1516, Charles Quint hérite de la Castille + Aragon + Pays-Bas + Lombardie + Naples/Sicile + Amériques. En 1519, il est élu empereur. L'échelle de la polité explose. C'est un choc d'hétérogénéité massif, analogue au doublement napoléonien bavarois (1806), qui prolonge la phase oligarchique en repoussant le seuil d'homogénéité. Les corrections d'échelle progressives (1556, 1640, 1648, 1714) ramènent lentement l'Espagne vers son échelle naturelle.
 - description: L'héritage habsbourgeois est le choc d'hétérogénéité le plus massif du corpus. Charles gouverne simultanément Castillans, Aragonais, Catalans, Flamands, Lombards, Napolitains, Amérindiens, et (comme empereur) Allemands et Autrichiens. L'expansion prolonge la phase oligarchique en cours en fournissant des exutoires massifs : l'argent américain finance l'État sans taxation intérieure, les guerres européennes absorbent l'énergie des élites, l'administration coloniale offre des carrières. Les corrections d'échelle (partition habsbourgeoise 1556, perte du Portugal 1640, perte des Pays-Bas 1648, Utrecht 1714) ramènent lentement l'Espagne vers sa taille naturelle. Chaque correction ACCÉLÈRE le Parcours.
@@ -216,22 +241,47 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - confidence: high
 - summary: La défaite de l'Armada (1588) marque le tournant de l'impérialisme habsbourgeois. Les guerres deviennent défensives. Les corrections d'échelle s'accélèrent (Portugal 1640, Pays-Bas 1648, Utrecht 1714). La polarisation interne peut se développer.
 
-### Subphase : Polarisation des élites (~1588-1700)
+### Subphase : Polarisation des élites (~1640-1700)
 - type: subphase
 - phase: oligarchique
-- start: ~1588
-- end: ~1700
+- start: 1640
+- end: 1700
 - title: Polarisation des élites
 - summary: Après les révoltes de 1640 (Catalogne, Portugal), la polarisation entre les deux modèles d'organisation de l'État devient la question centrale. Les élites castillanes (centralisatrices, dépendantes de l'État central = prébendières) s'opposent aux élites aragonaises/catalanes (autonomistes, fondées sur les fueros = patrimoniales). L'affrontement est structurel : la question est de savoir si l'Espagne sera un État centralisé (modèle castillan/français) ou une monarchie composite (modèle habsbourgeois/aragonais).
 - description: La polarisation espagnole se cristallise autour de la tentative d'Olivares (1620s-1630s) d'imposer la Union de Armas — un programme explicite de centralisation forçant les royaumes d'Aragon, de Catalogne et de Valence à contribuer aux guerres de l'empire au même titre que la Castille. C'est l'affrontement prébendière/patrimoniale au niveau national : les élites castillanes (dont le pouvoir dépend de l'administration centrale) veulent la centralisation ; les élites aragonaises/catalanes (dont le pouvoir repose sur les fueros) la refusent. L'échec d'Olivares provoque les révoltes de 1640 : la Catalogne se soumet temporairement à la France (1640-1659), le Portugal fait sécession définitivement (correction d'échelle). La polarisation se résout par la guerre de succession.
 
-#### Saillant : Corrections d'échelle
+#### Saillant : Sécession du Portugal
 - type: saillant
+- perturbation: true
+- mechanism: choc_exogene
+- effect: acceleration
 - start: 1640
-- subtitle: Portugal + Catalogne
-- title: Corrections d'échelle
+- subtitle: Jean IV
+- title: Sécession du Portugal
 - confidence: high
-- summary: En 1640, le Portugal fait sécession (définitive) et la Catalogne se soumet temporairement à la France (1640-1659). Ce sont des corrections d'échelle : les morceaux trop hétérogènes se détachent, ramenant l'Espagne vers sa taille naturelle. Le Portugal est perdu définitivement — correction d'échelle analogue à la perte de la Normandie par les Plantagenêt (1204).
+- summary: En 1640, le Portugal fait sécession définitive. La Catalogne se soumet temporairement à la France (1640-1659). Ce sont des corrections d'échelle : les morceaux trop hétérogènes se détachent. Le Portugal est perdu définitivement — analogue à la perte de la Normandie par les Plantagenêt (1204).
+
+#### Saillant : Traité de Westphalie
+- type: saillant
+- perturbation: true
+- mechanism: choc_exogene
+- effect: acceleration
+- start: 1648
+- subtitle: Perte des Pays-Bas
+- title: Traité de Westphalie
+- confidence: high
+- summary: Le Traité de Westphalie (1648) reconnaît formellement l'indépendance des Provinces-Unies. Les Pays-Bas espagnols du nord sont définitivement perdus. L'Espagne se rapproche de son échelle naturelle.
+
+#### Saillant : Traité d'Utrecht
+- type: saillant
+- perturbation: true
+- mechanism: choc_exogene
+- effect: acceleration
+- start: 1714
+- subtitle: Perte des possessions européennes
+- title: Traité d'Utrecht
+- confidence: high
+- summary: Le Traité d'Utrecht (1713-1714) dépouille l'Espagne de TOUTES ses possessions européennes hors péninsule : Pays-Bas espagnols, Naples, Milan, Sardaigne, Sicile → Autriche/Savoie ; Gibraltar, Minorque → Angleterre. C'est la correction d'échelle décisive — l'Espagne est enfin ramenée à la péninsule ibérique. Les décrets de Nueva Planta (1707-1716) achèvent l'absolutisation dans la foulée.
 
 ### Subphase : Guerre sociale (1700-1714)
 - type: subphase
@@ -256,7 +306,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 ## Phase : Absolutiste
 - type: phase
 - phase: absolutiste
-- start: ~1714
+- start: 1714
 - end: 1931
 - title: Phase absolutiste
 - typical_duration: ~200 ans
@@ -270,7 +320,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 ### Subphase : Absolutisation (~1714-~1770)
 - type: subphase
 - phase: absolutiste
-- start: ~1714
+- start: 1714
 - end: ~1770
 - title: Absolutisation
 - summary: Philippe V (1700-1746) impose le modèle centralisé français : intendants, secrétaires d'État, droit castillan sur tout le territoire. Ferdinand VI (1746-1759) consolide. Pas de DGRO identifiable — les oligarques aragonais/catalans n'ont plus d'assise territoriale après Nueva Planta, exactement comme les patriciens vénitiens n'ont pas de seigneuries depuis lesquelles résister. L'absolutisation est « fluide » (comme à Venise).
@@ -289,7 +339,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - type: subphase
 - phase: absolutiste
 - start: ~1770
-- end: ~1874
+- end: 1874
 - title: Impérialisme absolutiste
 - summary: Charles III (~1770) est le pic absolutiste — réformes bourboniennes, expulsion des Jésuites, domestication complète des élites. L'empire colonial prolonge l'impérialisme. La perte des colonies américaines (1808-1826) accélère le déclin. La Gloriosa (1868) est la remontrance — elle échoue et son échec (Restauration, 1874) marque l'entrée en AR.
 
@@ -301,6 +351,17 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - title: Pic absolutiste
 - confidence: high
 - summary: Charles III (r. 1759-1788) incarne le sommet de l'absolutisme espagnol. Réformes bourboniennes complètes, expulsion des Jésuites (1767), libre commerce colonial (1778), domestication des élites (Aranda, Campomanes, Floridablanca). Premier monarque véritablement absolu sur tout le territoire et au sommet de sa maîtrise administrative.
+
+### Perturbation : Perte de l'empire colonial américain (1808-1826)
+- type: perturbation
+- mechanism: correction_echelle
+- effect: acceleration
+- start: 1808
+- end: 1826
+- title: Perte de l'empire colonial américain
+- summary: Les colonies américaines profitent du chaos napoléonien pour faire sécession (1808-1826). L'exutoire colonial qui prolongeait la phase absolutiste est détruit de manière irréversible. Cuba et les Philippines restent comme exutoire résiduel (jusqu'en 1898). La perte ramène l'Espagne vers son échelle naturelle et accélère le Parcours — même mécanisme que les corrections d'échelle de la phase oligarchique (Portugal 1640, Pays-Bas 1648, Utrecht 1714).
+- description: La correction d'échelle est le mécanisme central. L'empire colonial américain fonctionnait comme exutoire continu pour la phase absolutiste : revenus (argent), carrières (administration coloniale), débouché pour les élites. Sa perte entre 1808 et 1826 ramène brutalement l'Espagne à son échelle ibérique. Le déclencheur est exogène (invasion napoléonienne), mais l'effet structurel est une correction d'échelle : l'Espagne perd un territoire qui maintenait artificiellement la phase en cours. Le contraste avec Milan est éclairant : à Milan, Napoléon modernise l'administration (accélération par modernisation). En Espagne, Ferdinand VII restaure l'ancien système à l'identique — l'accélération vient exclusivement de la perte de l'exutoire.
+- affected_motor: Construction de l'État central (exutoire colonial détruit)
 
 #### Saillant : Remontrance
 - type: saillant
@@ -323,7 +384,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 ### Subphase : Ancien Régime (~1874-1931)
 - type: subphase
 - phase: absolutiste
-- start: ~1874
+- start: 1874
 - end: 1931
 - title: Ancien Régime
 - summary: L'AR commence avec la Restauration (1874), après l'échec de la remontrance (La Gloriosa). Le turno pacífico de Cánovas est le système d'AR — pseudo-parlementaire, exclusionnaire, élections manipulées. Le Désastre de 1898 (perte de Cuba, Philippines) élimine le dernier exutoire colonial et accélère la sclérose. Primo de Rivera (1923-1930) échoue à sauver le régime. L'explosion survient en 1931. Durée : ~57 ans — dans la norme (35-100 ans).
@@ -357,7 +418,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - type: saillant
 - start: 1931
 - subtitle: Chute de la monarchie
-- title: Explosion de l'Ancien Régime
+- title: Explosion de l'AR
 - confidence: high
 - summary: En avril 1931, les élections municipales révèlent un soutien massif aux républicains. Alphonse XIII part en exil. La Seconde République est proclamée le 14 avril.
 

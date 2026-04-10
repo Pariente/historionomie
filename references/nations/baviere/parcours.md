@@ -73,7 +73,9 @@
 
 #### Saillant : Crise féodale — partition de 1349
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1349
 - figure:
 - subtitle: Partition de 1349
@@ -84,7 +86,9 @@
 
 #### Saillant : Crise féodale — partition de 1392
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1392
 - figure:
 - subtitle: Partition de 1392
@@ -272,23 +276,26 @@
 - summary: Charles-Théodore (1777-1799), impopulaire et étranger au pays, ouvre un premier Ancien Régime : sclérose, stratification sociale, perte de dynamisme. Mais le doublement napoléonien du territoire (1806) avorte cet AR en hétérogénéisant la société et en relançant un second cycle d'impérialisme.
 - description: La mort sans enfant de Maximilien III Joseph (1777) provoque la crise de succession bavaroise. Charles-Théodore, électeur palatin, hérite mais n'a aucune attache avec la Bavière et tente à plusieurs reprises de l'échanger contre les Pays-Bas autrichiens. Les symptômes d'AR apparaissent : perte de dynamisme, stratification des élites, sédimentation des rentes. Mais cet AR n'atteint pas sa maturité — il est avorté par le prolongement napoléonien de 1806.
 
-#### Saillant : Choc d'hétérogénéité — doublement napoléonien du territoire
+#### Saillant : Doublement napoléonien
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: avortement
 - start: 1806
 - figure:
-- subtitle: Doublement du territoire
-- title: Choc d'hétérogénéité
+- subtitle: Paix de Presbourg
+- title: Doublement napoléonien
 - confidence: high
 - summary: En 1806, Napoléon double le territoire bavarois (Franconie, Souabe), hétérogénéisant brutalement la société et défaisant la stratification pré-AR. Un second cycle d'impérialisme absolutiste commence.
 - description: Le doublement du territoire (traité de Presbourg 1805, Confédération du Rhin 1806) est un événement sans équivalent dans les parcours connus : une expansion massive octroyée par une puissance extérieure qui reboot la sous-phase d'impérialisme absolutiste en plein AR. L'intégration de la Franconie (protestante) et de la Souabe dans un État catholique bavarois hétérogénéise la société — ralentissant le moteur culturel et défaisant la stratification qui s'installait. L'AR ne peut plus progresser vers son explosion : la société est redevenue trop hétérogène. L'État doit se projeter à nouveau (vers l'intérieur cette fois) pour intégrer les nouveaux territoires. C'est le mécanisme déclencheur du prolongement — structurellement analogue à la conquête macédonienne d'Israël (-332), qui hétérogénéise sans détruire les institutions.
 
 ### Perturbation : Prolongement napoléonien (1806)
 - type: perturbation
-- perturbation_type: prolongement
+- mechanism: choc_heterogeneite
+- effect: prolongement
 - start: 1806
 - end: ~1818
-- title: Prolongement napoléonien
+- title: Doublement napoléonien
 - summary: Le doublement du territoire hétérogénéise la société et relance un second cycle d'impérialisme absolutiste. Les réformes Montgelas ventilent les élites.
 - description: Le prolongement napoléonien reboot la sous-phase d'impérialisme absolutiste. L'expansion territoriale double le territoire et intègre des populations franconniennes et souabes. Montgelas (1799-1817) fait les réformes pour intégrer ces territoires — imposition uniforme, sécularisation, cadastre, abolition du servage, constitution (1818). Ces réformes ventilent les élites et réduisent la pression révolutionnaire. L'effet combiné prolonge la phase absolutiste d'environ 70 ans.
 - affected_motor: Homogénéisation culturelle (hétérogénéisée par l'intégration de la Franconie et de la Souabe)
@@ -374,10 +381,12 @@
 - confidence: high
 - summary: Après l'assassinat d'Eisner (21 février 1919), la République des Conseils est proclamée le 6 avril 1919. Armée rouge, contrôle ouvrier — la phase aiguë la plus radicale d'Allemagne en 1918-1919.
 
-### Saillant : Avortement — écrasement et absorption
+### Saillant : Écrasement et absorption
 - type: saillant
 - phase: rn
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1919
 - subtitle: Reichswehr
 - title: Écrasement

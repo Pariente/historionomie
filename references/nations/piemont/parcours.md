@@ -73,7 +73,9 @@
 
 #### Saillant : Crise féodale — Jacques d'Achaïe contre Amédée VI
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
 - start: 1359
 - end: 1360
 - figure: Jacques d'Achaïe / Amédée VI
@@ -145,24 +147,26 @@
 - confidence: medium
 - summary: Amédée VIII est le premier souverain régnant sous un cadre institutionnel codifié (Statuta Sabaudiae, 1430), disposant d'une Camera dei Conti permanente, d'une administration en châtellenies, et d'un territoire indivisible intégrant le Principat de Piémont (1424). Le « monarque » est encore fortement personnel (Amédée VIII abdique en 1440 pour devenir antipape Félix V), mais le cadre institutionnel lui survit.
 
-#### Saillant : Avortement — Invasion française
+#### Saillant : Invasion française
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1536
 - figure: Charles III
 - subtitle: Guerres d'Italie
-- title: Avortement
+- title: Invasion française
 - confidence: high
 - summary: L'invasion française (1536) met fin au 1er cycle oligarchique. Charles III est exilé. Les institutions des Statuta Sabaudiae sont remplacées par l'administration française. La noblesse piémontaise conserve ses terres et ses réseaux mais perd ses institutions. Le Parcours est rebooté au début de la phase oligarchique.
 
 ---
 
-## Perturbation : Reboot — Guerres d'Italie (1536-1559)
+## Perturbation : Guerres d'Italie (1536-1559)
 - type: perturbation
-- perturbation_type: reboot
+- mechanism: choc_exogene
+- effect: reboot
 - start: 1536
 - end: 1559
-- depth: Oligarchique → oligarchique (reboot intra-phase)
 - title: Guerres d'Italie
 - summary: Les guerres d'Italie détruisent l'appareil oligarchique des Statuta Sabaudiae et le remplacent par l'administration française pendant 23 ans. La dynastie survit (Emmanuel Philibert), la noblesse piémontaise conserve ses terres, l'homogénéité culturelle est intacte. Le reboot est intra-phase : les institutions oligarchiques sont détruites mais la structure des élites survit, ce qui permet de redémarrer en phase oligarchique (pas en féodale). Structurellement analogue au reboot milanais de 1499 (mêmes guerres d'Italie) et aux reflux français de Crécy-Poitiers et Azincourt.
 - description: Le reboot piémontais de 1536 est causé par la même perturbation systémique que le reboot milanais de 1499 : les guerres d'Italie. À Milan, les guerres détruisent l'État absolutiste des Sforza et reboote le Parcours à la phase oligarchique (régression d'une phase). Au Piémont, les guerres détruisent l'État oligarchique des Statuta et reboote le Parcours au début de la même phase (reboot intra-phase). La différence de profondeur s'explique par la différence de phase : Milan était plus avancé (absolutiste), donc le reboot est plus profond. Le Piémont était en essor oligarchique, donc le reboot le ramène au début de l'essor. Emmanuel Philibert, quand il récupère ses territoires au Traité de Cateau-Cambrésis (1559), ne restaure PAS les Statuta Sabaudiae — il crée un système entièrement nouveau (Ordini Nuovi, Sénats, armée permanente, fisc). C'est la preuve que les anciennes institutions ont été détruites, pas simplement suspendues.
@@ -345,7 +349,8 @@
 
 ### Perturbation : Éclipse napoléonienne (1796-1814)
 - type: perturbation
-- perturbation_type: eclipse
+- mechanism: choc_exogene
+- effect: prolongement
 - start: 1796
 - end: 1814
 - title: Éclipse napoléonienne
@@ -372,13 +377,15 @@
 - summary: En mars 1821, des officiers libéraux de la garnison d'Alessandria se soulèvent et exigent la Constitution espagnole de 1812. Victor Emmanuel Ier abdique. Charles Albert, régent, accepte brièvement la constitution puis se rétracte. Charles Félix écrase la révolte avec l'aide autrichienne (bataille de Novara, 8 avril 1821). La voie de réforme institutionnelle est fermée. L'AR se poursuit et s'approfondit.
 - description: La remontrance piémontaise est structurellement identique à ses analogues dans les autres parcours : la Polysynodie française (1715), la Correzione vénitienne (1761), le Landtag bavarois (1848). La classe administrative tente de redistribuer le pouvoir — ici, les officiers nobles formés sous Napoléon (Santa Rosa, Collegno, Moffa di Lisio) exigent une constitution. La concession est brièvement accordée (Charles Albert régent accepte) puis retirée (Charles Félix écrase avec les Autrichiens). L'échec confirme l'entrée dans l'AR profond. La remontrance est déplacée dans le temps par l'éclipse napoléonienne : normalement, elle devrait se situer à la charnière impérialisme → AR (~1748-1773). Mais l'éclipse intervient avant qu'elle ne se produise. Quand l'AR reprend en 1814, la remontrance survient dès que la nouvelle classe administrative est formée — sept ans après le retour du roi. Le parallèle avec les Décembristes russes (1825) est frappant : mêmes acteurs (officiers nobles influencés par les guerres napoléoniennes), même mécanisme (révolte pour une constitution), même résultat (écrasement, AR approfondi).
 
-#### Saillant : Avortement — Unification italienne
+#### Saillant : Unification italienne
 - type: saillant
-- avortement: true
+- perturbation: true
+- mechanism: choc_exogene
+- effect: avortement
 - start: 1861
 - figure: Victor Emmanuel II / Cavour
-- subtitle: Unification italienne
-- title: Avortement
+- subtitle: Absorption dans le Parcours italien
+- title: Unification italienne
 - confidence: high
 - summary: En 1861, le Piémont absorbe les parcours de Milan, Venise, Naples et des autres États italiens pour créer le Royaume d'Italie. Le Statuto Albertino — concession d'AR, pas produit d'une RN — devient la constitution italienne. Le Parcours piémontais s'achève par absorption dans le Parcours italien. Le Piémont ne vit jamais sa propre RN. L'Italie hérite du cadre absolutiste piémontais et entre immédiatement dans son propre AR (1861-1918). La RN est italienne (1918-19, Mussolini comme IR, République de 1946 comme GR).
 - description: L'unification italienne met fin au Parcours piémontais en l'absorbant dans un ensemble plus large — structurellement analogue à la Prusse absorbant les parcours allemands (1871) ou à la Bavière absorbée dans le Parcours allemand (1871). Le Piémont est en AR quand il absorbe les autres, ce qui explique que l'Italie unie ne soit pas un État parlementaire mais un État en AR : elle hérite du cadre absolutiste piémontais, pas d'une résolution révolutionnaire. Les guerres d'unification (1848-1860) sont rendues possibles non par un surplus de puissance impérialiste, mais par l'alliance avec Napoléon III, l'énergie du bloc contestataire italien (Mazzini, Garibaldi), et l'effondrement des autres États italiens.
