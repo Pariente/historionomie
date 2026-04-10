@@ -142,7 +142,7 @@ La dynamique des élites est un concept transversal qui irrigue toutes les phase
 
 ## Perturbations
 
-Le Parcours peut être perturbé par des chocs externes (conquêtes, occupations, déportations). Les mécanismes de perturbation (reboot, prolongement, rébellion périphérique) sont décrits dans `perturbations.md`.
+Le Parcours peut être perturbé par des événements qui modifient sa vitesse de progression. Une perturbation se décompose en un **mécanisme** (ce qui la cause : choc d'hétérogénéité, choc exogène, insuffisance interne) et un **effet** (ce qui arrive au Parcours : prolongement, accélération, avortement, reboot). L'**exutoire** (projection de puissance continue — empire, colonies, mercenariat) est un état continu qui prolonge la phase en cours. Le détail est décrit dans `perturbations.md`.
 
 ## Tableau récapitulatif des saillants
 

@@ -38,7 +38,7 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | `references/phase_rn.md` | Révolution Nationale : les 7 étapes, saillants (IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
 | `references/phase_parlementaire.md` | Phase parlementaire, technocratique, dominat | La question porte sur les phases post-RN |
 | `references/elites.md` | Matrice 2×2 des élites (prébendières/patrimoniales × gouvernementales/non-gouvernementales), mécanismes d'absolutisation, guerre sociale | La question touche à la dynamique des élites |
-| `references/perturbations.md` | Reboot, prolongement, transfert de territoire, rébellion périphérique | La question touche à un choc externe ou une déviation des durées typiques |
+| `references/perturbations.md` | 3 mécanismes (choc d'hétérogénéité, choc exogène, insuffisance interne) × 4 effets (prolongement, accélération, avortement, reboot) + exutoire (état continu). Rébellion périphérique. Affichage sur la frise (losanges, couleurs, icônes) | La question touche à un choc externe, une déviation des durées typiques, ou un exutoire |
 | `references/nations/*/parcours.md` | Parcours nationaux déjà mappés (Israël, France) — données structurées, hypothèse finale retenue | Pour comparer avec un parcours connu ou générer une infographie |
 | `references/nations/*/justification.md` | Justification des choix, hypothèses écartées, questions ouvertes | Pour comprendre le raisonnement derrière le parcours |
 
@@ -89,8 +89,9 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 - Y a-t-il une Glorieuse Révolution qui ancre le parlementarisme ?
 
 **Pour identifier les perturbations :**
-- Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, chercher un choc externe.
-- Ce choc a-t-il détruit les institutions (→ reboot) ou simplement hétérogénéisé la société (→ prolongement) ?
+- Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, identifier le **mécanisme** (choc d'hétérogénéité, choc exogène, insuffisance interne, exutoire continu) et l'**effet** (prolongement, accélération, avortement, reboot).
+- Si choc exogène : les institutions sont-elles détruites (→ reboot) ? Une transition est-elle bloquée (→ avortement) ? Du territoire/exutoire est-il perdu (→ accélération) ? Le Parcours est-il gelé temporairement (→ prolongement) ?
+- Y a-t-il un exutoire continu (empire, colonies, expansion) qui prolonge la phase en cours ?
 
 ### Étape 2bis : Vérifier la cohérence des identifications
 

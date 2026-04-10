@@ -1,29 +1,93 @@
 # Perturbations du Parcours
 
-Le Parcours de construction nationale peut être perturbé par des chocs externes (conquêtes, occupations, déportations). Ces perturbations ne produisent pas toutes le même effet. Leur impact dépend de ce qu'elles font aux deux moteurs du Parcours : la construction de l'État central et l'homogénéité culturelle.
+Le Parcours de construction nationale peut être perturbé par des événements qui modifient sa vitesse de progression. Une perturbation se décompose en un **mécanisme** (ce qui cause la perturbation) et un **effet** (ce qui arrive au Parcours). Les perturbations peuvent être **ponctuelles** (un événement) ou **étendues** (une période) — un événement ponctuel peut déclencher une perturbation étendue (ex. : destruction du Temple → exil babylonien).
 
-Trois types de perturbation se distinguent : le reboot, le prolongement, et le transfert de territoire. Un quatrième phénomène, la rébellion périphérique, peut ressembler à une perturbation du Parcours national mais relève en réalité du Parcours d'une supra-entité impériale.
+## Les 4 effets
 
-## Deux questions distinctes
+| Effet | Ce qui arrive | Couleur (frise) |
+|---|---|---|
+| **Prolongement** | La phase en cours est rallongée | 🟠 orange |
+| **Accélération** | La phase en cours est raccourcie | 🔵 bleu |
+| **Avortement** | Le passage à la phase suivante est bloqué | 🔴 rouge |
+| **Reboot** | Redémarrage de la phase ou retour à une phase antérieure | 🟤 cramoisi |
 
-L'effet d'une perturbation dépend de ce qu'elle fait aux deux moteurs du Parcours. Deux questions se posent, dans cet ordre :
+## Les 3 mécanismes + 1 état continu
+
+| Mécanisme | Type | Icône (frise) | Effets possibles | Exemples |
+|---|---|---|---|---|
+| **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` | Prolongement 🟠 | Habsburg 1516, Bavière 1806, hellénisation -332 |
+| **Choc exogène** | Ponctuel | `bolt` | Les 4 effets (selon ce que le choc fait) | Voir grille ci-dessous |
+| **Insuffisance interne** | Ponctuel | `close` | Avortement 🔴 | Crises féodales sans PO, absolutisation avortée (Faliero, Pierre Ier) |
+| **Exutoire** | **Continu** | *(pas de marqueur — implicite)* | Prolongement 🟠 | Venise Stato da Màr, colonies espagnoles, Reconquista, Reislauferei suisse |
+
+Le **choc d'hétérogénéité** ajoute de la diversité vers l'intérieur (gain territorial, afflux culturel). L'**exutoire** projette l'énergie vers l'extérieur (empire, colonies, mercenariat). Les deux produisent un prolongement mais par des voies différentes : le choc repousse le seuil d'homogénéité, l'exutoire absorbe les tensions élitaires. Ils coexistent souvent (l'héritage habsbourgeois crée à la fois l'hétérogénéité et l'exutoire).
+
+L'exutoire est un **état continu**, pas un événement. Il n'a pas de marqueur sur la frise. Il apparaît quand un choc d'hétérogénéité le crée, et disparaît quand un choc exogène ou l'épuisement interne le détruit. Sa fin est marquée par le saillant standard **« fin de l'expansion »** (marqueur rond, couleur de la phase — pas un losange de perturbation).
+
+### Grille mécanisme × effet pour le choc exogène
+
+Le choc exogène est le mécanisme le plus polyvalent — son effet dépend de ce qu'il frappe :
+
+| Ce que le choc fait | Effet | Couleur | Exemples |
+|---|---|---|---|
+| Ralentit sans détruire (gel temporaire, occupation) | Prolongement 🟠 | Orange | Crécy-Poitiers (~1346), éclipse napoléonienne du Piémont (1796-1814) |
+| Retire du territoire ou de l'exutoire, force la modernisation | Accélération 🔵 | Bleu | Portugal 1640, Utrecht 1714, Désastre 1898, Napoléon à Milan |
+| Bloque une transition sans détruire les institutions | Avortement 🔴 | Rouge | France écrase le Trienio 1823, Autriche écrase Venise 1849 |
+| Détruit les institutions et les réseaux humains | Reboot 🟤 | Cramoisi | Babylone -586, Guillaume 1066, Piémont 1536 |
+
+## Affichage sur la frise
+
+Les perturbations sont affichées comme des **losanges** (◆) pour les distinguer des saillants normaux (●). La **couleur** encode l'effet, l'**icône** encode le mécanisme.
+
+- **Perturbation ponctuelle** : losange à la date de l'événement
+- **Perturbation étendue** : losange pour le déclencheur + bande hachurée pour la durée
+- **Exutoire** : pas de marqueur (mentionné dans la description de la durée de la phase)
+- **Fin de l'exutoire** : saillant normal « fin de l'expansion » (●, couleur de la phase)
+
+## Tableau récapitulatif du corpus
+
+| Perturbation | Mécanisme | Effet | Marqueur |
+|---|---|---|---|
+| Hellénisation (-332) | Choc d'hétérogénéité | Prolongement 🟠 | ◆🟠 `open_in_full` |
+| Conquête babylonienne (-586) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
+| Destruction du Temple (70) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
+| Choc assyrien (-722) | Choc exogène | Reboot + transfert 🟤 | ◆🟤 `bolt` |
+| Guillaume le Conquérant (1066) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
+| Boucles féodales anglaises | Insuffisance interne | Avortement 🔴 | ◆🔴 `close` |
+| Crécy-Poitiers (~1346) | Choc exogène | Prolongement 🟠 | ◆🟠 `bolt` |
+| Azincourt-Troyes (1415-1420) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
+| Faliero (1355), Pierre Ier (1369) | Insuffisance interne | Avortement 🔴 | ◆🔴 `close` |
+| Piémont invasion française (1536) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
+| Piémont éclipse napoléonienne (1796-1814) | Choc exogène | Prolongement 🟠 | ◆🟠 `bolt` |
+| Bavière partitions (1255, 1349, 1392) | Insuffisance interne | Avortement 🔴 | ◆🔴 `close` |
+| Bavière doublement napoléonien (1806) | Choc d'hétérogénéité | Prolongement 🟠 | ◆🟠 `open_in_full` |
+| Venise RN écrasée (1849) | Choc exogène | Avortement 🔴 | ◆🔴 `bolt` |
+| Espagne Habsburg (1516) | Choc d'hétérogénéité | Prolongement 🟠 | ◆🟠 `open_in_full` |
+| Espagne Portugal (1640) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
+| Espagne Utrecht (1714) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
+| Espagne Désastre (1898) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
+| France 1823 (Cent Mille Fils) | Choc exogène | Avortement 🔴 | ◆🔴 `bolt` |
+| Napoléon à Milan | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
+| Suisse Napoléon (1798) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
+
+---
+
+## Détail des effets
+
+Les sections ci-dessous détaillent chaque effet avec ses mécanismes, exemples, et cas particuliers.
+
+### Questions diagnostiques
+
+Pour identifier l'effet d'une perturbation, deux questions se posent dans cet ordre :
 
 **1. Les institutions sont-elles détruites ?**
 - **Oui** → reboot. L'État central doit être reconstruit ; le Parcours régresse.
-- **Non** → prolongement. Les institutions survivent mais la société est désorganisée ; le Parcours stagne.
+- **Non** → passer à la question 2.
 
-**2. L'homogénéité culturelle est-elle préservée ?**
-- **Oui** → le redémarrage (après reboot) ou la reprise (après prolongement) est rapide.
-- **Non** → le redémarrage est lent, ou la régression est plus profonde.
-
-La première question détermine le **type** de perturbation. La seconde détermine la **vitesse de récupération**.
-
-| Perturbation | Institutions | Homogénéité culturelle | Type | Vitesse |
-|---|---|---|---|---|
-| Choc assyrien (-722) | Détruites au nord, inexistantes au sud | Préservée (fuite au sud) | Transfert | Allongement modéré |
-| Conquête babylonienne (-586) | Détruites | Partiellement préservée (Babylone) | Reboot | Redémarrage rapide |
-| Conquête macédonienne (-332) | Préservées | Perturbée (hellénisation) | Prolongement | Stagnation longue |
-| Destruction du Temple (70) | Détruites | Préservée (Yavné) | Reboot | Redémarrage rapide |
+**2. Le Parcours progresse-t-il, stagne-t-il, ou régresse-t-il ?**
+- **Stagne ou ralentit** (hétérogénéité accrue, gel temporaire) → prolongement.
+- **Accélère** (hétérogénéité réduite, exutoire supprimé, modernisation forcée) → accélération.
+- **Transition bloquée** (la phase en cours ne peut pas se résoudre) → avortement.
 
 ## Profondeur du reboot
 
