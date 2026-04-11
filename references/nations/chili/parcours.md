@@ -16,6 +16,17 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (format: noyau+marges — le label décrit les marges)
+- ~1541: 100 | Vallée centrale (Santiago — fondation coloniale)
+- 1810: 150 | Capitainerie du Chili (indépendance)
+- 1843: 160 | + Détroit de Magellan (prise de possession)
+- 1861: 150+80 | Araucanía (occupation du territoire mapuche — marge hétérogène)
+- 1884: 150+250 | + Atacama, Tarapacá, Antofagasta (guerre du Pacifique — territoires péruviens/boliviens)
+- 1929: 400 | Traité de Lima — frontière définitive (marges intégrées au noyau)
+
+---
+
 ## Note préliminaire : le Parcours d'une nation coloniale
 
 Le Chili est le premier Parcours du corpus pour une nation née de la colonisation européenne. La question fondamentale est : quand le Parcours commence-t-il ?

@@ -11,8 +11,32 @@
 - highlight_3: Courte phase oligarchique (~158 ans) | La géographie insulaire protège des invasions continentales, la longue phase féodale a déjà construit un appareil institutionnel avancé (Échiquier, common law, Parlement), et la perte des territoires continentaux accélère la polarisation en fermant la soupape extérieure. | images/angleterre/edouard-iii.jpg | oligarchique
 - highlight_4: Courte phase absolutiste (~157 ans) | L'insularité facilite le contrôle du territoire, la Réforme henricienne accélère brutalement l'absolutisation (rupture avec Rome, dissolution des monastères), et la transition dynastique Tudor-Stuart affaiblit prématurément le système. | images/angleterre/henri-viii.jpg | absolutiste
 - highlight_5: 1ère RN du cycle civilisationnel | La matrice du modèle historionomique — première nation à accomplir sa Révolution Nationale depuis la fin de l'Empire romain. | https://commons.wikimedia.org/wiki/Special:FilePath/CromwellDissolvingLongParliament.jpg?width=120 | rn
-- subtitle: L'île qui a inventé le parlementarisme
+- highlight_6: Expansion coloniale post-RN | Contrairement à l'Espagne ou à Venise, l'essentiel de l'expansion coloniale anglaise (Amérique du Nord, Inde, Caraïbes) intervient après la Glorieuse Révolution de 1688 — donc en phase parlementaire, aboutissement du Parcours. L'exutoire colonial ne retarde donc pas la progression comme c'est le cas pour l'Espagne et Venise. | https://commons.wikimedia.org/wiki/Special:FilePath/British_Empire_1921.png?width=120 | parlementaire
+- subtitle: You can't park there, sir.
 - confidence: medium
+
+---
+
+## Superficie de référence
+- unit: milliers de km² (format: noyau+marges — le label décrit les marges)
+- 829: 130 | Angleterre (suprématie du Wessex)
+- 1016: 130+370 | Danemark + Norvège (empire de Cnut)
+- 1042: 130 | Angleterre seule (Edward le Confesseur)
+- 1066: 130+30 | Normandie
+- 1154: 130+145 | Normandie + Anjou + Aquitaine (Empire Plantagenêt)
+- 1204: 130+25 | Gascogne (perte de la Normandie et de l'Anjou)
+- 1282: 130+46 | Pays de Galles + Gascogne
+- 1360: 130+102 | Pays de Galles + Aquitaine élargie + Calais (traité de Brétigny)
+- 1375: 130+47 | Pays de Galles + Gascogne + Calais (reconquête de Charles V)
+- 1420: 130+120 | Pays de Galles + Normandie + Île-de-France + Gascogne + Calais (traité de Troyes)
+- 1436: 130+82 | Pays de Galles + Normandie + Gascogne + Calais (perte de Paris)
+- 1450: 130+47 | Pays de Galles + Gascogne + Calais (perte de la Normandie)
+- 1453: 130+22 | Pays de Galles + Calais (perte de la Gascogne)
+- 1536: 151+1 | Calais (Galles rejoint le noyau)
+- 1541: 151+85 | Irlande + Calais
+- 1558: 151+84 | Irlande (perte de Calais)
+- 1603: 151+163 | Irlande + Écosse (union des couronnes)
+- 1707: 230+84 | Irlande (Écosse rejoint le noyau — Acts of Union)
 
 ---
 
@@ -95,6 +119,19 @@
 - summary: Cnut bâtit un empire anglo-scandinave (Angleterre + Danemark + Norvège) et règne avec autorité. Mais l'augmentation d'échelle élève le seuil d'homogénéité requis pour un pacte, rendant celui-ci encore plus improbable.
 - description: Cnut le Grand (1016-1035) bâtit un empire couvrant l'Angleterre, le Danemark et la Norvège. Il intègre les élites anglo-saxonnes à son système, promulgue des codes de lois, et règne avec un mélange d'autorité personnelle et de pragmatisme politique. C'est un troisième pic féodal — le pouvoir est de nouveau au sommet — mais cette fois l'échelle du royaume a augmenté. L'empire anglo-scandinave est bien plus hétérogène que l'Angleterre seule : le pacte oligarchique, s'il devait se produire, devrait maintenant se former à l'échelle impériale, ce qui est impossible étant donné l'hétérogénéité culturelle entre Anglais, Danois et Norvégiens. L'augmentation d'échelle éloigne la possibilité du pacte au lieu de la rapprocher — un mécanisme que l'on retrouve avec l'Empire Plantagenêt au siècle suivant.
 
+#### Saillant : Empire de Cnut
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: ~1016
+- figure: Cnut le Grand
+- subtitle: Empire anglo-scandinave
+- title: Empire de Cnut
+- confidence: high
+- summary: Cnut bâtit un empire couvrant l'Angleterre, le Danemark et la Norvège (~500 000 km²). L'échelle du royaume quadruple, le seuil d'homogénéité requis pour un pacte devient inatteignable, et la phase féodale est prolongée.
+- description: L'avènement de Cnut en 1016 transforme le royaume d'Angleterre en un empire anglo-scandinave couvrant l'Angleterre, le Danemark et la Norvège. La superficie sous contrôle royal passe de ~130 000 km² à ~500 000 km² — un facteur de presque quatre. L'hétérogénéité culturelle entre élites anglaises, danoises et norvégiennes rend impossible la formation d'une conscience de classe à l'échelle impériale. Le pacte oligarchique, s'il devait se produire, devrait se former entre des aristocraties qui ne partagent ni la même langue, ni les mêmes institutions, ni la même culture politique. C'est un choc d'hétérogénéité classique qui prolonge la phase féodale en repoussant le seuil du pacte bien au-delà de ce qui est atteignable. Le mécanisme est identique à celui de l'Union Castille-Aragon (1479) ou de l'héritage habsbourgeois (1516) dans le Parcours espagnol.
+
 #### Saillant : Crise féodale — post-Cnut
 - type: saillant
 - perturbation: true
@@ -107,6 +144,19 @@
 - confidence: medium
 - summary: La mort de Cnut provoque la fragmentation de l'empire anglo-scandinave. Les conditions du pacte ne sont toujours pas réunies : l'échelle est trop grande et les élites trop hétérogènes. Le Parcours revient en position de pic potentiel, mais la conquête normande interrompt le cycle.
 - description: L'empire de Cnut se disloque entre ses fils (Harold Harefoot, Harthacnut). La dynastie danoise s'éteint en 1042 avec la mort de Harthacnut. La maison de Wessex revient avec Édouard le Confesseur (1042-1066), mais celui-ci est dominé par les Godwin et ne parvient pas à restaurer l'autorité royale. Le jeu féodal reprend sans codification — un nouveau cycle pourrait s'amorcer, mais la conquête normande de 1066 interrompt définitivement cette première phase féodale. C'est un reboot : le remplacement intégral de l'aristocratie par les Normands détruit le substrat social sur lequel un pacte aurait pu se former et remet les compteurs à zéro.
+
+#### Saillant : Conquête normande
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: reboot
+- start: 1066
+- figure: Guillaume le Conquérant
+- subtitle: Hastings
+- title: Conquête normande
+- confidence: high
+- summary: Guillaume remplace intégralement l'aristocratie anglo-saxonne par une noblesse normande francophone. Le substrat social de la phase féodale est détruit — c'est un reboot complet qui remet les compteurs à zéro.
+- description: La conquête normande de 1066 est un cas d'école de reboot par choc d'hétérogénéité exogène. Guillaume redistribue toutes les terres, remplace l'aristocratie anglo-saxonne par une noblesse normande francophone, et introduit un nouveau système féodal fondé sur la vassalité directe au roi. L'hétérogénéité culturelle entre les nouvelles élites francophones et la population anglophone est profonde et retardera de plusieurs générations la formation d'une conscience de classe commune — condition nécessaire au pacte oligarchique. La phase féodale [1] est interrompue sans résolution ; une nouvelle phase féodale commence à zéro.
 
 ---
 
@@ -178,6 +228,19 @@
 - summary: Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Mais il constitue simultanément l'Empire Plantagenêt (Angleterre + Normandie + Anjou + Aquitaine), ce qui augmente l'échelle du royaume et repousse le seuil d'homogénéité requis pour un pacte.
 - description: Henri II Plantagenêt (1154-1189) est un roi d'une énergie exceptionnelle qui porte le pouvoir personnel à un nouveau sommet. Il développe le common law par les Assises de Clarendon (1166) et de Northampton (1176), met en place un réseau de juges itinérants qui unifient la justice royale sur tout le territoire, et tente d'affirmer l'autorité laïque sur l'Église — ce qui le conduit au conflit fatal avec Thomas Becket, assassiné en 1170. Mais Henri II ne gouverne pas seulement l'Angleterre : il est le maître d'un empire qui s'étend de l'Écosse aux Pyrénées, couvrant la Normandie, le Maine, l'Anjou, la Touraine, le Poitou et l'Aquitaine. Cette augmentation d'échelle est décisive pour le Parcours. Le pacte oligarchique, s'il devait se produire, devrait maintenant se former à l'échelle impériale — or les barons anglais, normands, angevins et aquitains ne forment en rien une classe homogène. L'Empire Plantagenêt éloigne la possibilité du pacte en élevant le seuil bien au-delà de ce que l'homogénéité des élites peut atteindre. Ce n'est qu'après la destruction de l'empire par Philippe Auguste que le seuil redescendra au niveau anglais.
 
+#### Saillant : Empire Plantagenêt
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: ~1154
+- figure: Henri II Plantagenêt
+- subtitle: Empire Plantagenêt
+- title: Empire Plantagenêt
+- confidence: high
+- summary: Henri II constitue un empire couvrant l'Angleterre, la Normandie, l'Anjou et l'Aquitaine (~275 000 km²). L'échelle du royaume double, le seuil d'homogénéité requis pour un pacte est repoussé bien au-delà du cadre anglais.
+- description: L'avènement d'Henri II en 1154 porte l'échelle du royaume de ~160 000 km² (Angleterre + Normandie) à ~275 000 km² (ajout de l'Anjou, du Maine, de la Touraine, du Poitou et de l'Aquitaine). Les barons anglais, normands, angevins et aquitains ne forment en rien une classe homogène : ils ne parlent pas les mêmes langues, n'obéissent pas aux mêmes coutumes, et ne se perçoivent pas comme un groupe politique unifié. Le pacte oligarchique, s'il devait se produire, devrait maintenant se former à l'échelle impériale — ce qui est irréalisable. C'est le même mécanisme que l'Union Castille-Aragon (1479) dans le Parcours espagnol : l'expansion territoriale prolonge la phase en cours en élevant le seuil d'homogénéité. La phase féodale ne pourra se résoudre qu'après la destruction de l'empire continental par Philippe Auguste (1204).
+
 #### Saillant : Crise féodale
 - type: saillant
 - perturbation: true
@@ -190,6 +253,19 @@
 - confidence: high
 - summary: Jean sans Terre ruine le système Plantagenêt : perte de la Normandie (1204), Magna Carta imposée (1215), guerre civile. Crise féodale avortée — l'homogénéité est encore insuffisante.
 - description: Jean sans Terre (1199-1216) ruine activement l'édifice construit par Henri II et Richard. En 1204, Philippe Auguste lui confisque la Normandie, le Maine, l'Anjou et le Poitou — l'Empire Plantagenêt continental est détruit. En 1215, les barons en révolte imposent la Magna Carta à Runnymede, qui ressemble à un pacte oligarchique mais n'en est pas un : Jean la répudie immédiatement, le Pape l'annule, et la Première guerre des Barons (1215-1217) s'ensuit. La crise ne débouche pas sur un pacte parce que les conditions ne sont pas réunies : les barons sont encore en transition identitaire (la perte de la Normandie vient juste de les forcer à se penser comme anglais plutôt que normands). Paradoxalement, cette crise accélère l'homogénéisation : la perte des terres continentales force les barons à choisir l'Angleterre, ce qui construit progressivement la conscience de classe nécessaire au futur pacte. Il faudra encore un siècle (1204→1311) pour que cette homogénéisation aboutisse.
+
+#### Saillant : Perte de la Normandie
+- type: saillant
+- perturbation: true
+- mechanism: correction_echelle
+- effect: acceleration
+- start: 1204
+- figure: Philippe Auguste
+- subtitle: Perte de la Normandie
+- title: Perte de la Normandie
+- confidence: high
+- summary: Philippe Auguste confisque la Normandie, le Maine, l'Anjou et le Poitou. L'Empire Plantagenêt continental est détruit, l'échelle redescend de ~275 000 km² à ~155 000 km², et les barons sont forcés de se penser comme anglais — accélérant l'homogénéisation vers le pacte.
+- description: En 1204, Philippe Auguste confisque à Jean sans Terre la Normandie, le Maine, l'Anjou et le Poitou. L'Empire Plantagenêt continental est détruit d'un coup. Les barons qui possédaient des terres des deux côtés de la Manche sont forcés de choisir : rester en Angleterre ou rester en France. La plupart choisissent l'Angleterre. Cette correction d'échelle a un effet accélérateur décisif sur le Parcours : en ramenant la « taille de référence » au cadre anglais, elle abaisse le seuil d'homogénéité requis pour un pacte et force les élites à se constituer en classe à l'échelle du royaume. Le mécanisme est l'inverse exact du choc d'hétérogénéité Plantagenêt de 1154 : la contraction produit l'accélération là où l'expansion avait produit le prolongement. Le parallèle avec les pertes territoriales espagnoles (Westphalie 1648, Utrecht 1714) est direct.
 
 #### Saillant : Pic féodal — Édouard Ier
 - type: saillant
@@ -276,6 +352,19 @@
 - summary: Henri V porte la monarchie oligarchique anglaise à son sommet absolu avec la victoire d'Azincourt (1415) et le Traité de Troyes (1420), qui lui accorde la couronne de France — un niveau de puissance qu'aucun roi d'Angleterre n'avait atteint ni n'atteindra après lui.
 - description: Le pic oligarchique anglais se situe sous Henri V, lorsque convergent la supériorité militaire et le triomphe diplomatique. La victoire d'Azincourt le 25 octobre 1415, remportée par une armée de ~6 000 hommes contre ~20 000 Français, est un exploit tactique qui détruit la noblesse française du Nord et élimine toute résistance militaire organisée. La conquête méthodique de la Normandie (1417-1419) démontre une capacité logistique et administrative remarquable. Le Traité de Troyes (1420) couronne l'édifice : Henri V est reconnu comme héritier de la couronne de France, marié à Catherine de Valois, et régent du royaume pendant la vie de Charles VI. Aucun roi d'Angleterre n'avait atteint ce niveau de puissance, et aucun ne l'atteindra après. Mais ce pouvoir reste oligarchique : Henri V dépend du Parlement pour le financement de ses campagnes, et la conquête de la Normandie est administrée par un appareil institutionnel, non par le charisme d'un seul homme.
 
+#### Saillant : Traité de Troyes
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1420
+- figure: Henri V
+- subtitle: Traité de Troyes
+- title: Traité de Troyes
+- confidence: high
+- summary: Le Traité de Troyes fait d'Henri V l'héritier de la couronne de France et lui confie l'administration de la Normandie et de la France du Nord. La superficie sous contrôle anglais passe de ~177 000 km² à ~250 000 km², créant un exutoire continental qui prolonge l'essor oligarchique.
+- description: Le Traité de Troyes (1420) porte l'expansion territoriale anglaise à son maximum médiéval. L'Angleterre administre directement la Normandie, l'Île-de-France et des portions de la Picardie et du Maine, en plus du pays de Galles et de la Gascogne. Ce territoire hétérogène — peuplé de Français qui n'ont aucune allégeance naturelle à la couronne anglaise — crée un exutoire qui absorbe l'énergie de la noblesse anglaise et retarde la polarisation interne. Le mécanisme est identique à celui de la Reconquista espagnole ou de l'expansion vénitienne en Méditerranée : l'expansion prolonge la phase en cours en offrant une soupape aux tensions internes. L'effondrement de cet exutoire (1420-1453) accélérera brutalement la polarisation.
+
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: 1421
@@ -294,6 +383,18 @@
 - figure: Henri VI
 - summary: Après Baugé et la mort d'Henri V (1422), la minorité d'Henri VI et la perte progressive des territoires français cristallisent deux factions rivales — Lancaster (prébendière, patronage de cour) et York (patrimoniale, grands domaines fonciers) — dont l'affrontement devient inévitable.
 - description: La polarisation des élites anglaises se structure rapidement après la fin de l'expansion. La mort d'Henri V en 1422 laisse le trône à Henri VI, infant de neuf mois. La longue minorité, puis le règne personnel d'un roi faible et probablement atteint de maladie mentale, ouvrent un vide de pouvoir qui permet aux factions de se cristalliser. La faction Lancaster, au pouvoir, s'appuie sur le patronage de cour et les ressources de l'État central pour maintenir un réseau de fidélité — c'est la faction prébendière au sens weberien. La faction York, menée par Richard d'York, regroupe les grands magnats terriens dont la puissance repose sur leurs domaines fonciers dans le nord et l'ouest — c'est la faction patrimoniale. La perte progressive des conquêtes françaises — Orléans (1429), Paris (1436), Normandie (1450), Bordeaux (1453) — accélère la polarisation en privant la noblesse de ses débouchés extérieurs et en discréditant le pouvoir lancastrien. Le conflit évolue inexorablement vers la guerre ouverte.
+
+#### Saillant : Perte de la France
+- type: saillant
+- perturbation: true
+- mechanism: correction_echelle
+- effect: acceleration
+- start: 1453
+- subtitle: Castillon
+- title: Perte de la France
+- confidence: high
+- summary: La défaite de Castillon (1453) met fin à la présence anglaise en France continentale. L'exutoire continental se ferme définitivement, les tensions entre factions se retournent vers l'intérieur et accélèrent la polarisation vers la guerre sociale.
+- description: La bataille de Castillon (17 juillet 1453) est la dernière bataille de la guerre de Cent Ans. La Gascogne, dernier territoire continental anglais hors Calais, est définitivement perdue. L'Angleterre passe de ~177 000 km² (avec le Galles et la Gascogne) à ~152 000 km² (Angleterre + Galles + Calais). La perte de l'exutoire continental prive la noblesse anglaise de ses débouchés extérieurs — conquête, butin, domaines français — et retourne toute l'énergie politique vers l'intérieur. Les factions Lancaster et York, qui coexistaient tant que la guerre de France offrait un ennemi commun, se retrouvent face à face sans soupape. La polarisation, déjà amorcée depuis Baugé (1421), s'accélère brutalement. Deux ans plus tard, la première bataille de Saint-Albans (1455) ouvre les Guerres des Roses. Le parallèle avec l'Espagne est instructif : là où la perte des possessions européennes (Westphalie 1648, Utrecht 1714) accélère le Parcours espagnol, la perte de la France accélère le Parcours anglais — le même mécanisme de correction d'échelle produit le même effet.
 
 ### Subphase : Guerre sociale
 - type: subphase

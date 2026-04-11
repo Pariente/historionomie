@@ -60,7 +60,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 
 /* Timeline container */
 .timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
-.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+.timeline-container { position:relative; min-width:2800px; min-height:730px; margin-bottom:10px; }
 
 /* Ticks */
 .tick { position:absolute; top:0; height:100%; pointer-events:none; }
@@ -100,6 +100,27 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
 .perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
 
 /* Narrow-phase indicator — visible marker for phases too short to see */
 .narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
@@ -401,6 +422,77 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             <span class="perturbation-label">Perte de l&#39;empire colonial américain</span>
         </div>
         
+    <div class="area-chart" style="top:230px;">
+        
+        <div class="area-chart-label" style="left:0.8961%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:10.3047%;width:4.4803%;height:10.6px;"><div class="area-noyau" style="height:10.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~130 000 km² — Castille-León-Galice (Ferdinand Ier)"></div></div>
+        <div class="area-step-group" style="left:14.7849%;width:12.9928%;height:14.3px;"><div class="area-noyau" style="height:14.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~175 000 km² — + Tolède (Alphonse VI)"></div></div>
+        <div class="area-step-group" style="left:27.7778%;width:1.6129%;height:16.3px;"><div class="area-noyau" style="height:16.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~200 000 km² — Réunion définitive Castille-León (Ferdinand III)"></div></div>
+        <div class="area-step-group" style="left:29.3907%;width:20.6989%;height:28.6px;"><div class="area-noyau" style="height:28.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~350 000 km² — + Cordoue, Séville, Jaén (Reconquista)"></div></div>
+        <div class="area-step-group has-marges" style="left:50.0896%;width:1.1649%;height:36.7px;"><div class="area-noyau" style="height:28.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~350 000 km²"></div><div class="area-marges" style="bottom:28.6px;height:8.2px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~100 000 km² — Aragon, Catalogne, Valence, Majorque (union dynastique)"></div></div>
+        <div class="area-step-group has-marges" style="left:51.2545%;width:2.1505%;height:37.5px;"><div class="area-noyau" style="height:29.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~360 000 km²"></div><div class="area-marges" style="bottom:29.4px;height:8.2px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~100 000 km² — + Grenade (fin de la Reconquista)"></div></div>
+        <div class="area-step-group has-marges" style="left:53.4050%;width:5.7348%;height:54.7px;"><div class="area-noyau" style="height:29.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~360 000 km²"></div><div class="area-marges" style="bottom:29.4px;height:25.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~310 000 km² — + Pays-Bas, Naples, Sicile, Sardaigne (héritage habsbourgeois)"></div></div>
+        <div class="area-step-group has-marges" style="left:59.1398%;width:5.3763%;height:62.0px;"><div class="area-noyau" style="height:29.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~360 000 km²"></div><div class="area-marges" style="bottom:29.4px;height:32.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~400 000 km² — + Portugal (union ibérique)"></div></div>
+        <div class="area-step-group has-marges" style="left:64.5161%;width:0.7168%;height:54.7px;"><div class="area-noyau" style="height:29.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~360 000 km²"></div><div class="area-marges" style="bottom:29.4px;height:25.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~310 000 km² — - Portugal (sécession)"></div></div>
+        <div class="area-step-group has-marges" style="left:65.2330%;width:5.9140%;height:52.2px;"><div class="area-noyau" style="height:29.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~360 000 km²"></div><div class="area-marges" style="bottom:29.4px;height:22.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~280 000 km² — - Provinces-Unies (Westphalie)"></div></div>
+        <div class="area-step-group" style="left:71.1470%;width:16.4875%;height:41.6px;"><div class="area-noyau" style="height:41.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~510 000 km² — Utrecht + Nueva Planta — perte des possessions européennes, Aragon intégré au noyau"></div></div>
+        <div class="area-step-group" style="left:87.6344%;width:12.3656%;height:41.6px;"><div class="area-noyau" style="height:41.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~510 000 km² — Desastre — perte de Cuba, Philippines (marges coloniales, pas de changement métropolitain)"></div></div>
+        
+        <div class="area-edge" style="left:14.7849%;height:14.3px;"></div>
+        <div class="area-edge" style="left:27.7778%;height:16.3px;"></div>
+        <div class="area-edge" style="left:29.3907%;height:28.6px;"></div>
+        <div class="area-edge" style="left:50.0896%;height:36.7px;"></div>
+        <div class="area-edge" style="left:51.2545%;height:37.5px;"></div>
+        <div class="area-edge" style="left:53.4050%;height:54.7px;"></div>
+        <div class="area-edge" style="left:59.1398%;height:62.0px;"></div>
+        <div class="area-edge" style="left:64.5161%;height:62.0px;"></div>
+        <div class="area-edge" style="left:65.2330%;height:54.7px;"></div>
+        <div class="area-edge" style="left:71.1470%;height:52.2px;"></div>
+        <div class="area-edge" style="left:87.6344%;height:41.6px;"></div>
+    </div>
+        
+        <div class="area-saillant-group" style="left:50.0896%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Union Castille-Aragon&lt;/strong&gt;&#10;Ferdinand &amp; Isabelle (1479)&#10;L&#39;union des couronnes de Castille et d&#39;Aragon (1479) change l&#39;échelle du Parcours : de la Castille seule à l&#39;Espagne (Castille + Aragon + Catalogne + Valence + Majorque). C&#39;est un choc d&#39;hétérogénéité qui repousse le seuil d&#39;homogénéité — les fueros aragonais, les Cortès catalanes, le droit valencien ajoutent une diversité institutionnelle massive. C&#39;est précisément ce choc qui empêche les Rois Catholiques d&#39;être absolutistes à l&#39;échelle nationale : ils absolutisent la Castille mais PAS l&#39;Aragon."
+                onclick="showDetail(17)">
+                <span class="material-icons">open_in_full</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Union Castille-Aragon</span><span class="saillant-date">1479</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:53.4050%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Héritage habsbourgeois&lt;/strong&gt;&#10;Charles Quint (1516)&#10;En 1516, Charles Quint hérite de la Castille + Aragon + Pays-Bas + Lombardie + Naples/Sicile + Amériques. En 1519, il est élu empereur. L&#39;échelle de la polité explose. C&#39;est un choc d&#39;hétérogénéité massif, analogue au doublement napoléonien bavarois (1806), qui prolonge la phase oligarchique en repoussant le seuil d&#39;homogénéité. Les corrections d&#39;échelle progressives (1556, 1640, 1648, 1714) ramènent lentement l&#39;Espagne vers son échelle naturelle."
+                onclick="showDetail(19)">
+                <span class="material-icons">open_in_full</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Héritage habsbourgeois</span><span class="saillant-date">1516</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:64.5161%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Sécession du Portugal&lt;/strong&gt;&#10;Jean IV (1640)&#10;En 1640, le Portugal fait sécession définitive. La Catalogne se soumet temporairement à la France (1640-1659). Ce sont des corrections d&#39;échelle : les morceaux trop hétérogènes se détachent. Le Portugal est perdu définitivement — analogue à la perte de la Normandie par les Plantagenêt (1204)."
+                onclick="showDetail(22)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Sécession du Portugal</span><span class="saillant-date">1640</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:65.2330%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Traité de Westphalie&lt;/strong&gt;&#10;Perte des Pays-Bas (1648)&#10;Le Traité de Westphalie (1648) reconnaît formellement l&#39;indépendance des Provinces-Unies. Les Pays-Bas espagnols du nord sont définitivement perdus. L&#39;Espagne se rapproche de son échelle naturelle."
+                onclick="showDetail(23)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Traité de Westphalie</span><span class="saillant-date">1648</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:71.1470%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Traité d&#39;Utrecht&lt;/strong&gt;&#10;Perte des possessions européennes (1714)&#10;Le Traité d&#39;Utrecht (1713-1714) dépouille l&#39;Espagne de TOUTES ses possessions européennes hors péninsule : Pays-Bas espagnols, Naples, Milan, Sardaigne, Sicile → Autriche/Savoie ; Gibraltar, Minorque → Angleterre. C&#39;est la correction d&#39;échelle décisive — l&#39;Espagne est enfin ramenée à la péninsule ibérique. Les décrets de Nueva Planta (1707-1716) achèvent l&#39;absolutisation dans la foulée."
+                onclick="showDetail(24)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Traité d&#39;Utrecht</span><span class="saillant-date">1714</span></div>
+        </div>
+        
         <div class="saillant-group" style="left:10.3047%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Ferdinand Ier (~1035)&#10;Ferdinand Ier (r. 1035-1065) est le premier roi de Castille. Il hérite du comté, conquiert León (1037), et impose tribut aux royaumes musulmans de Tolède, Saragosse et Séville. Pour la première fois, un chef castillan structure le jeu politique à l&#39;échelle de la péninsule."
@@ -481,14 +573,6 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Henri II</span><span class="saillant-date">1369</span></div>
         </div>
-        <div class="saillant-group" style="left:50.0896%;">
-            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
-                data-tooltip="&lt;strong&gt;Union Castille-Aragon&lt;/strong&gt;&#10;Ferdinand &amp; Isabelle (1479)&#10;L&#39;union des couronnes de Castille et d&#39;Aragon (1479) change l&#39;échelle du Parcours : de la Castille seule à l&#39;Espagne (Castille + Aragon + Catalogne + Valence + Majorque). C&#39;est un choc d&#39;hétérogénéité qui repousse le seuil d&#39;homogénéité — les fueros aragonais, les Cortès catalanes, le droit valencien ajoutent une diversité institutionnelle massive. C&#39;est précisément ce choc qui empêche les Rois Catholiques d&#39;être absolutistes à l&#39;échelle nationale : ils absolutisent la Castille mais PAS l&#39;Aragon."
-                onclick="showDetail(17)">
-                <span class="material-icons">open_in_full</span>
-            </div>
-            <div class="saillant-label"><span class="saillant-title">Union Castille-Aragon</span><span class="saillant-figure">Ferdinand &amp; Isabelle</span><span class="saillant-date">1479</span></div>
-        </div>
         <div class="saillant-group" style="left:51.2545%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Rois Catholiques (1492)&#10;Les Rois Catholiques (Isabelle de Castille, r. 1474-1504, et Ferdinand d&#39;Aragon, r. 1479-1516) sont le pic oligarchique espagnol — la figure exécutive la plus puissante dans le cadre de la monarchie composite. Letrados au Consejo Real, corregidores dans chaque ville, ordres militaires incorporés, Inquisition sous contrôle royal, conquête de Grenade (1492), découverte de l&#39;Amérique. Mais les fueros aragonais restent intacts — le test absolutiste n&#39;est PAS passé."
@@ -496,14 +580,6 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
                 <span class="material-icons">terrain</span>
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Rois Catholiques</span><span class="saillant-date">1492</span></div>
-        </div>
-        <div class="saillant-group" style="left:53.4050%;">
-            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
-                data-tooltip="&lt;strong&gt;Héritage habsbourgeois&lt;/strong&gt;&#10;Charles Quint (1516)&#10;En 1516, Charles Quint hérite de la Castille + Aragon + Pays-Bas + Lombardie + Naples/Sicile + Amériques. En 1519, il est élu empereur. L&#39;échelle de la polité explose. C&#39;est un choc d&#39;hétérogénéité massif, analogue au doublement napoléonien bavarois (1806), qui prolonge la phase oligarchique en repoussant le seuil d&#39;homogénéité. Les corrections d&#39;échelle progressives (1556, 1640, 1648, 1714) ramènent lentement l&#39;Espagne vers son échelle naturelle."
-                onclick="showDetail(19)">
-                <span class="material-icons">open_in_full</span>
-            </div>
-            <div class="saillant-label"><span class="saillant-title">Héritage habsbourgeois</span><span class="saillant-figure">Charles Quint</span><span class="saillant-date">1516</span></div>
         </div>
         <div class="saillant-group" style="left:59.8566%;">
             <div class="saillant-marker" style="background:#2E8B57;"
@@ -513,22 +589,6 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">L&#39;Invincible Armada</span><span class="saillant-date">1588</span></div>
         </div>
-        <div class="saillant-group" style="left:64.5161%;">
-            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
-                data-tooltip="&lt;strong&gt;Sécession du Portugal&lt;/strong&gt;&#10;Jean IV (1640)&#10;En 1640, le Portugal fait sécession définitive. La Catalogne se soumet temporairement à la France (1640-1659). Ce sont des corrections d&#39;échelle : les morceaux trop hétérogènes se détachent. Le Portugal est perdu définitivement — analogue à la perte de la Normandie par les Plantagenêt (1204)."
-                onclick="showDetail(22)">
-                <span class="material-icons">bolt</span>
-            </div>
-            <div class="saillant-label"><span class="saillant-title">Sécession du Portugal</span><span class="saillant-figure">Jean IV</span><span class="saillant-date">1640</span></div>
-        </div>
-        <div class="saillant-group" style="left:65.2330%;">
-            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
-                data-tooltip="&lt;strong&gt;Traité de Westphalie&lt;/strong&gt;&#10;Perte des Pays-Bas (1648)&#10;Le Traité de Westphalie (1648) reconnaît formellement l&#39;indépendance des Provinces-Unies. Les Pays-Bas espagnols du nord sont définitivement perdus. L&#39;Espagne se rapproche de son échelle naturelle."
-                onclick="showDetail(23)">
-                <span class="material-icons">bolt</span>
-            </div>
-            <div class="saillant-label"><span class="saillant-title">Traité de Westphalie</span><span class="saillant-figure">Perte des Pays-Bas</span><span class="saillant-date">1648</span></div>
-        </div>
         <div class="saillant-group" style="left:69.8925%;">
             <div class="saillant-marker" style="background:#2E8B57;"
                 data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Guerre de Succession d&#39;Espagne (1700)&#10;La GSE (1700-1714) oppose les élites centralisatrices castillanes (prébendière, dépendantes de l&#39;État central, pro-Bourbon) aux élites autonomistes aragonaises/catalanes (patrimoniale, fondées sur les fueros, pro-Habsbourg). Ni l&#39;une ni l&#39;autre ne l&#39;emporte en tant que telle — c&#39;est Philippe V, prince français (tiers extérieur aux factions espagnoles), qui impose un ordre nouveau par la Nueva Planta. Structurellement analogue aux Guerres de Religion françaises (Henri IV, tiers) et à la Guerre des Deux-Roses anglaise (Henri VII, tiers)."
@@ -536,14 +596,6 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
                 <span class="material-icons">local_fire_department</span>
             </div>
             <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Guerre de Succession d&#39;Espagne</span><span class="saillant-date">1700</span></div>
-        </div>
-        <div class="saillant-group" style="left:71.1470%;">
-            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
-                data-tooltip="&lt;strong&gt;Traité d&#39;Utrecht&lt;/strong&gt;&#10;Perte des possessions européennes (1714)&#10;Le Traité d&#39;Utrecht (1713-1714) dépouille l&#39;Espagne de TOUTES ses possessions européennes hors péninsule : Pays-Bas espagnols, Naples, Milan, Sardaigne, Sicile → Autriche/Savoie ; Gibraltar, Minorque → Angleterre. C&#39;est la correction d&#39;échelle décisive — l&#39;Espagne est enfin ramenée à la péninsule ibérique. Les décrets de Nueva Planta (1707-1716) achèvent l&#39;absolutisation dans la foulée."
-                onclick="showDetail(24)">
-                <span class="material-icons">bolt</span>
-            </div>
-            <div class="saillant-label"><span class="saillant-title">Traité d&#39;Utrecht</span><span class="saillant-figure">Perte des possessions européennes</span><span class="saillant-date">1714</span></div>
         </div>
         <div class="saillant-group" style="left:71.1470%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
@@ -628,6 +680,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -677,7 +730,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
 (function layoutSaillants() {
     const ROW_HEIGHT = 90;
     const MAX_ROWS = 6;
-    const BASE_TOP = 200;
+    const BASE_TOP = 315;
     const MARGIN = 6; // px of horizontal breathing room between labels
 
     const groups = Array.from(document.querySelectorAll('.saillant-group'));

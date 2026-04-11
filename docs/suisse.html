@@ -60,7 +60,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 
 /* Timeline container */
 .timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
-.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+.timeline-container { position:relative; min-width:2800px; min-height:685px; margin-bottom:10px; }
 
 /* Ticks */
 .tick { position:absolute; top:0; height:100%; pointer-events:none; }
@@ -100,6 +100,27 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
 .perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
 
 /* Narrow-phase indicator — visible marker for phases too short to see */
 .narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
@@ -398,6 +419,31 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
         </div>
         
         
+    <div class="area-chart" style="top:185px;">
+        
+        <div class="area-chart-label" style="left:0.8642%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:0.8642%;width:15.1852%;height:3.0px;"><div class="area-noyau" style="height:3.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km² — 3 cantons forestiers (Uri, Schwyz, Unterwald)"></div></div>
+        <div class="area-step-group" style="left:16.0494%;width:7.6543%;height:9.1px;"><div class="area-noyau" style="height:9.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~6 000 km² — 8 cantons (+ Lucerne, Zurich, Glaris, Zoug, Berne)"></div></div>
+        <div class="area-step-group has-marges" style="left:23.7037%;width:8.1481%;height:15.1px;"><div class="area-noyau" style="height:9.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~6 000 km²"></div><div class="area-marges" style="bottom:9.1px;height:6.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~4 000 km² — Bailliages communs (Argovie, Thurgovie, Baden)"></div></div>
+        <div class="area-step-group has-marges" style="left:31.8519%;width:3.9506%;height:19.7px;"><div class="area-noyau" style="height:12.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~8 000 km²"></div><div class="area-marges" style="bottom:12.1px;height:7.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~5 000 km² — 10 cantons (+ Fribourg, Soleure) + bailliages du Tessin"></div></div>
+        <div class="area-step-group has-marges" style="left:35.8025%;width:0.2469%;height:27.2px;"><div class="area-noyau" style="height:15.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km²"></div><div class="area-marges" style="bottom:15.1px;height:12.1px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~8 000 km² — 13 cantons + bailliages (maximum avant Marignan)"></div></div>
+        <div class="area-step-group has-marges" style="left:36.0494%;width:24.3210%;height:22.7px;"><div class="area-noyau" style="height:15.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km²"></div><div class="area-marges" style="bottom:15.1px;height:7.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~5 000 km² — Marignan — perte du Milanais, fin de l&#39;expansion"></div></div>
+        <div class="area-step-group has-marges" style="left:60.3704%;width:10.6173%;height:22.7px;"><div class="area-noyau" style="height:15.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km²"></div><div class="area-marges" style="bottom:15.1px;height:7.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~5 000 km² — Villmergen — transfert des bailliages aux cantons protestants"></div></div>
+        <div class="area-step-group has-marges" style="left:70.9877%;width:6.1728%;height:22.7px;"><div class="area-noyau" style="height:15.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km²"></div><div class="area-marges" style="bottom:15.1px;height:7.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~5 000 km² — Invasion française (avant transformation)"></div></div>
+        <div class="area-step-group" style="left:77.1605%;width:22.8395%;height:62.0px;"><div class="area-noyau" style="height:62.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~41 000 km² — Constitution fédérale — 22 cantons intégrés au noyau"></div></div>
+        
+        <div class="area-edge" style="left:16.0494%;height:9.1px;"></div>
+        <div class="area-edge" style="left:23.7037%;height:15.1px;"></div>
+        <div class="area-edge" style="left:31.8519%;height:19.7px;"></div>
+        <div class="area-edge" style="left:35.8025%;height:27.2px;"></div>
+        <div class="area-edge" style="left:36.0494%;height:27.2px;"></div>
+        <div class="area-edge" style="left:60.3704%;height:22.7px;"></div>
+        <div class="area-edge" style="left:70.9877%;height:22.7px;"></div>
+        <div class="area-edge" style="left:77.1605%;height:62.0px;"></div>
+    </div>
+        
+        
         <div class="saillant-group" style="left:8.3951%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Le Bundesbrief (1291)&#10;Le Bundesbrief du 1er août 1291 unit les trois cantons forestiers (Uri, Schwyz, Unterwalden) dans une « Ligue perpétuelle » (Ewiger Bund) de défense mutuelle, refusant tout juge extérieur et engageant les communautés à résoudre collectivement leurs conflits. C&#39;est le premier centre politique supra-régional effectif de l&#39;espace suisse."
@@ -553,6 +599,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -602,7 +649,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
 (function layoutSaillants() {
     const ROW_HEIGHT = 90;
     const MAX_ROWS = 6;
-    const BASE_TOP = 200;
+    const BASE_TOP = 270;
     const MARGIN = 6; // px of horizontal breathing room between labels
 
     const groups = Array.from(document.querySelectorAll('.saillant-group'));

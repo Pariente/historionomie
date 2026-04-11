@@ -49,6 +49,7 @@ La méthode la plus efficace pour mapper le Parcours d'une nation non encore ana
 
 **Ordre de recherche recommandé :**
 
+0. **Établir la superficie de référence** — identifier les changements territoriaux majeurs (conquêtes, pertes, unions dynastiques) et les coder en noyau + marges (voir ci-dessous). Cela permet d'identifier les perturbations territoriales avant même d'analyser les phases.
 1. **Identifier le 1er monarque oligarchique** — c'est le saillant le mieux documenté (premier souverain disposant d'un fisc permanent + armée permanente + administration). Les sources historiques et archéologiques permettent généralement de l'identifier avec confiance.
 2. **Remonter ~200 ans** pour chercher l'éveil féodal (premier chef supra-régional). Cette phase étant pauvre en traces, on la reconstruit souvent a posteriori à partir de la date du 1er monarque oligarchique.
 3. **Identifier la guerre sociale** — conflit entre deux factions d'élites, résolu par l'émergence d'un tiers. La guerre sociale est souvent très visible dans les sources.
@@ -56,6 +57,36 @@ La méthode la plus efficace pour mapper le Parcours d'une nation non encore ana
 5. **Chercher le pic absolutiste** (~100-150 ans après le 1er monarque absolu) et l'Ancien Régime qui suit.
 6. **Chercher la RN** — si elle a eu lieu.
 7. **Vérifier les durées** — tout écart significatif par rapport aux ~200 ans typiques signale une perturbation à identifier.
+
+### Superficie de référence (noyau + marges)
+
+Pour chaque nation, on établit la **superficie de référence** au fil du temps : la taille du territoire que le souverain doit effectivement gouverner. Cette superficie se décompose en :
+
+- **Noyau territorial** : le territoire culturellement homogène avec le cœur de la nation (même langue, même droit). C'est le territoire qui *est* la nation.
+- **Marges** : les territoires hétérogènes sous contrôle de la même couronne (langue différente, droit différent). C'est le territoire que la nation *possède* sans l'avoir assimilé.
+
+**Comment identifier le noyau et les marges :**
+- Le noyau est défini par l'homogénéité culturelle, pas par le contrôle politique. L'Angleterre d'oïl est le noyau français, même avant que le roi n'en contrôle la majorité.
+- Les marges sont les territoires où l'homogénéisation culturelle n'est pas accomplie : langue différente (Occitanie pour la France, Aragon pour l'Espagne), religion différente, institutions propres.
+- Un territoire peut transiter de marge à noyau quand l'homogénéisation y est accomplie. Approximer par une date ponctuelle (ex. : Galles → noyau en 1536 avec les Laws in Wales Acts).
+
+**Pourquoi c'est utile :**
+- Les expansions territoriales (chocs d'hétérogénéité) sont directement visibles sur le graphique de superficie → prolongent la phase en cours.
+- Les contractions territoriales (corrections d'échelle) sont aussi visibles → accélèrent la phase en cours.
+- Le ratio marges/noyau indique la charge d'hétérogénéité qui pèse sur le Parcours.
+
+**Données dans le fichier parcours.md :**
+La superficie est codée dans une section `## Superficie de référence` avec le format `année: noyau+marges | label`. Le label décrit les marges (pas le total). Quand il n'y a pas de marges, pas de `+`. Les valeurs sont en milliers de km².
+
+```
+## Superficie de référence
+- unit: milliers de km²
+- 1066: 130+30 | Normandie
+- 1204: 130+25 | Gascogne (perte de la Normandie)
+- 1536: 151+1 | Calais (Galles rejoint le noyau)
+```
+
+**Première approximation (recommandation Alyocha) :** utiliser la superficie seule, sans pondérer par la population — les données de population historique sont trop incertaines.
 
 **Règle d'or : le test discriminant prime sur les durées.** Ne pas ajuster l'identification des saillants pour obtenir des durées typiques. Appliquer d'abord le test discriminant de chaque transition de phase, puis expliquer les écarts de durée par des perturbations. Les durées atypiques sont toujours le signal d'une perturbation — pas d'une erreur d'identification. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme : revérifier le test discriminant.
 

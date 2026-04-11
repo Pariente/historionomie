@@ -17,6 +17,21 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (noyau = lagune puis Vénétie culturellement vénitienne ; marges = Stato da Màr + Terraferma non intégrée)
+- 726: 1 | Lagune (cité-État naissante)
+- 1000: 1 | Lagune (début de l'expansion maritime)
+- 1204: 1+15 | Stato da Màr (IVe croisade — Crète, Eubée, îles Ioniennes)
+- 1428: 1+40 | + Terraferma (Bergame, Brescia, Vérone, Padoue, Frioul)
+- 1509: 1+40 | Avant Agnadello (maximum territorial)
+- 1516: 26+15 | Stato da Màr (Terraferma rejoint le noyau — fidélité démontrée après Agnadello)
+- 1573: 26+10 | - Chypre (cédé aux Ottomans)
+- 1669: 26 | Perte de la Crète — fin du Stato da Màr (noyau vénète seul)
+- 1718: 26+5 | + Morée temporaire (Passarowitz)
+- 1797: 0 | Dissolution par Bonaparte
+
+---
+
 ## Phase : Pré-féodale
 - type: phase
 - phase: prefeodale
@@ -166,6 +181,32 @@
 - alternatives: Le « 1er monarque oligarchique » vénitien est le système post-1032 plus que la personne du doge. Venise n'a pas de roi — le pouvoir est collégial dès le début de la phase oligarchique. C'est analogue à Israël post-exil, où la phase oligarchique progresse sans roi.
 - summary: Domenico Contarini (doge 1043-1070) est le premier doge à gouverner de manière stable sous le régime post-dynastique, avec un fisc commercial permanent, une flotte permanente, et une administration en cours d'institutionnalisation.
 
+#### Saillant : Stato da Màr
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1204
+- figure: Enrico Dandolo
+- subtitle: IVe croisade
+- title: Stato da Màr
+- confidence: high
+- summary: Le détournement de la IVe croisade (1204) crée l'empire maritime vénitien : Crète, Eubée, îles Ioniennes, comptoirs. La superficie sous contrôle vénitien passe de ~1 000 à ~16 000 km², créant un exutoire colonial qui prolongera la phase oligarchique pendant des siècles.
+- description: Le détournement de la IVe croisade vers Constantinople par le doge Enrico Dandolo crée d'un coup un empire maritime couvrant l'est de la Méditerranée. Venise obtient les trois huitièmes de l'Empire byzantin, dont la Crète, l'Eubée (Négrepont), les îles Ioniennes et un réseau de comptoirs commerciaux. Le Stato da Màr est profondément hétérogène : populations grecques, orthodoxes, avec des institutions locales distinctes de la métropole lagunaire. Cet exutoire maritime absorbe l'énergie des élites vénitiennes — conquête, administration, commerce — et retarde la polarisation interne. C'est le même mécanisme que la Reconquista espagnole ou la guerre de Cent Ans anglaise : l'expansion prolonge la phase en cours.
+
+#### Saillant : Conquête de la Terraferma
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1428
+- figure: Francesco Foscari
+- subtitle: Terraferma
+- title: Conquête de la Terraferma
+- confidence: high
+- summary: Venise conquiert un vaste arrière-pays continental (Bergame, Brescia, Vérone, Padoue, Frioul) entre 1404 et 1428. La superficie double à nouveau, ajoutant un exutoire terrestre au Stato da Màr maritime et prolongeant encore l'essor oligarchique.
+- description: La conquête de la Terraferma (1404-1428) transforme Venise d'une cité-État maritime en une puissance territoriale majeure en Italie du Nord. Bergame, Brescia, Vérone, Padoue, Vicence, le Frioul passent sous contrôle vénitien. Ce deuxième choc d'hétérogénéité ajoute une population continentale, avec ses propres traditions juridiques et politiques, à l'empire maritime existant. Le mécanisme de prolongement est double : l'expansion terrestre offre un nouvel exutoire aux élites (guerres contre Milan, administration des provinces) et retarde la polarisation qui ne se cristallisera qu'après Agnadello (1509).
+
 #### Saillant : Pic oligarchique — Foscari et l'apogée de la Terraferma
 - type: saillant
 - start: 1440
@@ -244,6 +285,18 @@
 - title: Absolutisation
 - summary: La suprématie des Inquisiteurs d'État s'installe après la résolution de la guerre sociale. Pas de DGRO — les patriciens n'ont pas d'assise territoriale depuis laquelle se révolter.
 - description: L'absolutisation vénitienne est « fluide » — elle se fait sans le choc dramatique d'une Dernière Grande Révolte Oligarchique (DGRO), parce que les patriciens n'ont pas d'assise territoriale depuis laquelle se révolter. Tous vivent dans le lagon, contrairement aux frondeurs français qui disposaient de Bordeaux ou aux lords anglais du Pilgrimage of Grace. La suprématie des Inquisiteurs s'installe progressivement après 1669, fondée sur leur réseau de surveillance et sur la continuité administrative des cittadini.
+
+#### Saillant : Perte de la Crète
+- type: saillant
+- perturbation: true
+- mechanism: correction_echelle
+- effect: acceleration
+- start: 1669
+- subtitle: Chute de Candie
+- title: Perte de la Crète
+- confidence: high
+- summary: La chute de Candie (1669) après un siège de 21 ans met fin au Stato da Màr effectif. Venise perd sa principale colonie, l'exutoire maritime se ferme, et l'homogénéisation territoriale forcée accélère la résolution de la guerre sociale.
+- description: Le siège de Candie (1648-1669), le plus long de l'histoire européenne, se termine par la reddition vénitienne face aux Ottomans. La Crète, possession vénitienne depuis 1204, était la pièce maîtresse du Stato da Màr — son grenier à blé, sa base navale stratégique, le cœur de l'empire colonial. Sa perte ramène Venise à une échelle essentiellement lagunaire et terrestre, fermant l'exutoire maritime qui avait prolongé la phase oligarchique pendant des siècles. Cette correction d'échelle accélère la résolution de la guerre sociale en cours : sans l'empire colonial à défendre, les factions doivent se restructurer autour du territoire restant, et les Inquisiteurs d'État — qui ont coordonné l'effort de guerre — émergent comme le « tiers » institutionnel qui résout le conflit.
 
 #### Saillant : 1er monarque absolu — Inquisiteurs d'État
 - type: saillant

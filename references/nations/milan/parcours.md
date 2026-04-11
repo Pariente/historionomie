@@ -16,6 +16,22 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (format: noyau+marges — le label décrit les marges)
+- 888: 2 | Archevêché de Milan (contado immédiat)
+- 979: 5 | Extension archiépiscopale (Landolfo II)
+- 1097: 8 | Commune de Milan + contado
+- 1183: 8 | Paix de Constance (autonomie confirmée)
+- 1277: 10 | Seigneurie Visconti (début)
+- 1395: 10+20 | 26 cités (duché de Gian Galeazzo — maximum)
+- 1402: 10 | Mort de Gian Galeazzo — fragmentation immédiate
+- 1450: 10+10 | Restauration Sforza (duché reconstitué partiellement)
+- 1499: 0 | Chute des Sforza — occupation française
+- 1535: 15 | Sous domination espagnole (Lombardie)
+- 1796: 15 | Avant occupation napoléonienne
+
+---
+
 ## Phase : Pré-féodale
 - type: phase
 - phase: prefeodale
@@ -225,6 +241,19 @@
 - title: Impérialisme absolutiste
 - summary: Gian Galeazzo (1385-1402) porte Milan à l'apogée : titre ducal (1395), 26 villes, revenus de 1,2M florins d'or. Effondrement à sa mort (1402). Reconstruction par Filippo Maria (1412-1447). Remontrance : République Ambrosienne (1447-1450). Reprise par les Sforza (1450).
 
+#### Saillant : Empire Visconti
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1395
+- figure: Gian Galeazzo Visconti
+- subtitle: Duché de Milan
+- title: Empire Visconti
+- confidence: high
+- summary: Gian Galeazzo obtient le titre ducal (1395) et contrôle 26 cités de Gênes à Bologne (~30 000 km²). L'expansion triple la superficie et crée un empire hétérogène — Gênois, Bolonais, Pisans ne sont pas des Milanais. Ce choc d'hétérogénéité prolonge la phase absolutiste.
+- description: Le duché de Milan sous Gian Galeazzo (1395-1402) s'étend bien au-delà du contado lombard originel pour englober 26 cités de l'Italie du Nord, de Gênes à l'ouest à Bologne à l'est, de Belluno au nord à Sienne au sud. La superficie passe de ~10 000 km² (cœur lombard) à ~30 000 km². Les populations des cités conquises — Gênes, Bologne, Pise, Sienne, Pérouse — ont chacune leurs propres institutions, traditions et identités. Ce choc d'hétérogénéité prolonge la phase absolutiste en offrant un exutoire à l'expansion et en élevant le seuil d'homogénéité. Mais l'empire est entièrement personnel : il s'effondre instantanément à la mort de Gian Galeazzo en 1402.
+
 #### Saillant : Pic absolutiste — Gian Galeazzo Visconti
 - type: saillant
 - start: 1395
@@ -235,14 +264,18 @@
 - confidence: high
 - summary: Premier duc de Milan (1395), 26 villes, Consiglio Segreto, 2M florins de revenus annuels. En passe d'unifier l'Italie du nord quand il meurt (1402). L'effondrement immédiat confirme le caractère personnel de l'absolutisme.
 
-#### Saillant : Fin de l'expansion — mort de Gian Galeazzo
+#### Saillant : Fragmentation de l'empire Visconti
 - type: saillant
+- perturbation: true
+- mechanism: correction_echelle
+- effect: acceleration
 - start: 1402
 - figure: Gian Galeazzo Visconti
 - subtitle: Mort de Gian Galeazzo
-- title: Fin de l'expansion
+- title: Fragmentation de l'empire Visconti
 - confidence: high
-- summary: L'empire s'effondre instantanément. La périphérie (Vérone, Padoue, Bologne, Pise, Sienne) se détache. Le cœur lombard survit — problème d'échelle classique.
+- summary: L'empire s'effondre instantanément à la mort de Gian Galeazzo (1402). La périphérie (Vérone, Padoue, Bologne, Pise, Sienne) se détache, ramenant Milan à son cœur lombard (~10 000 km²). Correction d'échelle classique qui accélère l'entrée dans l'Ancien Régime.
+- description: La mort de Gian Galeazzo en septembre 1402 provoque la fragmentation immédiate de l'empire. Les cités périphériques — Vérone, Padoue (absorbées par Venise), Bologne, Pise, Sienne, Pérouse — reprennent leur indépendance. Milan retourne à son cœur lombard d'environ 10 000 km². Cette correction d'échelle est l'exact symétrique de l'expansion de 1395 : la contraction ramène le duché à sa taille « naturelle » et accélère le Parcours en éliminant l'hétérogénéité périphérique. Le parallèle avec la perte de la Normandie (1204) pour l'Angleterre ou le traité d'Utrecht (1714) pour l'Espagne est direct.
 
 #### Saillant : Remontrance — République Ambrosienne
 - type: saillant
@@ -261,6 +294,19 @@
 - end: 1499
 - title: Ancien Régime
 - summary: La Paix de Lodi (1454) stabilise le duché. Les Sforza consolident les institutions (Consiglio Segreto comme magistrature suprême) et développent un mécénat extraordinaire (Léonard, Bramante). Mais la sédimentation des élites, la pression fiscale de Ludovico il Moro et le mécontentement populaire préparent un AR qui sera avorté par les guerres d'Italie. Le fait que la population accueille les Français (1499) « exaspérée par la fiscalité oppressive » est un marqueur d'AR — mais l'explosion est exogène (invasion), pas endogène (révolution).
+
+#### Saillant : Restauration Sforza
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1450
+- figure: Francesco Sforza
+- subtitle: Restauration Sforza
+- title: Restauration Sforza
+- confidence: high
+- summary: Francesco Sforza reconquiert Milan et reconstitue partiellement le duché (~20 000 km²), re-ajoutant des marges hétérogènes (Pavie, Lodi, Parme, Plaisance) au noyau lombard après la fragmentation de 1402.
+- description: Francesco Sforza, condottiere au service de Venise puis gendre de Filippo Maria Visconti, s'empare de Milan en 1450 après avoir écrasé la République Ambrosienne. Il reconstitue un duché couvrant environ 20 000 km² — plus petit que l'empire de Gian Galeazzo (30 000 km²) mais significativement plus grand que le noyau lombard seul (~10 000 km²). Les cités reconquises (Pavie, Lodi, Parme, Plaisance) ont connu 50 ans d'autonomie et constituent à nouveau des marges hétérogènes. Cette re-expansion prolonge la phase absolutiste en offrant un exutoire territorial et en élevant le seuil d'homogénéité.
 
 #### Saillant : Invasion française
 - type: saillant
@@ -410,6 +456,7 @@
 - perturbation: true
 - mechanism: choc_exogene
 - effect: acceleration
+- territorial: false
 - start: 1796
 - figure: Napoléon Bonaparte
 - subtitle: Absolutisation forcée

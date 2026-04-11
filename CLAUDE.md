@@ -89,9 +89,18 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 - Y a-t-il une Glorieuse Révolution qui ancre le parlementarisme ?
 
 **Pour identifier les perturbations :**
-- Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, identifier le **mécanisme** (choc d'hétérogénéité, choc exogène, insuffisance interne, exutoire continu) et l'**effet** (prolongement, accélération, avortement, reboot).
+- Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, identifier le **mécanisme** (choc d'hétérogénéité, choc exogène, insuffisance interne, correction d'échelle, exutoire continu) et l'**effet** (prolongement, accélération, avortement, reboot).
 - Si choc exogène : les institutions sont-elles détruites (→ reboot) ? Une transition est-elle bloquée (→ avortement) ? Du territoire/exutoire est-il perdu (→ accélération) ? Le Parcours est-il gelé temporairement (→ prolongement) ?
 - Y a-t-il un exutoire continu (empire, colonies, expansion) qui prolonge la phase en cours ?
+- **La perturbation est-elle territoriale ?** Correspond-elle à un changement de superficie visible ? Si oui, elle doit être reflétée dans les données de superficie ET codée comme saillant avec le bon mécanisme (choc_heterogeneite pour les expansions, correction_echelle pour les contractions). Si la perturbation est culturelle ou institutionnelle sans changement de superficie (ex. : hellénisation d'Israël, occupation napoléonienne de Milan), ajouter `territorial: false`.
+- **Le timing de l'exutoire colonial compte** : une expansion coloniale qui arrive pendant une phase active (féodale, oligarchique, absolutiste) prolonge cette phase. Si elle arrive après la RN (phase parlementaire), elle ne perturbe pas le Parcours.
+
+**Pour établir la superficie de référence :**
+- Identifier les changements territoriaux majeurs : conquêtes, unions dynastiques, pertes de territoire, traités.
+- Pour chaque changement, estimer la superficie en milliers de km² et la décomposer en **noyau** (culturellement homogène) et **marges** (hétérogènes).
+- Le noyau est défini par l'homogénéité culturelle (langue, droit), pas par le contrôle politique. Exemple : la France d'oïl est le noyau français ; le Languedoc occitanophone est une marge.
+- Un territoire peut transiter de marge à noyau (ex. : pays de Galles en 1536, Écosse en 1707, Languedoc en 1539). Approximer par une date ponctuelle.
+- Utiliser la **superficie seule** comme première approximation (pas de pondération par la population).
 
 ### Étape 2bis : Vérifier la cohérence des identifications
 
@@ -108,7 +117,10 @@ Avant de produire les fichiers, appliquer ces contrôles de cohérence :
 ### Étape 3 : Produire le fichier `parcours.md`
 
 Créer le fichier structuré `references/nations/<nation>/parcours.md` avec :
+- La section `## Superficie de référence` avec les données noyau+marges (voir `references/parcours.md` pour le format)
 - Les phases, sous-phases, saillants et perturbations identifiés
+- Les perturbations territoriales codées avec le bon mécanisme (`choc_heterogeneite` pour les expansions, `correction_echelle` pour les contractions) et un titre spécifique (pas « Choc d'hétérogénéité » ou « Accélérateur » mais le nom de l'événement : « Empire Plantagenêt », « Perte de la Normandie »)
+- Le flag `territorial: false` sur les perturbations non territoriales (culturelles ou institutionnelles)
 - Les champs normalisés (type, start, end, title, summary, description, figure, confidence)
 - Des résumés (summary) en 1-2 phrases et des descriptions (description) en 3-6 phrases construites — pas de style télégraphique
 

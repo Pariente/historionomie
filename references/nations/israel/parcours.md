@@ -18,6 +18,25 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (noyau = territoire culturellement israélite homogène ; marges = territoires conquis ou hétérogènes)
+- -1100: 5+5 | Galilée, Transjordanie (tribus du nord + tampon oriental — noyau : collines de Samarie + Juda)
+- -1000: 10+30 | Édom, Moab, Ammon, Philistie, rive droite du Jourdain (conquêtes de David-Salomon — Galilée rejoint le noyau)
+- -930: 7+3 | Transjordanie (schisme — le Parcours suit le royaume du Nord : noyau = Samarie + Galilée)
+- -885: 7+5 | Galaad + Transjordanie (expansion omride)
+- -770: 7+13 | Galaad + territoires syriens + proto-Décapole (maximum de Jéroboam II)
+- -722: 5 | Juda seul (destruction du royaume du Nord — transfert du Parcours à Jérusalem)
+- -640: 5 | Juda sous Josias (tentative d'expansion avortée)
+- -586: 0 | Exil babylonien (destruction de Jérusalem)
+- -520: 2 | Province de Yehoud (minuscule autour de Jérusalem)
+- -140: 5+15 | Galilée, Idumée, Samarie, Galaad (expansion hasmonéenne — conversions forcées)
+- ~-30: 9+11 | Idumée, Samarie, villes côtières, Décapole (Galilée rejoint le noyau — judéisation accomplie sous Hérode)
+- 4: 4+3 | Idumée, Samarie (division hérodienne — Judée + Samarie + Idumée aux procurateurs)
+- 70: 0 | Destruction du Second Temple
+- 135: 0 | Liquidation hadrienne (Bar Kokhba)
+
+---
+
 ## Phase : Féodale
 - type: phase
 - phase: feodale
@@ -284,14 +303,15 @@
 - summary: Après la mission de Néhémie, les tensions internes montent crescendo — l'assassinat du frère du Grand Prêtre dans le Temple même en témoigne — et deux factions se cristallisent (pro-achéménide vs nationaliste yahviste), mais la guerre sociale naissante est interrompue par la conquête macédonienne de -332.
 - description: Après la fin de la mission de Néhémie en -433, les tensions internes s'intensifient progressivement. Le Grand Prêtre Johanan assassine son propre frère Joshua dans le Temple même (~-400), signe d'un conflit d'élites devenu violent. Bagoas, gouverneur perse, profane le Temple en représailles. Deux factions se cristallisent : la faction pro-achéménide, intégrée aux structures impériales perses, et la faction nationaliste yahviste, attachée à l'autonomie religieuse et politique. La polarisation évolue vers une guerre sociale aux alentours de -350, mais celle-ci est brutalement interrompue par la conquête macédonienne de -332 avant d'avoir pu se résoudre par l'émergence d'un tiers.
 
-#### Saillant : Invasion macédonienne
+#### Saillant : Hellénisation
 - type: saillant
 - perturbation: true
-- mechanism: choc_heterogeneite
+- mechanism: choc_exogene
 - effect: prolongement
+- territorial: false
 - start: -332
 - subtitle: Conquête d'Alexandre
-- title: Invasion macédonienne
+- title: Hellénisation
 - confidence: high
 - summary: La conquête d'Alexandre le Grand interrompt la guerre sociale avant sa résolution et ouvre le prolongement hellénistique.
 - description: La guerre sociale entre faction pro-achéménide et faction nationaliste yahviste était engagée depuis -350 (l'assassinat de Joshua par Johanan dans le Temple illustre l'intensité du conflit). Mais la conquête macédonienne de -332 interrompt le processus avant toute résolution : les circuits achéménides sur lesquels reposait la puissance des prébendières sont détruits, et la société est brutalement exposée à un nouveau cadre culturel — l'hellénisme — qui recompose entièrement les clivages. Le Parcours ne régresse pas (les institutions survivent), mais la polarisation reprend à zéro sous le prolongement hellénistique.

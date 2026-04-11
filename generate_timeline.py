@@ -44,6 +44,7 @@ def parse_parcours(filepath: str) -> dict:
         "metadata": {},
         "prephase": None,
         "elements": [],  # flat list of phases, subphases, saillants, perturbations
+        "area_data": [],  # superficie de référence data points
     }
 
     # Extract title (first H1)
@@ -87,6 +88,24 @@ def parse_parcours(filepath: str) -> dict:
                 "label": label,
                 "description": fields.get("description", ""),
             }
+            continue
+
+        # Superficie de référence
+        if "Superficie" in heading_text:
+            area_data = []
+            for line in sec_lines:
+                m = re.match(r"^- (~?\-?\d+)\s*:\s*(\d+)(?:\+(\d+))?\s*(?:\|\s*(.*))?", line)
+                if m:
+                    year, _ = parse_date(m.group(1))
+                    noyau = int(m.group(2))
+                    marges = int(m.group(3)) if m.group(3) else 0
+                    label = m.group(4).strip() if m.group(4) else ""
+                    if year is not None:
+                        area_data.append({
+                            "year": year, "noyau": noyau, "marges": marges,
+                            "area": noyau + marges, "label": label,
+                        })
+            result["area_data"] = sorted(area_data, key=lambda d: d["year"])
             continue
 
         # Phase, perturbation, subphase, saillant — parse subsections
@@ -227,6 +246,7 @@ def parse_element(heading: str, body_lines: list) -> dict:
         "perturbation": fields.get("perturbation", ""),
         "mechanism": fields.get("mechanism", ""),
         "effect": fields.get("effect", ""),
+        "territorial": fields.get("territorial", ""),
     }
 
 
@@ -573,13 +593,127 @@ def generate_html(data: dict) -> str:
             <span class="perturbation-label">{escape_html(pt['title'])}</span>
         </div>"""
 
+    # Build area chart (superficie de référence)
+    area_chart_html = ""
+    has_area_data = bool(data.get("area_data"))
+    # Pre-compute whether territorial perturbations exist (for CSS layout)
+    _area_mechs = {"choc_heterogeneite", "correction_echelle", "choc_exogene"}
+    _area_effects = {"prolongement", "acceleration"}
+    has_area_saillants = has_area_data and any(
+        e.get("perturbation") == "true" and e.get("mechanism") in _area_mechs and e.get("effect") in _area_effects and e.get("territorial") != "false"
+        for e in elements if e["kind"] == "saillant")
+    area_chart_top = 230 if has_area_saillants else 185
+    if has_area_data:
+        area_data = data["area_data"]
+        max_area = max(d["area"] for d in area_data)
+        AREA_MAX_PX = 62  # max pixel height for the tallest step
+
+        steps_html = ""
+        edges_html = ""
+
+        for i, d in enumerate(area_data):
+            x_start = d["year"]
+            x_end = area_data[i + 1]["year"] if i + 1 < len(area_data) else timeline_end
+
+            left_pct = ((x_start - timeline_start) / timeline_span) * 100
+            width_pct = ((x_end - x_start) / timeline_span) * 100
+            total_px = (d["area"] / max_area) * AREA_MAX_PX
+            noyau_px = (d["noyau"] / max_area) * AREA_MAX_PX
+            marges_px = (d["marges"] / max_area) * AREA_MAX_PX
+            has_marges = d["marges"] > 0
+
+            # Individual tooltips
+            noyau_fmt = f"~{d['noyau'] * 1000:,}".replace(",", " ") + " km²"
+            label_text = d.get("label", "")
+            if has_marges:
+                noyau_tooltip = f"&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;{escape_html(noyau_fmt)}"
+                marges_fmt = f"~{d['marges'] * 1000:,}".replace(",", " ") + " km²"
+                marges_line = escape_html(f"{marges_fmt} — {label_text}") if label_text else escape_html(marges_fmt)
+                marges_tooltip = f"&lt;strong&gt;Marges&lt;/strong&gt;&#10;{marges_line}"
+            else:
+                noyau_line = escape_html(f"{noyau_fmt} — {label_text}") if label_text else escape_html(noyau_fmt)
+                noyau_tooltip = f"&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;{noyau_line}"
+
+            # Stacked chart — noyau + marges
+            group_class = " has-marges" if has_marges else ""
+            noyau_div = f'<div class="area-noyau" style="height:{noyau_px:.1f}px;" data-tooltip="{noyau_tooltip}"></div>'
+            marges_div = f'<div class="area-marges" style="bottom:{noyau_px:.1f}px;height:{marges_px:.1f}px;" data-tooltip="{marges_tooltip}"></div>' if has_marges else ""
+
+            steps_html += f"""
+        <div class="area-step-group{group_class}" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;height:{total_px:.1f}px;">{noyau_div}{marges_div}</div>"""
+
+            # Vertical edges at transitions
+            if i > 0:
+                prev_total = (area_data[i - 1]["area"] / max_area) * AREA_MAX_PX
+                edge_h = max(total_px, prev_total)
+                edges_html += f"""
+        <div class="area-edge" style="left:{left_pct:.4f}%;height:{edge_h:.1f}px;"></div>"""
+
+        # Align label with first phase band
+        first_phase_left = 0
+        if phases:
+            fp_start = phases[0]["start"] if phases[0]["start"] is not None else timeline_start
+            first_phase_left = ((fp_start - timeline_start) / timeline_span) * 100
+
+        # area_chart_html will be finalized after we know if there are area saillants
+        area_chart_inner = f"""
+        <div class="area-chart-label" style="left:{first_phase_left:.4f}%;">Superficie de référence (×1000 km²)</div>
+        {steps_html}
+        {edges_html}"""
+
     # Build saillant markers — row assignment is done in JS after measuring real label widths
     dated_saillants = [(s, ((s["start"] - timeline_start) / timeline_span) * 100)
                        for s in saillants if s["start"] is not None]
     dated_saillants.sort(key=lambda x: x[1])
 
+    # Split territorial perturbations (shown above area chart) from regular saillants
+    # All external/territorial mechanisms go above the chart; only insuffisance_interne stays in the main row
+    area_saillant_mechanisms = {"choc_heterogeneite", "correction_echelle", "choc_exogene"}
+    if has_area_data:
+        area_saillant_effects = {"prolongement", "acceleration"}
+        def _is_area_saillant(s):
+            return (s.get("perturbation") == "true" and s.get("mechanism") in area_saillant_mechanisms
+                    and s.get("effect") in area_saillant_effects and s.get("territorial") != "false")
+        area_saillants_list = [(s, pct) for s, pct in dated_saillants if _is_area_saillant(s)]
+        regular_saillants = [(s, pct) for s, pct in dated_saillants if not _is_area_saillant(s)]
+    else:
+        area_saillants_list = []
+        regular_saillants = dated_saillants
+
+    # Finalize area chart HTML with computed top position
+    if has_area_data:
+        area_chart_html = f"""
+    <div class="area-chart" style="top:{area_chart_top}px;">
+        {area_chart_inner}
+    </div>"""
+
+    # Build area saillant markers (compact, above area chart)
+    area_saillants_html = ""
+    for (s, left_pct) in area_saillants_list:
+        mechanism = s.get("mechanism", "")
+        effect = s.get("effect", "")
+        bg_color = PERTURBATION_EFFECT_COLORS.get(effect, "#c0392b")
+        if effect == "reboot":
+            icon_name = "restart_alt"
+        else:
+            icon_name = PERTURBATION_MECHANISM_ICONS.get(mechanism, SAILLANT_ICON_AVORTEMENT)
+        icon_class = 'material-symbols-outlined' if icon_name in ('crown', 'skull', 'swords') else 'material-icons'
+        frise_subtitle = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else "")
+        tooltip_label = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else s["title"])
+        start_label = format_year(s["start"], s["start_approx"])
+
+        area_saillants_html += f"""
+        <div class="area-saillant-group" style="left:{left_pct:.4f}%;">
+            <div class="saillant-marker perturbation-marker" style="background:{bg_color};"
+                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html(s['summary'])}"
+                onclick="showDetail({elements.index(s)})">
+                <span class="{icon_class}">{icon_name}</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">{escape_html(s['title'])}</span><span class="saillant-date">{start_label}</span></div>
+        </div>"""
+
     saillant_markers_html = ""
-    for (s, left_pct) in dated_saillants:
+    for (s, left_pct) in regular_saillants:
         color = PHASE_COLORS.get(s["phase"], "#333")
 
         # subtitle (shown on frise) falls back to figure, then nothing
@@ -721,7 +855,7 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 
 /* Timeline container */
 .timeline-wrapper {{ padding:1.5rem 2rem 0.5rem; overflow-x:auto; }}
-.timeline-container {{ position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }}
+.timeline-container {{ position:relative; min-width:2800px; min-height:{area_chart_top + 500 if has_area_data else 600}px; margin-bottom:10px; }}
 
 /* Ticks */
 .tick {{ position:absolute; top:0; height:100%; pointer-events:none; }}
@@ -761,6 +895,27 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }}
 .perturbation-overlay.narrow .perturbation-label {{ font-size:0.45rem; }}
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart {{ position:absolute; left:0; width:100%; height:70px; pointer-events:none; }}
+.area-step-group {{ position:absolute; bottom:0; }}
+.area-noyau {{ position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }}
+.area-noyau:hover {{ background:rgba(130,110,85,0.38); }}
+.area-step-group.has-marges .area-noyau {{ border-top:1px dashed rgba(130,110,85,0.30); }}
+.area-marges {{ position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }}
+.area-marges:hover {{ background:rgba(175,165,150,0.24); }}
+.area-edge {{ position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }}
+.area-chart-label {{ position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }}
+.area-saillant-group {{ position:absolute; top:188px; z-index:15; }}
+.area-saillant-label {{ position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }}
+.area-saillant-label .saillant-figure {{ font-size:0.55rem; color:#666; display:block; }}
+.area-saillant-label .saillant-date {{ font-size:0.5rem; color:#999; display:block; font-weight:600; }}
 
 /* Narrow-phase indicator — visible marker for phases too short to see */
 .narrow-indicator {{ position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }}
@@ -918,6 +1073,8 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
         {phase_bands_html}
         {subphase_bands_html}
         {perturbation_html}
+        {area_chart_html}
+        {area_saillants_html}
         {saillant_markers_html}
     </div>
 </div>
@@ -930,6 +1087,7 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
     <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    {"<span class='legend-item'><span class='legend-swatch' style=" + '"' + "background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);" + '"' + "></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style=" + '"' + "background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);" + '"' + "></span>Marges</span>" if has_area_data else ""}
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -979,7 +1137,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {{
 (function layoutSaillants() {{
     const ROW_HEIGHT = 90;
     const MAX_ROWS = 6;
-    const BASE_TOP = 200;
+    const BASE_TOP = {area_chart_top + 85 if has_area_data else 200};
     const MARGIN = 6; // px of horizontal breathing room between labels
 
     const groups = Array.from(document.querySelectorAll('.saillant-group'));

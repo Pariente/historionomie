@@ -13,6 +13,29 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (format: noyau oïl + marges oc/breton/germanique)
+- ~987: 5 | Domaine royal capétien (Île-de-France)
+- 1108: 12 | Consolidation de l'Île-de-France (Louis VI)
+- 1204: 52 | Confiscation des terres Plantagenêt (Normandie, Anjou, Maine — oïl)
+- 1214: 80 | Après Bouvines — domaine royal triplé
+- 1229: 80+60 | Languedoc (croisade des Albigeois — occitanophone)
+- 1271: 100+80 | Comté de Toulouse intégré (héritage Alphonse de Poitiers)
+- 1314: 150+100 | Philippe le Bel — domaine couvre l'essentiel (noyau oïl + marges oc)
+- 1360: 100+70 | Traité de Brétigny — pertes au sud-ouest (Aquitaine cédée)
+- 1380: 140+100 | Reconquête de Charles V
+- 1420: 60+50 | Traité de Troyes — France du Nord perdue (noyau oïl largement occupé)
+- 1453: 250+150 | Reconquête achevée (Charles VII)
+- 1477: 270+150 | + Bourgogne (noyau oïl)
+- 1481: 270+180 | + Provence (occitanophone)
+- 1532: 270+215 | + Bretagne (bretonnante)
+- 1539: 400+85 | Villers-Cotterêts — français imposé comme langue juridique (Languedoc rejoint le noyau)
+- 1648: 400+85+15 | + Alsace (Westphalie — germanophone)
+- 1684: 530 | Maximum territorial (Ratisbonne — marges intégrées)
+- 1713: 525 | Pertes mineures (Utrecht)
+
+---
+
 ## Phase : Pré-féodale
 - type: phase
 - phase: prefeodale
@@ -74,6 +97,32 @@
 - confidence: high
 - summary: La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l'Île-de-France et de tripler le domaine royal.
 - description: Philippe Auguste transforme la monarchie capétienne d'une suzeraineté nominale en une puissance territoriale de premier plan. La confiscation de la Normandie en 1204, arrachée aux Plantagenêt, puis la victoire écrasante de Bouvines en 1214 contre une coalition européenne, font tripler le domaine royal et démontrent que le roi de France dispose désormais d'une supériorité militaire décisive sur ses vassaux. Au-delà de ces conquêtes, Philippe Auguste met en place un réseau de baillis royaux sur tout le territoire et fixe le siège de l'administration à Paris, posant les bases du premier appareil étatique permanent en France. Ces innovations institutionnelles préparent la transition vers la phase oligarchique en créant les outils d'un pouvoir central qui ne dépend plus uniquement des liens personnels de vassalité.
+
+#### Saillant : Confiscation Plantagenêt
+- type: saillant
+- perturbation: true
+- mechanism: correction_echelle
+- effect: acceleration
+- start: 1204
+- figure: Philippe Auguste
+- subtitle: Confiscation Plantagenêt
+- title: Confiscation Plantagenêt
+- confidence: high
+- summary: Philippe Auguste confisque la Normandie, l'Anjou, le Maine et le Poitou aux Plantagenêts. Le domaine royal passe de ~12 000 km² à ~52 000 km² en un coup — le roi devient une puissance territoriale crédible dans le noyau d'oïl.
+- description: La confiscation des terres Plantagenêt en 1204 transforme le roi de France d'un petit seigneur d'Île-de-France en le premier propriétaire terrien du royaume. La Normandie, l'Anjou, le Maine et le Poitou — tous de langue d'oïl — rejoignent le domaine royal, qui passe d'environ 12 000 km² à plus de 50 000 km². Cette correction d'échelle accélère le Parcours en donnant au roi les moyens matériels de son autorité : recettes fiscales, réseau de baillis, assise territoriale pour lever une armée. Bouvines (1214) confirme cette nouvelle puissance. Le parallèle avec la perte de la Normandie vue du côté anglais est exact : ce qui est une correction d'échelle accélératrice pour la France est aussi une correction d'échelle accélératrice pour l'Angleterre — Philippe Auguste force les barons à choisir leur camp.
+
+#### Saillant : Croisade des Albigeois
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1229
+- figure: Louis IX
+- subtitle: Traité de Paris
+- title: Croisade des Albigeois
+- confidence: high
+- summary: Le traité de Paris (1229) rattache le Languedoc à la couronne. Le domaine royal double, mais les marges occitanophones — langue d'oc, droit romain, culture méridionale — introduisent une hétérogénéité profonde qui pèsera sur l'homogénéisation pendant des siècles.
+- description: La croisade des Albigeois (1209-1229), lancée contre l'hérésie cathare, se termine par le traité de Paris qui rattache le Languedoc au domaine royal. C'est un choc d'hétérogénéité majeur : la France d'oc — occitanophone, de droit romain, culturellement méditerranéenne — rejoint un royaume d'oïl structuré autour de Paris. Le Languedoc sera administré par des sénéchaux royaux mais conservera sa langue, son droit et ses coutumes pendant des siècles. L'analogie avec l'Union Castille-Aragon (1479) dans le Parcours espagnol est directe : l'expansion territoriale augmente la taille de référence et introduit une hétérogénéité qui prolonge la phase en cours. La différence est que l'intégration culturelle sera beaucoup plus lente que celle des territoires d'oïl — il faudra attendre Villers-Cotterêts (1539) pour que le français soit imposé comme langue juridique dans le Midi.
 
 #### Saillant : Pic féodal
 - type: saillant
@@ -262,6 +311,19 @@
 - summary: Charles VII est le premier roi de la seconde phase oligarchique, dont la légitimité repose sur le nouveau pacte de Chinon (1428) confirmé par le sacre à Reims (1429). Il reconstruit l'État central sur des bases entièrement nouvelles — armée permanente, taille permanente, contrôle de l'Église.
 - description: Charles VII accède à la pleine légitimité après le sacre de Reims (17 juillet 1429), rendu possible par les fonds votés aux États généraux de Chinon. Sa légitimité ne repose pas sur la loi salique de 1317 (annulée par le Traité de Troyes) mais sur le nouveau pacte constitué par les élites méridionales. La classe dirigeante qui l'entoure est sociologiquement nouvelle — noblesse du Sud, bourgeoisie marchande (Jacques Cœur, argentier du roi), magistrats du Parlement de Poitiers — par rapport à l'ancienne cour parisienne des premiers Valois. Son programme de reconstruction étatique est d'une ambition sans précédent : Pragmatique Sanction de Bourges (1438), taille permanente (1439), compagnies d'ordonnance (1445), reconquête de la Normandie et de la Guyenne (1449-1453).
 
+#### Saillant : Intégration Bourgogne-Provence
+- type: saillant
+- perturbation: true
+- mechanism: choc_heterogeneite
+- effect: prolongement
+- start: 1481
+- figure: Louis XI
+- subtitle: Bourgogne + Provence
+- title: Intégration Bourgogne-Provence
+- confidence: high
+- summary: La mort de Charles le Téméraire (1477) permet l'annexion de la Bourgogne (oïl, rejoint le noyau), et l'héritage provençal (1481) ajoute une nouvelle marge occitanophone au domaine. Le territoire passe de ~400 000 à ~450 000 km².
+- description: Louis XI (1461-1483) mène une politique de centralisation agressive qui transforme la géographie du royaume. La mort de Charles le Téméraire à Nancy (1477) permet l'annexion du duché de Bourgogne — territoire d'oïl qui renforce le noyau — et la neutralisation définitive de la dernière grande principauté rivale. L'héritage de la Provence (1481) par le testament de René d'Anjou ajoute un territoire occitanophone qui constitue une nouvelle marge hétérogène. L'ensemble porte le domaine royal à sa masse critique. Pour l'essor oligarchique, ce double mouvement est ambivalent : il renforce la puissance de l'État central (accélération par le noyau bourguignon) mais élargit aussi l'hétérogénéité culturelle (prolongement par la marge provençale).
+
 #### Saillant : Pic oligarchique
 - type: saillant
 - start: 1515
@@ -374,14 +436,17 @@
 - summary: L'installation de la cour à Versailles en 1682, la Trêve de Ratisbonne en 1684 qui marque l'extension territoriale maximale et la révocation de l'Édit de Nantes en 1685 constituent le triple sommet du pouvoir absolu français, après quoi le déclin s'amorce irréversiblement.
 - description: Louis XIV atteint le sommet de sa puissance entre 1682 et 1685, dans ce qui constitue le pic absolutiste le mieux documenté de tous les parcours nationaux. L'installation de la cour à Versailles en 1682 achève la domestication de la noblesse, désormais transformée en aristocratie de cour entièrement dépendante de la faveur royale. La Trêve de Ratisbonne en 1684 consacre l'extension territoriale maximale du royaume, avec l'annexion de Strasbourg, du Luxembourg et de Courtrai. La révocation de l'Édit de Nantes en 1685 vise l'homogénéisation religieuse forcée, portant le moteur culturel à son maximum d'intensité. Après ce triple sommet, le déclin s'amorce : la Guerre de la Ligue d'Augsbourg à partir de 1688, la désastreuse Guerre de Succession d'Espagne à partir de 1701 et les famines de 1693 et 1709 épuisent le royaume et révèlent les limites du système.
 
-#### Saillant : Fin de l'expansion
+#### Saillant : Traité d'Utrecht
 - type: saillant
+- perturbation: true
+- mechanism: choc_exogene
+- effect: acceleration
 - start: 1713
 - subtitle: Traité d'Utrecht
-- title: Fin de l'expansion
+- title: Traité d'Utrecht
 - confidence: high
-- summary: Le Traité d'Utrecht en 1713 solde la Guerre de Succession d'Espagne par des pertes territoriales et la mort de Louis XIV en 1715 clôt l'ère de l'impérialisme absolutiste, ouvrant la longue période de sclérose de l'Ancien Régime.
-- description: Le Traité d'Utrecht de 1713 met fin à la Guerre de Succession d'Espagne dans des conditions défavorables pour la France, qui perd Terre-Neuve, l'Acadie et cède des territoires aux Pays-Bas. Les finances royales sont ruinées après des décennies de guerres coûteuses. La mort de Louis XIV en 1715 clôt symboliquement l'ère de l'expansion absolutiste. La Régence de Philippe d'Orléans desserre immédiatement l'étau du pouvoir central, et le système de Law (1716-1720), tentative audacieuse de résoudre la crise financière par l'innovation monétaire, s'effondre spectaculairement, révélant la fragilité structurelle du système. L'expansion ne fonctionne plus comme moteur de légitimation du pouvoir absolu : l'Ancien Régime commence.
+- summary: Le Traité d'Utrecht (1713) solde la Guerre de Succession d'Espagne par des pertes territoriales (Terre-Neuve, Acadie) et la ruine des finances royales. La mort de Louis XIV en 1715 clôt l'ère de l'expansion absolutiste et accélère l'entrée dans l'Ancien Régime.
+- description: Le Traité d'Utrecht de 1713 met fin à la Guerre de Succession d'Espagne dans des conditions défavorables pour la France, qui perd Terre-Neuve, l'Acadie et cède des territoires aux Pays-Bas. Les finances royales sont ruinées après des décennies de guerres coûteuses. La mort de Louis XIV en 1715 clôt symboliquement l'ère de l'expansion absolutiste. La Régence de Philippe d'Orléans desserre immédiatement l'étau du pouvoir central, et le système de Law (1716-1720), tentative audacieuse de résoudre la crise financière par l'innovation monétaire, s'effondre spectaculairement, révélant la fragilité structurelle du système. Le parallèle avec l'Espagne est direct : Utrecht accélère les deux Parcours en fermant la soupape d'expansion.
 
 #### Saillant : Remontrance
 - type: saillant

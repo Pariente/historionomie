@@ -15,6 +15,23 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (format: noyau+marges — le label décrit les marges)
+- ~1035: 130 | Castille-León-Galice (Ferdinand Ier)
+- 1085: 175 | + Tolède (Alphonse VI)
+- 1230: 200 | Réunion définitive Castille-León (Ferdinand III)
+- 1248: 350 | + Cordoue, Séville, Jaén (Reconquista)
+- 1479: 350+100 | Aragon, Catalogne, Valence, Majorque (union dynastique)
+- 1492: 360+100 | + Grenade (fin de la Reconquista)
+- 1516: 360+310 | + Pays-Bas, Naples, Sicile, Sardaigne (héritage habsbourgeois)
+- 1580: 360+400 | + Portugal (union ibérique)
+- 1640: 360+310 | - Portugal (sécession)
+- 1648: 360+280 | - Provinces-Unies (Westphalie)
+- 1714: 510 | Utrecht + Nueva Planta — perte des possessions européennes, Aragon intégré au noyau
+- 1898: 510 | Desastre — perte de Cuba, Philippines (marges coloniales, pas de changement métropolitain)
+
+---
+
 ## Note préliminaire : l'unité d'analyse
 
 Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progressivement les autres nations ibériques (León, Andalousie, Aragon, Catalogne). Les deux moteurs opèrent à des échelles qui évoluent :

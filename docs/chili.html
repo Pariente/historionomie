@@ -60,7 +60,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 
 /* Timeline container */
 .timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
-.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+.timeline-container { position:relative; min-width:2800px; min-height:685px; margin-bottom:10px; }
 
 /* Ticks */
 .tick { position:absolute; top:0; height:100%; pointer-events:none; }
@@ -100,6 +100,27 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
 .perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
 
 /* Narrow-phase indicator — visible marker for phases too short to see */
 .narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
@@ -392,6 +413,25 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
         </div>
         
         
+    <div class="area-chart" style="top:185px;">
+        
+        <div class="area-chart-label" style="left:1.0101%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:1.0101%;width:54.3434%;height:15.5px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~100 000 km² — Vallée centrale (Santiago — fondation coloniale)"></div></div>
+        <div class="area-step-group" style="left:55.3535%;width:6.6667%;height:23.2px;"><div class="area-noyau" style="height:23.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~150 000 km² — Capitainerie du Chili (indépendance)"></div></div>
+        <div class="area-step-group" style="left:62.0202%;width:3.6364%;height:24.8px;"><div class="area-noyau" style="height:24.8px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~160 000 km² — + Détroit de Magellan (prise de possession)"></div></div>
+        <div class="area-step-group has-marges" style="left:65.6566%;width:4.6465%;height:35.6px;"><div class="area-noyau" style="height:23.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~150 000 km²"></div><div class="area-marges" style="bottom:23.2px;height:12.4px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~80 000 km² — Araucanía (occupation du territoire mapuche — marge hétérogène)"></div></div>
+        <div class="area-step-group has-marges" style="left:70.3030%;width:9.0909%;height:62.0px;"><div class="area-noyau" style="height:23.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~150 000 km²"></div><div class="area-marges" style="bottom:23.2px;height:38.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~250 000 km² — + Atacama, Tarapacá, Antofagasta (guerre du Pacifique — territoires péruviens/boliviens)"></div></div>
+        <div class="area-step-group" style="left:79.3939%;width:20.6061%;height:62.0px;"><div class="area-noyau" style="height:62.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~400 000 km² — Traité de Lima — frontière définitive (marges intégrées au noyau)"></div></div>
+        
+        <div class="area-edge" style="left:55.3535%;height:23.2px;"></div>
+        <div class="area-edge" style="left:62.0202%;height:24.8px;"></div>
+        <div class="area-edge" style="left:65.6566%;height:35.6px;"></div>
+        <div class="area-edge" style="left:70.3030%;height:62.0px;"></div>
+        <div class="area-edge" style="left:79.3939%;height:62.0px;"></div>
+    </div>
+        
+        
         <div class="saillant-group" style="left:55.3535%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Première Junta (1810)&#10;La Première Junta du 18 septembre 1810, réunie au cabildo de Santiago devant ~400 notables — propriétaires terriens, clergé, officiers militaires, représentant moins de 1% de la population coloniale —, est le premier acte politique autonome de l&#39;élite créole chilienne. Formellement constituée au nom du roi prisonnier Ferdinand VII, elle crée de facto le premier centre politique chilien indépendant. Mateo de Toro y Zambrano (82 ans, comte de la Conquista) est élu président, mais le pouvoir réel est exercé par Juan Martínez de Rozas."
@@ -491,6 +531,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -540,7 +581,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
 (function layoutSaillants() {
     const ROW_HEIGHT = 90;
     const MAX_ROWS = 6;
-    const BASE_TOP = 200;
+    const BASE_TOP = 270;
     const MARGIN = 6; // px of horizontal breathing room between labels
 
     const groups = Array.from(document.querySelectorAll('.saillant-group'));

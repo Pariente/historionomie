@@ -15,6 +15,20 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (format: noyau+marges — le label décrit les marges)
+- ~1230: 2 | 3 cantons forestiers (Uri, Schwyz, Unterwald)
+- 1353: 6 | 8 cantons (+ Lucerne, Zurich, Glaris, Zoug, Berne)
+- 1415: 6+4 | Bailliages communs (Argovie, Thurgovie, Baden)
+- 1481: 8+5 | 10 cantons (+ Fribourg, Soleure) + bailliages du Tessin
+- 1513: 10+8 | 13 cantons + bailliages (maximum avant Marignan)
+- 1515: 10+5 | Marignan — perte du Milanais, fin de l'expansion
+- 1712: 10+5 | Villmergen — transfert des bailliages aux cantons protestants
+- 1798: 10+5 | Invasion française (avant transformation)
+- 1848: 41 | Constitution fédérale — 22 cantons intégrés au noyau
+
+---
+
 ## Note préliminaire : l'unité d'analyse
 
 Le Parcours suisse est un méta-parcours confédéral. Chaque canton (Berne, Zurich, Lucerne, etc.) a son propre parcours interne, mais c'est le niveau confédéral que nous suivons ici, avec Berne comme centre de gravité — de même que le parcours allemand suit le niveau national avec la Prusse comme centre de gravité, et que le parcours italien suit le niveau national avec le Piémont comme centre de gravité.

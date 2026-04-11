@@ -16,6 +16,21 @@
 
 ---
 
+## Superficie de référence
+- unit: milliers de km² (format: noyau+marges — le label décrit les marges)
+- 1180: 40 | Duché de Bavière (Wittelsbach)
+- 1340: 40+20 | + Palatinat, Brandebourg, Hollande (empire de Louis IV)
+- 1349: 20 | Partitions — Bavière-Munich seule
+- 1392: 10 | Partition de 1392 — quatre duchés
+- 1506: 40 | Réunification (Albert IV — Primogéniture)
+- 1648: 45 | Paix de Westphalie — indépendance confirmée
+- 1704: 45 | Avant Blenheim
+- 1714: 45 | Restauration (fin occupation autrichienne)
+- 1806: 45+30 | Franconie + Souabe (doublement napoléonien — protestants)
+- 1816: 76 | Congrès de Vienne (ajustements, Franconie intégrée)
+
+---
+
 ## Pré-phase : Agilolfings (~555-788)
 - type: note
 - description: Les Agilolfings sont les premiers ducs de Bavière attestés. Garibald Ier (~555-591) est le premier duc historiquement documenté, régnant sous suzeraineté mérovingienne. La dynastie développe une proto-administration (la Lex Baiuvariorum est codifiée vers 743), contrôle l'épiscopat bavarois, et fonde des monastères. Tassilo III (~748-788) porte le pouvoir ducal à son apogée : il tient des synodes, lève des troupes, fonde l'abbaye de Kremsmünster (777). Mais en 788, Charlemagne dépose Tassilo au plaid d'Ingelheim, abolit la charge ducale, redistribue la Bavière en comtés administrés par des comtes francs, et nomme Gerold comme préfet. C'est un reboot institutionnel complet : la dynastie est éliminée, l'administration ducale détruite, les réseaux aristocratiques bavarois subordonnés directement à Aix-la-Chapelle. La Lex Baiuvariorum survit comme droit coutumier et l'Église bavaroise conserve ses structures, mais l'État ducal n'existe plus.
@@ -280,7 +295,7 @@
 - type: saillant
 - perturbation: true
 - mechanism: choc_heterogeneite
-- effect: avortement
+- effect: prolongement
 - start: 1806
 - figure:
 - subtitle: Paix de Presbourg

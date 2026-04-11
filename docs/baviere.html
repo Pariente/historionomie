@@ -60,7 +60,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 
 /* Timeline container */
 .timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
-.timeline-container { position:relative; min-width:2800px; min-height:600px; margin-bottom:10px; }
+.timeline-container { position:relative; min-width:2800px; min-height:730px; margin-bottom:10px; }
 
 /* Ticks */
 .tick { position:absolute; top:0; height:100%; pointer-events:none; }
@@ -100,6 +100,27 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
     pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
 .perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
 
 /* Narrow-phase indicator — visible marker for phases too short to see */
 .narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
@@ -391,6 +412,41 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             <span class="perturbation-label">Doublement napoléonien</span>
         </div>
         
+    <div class="area-chart" style="top:230px;">
+        
+        <div class="area-chart-label" style="left:0.9296%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:0.9296%;width:21.2483%;height:32.6px;"><div class="area-noyau" style="height:32.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~40 000 km² — Duché de Bavière (Wittelsbach)"></div></div>
+        <div class="area-step-group has-marges" style="left:22.1780%;width:1.1952%;height:48.9px;"><div class="area-noyau" style="height:32.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~40 000 km²"></div><div class="area-marges" style="bottom:32.6px;height:16.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~20 000 km² — + Palatinat, Brandebourg, Hollande (empire de Louis IV)"></div></div>
+        <div class="area-step-group" style="left:23.3732%;width:5.7105%;height:16.3px;"><div class="area-noyau" style="height:16.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~20 000 km² — Partitions — Bavière-Munich seule"></div></div>
+        <div class="area-step-group" style="left:29.0837%;width:15.1394%;height:8.2px;"><div class="area-noyau" style="height:8.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km² — Partition de 1392 — quatre duchés"></div></div>
+        <div class="area-step-group" style="left:44.2231%;width:18.8579%;height:32.6px;"><div class="area-noyau" style="height:32.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~40 000 km² — Réunification (Albert IV — Primogéniture)"></div></div>
+        <div class="area-step-group" style="left:63.0810%;width:7.4369%;height:36.7px;"><div class="area-noyau" style="height:36.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~45 000 km² — Paix de Westphalie — indépendance confirmée"></div></div>
+        <div class="area-step-group" style="left:70.5179%;width:1.3280%;height:36.7px;"><div class="area-noyau" style="height:36.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~45 000 km² — Avant Blenheim"></div></div>
+        <div class="area-step-group" style="left:71.8459%;width:12.2178%;height:36.7px;"><div class="area-noyau" style="height:36.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~45 000 km² — Restauration (fin occupation autrichienne)"></div></div>
+        <div class="area-step-group has-marges" style="left:84.0637%;width:1.3280%;height:61.2px;"><div class="area-noyau" style="height:36.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~45 000 km²"></div><div class="area-marges" style="bottom:36.7px;height:24.5px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~30 000 km² — Franconie + Souabe (doublement napoléonien — protestants)"></div></div>
+        <div class="area-step-group" style="left:85.3918%;width:14.6082%;height:62.0px;"><div class="area-noyau" style="height:62.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~76 000 km² — Congrès de Vienne (ajustements, Franconie intégrée)"></div></div>
+        
+        <div class="area-edge" style="left:22.1780%;height:48.9px;"></div>
+        <div class="area-edge" style="left:23.3732%;height:48.9px;"></div>
+        <div class="area-edge" style="left:29.0837%;height:16.3px;"></div>
+        <div class="area-edge" style="left:44.2231%;height:32.6px;"></div>
+        <div class="area-edge" style="left:63.0810%;height:36.7px;"></div>
+        <div class="area-edge" style="left:70.5179%;height:36.7px;"></div>
+        <div class="area-edge" style="left:71.8459%;height:36.7px;"></div>
+        <div class="area-edge" style="left:84.0637%;height:61.2px;"></div>
+        <div class="area-edge" style="left:85.3918%;height:62.0px;"></div>
+    </div>
+        
+        <div class="area-saillant-group" style="left:84.0637%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Doublement napoléonien&lt;/strong&gt;&#10;Paix de Presbourg (1806)&#10;En 1806, Napoléon double le territoire bavarois (Franconie, Souabe), hétérogénéisant brutalement la société et défaisant la stratification pré-AR. Un second cycle d&#39;impérialisme absolutiste commence."
+                onclick="showDetail(23)">
+                <span class="material-icons">open_in_full</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Doublement napoléonien</span><span class="saillant-date">1806</span></div>
+        </div>
+        
         <div class="saillant-group" style="left:4.1169%;">
             <div class="saillant-marker" style="background:#8B7355;"
                 data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Louis Ier le Kelheimer (1204)&#10;Louis Ier le Kelheimer est le premier Wittelsbach à exercer une autorité effective sur le duché : il fonde des villes (Landshut 1204, Straubing 1218), acquiert le Palatinat du Rhin (1214), et remplace les fiefs par des terres administrées par des ministériaux, amorçant la centralisation."
@@ -495,14 +551,6 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
             </div>
             <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Maximilien III Joseph</span><span class="saillant-date">1756</span></div>
         </div>
-        <div class="saillant-group" style="left:84.0637%;">
-            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
-                data-tooltip="&lt;strong&gt;Doublement napoléonien&lt;/strong&gt;&#10;Paix de Presbourg (1806)&#10;En 1806, Napoléon double le territoire bavarois (Franconie, Souabe), hétérogénéisant brutalement la société et défaisant la stratification pré-AR. Un second cycle d&#39;impérialisme absolutiste commence."
-                onclick="showDetail(23)">
-                <span class="material-icons">open_in_full</span>
-            </div>
-            <div class="saillant-label"><span class="saillant-title">Doublement napoléonien</span><span class="saillant-figure">Paix de Presbourg</span><span class="saillant-date">1806</span></div>
-        </div>
         <div class="saillant-group" style="left:87.9150%;">
             <div class="saillant-marker" style="background:#6A0DAD;"
                 data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Louis Ier (1835)&#10;Louis Ier (1825-1848) transforme Munich en « Athènes sur l&#39;Isar » — Alte Pinakothek, Neue Pinakothek, Glyptothek, Ludwigskirche, Befreiungshalle — et projette le prestige culturel bavarois à l&#39;échelle européenne. C&#39;est le pic du second cycle d&#39;impérialisme absolutiste."
@@ -562,6 +610,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
     <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -611,7 +660,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
 (function layoutSaillants() {
     const ROW_HEIGHT = 90;
     const MAX_ROWS = 6;
-    const BASE_TOP = 200;
+    const BASE_TOP = 315;
     const MARGIN = 6; // px of horizontal breathing room between labels
 
     const groups = Array.from(document.querySelectorAll('.saillant-group'));

@@ -15,7 +15,7 @@ Le Parcours de construction nationale peut être perturbé par des événements 
 
 | Mécanisme | Type | Icône (frise) | Effets possibles | Exemples |
 |---|---|---|---|---|
-| **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` | Prolongement 🟠 | Habsburg 1516, Bavière 1806, hellénisation -332 |
+| **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` | Prolongement 🟠 | Habsburg 1516, Bavière 1806, Empire de Cnut 1016, Stato da Màr 1204, croisade des Albigeois 1229 |
 | **Choc exogène** | Ponctuel | `bolt` | Les 4 effets (selon ce que le choc fait) | Voir grille ci-dessous |
 | **Insuffisance interne** | Ponctuel | `close` | Avortement 🔴 | Crises féodales sans PO, absolutisation avortée (Faliero, Pierre Ier) |
 | **Correction d'échelle** | Ponctuel ou graduel | `compress` | Accélération 🔵 | Perte empire colonial espagnol (1808-1826), Portugal 1640, Utrecht 1714 |
@@ -45,31 +45,112 @@ Les perturbations sont affichées comme des **losanges** (◆) pour les distingu
 - **Exutoire** : pas de marqueur (mentionné dans la description de la durée de la phase)
 - **Fin de l'exutoire** : saillant normal « fin de l'expansion » (●, couleur de la phase)
 
+## Dimension territoriale des perturbations
+
+### Noyau territorial et marges
+
+La **superficie de référence** d'une nation à un moment donné se décompose en deux composantes :
+
+- **Noyau territorial** : le territoire culturellement homogène avec le cœur de la nation — même langue, même droit, mêmes institutions. C'est le territoire qui *est* la nation.
+- **Marges** : les territoires hétérogènes sous contrôle de la même couronne — langue différente, droit différent, culture différente. C'est le territoire que la nation *possède* sans l'avoir assimilé.
+
+La distinction noyau/marges est la traduction territoriale des deux moteurs du Parcours. Le noyau correspond au territoire où l'homogénéisation culturelle est accomplie ; les marges correspondent au territoire où elle ne l'est pas encore.
+
+**Exemples de décomposition noyau/marges :**
+- **Angleterre** : noyau = Angleterre (~130 000 km²) ; marges = Normandie, Gascogne, pays de Galles, Irlande, Écosse (selon les périodes)
+- **France** : noyau = France d'oïl ; marges = France d'oc (Languedoc, Provence), Bretagne, Alsace
+- **Espagne** : noyau = Castille ; marges = Aragon, Catalogne, Pays-Bas, Naples, Sicile
+- **Venise** : noyau = lagune (~1 000 km²) ; marges = Stato da Màr (Crète, Eubée) + Terraferma (Bergame, Brescia, etc.)
+
+**Transitions marge → noyau** : un territoire peut commencer comme marge et rejoindre le noyau quand l'homogénéisation culturelle y est accomplie. Ces transitions sont approximées par des dates ponctuelles :
+- Pays de Galles : marge à partir de 1282 (conquête), noyau à partir de 1536 (Laws in Wales Acts)
+- Écosse : marge à partir de 1603 (union des couronnes), noyau à partir de 1707 (Acts of Union)
+- Languedoc : marge à partir de 1229 (croisade des Albigeois), noyau à partir de 1539 (Villers-Cotterêts)
+- Aragon/Catalogne : marges à partir de 1479 (union dynastique), noyau à partir de 1714 (Nueva Planta)
+
+### Perturbations territoriales vs non territoriales
+
+La plupart des perturbations de type `choc_heterogeneite` et `correction_echelle` sont **territoriales** — elles correspondent à un changement de superficie visible sur le graphique d'aire (expansion ou contraction).
+
+Certaines perturbations utilisent le même mécanisme mais ne sont **pas territoriales** — elles opèrent par le canal culturel ou institutionnel sans modifier la superficie. Dans ce cas, on ajoute le champ `territorial: false` dans les données du saillant.
+
+**Exemple** : l'invasion macédonienne d'Israël (-332) est codée `choc_exogene / prolongement` avec `territorial: false`. La superficie d'Israël ne change pas — c'est l'hellénisation culturelle qui prolonge la phase, pas un gain de territoire.
+
+### Perturbations territoriales et graphique de superficie
+
+Sur la frise, les perturbations territoriales (sans `territorial: false`) dont l'effet est `prolongement` ou `acceleration` sont affichées **au-dessus du graphique de superficie** plutôt que dans la rangée principale des saillants. Cela permet de :
+- Associer visuellement l'expansion/contraction au changement de superficie visible sur le graphique
+- Désengorger la rangée principale des saillants
+
+Les perturbations avec effet `reboot` ou `avortement` restent dans la rangée principale, même si elles sont territoriales — elles relèvent de la dynamique politique du Parcours, pas seulement du territoire.
+
+### Mécanismes et territoire
+
+| Mécanisme | Territorial ? | Direction | Exemples |
+|---|---|---|---|
+| Choc d'hétérogénéité | Presque toujours oui | Expansion (la superficie augmente) | Empire de Cnut, Union Castille-Aragon, Stato da Màr |
+| Correction d'échelle | Toujours oui | Contraction (la superficie diminue) | Perte de la Normandie, Fragmentation Visconti, Perte de la France |
+| Choc exogène | Souvent oui, parfois non | Variable (invasion, traité, défaite) | Westphalie (territorial), hellénisation (non territorial) |
+| Insuffisance interne | Rarement | — | Crises féodales (politique, pas territoriale) |
+| Exutoire (continu) | Implicitement | Expansion continue | Reconquista, Stato da Màr, colonies |
+
+### Exutoire colonial : le timing compte
+
+L'expansion coloniale n'a pas le même effet selon le moment du Parcours où elle intervient :
+- **Pendant une phase active** (féodale, oligarchique, absolutiste) : l'exutoire colonial prolonge la phase en cours en absorbant les tensions internes. C'est le cas de l'Espagne (colonies pendant la phase oligarchique) et de Venise (Stato da Màr pendant l'essor oligarchique).
+- **Après la RN** (phase parlementaire) : l'exutoire colonial ne perturbe pas le Parcours, car la phase parlementaire est l'aboutissement du Parcours. C'est le cas de l'Angleterre, dont l'essentiel de l'expansion coloniale intervient après 1688.
+
 ## Tableau récapitulatif du corpus
 
-| Perturbation | Mécanisme | Effet | Marqueur |
-|---|---|---|---|
-| Hellénisation (-332) | Choc d'hétérogénéité | Prolongement 🟠 | ◆🟠 `open_in_full` |
-| Conquête babylonienne (-586) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
-| Destruction du Temple (70) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
-| Choc assyrien (-722) | Choc exogène | Reboot + transfert 🟤 | ◆🟤 `bolt` |
-| Guillaume le Conquérant (1066) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
-| Boucles féodales anglaises | Insuffisance interne | Avortement 🔴 | ◆🔴 `close` |
-| Crécy-Poitiers (~1346) | Choc exogène | Prolongement 🟠 | ◆🟠 `bolt` |
-| Azincourt-Troyes (1415-1420) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
-| Faliero (1355), Pierre Ier (1369) | Insuffisance interne | Avortement 🔴 | ◆🔴 `close` |
-| Piémont invasion française (1536) | Choc exogène | Reboot 🟤 | ◆🟤 `bolt` |
-| Piémont éclipse napoléonienne (1796-1814) | Choc exogène | Prolongement 🟠 | ◆🟠 `bolt` |
-| Bavière partitions (1255, 1349, 1392) | Insuffisance interne | Avortement 🔴 | ◆🔴 `close` |
-| Bavière doublement napoléonien (1806) | Choc d'hétérogénéité | Prolongement 🟠 | ◆🟠 `open_in_full` |
-| Venise RN écrasée (1849) | Choc exogène | Avortement 🔴 | ◆🔴 `bolt` |
-| Espagne Habsburg (1516) | Choc d'hétérogénéité | Prolongement 🟠 | ◆🟠 `open_in_full` |
-| Espagne Portugal (1640) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
-| Espagne Utrecht (1714) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
-| Espagne Désastre (1898) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
-| France 1823 (Cent Mille Fils) | Choc exogène | Avortement 🔴 | ◆🔴 `bolt` |
-| Napoléon à Milan | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
-| Suisse Napoléon (1798) | Choc exogène | Accélération 🔵 | ◆🔵 `bolt` |
+| Perturbation | Nation | Mécanisme | Effet | Territorial ? | Marqueur |
+|---|---|---|---|---|---|
+| **Israël** |
+| Choc assyrien (-722) | Israël | Choc exogène | Reboot + transfert 🟤 | Oui | ◆🟤 `bolt` |
+| Conquête babylonienne (-586) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Hellénisation (-332) | Israël | Choc exogène | Prolongement 🟠 | **Non** (culturel) | ◆🟠 `bolt` |
+| Destruction du Temple (70) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| **Angleterre** |
+| Empire de Cnut (~1016) | Angleterre | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Conquête normande (1066) | Angleterre | Choc d'hétérogénéité | Reboot 🟤 | Oui | ◆🟤 `restart_alt` |
+| Empire Plantagenêt (~1154) | Angleterre | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Perte de la Normandie (1204) | Angleterre | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Boucles féodales anglaises | Angleterre | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Traité de Troyes (1420) | Angleterre | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Perte de la France (1453) | Angleterre | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| **France** |
+| Confiscation Plantagenêt (1204) | France | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Croisade des Albigeois (1229) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Crécy-Poitiers (~1346) | France | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| Azincourt-Troyes (1415-1420) | France | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Intégration Bourgogne-Provence (1477-1481) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Traité d'Utrecht (1713) | France | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| **Espagne** |
+| Union Castille-Aragon (1479) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Héritage habsbourgeois (1516) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Sécession du Portugal (1640) | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Traité de Westphalie (1648) | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Traité d'Utrecht (1714) | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Désastre de 1898 | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| **Venise** |
+| Stato da Màr (1204) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Conquête de la Terraferma (1428) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Perte de la Crète (1669) | Venise | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Chute de la République (1797) | Venise | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
+| RN écrasée (1849) | Venise | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
+| **Milan** |
+| Empire Visconti (1395) | Milan | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Fragmentation Visconti (1402) | Milan | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Invasion française (1499) | Milan | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Occupation napoléonienne (1796) | Milan | Choc exogène | Accélération 🔵 | **Non** (institutionnel) | ◆🔵 `bolt` |
+| **Bavière** |
+| Partitions (1255, 1349, 1392) | Bavière | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Doublement napoléonien (1806) | Bavière | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| **Piémont** |
+| Invasion française (1536) | Piémont | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Acquisition de la Sardaigne (1720) | Piémont | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Éclipse napoléonienne (1796-1814) | Piémont | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| **Suisse** |
+| Invasion française (1798) | Suisse | Choc exogène | Accélération 🔵 | Non | ◆🔵 `bolt` |
 
 ---
 
@@ -171,7 +252,7 @@ Le choc d'hétérogénéité peut avorter une sous-phase en cours. Si la sociét
 Le doublement napoléonien du territoire (Franconie, Souabe) hétérogénéise brutalement une société bavaroise qui était en train d'entrer en Ancien Régime sous Charles-Théodore. L'intégration de populations franconniennes (protestantes) et souabes dans un État catholique bavarois relance la dynamique impérialiste sous forme modernisatrice (réformes Montgelas). Le choc avorte le premier AR et ouvre un second cycle d'impérialisme absolutiste.
 
 **Israël (-332) :**
-La conquête macédonienne hétérogénéise la société judéenne (hellénisation) sans détruire les institutions (le Grand Prêtre reste en fonction). Le Parcours stagne pendant ~192 ans le temps que les factions se recomposent autour des nouveaux clivages (Oniades vs Tobiades).
+La conquête macédonienne hétérogénéise la société judéenne (hellénisation) sans détruire les institutions (le Grand Prêtre reste en fonction). Le Parcours stagne pendant ~192 ans le temps que les factions se recomposent autour des nouveaux clivages (Oniades vs Tobiades). *Note : le mécanisme est `choc_exogene` (conquête extérieure) et non `choc_heterogeneite` (expansion du territoire). L'hétérogénéisation est culturelle, pas territoriale — la superficie d'Israël ne change pas. Le saillant porte le flag `territorial: false`.*
 
 ## Rébellion périphérique
 
