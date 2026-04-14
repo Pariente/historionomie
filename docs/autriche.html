@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Autriche</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:730px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Pre-phase band */
+.prephase-band { position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
+    border-radius:6px; display:flex; align-items:center; justify-content:center; }
+.prephase-band-label { font-size:0.75rem; color:#998866; font-weight:600; }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/autriche/flag.png' alt='drapeau'>
+        <h1>Autriche</h1>
+        <span class='header-badge badge-status'>proposition (v3)</span>
+    </div>
+    <div class="header-subtitle">Bella gerant alii, tu felix Austria nube</div>
+</div>
+
+<div class="briefing briefing-full"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="images/autriche/rudolf-iv.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#8B7355;flex-shrink:0;margin-top:3px;"></span>Deux phases féodales séparées par un reboot dynastique</span><span class="insight-desc">Le cycle Babenberg (976-1246) s&#39;achève sur une extinction dynastique et ne produit pas de pacte. L&#39;Interregnum et la conquête d&#39;Ottokar II (1246-1282) installent une nouvelle dynastie étrangère, les Habsbourg, qui reparcourt un cycle féodal complet avant d&#39;aboutir à une résolution pactiste</span></div></div><div class="insight-item"><img class="insight-img" src="images/autriche/maximilien-ier.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Innsbrucker Libell (1518) comme pacte oligarchique</span><span class="insight-desc">Maximilien Ier, mourant, convoque une diète générale de toutes les terres héréditaires et codifie collectivement l&#39;administration, la défense et la fiscalité. C&#39;est le pacte oligarchique autrichien. La résistance des états (1519-1522) est une crise de transition, pas la DGRO</span></div></div><div class="insight-item"><img class="insight-img" src="images/autriche/leopold-ier.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Monarchie composite et exutoire impérial prolongent la phase oligarchique</span><span class="insight-desc">L&#39;héritage Bohême-Hongrie (1526), le titre impérial, la Guerre de Trente Ans confessionnalisée, la reconquête anti-ottomane et les acquisitions italiennes (Utrecht 1714) cumulent chocs d&#39;hétérogénéité et exutoires. Léopold Ier est le pic oligarchique. La guerre sociale est la Guerre de Succession d&#39;Autriche (1740-1748), résolue par Marie-Thérèse comme tiers fondant la dynastie Habsbourg-Lorraine</span></div></div><div class="insight-item"><img class="insight-img" src="images/autriche/staatsvertrag.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px;"></span>Hitler comme Impérialiste Revanchard double (allemand et autrichien)</span><span class="insight-desc">Après la Remontrance écrasée de 1848 et l&#39;AR long de 70 ans, l&#39;Autriche entre en RN en 1918 avec la séquence canonique : expérience parlementaire, phase aiguë (Dollfuss), moment thermidorien (Schuschnigg). L&#39;Anschluss (1938) est réinterprété comme l&#39;émergence de l&#39;Impérialiste Revanchard — Hitler, né autrichien, réalise par la fusion avec le Reich l&#39;impérialisme revanchard des deux Parcours à la fois. Chute de l&#39;IR en 1945, restauration sous tutelle alliée (1945-1955), Glorieuse Révolution au Staatsvertrag de 1955</span></div></div><div class="insight-item"><img class="insight-img" src="images/autriche/maria-theresia.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;margin-top:3px;"></span>Pas de Dernière Grande Révolte Oligarchique</span><span class="insight-desc">L&#39;Autriche ne produit pas de DGRO canonique. L&#39;absolutisation est relativement fluide — les oligarques cisleithans n&#39;ont plus d&#39;assise territoriale après la guerre de Trente Ans, la Hongrie reste une exception permanente par compromis (analogue Pays basque en Espagne). L&#39;insurrection de Rákóczi (1703-1711) est probablement à rattacher au parcours hongrois, pas au parcours autrichien</span></div></div></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:3.1776%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:21.8692%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:40.5607%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:59.2523%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:77.9439%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        <div class="tick" style="left:96.6355%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">2000</div>
+        </div>
+        
+        <div class="prephase-band" style="left:-16.6355%;width:17.5701%;"
+            data-tooltip="Pré-phase : Marche orientale carolingienne (788-976)">
+            <span class="prephase-band-label">Pré-phase</span>
+        </div>
+        
+        <div class="phase-band" style="left:0.9346%;width:25.2336%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale 1&lt;/strong&gt; (976 — 1246)&#10;Les Babenberg transforment sur 270 ans un margraviat carolingien en duché cohérent centré sur Vienne. Léopold VI (r. 1198-1230) est le pic féodal babenberg. Frédéric II tente de s&#39;ériger en roi mais meurt en 1246 sans héritier mâle à la bataille de la Leitha."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">976 — 1246</div>
+        </div>
+        <div class="phase-band" style="left:29.5327%;width:22.0561%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale 2&lt;/strong&gt; (1282 — 1518)&#10;Le cycle habsbourgeois (1282-1518) est une phase féodale complète qui aboutit à une résolution pactiste. Rodolphe Ier installe ses fils en 1282. Trois crises féodales majeures ponctuent le cycle : la partition de Neuberg (1379), la guerre civile Frédéric III / Albert VI (années 1440-1463), et la conquête de Vienne par Mathias Corvin (1485-1490). Maximilien Ier (r. 1493-1519) est le pic féodal — réunification des Erbländer, modernisation administrative, projection dynastique européenne — et c&#39;est lui qui promulgue le pacte de 1518 huit mois avant sa mort."
+            onclick="showDetail(6)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">1282 — 1518</div>
+        </div>
+        <div class="phase-band" style="left:51.5888%;width:21.5888%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (1518 — 1749)&#10;La phase oligarchique autrichienne dure ~231 ans (1518-1749) — proche de la norme. Elle est structurellement comparable à l&#39;Espagne (~345 ans, 1369-1714) : monarchie composite, héritage dynastique massif (Bohême-Hongrie 1526), exutoire impérial (Saint-Empire + guerres turques), absolutisation tardive accomplie par une nouvelle dynastie après une guerre de succession européenne. L&#39;essor (1518-1618) est porté par la construction centrale, l&#39;expansion impériale et la Contre-Réforme. La polarisation (1618-1740) est très longue : elle commence par la fracture confessionnelle (défenestration de Prague, guerre de Trente Ans) et s&#39;étend pendant plus d&#39;un siècle, relancée en son milieu par l&#39;exutoire anti-ottoman qui permet un pic oligarchique tardif (Léopold Ier 1658-1705). La guerre sociale est la Guerre de Succession d&#39;Autriche (1740-1748), résolue par Marie-Thérèse."
+            onclick="showDetail(14)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">1518 — 1749</div>
+        </div>
+        <div class="phase-band" style="left:73.1776%;width:15.7944%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (1749 — 1918)&#10;La phase absolutiste autrichienne dure ~169 ans (1749-1918), légèrement plus courte que la norme. L&#39;absolutisation est relativement fluide sous Marie-Thérèse et Joseph II (Haugwitz 1749, réformes joséphistes 1780-1790) et ne produit pas de DGRO canonique — la Hongrie reste l&#39;exception permanente. Joseph II (~1780-1790) est le pic absolutiste. L&#39;impérialisme absolutiste se prolonge jusqu&#39;en 1848 malgré l&#39;éclipse napoléonienne (1805-1815) qui est une perturbation par choc exogène. La Remontrance de 1848 est écrasée et ouvre un Ancien Régime de 70 ans marqué par le règne exceptionnellement long de François-Joseph, la défaite de 1866 qui éjecte l&#39;Autriche de l&#39;Allemagne, et le compromis austro-hongrois de 1867 qui fige l&#39;architecture dualiste. L&#39;explosion de l&#39;AR survient en 1918 avec la défaite militaire."
+            onclick="showDetail(24)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1749 — 1918</div>
+        </div>
+        <div class="phase-band" style="left:88.9720%;width:3.4579%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale&lt;/strong&gt; (1918 — 1955)&#10;La RN autrichienne commence avec la chute de la monarchie (novembre 1918) et s&#39;achève avec le Staatsvertrag (1955). Elle suit la séquence canonique complète : explosion de l&#39;AR (1918) → expérience parlementaire (Première République 1919-1933) → phase aiguë (Dollfuss 1933-1934) → moment thermidorien (Schuschnigg 1934-1938) → Impérialiste Revanchard (Hitler, via Anschluss 1938-1945) → restauration (1945-1955) → Glorieuse Révolution (Staatsvertrag 1955). Sa particularité est que l&#39;Impérialiste Revanchard est **partagé avec la RN allemande** — Hitler, né autrichien, réalise l&#39;impérialisme revanchard des deux Parcours simultanément par l&#39;Anschluss et le Reich."
+            onclick="showDetail(35)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale</div>
+            <div class="phase-band-dates">1918 — 1955</div>
+        </div>
+        <div class="phase-band" style="left:92.4299%;width:6.6355%;
+            background:#c6e3ff;border-top:3px solid #1E90FF;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase parlementaire&lt;/strong&gt; (1955 — en cours)&#10;L&#39;Autriche entre dans la phase parlementaire avec le Staatsvertrag et la neutralité de 1955. La Grande Coalition ÖVP-SPÖ gouverne jusqu&#39;en 1966 puis alterne avec des coalitions plus étroites. L&#39;identité autrichienne distincte de l&#39;identité allemande se consolide définitivement. L&#39;adhésion à l&#39;Union européenne (1995) intègre l&#39;Autriche au cadre européen tout en préservant la neutralité."
+            onclick="showDetail(45)">
+            <div class="phase-band-label" style="color:#1E90FF;">Parlementaire</div>
+            <div class="phase-band-dates">1955 — en cours</div>
+        </div>
+        
+        <div class="subphase-band" style="left:0.9346%;width:25.2336%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (976 — 1246)&#10;Sur 270 ans, les Babenberg construisent un duché cohérent, obtiennent l&#39;élévation au rang de duché (Privilegium Minus 1156), transfèrent la capitale à Vienne, acquièrent la Styrie (1192) et développent une cour ducale effective. Le cycle suit un parcours féodal classique jusqu&#39;à son interruption brutale."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:29.5327%;width:22.0561%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (1282 — 1518)&#10;Les Habsbourg construisent leur légitimité à partir d&#39;une position initialement faible, traversent trois crises féodales majeures (Neuberg 1379, guerre civile Albert VI 1440s-1463, occupation Corvin 1485-1490), et réunifient progressivement les Erbländer sous Frédéric III et Maximilien Ier. Maximilien Ier (1493-1519) est le pic féodal et le promulgateur du pacte oligarchique (Libell 1518)."
+            onclick="showDetail(7)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:51.5888%;width:9.3458%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (1518 — 1618)&#10;De Ferdinand Ier à la défenestration de Prague. L&#39;appareil d&#39;État se consolide (Hofrat, Hofkammer, Hofkriegsrat, Geheimer Rat). L&#39;héritage jagellon (1526) double l&#39;échelle en ajoutant Bohême et Hongrie royale. Les Turcs sont contenus au premier siège de Vienne (1529). L&#39;essor est porté par la construction centrale et l&#39;exutoire impérial + anti-ottoman. Il s&#39;achève quand la Contre-Réforme cristallise la polarisation confessionnelle entre administration habsbourgeoise catholique et états protestants — bascule de dynamique marquée par la défenestration de Prague (1618)."
+            onclick="showDetail(15)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:60.9346%;width:11.4019%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (1618 — 1740)&#10;De la défenestration de Prague à la mort de Charles VI. La polarisation autrichienne se joue d&#39;abord sur un axe confessionnel (protestants des états contre Habsbourg catholiques) qui se résout en victoire asymétrique lors de la guerre de Trente Ans — résolution qui ne produit pas de guerre sociale (pas de tiers résolvant) mais consolide le camp catholique-habsbourgeois. La reconquête anti-ottomane (1683-1699), menée par Léopold Ier, fonctionne comme un exutoire temporaire qui relance la projection extérieure au sein de la polarisation et permet un pic oligarchique tardif. Après Passarowitz (1718), la polarisation reprend sur un axe politique — tensions centre/provinces, Pragmatique Sanction laborieuse — jusqu&#39;à la guerre sociale."
+            onclick="showDetail(18)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:72.3364%;width:0.7477%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1740 — 1748)&#10;La Guerre de Succession d&#39;Autriche (1740-1748) est la guerre sociale autrichienne. Elle est déclenchée par la mort sans héritier mâle de Charles VI (20 octobre 1740) et l&#39;invasion immédiate de la Silésie par Frédéric II de Prusse (décembre 1740). Les factions se polarisent : défenseurs de la Pragmatique Sanction (Marie-Thérèse, Hongrie qui accepte finalement de la soutenir, Grande-Bretagne, Provinces-Unies) contre contestataires (Prusse, France, Bavière, Espagne, Saxe). L&#39;élément interne à la monarchie est l&#39;épisode bohémien (1741-1743) — les états de Bohême se rallient à Charles-Albert de Bavière qui est couronné roi de Bohême (décembre 1741) puis empereur Charles VII (janvier 1742). Marie-Thérèse reconquiert Prague en décembre 1742 et écrase l&#39;épisode bohémien en 1743. La paix d&#39;Aix-la-Chapelle (1748) cède définitivement la Silésie à la Prusse mais confirme Marie-Thérèse et la dynastie Habsbourg-Lorraine sur le reste des domaines. Les réformes Haugwitz (1749) suivent immédiatement."
+            onclick="showDetail(21)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:73.1776%;width:2.8972%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1749 — 1780)&#10;Les réformes Haugwitz (1749) centralisent l&#39;administration et la fiscalité sur les Erbländer et la Bohême. Chancellerie unique autrichienne et bohême, caisse militaire centrale (Militärische Hofkommission 1753), conseil d&#39;État (Staatsrat 1760). Joseph II, co-régent à partir de 1765, prépare et amplifie les réformes. **Absence de DGRO canonique** comme trait marquant : les oligarques cisleithans n&#39;ont plus d&#39;assise territoriale suffisante après la guerre de Trente Ans, et la Hongrie — seule capable d&#39;une révolte armée — est maintenue hors du périmètre d&#39;absolutisation par compromis permanent."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band" style="left:76.0748%;width:6.3551%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (1780 — 1848)&#10;De Joseph II à la Remontrance de 1848. Joseph II (r. seul 1780-1790) incarne le pic absolutiste — despotisme éclairé, réformes radicales (édit de tolérance 1781, suppression du servage 1781, sécularisations, germanisation administrative). Léopold II (1790-1792) doit reculer sur plusieurs réformes face à la résistance hongroise. Les guerres révolutionnaires et napoléoniennes (1792-1815) sont un prolongement par choc exogène — l&#39;Autriche est battue à répétition (Campo-Formio 1797, Lunéville 1801, Presbourg 1805, Schönbrunn 1809), Napoléon dissout le Saint-Empire (6 août 1806), mais les institutions habsbourgeoises survivent. Le Congrès de Vienne (1814-1815), orchestré par Metternich, consolide l&#39;Empire d&#39;Autriche proclamé en 1804 et marque la fin de l&#39;expansion territoriale. L&#39;ère du Vormärz (1815-1848) est une période d&#39;impérialisme absolutiste consolidé sous direction metternichienne, avant que la Remontrance de 1848 n&#39;y mette fin."
+            onclick="showDetail(27)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band" style="left:82.4299%;width:6.5421%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime&lt;/strong&gt; (1848 — 1918)&#10;De l&#39;écrasement des révolutions de 1848 à l&#39;effondrement de 1918. Néo-absolutisme Bach (1849-1859), défaites militaires (Solferino 1859, Sadowa 1866), compromis austro-hongrois (1867) qui fige la monarchie en architecture dualiste, règne exceptionnellement long de François-Joseph (1848-1916, 68 ans) maximisant la sédimentation. Bloc élitaire fragmenté le long des lignes nationales mais uni sur le maintien du dualisme ; bloc contestataire composé de socialistes viennois (SDAP), chrétiens-sociaux (Lueger), panslavistes tchèques, nationalistes hongrois radicaux, italiens, polonais, ruthènes. L&#39;AR est prolongé par le jeu même des tensions nationales qui rend chaque réforme pan-monarchique impossible, mais l&#39;effondrement militaire de 1918 fait tout tomber en quelques semaines."
+            onclick="showDetail(32)">
+            <span class="subphase-label">Ancien régime</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:88.9720%;width:1.8692%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1918 — 1938)&#10;Séquence canonique : explosion de l&#39;Ancien Régime (12 novembre 1918), expérience parlementaire (Première République 1919-1933), phase aiguë (Dollfuss 1933-1934), moment thermidorien (Schuschnigg 1934-1938). La sous-phase s&#39;achève avec l&#39;Anschluss (12 mars 1938), qui est structurellement l&#39;émergence de l&#39;Impérialiste Revanchard."
+            onclick="showDetail(36)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:90.8411%;width:0.6542%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Impérialisme revanchard&lt;/strong&gt; (1938 — 1945)&#10;L&#39;Anschluss (12 mars 1938) installe l&#39;Impérialiste Revanchard autrichien — Hitler, né autrichien, qui est simultanément l&#39;IR de la RN allemande. Pendant 7 ans, le Parcours autrichien est porté par le moment impérialiste revanchard nazi : projection militaire pan-européenne, ventilation des élites par la méritocratie du parti, réalisation historique de l&#39;idée pan-germanique autrichienne. La sous-phase s&#39;achève avec la chute du Reich en mai 1945."
+            onclick="showDetail(41)">
+            <span class="subphase-label">Impérialisme revanchard</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:91.4953%;width:0.9346%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt; (1945 — 1955)&#10;Après la libération par les forces alliées, l&#39;Autriche est occupée par les quatre puissances (États-Unis, Union soviétique, Royaume-Uni, France) jusqu&#39;en 1955. Dès avril 1945, un gouvernement provisoire sous Karl Renner réactive la Constitution de 1920. Les élections de novembre 1945 donnent une majorité à l&#39;ÖVP (chrétien-social) et au SPÖ (socialiste). Les Grandes Coalitions gouvernent l&#39;occupation. Le traité d&#39;État (Staatsvertrag, 15 mai 1955) rend la pleine souveraineté ; la déclaration de neutralité (26 octobre 1955) fixe l&#39;identité géopolitique autrichienne. C&#39;est une restauration sous tutelle étrangère qui s&#39;achève par la Glorieuse Révolution."
+            onclick="showDetail(43)">
+            <span class="subphase-label">Restauration</span>
+        </div>
+        
+        
+    <div class="area-chart" style="top:230px;">
+        
+        <div class="area-chart-label" style="left:0.9346%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:0.9346%;width:16.8224%;height:0.9px;"><div class="area-noyau" style="height:0.9px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km² — Ostmark (marche orientale)"></div></div>
+        <div class="area-step-group" style="left:17.7570%;width:3.3645%;height:1.4px;"><div class="area-noyau" style="height:1.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~15 000 km² — Privilegium Minus — duché d&#39;Autriche"></div></div>
+        <div class="area-step-group" style="left:21.1215%;width:8.4112%;height:2.3px;"><div class="area-noyau" style="height:2.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — + Styrie (héritage Georgenberg)"></div></div>
+        <div class="area-step-group" style="left:29.5327%;width:4.9533%;height:2.8px;"><div class="area-noyau" style="height:2.8px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~30 000 km² — Rodolphe Ier installe ses fils — Autriche + Styrie"></div></div>
+        <div class="area-step-group" style="left:34.4860%;width:2.6168%;height:4.1px;"><div class="area-noyau" style="height:4.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~45 000 km² — + Carinthie, Carniole"></div></div>
+        <div class="area-step-group" style="left:37.1028%;width:12.1495%;height:6.0px;"><div class="area-noyau" style="height:6.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~65 000 km² — + Tyrol"></div></div>
+        <div class="area-step-group" style="left:49.2523%;width:3.0841%;height:8.7px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km² — Erbländer réunifiés sous Maximilien Ier"></div></div>
+        <div class="area-step-group has-marges" style="left:52.3364%;width:2.8037%;height:34.4px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:25.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~280 000 km² — + Bohême, Hongrie royale (héritage jagellon)"></div></div>
+        <div class="area-step-group has-marges" style="left:55.1402%;width:8.5981%;height:34.4px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:25.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~280 000 km² — Partition habsbourgeoise — branche espagnole séparée"></div></div>
+        <div class="area-step-group has-marges" style="left:63.7383%;width:4.7664%;height:34.4px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:25.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~280 000 km² — Westphalie — confirmation territoriale"></div></div>
+        <div class="area-step-group has-marges" style="left:68.5047%;width:1.4019%;height:50.1px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:41.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~450 000 km² — + Hongrie reconquise, Transylvanie, Banat (Karlowitz)"></div></div>
+        <div class="area-step-group has-marges" style="left:69.9065%;width:1.9626%;height:62.0px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:53.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~580 000 km² — + Pays-Bas, Lombardie, Naples, Sardaigne (Utrecht-Rastatt)"></div></div>
+        <div class="area-step-group has-marges" style="left:71.8692%;width:0.6542%;height:48.2px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:39.5px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~430 000 km² — - Naples, Sicile (Succession de Pologne)"></div></div>
+        <div class="area-step-group has-marges" style="left:72.5234%;width:2.8037%;height:44.5px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:35.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~390 000 km² — - Silésie (au profit de la Prusse)"></div></div>
+        <div class="area-step-group has-marges" style="left:75.3271%;width:2.1495%;height:51.9px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:43.2px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~470 000 km² — + Galicie (première partition de la Pologne)"></div></div>
+        <div class="area-step-group has-marges" style="left:77.4766%;width:0.1869%;height:55.6px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:46.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~510 000 km² — + Galicie occidentale, Bucovine"></div></div>
+        <div class="area-step-group has-marges" style="left:77.6636%;width:1.6822%;height:51.9px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:43.2px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~470 000 km² — Campo-Formio — perte des Pays-Bas, + Vénétie"></div></div>
+        <div class="area-step-group has-marges" style="left:79.3458%;width:4.1121%;height:59.7px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:51.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~555 000 km² — Congrès de Vienne — + Lombardie-Vénétie, Salzbourg, Dalmatie"></div></div>
+        <div class="area-step-group has-marges" style="left:83.4579%;width:0.6542%;height:57.9px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:49.1px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~535 000 km² — - Lombardie (Villafranca)"></div></div>
+        <div class="area-step-group has-marges" style="left:84.1121%;width:3.9252%;height:56.0px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:47.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~515 000 km² — - Vénétie, exclusion de l&#39;Allemagne (Sadowa)"></div></div>
+        <div class="area-step-group has-marges" style="left:88.0374%;width:0.9346%;height:61.5px;"><div class="area-noyau" style="height:8.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~95 000 km²"></div><div class="area-marges" style="bottom:8.7px;height:52.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~575 000 km² — Annexion formelle de la Bosnie-Herzégovine"></div></div>
+        <div class="area-step-group" style="left:88.9720%;width:1.8692%;height:7.7px;"><div class="area-noyau" style="height:7.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~84 000 km² — Saint-Germain — réduction aux Erbländer germanophones"></div></div>
+        <div class="area-step-group" style="left:90.8411%;width:1.5888%;height:0.0px;"><div class="area-noyau" style="height:0.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~0 km² — Anschluss — disparition de l&#39;État autrichien"></div></div>
+        <div class="area-step-group" style="left:92.4299%;width:7.5701%;height:7.7px;"><div class="area-noyau" style="height:7.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~84 000 km² — Staatsvertrag — souveraineté retrouvée"></div></div>
+        
+        <div class="area-edge" style="left:17.7570%;height:1.4px;"></div>
+        <div class="area-edge" style="left:21.1215%;height:2.3px;"></div>
+        <div class="area-edge" style="left:29.5327%;height:2.8px;"></div>
+        <div class="area-edge" style="left:34.4860%;height:4.1px;"></div>
+        <div class="area-edge" style="left:37.1028%;height:6.0px;"></div>
+        <div class="area-edge" style="left:49.2523%;height:8.7px;"></div>
+        <div class="area-edge" style="left:52.3364%;height:34.4px;"></div>
+        <div class="area-edge" style="left:55.1402%;height:34.4px;"></div>
+        <div class="area-edge" style="left:63.7383%;height:34.4px;"></div>
+        <div class="area-edge" style="left:68.5047%;height:50.1px;"></div>
+        <div class="area-edge" style="left:69.9065%;height:62.0px;"></div>
+        <div class="area-edge" style="left:71.8692%;height:62.0px;"></div>
+        <div class="area-edge" style="left:72.5234%;height:48.2px;"></div>
+        <div class="area-edge" style="left:75.3271%;height:51.9px;"></div>
+        <div class="area-edge" style="left:77.4766%;height:55.6px;"></div>
+        <div class="area-edge" style="left:77.6636%;height:55.6px;"></div>
+        <div class="area-edge" style="left:79.3458%;height:59.7px;"></div>
+        <div class="area-edge" style="left:83.4579%;height:59.7px;"></div>
+        <div class="area-edge" style="left:84.1121%;height:57.9px;"></div>
+        <div class="area-edge" style="left:88.0374%;height:61.5px;"></div>
+        <div class="area-edge" style="left:88.9720%;height:61.5px;"></div>
+        <div class="area-edge" style="left:90.8411%;height:7.7px;"></div>
+        <div class="area-edge" style="left:92.4299%;height:7.7px;"></div>
+    </div>
+        
+        <div class="area-saillant-group" style="left:52.3364%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Héritage jagellon&lt;/strong&gt;&#10;Bohême et Hongrie royale (1526)&#10;Après la bataille de Mohács (29 août 1526), où Louis II de Hongrie-Bohême meurt sans héritier, Ferdinand Ier hérite de la Bohême et de la Hongrie royale via son épouse Anne Jagellon. L&#39;échelle de la polité habsbourgeoise explose : les Erbländer germanophones (~95 000 km²) s&#39;augmentent d&#39;un héritage composite de ~280 000 km² peuplé de Tchèques, Moraves, Slovaques, Magyars, Croates. C&#39;est un choc d&#39;hétérogénéité massif, analogue à l&#39;héritage habsbourgeois espagnol (1516) ou au doublement napoléonien bavarois (1806)."
+                onclick="showDetail(17)">
+                <span class="material-icons">open_in_full</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Héritage jagellon</span><span class="saillant-date">1526</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:72.5234%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Perte de la Silésie&lt;/strong&gt;&#10;Traité de Berlin (1742)&#10;La Silésie, province riche et industrielle de la couronne de Bohême, est conquise par Frédéric II de Prusse en décembre 1740-1741 et cédée définitivement par le traité de Berlin (juillet 1742), confirmé à Aix-la-Chapelle (1748). C&#39;est la seule grande perte territoriale non compensée du XVIIIe siècle habsbourgeois — ~40 000 km² de marges riches définitivement perdus."
+                onclick="showDetail(23)">
+                <span class="material-icons">compress</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Perte de la Silésie</span><span class="saillant-date">1742</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:77.1963%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Guerres napoléoniennes&lt;/strong&gt;&#10;Campo-Formio, Presbourg, Schönbrunn (1792)&#10;De Campo-Formio (1797) au Congrès de Vienne (1815), l&#39;Autriche subit une série de défaites militaires majeures contre la France révolutionnaire puis napoléonienne : perte des Pays-Bas autrichiens, de la Lombardie, du Tyrol (temporairement), de Salzbourg. Napoléon dissout le Saint-Empire romain germanique (6 août 1806) — François II renonce au titre impérial et se proclame empereur d&#39;Autriche (François Ier) dès 1804. Mais les institutions habsbourgeoises survivent, et le Congrès de Vienne restaure l&#39;Autriche dans une position pivot en Europe, avec même des gains nets (Lombardie-Vénétie, Salzbourg, Dalmatie)."
+                onclick="showDetail(29)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Guerres napoléoniennes</span><span class="saillant-date">1792</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:83.4579%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Perte de la Lombardie&lt;/strong&gt;&#10;Villafranca (1859)&#10;La défaite autrichienne à Solferino (24 juin 1859) contre la France de Napoléon III et le Piémont de Cavour aboutit au traité de Villafranca (11 juillet 1859) puis à la paix de Zurich (10 novembre 1859), qui cèdent la Lombardie au Piémont. Première grande perte territoriale depuis le Congrès de Vienne."
+                onclick="showDetail(33)">
+                <span class="material-icons">compress</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Perte de la Lombardie</span><span class="saillant-date">1859</span></div>
+        </div>
+        <div class="area-saillant-group" style="left:84.1121%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Exclusion de l&#39;Allemagne&lt;/strong&gt;&#10;Königgrätz (1866)&#10;La défaite de Sadowa/Königgrätz (3 juillet 1866) contre la Prusse de Bismarck entraîne la dissolution de la Confédération germanique et l&#39;exclusion définitive de l&#39;Autriche de l&#39;espace politique allemand. Paix de Prague (23 août 1866) : l&#39;Autriche cède la Vénétie à l&#39;Italie et abandonne toute prétention allemande. Le compromis austro-hongrois (1867) suit directement comme tentative de consolidation interne."
+                onclick="showDetail(34)">
+                <span class="material-icons">compress</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Exclusion de l&#39;Allemagne</span><span class="saillant-date">1866</span></div>
+        </div>
+        
+        <div class="saillant-group" style="left:0.9346%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Leopold Ier (976)&#10;Le 21 juillet 976, l&#39;empereur Otton II détache la marche orientale du duché de Bavière et l&#39;octroie à Leopold Ier de Babenberg, comte du Donaugau. L&#39;Ostmark est désormais une entité politique distincte, sous une dynastie héréditaire qui exerce une autorité supra-régionale effective sur la frontière orientale de l&#39;Empire."
+                onclick="showDetail(2)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Leopold Ier</span><span class="saillant-date">976</span></div>
+        </div>
+        <div class="saillant-group" style="left:21.6822%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Léopold VI de Babenberg (1198)&#10;Léopold VI (r. 1198-1230) porte le pouvoir féodal babenberg à son maximum. Règne long et prospère, cour littéraire brillante (patronage des Minnesänger, contexte du Nibelungenlied), consolidation administrative. L&#39;Autriche et la Styrie sont réunies sous une autorité ducale efficace."
+                onclick="showDetail(3)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Léopold VI de Babenberg</span><span class="saillant-date">1198</span></div>
+        </div>
+        <div class="saillant-group" style="left:26.1682%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Mort à la Leitha (1246)&#10;Le 15 juin 1246, Frédéric II de Babenberg meurt sans héritier mâle à la bataille de la Leitha contre les Hongrois. L&#39;Autriche et la Styrie sont sans direction. Aucun pacte oligarchique n&#39;avait eu le temps d&#39;émerger — l&#39;homogénéité des élites n&#39;avait pas atteint le seuil critique."
+                onclick="showDetail(4)">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Mort à la Leitha</span><span class="saillant-date">1246</span></div>
+        </div>
+        <div class="saillant-group" style="left:26.1682%;">
+            <div class="saillant-marker perturbation-marker" style="background:#8B0000;"
+                data-tooltip="&lt;strong&gt;Reboot dynastique&lt;/strong&gt;&#10;Interregnum, Marchfeld (1246)&#10;De 1246 à 1282, l&#39;Autriche traverse un interregnum de 36 ans. Ottokar II de Bohême annexe l&#39;Autriche (1251) et la Styrie (1261). Rodolphe de Habsbourg, élu roi des Romains en 1273, défait Ottokar à Marchfeld (26 août 1278). Le 27 décembre 1282, Rodolphe investit ses fils Albert et Rodolphe II comme ducs d&#39;Autriche et de Styrie — nouvelle dynastie installée de l&#39;extérieur."
+                onclick="showDetail(5)">
+                <span class="material-icons">restart_alt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Reboot dynastique</span><span class="saillant-figure">Interregnum, Marchfeld</span><span class="saillant-date">1246</span></div>
+        </div>
+        <div class="saillant-group" style="left:29.5327%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Hoftag d&#39;Augsbourg (1282)&#10;Le 27 décembre 1282, au Hoftag d&#39;Augsbourg, Rodolphe Ier de Habsbourg investit ses fils Albert et Rodolphe II des duchés d&#39;Autriche et de Styrie. C&#39;est la transition d&#39;une dynastie (Babenberg) à une autre (Habsbourg) sur un territoire où cette nouvelle dynastie n&#39;a pas de base locale."
+                onclick="showDetail(8)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Hoftag d&#39;Augsbourg</span><span class="saillant-date">1282</span></div>
+        </div>
+        <div class="saillant-group" style="left:38.5981%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Partition de Neuberg (1379)&#10;Le 25 septembre 1379, Albert III et Léopold III divisent formellement les domaines habsbourgeois en deux lignes : Albertine (Autriche propre) et Leopoldine (Styrie, Carinthie, Carniole, Tyrol). La partition annule la primogéniture que Rudolf IV avait tentée via le Privilegium Maius. Première grande boucle féodale habsbourgeoise."
+                onclick="showDetail(10)">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Partition de Neuberg</span><span class="saillant-date">1379</span></div>
+        </div>
+        <div class="saillant-group" style="left:44.2991%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Frédéric III contre Albert VI (1440)&#10;Le frère cadet de Frédéric III, Albert VI, revendique sa part des domaines habsbourgeois et entre en conflit armé répété. Frédéric III doit céder l&#39;Autriche intérieure puis la Haute-Autriche ; en 1462, il est assiégé dans le Hofburg par les Viennois soutenant Albert VI, libéré par Georges de Podiebrad de Bohême. Albert VI meurt subitement en 1463, permettant à Frédéric III de reprendre tous les domaines. Deuxième boucle féodale du cycle habsbourgeois."
+                onclick="showDetail(11)">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Frédéric III contre Albert VI</span><span class="saillant-date">1440</span></div>
+        </div>
+        <div class="saillant-group" style="left:48.5047%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Conquête de Vienne (1485)&#10;Mathias Corvin, roi de Hongrie, conquiert Vienne le 1er juin 1485 et y installe sa cour. Frédéric III est en fuite. Pendant cinq ans, la capitale autrichienne est sous domination hongroise — humiliation majeure pour la dynastie Habsbourg. La mort inattendue de Mathias (6 avril 1490) permet à Maximilien Ier de reconquérir l&#39;Autriche sans combat."
+                onclick="showDetail(12)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Conquête de Vienne</span><span class="saillant-date">1485</span></div>
+        </div>
+        <div class="saillant-group" style="left:49.2523%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Maximilien Ier (1493)&#10;Maximilien Ier (r. Erbländer 1493-1519) est le pic féodal du cycle habsbourgeois — premier Habsbourg à exercer une autorité personnelle pleine sur un duché réunifié, projection européenne par mariages dynastiques, modernisation administrative bureaucratique (Hofrat, Hofkammer inspirés de Bourgogne), reconquête de l&#39;Autriche après Corvin. Son règne culmine avec le pacte de 1518 promulgué huit mois avant sa mort."
+                onclick="showDetail(9)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Maximilien Ier</span><span class="saillant-date">1493</span></div>
+        </div>
+        <div class="saillant-group" style="left:51.5888%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Innsbrucker Libell (1518)&#10;Le 24 mai 1518, Maximilien Ier convoque à Innsbruck une diète générale de tous les états des terres héréditaires habsbourgeoises — premier Generallandtag commun — et promulgue un acte formel (Libell) qui codifie l&#39;administration, la défense (Verteidigungsordnung) et la fiscalité militaire. C&#39;est une codification collective issue d&#39;une négociation souverain/états, dans un contexte de souverain affaibli (Maximilien meurt 8 mois plus tard)."
+                onclick="showDetail(13)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Innsbrucker Libell</span><span class="saillant-date">1518</span></div>
+        </div>
+        <div class="saillant-group" style="left:51.9626%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Ferdinand Ier (1522)&#10;Ferdinand Ier (r. Erbländer 1522-1564, empereur 1558-1564) est le premier souverain à gouverner sous le cadre du pacte de 1518. Frère cadet de Charles Quint, il reçoit les Erbländer en 1521-1522 par le traité de Worms, réprime l&#39;expérience souveraine des états (Blutgericht de Wiener Neustadt, juillet-août 1522), puis hérite de la Bohême et de la Hongrie royale en 1526, étendant considérablement l&#39;échelle de la polité."
+                onclick="showDetail(16)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Ferdinand Ier</span><span class="saillant-date">1522</span></div>
+        </div>
+        <div class="saillant-group" style="left:64.6729%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pic oligarchique&lt;/strong&gt;&#10;Léopold Ier (1658)&#10;Léopold Ier (r. 1658-1705) porte la monarchie habsbourgeoise à son maximum de puissance dans le cadre oligarchique composite. Règne long (47 ans), victoire symbolique majeure (lever du siège de Vienne, 12 septembre 1683), reconquête complète de la Hongrie (Buda 1686, Zenta 1697), traité de Karlowitz (1699) qui acte la première grande récupération territoriale face aux Ottomans, prestige européen comme leader de la Grande Guerre turque."
+                onclick="showDetail(19)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic oligarchique</span><span class="saillant-figure">Léopold Ier</span><span class="saillant-date">1658</span></div>
+        </div>
+        <div class="saillant-group" style="left:70.2804%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Traité de Passarowitz (1718)&#10;Le traité de Passarowitz (21 juillet 1718), signé après la guerre victorieuse d&#39;Eugène de Savoie contre les Ottomans, marque le sommet et la fin de l&#39;expansion oligarchique autrichienne. Gains : Belgrade, Banat, partie de la Serbie et de la Valachie. Après Passarowitz, la monarchie habsbourgeoise entre en phase de reflux territorial : guerre turque désastreuse de 1737-1739 (perte de Belgrade), perte de Naples et Sicile (Succession de Pologne 1735), perte de la Silésie (1742)."
+                onclick="showDetail(20)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Traité de Passarowitz</span><span class="saillant-date">1718</span></div>
+        </div>
+        <div class="saillant-group" style="left:72.3364%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Guerre de Succession d&#39;Autriche (1740)&#10;La Guerre de Succession d&#39;Autriche est le conflit sociotrois factions — centralisateurs viennois, particularistes provinciaux (épisode bohémien notable), puissances contestataires externes — résolu par l&#39;émergence d&#39;un tiers : Marie-Thérèse comme fondatrice de la dynastie Habsbourg-Lorraine, incarnant un nouveau modèle administratif. Parallèle exact avec la Guerre de Succession d&#39;Espagne (1700-1714) résolue par Philippe V et la Nueva Planta."
+                onclick="showDetail(22)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Guerre de Succession d&#39;Autriche</span><span class="saillant-date">1740</span></div>
+        </div>
+        <div class="saillant-group" style="left:73.1776%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Réformes Haugwitz (1749)&#10;Marie-Thérèse (r. 1740-1780), avec les réformes Haugwitz de 1749, est la première souveraine dont l&#39;administration centrale exerce une préséance effective sur les administrations locales des Erbländer et de la Bohême. Nouvelle dynastie (Habsbourg-Lorraine par son mariage avec François de Lorraine), nouveau modèle administratif (Haugwitz s&#39;inspire du modèle prussien), et rupture avec l&#39;ancien cadre composite — c&#39;est la rupture absolutiste."
+                onclick="showDetail(26)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Réformes Haugwitz</span><span class="saillant-date">1749</span></div>
+        </div>
+        <div class="saillant-group" style="left:76.0748%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Joseph II (1780)&#10;Joseph II (r. seul 1780-1790) incarne le pic absolutiste autrichien : réformateur rationaliste, il pousse la modernisation au-delà de ce que sa société peut accepter. Édit de tolérance (1781), suppression du servage personnel (1781), sécularisation de monastères contemplatifs (1782), allemand comme langue administrative unique (1784), code pénal (1787), système hospitalier centralisé (Vienne Allgemeines Krankenhaus 1784). Plusieurs réformes doivent être rétractées par Léopold II face à la résistance noble et régionale."
+                onclick="showDetail(28)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Joseph II</span><span class="saillant-date">1780</span></div>
+        </div>
+        <div class="saillant-group" style="left:79.3458%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Congrès de Vienne (1815)&#10;Le Congrès de Vienne (1814-1815), orchestré par Metternich, consolide l&#39;Empire d&#39;Autriche dans ses frontières de l&#39;ordre européen post-napoléonien. Après 1815, l&#39;Autriche est en position strictement défensive — toutes les évolutions territoriales ultérieures seront des pertes (Lombardie 1859, Vénétie 1866), à l&#39;exception de l&#39;occupation de la Bosnie-Herzégovine (1878, annexion formelle 1908)."
+                onclick="showDetail(30)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Congrès de Vienne</span><span class="saillant-date">1815</span></div>
+        </div>
+        <div class="saillant-group" style="left:82.4299%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Remontrance&lt;/strong&gt;&#10;Révolutions de 1848 (1848)&#10;Les révolutions de 1848 à Vienne (mars et octobre), Prague, Budapest, Milan et Venise sont la Remontrance autrichienne — tentative coordonnée de la classe parlementaire, de la bourgeoisie libérale et des nationalités de reprendre des prérogatives face au pouvoir absolutiste. La première phase (mars 1848) fait tomber Metternich, ouvre une brève expérience constitutionnelle, et un Reichstag siège à Vienne puis Kremsier. La seconde phase (octobre 1848 - août 1849) est écrasée par l&#39;armée impériale (Windischgrätz à Vienne, Radetzky en Italie) et avec l&#39;aide russe en Hongrie (Görgey capitule à Világos, 13 août 1849). Ferdinand Ier abdique en faveur de son neveu François-Joseph (2 décembre 1848). L&#39;octroi d&#39;une constitution (mars 1849) est rapidement révoqué (Sylvesterpatent, 31 décembre 1851) et le néo-absolutisme s&#39;installe pour une décennie."
+                onclick="showDetail(31)">
+                <span class="material-icons">record_voice_over</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Remontrance</span><span class="saillant-figure">Révolutions de 1848</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:88.9720%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Explosion de l&#39;AR&lt;/strong&gt;&#10;République d&#39;Autriche allemande (1918)&#10;Le 12 novembre 1918, au lendemain de l&#39;abdication (« renonciation à participation aux affaires de l&#39;État ») de Charles Ier, l&#39;Assemblée provisoire proclame la République d&#39;Autriche allemande. Le traité de Saint-Germain-en-Laye (10 septembre 1919) fixe les frontières de l&#39;Autriche réduite aux Erbländer germanophones et interdit explicitement l&#39;Anschluss à l&#39;Allemagne."
+                onclick="showDetail(37)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;AR</span><span class="saillant-figure">République d&#39;Autriche allemande</span><span class="saillant-date">1918</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.0654%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Première République (1919)&#10;La Première République autrichienne (1919-1933) est l&#39;expérience parlementaire classique : Assemblée constituante élue, Constitution de 1920 (révisée 1929) inspirée de Hans Kelsen, factions concurrentes (SDAP social-démocrate, CS chrétien-social, pan-germanistes), coalitions, turbulence économique (hyperinflation, grande dépression), polarisation croissante entre « Rouge Vienne » et campagne chrétienne-sociale."
+                onclick="showDetail(38)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Première République</span><span class="saillant-date">1919</span></div>
+        </div>
+        <div class="saillant-group" style="left:90.3738%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Austrofascisme et guerre civile (1933)&#10;De mars 1933 (auto-dissolution du Nationalrat par Dollfuss) à juillet 1934 (assassinat de Dollfuss par les nazis autrichiens), l&#39;Autriche traverse une phase aiguë courte mais violente : interdiction du parti nazi et du parti communiste, guerre civile de février 1934 (Schutzbund social-démocrate écrasé, parti socialiste interdit), Constitution corporatiste du 1er mai 1934 (Ständestaat), Putsch nazi du 25 juillet 1934 où Dollfuss est assassiné."
+                onclick="showDetail(39)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">Austrofascisme et guerre civile</span><span class="saillant-date">1933</span></div>
+        </div>
+        <div class="saillant-group" style="left:90.4673%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Moment thermidorien&lt;/strong&gt;&#10;Ständestaat (1934)&#10;Kurt Schuschnigg succède à Dollfuss et maintient le régime corporatiste jusqu&#39;à l&#39;Anschluss. Pas de radicalisation supplémentaire, pas de projet impérialiste — stabilisation défensive face aux pressions intérieures (nazis autrichiens) et extérieures (Allemagne nazie). Il tente désespérément de préserver l&#39;indépendance autrichienne, notamment en cherchant des garanties italiennes puis britanniques. Le plébiscite qu&#39;il annonce pour le 13 mars 1938 (sur le maintien de l&#39;indépendance) est la goutte d&#39;eau qui fait basculer Hitler à l&#39;invasion préventive."
+                onclick="showDetail(40)">
+                <span class="material-icons">balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Moment thermidorien</span><span class="saillant-figure">Ständestaat</span><span class="saillant-date">1934</span></div>
+        </div>
+        <div class="saillant-group" style="left:90.8411%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Impérialiste Revanchard&lt;/strong&gt;&#10;Anschluss (1938)&#10;Le 12 mars 1938, Hitler — né à Braunau am Inn, autrichien d&#39;origine — annexe l&#39;Autriche au Reich par l&#39;Anschluss. L&#39;Autriche disparaît formellement comme État indépendant. Structurellement, c&#39;est l&#39;émergence de l&#39;Impérialiste Revanchard autrichien : une figure autrichienne qui réalise l&#39;idée pan-germanique et projette la puissance de la fusion germano-autrichienne vers l&#39;extérieur. L&#39;IR autrichien coïncide avec l&#39;IR allemand — pendant 7 ans, le même individu porte l&#39;impérialisme revanchard des deux Parcours."
+                onclick="showDetail(42)">
+                <span class="material-icons">military_tech</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Impérialiste Revanchard</span><span class="saillant-figure">Anschluss</span><span class="saillant-date">1938</span></div>
+        </div>
+        <div class="saillant-group" style="left:92.4299%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Staatsvertrag et neutralité (1955)&#10;Le Staatsvertrag de Vienne (15 mai 1955) est signé par les quatre puissances alliées et l&#39;Autriche. Il rend la pleine souveraineté à l&#39;Autriche, interdit toute union avec l&#39;Allemagne, et exige une déclaration de neutralité. Le 26 octobre 1955, le Nationalrat adopte la loi constitutionnelle sur la neutralité perpétuelle. Les deux actes combinés forment la Glorieuse Révolution autrichienne : ancrage démocratique parlementaire, pleine souveraineté, identité nationale distincte de l&#39;Allemagne."
+                onclick="showDetail(44)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Staatsvertrag et neutralité</span><span class="saillant-date">1955</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 14/04/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale 1','subtitle':'','summary':'Les Babenberg transforment sur 270 ans un margraviat carolingien en duché cohérent centré sur Vienne. Léopold VI (r. 1198-1230) est le pic féodal babenberg. Frédéric II tente de s\'ériger en roi mais meurt en 1246 sans héritier mâle à la bataille de la Leitha.','description':'La phase féodale 1 suit un parcours féodal classique. Leopold Ier est installé comme margrave en 976. Le Privilegium Minus (1156) élève l\'Autriche au rang de duché héréditaire et donne aux Babenberg primogéniture et inséparabilité. Henri II Jasomirgott, premier duc, transfère sa résidence à Vienne. Léopold V prend la Styrie en 1192 par le pacte de Georgenberg et participe à la troisième croisade. Léopold VI (r. 1198-1230) porte le pouvoir babenberg à son maximum — règne long, cour littéraire brillante, consolidation économique. Son fils Frédéric II règne de manière conflictuelle, tente d\'obtenir la couronne royale, et meurt à la Leitha (15 juin 1246) contre les Hongrois sans héritier mâle. Le duché est sans direction au moment même où il approchait peut-être d\'une résolution oligarchique — c\'est une phase féodale interrompue par crise biologique dynastique, structurellement analogue au Saint-Empire allemand dont la phase féodale n\'aboutit pas non plus à un pacte.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+70 ans par rapport à la norme. Phase allongée par l\'absence de résolution — sans extinction dynastique, un pacte aurait probablement émergé autour de 1246-1250.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Phase inachevée — extinction dynastique de Frédéric II de Babenberg en 1246 sans héritier mâle. Pas de pacte oligarchique. Le cycle babenberg est interrompu avant de pouvoir se résoudre.','resolution_conditions':'L\'extinction dynastique (crise biologique) arrive avant que les deux conditions de Deblonde ne soient réunies — l\'homogénéité des élites autrichiennes à l\'échelle du duché n\'a pas atteint le seuil critique, et il n\'y a pas eu de moment de faiblesse dynastique qui aurait forcé une codification collective.','avortement':'','start':976,'end':1246,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'Sur 270 ans, les Babenberg construisent un duché cohérent, obtiennent l\'élévation au rang de duché (Privilegium Minus 1156), transfèrent la capitale à Vienne, acquièrent la Styrie (1192) et développent une cour ducale effective. Le cycle suit un parcours féodal classique jusqu\'à son interruption brutale.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':976,'end':1246,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Leopold Ier','summary':'Le 21 juillet 976, l\'empereur Otton II détache la marche orientale du duché de Bavière et l\'octroie à Leopold Ier de Babenberg, comte du Donaugau. L\'Ostmark est désormais une entité politique distincte, sous une dynastie héréditaire qui exerce une autorité supra-régionale effective sur la frontière orientale de l\'Empire.','description':'Leopold Ier est le point de départ du Parcours autrichien. Avant 976, la marche orientale était une simple dépendance de la Bavière. Avec l\'octroi à Leopold Ier, elle devient un margraviat autonome. Le territoire initial est modeste (un corridor danubien) mais l\'autonomie politique est réelle. Leopold Ier et ses successeurs étendent progressivement le contrôle vers l\'est et structurent le jeu politique autour de leur personne — le critère de l\'éveil féodal est rempli.','figure':'Leopold Ier de Babenberg','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':976,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Léopold VI de Babenberg','summary':'Léopold VI (r. 1198-1230) porte le pouvoir féodal babenberg à son maximum. Règne long et prospère, cour littéraire brillante (patronage des Minnesänger, contexte du Nibelungenlied), consolidation administrative. L\'Autriche et la Styrie sont réunies sous une autorité ducale efficace.','description':'Léopold VI est le sommet stable du cycle babenberg. Règne de 32 ans, autorité personnelle forte, cour prestigieuse, expansion territoriale, développement urbain. Vienne devient l\'une des plus grandes villes germanophones de l\'époque. Il participe à la croisade albigeoise et à la cinquième croisade, et est respecté comme arbitre dans les conflits impériaux. Mais son pouvoir reste fondamentalement personnel et féodal : l\'administration est rudimentaire, le fisc repose sur les revenus domaniaux, et le tout dépend de sa personne. Son fils Frédéric II tente de pousser plus loin mais son règne agité se termine dans un désastre.','figure':'Léopold VI','confidence':'medium','alternatives':'Frédéric II de Babenberg (1230-1246) — règne plus ambitieux, tente d\'obtenir la couronne royale. Mais son règne se termine en désastre à la Leitha. Léopold VI est le pic stable, Frédéric II la tentative ratée de transformer le pic en royauté.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1198,'end':1230,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Mort à la Leitha','summary':'Le 15 juin 1246, Frédéric II de Babenberg meurt sans héritier mâle à la bataille de la Leitha contre les Hongrois. L\'Autriche et la Styrie sont sans direction. Aucun pacte oligarchique n\'avait eu le temps d\'émerger — l\'homogénéité des élites n\'avait pas atteint le seuil critique.','description':'C\'est la crise terminale du cycle babenberg. L\'extinction dynastique arrive de manière fortuite (accident militaire) au moment où le duché traversait encore son essor féodal. Sans pacte, sans codification, sans homogénéité suffisante des élites, le duché se retrouve immédiatement en proie aux ambitions extérieures. La phase féodale 1 est une phase interrompue avant résolution.','figure':'Frédéric II de Babenberg','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1246,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Reboot dynastique','subtitle':'Interregnum, Marchfeld','summary':'De 1246 à 1282, l\'Autriche traverse un interregnum de 36 ans. Ottokar II de Bohême annexe l\'Autriche (1251) et la Styrie (1261). Rodolphe de Habsbourg, élu roi des Romains en 1273, défait Ottokar à Marchfeld (26 août 1278). Le 27 décembre 1282, Rodolphe investit ses fils Albert et Rodolphe II comme ducs d\'Autriche et de Styrie — nouvelle dynastie installée de l\'extérieur.','description':'Le reboot habsbourgeois est partiel : les institutions féodales et ecclésiastiques survivent, mais la dynastie est intégralement nouvelle et d\'origine étrangère (les Habsbourg viennent de l\'actuelle Suisse). Ils n\'ont aucune base locale et doivent reconstruire leur légitimité à partir de rien. L\'Interregnum de 36 ans a brisé la continuité dynastique, et la conquête d\'Ottokar a installé un pouvoir étranger défait par un autre pouvoir étranger. Le Parcours redémarre en phase féodale (pas en pré-féodale) parce que les cadres institutionnels et culturels survivent, mais il doit reparcourir un cycle féodal complet avant d\'atteindre une résolution oligarchique. Analogue structurel : reboot normand de 1066 en Angleterre (avec la différence qu\'en Autriche, la nouvelle dynastie s\'impose contre une absence de pouvoir, non contre une élite à remplacer).','figure':'Ottokar II de Bohême → Rodolphe Ier de Habsbourg','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1246,'end':1282,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale 2','subtitle':'','summary':'Le cycle habsbourgeois (1282-1518) est une phase féodale complète qui aboutit à une résolution pactiste. Rodolphe Ier installe ses fils en 1282. Trois crises féodales majeures ponctuent le cycle : la partition de Neuberg (1379), la guerre civile Frédéric III / Albert VI (années 1440-1463), et la conquête de Vienne par Mathias Corvin (1485-1490). Maximilien Ier (r. 1493-1519) est le pic féodal — réunification des Erbländer, modernisation administrative, projection dynastique européenne — et c\'est lui qui promulgue le pacte de 1518 huit mois avant sa mort.','description':'Les Habsbourg commencent modestement — leurs possessions familiales sont dans l\'actuelle Suisse, pas en Autriche. L\'installation de 1282 est imposée par le roi des Romains sur un territoire où ils n\'ont pas de base locale. Les premiers ducs construisent progressivement leur légitimité, acquièrent la Carinthie et la Carniole (1335), le Tyrol (1363). Rudolf IV (r. 1358-1365) est un règne dense mais bref — fondation de l\'Université de Vienne (1365), reconstruction de la cathédrale Saint-Étienne, forgery du Privilegium Maius qui exprime des ambitions pactistes (primogéniture, indivisibilité, titre d\'archiduc). Charles IV refuse la fraude ; Frédéric III la ratifiera en 1453. À la mort de Rudolf IV, ses frères se partagent les domaines par le Traité de Neuberg (1379) — première grande crise féodale. Les lignes albertine et léopoldine évoluent séparément pendant des générations. Frédéric III (r. 1452-1493), empereur pendant 53 ans, concentre son règne exceptionnellement long sur la réunification des terres habsbourgeoises mais son règne est aussi marqué par la guerre civile contre son frère Albert VI (années 1440-1463) et par la conquête de Vienne par Mathias Corvin de Hongrie (1485-1490), qui y tient sa cour jusqu\'à sa mort. Maximilien Ier reconquiert l\'Autriche en 1490, réunifie les Erbländer, engage les premières réformes administratives bureaucratiques (Hofrat, Hofkammer) inspirées du modèle bourguignon acquis par son mariage avec Marie de Bourgogne (1477), projette la maison habsbourgeoise sur l\'échiquier européen par des mariages dynastiques stratégiques (Espagne 1496, Bohême-Hongrie 1515) qui préparent les acquisitions du siècle suivant, et convoque en 1518 la diète générale qui produit le Libell. Il est le pic féodal habsbourgeois — premier Habsbourg à exercer une puissance personnelle pleine sur un duché réunifié — et il est en même temps le promulgateur du pacte, exactement comme Philippe le Bel ou Édouard Ier.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+36 ans par rapport à la norme. Phase prolongée par les trois boucles féodales (Neuberg 1379, guerre civile Albert VI, occupation Corvin) et par la tension entre domaines héréditaires et titre impérial qui monopolise l\'énergie des Habsbourg à partir de 1438.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — Innsbrucker Libell (24 mai 1518). Maximilien Ier, mourant, convoque une diète générale de tous les états des terres héréditaires habsbourgeoises et promulgue un acte formel qui codifie collectivement l\'administration, la défense (Verteidigungsordnung) et la fiscalité militaire. Le texte rassemble les éléments apparus au cours des siècles précédents en une charte commune.','resolution_conditions':'Les deux conditions de Deblonde sont réunies en 1518. (1) Homogénéité des élites habsbourgeoises à l\'échelle des Erbländer réunifiés — après 200 ans de brassage dynastique, de partitions et de réunifications, les élites provinciales partagent une conscience collective. (2) Faiblesse maximale du suzerain — Maximilien Ier est âgé, lourdement endetté, sans héritier direct (il meurt huit mois plus tard), humilié par les crises récentes. Ces conditions forcent la codification.','avortement':'','start':1282,'end':1518,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'Les Habsbourg construisent leur légitimité à partir d\'une position initialement faible, traversent trois crises féodales majeures (Neuberg 1379, guerre civile Albert VI 1440s-1463, occupation Corvin 1485-1490), et réunifient progressivement les Erbländer sous Frédéric III et Maximilien Ier. Maximilien Ier (1493-1519) est le pic féodal et le promulgateur du pacte oligarchique (Libell 1518).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1282,'end':1518,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Hoftag d\'Augsbourg','summary':'Le 27 décembre 1282, au Hoftag d\'Augsbourg, Rodolphe Ier de Habsbourg investit ses fils Albert et Rodolphe II des duchés d\'Autriche et de Styrie. C\'est la transition d\'une dynastie (Babenberg) à une autre (Habsbourg) sur un territoire où cette nouvelle dynastie n\'a pas de base locale.','description':'','figure':'Rodolphe Ier de Habsbourg','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1282,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Maximilien Ier','summary':'Maximilien Ier (r. Erbländer 1493-1519) est le pic féodal du cycle habsbourgeois — premier Habsbourg à exercer une autorité personnelle pleine sur un duché réunifié, projection européenne par mariages dynastiques, modernisation administrative bureaucratique (Hofrat, Hofkammer inspirés de Bourgogne), reconquête de l\'Autriche après Corvin. Son règne culmine avec le pacte de 1518 promulgué huit mois avant sa mort.','description':'Maximilien Ier est structurellement le pic féodal habsbourgeois — pouvoir personnel maximal dans le cadre féodal, avant la bascule vers l\'oligarchique. Il est analogue à Philippe le Bel en France (pic féodal immédiatement suivi de la loi salique) ou à Édouard Ier en Angleterre (pic féodal immédiatement suivi des Ordonnances). Sa puissance se manifeste sur quatre plans : (1) réunification territoriale — il reprend Vienne à la mort de Corvin (1490) et réunit les Erbländer sous une seule autorité après la division léopoldine ; (2) projection européenne — son mariage avec Marie de Bourgogne (1477) intègre les Pays-Bas à l\'héritage habsbourgeois, celui de son fils Philippe avec Jeanne de Castille (1496) ouvre l\'héritage espagnol, et celui de son petit-fils Ferdinand avec Anne Jagellon (1515) prépare l\'héritage bohême-hongrois de 1526 ; (3) modernisation administrative — il crée le Hofrat (1498), le Hofkammer (1500), et le Hofkriegsrat, qui seront la colonne vertébrale bureaucratique pendant deux siècles ; (4) prestige impérial — élu roi des Romains en 1486, empereur en 1508. Rudolf IV (1358-1365) — souvent cité comme pic symbolique — est un pic intermédiaire dans la coagulation : règne dense et ambitieux (fondation de l\'Université de Vienne 1365, reconstruction de Saint-Étienne, forgery du Privilegium Maius, acquisition du Tyrol) mais trop bref (7 ans, mort à 26 ans) et suivi immédiatement par la partition de Neuberg. Il ne satisfait pas le critère canonique du pic féodal comme « roi qui sort du lot par la puissance de son pouvoir personnel ».','figure':'Maximilien Ier','confidence':'medium','alternatives':'Rudolf IV (1358-1365) — règne dense et symbolique (Université de Vienne, Privilegium Maius, acquisition du Tyrol) mais court (7 ans) et pas un pic de puissance personnelle au sens strict. Frédéric III (1452-1493) — règne long (53 ans) mais non glorieux, traversé de crises féodales et humilié par Mathias Corvin. Maximilien Ier est retenu car il est le premier Habsbourg à exercer une puissance personnelle dominante sur un duché réunifié, avec une projection européenne majeure (mariages dynastiques Bourgogne 1477, Espagne 1496, Bohême-Hongrie 1515) et une modernisation administrative profonde — et c\'est lui qui promulgue le pacte de 1518.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1493,'end':1519,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Partition de Neuberg','summary':'Le 25 septembre 1379, Albert III et Léopold III divisent formellement les domaines habsbourgeois en deux lignes : Albertine (Autriche propre) et Leopoldine (Styrie, Carinthie, Carniole, Tyrol). La partition annule la primogéniture que Rudolf IV avait tentée via le Privilegium Maius. Première grande boucle féodale habsbourgeoise.','description':'Structurellement identique aux partitions bavaroises (1255, 1349, 1392) : à la mort d\'un duc, les frères se partagent les domaines, fragmentant l\'appareil administratif. Chaque branche développe sa propre cour et politique. Les partitions se reproduisent ensuite au sein des lignes. La fragmentation renforce paradoxalement les Landstände provinciaux qui profitent de la faiblesse des ducs pour arracher des privilèges.','figure':'Albert III et Léopold III','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1379,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Frédéric III contre Albert VI','summary':'Le frère cadet de Frédéric III, Albert VI, revendique sa part des domaines habsbourgeois et entre en conflit armé répété. Frédéric III doit céder l\'Autriche intérieure puis la Haute-Autriche ; en 1462, il est assiégé dans le Hofburg par les Viennois soutenant Albert VI, libéré par Georges de Podiebrad de Bohême. Albert VI meurt subitement en 1463, permettant à Frédéric III de reprendre tous les domaines. Deuxième boucle féodale du cycle habsbourgeois.','description':'Cette guerre civile est largement oubliée dans les récits standards de la dynastie, centrés sur Frédéric III comme empereur de long règne. Elle est pourtant une crise féodale pleine : deux frères Habsbourg, l\'héritage divisible, des armées privées qui s\'affrontent, une capitale assiégée. Ratification du Privilegium Maius par Frédéric III en 1453 n\'a pas suffi à empêcher la fragmentation — les conditions du pacte ne sont pas encore réunies. La fin de la crise (mort d\'Albert VI) n\'est pas une résolution structurelle mais un accident biologique.','figure':'Frédéric III et Albert VI','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1440,'end':1463,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Conquête de Vienne','summary':'Mathias Corvin, roi de Hongrie, conquiert Vienne le 1er juin 1485 et y installe sa cour. Frédéric III est en fuite. Pendant cinq ans, la capitale autrichienne est sous domination hongroise — humiliation majeure pour la dynastie Habsbourg. La mort inattendue de Mathias (6 avril 1490) permet à Maximilien Ier de reconquérir l\'Autriche sans combat.','description':'Troisième et dernière boucle féodale du cycle habsbourgeois — d\'un type différent des deux précédentes (choc exogène plutôt qu\'insuffisance interne), mais jouant le même rôle structurel. Elle révèle la profondeur de la faiblesse habsbourgeoise en fin de règne de Frédéric III, et précède directement l\'avènement de Maximilien Ier et le pacte de 1518. L\'humiliation fonde la volonté de modernisation qui aboutira au Libell.','figure':'Mathias Corvin','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1485,'end':1490,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','subtitle':'Innsbrucker Libell','summary':'Le 24 mai 1518, Maximilien Ier convoque à Innsbruck une diète générale de tous les états des terres héréditaires habsbourgeoises — premier Generallandtag commun — et promulgue un acte formel (Libell) qui codifie l\'administration, la défense (Verteidigungsordnung) et la fiscalité militaire. C\'est une codification collective issue d\'une négociation souverain/états, dans un contexte de souverain affaibli (Maximilien meurt 8 mois plus tard).','description':'Les quatre conditions structurelles d\'un pacte oligarchique sont réunies. (1) Codification collective formelle : le Libell est un acte écrit qui réunit « tous les éléments apparus au cours des siècles précédents » en une charte commune. (2) Consentement des états : il est issu d\'un Generallandtag représentant tous les Erbländer, pas d\'une décision unilatérale. (3) Faiblesse du suzerain : Maximilien Ier est âgé, endetté, mourant, sans héritier direct (Charles Quint est alors en Espagne, il meurt lui-même le 12 janvier 1519). (4) Homogénéité des élites : après 200 ans de cycle habsbourgeois, les élites provinciales partagent une conscience collective forte. Le Libell n\'est pas une règle de succession (déjà établie par le Privilegium Maius ratifié en 1453), mais une codification des structures d\'exercice du pouvoir — ce qui le rapproche structurellement du cas vénitien plutôt que des cas français ou anglais. Confidence: medium car c\'est un pacte institutionnel atypique.','figure':'Maximilien Ier','confidence':'medium','alternatives':'Le Privilegium Maius ratifié en 1453 par Frédéric III codifie la règle de succession (primogéniture, indivisibilité) mais c\'est un acte unilatéral, non une négociation collective avec les états. Le Libell de 1518 est la codification négociée.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1518,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'La phase oligarchique autrichienne dure ~231 ans (1518-1749) — proche de la norme. Elle est structurellement comparable à l\'Espagne (~345 ans, 1369-1714) : monarchie composite, héritage dynastique massif (Bohême-Hongrie 1526), exutoire impérial (Saint-Empire + guerres turques), absolutisation tardive accomplie par une nouvelle dynastie après une guerre de succession européenne. L\'essor (1518-1618) est porté par la construction centrale, l\'expansion impériale et la Contre-Réforme. La polarisation (1618-1740) est très longue : elle commence par la fracture confessionnelle (défenestration de Prague, guerre de Trente Ans) et s\'étend pendant plus d\'un siècle, relancée en son milieu par l\'exutoire anti-ottoman qui permet un pic oligarchique tardif (Léopold Ier 1658-1705). La guerre sociale est la Guerre de Succession d\'Autriche (1740-1748), résolue par Marie-Thérèse.','description':'**Test discriminant (oligarchique vs absolutiste)** : jusqu\'en 1749, l\'administration centrale habsbourgeoise N\'A PAS préséance sur les administrations locales des royaumes associés. Les diètes de Hongrie, de Bohême et des provinces autrichiennes conservent leurs pouvoirs fiscaux et leurs droits coutumiers. La Verneuerte Landesordnung (1627) absolutise la Bohême mais seulement la Bohême ; le reste de la monarchie reste composite. Le test n\'est passé qu\'à partir des réformes Haugwitz (1749) qui créent une chancellerie unique pour l\'Autriche et la Bohême, une caisse militaire centrale et un système fiscal unifié — à l\'exclusion de la Hongrie, qui reste l\'exception permanente (analogue au Pays basque dans l\'Espagne bourbonnienne). **Prolongement par l\'expansion** : l\'héritage jagellon (1526) explose l\'échelle avec l\'ajout de la Bohême et de la Hongrie royale, la guerre de Trente Ans diffuse les tensions dans un théâtre pan-européen, la reconquête anti-ottomane (1683-1718) absorbe l\'énergie des élites pendant un demi-siècle, et les acquisitions d\'Utrecht (1714) ajoutent encore des marges italiennes et belges. Tant que les exutoires fonctionnent, la polarisation ne peut pas atteindre le point de rupture — ce qui explique la longueur exceptionnelle de la sous-phase de polarisation (122 ans au lieu de 10-40 ans canoniques). **Pas de DGRO canonique** : les oligarques cisleithans perdent leur assise territoriale après la guerre de Trente Ans et la Verneuerte Landesordnung, et la Hongrie — seule capable d\'une révolte armée — est tenue hors du périmètre d\'absolutisation par compromis permanent. L\'absolutisation est fluide (pattern Venise/Bavière), sans moment-pivot d\'écrasement. L\'insurrection de Rákóczi (1703-1711) relève principalement du parcours hongrois et non du parcours autrichien — elle n\'est ni une DGRO ni une perturbation structurelle majeure du Parcours autrichien.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+31 ans par rapport à la norme. Prolongement par expansion (héritage jagellon, Contre-Réforme, reconquête anti-ottomane, Utrecht) partiellement compensé par l\'accélération due à la perte de la Silésie (1742). Comparable à l\'Espagne (+145 ans) mais moins extrême, parce que l\'Autriche n\'a pas d\'empire colonial autonome. La polarisation est anormalement longue (~122 ans), le pic oligarchique (Léopold Ier) se situe à l\'intérieur de la polarisation plutôt que dans l\'essor — cette particularité est la signature d\'un exutoire retardateur fort (anti-ottoman + impérial).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale — Guerre de Succession d\'Autriche (1740-1748). Le conflit est résolu par Marie-Thérèse qui, soutenue par la Hongrie (Pragmatique Sanction ratifiée dès 1723) et par la Grande-Bretagne, contient les ambitions de la Prusse, de la France et de la Bavière, préserve la monarchie, et fonde la dynastie Habsbourg-Lorraine par son union avec François de Lorraine. Les réformes Haugwitz (1749) imposent l\'absolutisation centralisée en brisant la structure composite hors Hongrie.','resolution_conditions':'Les élites centralisatrices viennoises (prébendières, dépendantes de l\'administration habsbourgeoise) s\'opposent depuis des décennies aux élites provinciales (patrimoniales, attachées aux droits de leurs Landstände). La crise de succession de 1740 (mort de Charles VI sans héritier mâle, Pragmatique Sanction contestée) est l\'occasion de l\'affrontement final. Marie-Thérèse et la nouvelle dynastie Habsbourg-Lorraine fonctionnent comme tiers résolvant — nouveau modèle administratif importé (inspiré de la Prusse centralisatrice), nouvelle légitimité, rupture avec l\'ancien cadre composite.','avortement':'','start':1518,'end':1749,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'De Ferdinand Ier à la défenestration de Prague. L\'appareil d\'État se consolide (Hofrat, Hofkammer, Hofkriegsrat, Geheimer Rat). L\'héritage jagellon (1526) double l\'échelle en ajoutant Bohême et Hongrie royale. Les Turcs sont contenus au premier siège de Vienne (1529). L\'essor est porté par la construction centrale et l\'exutoire impérial + anti-ottoman. Il s\'achève quand la Contre-Réforme cristallise la polarisation confessionnelle entre administration habsbourgeoise catholique et états protestants — bascule de dynamique marquée par la défenestration de Prague (1618).','description':'L\'essor oligarchique autrichien dure ~100 ans, dans la norme haute. Ferdinand Ier (r. Erbländer 1522-1564) construit l\'appareil bureaucratique central qui restera la colonne vertébrale de l\'État pendant deux siècles. L\'héritage jagellon de 1526 double l\'échelle en intégrant la Bohême et la Hongrie royale comme marges — premier choc d\'hétérogénéité massif. Maximilien II (1564-1576) gouverne avec modération confessionnelle, mais son successeur Rudolf II (1576-1612) laisse pourrir les tensions religieuses tandis que son frère Matthias lui arrache progressivement le pouvoir (Bruderzwist, 1608-1611). La projection externe reste dominante (Contre-Réforme en Europe centrale, guerres turques, politique impériale), jusqu\'à ce que la défenestration de Prague (23 mai 1618) cristallise la fracture confessionnelle et fasse basculer la dynamique principale de la projection extérieure à la tension interfactions.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1518,'end':1618,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Ferdinand Ier','summary':'Ferdinand Ier (r. Erbländer 1522-1564, empereur 1558-1564) est le premier souverain à gouverner sous le cadre du pacte de 1518. Frère cadet de Charles Quint, il reçoit les Erbländer en 1521-1522 par le traité de Worms, réprime l\'expérience souveraine des états (Blutgericht de Wiener Neustadt, juillet-août 1522), puis hérite de la Bohême et de la Hongrie royale en 1526, étendant considérablement l\'échelle de la polité.','description':'Ferdinand Ier est structurellement analogue à Henri II de Trastámara en Castille (1369) : premier souverain qui gouverne dans le cadre du pacte oligarchique. Il doit d\'abord établir son autorité contre les états qui avaient outrepassé leur rôle pendant l\'interrègne 1519-1522 — ce qu\'il fait au Blutgericht — puis il construit une administration centrale sophistiquée pour gérer l\'accroissement d\'échelle de 1526. Les institutions qu\'il met en place (Hofrat, Hofkammer, Hofkanzlei, Hofkriegsrat) resteront la colonne vertébrale de l\'État habsbourgeois pendant deux siècles et demi.','figure':'Ferdinand Ier','confidence':'medium','alternatives':'Maximilien Ier lui-même — c\'est lui qui promulgue le Libell en 1518, mais il meurt 8 mois plus tard. Ferdinand Ier est le premier à gouverner effectivement dans le cadre pactiste. Note : la résistance des états (1519-1522), parfois appelée « gouvernement des états » et écrasée au Blutgericht de Wiener Neustadt (1522), n\'est pas une Dernière Grande Révolte Oligarchique — c\'est une crise de transition dans laquelle les états tentent d\'outrepasser le rôle que le pacte leur avait attribué. Une DGRO se place structurellement en fin de phase oligarchique, jamais au début.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1522,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Héritage jagellon','subtitle':'Bohême et Hongrie royale','summary':'Après la bataille de Mohács (29 août 1526), où Louis II de Hongrie-Bohême meurt sans héritier, Ferdinand Ier hérite de la Bohême et de la Hongrie royale via son épouse Anne Jagellon. L\'échelle de la polité habsbourgeoise explose : les Erbländer germanophones (~95 000 km²) s\'augmentent d\'un héritage composite de ~280 000 km² peuplé de Tchèques, Moraves, Slovaques, Magyars, Croates. C\'est un choc d\'hétérogénéité massif, analogue à l\'héritage habsbourgeois espagnol (1516) ou au doublement napoléonien bavarois (1806).','description':'Ce choc d\'hétérogénéité est la variable principale qui explique la longueur et la forme atypique de la phase oligarchique autrichienne. Avant 1526, le Parcours autrichien est contenu dans les Erbländer germanophones. Après 1526, il porte une monarchie composite multi-nationale dans laquelle l\'homogénéité culturelle ne peut plus progresser sur l\'ensemble du territoire — seulement sur le noyau. Chaque couronne associée (Bohême, Hongrie) conserve ses institutions propres, ses diètes, son droit coutumier. L\'absolutisation ne pourra être accomplie qu\'au prix de l\'abandon partiel de la Hongrie comme exception permanente.','figure':'Ferdinand Ier','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1526,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'De la défenestration de Prague à la mort de Charles VI. La polarisation autrichienne se joue d\'abord sur un axe confessionnel (protestants des états contre Habsbourg catholiques) qui se résout en victoire asymétrique lors de la guerre de Trente Ans — résolution qui ne produit pas de guerre sociale (pas de tiers résolvant) mais consolide le camp catholique-habsbourgeois. La reconquête anti-ottomane (1683-1699), menée par Léopold Ier, fonctionne comme un exutoire temporaire qui relance la projection extérieure au sein de la polarisation et permet un pic oligarchique tardif. Après Passarowitz (1718), la polarisation reprend sur un axe politique — tensions centre/provinces, Pragmatique Sanction laborieuse — jusqu\'à la guerre sociale.','description':'La polarisation autrichienne est très longue (~122 ans), structurellement atypique par sa durée et par la diversité de ses axes : axe confessionnel (catholiques/protestants) dans la phase initiale 1618-1648, axe impérial (Habsbourg vs princes allemands) pendant la guerre de Trente Ans, axe national (Hongrois vs administration viennoise) après Karlowitz. La longueur s\'explique par le cumul d\'exutoires qui retardent la résolution interne : exutoire impérial (Saint-Empire, guerres européennes), exutoire anti-ottoman (Grande Guerre turque 1683-1699, Passarowitz 1718), exutoire colonial indirect (via les Pays-Bas puis l\'Italie). La défenestration de Prague (1618) est la bascule de dynamique : avant 1618, la dynamique principale est la projection vers l\'extérieur (Contre-Réforme, guerres turques) ; après 1618, la tension entre factions devient dominante, même si l\'exutoire continue à absorber une part de l\'énergie élitaire. La Montagne Blanche (1620) et la Verneuerte Landesordnung (1627) sont des épisodes de résolution partielle par victoire asymétrique en Bohême — elles écrasent la noblesse protestante bohême sans constituer une guerre sociale au sens strict (pas de tiers). La Westphalie (1648) clôt la polarisation confessionnelle sans la résoudre structurellement. Léopold Ier (r. 1658-1705) apporte un pic oligarchique tardif porté par l\'exutoire anti-ottoman — lever du siège de Vienne (1683), reconquête de la Hongrie, traité de Karlowitz (1699). Puis la dynamique interne reprend avec l\'insurrection hongroise de Rákóczi (1703-1711) — événement qui relève néanmoins principalement du parcours hongrois plutôt que du parcours autrichien (voir justification §4) — et la Pragmatique Sanction laborieuse (1713), qui tente de stabiliser la succession en échange de concessions aux diètes. La polarisation culmine à la mort sans héritier mâle de Charles VI (1740).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1618,'end':1740,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pic oligarchique','subtitle':'Léopold Ier','summary':'Léopold Ier (r. 1658-1705) porte la monarchie habsbourgeoise à son maximum de puissance dans le cadre oligarchique composite. Règne long (47 ans), victoire symbolique majeure (lever du siège de Vienne, 12 septembre 1683), reconquête complète de la Hongrie (Buda 1686, Zenta 1697), traité de Karlowitz (1699) qui acte la première grande récupération territoriale face aux Ottomans, prestige européen comme leader de la Grande Guerre turque.','description':'Léopold Ier est retenu comme pic oligarchique pour sa puissance personnelle maximale : maximum d\'autorité effective dans le cadre oligarchique composite, maximum de projection extérieure, maximum de prestige européen. Il est situé à l\'intérieur de la polarisation — atypique par rapport à la règle selon laquelle le pic se place canoniquement dans l\'essor. Cette particularité est justifiée par l\'exutoire anti-ottoman qui relance une dynamique de projection extérieure au milieu de la polarisation, permettant une « fenêtre de puissance personnelle » malgré la polarisation en cours. Les Chancelleries distinctes restent distinctes, les états provinciaux autonomes restent autonomes, la Hongrie conserve ses institutions — Léopold n\'essaie pas l\'absolutisation. Il projette sa puissance vers l\'extérieur, dans le cadre institutionnel hérité. Le parallèle le plus proche est François Ier en France (pic oligarchique français, ~1515) comme figure de pouvoir personnel exceptionnel dans le cadre oligarchique.','figure':'Léopold Ier','confidence':'medium','alternatives':'Ferdinand II (1619-1637) — victoire confessionnelle et absolutisation de la Bohême après Montagne Blanche, mais pic partiel à l\'échelle d\'un seul royaume. Charles VI (1711-1740) — apogée territoriale avec Utrecht et Passarowitz, mais déjà sur le déclin (Pragmatique Sanction difficile, guerre turque désastreuse 1737-1739). Léopold Ier est le plus simple candidat pour le pic oligarchique au sens canonique — roi qui sort du lot par la puissance de son pouvoir personnel.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1658,'end':1705,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','subtitle':'Traité de Passarowitz','summary':'Le traité de Passarowitz (21 juillet 1718), signé après la guerre victorieuse d\'Eugène de Savoie contre les Ottomans, marque le sommet et la fin de l\'expansion oligarchique autrichienne. Gains : Belgrade, Banat, partie de la Serbie et de la Valachie. Après Passarowitz, la monarchie habsbourgeoise entre en phase de reflux territorial : guerre turque désastreuse de 1737-1739 (perte de Belgrade), perte de Naples et Sicile (Succession de Pologne 1735), perte de la Silésie (1742).','description':'Passarowitz est le point haut de l\'expansion oligarchique autrichienne, suivi d\'un reflux net. C\'est structurellement la fin de l\'exutoire anti-ottoman — à partir de 1718, la projection extérieure cesse d\'être un débouché efficace pour l\'énergie élitaire, et la polarisation interne monte en puissance jusqu\'à la guerre sociale de 1740.','figure':'','confidence':'medium','alternatives':'Karlowitz (1699) marque déjà un tournant — récupération de la Hongrie — mais la guerre de Passarowitz (1716-1718) ajoute Belgrade, le Banat et une partie de la Valachie. Passarowitz est le véritable sommet d\'expansion ; après, c\'est le reflux (guerre turque désastreuse 1737-1739 avec perte de Belgrade, perte de Naples et Sicile 1735, perte de la Silésie 1742).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1718,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'La Guerre de Succession d\'Autriche (1740-1748) est la guerre sociale autrichienne. Elle est déclenchée par la mort sans héritier mâle de Charles VI (20 octobre 1740) et l\'invasion immédiate de la Silésie par Frédéric II de Prusse (décembre 1740). Les factions se polarisent : défenseurs de la Pragmatique Sanction (Marie-Thérèse, Hongrie qui accepte finalement de la soutenir, Grande-Bretagne, Provinces-Unies) contre contestataires (Prusse, France, Bavière, Espagne, Saxe). L\'élément interne à la monarchie est l\'épisode bohémien (1741-1743) — les états de Bohême se rallient à Charles-Albert de Bavière qui est couronné roi de Bohême (décembre 1741) puis empereur Charles VII (janvier 1742). Marie-Thérèse reconquiert Prague en décembre 1742 et écrase l\'épisode bohémien en 1743. La paix d\'Aix-la-Chapelle (1748) cède définitivement la Silésie à la Prusse mais confirme Marie-Thérèse et la dynastie Habsbourg-Lorraine sur le reste des domaines. Les réformes Haugwitz (1749) suivent immédiatement.','description':'La guerre sociale autrichienne est atypique par sa brièveté (~8 ans) mais structurellement complète. **Les factions internes** : d\'un côté, les élites centralisatrices viennoises (prébendières, dépendantes de l\'administration et des finances centrales, loyales à la dynastie) ; de l\'autre, les élites provinciales particularistes (patrimoniales, attachées aux droits des Landstände, prêtes à soutenir un autre candidat si celui-ci respecte mieux leurs privilèges). L\'épisode bohémien montre ce clivage à l\'œuvre — les états tchèques préfèrent rapidement Charles-Albert parce qu\'il promet de respecter leurs privilèges. **Le tiers résolvant** : Marie-Thérèse incarne un nouveau modèle administratif importé (inspiré par Haugwitz des modèles prussien et français) et une nouvelle dynastie (Habsbourg-Lorraine par son union avec François de Lorraine, 1736). Elle n\'est ni la continuatrice de l\'ancien cadre composite ni une championne d\'aucune des factions provinciales — elle invente un nouveau centre. **Le cas hongrois** comme exception assumée : la fameuse scène de Presbourg (11 septembre 1741), où les magnats hongrois acclament « *Vitam et sanguinem pro rege nostro Maria Theresia!* », est un compromis explicite : la Hongrie accepte la dynastie en échange du maintien de ses privilèges. Comme le Pays basque et la Navarre dans l\'Espagne bourbonienne, la Hongrie devient une exception permanente dans l\'absolutisation.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1740,'end':1748,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Guerre de Succession d\'Autriche','summary':'La Guerre de Succession d\'Autriche est le conflit sociotrois factions — centralisateurs viennois, particularistes provinciaux (épisode bohémien notable), puissances contestataires externes — résolu par l\'émergence d\'un tiers : Marie-Thérèse comme fondatrice de la dynastie Habsbourg-Lorraine, incarnant un nouveau modèle administratif. Parallèle exact avec la Guerre de Succession d\'Espagne (1700-1714) résolue par Philippe V et la Nueva Planta.','description':'','figure':'Marie-Thérèse / François de Lorraine','confidence':'medium','alternatives':'Hypothèse écartée : la guerre de Trente Ans (1618-1648) comme guerre sociale. La polarisation confessionnelle y est réelle et les factions (protestants des états / catholiques habsbourgeois) sont identifiables, mais la résolution est une victoire asymétrique d\'une faction (Verneuerte Landesordnung 1627 pour la Bohême) et non un tiers résolvant. En plus, l\'absolutisation n\'est accomplie qu\'à l\'échelle d\'un royaume (Bohême), pas de l\'ensemble de la monarchie. La guerre de Trente Ans prépare le terrain mais ne résout pas la guerre sociale au sens structurel.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1740,'end':1748,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Perte de la Silésie','subtitle':'Traité de Berlin','summary':'La Silésie, province riche et industrielle de la couronne de Bohême, est conquise par Frédéric II de Prusse en décembre 1740-1741 et cédée définitivement par le traité de Berlin (juillet 1742), confirmé à Aix-la-Chapelle (1748). C\'est la seule grande perte territoriale non compensée du XVIIIe siècle habsbourgeois — ~40 000 km² de marges riches définitivement perdus.','description':'La perte de la Silésie est une correction d\'échelle qui accélère la phase oligarchique en forçant une modernisation (Marie-Thérèse voit son administration battue par une Prusse plus efficace) et en réduisant la taille du territoire à homogénéiser. Elle motive directement les réformes Haugwitz (1749) qui établissent l\'absolutisation. Le choc exogène (conquête prussienne) produit une correction d\'échelle (territoire perdu) qui motive une centralisation accélérée.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1742,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','subtitle':'','summary':'La phase absolutiste autrichienne dure ~169 ans (1749-1918), légèrement plus courte que la norme. L\'absolutisation est relativement fluide sous Marie-Thérèse et Joseph II (Haugwitz 1749, réformes joséphistes 1780-1790) et ne produit pas de DGRO canonique — la Hongrie reste l\'exception permanente. Joseph II (~1780-1790) est le pic absolutiste. L\'impérialisme absolutiste se prolonge jusqu\'en 1848 malgré l\'éclipse napoléonienne (1805-1815) qui est une perturbation par choc exogène. La Remontrance de 1848 est écrasée et ouvre un Ancien Régime de 70 ans marqué par le règne exceptionnellement long de François-Joseph, la défaite de 1866 qui éjecte l\'Autriche de l\'Allemagne, et le compromis austro-hongrois de 1867 qui fige l\'architecture dualiste. L\'explosion de l\'AR survient en 1918 avec la défaite militaire.','description':'**Test discriminant (absolutiste vs oligarchique)** : à partir de 1749, l\'administration centrale habsbourgeoise acquiert une préséance effective sur les administrations locales des Erbländer et de la Bohême, à l\'exception de la Hongrie qui conserve sa constitution propre. C\'est exactement le même pattern que l\'Espagne bourbonienne post-Nueva Planta (1716) où le Pays basque et la Navarre sont maintenus comme exceptions. L\'Ausgleich de 1867 ne ré-oligarchise pas la monarchie — il institutionnalise l\'exception hongroise comme architecture dualiste, sans remettre en cause l\'absolutisme cisleithan. **L\'absence de DGRO canonique** reflète l\'absolutisation relativement fluide des Erbländer et de la Bohême, où les oligarques n\'ont plus d\'assise territoriale suffisante pour se révolter armés après 1749. La Hongrie, qui aurait la base territoriale nécessaire, est intégrée par compromis plutôt que par écrasement (pattern analogue à Venise et à la Bavière post-1597).','figure':'','confidence':'','alternatives':'','step':'','deviation':'-31 ans par rapport à la norme. Phase légèrement accélérée par les corrections d\'échelle cumulatives (perte Silésie 1742, Solferino 1859, Sadowa 1866), partiellement compensée par le prolongement napoléonien et par l\'Ausgleich qui prolonge artificiellement l\'AR.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Explosion de l\'Ancien Régime — effondrement de la monarchie après la défaite de la Première Guerre mondiale. Proclamation de la République d\'Autriche allemande (12 novembre 1918), traité de Saint-Germain-en-Laye (10 septembre 1919) qui réduit l\'Autriche aux Erbländer germanophones.','resolution_conditions':'Les exutoires extérieurs (expansion impériale, prestige habsbourgeois comme leader du monde germanique) ont tous été éliminés : Sadowa 1866 a éjecté l\'Autriche de l\'espace allemand, Solferino 1859 l\'a chassée d\'Italie, la guerre mondiale détruit l\'architecture dualiste. La sédimentation des élites est maximale après 68 ans de règne de François-Joseph. Le bloc contestataire (socialistes viennois + chrétiens-sociaux + nationalités contestataires) s\'impose lors de l\'effondrement militaire.','avortement':'','start':1749,'end':1918,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'Les réformes Haugwitz (1749) centralisent l\'administration et la fiscalité sur les Erbländer et la Bohême. Chancellerie unique autrichienne et bohême, caisse militaire centrale (Militärische Hofkommission 1753), conseil d\'État (Staatsrat 1760). Joseph II, co-régent à partir de 1765, prépare et amplifie les réformes. **Absence de DGRO canonique** comme trait marquant : les oligarques cisleithans n\'ont plus d\'assise territoriale suffisante après la guerre de Trente Ans, et la Hongrie — seule capable d\'une révolte armée — est maintenue hors du périmètre d\'absolutisation par compromis permanent.','description':'L\'absolutisation autrichienne est l\'œuvre conjointe de Marie-Thérèse et de son conseiller Friedrich Wilhelm von Haugwitz. La réforme de 1749 crée pour la première fois une chancellerie unique pour l\'Autriche et la Bohême (Directorium in publicis et cameralibus), fusionne les caisses provinciales en une caisse centrale, et établit un impôt direct collecté par l\'administration centrale et non plus par les états. Kaunitz (Chancelier d\'État à partir de 1753) développe une diplomatie professionnelle. Le Staatsrat (1760) est un conseil consultatif central. Joseph II, co-régent de sa mère à partir de 1765, amplifie l\'effort avec l\'édit de tolérance (1781), la suppression du servage (1781), la sécularisation de nombreux monastères (1782), et la tentative d\'imposer l\'allemand comme langue administrative unique (1784). **L\'absence de DGRO canonique** est un trait marquant du parcours autrichien. Deux hypothèses complémentaires l\'expliquent : (1) après la guerre de Trente Ans, la Verneuerte Landesordnung (1627) et la sédimentation catholique, les oligarques cisleithans sont trop affaiblis pour une révolte armée de grande ampleur — pattern Venise où les patriciens n\'ont pas de base territoriale et Bavière où les ministériaux remplacent les vassaux dès le XIIIe siècle ; (2) la Hongrie, seule à conserver une base territoriale noble capable de révolte, est maintenue comme exception permanente par compromis de 1740 (scène de Presbourg) — analogue au Pays basque dans l\'Espagne bourbonienne. Une lecture alternative proposée en mémoire suggérait l\'insurrection de Rákóczi (1703-1711) comme DGRO autrichienne, mais Rákóczi est probablement à rattacher au parcours hongrois plutôt qu\'au parcours autrichien — voir justification §4.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1749,'end':1780,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Réformes Haugwitz','summary':'Marie-Thérèse (r. 1740-1780), avec les réformes Haugwitz de 1749, est la première souveraine dont l\'administration centrale exerce une préséance effective sur les administrations locales des Erbländer et de la Bohême. Nouvelle dynastie (Habsbourg-Lorraine par son mariage avec François de Lorraine), nouveau modèle administratif (Haugwitz s\'inspire du modèle prussien), et rupture avec l\'ancien cadre composite — c\'est la rupture absolutiste.','description':'Marie-Thérèse est structurellement analogue à Philippe V en Espagne (1714). Comme Philippe V, elle sort d\'une guerre de succession européenne qui lui permet d\'imposer un nouveau cadre administratif. Comme lui, elle fonde une nouvelle dynastie (Bourbon en Espagne, Habsbourg-Lorraine en Autriche). Comme lui, elle absolutise l\'essentiel du territoire en laissant une exception à la périphérie (Pays basque et Navarre en Espagne ; Hongrie en Autriche). Le test discriminant est passé en 1749 — avant, il ne l\'est pas ; après, il l\'est pour tout le territoire hors Hongrie.','figure':'Marie-Thérèse','confidence':'medium','alternatives':'Léopold Ier (1683) — pic oligarchique, opère dans le cadre composite, pas absolu. Ferdinand II (1620) — absolutise la seule Bohême, pas l\'ensemble de la monarchie. Joseph II (1780) — amplifie et approfondit, mais Marie-Thérèse a déjà passé le test discriminant à l\'échelle cisleithane en 1749. Parallèle structurel exact : Philippe V en Espagne (1714, après la Guerre de Succession).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1749,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'De Joseph II à la Remontrance de 1848. Joseph II (r. seul 1780-1790) incarne le pic absolutiste — despotisme éclairé, réformes radicales (édit de tolérance 1781, suppression du servage 1781, sécularisations, germanisation administrative). Léopold II (1790-1792) doit reculer sur plusieurs réformes face à la résistance hongroise. Les guerres révolutionnaires et napoléoniennes (1792-1815) sont un prolongement par choc exogène — l\'Autriche est battue à répétition (Campo-Formio 1797, Lunéville 1801, Presbourg 1805, Schönbrunn 1809), Napoléon dissout le Saint-Empire (6 août 1806), mais les institutions habsbourgeoises survivent. Le Congrès de Vienne (1814-1815), orchestré par Metternich, consolide l\'Empire d\'Autriche proclamé en 1804 et marque la fin de l\'expansion territoriale. L\'ère du Vormärz (1815-1848) est une période d\'impérialisme absolutiste consolidé sous direction metternichienne, avant que la Remontrance de 1848 n\'y mette fin.','description':'L\'impérialisme absolutiste autrichien combine deux phases distinctes coupées par l\'éclipse napoléonienne. Joseph II (1780-1790) est un pic absolutiste classique — réformateur rationaliste, modernisateur, qui tente d\'imposer une germanisation administrative et une mise au pas de l\'Église et des états. Ses réformes rencontrent la résistance noble hongroise et la résistance paysanne (révolte de Horea en Transylvanie, 1784), et plusieurs doivent être rétractées par Léopold II. Les guerres napoléoniennes sont un prolongement par choc exogène — l\'Autriche est battue mais elle survit, retrouve son rang au Congrès de Vienne, et entame sous Metternich un second cycle d\'impérialisme absolutiste « conservateur » qui dure jusqu\'en 1848. Le Vormärz (1815-1848) est analogue à la Restauration française (1815-1830) ou à la période Nicolas Ier russe (1825-1855) : stabilité impériale conservatrice, police politique (système Metternich), ordre international garanti (Sainte-Alliance), mais immobilisme croissant et sédimentation des élites.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1780,'end':1848,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Pic absolutiste','subtitle':'Joseph II','summary':'Joseph II (r. seul 1780-1790) incarne le pic absolutiste autrichien : réformateur rationaliste, il pousse la modernisation au-delà de ce que sa société peut accepter. Édit de tolérance (1781), suppression du servage personnel (1781), sécularisation de monastères contemplatifs (1782), allemand comme langue administrative unique (1784), code pénal (1787), système hospitalier centralisé (Vienne Allgemeines Krankenhaus 1784). Plusieurs réformes doivent être rétractées par Léopold II face à la résistance noble et régionale.','description':'Joseph II est l\'archétype du despote éclairé et, structurellement, le pic absolutiste autrichien. Son règne combine tous les marqueurs du pic : moyens administratifs puissants, projection vers l\'intérieur (modernisation sociale, juridique, administrative), domestication des élites traditionnelles, rationalisation culturelle (langue unique, tolérance religieuse). Mais il pousse trop loin trop vite : la noblesse hongroise se révolte contre les réformes linguistiques, la Belgique (Pays-Bas autrichiens) se soulève contre la sécularisation, et Léopold II doit rétrograder sur plusieurs points. Cet excès est caractéristique du pic absolutiste qui cristallise la résistance qui prépare l\'AR.','figure':'Joseph II','confidence':'medium','alternatives':'Marie-Thérèse (1749-1780) — absolutisation initiale, pas encore pic. Metternich (1815-1848) — apogée de l\'impérialisme conservateur post-napoléonien, plus chancelier que monarque. Joseph II est retenu comme figure qui incarne le maximum d\'activisme absolutiste réformateur.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1780,'end':1790,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Guerres napoléoniennes','subtitle':'Campo-Formio, Presbourg, Schönbrunn','summary':'De Campo-Formio (1797) au Congrès de Vienne (1815), l\'Autriche subit une série de défaites militaires majeures contre la France révolutionnaire puis napoléonienne : perte des Pays-Bas autrichiens, de la Lombardie, du Tyrol (temporairement), de Salzbourg. Napoléon dissout le Saint-Empire romain germanique (6 août 1806) — François II renonce au titre impérial et se proclame empereur d\'Autriche (François Ier) dès 1804. Mais les institutions habsbourgeoises survivent, et le Congrès de Vienne restaure l\'Autriche dans une position pivot en Europe, avec même des gains nets (Lombardie-Vénétie, Salzbourg, Dalmatie).','description':'Les guerres napoléoniennes sont une perturbation par choc exogène avec effet de prolongement. Le Parcours n\'est pas détruit — les institutions, l\'administration et la dynastie survivent — mais il est gelé pendant une vingtaine d\'années par la pression française. Metternich, qui émerge comme ministre des Affaires étrangères en 1809 et devient chancelier en 1821, orchestre la restauration de l\'ordre absolutiste conservateur post-1815. L\'abolition du Saint-Empire (1806) prive l\'Autriche d\'un titre symbolique majeur mais l\'empereur d\'Autriche reste une des trois grandes puissances continentales. L\'effet net est un prolongement de l\'impérialisme absolutiste : l\'Autriche ressort des guerres napoléoniennes comme un pilier de l\'ordre européen conservateur et entame un second cycle « Vormärz ».','figure':'François II/Ier','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1792,'end':1815,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fin de l\'expansion','subtitle':'Congrès de Vienne','summary':'Le Congrès de Vienne (1814-1815), orchestré par Metternich, consolide l\'Empire d\'Autriche dans ses frontières de l\'ordre européen post-napoléonien. Après 1815, l\'Autriche est en position strictement défensive — toutes les évolutions territoriales ultérieures seront des pertes (Lombardie 1859, Vénétie 1866), à l\'exception de l\'occupation de la Bosnie-Herzégovine (1878, annexion formelle 1908).','description':'Le Congrès de Vienne est la fin de l\'expansion absolutiste autrichienne, analogue à Utrecht (1713) pour la France ou à Cateau-Cambrésis (1559) pour la phase oligarchique française. Il ouvre l\'ère du Vormärz qui est une période d\'impérialisme absolutiste consolidé mais défensif, sous direction metternichienne.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1815,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Remontrance','subtitle':'Révolutions de 1848','summary':'Les révolutions de 1848 à Vienne (mars et octobre), Prague, Budapest, Milan et Venise sont la Remontrance autrichienne — tentative coordonnée de la classe parlementaire, de la bourgeoisie libérale et des nationalités de reprendre des prérogatives face au pouvoir absolutiste. La première phase (mars 1848) fait tomber Metternich, ouvre une brève expérience constitutionnelle, et un Reichstag siège à Vienne puis Kremsier. La seconde phase (octobre 1848 - août 1849) est écrasée par l\'armée impériale (Windischgrätz à Vienne, Radetzky en Italie) et avec l\'aide russe en Hongrie (Görgey capitule à Világos, 13 août 1849). Ferdinand Ier abdique en faveur de son neveu François-Joseph (2 décembre 1848). L\'octroi d\'une constitution (mars 1849) est rapidement révoqué (Sylvesterpatent, 31 décembre 1851) et le néo-absolutisme s\'installe pour une décennie.','description':'1848 est la Remontrance autrichienne — tentative institutionnelle de la classe parlementaire-bourgeoise, amplifiée par les nationalités périphériques, d\'imposer un régime constitutionnel et de redistribuer le pouvoir. Elle est écrasée intégralement : le Reichstag est dissous, la constitution est retirée, les nationalités sont remises au pas (surtout la Hongrie), Metternich est remplacé par Schwarzenberg puis Bach qui installent un régime néo-absolutiste centralisateur. L\'échec de la Remontrance ferme la dernière voie de réforme institutionnelle et marque l\'entrée en Ancien Régime. Analogue structurel : La Gloriosa espagnole (1868), la Polysynodie française (1715), la Correzione vénitienne (1761).','figure':'Ferdinand Ier / François-Joseph','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime','subtitle':'','summary':'De l\'écrasement des révolutions de 1848 à l\'effondrement de 1918. Néo-absolutisme Bach (1849-1859), défaites militaires (Solferino 1859, Sadowa 1866), compromis austro-hongrois (1867) qui fige la monarchie en architecture dualiste, règne exceptionnellement long de François-Joseph (1848-1916, 68 ans) maximisant la sédimentation. Bloc élitaire fragmenté le long des lignes nationales mais uni sur le maintien du dualisme ; bloc contestataire composé de socialistes viennois (SDAP), chrétiens-sociaux (Lueger), panslavistes tchèques, nationalistes hongrois radicaux, italiens, polonais, ruthènes. L\'AR est prolongé par le jeu même des tensions nationales qui rend chaque réforme pan-monarchique impossible, mais l\'effondrement militaire de 1918 fait tout tomber en quelques semaines.','description':'L\'Ancien Régime autrichien dure 70 ans (1848-1918), dans la norme haute mais pas extrême. Sa particularité est d\'être un AR multi-national : la sédimentation des élites se fait le long des lignes nationales autant que des lignes de classe. Le compromis austro-hongrois de 1867 (Ausgleich) institutionnalise l\'architecture dualiste — deux parlements (Reichsrat à Vienne, pour les terres cisleithanes ; diète à Budapest, pour les terres transleithanes), deux gouvernements, deux systèmes de conscription, avec seulement trois ministères communs (Affaires étrangères, Guerre, Finances communes). Cette architecture est un compromis de gestion, pas une modernisation constitutionnelle. François-Joseph règne 68 ans (1848-1916), maximisant la sédimentation ; il est remplacé par Charles Ier qui échoue à ouvrir le régime. L\'effondrement militaire et économique de 1918 accélère brutalement la chute : en six semaines (fin octobre-novembre 1918), la monarchie se désintègre en plusieurs États successeurs.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':1918,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Perte de la Lombardie','subtitle':'Villafranca','summary':'La défaite autrichienne à Solferino (24 juin 1859) contre la France de Napoléon III et le Piémont de Cavour aboutit au traité de Villafranca (11 juillet 1859) puis à la paix de Zurich (10 novembre 1859), qui cèdent la Lombardie au Piémont. Première grande perte territoriale depuis le Congrès de Vienne.','description':'Solferino est une correction d\'échelle par choc exogène qui accélère l\'AR. L\'Autriche perd ~20 000 km² de marges italiennes riches et perd surtout sa position de puissance italienne. Combiné avec Sadowa sept ans plus tard, c\'est le début de l\'effondrement géostratégique autrichien.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1859,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Exclusion de l\'Allemagne','subtitle':'Königgrätz','summary':'La défaite de Sadowa/Königgrätz (3 juillet 1866) contre la Prusse de Bismarck entraîne la dissolution de la Confédération germanique et l\'exclusion définitive de l\'Autriche de l\'espace politique allemand. Paix de Prague (23 août 1866) : l\'Autriche cède la Vénétie à l\'Italie et abandonne toute prétention allemande. Le compromis austro-hongrois (1867) suit directement comme tentative de consolidation interne.','description':'Sadowa est la correction d\'échelle la plus grave de l\'Ancien Régime autrichien. Deux pertes cumulées : la Vénétie (20 000 km²) et, plus important, l\'éviction de la direction de l\'espace allemand qui était au cœur de l\'identité impériale habsbourgeoise depuis 1438. Après 1866, l\'Autriche doit se redéfinir comme monarchie danubienne, et l\'Ausgleich de 1867 est la réponse politique à cette nouvelle donne. Accélération de la phase absolutiste par élimination de l\'exutoire allemand, qui avait absorbé une part significative de l\'énergie habsbourgeoise pendant quatre siècles.','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1866,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale','subtitle':'','summary':'La RN autrichienne commence avec la chute de la monarchie (novembre 1918) et s\'achève avec le Staatsvertrag (1955). Elle suit la séquence canonique complète : explosion de l\'AR (1918) → expérience parlementaire (Première République 1919-1933) → phase aiguë (Dollfuss 1933-1934) → moment thermidorien (Schuschnigg 1934-1938) → Impérialiste Revanchard (Hitler, via Anschluss 1938-1945) → restauration (1945-1955) → Glorieuse Révolution (Staatsvertrag 1955). Sa particularité est que l\'Impérialiste Revanchard est **partagé avec la RN allemande** — Hitler, né autrichien, réalise l\'impérialisme revanchard des deux Parcours simultanément par l\'Anschluss et le Reich.','description':'**L\'hypothèse principale retenue : Hitler comme Impérialiste Revanchard double.** Hitler est né à Braunau am Inn (Haute-Autriche) en 1889, a passé sa jeunesse à Linz et à Vienne, et adhère pleinement à l\'idée pan-germanique qui a dominé la droite autrichienne depuis Schönerer (fin XIXe). L\'Anschluss (12 mars 1938) est la réalisation historique de cette idée pan-germanique autrichienne, portée par une figure autrichienne de naissance qui est aussi le chef du Reich. Dans cette lecture, l\'Anschluss n\'est pas un avortement de la RN autrichienne mais l\'émergence de son Impérialiste Revanchard — qui se trouve être le même individu que l\'IR allemand. L\'Autriche « bénéficie » de facto du moment impérialiste revanchard nazi (conquêtes territoriales, ventilation des élites par la méritocratie du parti, projection militaire) jusqu\'à la chute du Reich en 1945. La restauration (1945-1955) se fait alors sous tutelle alliée, et la Glorieuse Révolution autrichienne (Staatsvertrag 1955) se dissocie définitivement de la Glorieuse Révolution allemande (Réunification 1990, 35 ans plus tard). Cette hypothèse présente trois avantages structurels : (1) elle préserve la séquence canonique complète de la RN autrichienne ; (2) elle éclaire l\'élément biographique curieux qu\'Hitler est autrichien ; (3) elle explique pourquoi la restauration autrichienne de 1945-1955 est possible (le Parcours a traversé son IR, et peut donc revenir naturellement à la restauration). **Hypothèses alternatives écartées** : (a) pas d\'IR autrichien, Anschluss comme avortement — plus simple mais laisse la RN structurellement incomplète ; (b) Schuschnigg comme thermidorien-devenu-IR (pattern Cromwell) — mais Schuschnigg n\'a aucune dimension impérialiste ni de projection extérieure, il est purement défensif. Voir justification §11 pour la discussion complète.','figure':'','confidence':'','alternatives':'','step':'','deviation':'~37 ans, dans la norme. Le Parcours autrichien est partagé avec le Parcours allemand pendant la sous-phase IR (1938-1945), puis se dissocie en restauration autonome (1945-1955).','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Glorieuse Révolution — Staatsvertrag (15 mai 1955) et Déclaration de neutralité (26 octobre 1955). Triple ancrage : démocratie parlementaire pleinement restaurée, souveraineté pleine retrouvée, identité nationale distincte de l\'Allemagne.','resolution_conditions':'','avortement':'','start':1918,'end':1955,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Séquence canonique : explosion de l\'Ancien Régime (12 novembre 1918), expérience parlementaire (Première République 1919-1933), phase aiguë (Dollfuss 1933-1934), moment thermidorien (Schuschnigg 1934-1938). La sous-phase s\'achève avec l\'Anschluss (12 mars 1938), qui est structurellement l\'émergence de l\'Impérialiste Revanchard.','description':'La révolution initiale autrichienne suit la séquence canonique complète en 20 ans. La durée est dans la fourchette haute (typique : 10-15 ans) — allongée par la longueur du moment thermidorien (4 ans sous Schuschnigg) qui précède l\'arrivée de l\'IR. Cette longueur du thermidorien s\'explique par la difficulté structurelle à produire un IR autrichien autonome (le contexte géopolitique l\'en empêche — l\'Autriche est coincée entre Allemagne nazie et Italie mussolinienne, trop petite pour se projeter) jusqu\'à ce que l\'IR arrive finalement de l\'extérieur sous la forme d\'Hitler et de l\'Anschluss.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1918,'end':1938,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'AR','subtitle':'République d\'Autriche allemande','summary':'Le 12 novembre 1918, au lendemain de l\'abdication (« renonciation à participation aux affaires de l\'État ») de Charles Ier, l\'Assemblée provisoire proclame la République d\'Autriche allemande. Le traité de Saint-Germain-en-Laye (10 septembre 1919) fixe les frontières de l\'Autriche réduite aux Erbländer germanophones et interdit explicitement l\'Anschluss à l\'Allemagne.','description':'L\'explosion de l\'AR est provoquée par l\'effondrement militaire et politique de la Double Monarchie en octobre-novembre 1918. Les États successeurs (Tchécoslovaquie, Hongrie, Yougoslavie, Pologne) se constituent dans le sillage ; l\'Autriche réduite à ses Erbländer proclame d\'abord une république qui se veut partie de l\'Allemagne (nom officiel : Deutschösterreich) mais est forcée par Saint-Germain à l\'indépendance. C\'est une explosion particulière : elle ne vient pas d\'une dynamique révolutionnaire interne mais de l\'effondrement externe d\'une architecture multi-nationale.','figure':'Karl Renner','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1918,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Première République','summary':'La Première République autrichienne (1919-1933) est l\'expérience parlementaire classique : Assemblée constituante élue, Constitution de 1920 (révisée 1929) inspirée de Hans Kelsen, factions concurrentes (SDAP social-démocrate, CS chrétien-social, pan-germanistes), coalitions, turbulence économique (hyperinflation, grande dépression), polarisation croissante entre « Rouge Vienne » et campagne chrétienne-sociale.','description':'La Première République vit 14 ans d\'expérience parlementaire pleine, avec toutes les caractéristiques canoniques — assemblée élue, gouvernements alternants, médias libres, mais aussi factions armées paraétatiques (Schutzbund social-démocrate, Heimwehr chrétien-national). Le 15 juillet 1927, la révolte viennoise autour du Palais de justice brûlé annonce la radicalisation. Le système se bloque en mars 1933 quand Dollfuss saisit l\'occasion d\'un imbroglio parlementaire pour auto-dissoudre le Nationalrat.','figure':'Karl Renner / Ignaz Seipel','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1919,'end':1933,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'Austrofascisme et guerre civile','summary':'De mars 1933 (auto-dissolution du Nationalrat par Dollfuss) à juillet 1934 (assassinat de Dollfuss par les nazis autrichiens), l\'Autriche traverse une phase aiguë courte mais violente : interdiction du parti nazi et du parti communiste, guerre civile de février 1934 (Schutzbund social-démocrate écrasé, parti socialiste interdit), Constitution corporatiste du 1er mai 1934 (Ständestaat), Putsch nazi du 25 juillet 1934 où Dollfuss est assassiné.','description':'La phase aiguë autrichienne est très courte (~18 mois) mais canonique : radicalisation, élimination violente des oppositions (gauche en février, nazis arrêtés en parallèle), instauration d\'un régime autoritaire refondateur (Ständestaat corporatiste), violence extrême qui culmine dans l\'assassinat du dictateur lui-même. Le contexte géopolitique (Allemagne nazie à la frontière, Italie mussolinienne comme protecteur) empêche la phase aiguë de déboucher sur un IR — Dollfuss meurt avant de pouvoir devenir un IR autrichien, et Schuschnigg qui lui succède opte pour la stabilisation conservatrice.','figure':'Engelbert Dollfuss','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1933,'end':1934,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Moment thermidorien','subtitle':'Ständestaat','summary':'Kurt Schuschnigg succède à Dollfuss et maintient le régime corporatiste jusqu\'à l\'Anschluss. Pas de radicalisation supplémentaire, pas de projet impérialiste — stabilisation défensive face aux pressions intérieures (nazis autrichiens) et extérieures (Allemagne nazie). Il tente désespérément de préserver l\'indépendance autrichienne, notamment en cherchant des garanties italiennes puis britanniques. Le plébiscite qu\'il annonce pour le 13 mars 1938 (sur le maintien de l\'indépendance) est la goutte d\'eau qui fait basculer Hitler à l\'invasion préventive.','description':'','figure':'Kurt Schuschnigg','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1934,'end':1938,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Impérialisme revanchard','subtitle':'','summary':'L\'Anschluss (12 mars 1938) installe l\'Impérialiste Revanchard autrichien — Hitler, né autrichien, qui est simultanément l\'IR de la RN allemande. Pendant 7 ans, le Parcours autrichien est porté par le moment impérialiste revanchard nazi : projection militaire pan-européenne, ventilation des élites par la méritocratie du parti, réalisation historique de l\'idée pan-germanique autrichienne. La sous-phase s\'achève avec la chute du Reich en mai 1945.','description':'Cette sous-phase est exceptionnelle dans le corpus — l\'IR est partagé entre deux Parcours nationaux. Hitler, autrichien de naissance, porte l\'impérialisme revanchard des deux nations simultanément. Pour l\'Autriche, l\'Anschluss est la réalisation historique de l\'idée pan-germanique qui dominait la droite autrichienne depuis Schönerer — un projet politique explicitement autrichien qui trouve son aboutissement par une figure autrichienne. Les fonctions canoniques de l\'IR sont remplies : (1) projection impérialiste vers l\'extérieur (conquêtes 1938-1941, puis guerre mondiale) ; (2) ventilation des élites par la méritocratie partisane (le parti nazi recrute massivement en Autriche, notamment parmi la jeunesse issue de la petite bourgeoisie) ; (3) verticalité autoritaire qui transcende les factions de la Première République. L\'élément historique qui distingue l\'Autriche du cas allemand canonique est le statut formel : l\'Autriche disparaît comme État indépendant pendant 7 ans, ses institutions civiles étant intégrées au Reich. Mais les structures profondes (droit, administration locale, Église, langue, culture) ne sont pas détruites — c\'est pourquoi la restauration 1945-1955 peut se faire à partir des acquis de la Première République.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1938,'end':1945,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Impérialiste Revanchard','subtitle':'Anschluss','summary':'Le 12 mars 1938, Hitler — né à Braunau am Inn, autrichien d\'origine — annexe l\'Autriche au Reich par l\'Anschluss. L\'Autriche disparaît formellement comme État indépendant. Structurellement, c\'est l\'émergence de l\'Impérialiste Revanchard autrichien : une figure autrichienne qui réalise l\'idée pan-germanique et projette la puissance de la fusion germano-autrichienne vers l\'extérieur. L\'IR autrichien coïncide avec l\'IR allemand — pendant 7 ans, le même individu porte l\'impérialisme revanchard des deux Parcours.','description':'L\'Anschluss comme émergence de l\'IR est une lecture structurelle qui préserve la séquence canonique de la RN autrichienne. Hitler est un IR atypique pour l\'Autriche parce qu\'il incarne simultanément l\'IR de deux Parcours nationaux, mais structurellement il remplit toutes les fonctions : charisme personnel, verticalité, ventilation des élites, projection impérialiste, fusion des factions précédentes (les chrétiens-sociaux et les pan-germanistes autrichiens sont tous deux absorbés dans le parti nazi). La particularité est que sa « chute » n\'est pas spécifiquement autrichienne — c\'est la chute commune du Reich en mai 1945 qui met fin simultanément à l\'IR autrichien et à l\'IR allemand.','figure':'Adolf Hitler','confidence':'low','alternatives':'Hypothèse alternative : pas d\'IR autrichien, Anschluss comme choc exogène avec effet d\'avortement. Cette alternative est plus sobre mais laisse la RN autrichienne structurellement incomplète. La lecture « Hitler comme IR double » est plus canonique mais historiographiquement controversée (elle implique d\'attribuer Hitler au Parcours autrichien, ce que l\'identité autrichienne post-1945 refuse explicitement). Voir justification §11.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1938,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Restauration','subtitle':'','summary':'Après la libération par les forces alliées, l\'Autriche est occupée par les quatre puissances (États-Unis, Union soviétique, Royaume-Uni, France) jusqu\'en 1955. Dès avril 1945, un gouvernement provisoire sous Karl Renner réactive la Constitution de 1920. Les élections de novembre 1945 donnent une majorité à l\'ÖVP (chrétien-social) et au SPÖ (socialiste). Les Grandes Coalitions gouvernent l\'occupation. Le traité d\'État (Staatsvertrag, 15 mai 1955) rend la pleine souveraineté ; la déclaration de neutralité (26 octobre 1955) fixe l\'identité géopolitique autrichienne. C\'est une restauration sous tutelle étrangère qui s\'achève par la Glorieuse Révolution.','description':'La restauration autrichienne est analogue à la restauration allemande de 1945-1949 (transition de l\'occupation alliée à la RFA souveraine) ou à l\'Espagne de la Transition (1975-1978). Caractéristique : restauration longue (10 ans) qui permet aux institutions de maturer et aux élites de se recomposer avant la pleine souveraineté. La dénazification est graduelle, la Grande Coalition ÖVP-SPÖ est systémique (elle durera en fait jusqu\'en 1966), et l\'identité nationale autrichienne « distincte des Allemands » se construit explicitement contre le traumatisme nazi. En 1955, les trois conditions d\'une Glorieuse Révolution sont réunies : démocratie parlementaire pleinement restaurée, souveraineté pleine retrouvée, identité nationale distincte de l\'Allemagne fixée par la neutralité.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1945,'end':1955,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','subtitle':'Staatsvertrag et neutralité','summary':'Le Staatsvertrag de Vienne (15 mai 1955) est signé par les quatre puissances alliées et l\'Autriche. Il rend la pleine souveraineté à l\'Autriche, interdit toute union avec l\'Allemagne, et exige une déclaration de neutralité. Le 26 octobre 1955, le Nationalrat adopte la loi constitutionnelle sur la neutralité perpétuelle. Les deux actes combinés forment la Glorieuse Révolution autrichienne : ancrage démocratique parlementaire, pleine souveraineté, identité nationale distincte de l\'Allemagne.','description':'Le Staatsvertrag est la fin canonique de la RN autrichienne. Triple ancrage : (1) politique — démocratie parlementaire pleinement restaurée et désormais irréversible (la Grande Coalition ÖVP-SPÖ stabilise le système) ; (2) géopolitique — souveraineté pleine après dix ans d\'occupation ; (3) identitaire — l\'Autriche se définit explicitement comme nation neutre distincte de l\'Allemagne, rompant avec l\'idée pan-germanique qui avait dominé de 1848 à 1945. Analogue structurel le plus proche : la Réunification allemande de 1990 comme GR de la RN allemande (Staatsvertrag 1955 pour l\'Autriche, Einigungsvertrag 1990 pour l\'Allemagne — même fonction, 35 ans de décalage). Le 26 octobre est aujourd\'hui la fête nationale autrichienne.','figure':'Leopold Figl / Julius Raab','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1955,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'parlementaire','title':'Phase parlementaire','subtitle':'','summary':'L\'Autriche entre dans la phase parlementaire avec le Staatsvertrag et la neutralité de 1955. La Grande Coalition ÖVP-SPÖ gouverne jusqu\'en 1966 puis alterne avec des coalitions plus étroites. L\'identité autrichienne distincte de l\'identité allemande se consolide définitivement. L\'adhésion à l\'Union européenne (1995) intègre l\'Autriche au cadre européen tout en préservant la neutralité.','description':'La phase parlementaire autrichienne est stable et fonctionnelle. Les institutions de 1920 (Constitution de Kelsen) sont réactivées et enrichies. Le modèle de partenariat social (Sozialpartnerschaft) entre syndicats et patronat stabilise l\'économie. L\'indépendance et la neutralité autrichiennes sont un élément constitutif de l\'ordre européen de la Guerre froide. Après 1989, l\'Autriche rejoint l\'Union européenne (1995) sans renoncer à sa neutralité formelle.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1955,'end':null,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 6;
+    const BASE_TOP = 315;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Pic oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Pic absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description">${e.description}</div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

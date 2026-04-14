@@ -119,6 +119,28 @@ La Révolution Nationale peut être écrasée par une puissance extérieure avan
 - Israël (prolongement) : la Grande Révolte de 66 suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome en 70 avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal.
 - Venise : la République de Manin (1848-1849) suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète.
 
+## Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)
+
+Dans certains cas, une même figure historique peut jouer le rôle d'Impérialiste Revanchard pour **deux Parcours nationaux simultanément**. C'est une hypothèse structurelle nouvelle, identifiée à l'occasion de l'analyse du Parcours autrichien, et qui reste à valider sur d'autres cas du corpus.
+
+**Cas identifié : Hitler comme IR double (allemand et autrichien)**
+
+Hitler est né à Braunau am Inn (Haute-Autriche) en 1889, a passé sa jeunesse à Linz et à Vienne, et adhère pleinement à l'idée pan-germanique qui a dominé la droite autrichienne depuis Schönerer (fin XIXe). L'Anschluss (12 mars 1938) est la réalisation historique de cette idée pan-germanique, portée par une figure autrichienne de naissance qui est aussi le chef du Reich allemand. Dans cette lecture, Hitler incarne simultanément l'IR du Parcours allemand (canonique) et l'IR du Parcours autrichien — la même personne, le même projet impérialiste revanchard, porté par deux Parcours nationaux qui se chevauchent pendant 1938-1945.
+
+Pour le Parcours autrichien, les fonctions canoniques de l'IR sont remplies :
+1. **Projection impérialiste extérieure** (conquêtes 1938-1941, guerre mondiale)
+2. **Ventilation des élites par la méritocratie partisane** (le parti nazi recrute massivement en Autriche, notamment dans la jeunesse petite-bourgeoise)
+3. **Verticalité autoritaire** qui transcende les factions de la Première République autrichienne (chrétiens-sociaux et pan-germanistes sont tous deux absorbés dans le parti nazi)
+4. **Chute commune avec le Reich** en mai 1945
+
+Cette lecture préserve la séquence canonique complète de la RN autrichienne (révolution initiale → IR → restauration → GR) et éclaire un élément biographique curieux — pourquoi est-ce un Autrichien qui porte l'impérialisme revanchard allemand.
+
+**Objection** : l'historiographie post-1945 refuse l'attribution de Hitler au Parcours autrichien (doctrine de la « première victime »), et Hitler est devenu citoyen allemand en 1932. Ces objections relèvent de l'identité nationale construite rétroactivement, pas de la dynamique structurelle de 1918-1945.
+
+**Question théorique ouverte** : sous quelles conditions un IR peut-il être partagé entre deux Parcours ? Faut-il une proximité culturelle et linguistique fondamentale (comme germanophone Allemagne/Autriche) ? Une phase de RN synchrone ? Une figure biographique ambiguë qui appartient structurellement aux deux nations ? Existe-t-il d'autres cas dans le corpus — IR partagé entre une nation et une diaspora, entre deux nations culturellement proches, entre un empire et son noyau ethnique ?
+
+La v4 du Parcours autrichien retient cette hypothèse comme hypothèse principale pour sa cohérence structurelle, tout en reconnaissant qu'elle est nouvelle et mérite discussion théorique.
+
 ### Test discriminant : RN avortée vs révolte absolutiste
 
 Comment distinguer une RN avortée (comme Israël en 66 ou Venise en 1848) d'une révolte absolutiste (comme les Maccabées en -167 ou Bar Kokhba en 132) ?

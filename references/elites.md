@@ -64,10 +64,28 @@ Les clientèles délaissées par les deux types d'élites sont mobilisées par u
 
 C'est pour cette raison que la guerre sociale débouche sur l'absolutisme : la figure qui émerge ne dépend d'aucune des anciennes factions, et les deux sont suffisamment affaiblies pour que l'absolutisation puisse commencer.
 
+### Important : la guerre sociale n'est pas une guerre religieuse
+
+**La guerre sociale n'est jamais une guerre sur une base religieuse.** C'est une guerre entre élites dont le **mode d'enrichissement** est différent et qui luttent pour le contrôle du pouvoir central — prébendières contre patrimoniales. Quand ces deux élites adoptent des confessions religieuses différentes (comme pendant les Guerres de Religion en France, ou la guerre de Trente Ans en Europe centrale), **la religion est un mécanisme de distinction** entre factions, pas la cause structurelle du conflit.
+
+Ce point est critique pour lire correctement les conflits confessionnels :
+
+- **Le mécanisme de distinction peut être la religion**, mais il peut aussi être la région (Nord vs Sud), la langue, la couleur politique, la dynastie soutenue, ou toute autre marque d'identification des factions. La religion est un cas fréquent parce qu'elle fournit une identité forte, mais elle n'a aucun statut privilégié.
+- **Le conflit reste structurellement économique et politique** : une faction d'élites dont le revenu dépend des faveurs du pouvoir central (prébendière) affronte une faction dont le revenu est indépendant du centre (patrimoniale). Le contrôle de l'État central est l'enjeu, pas le salut des âmes.
+- **Les « guerres de religion » ne sont pas toujours des guerres sociales**. La guerre de Trente Ans en Autriche est une polarisation confessionnelle qui se résout en **victoire asymétrique d'une faction** (victoire catholique habsbourgeoise) — pas une guerre sociale au sens strict, puisqu'il n'y a pas de tiers résolvant. La guerre sociale autrichienne survient plus tard, avec la Guerre de Succession d'Autriche (1740-1748), où Marie-Thérèse émerge comme tiers.
+- **Les « guerres dynastiques » sont des guerres sociales déguisées**. La Guerre des Deux-Roses anglaise oppose York et Lancaster, mais structurellement c'est une lutte entre deux factions oligarchiques dont le clivage est dynastique. Le mécanisme de distinction est dynastique, le conflit est une guerre sociale classique résolue par Henri VII comme tiers.
+
+**Critère pour qu'un conflit confessionnel soit une guerre sociale :**
+1. Les deux factions doivent correspondre structurellement à la distinction prébendière/patrimoniale (vérifier le mode d'enrichissement et le rapport au centre).
+2. La résolution doit venir par un tiers qui dépasse les deux factions, pas par la victoire d'une faction sur l'autre.
+3. La résolution doit aboutir à l'absolutisation effective (concentration du pouvoir central).
+
+Si l'un de ces trois critères manque, le conflit confessionnel est une **polarisation** intra-oligarchique ou une sous-dynamique d'une autre phase, pas une guerre sociale au sens strict.
+
 **Exemples :**
-- France : ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont choisi de soutenir le Roi (Henri IV) plutôt que les factions. La monarchie capétienne est renforcée.
-- Angleterre : ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée une nouvelle dynastie (les Tudor) qui s'émancipe des deux.
-- Israël (prolongement) : ni les Tobiades ni les Oniades ne prennent le pouvoir — c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte.
+- France : ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont choisi de soutenir le Roi (Henri IV) plutôt que les factions. La monarchie capétienne est renforcée. Le mécanisme de distinction est la religion (catholique/protestant), mais la polarisation sous-jacente est prébendière (administration royale et villes, catholiques du centre) vs patrimoniale (noblesse terrienne du Midi et de l'Ouest, protestante ou ligueuse selon les régions). Le tiers Henri IV résout — guerre sociale.
+- Angleterre : ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée une nouvelle dynastie (les Tudor) qui s'émancipe des deux. Le mécanisme de distinction est dynastique, la polarisation est prébendière/patrimoniale.
+- Israël (prolongement) : ni les Tobiades ni les Oniades ne prennent le pouvoir — c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte. Le mécanisme de distinction est confessionnel (hellénisés vs fidèles yahvistes), la polarisation est prébendière (Tobiades, fermiers d'impôts ptolémaïques) vs patrimoniale (Oniades, aristocratie sacerdotale foncière).
 
 ## L'absolutisation comme processus de migration
 

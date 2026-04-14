@@ -51,17 +51,22 @@ Le premier souverain qui dispose d'un État central — impôt permanent, armée
 - Angleterre : Édouard Ier (1272)
 - Venise : Domenico Contarini (~1043) / système — premier doge stable sous le régime post-dynastique, avec fisc commercial permanent, flotte permanente, administration en institutionnalisation. Le « monarque » vénitien est le système institutionnel plus que la personne du doge.
 
-### Saillant : Pic oligarchique (milieu de phase environ, position à confirmer)
+### Saillant : Pic oligarchique
 
-En milieu de phase apparaît souvent une figure exécutive particulièrement puissante, combinant un réseau vassalique personnel fort et une administration en consolidation rapide. Mais l'élite patrimoniale est encore assez forte pour provoquer un reflux temporaire de la centralisation après cette figure.
+**Définition simple** : le moment où le pouvoir central (et la puissance de la nation) est au plus fort pendant la phase oligarchique. Un souverain qui « sort du lot par la puissance de son pouvoir personnel », combinée à la projection extérieure maximale de la nation dans le cadre oligarchique existant. Le pic se situe typiquement dans l'essor ou au début de la polarisation, mais sa position chronologique varie considérablement selon les cas — ce n'est pas une position fixe dans la phase.
+
+**Le pic correspond au point de saturation de l'exutoire externe.** Vérification empirique sur le corpus : la fraction de la phase oligarchique où se situe le pic (0 = début, 1 = fin) varie de 0.13 (Suisse, ~1512) à 0.71 (Autriche, Léopold Ier ~1683). Le pattern qui se dégage n'est pas une position temporelle fixe mais une corrélation dynamique — **le pic arrive quand l'exutoire externe cesse de produire son surplus d'énergie**. Quand l'exutoire est court, le pic est précoce (Espagne : Rois Catholiques à 0.36, l'essor maritime et ibérique sature rapidement). Quand l'exutoire est très long, le pic est tardif (Venise : Foscari à 0.64 ; Autriche : Léopold Ier à 0.71, porté par l'exutoire anti-ottoman qui relance la projection extérieure au milieu de la polarisation). Les cas sans exutoire prolongé se regroupent autour de 0.45-0.55 (France, Angleterre, Milan, Bavière, Israël — « charnière essor/polarisation »).
+
+Conséquence méthodologique : **ne pas chercher le pic oligarchique à une fraction fixe de la phase**. Identifier plutôt le moment où la combinaison « puissance personnelle du souverain + projection extérieure maximale » est à son sommet. Ce moment peut arriver très tôt, en milieu de phase, ou très tard selon la dynamique de l'exutoire.
 
 **Exemples :**
-- Israël antique : Jéroboam II (~-770)
-- France : François Ier (~1515) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses).
-- Angleterre : Édouard III (~1350)
-- Venise : Francesco Foscari (~1440) — plus long dogat de l'histoire vénitienne (1423-1457), expansion maximale de la Terraferma, Venise au pic de sa puissance combinée (maritime + terrestre). Foscari agit dans le cadre de la promissione ducale — le Conseil des Dix le force à démissionner en 1457.
-
-**Note :** Ce saillant est bien identifié mais sa position chronologique précise au sein de la phase (milieu ? premier tiers ?) demande davantage d'exemples pour être stabilisée.
+- Israël antique : Jéroboam II (~-770, position ~0.47)
+- France : François Ier (~1515, position ~0.53) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses).
+- Angleterre : Édouard III (~1350, position ~0.56)
+- Espagne : Rois Catholiques (~1492, position ~0.36) — pic précoce, expansion maritime et ibérique qui sature rapidement
+- Venise : Francesco Foscari (~1440, position ~0.64) — plus long dogat de l'histoire vénitienne (1423-1457), expansion maximale de la Terraferma. Foscari agit dans le cadre de la promissione ducale — le Conseil des Dix le force à démissionner en 1457.
+- Bavière : Albert V (~1555, position ~0.54)
+- Autriche : Léopold Ier (~1683-1705, position ~0.71) — pic très tardif porté par l'exutoire anti-ottoman qui relance une dynamique de projection extérieure au milieu de la polarisation
 
 ### Saillant : Fin de l'expansion (tournant essor → polarisation)
 

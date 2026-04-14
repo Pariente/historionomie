@@ -135,10 +135,27 @@ Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la struc
 
 Le pacte ne survient que quand les deux conditions sont réunies simultanément : homogénéité des oligarques à l'échelle du royaume + moment de faiblesse du suzerain. C'est pour cela que le pacte survient très vite après la crise (France : 1314→1317, Angleterre : 1307→1311).
 
+### Critère discriminant (Coencas) : première codification négociée et entérinée des responsabilités du suzerain
+
+Le pacte oligarchique est **la première codification collective, négociée et entérinée, des responsabilités du suzerain**. Trois éléments discriminants :
+
+1. **Codification** — un acte écrit, formel, qui fixe des règles.
+2. **Responsabilités du suzerain** — le pacte codifie ce que le suzerain *doit* faire (règles de succession, obligations fiscales, règles de levée d'armée, partage de la souveraineté), pas simplement ce qu'il *peut* faire.
+3. **Négocié et entériné** — issu d'une assemblée collective des oligarques (diète, états, Landtag, Cortès, parlement), non d'une décision unilatérale du souverain.
+
+Ce critère permet de distinguer le pacte oligarchique des **créations institutionnelles unilatérales** du souverain, qui ne sont pas des pactes : Philippe le Bel crée le Parlement de Paris, la Chambre des comptes et une administration bureaucratique, mais ces créations sont unilatérales — le vrai pacte oligarchique français est la loi salique de 1317, négociée par les états au moment de la crise de succession. De même, Omri en Israël antique crée un État avec administration, fisc et armée permanents, mais unilatéralement — et c'est pourquoi Israël n'a pas de pacte oligarchique canonique identifié.
+
+Vérification empirique sur le corpus : 9 parcours sur 10 satisfont ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Chili). Israël antique est la seule exception documentée — Omri crée l'État sans codification négociée, ce qui laisse la phase féodale israélite sans pacte canonique. L'Autriche satisfait le critère avec l'Innsbrucker Libell (1518) qui codifie collectivement les responsabilités administratives, défensives et fiscales du suzerain habsbourgeois après négociation en Generallandtag.
+
 **Exemples :**
 - France : Loi salique / États généraux de 1317 — codification des règles de succession par l'assemblée politique
 - Angleterre : Ordonnances de 1311 — les Lords Ordainers imposent des contraintes institutionnelles à Édouard II
+- Espagne : règlement trastámara (1369-1371) — mercedes enriqueñas + Audiencia, Henri II usurpateur négocie avec la noblesse
+- Bavière : décret de primogéniture de 1506 — Albert IV codifie l'indivisibilité devant les Landstände
+- Autriche : Innsbrucker Libell (1518) — Maximilien Ier codifie la défense, l'administration et la fiscalité en Generallandtag des Erbländer
 - USA : Création de la Fed et de l'IRS (1913) — codification de la structure fiscale et monétaire fédérale
+
+**Cas limite : « suzerain collectif »** — À Venise et à Milan, le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les « responsabilités de l'exécutif » qui sont codifiées collectivement, mais la forme est institutionnelle.
 
 **Note :** Le pacte oligarchique n'est pas universel dans sa forme. En Israël antique, le schisme de ~-930 (rejet de la monarchie salomonienne par les tribus du nord) joue un rôle fonctionnellement analogue — c'est un acte par lequel la communauté politique rejette un exécutif devenu insoutenable — mais il prend la forme d'une sécession, pas d'une codification. Dans les sociétés anciennes, les outils institutionnels de codification n'existent pas encore ; la « codification » passe par la rupture.
 
