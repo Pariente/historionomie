@@ -293,20 +293,7 @@
 - start: 1454
 - end: 1499
 - title: Ancien Régime
-- summary: La Paix de Lodi (1454) stabilise le duché. Les Sforza consolident les institutions (Consiglio Segreto comme magistrature suprême) et développent un mécénat extraordinaire (Léonard, Bramante). Mais la sédimentation des élites, la pression fiscale de Ludovico il Moro et le mécontentement populaire préparent un AR qui sera avorté par les guerres d'Italie. Le fait que la population accueille les Français (1499) « exaspérée par la fiscalité oppressive » est un marqueur d'AR — mais l'explosion est exogène (invasion), pas endogène (révolution).
-
-#### Saillant : Restauration Sforza
-- type: saillant
-- perturbation: true
-- mechanism: choc_heterogeneite
-- effect: prolongement
-- start: 1450
-- figure: Francesco Sforza
-- subtitle: Restauration Sforza
-- title: Restauration Sforza
-- confidence: high
-- summary: Francesco Sforza reconquiert Milan et reconstitue partiellement le duché (~20 000 km²), re-ajoutant des marges hétérogènes (Pavie, Lodi, Parme, Plaisance) au noyau lombard après la fragmentation de 1402.
-- description: Francesco Sforza, condottiere au service de Venise puis gendre de Filippo Maria Visconti, s'empare de Milan en 1450 après avoir écrasé la République Ambrosienne. Il reconstitue un duché couvrant environ 20 000 km² — plus petit que l'empire de Gian Galeazzo (30 000 km²) mais significativement plus grand que le noyau lombard seul (~10 000 km²). Les cités reconquises (Pavie, Lodi, Parme, Plaisance) ont connu 50 ans d'autonomie et constituent à nouveau des marges hétérogènes. Cette re-expansion prolonge la phase absolutiste en offrant un exutoire territorial et en élevant le seuil d'homogénéité.
+- summary: Francesco Sforza reprend Milan en 1450 après l'interrègne de la République Ambrosienne et reconstitue le duché sur ~20 000 km² (Pavie, Lodi, Parme, Plaisance) — reprise dynastique dans un cadre culturellement lombard homogène, sans choc d'hétérogénéité. La Paix de Lodi (1454) stabilise le duché. Les Sforza consolident les institutions (Consiglio Segreto comme magistrature suprême) et développent un mécénat extraordinaire (Léonard, Bramante). Mais la sédimentation des élites, la pression fiscale de Ludovico il Moro et le mécontentement populaire préparent un AR qui sera avorté par les guerres d'Italie. Le fait que la population accueille les Français (1499) « exaspérée par la fiscalité oppressive » est un marqueur d'AR — mais l'explosion est exogène (invasion), pas endogène (révolution).
 
 #### Saillant : Invasion française
 - type: saillant

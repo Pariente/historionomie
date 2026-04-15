@@ -15,6 +15,10 @@ Ce skill permet à Claude d'analyser le Parcours de construction nationale de n'
 3. **Explorer une question historionomique** : appliquer le cadre théorique à un problème historique précis
 4. **Discuter le cadre théorique** : affiner les concepts, tester leur applicabilité à de nouveaux cas
 
+## Usage prioritaire : fiabilité des durées
+
+L'usage principal du corpus est la **quantification statistique** (régression d'Alyocha Coencas sur les durées de phase). La **fiabilité des dates de bornes** (éveil féodal, pacte, 1er monarque oligarchique, guerre sociale, 1er monarque absolu, explosion AR, Glorieuse Révolution) est la **priorité absolue** de toute analyse. Ne jamais forcer une date pour que les durées « collent mieux » — les écarts atypiques sont le signal d'une perturbation à identifier, pas d'une borne à déplacer.
+
 ## Cadre théorique — fichiers de référence
 
 Avant toute analyse, lire les fichiers de référence pertinents :
@@ -22,83 +26,120 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
+| `references/sous_phases.md` | **Grille opératoire des sous-phases** : marqueurs de début/fin, durées typiques, exemples extraits des parcours validés | **Toujours lire en deuxième**, avant d'identifier une sous-phase |
 | `references/phase_feodale.md` | Phase féodale : sous-phases, saillants (éveil féodal, pic féodal), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
-| `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, pic absolutiste), marqueurs | La question porte sur la phase absolutiste |
-| `references/phase_rn.md` | Révolution Nationale : les 7 étapes, saillants (IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
+| `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, pic absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
+| `references/phase_rn.md` | Révolution Nationale : sous-phases (révolution initiale, IR, restauration), saillants (explosion AR, phase aiguë, thermidorien, IR, Glorieuse Révolution) | La question porte sur la RN |
 | `references/phase_parlementaire.md` | Phase parlementaire, technocratique, dominat | La question porte sur les phases post-RN |
 | `references/elites.md` | Matrice 2×2 des élites (prébendières/patrimoniales × gouvernementales/non-gouvernementales), mécanismes d'absolutisation, guerre sociale | La question touche à la dynamique des élites |
-| `references/perturbations.md` | Reboot, prolongement, transfert de territoire, rébellion périphérique | La question touche à un choc externe ou une déviation des durées typiques |
+| `references/perturbations.md` | Mécanismes (choc d'hétérogénéité, choc exogène, insuffisance interne, correction d'échelle, exutoire) × effets (prolongement, accélération, avortement, reboot) | La question touche à un choc externe ou une déviation des durées typiques |
+| `references/nations/*/parcours.md` | Parcours nationaux déjà mappés | Pour comparer avec un parcours connu ou générer une infographie |
+
+## Naming canonique — liste fermée obligatoire
+
+**Phases** (liste fermée, aucune dérivation) :
+- `phase pré-féodale`, `phase féodale`, `phase oligarchique`, `phase absolutiste`, `révolution nationale`, `phase parlementaire`
+
+**Sous-phases** (liste fermée) :
+- `percolation élitaire` (pré-féodale)
+- `coagulation des élites`, `bascule oligarchique` (féodale)
+- `essor oligarchique`, `polarisation des élites`, `guerre sociale` (oligarchique)
+- `absolutisation`, `impérialisme absolutiste`, `ancien régime` (absolutiste). Dérivation rare : `ancien régime exogène`.
+- `révolution initiale`, `impérialisme revanchard`, `restauration` (RN)
+
+Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouveau PO` pour la France 1418-1429).
+
+**Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
+- **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
+- **Oligarchique** : 1er monarque oligarchique, Pic oligarchique, Fin de l'expansion, Guerre sociale
+- **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Pic absolutiste, Fin de l'expansion, Remontrance
+- **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
+
+**Distinction saillant vs sous-phase** :
+- `ancien régime` est une sous-phase **seulement** (pas un saillant).
+- `révolution initiale` est une sous-phase **seulement** — elle contient à l'intérieur les 4 saillants : Explosion de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
+- `Restauration` est à la fois un **saillant** (moment de restauration — ex. 1815 en France) et une **sous-phase** (durée où l'ancien ordre est restauré — ex. 1815-1830).
+- `Impérialiste Revanchard` (-*iste*) est un **saillant** : avènement de la figure (ex. Bonaparte 1er consul 1799). `impérialisme revanchard` (-*isme*) est la **sous-phase** : durée pendant laquelle la nation est portée par cette dynamique.
+
+**Tout événement qui n'est pas dans la liste fermée des saillants n'est PAS un saillant** — c'est soit une **perturbation** (avec mécanisme + effet, parcimonieusement), soit une **mention dans la description** d'une sous-phase. Ne JAMAIS créer des saillants ad hoc avec des noms inventés (« Victoire de la Contre-Réforme », « Compromis austro-hongrois », « Privilegium Minus »). Les saillants sont des éléments codifiés.
+
+**Figures historiques** : utiliser le nom seul. Surnoms UNIQUEMENT s'ils sont historiographiques canoniques. Jamais d'épithètes ajoutées par goût littéraire (« le Glorieux », « le Fondateur »).
+
+## Bornes de sous-phases — règles opératoires
+
+Consulter `references/sous_phases.md` pour la grille complète des marqueurs. Règles fondamentales :
+
+1. **Une borne est généralement un saillant canonique** — jamais une date arrondie « approximative ». Deux exceptions : essor→polarisation (basculement de dynamique, pas un saillant).
+2. **La fin d'une sous-phase et le début de la suivante coïncident**.
+3. **Les bornes ne doivent pas être forcées** pour obtenir des durées typiques.
+4. **DGRO — la Dernière Grande Révolte Oligarchique est un saillant INTERNE à la sous-phase `absolutisation`** (son écrasement termine la sous-phase et ouvre l'impérialisme absolutiste). Jamais au début de la phase oligarchique.
+5. **Trois pièges à mémoriser** :
+   - Essor oligarchique → polarisation : **basculement de dynamique** (pas un saillant) — la projection extérieure cesse d'être le moteur au profit de la tension interfactions pour le contrôle de l'État central.
+   - Absolutisation → impérialisme absolutiste : **fin de la DGRO** (pas le pic absolutiste qui est interne à l'impérialisme).
+   - Impérialisme absolutiste → ancien régime : **Remontrance** (strictement — pas la fin de l'expansion qui peut précéder).
+
+## Catégorisation des événements historiques — 4 catégories
+
+Tout événement historique relève de l'une de quatre catégories :
+
+1. **Saillant canonique** — dans la liste fermée (rond de la couleur de la phase).
+2. **Perturbation** — passe le **triple test** : mécanisme identifiable + effet identifiable + impact réel sur la trajectoire (durée, niveau ou direction d'une phase aurait été différente sans cet événement). Affichage : losange coloré.
+3. **Anecdote de parcours** — événement à faible intensité sans impact sur la trajectoire (défaite mineure, scandale politique ordinaire). Ne pas marquer, au plus mentionner en description.
+4. **Élément nouveau théorique** — événement structurellement important qui ne rentre dans aucune des trois catégories précédentes. À remonter explicitement pour discussion théorique, pas à forcer dans une catégorie.
+
+**Règles** : les saillants canoniques ont priorité (exception : les crises féodales sont à la fois canoniques et perturbations par insuffisance interne / avortement). Pas de plafond numérique — le compte est un résultat du triple test, pas une contrainte.
 
 ## Workflow : analyser le Parcours d'une nation
 
 ### Étape 1 : Lire le cadre théorique
 
-Lire `references/parcours.md` pour avoir en tête les phases, les saillants connus, les durées typiques, et les deux moteurs (construction de l'État central + homogénéisation culturelle).
-
-Si la question porte sur une phase ou un mécanisme spécifique, lire aussi le fichier de référence correspondant.
+Lire `references/parcours.md` puis `references/sous_phases.md`. Si la question porte sur une phase spécifique, lire aussi le fichier phase_*.md correspondant.
 
 ### Étape 2 : Rechercher l'histoire de la nation
 
-Utiliser la recherche web pour rassembler les informations historiques nécessaires. Chercher spécifiquement :
+Utiliser la recherche web pour rassembler les informations historiques. Chercher spécifiquement les saillants canoniques par phase :
 
-**Pour identifier la phase féodale :**
-- Quand apparaît le premier chef supra-régional ? (éveil féodal)
-- Y a-t-il un réseau de vassalité d'homme à homme ?
-- Quand apparaît une première administration centrale, un premier fisc permanent, une première armée permanente ? (fin de la phase féodale / début de la phase oligarchique)
+**Phase féodale** : premier chef supra-régional (éveil féodal), rois forts (pics féodaux), extinctions dynastiques / partitions / crises (crises féodales), pacte oligarchique formel.
 
-**Pour identifier la phase oligarchique :**
-- Qui est le premier souverain disposant d'un État central (impôt + armée + administration) ? (1er monarque oligarchique)
-- Y a-t-il une codification du droit ? Une assemblée des élites ?
-- Quelles sont les deux factions en conflit (prébendière vs patrimoniale) ?
-- Y a-t-il une guerre sociale identifiable ?
+**Phase oligarchique** : premier souverain avec fisc/armée/administration permanents (1er monarque olig), pic oligarchique, fin de l'expansion extérieure, deux factions en conflit, tiers résolvant (guerre sociale).
 
-**Pour identifier la phase absolutiste :**
-- Qui résout la guerre sociale et concentre le pouvoir ? (1er monarque absolu)
-- L'administration centrale a-t-elle préséance sur les administrations locales ?
-- Y a-t-il un pic d'impérialisme et de prestige ? (pic absolutiste)
-- Y a-t-il sédimentation des élites, sclérose, bloc contestataire ? (Ancien Régime)
+**Phase absolutiste** : 1er monarque absolu, dernière révolte oligarchique armée (DGRO), pic absolutiste interne à l'impérialisme, fin de l'expansion, Remontrance (dernière tentative institutionnelle écrasée).
 
-**Pour identifier la RN :**
-- Y a-t-il une explosion de l'ordre ancien, une expérience parlementaire, une phase aiguë ?
-- Y a-t-il une figure d'Impérialiste Revanchard ?
-- Y a-t-il une Glorieuse Révolution qui ancre le parlementarisme ?
+**RN** : explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, avènement IR, Restauration, Glorieuse Révolution.
 
-**Pour identifier les perturbations :**
-- Les durées observées s'écartent-elles des ~200 ans typiques ? Si oui, chercher un choc externe.
-- Ce choc a-t-il détruit les institutions (→ reboot) ou simplement hétérogénéisé la société (→ prolongement) ?
+**Perturbations** : durées atypiques → identifier le mécanisme (choc d'hétérogénéité, choc exogène, insuffisance interne, correction d'échelle, exutoire) et l'effet (prolongement, accélération, avortement, reboot).
 
-### Étape 3 : Proposer une analyse argumentée
+### Étape 3 : Vérifier chaque phase avant de passer à la suivante (obligatoire)
 
-Présenter l'analyse sous forme de :
+**Ne jamais passer à la phase suivante sans avoir vérifié la phase en cours.** Pour chaque phase :
 
-1. **Tableau des saillants identifiés** (avec dates et justifications)
-2. **Identification des sous-phases** avec leurs marqueurs
-3. **Perturbations identifiées** et leur effet sur le Parcours
-4. **Comparaison** avec les parcours connus (Israël, France, Angleterre) — les parallèles éclairent et renforcent l'analyse
-5. **Points d'incertitude** — ce qui reste à confirmer, les hypothèses alternatives
+1. **Tous les saillants canoniques sont-ils présents ?** Un saillant manquant est un signal d'alarme. Ne jamais se contenter de « absent, résolution diffuse » sans argumentation structurelle solide.
+2. **Le pacte oligarchique en particulier est une nécessité** : il est généralement très formel (loi salique, Ordonnances, primogéniture, Libell, etc.). Chercher activement.
+3. **Durées cohérentes** avec la norme (ou écart expliqué par une perturbation identifiée).
+4. **Test discriminant passé à la bonne échelle** (pour monarchies composites : toutes les administrations locales).
+5. **Bornes des sous-phases correctement identifiées** via `sous_phases.md`, attention aux trois pièges (essor→pol dynamique, absolutisation→impérial = DGRO, impérial→AR = Remontrance).
 
-### Étape 4 : Discuter et itérer
+### Étape 4 : Vérification globale finale — complétude événementielle
 
-L'historionomie est une discipline en cours de construction. L'utilisateur peut contester une identification, proposer un saillant alternatif, ou demander d'explorer une hypothèse. Claude doit être prêt à réviser son analyse sur la base d'arguments solides.
+Après l'analyse de toutes les phases, **passe globale** : lister les événements majeurs documentés de l'histoire de la nation et vérifier qu'**aucun ne reste inexpliqué** historionomiquement. Chaque événement majeur doit être soit un saillant canonique, soit une perturbation, soit une sous-phase, soit intégré à la description d'une phase avec un éclairage structurel. Un événement majeur non expliqué = analyse incomplète.
+
+### Étape 5 : Proposer une analyse argumentée
+
+Présenter sous forme de : saillants identifiés (dates + justifications), sous-phases avec marqueurs, perturbations, comparaison avec parcours connus, points d'incertitude.
+
+### Étape 6 : Discuter et itérer
+
+L'historionomie est une discipline en construction. Être prêt à réviser sur la base d'arguments solides. **Honnêteté prioritaire** : préférer un parcours avec des trous honnêtes à un parcours faussement complet.
 
 ## Principes importants
 
-### Terminologie stricte
-
-- **Parcours** (majuscule) : le Parcours de construction nationale
-- **Sous-phases** : découpage mécanique d'une phase (ex. : absolutisation → impérialisme absolutiste → Ancien Régime)
-- **Saillants** : éléments ponctuels facilement identifiables (ex. : éveil féodal, pic absolutiste)
-- **Classe prébendière / patrimoniale** (Weber) : jamais « mobilière / immobilière »
-- **Clivage gauche-droite** : ED (réactionnaires), D (conservateurs), G (réformateurs), EG (révolutionnaires) — définitions structurelles, valables partout et tout le temps
-
 ### Les deux moteurs sont la clé
 
-Toute analyse doit être ancrée dans les deux moteurs :
 1. **Construction de l'État central** — appareil administratif, fiscal, militaire
 2. **Homogénéisation culturelle** — langue, religion, droit, mœurs, conscience nationale
 
-Pour situer une nation, observer le degré de centralisation de l'État et le degré d'homogénéité culturelle. Pour comprendre un écart de durée, chercher ce qui a perturbé l'un ou l'autre.
+Pour situer une nation : degré de centralisation + degré d'homogénéité. Pour comprendre un écart de durée : ce qui a perturbé l'un ou l'autre.
 
 ### Durées typiques et écarts
 
@@ -110,13 +151,19 @@ Pour situer une nation, observer le degré de centralisation de l'État et le de
 | Révolution Nationale | ~25-80 ans |
 | Parlementaire | Très longue |
 
-Les écarts sont toujours significatifs. Ne pas les ignorer — les expliquer.
+Les écarts sont toujours significatifs — les expliquer par une perturbation, jamais par un ajustement de borne.
+
+### Terminologie stricte
+
+- **Parcours** (majuscule) : le Parcours de construction nationale
+- **Sous-phases** : découpage mécanique d'une phase (liste canonique fermée)
+- **Saillants** : éléments ponctuels codifiés (liste canonique fermée)
+- **Classe prébendière / patrimoniale** (Weber) : jamais « mobilière / immobilière »
+- **Clivage gauche-droite** : ED (réactionnaires), D (conservateurs), G (réformateurs), EG (révolutionnaires) — définitions structurelles, valables partout et tout le temps
 
 ### Humilité épistémique
 
-L'historionomie est un cadre en construction. Certains saillants sont bien établis (éveil féodal, 1er monarque oligarchique, guerre sociale), d'autres sont encore en cours de validation (pic féodal, pic oligarchique). Signaler les incertitudes plutôt que de forcer une identification.
-
-Quand l'analyse d'une nouvelle nation révèle un cas qui ne colle pas au modèle, c'est potentiellement une découverte — pas un échec. Le signaler et en discuter.
+L'historionomie est un cadre en construction. Signaler les incertitudes plutôt que de forcer une identification. Quand une nouvelle nation révèle un cas qui ne colle pas au modèle, c'est potentiellement une découverte — le signaler et en discuter.
 
 ### Langue
 

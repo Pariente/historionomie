@@ -122,15 +122,15 @@
 #### Saillant : Empire de Cnut
 - type: saillant
 - perturbation: true
-- mechanism: choc_heterogeneite
+- mechanism: choc_exogene
 - effect: prolongement
 - start: ~1016
 - figure: Cnut le Grand
 - subtitle: Empire anglo-scandinave
 - title: Empire de Cnut
 - confidence: high
-- summary: Cnut bâtit un empire couvrant l'Angleterre, le Danemark et la Norvège (~500 000 km²). L'échelle du royaume quadruple, le seuil d'homogénéité requis pour un pacte devient inatteignable, et la phase féodale est prolongée.
-- description: L'avènement de Cnut en 1016 transforme le royaume d'Angleterre en un empire anglo-scandinave couvrant l'Angleterre, le Danemark et la Norvège. La superficie sous contrôle royal passe de ~130 000 km² à ~500 000 km² — un facteur de presque quatre. L'hétérogénéité culturelle entre élites anglaises, danoises et norvégiennes rend impossible la formation d'une conscience de classe à l'échelle impériale. Le pacte oligarchique, s'il devait se produire, devrait se former entre des aristocraties qui ne partagent ni la même langue, ni les mêmes institutions, ni la même culture politique. C'est un choc d'hétérogénéité classique qui prolonge la phase féodale en repoussant le seuil du pacte bien au-delà de ce qui est atteignable. Le mécanisme est identique à celui de l'Union Castille-Aragon (1479) ou de l'héritage habsbourgeois (1516) dans le Parcours espagnol.
+- summary: Cnut bâtit un empire couvrant l'Angleterre, le Danemark et la Norvège. L'Angleterre est intégrée comme composante d'un ensemble plus vaste dont elle n'est plus le centre, et dont les élites sont dispersées entre les trois royaumes. Le cycle féodal anglais est suspendu pendant 26 ans sans que ses institutions soient détruites.
+- description: L'avènement de Cnut en 1016 fait basculer l'Angleterre dans un empire anglo-scandinave qui est administré par des earls anglo-scandinaves nommés par un souverain étranger. Cnut intègre les institutions anglaises existantes (witenagemot, shire court) à son système plutôt que de les détruire, et promulgue des codes de lois en continuité avec la tradition anglo-saxonne. Mais l'Angleterre n'est plus le centre — elle est une composante d'un ensemble impérial dont le roi partage son attention entre Winchester, Roskilde et Nidaros. Le cycle féodal anglais endogène est suspendu : les élites anglaises ne peuvent pas former de conscience de classe à l'échelle impériale, et le jeu politique intérieur est contraint par la présence d'une puissance dominante extérieure. Ce n'est pas un choc d'hétérogénéité (l'Angleterre ne digère pas les marges scandinaves — c'est elle qui devient marge) mais un choc exogène qui gèle le Parcours anglais pendant 26 ans (1016-1042). À la mort de Harthacnut et au retour d'Édouard le Confesseur, la dynamique endogène anglaise redémarre.
 
 #### Saillant : Crise féodale — post-Cnut
 - type: saillant
@@ -170,9 +170,9 @@
 - observed_duration: ~261 ans
 - resolution: Pacte oligarchique — les Ordonnances de 1311 codifient les pouvoirs du roi et les droits des barons, marquant le passage d'un pouvoir personnel à un pouvoir encadré par des règles institutionnelles.
 - resolution_conditions: Les deux conditions du pacte (Deblonde) sont enfin réunies simultanément sous Édouard II : (1) homogénéité des élites à l'échelle du royaume, acquise progressivement après la perte de la Normandie (1204) qui force les barons à se penser comme anglais ; (2) moment de faiblesse du souverain, fourni par l'incompétence d'Édouard II et sa dépendance envers ses favoris.
-- deviation: +61 ans (~261 ans). Expliqué par deux facteurs. D'abord, l'hétérogénéité culturelle introduite par la conquête normande : les élites francophones et la population anglophone ne fusionnent que progressivement. Ensuite, l'Empire Plantagenêt d'Henri II élève l'échelle du royaume (Angleterre + Normandie + Anjou + Aquitaine), ce qui repousse le seuil d'homogénéité requis pour le pacte. Ce n'est qu'après la perte de la Normandie en 1204, qui ramène l'échelle au niveau anglais, que l'homogénéisation peut s'achever et que les conditions du pacte deviennent atteignables.
+- deviation: +61 ans (~261 ans). Expliqué par l'hétérogénéité interne introduite par la conquête normande : le remplacement intégral de l'aristocratie anglo-saxonne par une noblesse normande francophone crée un stock d'hétérogénéité culturelle profonde entre élites francophones et population anglophone, qui met environ un siècle et demi à se résorber. L'Empire Plantagenêt d'Henri II, qui prolonge la connexion continentale des élites anglo-normandes, fonctionne comme exutoire militaire (les barons restent tournés vers leurs domaines français) mais n'est pas en lui-même un nouveau choc d'hétérogénéité — les domaines continentaux restent administrés localement par leurs propres élites et ne sont pas digérés par le noyau anglais. Le tournant est la perte de la Normandie en 1204 : en privant les élites anglo-normandes de leurs domaines continentaux, elle les force à se penser comme anglaises et accélère l'homogénéisation qui permet enfin le pacte (Ordonnances de 1311).
 - summary: La seconde phase féodale anglaise commence avec la conquête normande de 1066, qui remplace intégralement l'aristocratie anglo-saxonne par une noblesse normande francophone et introduit un nouveau système féodal. Elle se décompose en deux sous-phases : une longue coagulation des élites (1066-1307), ponctuée par trois pics féodaux (Henri Ier, Henri II, Édouard Ier) et deux crises avortées (l'Anarchie, Jean sans Terre), où l'homogénéisation est accélérée par la perte de la Normandie (1204) ; puis une bascule oligarchique (1307-1327) sous Édouard II, dont la faiblesse permet aux barons — désormais homogènes à l'échelle anglaise — d'imposer les Ordonnances de 1311.
-- description: La seconde phase féodale commence avec le remplacement intégral de l'aristocratie par les Normands, qui introduisent un nouveau système féodal et une hétérogénéité culturelle profonde entre élites francophones et population anglophone. Trois pics féodaux (Henri Ier, Henri II, Édouard Ier) alternent avec des crises qui avortent faute d'homogénéité suffisante. L'Empire Plantagenêt d'Henri II élève l'échelle du royaume bien au-delà du cadre anglais, repoussant le seuil du pacte. Le tournant est la perte de la Normandie en 1204, qui force les barons à se penser comme anglais. Il faut encore un siècle pour que l'homogénéisation aboutisse, et c'est sous Édouard II — roi faible, dominé par ses favoris — que les deux conditions du pacte (Deblonde) convergent enfin : les Ordonnances de 1311 codifient les pouvoirs du roi et la déposition d'Édouard II en 1327 constitue un précédent constitutionnel majeur.
+- description: La seconde phase féodale commence avec le remplacement intégral de l'aristocratie par les Normands, qui introduisent un nouveau système féodal et une hétérogénéité culturelle profonde entre élites francophones et population anglophone. Trois pics féodaux (Henri Ier, Henri II, Édouard Ier) alternent avec des crises qui avortent faute d'homogénéité suffisante. L'Empire Plantagenêt d'Henri II, qui prolonge la connexion continentale des élites anglo-normandes, les maintient tournées vers leurs domaines français comme exutoire militaire — mais ces domaines restent administrés par leurs propres élites et ne sont pas digérés par le noyau anglais, donc ne constituent pas un nouveau choc d'hétérogénéité. Le tournant est la perte de la Normandie en 1204 : en privant les élites anglo-normandes de leurs domaines continentaux, elle les force à se penser comme anglaises. Il faut encore un siècle pour que l'homogénéisation aboutisse, et c'est sous Édouard II — roi faible, dominé par ses favoris — que les deux conditions du pacte (Deblonde) convergent enfin : les Ordonnances de 1311 codifient les pouvoirs du roi et la déposition d'Édouard II en 1327 constitue un précédent constitutionnel majeur.
 
 ### Subphase : Coagulation des élites
 - type: subphase
@@ -225,21 +225,8 @@
 - subtitle: Henri II Plantagenêt
 - title: Pic féodal
 - confidence: high
-- summary: Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Mais il constitue simultanément l'Empire Plantagenêt (Angleterre + Normandie + Anjou + Aquitaine), ce qui augmente l'échelle du royaume et repousse le seuil d'homogénéité requis pour un pacte.
-- description: Henri II Plantagenêt (1154-1189) est un roi d'une énergie exceptionnelle qui porte le pouvoir personnel à un nouveau sommet. Il développe le common law par les Assises de Clarendon (1166) et de Northampton (1176), met en place un réseau de juges itinérants qui unifient la justice royale sur tout le territoire, et tente d'affirmer l'autorité laïque sur l'Église — ce qui le conduit au conflit fatal avec Thomas Becket, assassiné en 1170. Mais Henri II ne gouverne pas seulement l'Angleterre : il est le maître d'un empire qui s'étend de l'Écosse aux Pyrénées, couvrant la Normandie, le Maine, l'Anjou, la Touraine, le Poitou et l'Aquitaine. Cette augmentation d'échelle est décisive pour le Parcours. Le pacte oligarchique, s'il devait se produire, devrait maintenant se former à l'échelle impériale — or les barons anglais, normands, angevins et aquitains ne forment en rien une classe homogène. L'Empire Plantagenêt éloigne la possibilité du pacte en élevant le seuil bien au-delà de ce que l'homogénéité des élites peut atteindre. Ce n'est qu'après la destruction de l'empire par Philippe Auguste que le seuil redescendra au niveau anglais.
-
-#### Saillant : Empire Plantagenêt
-- type: saillant
-- perturbation: true
-- mechanism: choc_heterogeneite
-- effect: prolongement
-- start: ~1154
-- figure: Henri II Plantagenêt
-- subtitle: Empire Plantagenêt
-- title: Empire Plantagenêt
-- confidence: high
-- summary: Henri II constitue un empire couvrant l'Angleterre, la Normandie, l'Anjou et l'Aquitaine (~275 000 km²). L'échelle du royaume double, le seuil d'homogénéité requis pour un pacte est repoussé bien au-delà du cadre anglais.
-- description: L'avènement d'Henri II en 1154 porte l'échelle du royaume de ~160 000 km² (Angleterre + Normandie) à ~275 000 km² (ajout de l'Anjou, du Maine, de la Touraine, du Poitou et de l'Aquitaine). Les barons anglais, normands, angevins et aquitains ne forment en rien une classe homogène : ils ne parlent pas les mêmes langues, n'obéissent pas aux mêmes coutumes, et ne se perçoivent pas comme un groupe politique unifié. Le pacte oligarchique, s'il devait se produire, devrait maintenant se former à l'échelle impériale — ce qui est irréalisable. C'est le même mécanisme que l'Union Castille-Aragon (1479) dans le Parcours espagnol : l'expansion territoriale prolonge la phase en cours en élevant le seuil d'homogénéité. La phase féodale ne pourra se résoudre qu'après la destruction de l'empire continental par Philippe Auguste (1204).
+- summary: Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Il règne aussi sur un empire continental (Normandie, Anjou, Aquitaine) qui fonctionne comme exutoire militaire pour les élites anglo-normandes et les maintient tournées vers le continent plutôt que vers leur ancrage insulaire.
+- description: Henri II Plantagenêt (1154-1189) est un roi d'une énergie exceptionnelle qui porte le pouvoir personnel à un nouveau sommet. Il développe le common law par les Assises de Clarendon (1166) et de Northampton (1176), met en place un réseau de juges itinérants qui unifient la justice royale sur tout le territoire, et tente d'affirmer l'autorité laïque sur l'Église — ce qui le conduit au conflit fatal avec Thomas Becket, assassiné en 1170. Henri II ne gouverne pas seulement l'Angleterre : il est le maître d'un empire qui s'étend de l'Écosse aux Pyrénées, couvrant la Normandie, le Maine, l'Anjou, la Touraine, le Poitou et l'Aquitaine. Mais ces domaines continentaux sont administrés par leurs propres sénéchaux et coutumes locales — il s'agit d'une union personnelle, pas d'une intégration au noyau anglais. Leur effet sur le Parcours anglais n'est pas de produire un choc d'hétérogénéité (les élites anglo-normandes ne sont pas mobilisées pour digérer les Aquitains) mais de fonctionner comme exutoire militaire : les barons anglo-normands tournent leur énergie vers leurs domaines français, ce qui retarde leur « anglicisation » culturelle. Le tournant sera la perte de la Normandie (1204) qui, en coupant ces attaches continentales, force les élites à se repenser comme anglaises et rapproche enfin les conditions du pacte.
 
 #### Saillant : Crise féodale
 - type: saillant
@@ -257,15 +244,15 @@
 #### Saillant : Perte de la Normandie
 - type: saillant
 - perturbation: true
-- mechanism: correction_echelle
+- mechanism: choc_exogene
 - effect: acceleration
 - start: 1204
 - figure: Philippe Auguste
 - subtitle: Perte de la Normandie
 - title: Perte de la Normandie
 - confidence: high
-- summary: Philippe Auguste confisque la Normandie, le Maine, l'Anjou et le Poitou. L'Empire Plantagenêt continental est détruit, l'échelle redescend de ~275 000 km² à ~155 000 km², et les barons sont forcés de se penser comme anglais — accélérant l'homogénéisation vers le pacte.
-- description: En 1204, Philippe Auguste confisque à Jean sans Terre la Normandie, le Maine, l'Anjou et le Poitou. L'Empire Plantagenêt continental est détruit d'un coup. Les barons qui possédaient des terres des deux côtés de la Manche sont forcés de choisir : rester en Angleterre ou rester en France. La plupart choisissent l'Angleterre. Cette correction d'échelle a un effet accélérateur décisif sur le Parcours : en ramenant la « taille de référence » au cadre anglais, elle abaisse le seuil d'homogénéité requis pour un pacte et force les élites à se constituer en classe à l'échelle du royaume. Le mécanisme est l'inverse exact du choc d'hétérogénéité Plantagenêt de 1154 : la contraction produit l'accélération là où l'expansion avait produit le prolongement. Le parallèle avec les pertes territoriales espagnoles (Westphalie 1648, Utrecht 1714) est direct.
+- summary: Philippe Auguste confisque à Jean sans Terre la Normandie, le Maine, l'Anjou et le Poitou. Les élites anglo-normandes sont coupées de leurs domaines continentaux, ce qui force leur anglicisation et accélère l'homogénéisation vers le pacte oligarchique anglais (Ordonnances de 1311).
+- description: En 1204, Philippe Auguste confisque à Jean sans Terre la Normandie, le Maine, l'Anjou et le Poitou. Les barons qui possédaient des terres des deux côtés de la Manche sont forcés de choisir : rester en Angleterre ou rester en France. La plupart choisissent l'Angleterre. Ce n'est pas une correction d'échelle au sens territorial strict : la Normandie et les domaines angevins-aquitains n'avaient jamais été vraiment digérés par le noyau anglais (Exchequer of Normandy distinct, coutume de Normandie, sénéchal normand, administration séparée). Ils étaient en union personnelle avec le duc-roi Plantagenêt, fonctionnant comme exutoire militaire pour les élites anglo-normandes. Mais leur perte est un choc exogène (défaite militaire) qui produit un effet structurel réel : en supprimant brutalement l'ancrage continental des barons, elle les force à se repenser comme anglais. Cette coupure enclenche l'anglicisation culturelle de l'aristocratie anglo-normande (abandon progressif du français au profit de l'anglais) et abaisse le seuil d'homogénéité requis pour le pacte. Le pacte arrivera un siècle plus tard (Ordonnances de 1311, déposition d'Édouard II en 1327), mais la coupure de 1204 en est la précondition. Mécanisme identique à la perte de la France en 1453 (fin de la guerre de Cent Ans) : défaite militaire externe qui supprime l'exutoire continental et force le recentrage interne.
 
 #### Saillant : Pic féodal — Édouard Ier
 - type: saillant
@@ -352,19 +339,6 @@
 - summary: Henri V porte la monarchie oligarchique anglaise à son sommet absolu avec la victoire d'Azincourt (1415) et le Traité de Troyes (1420), qui lui accorde la couronne de France — un niveau de puissance qu'aucun roi d'Angleterre n'avait atteint ni n'atteindra après lui.
 - description: Le pic oligarchique anglais se situe sous Henri V, lorsque convergent la supériorité militaire et le triomphe diplomatique. La victoire d'Azincourt le 25 octobre 1415, remportée par une armée de ~6 000 hommes contre ~20 000 Français, est un exploit tactique qui détruit la noblesse française du Nord et élimine toute résistance militaire organisée. La conquête méthodique de la Normandie (1417-1419) démontre une capacité logistique et administrative remarquable. Le Traité de Troyes (1420) couronne l'édifice : Henri V est reconnu comme héritier de la couronne de France, marié à Catherine de Valois, et régent du royaume pendant la vie de Charles VI. Aucun roi d'Angleterre n'avait atteint ce niveau de puissance, et aucun ne l'atteindra après. Mais ce pouvoir reste oligarchique : Henri V dépend du Parlement pour le financement de ses campagnes, et la conquête de la Normandie est administrée par un appareil institutionnel, non par le charisme d'un seul homme.
 
-#### Saillant : Traité de Troyes
-- type: saillant
-- perturbation: true
-- mechanism: choc_heterogeneite
-- effect: prolongement
-- start: 1420
-- figure: Henri V
-- subtitle: Traité de Troyes
-- title: Traité de Troyes
-- confidence: high
-- summary: Le Traité de Troyes fait d'Henri V l'héritier de la couronne de France et lui confie l'administration de la Normandie et de la France du Nord. La superficie sous contrôle anglais passe de ~177 000 km² à ~250 000 km², créant un exutoire continental qui prolonge l'essor oligarchique.
-- description: Le Traité de Troyes (1420) porte l'expansion territoriale anglaise à son maximum médiéval. L'Angleterre administre directement la Normandie, l'Île-de-France et des portions de la Picardie et du Maine, en plus du pays de Galles et de la Gascogne. Ce territoire hétérogène — peuplé de Français qui n'ont aucune allégeance naturelle à la couronne anglaise — crée un exutoire qui absorbe l'énergie de la noblesse anglaise et retarde la polarisation interne. Le mécanisme est identique à celui de la Reconquista espagnole ou de l'expansion vénitienne en Méditerranée : l'expansion prolonge la phase en cours en offrant une soupape aux tensions internes. L'effondrement de cet exutoire (1420-1453) accélérera brutalement la polarisation.
-
 #### Saillant : Fin de l'expansion
 - type: saillant
 - start: 1421
@@ -387,14 +361,14 @@
 #### Saillant : Perte de la France
 - type: saillant
 - perturbation: true
-- mechanism: correction_echelle
+- mechanism: choc_exogene
 - effect: acceleration
 - start: 1453
 - subtitle: Castillon
 - title: Perte de la France
 - confidence: high
-- summary: La défaite de Castillon (1453) met fin à la présence anglaise en France continentale. L'exutoire continental se ferme définitivement, les tensions entre factions se retournent vers l'intérieur et accélèrent la polarisation vers la guerre sociale.
-- description: La bataille de Castillon (17 juillet 1453) est la dernière bataille de la guerre de Cent Ans. La Gascogne, dernier territoire continental anglais hors Calais, est définitivement perdue. L'Angleterre passe de ~177 000 km² (avec le Galles et la Gascogne) à ~152 000 km² (Angleterre + Galles + Calais). La perte de l'exutoire continental prive la noblesse anglaise de ses débouchés extérieurs — conquête, butin, domaines français — et retourne toute l'énergie politique vers l'intérieur. Les factions Lancaster et York, qui coexistaient tant que la guerre de France offrait un ennemi commun, se retrouvent face à face sans soupape. La polarisation, déjà amorcée depuis Baugé (1421), s'accélère brutalement. Deux ans plus tard, la première bataille de Saint-Albans (1455) ouvre les Guerres des Roses. Le parallèle avec l'Espagne est instructif : là où la perte des possessions européennes (Westphalie 1648, Utrecht 1714) accélère le Parcours espagnol, la perte de la France accélère le Parcours anglais — le même mécanisme de correction d'échelle produit le même effet.
+- summary: La défaite de Castillon (1453) met fin à la présence anglaise en France continentale. L'exutoire militaire continental se ferme définitivement, les factions Lancaster et York perdent leur ennemi commun, et la polarisation interne explose en Guerre des Deux Roses deux ans plus tard.
+- description: La bataille de Castillon (17 juillet 1453) est la dernière bataille de la guerre de Cent Ans. La Gascogne, dernier territoire continental anglais hors Calais, est définitivement perdue. L'Angleterre passe de ~177 000 km² (avec le Pays de Galles et la Gascogne) à ~152 000 km² (Angleterre + Pays de Galles + Calais). Ce n'est pas une correction d'échelle au sens territorial strict : les possessions continentales anglaises (Gascogne, Normandie reconquise 1417-1450) n'étaient pas vraiment digérées par le noyau anglais — elles étaient administrées par un sénéchal d'Aquitaine à Bordeaux et une administration anglo-normande à Rouen, avec des élites locales distinctes et un droit coutumier propre. Il s'agit plutôt d'un **choc exogène qui supprime un exutoire militaire externe**. Tant que la guerre de France offrait un ennemi commun et un débouché pour les ambitions aristocratiques, les factions Lancaster (prébendière, cour) et York (patrimoniale, grands magnats terriens) coexistaient en tension mais sans affrontement ouvert. Après Castillon, l'exutoire disparaît : la noblesse perd ses débouchés extérieurs, l'énergie politique se retourne vers l'intérieur, le régime lancastrien est discrédité par la défaite. Deux ans plus tard, la première bataille de Saint-Albans (22 mai 1455) ouvre la Guerre des Deux Roses — la guerre sociale anglaise. Le mécanisme est identique à la perte de la Normandie en 1204 : défaite militaire externe qui accélère le Parcours par fin d'exutoire, pas par contraction d'un territoire digéré.
 
 ### Subphase : Guerre sociale
 - type: subphase

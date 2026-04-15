@@ -32,14 +32,15 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
+| `references/sous_phases.md` | **Grille opératoire des sous-phases** : marqueurs de début/fin, durées typiques, exemples extraits des parcours validés | **Toujours lire en deuxième**, avant d'identifier une sous-phase |
 | `references/phase_feodale.md` | Phase féodale : sous-phases, saillants (éveil féodal, pic féodal), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
-| `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, pic absolutiste), marqueurs | La question porte sur la phase absolutiste |
-| `references/phase_rn.md` | Révolution Nationale : les 7 étapes, saillants (IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
+| `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, pic absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
+| `references/phase_rn.md` | Révolution Nationale : sous-phases (révolution initiale, IR, restauration), saillants (explosion AR, phase aiguë, thermidorien, IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
 | `references/phase_parlementaire.md` | Phase parlementaire, technocratique, dominat | La question porte sur les phases post-RN |
 | `references/elites.md` | Matrice 2×2 des élites (prébendières/patrimoniales × gouvernementales/non-gouvernementales), mécanismes d'absolutisation, guerre sociale | La question touche à la dynamique des élites |
 | `references/perturbations.md` | 3 mécanismes (choc d'hétérogénéité, choc exogène, insuffisance interne) × 4 effets (prolongement, accélération, avortement, reboot) + exutoire (état continu). Rébellion périphérique. Affichage sur la frise (losanges, couleurs, icônes) | La question touche à un choc externe, une déviation des durées typiques, ou un exutoire |
-| `references/nations/*/parcours.md` | Parcours nationaux déjà mappés (Israël, France) — données structurées, hypothèse finale retenue | Pour comparer avec un parcours connu ou générer une infographie |
+| `references/nations/*/parcours.md` | Parcours nationaux déjà mappés (France, Angleterre, Espagne, Piémont, Milan, Venise, Bavière, Israël, Allemagne, Suisse, Chili, Autriche) — données structurées, hypothèse finale retenue | Pour comparer avec un parcours connu ou générer une infographie |
 | `references/nations/*/justification.md` | Justification des choix, hypothèses écartées, questions ouvertes | Pour comprendre le raisonnement derrière le parcours |
 
 ## Workflow : analyser le Parcours d'une nation
@@ -102,17 +103,46 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 - Un territoire peut transiter de marge à noyau (ex. : pays de Galles en 1536, Écosse en 1707, Languedoc en 1539). Approximer par une date ponctuelle.
 - Utiliser la **superficie seule** comme première approximation (pas de pondération par la population).
 
-### Étape 2bis : Vérifier la cohérence des identifications
+### Étape 2bis : Vérification par phase (obligatoire, en séquence)
 
-Avant de produire les fichiers, appliquer ces contrôles de cohérence :
+**Ne jamais passer à la phase suivante sans avoir vérifié la phase en cours.** Cette étape n'est pas facultative — elle prévient les erreurs par omission qui cascadent ensuite sur toute l'analyse.
 
-1. **Le test discriminant a-t-il été appliqué à la bonne échelle ?** Si la nation est ou a été une monarchie composite (ex. : Espagne, Saint-Empire), l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau. Le pic oligarchique peut être très puissant dans le noyau sans que la phase absolutiste ait commencé à l'échelle nationale.
+Pour **chaque phase** identifiée (féodale, puis oligarchique, puis absolutiste, puis RN), appliquer systématiquement les contrôles suivants avant de passer à la phase suivante :
 
-2. **L'expansion a-t-elle été attribuée à la bonne phase ?** L'expansion (coloniale, impériale, Reconquista) prolonge toujours la phase EN COURS au moment où elle commence. Vérifier via le test discriminant que la phase identifiée est bien celle qui est en cours. Erreur typique : attribuer l'exutoire colonial à la phase absolutiste alors que la phase oligarchique n'est pas encore terminée.
+1. **Les saillants canoniques sont-ils tous présents ?**
+   - **Féodale** : éveil, pic(s) féodal(aux), crise(s) féodale(s), **pacte oligarchique** (généralement très formel — loi salique, Ordonnances, primogéniture, Libell, etc.)
+   - **Oligarchique** : 1er monarque oligarchique, pic oligarchique, polarisation, **guerre sociale** (deux factions + tiers résolvant)
+   - **Absolutiste** : 1er monarque absolu, pic absolutiste, fin d'expansion, remontrance, Ancien Régime
+   - **RN** : les 7 étapes (explosion AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, restauration, Glorieuse Révolution)
+   
+   Si un saillant canonique manque, **c'est un signal d'alarme** : soit l'histoire a été mal lue (chercher plus fort), soit le cas est structurellement atypique. Dans le second cas, justifier explicitement en comparant à un cas comparable du corpus (ex. : Venise n'a pas de 1er monarque oligarchique personnel — c'est une institution). **Ne jamais se contenter de dire « absent, résolution diffuse »** sans justification structurelle solide.
 
-3. **Les durées atypiques ont-elles été expliquées par des perturbations, pas par des ajustements d'identification ?** Le test discriminant PRIME SUR les durées. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme — revérifier le test discriminant. Les durées atypiques sont le signal d'une perturbation, pas d'une erreur d'identification.
+2. **Le pacte oligarchique en particulier** : c'est une nécessité structurelle. Il est généralement très formel (acte écrit, diète, codification collective). Chercher activement : actes de type *Libell*, ordonnances, lois de succession, chartes, pactes de primogéniture, compromis avec les états. Un pacte faiblement identifié = analyse à reprendre.
 
-4. **La guerre sociale se joue-t-elle à l'échelle pertinente ?** Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale, pas seulement régionale.
+3. **Les durées sont-elles cohérentes ?** La phase est-elle proche de la norme (200 ans pour féodale/oligarchique/absolutiste, 25-80 ans pour RN) ? Si écart, est-il expliqué par une perturbation identifiée ?
+
+4. **Le test discriminant est-il passé à la bonne échelle ?** Pour les monarchies composites (Espagne, Autriche, Saint-Empire), l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau.
+
+5. **L'expansion a-t-elle été attribuée à la bonne phase ?** L'expansion prolonge toujours la phase EN COURS au moment où elle commence.
+
+6. **Les durées atypiques ont-elles été expliquées par des perturbations, pas par des ajustements d'identification ?** Le test discriminant PRIME SUR les durées. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme — revérifier le test discriminant.
+
+7. **La guerre sociale se joue-t-elle à l'échelle pertinente ?** Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale, pas seulement régionale.
+
+### Étape 2ter : Vérification globale finale — complétude événementielle
+
+Après avoir analysé toutes les phases, effectuer une **passe globale** : lister tous les événements majeurs de l'histoire de la nation et vérifier qu'**aucun événement majeur ne reste inexpliqué** du point de vue historionomique.
+
+**Procédure :**
+1. Dresser une liste des événements majeurs documentés de l'histoire de la nation : grandes batailles, changements dynastiques, révolutions, guerres civiles, traités fondateurs, réformes administratives majeures, crises politiques notables, changements territoriaux, assassinats politiques, codifications juridiques.
+2. Pour chaque événement, identifier son statut dans l'analyse :
+   - Est-ce un **saillant** (éveil, pic, crise, pacte, guerre sociale, 1er monarque, IR, GR, etc.) ?
+   - Est-ce une **perturbation** (mécanisme + effet) ?
+   - Est-ce une **sous-phase** ou un marqueur de sous-phase ?
+   - Est-ce mentionné dans la **description d'une phase/sous-phase** avec un éclairage structurel ?
+3. **Un événement majeur non expliqué = analyse incomplète**. Soit intégrer l'événement (en ajoutant un saillant, une perturbation, ou une mention contextuelle), soit reconsidérer le cadrage global si l'événement ne colle pas du tout.
+
+**Pourquoi c'est critique :** le corpus montre que les analyses bâclées manquent systématiquement des événements structurants — par exemple, sur l'Autriche v1 : manqué l'Innsbrucker Libell (1518), le gouvernement des états 1519-1522, le Wiener Neustädter Blutgericht (1522), la guerre civile Albert VI / Frédéric III (1440s-1463), la conquête de Vienne par Mathias Corvin (1485-1490). Ces omissions masquaient le vrai pacte oligarchique et la vraie dernière grande révolte oligarchique. Une vérification systématique les aurait immédiatement détectées.
 
 ### Étape 3 : Produire le fichier `parcours.md`
 
@@ -143,11 +173,80 @@ L'historionomie est une discipline en cours de construction. L'utilisateur peut 
 
 ## Principes importants
 
+### Priorité absolue : fiabilité des durées
+
+L'usage principal du corpus est la **quantification statistique** (régression d'Alyocha Coencas sur les durées de phase). Plus il y a de parcours, plus la régression est robuste. Cela implique que **la fiabilité des dates de bornes** (éveil féodal, pacte, 1er monarque oligarchique, guerre sociale, 1er monarque absolu, explosion AR, Glorieuse Révolution) est la **première priorité absolue** de toute analyse. Sous-phases, naming, descriptions sont des raffinements secondaires — les durées sont l'enjeu.
+
+Ne jamais forcer une date pour que les durées « collent mieux ». Les écarts atypiques sont toujours le signal d'une perturbation à identifier, pas d'une borne à déplacer.
+
+### Naming canonique — liste fermée obligatoire
+
+**Phases** (liste fermée, aucune dérivation) :
+- `phase pré-féodale`, `phase féodale`, `phase oligarchique`, `phase absolutiste`, `révolution nationale`, `phase parlementaire`
+
+**Sous-phases** (liste fermée) :
+- `percolation élitaire` (pré-féodale)
+- `coagulation des élites`, `bascule oligarchique` (féodale)
+- `essor oligarchique`, `polarisation des élites`, `guerre sociale` (oligarchique)
+- `absolutisation`, `impérialisme absolutiste`, `ancien régime` (absolutiste). Dérivation rare : `ancien régime exogène`.
+- `révolution initiale`, `impérialisme revanchard`, `restauration` (RN)
+
+Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouveau PO` pour la France 1418-1429).
+
+**Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
+- **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
+- **Oligarchique** : 1er monarque oligarchique, Pic oligarchique, Fin de l'expansion, Guerre sociale
+- **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Pic absolutiste, Fin de l'expansion, Remontrance
+- **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
+
+**Distinction saillant vs sous-phase** :
+- `Ancien régime` est une sous-phase **seulement** (pas un saillant). Le « moment » de l'entrée en AR est marqué par la Remontrance, pas par un saillant « Ancien Régime ».
+- `Révolution initiale` est une sous-phase **seulement** — elle contient à l'intérieur les 4 saillants : Explosion de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
+- `Restauration` est à la fois un **saillant** (le moment où l'ancien ordre est restauré — ex. 1815 en France) ET une **sous-phase** (la durée pendant laquelle il dure — ex. 1815-1830).
+- `Impérialiste Revanchard` (-*iste*) est un **saillant** — l'avènement de la figure (ex. Bonaparte 1er consul, 1799). `impérialisme revanchard` (-*isme*) est la **sous-phase** — la durée pendant laquelle la nation est portée par cette dynamique (ex. 1799-1815).
+
+**Tout événement qui n'est pas dans la liste fermée n'est PAS un saillant** — c'est soit une **perturbation** (avec mécanisme + effet, parcimonieusement), soit une **mention dans la description** d'une sous-phase. Ne JAMAIS créer des saillants ad hoc avec des noms inventés (« Victoire de la Contre-Réforme », « Compromis austro-hongrois », « Privilegium Minus »). Les saillants sont des éléments codifiés.
+
+**Événements perturbateurs** : nom historique sec (« Traité de Neuberg », « Innsbrucker Libell »), pas des descriptions narratives.
+
+**Figures historiques** : nom seul. Surnoms UNIQUEMENT s'ils sont historiographiques canoniques et utiles à la désambiguïsation. Jamais d'épithètes ajoutées par goût littéraire (« le Glorieux », « le Fondateur »).
+
+**Règle simple** : un titre de phase, sous-phase ou saillant est une étiquette de catalogage dans un vocabulaire canonique fermé, pas un titre de chapitre.
+
+### Bornes de sous-phases — règles opératoires
+
+Consulter `references/sous_phases.md` pour la grille complète des marqueurs. Règles fondamentales :
+
+1. **Une borne est toujours un saillant ou un événement identifiable** — jamais une date « arrondie approximative ».
+2. **La fin d'une sous-phase et le début de la suivante coïncident** (ou se chevauchent de 1-2 ans maximum).
+3. **Les bornes ne doivent pas être forcées** pour obtenir des durées typiques.
+4. **Quand une sous-phase optionnelle est absente** (bascule oligarchique comprimée, IR absent, ancien régime écourté), justifier structurellement pourquoi.
+5. **DGRO — la Dernière Grande Révolte Oligarchique est un saillant de FIN de phase oligarchique ou de DÉBUT de phase absolutiste** (pendant l'absolutisation), jamais au début de la phase oligarchique. Le mot « dernière » a un sens structurel : c'est le dernier sursaut oligarchique avant l'ancrage absolutiste.
+
+### Catégorisation des événements historiques — 4 catégories
+
+Tout événement historique mentionné dans un parcours relève de l'une de quatre catégories. Pas de « zone grise » — si un événement ne rentre pas clairement dans une catégorie, il faut trancher.
+
+1. **Saillant canonique** — figure dans la liste fermée (cf. section Naming canonique). Affichage : rond de la couleur de la phase.
+2. **Perturbation** — événement qui passe le **triple test** :
+   - **mécanisme** identifiable parmi : choc d'hétérogénéité, choc exogène, insuffisance interne, correction d'échelle, exutoire
+   - **effet** identifiable parmi : prolongement, accélération, avortement, reboot
+   - **impact réel** sur la trajectoire du Parcours : la durée, le niveau ou la direction d'une phase aurait été différente sans cet événement
+   
+   Affichage : losange coloré (« diamant »).
+3. **Anecdote de parcours** — événement historique sans impact sur la trajectoire (défaite mineure, scandale politique ordinaire, crise financière ponctuelle, figure mineure). Ne pas marquer dans le parcours structuré ; au plus mentionner en passant dans la description d'une sous-phase.
+4. **Élément nouveau théorique** — événement qui semble structurellement important mais ne rentre dans aucune des trois catégories. **À remonter explicitement** pour discussion théorique, plutôt que de forcer artificiellement dans une catégorie existante.
+
+**Règles opératoires** :
+- **Les saillants canoniques ont priorité** : si un événement peut être un saillant canonique, le mettre en saillant, pas en perturbation. Exception : les **crises féodales** sont techniquement à la fois canoniques ET perturbations (insuffisance interne / avortement) — seul cas de chevauchement formel documenté.
+- **Pas de plafond numérique** : une nation très perturbée peut légitimement avoir 15 perturbations, une nation calme peut n'en avoir que 3. L'important est que chaque perturbation passe le triple test. Le compte est un résultat, pas une contrainte.
+- **Distinguer « faible intensité » (anecdote) de « fort impact » (perturbation)** : une défaite militaire ordinaire est une anecdote ; une occupation étrangère qui détruit les institutions est une perturbation.
+
 ### Terminologie stricte
 
 - **Parcours** (majuscule) : le Parcours de construction nationale
-- **Sous-phases** : découpage mécanique d'une phase (ex. : absolutisation → impérialisme absolutiste → Ancien Régime)
-- **Saillants** : éléments ponctuels facilement identifiables (ex. : éveil féodal, pic absolutiste)
+- **Sous-phases** : découpage mécanique d'une phase (liste canonique fermée, voir ci-dessus)
+- **Saillants** : éléments ponctuels facilement identifiables dans le vocabulaire canonique
 - **Classe prébendière / patrimoniale** (Weber) : jamais « mobilière / immobilière »
 - **Clivage gauche-droite** : ED (réactionnaires), D (conservateurs), G (réformateurs), EG (révolutionnaires) — définitions structurelles, valables partout et tout le temps
 

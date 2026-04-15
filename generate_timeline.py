@@ -42,7 +42,6 @@ def parse_parcours(filepath: str) -> dict:
     result = {
         "title": "",
         "metadata": {},
-        "prephase": None,
         "elements": [],  # flat list of phases, subphases, saillants, perturbations
         "area_data": [],  # superficie de référence data points
     }
@@ -76,18 +75,6 @@ def parse_parcours(filepath: str) -> dict:
         # Metadata section
         if heading_text.startswith("## Metadata"):
             result["metadata"] = parse_fields(sec_lines)
-            continue
-
-        # Pré-phase
-        if "Pré-phase" in heading_text or "Pre-phase" in heading_text:
-            fields = parse_fields(sec_lines)
-            # Extract the heading label
-            m = re.match(r"##\s+Pré-phase\s*:\s*(.*)", heading_text)
-            label = m.group(1).strip() if m else heading_text.replace("## ", "")
-            result["prephase"] = {
-                "label": label,
-                "description": fields.get("description", ""),
-            }
             continue
 
         # Superficie de référence
@@ -206,9 +193,6 @@ def parse_element(heading: str, body_lines: list) -> dict:
         kind = "perturbation"
         m = re.match(r"###\s+Perturbation\s*:\s*(.*)", heading_clean)
         heading_label = m.group(1).strip() if m else ""
-    elif heading_clean.startswith("## Pré-phase") or heading_clean.startswith("## Pre-phase"):
-        return None  # handled separately
-
     if kind is None and etype:
         kind = etype
 
@@ -367,12 +351,6 @@ def generate_html(data: dict) -> str:
             all_years.append(e["start"])
         if e["end"] is not None:
             all_years.append(e["end"])
-
-    if data.get("prephase"):
-        # Try to get a start year from the metadata
-        meta_start, _ = parse_date(data["metadata"].get("start"))
-        if meta_start is not None:
-            all_years.append(meta_start)
 
     if not all_years:
         return "<html><body>No timeline data found.</body></html>"
@@ -765,28 +743,6 @@ def generate_html(data: dict) -> str:
         </div>"""
         yr += tick_interval
 
-    # Pre-phase area on timeline
-    prephase_timeline = ""
-    if data.get("prephase"):
-        meta_start, meta_approx = parse_date(data["metadata"].get("start"))
-        if meta_start is not None:
-            # pre-phase goes from some earlier point to meta_start
-            # we estimate the start from the label if possible
-            pp_label = data["prephase"]["label"]
-            m = re.search(r"\((\~?\-?\d+)", pp_label)
-            if m:
-                pp_start, _ = parse_date(m.group(1))
-            else:
-                pp_start = meta_start - 120  # fallback
-            if pp_start is not None:
-                left_pct = ((pp_start - timeline_start) / timeline_span) * 100
-                width_pct = ((meta_start - pp_start) / timeline_span) * 100
-                prephase_timeline = f"""
-        <div class="prephase-band" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;"
-            data-tooltip="Pré-phase : {escape_html(data['prephase']['label'])}">
-            <span class="prephase-band-label">Pré-phase</span>
-        </div>"""
-
     gen_date = date.today().strftime("%d/%m/%Y")
 
     # Compute stats
@@ -924,11 +880,6 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .narrow-indicator-pin .material-icons {{ font-size:10px; color:#fff; transform:rotate(45deg); }}
 .narrow-indicator:hover .narrow-indicator-pin {{ transform:rotate(-45deg) scale(1.15);
     box-shadow:0 2px 8px rgba(0,0,0,0.3); }}
-
-/* Pre-phase band */
-.prephase-band {{ position:absolute; top:20px; height:70px; background:rgba(180,170,150,0.15); border:1px dashed #bba87a;
-    border-radius:6px; display:flex; align-items:center; justify-content:center; }}
-.prephase-band-label {{ font-size:0.75rem; color:#998866; font-weight:600; }}
 
 /* Saillant markers */
 .saillant-group {{ position:absolute; top:200px; z-index:10; }}
@@ -1069,7 +1020,6 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 <div class="timeline-wrapper">
     <div class="timeline-container" id="timeline">
         {ticks_html}
-        {prephase_timeline}
         {phase_bands_html}
         {subphase_bands_html}
         {perturbation_html}

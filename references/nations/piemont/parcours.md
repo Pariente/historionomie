@@ -35,9 +35,24 @@
 
 ---
 
-## Pré-phase : Comté de Savoie (~1003-1233)
-- type: note
+## Phase : Pré-féodale
+
+- type: phase
+- phase: prefeodale
+- start: ~1003
+- end: 1233
+- title: Phase pré-féodale
+- summary: Avant 1233, le Piémont n'existe pas comme entité politique distincte — il est un morceau italophone du comté trans-alpin de Savoie centré sur Chambéry. Le territoire est une mosaïque contestée entre communes (Asti notamment), marquisats (Montferrat, Saluzzo), évêchés et présence angevine. La partition de 1233 détache la branche Savoie-Achaïe et lance le Parcours piémontais à son échelle propre.
 - description: Avant 1233, le Piémont n'existe pas comme entité politique distincte. Il fait partie du comté de Savoie — un État trans-alpin centré sur Chambéry, qui mélange des territoires francophones (Savoie, Vaud) et italophones (Piémont). Le territoire piémontais proprement dit est une mosaïque contestée entre les communes (Asti est la plus puissante, battant Thomas II à Montebruno en 1255), le Marquisat de Montferrat, le Marquisat de Saluzzo, les évêchés, et la présence angevine. Les comtes de Savoie (Humbert Ier aux Blanches-Mains ~1003, Thomas Ier ~1189-1233) construisent un pouvoir trans-alpin fondé sur le contrôle des cols (Mont-Cenis, Grand-Saint-Bernard), mais l'échelle est trop hétérogène pour un Parcours unique. La partition de 1233, à la mort de Thomas Ier, est une correction d'échelle : le morceau piémontais (branche Savoie-Achaïe) se détache et commence son propre Parcours à son échelle propre.
+
+### Subphase : Percolation élitaire (~1003-1233)
+
+- type: subphase
+- phase: prefeodale
+- start: ~1003
+- end: 1233
+- title: Percolation élitaire
+- summary: Coagulation progressive des élites piémontaises dans le cadre composite savoyard trans-alpin. L'échelle trans-alpine est trop hétérogène pour permettre un Parcours unique — la partition de 1233 est la correction d'échelle qui ouvre le Parcours piémontais proprement dit.
 
 ---
 
@@ -119,18 +134,6 @@
 - confidence: high
 - summary: Louis d'Achaïe (r. 1402-1418), dernier prince de la branche, meurt sans héritiers le 11 décembre 1418, ayant désigné Amédée VIII comme successeur. La succession est pacifique — pas de résistance des élites piémontaises. L'ordre féodal piémontais (185 ans de princes d'Achaïe) s'éteint littéralement. Les conditions du pacte sont réunies : homogénéité des élites piémontaises (parlamenta, focaticum, 185 ans de brassage) + Amédée VIII, nouveau en Piémont, doit négocier l'intégration avec les élites locales.
 
-#### Saillant : Réunification avec la Savoie
-- type: saillant
-- perturbation: true
-- mechanism: choc_heterogeneite
-- effect: prolongement
-- start: 1418
-- figure: Amédée VIII
-- subtitle: Réunification savoyarde
-- title: Réunification avec la Savoie
-- confidence: high
-- summary: L'extinction de la branche Savoie-Achaïe (1418) rattache le Piémont italophone au duché de Savoie francophone d'Amédée VIII. Le territoire passe de ~15 000 à ~25 000 km², avec l'ajout d'une marge francophone culturellement distincte du noyau piémontais.
-- description: La mort de Louis d'Achaïe en 1418 réunifie les deux branches des Savoie sous Amédée VIII. Le Piémont italophone (~15 000 km²) se retrouve dans un même État que la Savoie francophone (~10 000 km²). C'est un choc d'hétérogénéité : les deux territoires ne partagent ni la langue, ni les institutions, ni l'orientation culturelle. La Savoie restera une marge francophone jusqu'à sa cession à la France en 1860.
 
 #### Saillant : Pacte oligarchique — Amédée VIII et les Statuta Sabaudiae
 - type: saillant
@@ -326,19 +329,6 @@
 - confidence: high
 - summary: Victor Amédée II (r. 1675-1730) résout le conflit factionnel, subordonne les deux factions (Madamisti et Principisti), et crée un appareil centralisé. Geoffrey Symcox titre sa monographie de référence « Victor Amadeus II: Absolutism in the Savoyard State ». L'absolutisation est complète vers 1720 (secrétariats, abolition de la Chambre des comptes, titre royal).
 - description: Victor Amédée II est le tiers classique. Il ne s'identifie ni aux Madamisti (il brise la tutelle française de sa mère Marie Jeanne Baptiste) ni aux Principisti (il subordonne la vieille noblesse à son appareil bureaucratique). Il s'appuie sur une administration réformée et sur la méritocratie : le système des intendants ouvre les carrières aux compétents, pas aux bien nés. La perequazione est un acte politique autant que fiscal — elle signifie que les privilèges féodaux ne protègent plus du pouvoir central. Le titre de Roi de Sardaigne (1720, après l'échange Sicile-Sardaigne) confère une légitimité internationale. Son abdication forcée (1730) et son arrestation par son propre fils Charles Emmanuel III (1731) illustrent paradoxalement la solidité du système : l'État fonctionne sans lui.
-
-#### Saillant : Acquisition de la Sardaigne
-- type: saillant
-- perturbation: true
-- mechanism: choc_heterogeneite
-- effect: prolongement
-- start: 1720
-- figure: Victor Amédée II
-- subtitle: Roi de Sardaigne
-- title: Acquisition de la Sardaigne
-- confidence: high
-- summary: L'échange Sicile-Sardaigne (1720) confère à Victor Amédée II le titre royal et ajoute une île de 24 000 km² — sardophone, pastorale, profondément hétérogène — aux possessions piémontaises. La Sardaigne restera une marge faiblement intégrée jusqu'à l'unification italienne.
-- description: La Sardaigne, obtenue en 1720 par échange avec l'Autriche (qui reprend la Sicile), est un territoire profondément hétérogène par rapport au Piémont continental : sardophone, pastoral, avec des structures féodales archaïques et un droit propre (Carta de Logu). L'île représente 24 000 km² — plus que le Piémont lui-même — mais sa population est faible et son intégration administrative restera superficielle. L'acquisition est surtout importante pour le titre royal qu'elle confère, qui donne à la dynastie de Savoie une stature internationale. Comme marge territoriale, la Sardaigne pèse peu sur le Parcours piémontais — c'est un prolongement modeste de la phase absolutiste, comparable à l'Irlande pour l'Angleterre plutôt qu'à l'Empire Plantagenêt.
 
 #### Saillant : DGRO — Affaire Graneri
 - type: saillant

@@ -31,13 +31,24 @@
 
 ---
 
-## Pré-phase : Agilolfings (~555-788)
-- type: note
-- description: Les Agilolfings sont les premiers ducs de Bavière attestés. Garibald Ier (~555-591) est le premier duc historiquement documenté, régnant sous suzeraineté mérovingienne. La dynastie développe une proto-administration (la Lex Baiuvariorum est codifiée vers 743), contrôle l'épiscopat bavarois, et fonde des monastères. Tassilo III (~748-788) porte le pouvoir ducal à son apogée : il tient des synodes, lève des troupes, fonde l'abbaye de Kremsmünster (777). Mais en 788, Charlemagne dépose Tassilo au plaid d'Ingelheim, abolit la charge ducale, redistribue la Bavière en comtés administrés par des comtes francs, et nomme Gerold comme préfet. C'est un reboot institutionnel complet : la dynastie est éliminée, l'administration ducale détruite, les réseaux aristocratiques bavarois subordonnés directement à Aix-la-Chapelle. La Lex Baiuvariorum survit comme droit coutumier et l'Église bavaroise conserve ses structures, mais l'État ducal n'existe plus.
+## Phase : Pré-féodale
 
-## Pré-phase : Bavière impériale (788-1180)
-- type: note
-- description: Après le reboot carolingien, la Bavière traverse une longue période de subordination impériale. Le duché-souche (Stammesherzogtum) renaît sous les Luitpoldiens après l'effondrement carolingien : Arnulf « le Mauvais » (~907-937) rétablit l'autorité ducale après la catastrophe de Presbourg (907, armée bavaroise anéantie par les Hongrois) et exerce un pouvoir quasi-royal à Ratisbonne. Mais les Ottoniens reprennent le contrôle en 947, et la Bavière devient un apanage impérial confié à diverses dynasties au gré des intérêts de l'empereur. La Carinthie est séparée en 976. Les Welfs (1070-1180) culminent avec Henri le Lion, qui cumule la Bavière et la Saxe et fonde Munich (~1157-1158), mais sa chute en 1180 ampute le territoire et le transfère aux Wittelsbach. Pendant cette période, l'identité culturelle bavaroise persiste (langue, droit, Église), mais il n'y a pas de Parcours institutionnel autonome — le duché change de mains trop souvent pour permettre un développement continu de l'État central.
+- type: phase
+- phase: prefeodale
+- start: ~555
+- end: 1180
+- title: Phase pré-féodale
+- summary: Plus de six siècles d'incubation bavaroise sans parcours institutionnel autonome. Deux temps : Agilolfings (~555-788) — premiers ducs sous suzeraineté mérovingienne puis carolingienne, éliminés par Charlemagne ; Bavière impériale (788-1180) — apanage impérial changeant de mains trop souvent pour permettre un développement continu de l'État central. L'identité culturelle bavaroise persiste (langue, droit, Église), mais aucun souverain ne franchit le seuil d'éveil féodal avant les Wittelsbach en 1180.
+- description: La phase pré-féodale bavaroise couvre deux temps. **Premier temps : Agilolfings (~555-788)**. Les Agilolfings sont les premiers ducs de Bavière attestés. Garibald Ier (~555-591) est le premier duc historiquement documenté, régnant sous suzeraineté mérovingienne. La dynastie développe une proto-administration (la Lex Baiuvariorum est codifiée vers 743), contrôle l'épiscopat bavarois, et fonde des monastères. Tassilo III (~748-788) porte le pouvoir ducal à son apogée : il tient des synodes, lève des troupes, fonde l'abbaye de Kremsmünster (777). Mais en 788, Charlemagne dépose Tassilo au plaid d'Ingelheim, abolit la charge ducale, redistribue la Bavière en comtés administrés par des comtes francs, et nomme Gerold comme préfet. C'est un reboot institutionnel complet : la dynastie est éliminée, l'administration ducale détruite, les réseaux aristocratiques bavarois subordonnés directement à Aix-la-Chapelle. La Lex Baiuvariorum survit comme droit coutumier et l'Église bavaroise conserve ses structures, mais l'État ducal n'existe plus. **Second temps : Bavière impériale (788-1180)**. Après le reboot carolingien, la Bavière traverse une longue période de subordination impériale. Le duché-souche (Stammesherzogtum) renaît sous les Luitpoldiens après l'effondrement carolingien : Arnulf « le Mauvais » (~907-937) rétablit l'autorité ducale après la catastrophe de Presbourg (907, armée bavaroise anéantie par les Hongrois) et exerce un pouvoir quasi-royal à Ratisbonne. Mais les Ottoniens reprennent le contrôle en 947, et la Bavière devient un apanage impérial confié à diverses dynasties au gré des intérêts de l'empereur. La Carinthie est séparée en 976. Les Welfs (1070-1180) culminent avec Henri le Lion, qui cumule la Bavière et la Saxe et fonde Munich (~1157-1158), mais sa chute en 1180 ampute le territoire et le transfère aux Wittelsbach. Pendant cette période, l'identité culturelle bavaroise persiste (langue, droit, Église), mais il n'y a pas de Parcours institutionnel autonome — le duché change de mains trop souvent pour permettre un développement continu de l'État central.
+
+### Subphase : Percolation élitaire (~555-1180)
+
+- type: subphase
+- phase: prefeodale
+- start: ~555
+- end: 1180
+- title: Percolation élitaire
+- summary: Coagulation très lente des élites bavaroises sous suzeraineté mérovingienne, carolingienne puis ottonienne. L'identité culturelle se stabilise mais aucun souverain ne franchit le seuil d'effectivité supra-régionale avant Otton Ier de Wittelsbach en 1180.
 
 ---
 

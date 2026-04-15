@@ -53,15 +53,19 @@ Les Rois Catholiques sont le **pic oligarchique** — la figure la plus puissant
 
 ## 5. La phase oligarchique prolongée (~345 ans)
 
-### Le mécanisme vénitien
+### Le mécanisme vénitien — mais appliqué spécifiquement à l'empire colonial
 
-La phase oligarchique espagnole (1369-1714) est prolongée par l'expansion, exactement comme la phase oligarchique vénitienne (1032-1669, ~637 ans). Trois exutoires se cumulent :
+La phase oligarchique espagnole (1369-1714) est prolongée par l'empire colonial américain, par le même mécanisme structurel que l'expansion vénitienne dans le stato da Mar — **administration directe par le personnel du noyau**. Ce n'est pas n'importe quelle expansion qui prolonge le Parcours : c'est seulement celle qui mobilise effectivement les élites du noyau pour un travail de digestion. Distinction décisive à maintenir :
 
-1. **Fin de la Reconquista** (Grenade 1492) — absorbe les tensions pendant l'essor
-2. **Empire colonial** (à partir de 1492) — revenus (argent), carrières, focus extérieur
-3. **Empire habsbourgeois** (à partir de 1516) — choc d'hétérogénéité qui repousse le seuil d'homogénéité et absorbe l'énergie impériale
+- **Empire colonial américain (à partir de 1521-1533)** — administré directement par des vice-rois, corregidores, audiencias et oidores castillans, formés à Salamanque et nommés par le Consejo de Indias à Madrid. Droit castillan, absence de représentation indigène, carrières ouvertes aux péninsulaires pendant trois siècles. **Vrai choc d'hétérogénéité** et moteur principal du prolongement de ~145 ans. Analogue fonctionnel des provveditori vénitiens à l'échelle transatlantique.
 
-Les **corrections d'échelle** (partition 1556, Portugal 1640, Pays-Bas 1648, Utrecht 1714) ramènent progressivement l'Espagne vers son échelle naturelle et ACCÉLÈRENT le Parcours.
+- **Empire européen habsbourgeois (à partir de 1516)** — Pays-Bas, Lombardie, Naples, Sicile, Franche-Comté. Ces possessions restent en **union personnelle** avec leurs institutions locales (États de Brabant, Sénat de Milan, Cortes napolitaines) et leur personnel administratif distinct. **Pas un choc d'hétérogénéité** au sens structurel : les élites castillanes ne sont pas mobilisées pour les digérer. Elles fonctionnent comme **soupape militaire** (guerres d'Italie, guerre des Flandres) qui absorbe temporairement l'énergie sans produire de digestion. Leur perte progressive (Westphalie 1648 pour les Provinces-Unies, Utrecht 1713 pour l'Italie et les Pays-Bas méridionaux) ne constitue donc pas une « correction d'échelle » au sens d'un retour vers le noyau naturel — elle marque simplement la fin d'une soupape.
+
+- **Fin de la Reconquista** (Grenade 1492) — absorbe les tensions pendant l'essor (exutoire militaire classique).
+
+Le **cas Aragon** est structurellement un cas intermédiaire. Castille et Aragon sont culturellement très proches (langues romanes apparentées, catholicité commune, traditions convergentes) — analogue France d'oïl / Occitanie — mais Aragon conserve ses fueros en union personnelle de 1479 à 1716. Ce n'est donc pas un choc d'hétérogénéité pendant toute la phase oligarchique, seulement au moment de la digestion administrative effective (Nueva Planta) — et même à ce moment-là, l'intensité est modérée par la proximité culturelle. Le véritable prolongement de la phase oligarchique espagnole ne vient pas de l'Aragon mais de l'Amérique.
+
+Les pertes européennes (Portugal 1640, Pays-Bas 1648, Italie 1713) sont des fins de soupape militaire sans effet structurel majeur sur le Parcours. La vraie « correction d'échelle » au sens structurel survient plus tard, avec les indépendances américaines (1808-1826), qui marquent la fin de la machine de digestion coloniale et accélèrent la phase absolutiste vers son AR.
 
 ### Ventilation du retard de ~148 ans sur la France
 

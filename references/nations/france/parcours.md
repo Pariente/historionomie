@@ -98,19 +98,6 @@
 - summary: La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l'Île-de-France et de tripler le domaine royal.
 - description: Philippe Auguste transforme la monarchie capétienne d'une suzeraineté nominale en une puissance territoriale de premier plan. La confiscation de la Normandie en 1204, arrachée aux Plantagenêt, puis la victoire écrasante de Bouvines en 1214 contre une coalition européenne, font tripler le domaine royal et démontrent que le roi de France dispose désormais d'une supériorité militaire décisive sur ses vassaux. Au-delà de ces conquêtes, Philippe Auguste met en place un réseau de baillis royaux sur tout le territoire et fixe le siège de l'administration à Paris, posant les bases du premier appareil étatique permanent en France. Ces innovations institutionnelles préparent la transition vers la phase oligarchique en créant les outils d'un pouvoir central qui ne dépend plus uniquement des liens personnels de vassalité.
 
-#### Saillant : Confiscation Plantagenêt
-- type: saillant
-- perturbation: true
-- mechanism: correction_echelle
-- effect: acceleration
-- start: 1204
-- figure: Philippe Auguste
-- subtitle: Confiscation Plantagenêt
-- title: Confiscation Plantagenêt
-- confidence: high
-- summary: Philippe Auguste confisque la Normandie, l'Anjou, le Maine et le Poitou aux Plantagenêts. Le domaine royal passe de ~12 000 km² à ~52 000 km² en un coup — le roi devient une puissance territoriale crédible dans le noyau d'oïl.
-- description: La confiscation des terres Plantagenêt en 1204 transforme le roi de France d'un petit seigneur d'Île-de-France en le premier propriétaire terrien du royaume. La Normandie, l'Anjou, le Maine et le Poitou — tous de langue d'oïl — rejoignent le domaine royal, qui passe d'environ 12 000 km² à plus de 50 000 km². Cette correction d'échelle accélère le Parcours en donnant au roi les moyens matériels de son autorité : recettes fiscales, réseau de baillis, assise territoriale pour lever une armée. Bouvines (1214) confirme cette nouvelle puissance. Le parallèle avec la perte de la Normandie vue du côté anglais est exact : ce qui est une correction d'échelle accélératrice pour la France est aussi une correction d'échelle accélératrice pour l'Angleterre — Philippe Auguste force les barons à choisir leur camp.
-
 #### Saillant : Croisade des Albigeois
 - type: saillant
 - perturbation: true

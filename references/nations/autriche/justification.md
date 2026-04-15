@@ -1,30 +1,6 @@
-# Justification du Parcours de l'Autriche (v4)
+# Justification du Parcours de l'Autriche
 
-## Note méthodologique — itérations v1 → v2 → v3 → v4
-
-Cette version 4 est le résultat de plusieurs itérations successives sur le Parcours autrichien. Les modifications par rapport aux versions antérieures sont importantes structurellement mais **ne touchent pas aux dates de bornes de phase** (féodale, oligarchique, absolutiste, RN), qui restent inchangées depuis v2. L'usage principal du corpus étant la régression quantitative d'Alyocha, les données chronologiques de base sont stables à travers les révisions.
-
-### Corrections v2 → v3 (déjà appliquées)
-
-1. **Suppression de la « DGRO 1519-1522 »** de v2. La v2 plaçait incorrectement une DGRO en début de phase oligarchique — une DGRO se place canoniquement en fin de phase oligarchique ou pendant l'absolutisation, jamais au début. La séquence 1519-1522 est reclassée comme crise de transition post-pacte.
-
-2. **Correction de la borne de l'Ancien Régime**. La v2 faisait commencer l'AR en 1815 (Congrès de Vienne). La v3 corrige : la Remontrance est la borne stricte, donc AR = 1848-1918 (70 ans).
-
-### Corrections v3 → v4
-
-1. **Pic féodal habsbourgeois** : Rudolf IV → **Maximilien Ier**. Le critère canonique est « roi qui sort du lot par la puissance de son pouvoir personnel ». Maximilien Ier a un règne beaucoup plus puissant (26 ans, réunification des Erbländer, projection dynastique européenne, modernisation administrative) que Rudolf IV (7 ans, dense mais bref).
-
-2. **Polarisation oligarchique** : la v3 intégrait la guerre de Trente Ans dans l'essor. La v4 la place en polarisation — « la polarisation confessionnelle est exactement une polarisation » (Thomas). Sous-phases oligarchiques : essor 1518-1618, polarisation 1618-1740 (très longue), guerre sociale 1740-1748. Le pic oligarchique (Léopold Ier) se situe à l'intérieur de la polarisation, exceptionnellement tardif, porté par l'exutoire anti-ottoman qui relance temporairement la projection extérieure.
-
-3. **Rákóczi retiré comme saillant perturbation autrichien**. L'insurrection hongroise de 1703-1711 relève probablement du parcours hongrois plutôt que du parcours autrichien — elle est une résistance d'une nation associée contre le centre viennois, pas une dynamique interne du Parcours autrichien. Mentionnée en passant dans la description de la polarisation et dans la justification §4.
-
-4. **Pas de DGRO canonique** comme trait marquant, assumé explicitement. Deux hypothèses complémentaires (élites cisleithanes trop faibles post-guerre de Trente Ans, Hongrie maintenue par compromis). Ajouté comme highlight_5.
-
-5. **Hitler comme Impérialiste Revanchard double** (hypothèse principale, nouvelle). La RN autrichienne suit maintenant la séquence canonique complète : révolution initiale 1918-1938 (avec thermidorien Schuschnigg inclus), impérialisme revanchard 1938-1945 (Hitler), restauration 1945-1955, GR 1955. L'Anschluss devient l'émergence de l'IR, pas un avortement.
-
-6. **Libell renforcé comme pacte** : le critère est « première codification (négociée et entérinée) des responsabilités du suzerain ». Le Libell remplit ce critère ; le Privilegium Maius ratifié en 1453 est une règle de succession unilatérale qui ne codifie pas les responsabilités.
-
----
+> **Dernière révision (avril 2026)** — Distinction introduite par Philippe : le choc d'hétérogénéité ne peut opérer que si l'acquisition territoriale est administrée directement (digestion par les élites du noyau), pas en union personnelle. Conséquence pour l'Autriche : l'empire continental habsbourgeois — majoritairement en union personnelle — n'a pas prolongé structurellement le Parcours. Seule exception : la Bohême intégrée par la Verneuerte Landesordnung (1627). Le choc d'hétérogénéité du Parcours oligarchique autrichien est donc unique, daté de 1627 (pas 1526, moment dynastique), et explique le modeste prolongement de ~30 ans (231 ans au total). Cela résout la question « pourquoi pas plus long ? » (§14 item 10). Accessoirement : confirmation externe par Philippe et Martin de l'hypothèse Hitler-IR-double, confidence élevée à medium. Principe formalisé dans `references/perturbations.md`.
 
 ## 1. L'Autriche comme nation distincte
 
@@ -59,30 +35,64 @@ L'interférence avec le Parcours allemand (Sadowa 1866, Anschluss 1938) est la p
 
 ---
 
-## 2. Deux phases féodales distinctes séparées par un reboot
+## 2. Deux phases féodales séparées par une percolation habsbourgeoise
 
 ### L'hypothèse retenue
 
-La phase féodale autrichienne se découpe en **deux phases distinctes** :
-- **Phase féodale 1 — Babenberg (976-1246, ~270 ans)** : interrompue par extinction dynastique. **Pas de pacte** — phase inachevée.
-- **Interregnum + conquête Ottokar (1246-1282)** : reboot dynastique.
-- **Phase féodale 2 — Habsbourg (1282-1518, ~236 ans)** : phase complète, résolue par l'Innsbrucker Libell.
+La phase féodale autrichienne se découpe en **deux phases distinctes**, séparées par une **seconde percolation pré-féodale** :
+- **Pré-phase 1 (788-1198, ~410 ans)** : marche orientale carolingienne puis Babenberg pré-éveil. Aucun souverain de cette période ne franchit le seuil d'effectivité supra-régionale qui définit l'éveil féodal — Leopold Ier (976), Henri II Jasomirgott (1156, Privilegium Minus), Léopold V (1192) sont des dignitaires d'Empire dont l'autorité dépend de l'investiture impériale, pas des féodaux autonomes.
+- **Phase féodale 1 — Babenberg (1198-1246, ~48 ans, avortée)** : ouverte par Léopold VI (premier Babenberg dont l'autorité personnelle franchit le seuil supra-régional effectif), interrompue très précocement par l'extinction biologique de Frédéric II à la Leitha en 1246. **Pas de pacte** — phase brutalement avortée avant maturité.
+- **Pré-phase 2 — Percolation habsbourgeoise (1246-1358, ~112 ans)** : interregnum (1246-1273), conquête éphémère d'Ottokar II de Bohême, défaite à Marchfeld (1278), installation des Habsbourg comme nouvelle dynastie sans base locale (1282), puis ~75 ans de Habsbourg fragiles dont aucun ne franchit le seuil d'éveil féodal. Pendant cette période, les Landstände provinciaux *se renforcent* (chaque concession ducale augmente leur pouvoir) pendant que la nouvelle dynastie habsbourgeoise coagule lentement son assise territoriale — dynamique caractéristique d'une percolation, pas d'un reboot féodal.
+- **Phase féodale 2 — Habsbourg (1358-1518, ~160 ans)** : ouverte par Rudolf IV (premier Habsbourg à exercer une autorité supra-régionale effective), traversée de trois crises féodales (Neuberg 1379, guerre civile Albert VI 1440s-1463, Corvin 1485-1490) sans pic féodal intermédiaire, résolue par l'Innsbrucker Libell de 1518 sous Maximilien Ier.
 
-### Pourquoi deux phases et non une seule longue
+### Pourquoi percolation et non reboot
 
-Une lecture alternative (écartée) consisterait à voir une seule phase féodale de 517 ans. Elle serait incohérente avec le cadre : les reboots sont traités comme séparateurs de phases dans le corpus (cf. Allemagne H1 avec Saint-Empire 919-1250 puis Brandebourg-Prusse 1415-1640).
+La lecture retenue classe 1246-1358 comme percolation pré-féodale (et non comme reboot féodal long) pour plusieurs raisons structurelles :
 
-Le reboot habsbourgeois est partiel : les institutions féodales et ecclésiastiques survivent, mais la dynastie est intégralement nouvelle et d'origine étrangère. L'Interregnum de 36 ans et la conquête d'Ottokar brisent la continuité. Le Parcours redémarre en phase féodale (pas en pré-féodale) parce que les cadres institutionnels et culturels survivent, mais il doit reparcourir un cycle féodal complet avant d'atteindre une résolution oligarchique.
+1. **Aucun chef supra-régional effectif pendant 112 ans**. Rodolphe Ier (1282) installé sans base locale, Albert Ier assassiné (1308), Frédéric le Bel battu à Mühldorf (1322), Albert II et ses fils sous contrainte des Landstände. Dans un reboot, un nouveau cycle féodal redémarre quasi-immédiatement (reboot normand 1066 en Angleterre = instantané). Ici, aucun cycle féodal ne redémarre — on reste dans un état pré-féodal prolongé.
 
-Chacune des deux phases est proche de la norme (270 et 236 ans), avec des écarts expliqués par des perturbations internes identifiées (trois crises féodales dans la phase 2, extinction dynastique terminant la phase 1).
+2. **Dynamique ascendante de coagulation**. Une percolation est caractérisée par la coagulation lente d'une nouvelle élite à partir d'une absence de chef supra-régional. C'est exactement ce qui se passe avec les Habsbourg : nouvelle dynastie étrangère qui construit patiemment son assise territoriale en face d'une aristocratie provinciale qui s'institutionnalise. À l'opposé, un reboot suppose qu'un chef supra-régional émerge rapidement pour redémarrer le cycle.
+
+3. **Les Landstände se renforcent pendant la période**. Dans un cycle féodal, la dynamique va dans le sens inverse — le seigneur domine ses vassaux. Ici, chaque concession habsbourgeoise augmente le pouvoir des états territoriaux. C'est la dynamique d'une pré-phase, pas d'une phase féodale active.
+
+4. **Rudolf IV en 1358 a toutes les caractéristiques d'un éveil féodal, pas d'un second pic**. Or un éveil précède toujours une percolation, pas un reboot. La cohérence terminologique impose de reclasser ce qui précède comme percolation.
+
+**Élément théorique nouveau** : le cadre admet désormais qu'après un avortement biologique de phase féodale, le Parcours peut *retomber* en phase pré-féodale (percolation) et pas seulement rebooter le cycle féodal interrompu. La distinction n'est pas cosmétique — elle définit la vitesse et la forme de la récupération. Un reboot est rapide (le cycle redémarre sur des cadres hérités, même s'ils sont affaiblis). Une percolation post-avortement est lente (une nouvelle dynastie doit coaguler en face d'une aristocratie qui s'est redéployée pendant l'interruption). Le cas autrichien est à ma connaissance le premier du corpus à montrer ce pattern explicitement. À creuser : est-ce que l'Espagne post-711 (fin du royaume wisigoth par invasion, 700 ans de Reconquista avant émergence de Castille) pourrait être un autre exemple ? À confronter.
+
+### Pourquoi le critère du « pouvoir effectif »
+
+Le critère canonique de l'éveil féodal est **l'apparition d'un premier chef supra-régional dont l'autorité est effective, pas seulement titulaire**. Hugues Capet n'est pas l'éveil féodal français parce que sa puissance personnelle est trop faible pour s'imposer aux barons — l'éveil féodal français est Louis VI le Gros. De même, Guillaume le Conquérant (Angleterre normande) ou Ecgberht (unification anglo-saxonne) sont des éveils féodaux parce qu'ils exercent réellement une autorité supra-régionale, pas parce qu'ils détiennent un titre.
+
+Appliqué à l'Autriche, ce critère élimine immédiatement Leopold Ier (976, octroi impérial ottonien d'un margraviat frontalier) et Rodolphe Ier (1282, dynastie nouvelle imposée d'en haut sans base locale) comme éveils féodaux. Le premier Babenberg à franchir le seuil d'effectivité est Léopold VI (1198-1230) — règne long de 32 ans, autorité personnelle effective sur Autriche+Styrie réunies, cour brillante, projection externe, arbitrage des conflits impériaux. Le premier Habsbourg à le franchir est Rudolf IV (1358-1365) — bref mais réel : acquisition du Tyrol, fondation de l'Université de Vienne, Privilegium Maius, ambitions explicites de codification dynastique.
+
+### Pourquoi deux phases féodales et non une seule
+
+Une lecture alternative (écartée) consisterait à voir une seule phase féodale tardive (1358-1518) en traitant tout ce qui précède comme pré-phase. Elle aurait l'avantage de la simplicité, mais elle évacue artificiellement l'éveil féodal effectif de Léopold VI — qui satisfait le critère canonique. Léopold VI n'est pas un brillant moment pré-féodal comme Charlemagne ; il est un véritable éveil féodal qui ouvre une phase trop courte pour mûrir, parce qu'elle est tuée par une crise biologique extérieure (extinction sans héritier mâle).
+
+Une autre lecture alternative (également écartée) consisterait à voir une seule phase féodale longue (1198-1518, ~320 ans) en traitant le reboot 1246-1358 comme une perturbation interne sans changement de phase. Elle est incohérente parce que (1) la durée serait excessive, (2) le passage d'une dynastie à une autre par interregnum + conquête + installation imposée constitue structurellement un reboot, et (3) il n'y a aucune continuité institutionnelle effective entre Léopold VI et Rudolf IV — les Habsbourg arrivent comme une dynastie étrangère qui doit reconstruire sa légitimité.
+
+La structure à deux phases féodales séparées par une seconde percolation est donc la plus cohérente :
+- Phase 1 courte avortée (48 ans) : Léopold VI éveil, extinction terminale
+- Percolation habsbourgeoise (112 ans) : coagulation lente d'une nouvelle dynastie étrangère en face de Landstände renforcés, aucun souverain au seuil d'effectivité supra-régionale
+- Phase 2 complète (160 ans) : Rudolf IV éveil, trois crises sans pic intermédiaire, Maximilien Ier comme convalescence post-Corvin produisant directement le pacte
+
+### Pourquoi pas de pic féodal intermédiaire en phase 2
+
+En phase féodale, le pouvoir est lié à la personne du souverain et à ses liens interpersonnels. Le fonctionnement en dents de scie est typique : à chaque souverain vraiment fort correspond un pic, qui peut être suivi d'une crise (succession, partition, défaite) puis remonter avec un autre souverain fort. Plusieurs pics sont donc canoniques en phase féodale, justement parce que l'État central n'existe pas encore comme support de continuité.
+
+La phase féodale 2 habsbourgeoise est exceptionnelle en ce qu'elle ne produit **aucun pic féodal intermédiaire** entre l'éveil Rudolf IV et le pacte de 1518. Aucun successeur de Rudolf IV ne franchit à nouveau le seuil de pic féodal pendant un siècle et demi — les lignes albertine et léopoldine se fragmentent après Neuberg, Frédéric III est un long règne sans puissance personnelle, et la dynastie est humiliée par la guerre civile Albert VI puis par Corvin. Maximilien Ier reconquiert l'Autriche en 1490 et engage la convalescence post-Corvin, mais sa figure appartient structurellement à la phase oligarchique qu'il inaugure (il est le 1er MO, pas un pic féodal — voir §3 et §4bis).
+
+C'est un cycle féodal faiblement dirigé, où le pacte oligarchique émerge dès qu'un souverain capable apparaît en convalescence post-crise, parce que les conditions structurelles (homogénéité des élites + faiblesse négociable du suzerain) sont déjà réunies.
 
 ### Alternatives considérées
 
-- **Une seule phase féodale 976-1518** : 542 ans, incohérent.
-- **Phase féodale 976-1246 + phase féodale 1282-1518** avec phase 1 « interrompue » plutôt qu'inachevée : retenu (c'est l'option v3). Le mot « interrompue » souligne que la phase est coupée par choc exogène plutôt que par résolution.
-- **Phase féodale 1282-1518 seulement, avec la période babenberg traitée comme pré-phase** : écarté, parce que la période babenberg présente tous les marqueurs d'une phase féodale active (éveil, pic, crise féodale terminale).
+- **Phase féodale unique 976-1518 (542 ans)** : trop longue, incohérent.
+- **Phase féodale unique 1198-1518 (320 ans) avec interruption interne** : trop longue, ignore la rupture dynastique structurelle et la dynamique de percolation entre 1246 et 1358.
+- **Phase féodale unique 1358-1518 (160 ans)** : ignore l'éveil féodal effectif de Léopold VI.
+- **Phase féodale unique 1282-1518 avec Rodolphe Ier comme éveil** : incohérent avec le critère du pouvoir effectif — Rodolphe Ier est imposé d'en haut sans base locale, son autorité reste embryonnaire.
+- **Deux phases avec borne 976-1246 + 1282-1518** : place l'éveil féodal Babenberg sur Leopold Ier 976 (octroi impérial ottonien) et l'éveil féodal Habsbourg sur Rodolphe Ier 1282 (installation dynastique sans pouvoir effectif). Aucun des deux ne franchit le seuil d'effectivité.
 
-Confidence: medium. La structure à deux phases est la plus cohérente avec le cadre mais reste une hypothèse — une discussion avec Fabry ou Deblonde serait utile pour valider la lecture du reboot Ottokar-Rodolphe Ier.
+Confidence: medium. La structure retenue est la plus cohérente avec le critère du pouvoir effectif, mais le statut d'éveil féodal de Rudolf IV reste mince (règne de 7 ans) et celui de Léopold VI reste isolé (un seul pic, pas de second pic intermédiaire dans la phase 1 courte). Le classement de 1246-1358 en percolation plutôt qu'en reboot est un élément théorique nouveau à confirmer par d'autres cas comparatifs.
 
 ---
 
@@ -104,9 +114,15 @@ Le Libell de 1518 remplit ces quatre conditions :
 1. C'est un **acte écrit formel** qui codifie l'organisation défensive (Verteidigungsordnung) de toutes les provinces, réforme l'administration et la cour, organise la fiscalité militaire. Il « rassemble tous les éléments apparus au cours des siècles précédents ».
 2. Il est issu d'une **diète générale** — le premier **Generallandtag commun** de toutes les terres héréditaires habsbourgeoises. C'est un acte collectif, négocié avec les représentants des états, pas une décision unilatérale du souverain.
 3. **Maximilien Ier est mourant** en mai 1518 (il meurt le 12 janvier 1519) : âgé, lourdement endetté, sans héritier direct proche (Charles Quint est en Espagne), humilié par les récentes crises (Mathias Corvin 1485-1490, échec italien). Faiblesse maximale du suzerain.
-4. L'**homogénéité des élites** est atteinte après ~236 ans de cycle habsbourgeois, de brassage dynastique, de partitions et réunifications. Les élites provinciales des Erbländer partagent désormais une conscience collective suffisamment forte pour produire une codification commune.
+4. L'**homogénéité des élites** est atteinte après ~160 ans de cycle féodal habsbourgeois, de brassage dynastique, de partitions et réunifications. Les élites provinciales des Erbländer partagent désormais une conscience collective suffisamment forte pour produire une codification commune.
 
-### Critère discriminant (v4) : première codification négociée des responsabilités du suzerain
+### Maximilien Ier est aussi le 1er monarque oligarchique
+
+**Maximilien Ier est canoniquement le 1er MO autrichien**, parce qu'il est le souverain qui négocie, promulgue et inaugure le pacte. La brièveté de son règne post-PO (8 mois, mort le 12 janvier 1519) ne disqualifie pas son statut — c'est le pattern Henri IV, où un 1er MO meurt immédiatement après la promulgation du pacte sans cesser d'être structurellement le 1er MO. Ferdinand Ier est le 2e MO qui stabilise le cadre après la crise de transition 1519-1522 (gouvernement des états + Blutgericht de Wiener Neustadt).
+
+Maximilien appartient pleinement à la phase oligarchique qu'il inaugure : son rôle est de cristalliser la sortie de la phase féodale 2 par le Libell, et il meurt avant que ce rôle ne s'épuise. Ferdinand Ier est le successeur qui rend le cadre opérationnel sur la durée.
+
+### Critère discriminant : première codification négociée des responsabilités du suzerain
 
 Le pacte oligarchique est défini structurellement comme la **première codification collective, négociée et entérinée, des responsabilités du suzerain**. C'est le critère qui permet de distinguer le pacte des simples créations d'institutions par le souverain (Philippe le Bel crée des institutions royales — Parlement de Paris, Chambre des comptes — qui ne sont pas des pactes ; le véritable PO français est la loi salique de 1317 qui codifie la règle successorale en sortant de l'arbitraire personnel du souverain).
 
@@ -123,13 +139,13 @@ Confidence: medium. Le Libell est le meilleur candidat identifiable et satisfait
 
 ---
 
-## 4. La question de la DGRO — absence assumée comme trait structurel (v4)
+## 4. La question de la DGRO — absence assumée comme trait structurel
 
-### Ce qui a changé
+### Le diagnostic
 
-La v2 plaçait la « DGRO » en 1519-1522, en début de phase oligarchique. Erreur structurelle corrigée en v3. La séquence 1519-1522 est reclassée comme **crise de transition post-pacte** : les états, ayant reçu une part de souveraineté via le Libell, tentent d'outrepasser leur rôle pendant l'interrègne (mort de Maximilien en janvier 1519, arrivée de Ferdinand Ier dans les Erbländer en 1521-1522). Ferdinand les remet au pas par le Blutgericht (juillet-août 1522).
+La séquence 1519-1522 est une **crise de transition post-pacte**, pas une DGRO : les états, ayant reçu une part de souveraineté via le Libell, tentent d'outrepasser leur rôle pendant l'interrègne (mort de Maximilien en janvier 1519, arrivée de Ferdinand Ier dans les Erbländer en 1521-1522). Ferdinand les remet au pas par le Blutgericht (juillet-août 1522). Une DGRO se place canoniquement en fin de phase oligarchique ou pendant l'absolutisation, jamais au début.
 
-La v3 avait classé l'insurrection de Rákóczi (1703-1711) comme perturbation interne de la polarisation autrichienne. **La v4 retire Rákóczi comme saillant du Parcours autrichien** : l'insurrection est probablement à rattacher au parcours hongrois plutôt qu'au parcours autrichien (voir ci-dessous). L'Autriche n'a ainsi **pas de DGRO canonique**, et cette absence est assumée comme trait structurel marquant (highlight_5).
+L'insurrection de Rákóczi (1703-1711) est à rattacher au parcours hongrois plutôt qu'au parcours autrichien (voir ci-dessous) — elle est une résistance d'une nation associée contre le centre viennois, pas une dynamique interne. L'Autriche n'a donc **pas de DGRO canonique**, et cette absence est assumée comme trait structurel marquant (highlight).
 
 ### Pourquoi l'Autriche n'a pas de DGRO canonique — deux hypothèses complémentaires
 
@@ -143,7 +159,7 @@ Deux hypothèses complémentaires peuvent expliquer l'absence de DGRO autrichien
 
 ### Rákóczi : parcours hongrois plus que parcours autrichien
 
-L'insurrection de François II Rákóczi (1703-1711) était classée en v3 comme perturbation interne de la polarisation autrichienne. La v4 retire cette classification. L'argument est simple : Rákóczi est hongrois, son soulèvement est porté par la noblesse et la paysannerie hongroises, il vise la restauration de l'indépendance hongroise contre la centralisation habsbourgeoise. C'est un moment de **construction nationale hongroise** (ou de résistance à l'absorption) bien plus qu'un moment du Parcours autrichien proprement dit. La « nation » qui porte l'insurrection n'est pas l'Autriche des Erbländer germanophones — c'est la nation hongroise.
+L'insurrection de François II Rákóczi (1703-1711) n'est pas classée comme perturbation du Parcours autrichien. L'argument est simple : Rákóczi est hongrois, son soulèvement est porté par la noblesse et la paysannerie hongroises, il vise la restauration de l'indépendance hongroise contre la centralisation habsbourgeoise. C'est un moment de **construction nationale hongroise** (ou de résistance à l'absorption) bien plus qu'un moment du Parcours autrichien proprement dit. La « nation » qui porte l'insurrection n'est pas l'Autriche des Erbländer germanophones — c'est la nation hongroise.
 
 Du côté du Parcours autrichien, l'insurrection apparaît comme un événement extérieur qui doit être géré par compromis (Szatmár 1711) mais qui ne modifie pas la dynamique interne du centre viennois. Elle est mentionnée dans la description de la sous-phase « polarisation des élites » comme rappel contextuel, mais elle ne constitue pas un saillant du Parcours autrichien.
 
@@ -153,39 +169,40 @@ Confidence: medium. L'absence de DGRO est un trait structurel défendable mais r
 
 ---
 
-## 4bis. Pic féodal habsbourgeois : Maximilien Ier (correction v4)
+## 4bis. Phase féodale 2 sans pic féodal intermédiaire
 
-### Ce qui a changé
+**Il n'y a pas de pic féodal habsbourgeois.** Maximilien Ier est le 1er monarque oligarchique (voir §3), et la phase féodale 2 est un cycle féodal faiblement dirigé qui ne produit aucun pic féodal intermédiaire entre l'éveil Rudolf IV (1358) et le pacte de 1518.
 
-La v2 et la v3 retenaient Rudolf IV (1358-1365) comme pic féodal habsbourgeois. La v4 corrige : **Maximilien Ier (r. Erbländer 1493-1519)** est retenu comme pic féodal.
+### Pourquoi pas de pic féodal habsbourgeois
 
-### Critère canonique
+Le critère canonique du pic féodal est qu'un souverain franchit le seuil de **puissance personnelle dominante** dans le cadre féodal — autorité effective sur ses pairs, projection dont il est lui-même la source, capacité à imposer son ordre sans dépendre d'un cadre collectif déjà institutionnalisé. En phase féodale, où l'État central n'existe pas encore comme support de continuité, le fonctionnement est en dents de scie : à chaque souverain fort correspond un pic, qui peut être suivi d'une crise puis d'un autre pic. Plusieurs pics sont donc canoniques en phase féodale.
 
-Le pic féodal est simplement le « roi qui sort du lot par la puissance de son pouvoir personnel ». C'est un critère opérationnel direct : on cherche le règne où un suzerain féodal exerce son autorité personnelle au maximum, domine ses pairs féodaux, et projette sa puissance sans être encore contraint par les règles collectives d'un pacte.
+Mais la phase féodale 2 habsbourgeoise est exceptionnelle : elle ne produit **aucun souverain qui franchisse à nouveau le seuil de pic féodal** entre l'éveil Rudolf IV (1358-1365) et le pacte de 1518. Examen des candidats :
 
-### Pourquoi Maximilien Ier plutôt que Rudolf IV
+- **Albert III, Léopold III, et leurs descendants (1379-1439)** : règnes parallèles dans des lignes albertine et léopoldine séparées par la partition de Neuberg. Pouvoir fragmenté, autorité ducale partagée, jeu local sans projection supra-régionale. Aucun n'est un pic féodal.
+- **Albert V/I (1438-1439)** : roi des Romains, succède à Bohême et Hongrie, mais règne de moins d'un an, mort en campagne contre les Ottomans. Trop bref pour être un pic.
+- **Frédéric III (1452-1493)** : règne exceptionnellement long (53 ans), mais sans puissance personnelle. Humilié par la guerre civile contre Albert VI, puis par Mathias Corvin qui occupe Vienne pendant cinq ans (1485-1490). Frédéric III est un long règne de **survie**, pas de domination — il survit aux crises sans les dominer. Pas un pic féodal.
+- **Maximilien Ier (1493-1519)** : reconquiert Vienne en 1490, réunifie les Erbländer, modernise l'administration, projette la maison habsbourgeoise sur l'échiquier européen par mariages dynastiques. Mais sa figure appartient structurellement à la convalescence post-Corvin et au pacte qu'elle produit — il est le 1er MO, pas un pic féodal (voir §3 et discussion ci-dessous).
 
-Rudolf IV est dense et symboliquement important (fondation de l'Université de Vienne 1365, forgery du Privilegium Maius, reconstruction de Saint-Étienne, acquisition du Tyrol), mais :
-- Règne très court (7 ans, mort à 26 ans)
-- Puissance personnelle effective limitée par la jeunesse du règne
-- Suivi immédiatement par la partition de Neuberg (1379) qui fragmente les domaines
-- Son héritage symbolique ne correspond pas à une puissance personnelle maximale
+### Pourquoi Maximilien Ier n'est pas un pic féodal
 
-Maximilien Ier remplit nettement mieux le critère canonique :
-- **Règne long et dominant** (26 ans sur les Erbländer, 33 ans comme empereur élu à partir de 1486)
-- **Réunification territoriale** — il reprend Vienne à la mort de Corvin (1490) et réunit les Erbländer fragmentés sous une seule autorité
-- **Projection dynastique européenne** — mariages stratégiques Bourgogne (1477), Espagne (1496), Bohême-Hongrie (1515) qui préparent les accroissements d'échelle du siècle suivant
-- **Modernisation administrative** — création du Hofrat (1498), du Hofkammer (1500), et du Hofkriegsrat, colonne vertébrale de l'État habsbourgeois pour deux siècles
-- **Prestige impérial** — élu roi des Romains en 1486, empereur en 1508 ; premier Habsbourg à incarner effectivement la dignité impériale sur la durée
-- **Le pacte suit immédiatement son règne** (Libell 1518, huit mois avant sa mort) — pattern classique où le pacte arrive dans la phase terminale du pic féodal, comme la loi salique française (1317) succède à la mort de Philippe le Bel (1314)
+La tentation serait de ranger Maximilien comme pic féodal en raison de sa puissance personnelle indéniable. Mais la fonction structurelle d'un pic féodal est de cristalliser le pouvoir personnel **dans le cadre féodal**, c'est-à-dire avant que les conditions du pacte ne soient réunies. Maximilien est dans la situation inverse : son règne est précisément le moment où les conditions du pacte se cristallisent. Il négocie depuis une position de faiblesse maximale (âgé, endetté, sans héritier direct proche), il accepte les contraintes que le pacte lui impose, et il convoque la diète qui produit le Libell. Sa puissance n'est pas celle d'un pic féodal qui domine ses pairs ; c'est celle d'un souverain en convalescence qui rassemble les conditions d'une codification collective.
 
-Confidence: medium. Maximilien Ier est nettement le meilleur candidat selon le critère canonique simple.
+Dire que Maximilien est un pic féodal est aussi absurde que de dire qu'Henri IV est un pic féodal. Ce sont deux figures structurellement identiques : des souverains qui inaugurent une phase oligarchique en promulguant le pacte, qui meurent immédiatement après, et qui transmettent à leur successeur (Ferdinand Ier ; Louis XIII en France) le soin de stabiliser le nouveau cadre. Ils sont des 1ers MO, pas des pics féodaux.
+
+### Pourquoi la phase 2 n'a pas de pic intermédiaire
+
+C'est un trait structurel notable du Parcours autrichien. La phase féodale 2 est **faiblement dirigée** sur toute sa durée : éveil bref de Rudolf IV, fragmentation prolongée par les lignes albertine et léopoldine, longue régence de Frédéric III sans puissance personnelle, humiliation par Corvin. Aucun moment de pouvoir personnel dominant n'émerge au cœur de la phase. Le cycle se résout au plus tôt — dès qu'un souverain capable apparaît en convalescence post-crise — parce que les conditions structurelles (homogénéité des élites + faiblesse négociable du suzerain) sont déjà mûres et n'attendaient que la conjoncture.
+
+C'est cohérent avec la durée légèrement courte de la phase (160 ans contre ~200 ans canoniques) : un cycle féodal sans pic intermédiaire est un cycle qui ne s'étire pas — il se résout dès que possible. Inversement, les phases féodales longues (France ~330 ans, Angleterre ~245 ans) sont celles qui produisent plusieurs pics successifs (Philippe Auguste, Saint-Louis, Philippe le Bel pour la France ; Henri II, Édouard Ier pour l'Angleterre), chacun prolongeant le cycle féodal.
+
+Confidence: medium. La structure « phase féodale sans pic intermédiaire » est inhabituelle dans le corpus mais cohérente avec le critère canonique appliqué strictement.
 
 ---
 
 ## 5. Les crises féodales du cycle habsbourgeois
 
-La v2 a identifié trois crises féodales majeures dans le cycle habsbourgeois (1282-1518), toutes confirmées en v3 :
+Trois crises féodales majeures dans le cycle habsbourgeois (1358-1518) :
 
 ### Traité de Neuberg (1379)
 
@@ -213,7 +230,7 @@ Marie-Thérèse (avec les réformes Haugwitz de 1749) est le **1er monarque abso
 
 **Ferdinand II (1619 ou 1627)** : écrase la Bohême à la Montagne Blanche, la Verneuerte Landesordnung (1627) absolutise la Bohême seule. Mais ne s'étend pas au reste de la monarchie. Ferdinand II est une victoire confessionnelle asymétrique au niveau d'un royaume, pas un 1er monarque absolu à l'échelle nationale. Le test discriminant échoue : les Chancelleries restent distinctes, les diètes provinciales autrichiennes conservent leurs pouvoirs, la Hongrie est totalement à l'écart.
 
-**Léopold Ier (1658 ou 1699)** : reconquête de la Hongrie, prestige européen, mais la monarchie reste composite. Léopold Ier est retenu en v3 comme **pic oligarchique** — sommet de la puissance dans le cadre existant.
+**Léopold Ier (1658-1705)** : reconquête de la Hongrie, prestige européen, mais la monarchie reste composite. Léopold Ier est retenu comme **pic oligarchique** — sommet de la puissance dans le cadre existant.
 
 **Charles VI (1711-1740)** : la Pragmatique Sanction (1713) est un effort de stabilisation de la succession, mais elle est obtenue par concessions plutôt que par imposition. Pas d'absolutisation effective. Charles VI est plutôt un post-pic oligarchique.
 
@@ -223,37 +240,38 @@ Marie-Thérèse est structurellement analogue à Philippe V en Espagne après la
 
 ---
 
-## 7. Sous-phases oligarchiques : polarisation longue (1618-1740) et guerre sociale (1740-1748)
+## 7. Sous-phases oligarchiques : essor long (1518-1718) et polarisation courte (1718-1740)
 
-### Ce qui a changé v3 → v4
+### Structure retenue
 
-La v3 intégrait la guerre de Trente Ans dans l'essor oligarchique en la traitant comme une polarisation confessionnelle qui, par sa résolution asymétrique, restait « dans » l'essor. Thomas corrige : **la polarisation confessionnelle est exactement une polarisation — pas besoin de créer une sous-phase extra, et pas besoin de la classer dans l'essor**.
+- **Essor oligarchique 1518-1718** (~200 ans, exactement dans la norme canonique)
+- **Polarisation des élites 1718-1740** (~22 ans, dans la fourchette canonique 10-40)
+- **Guerre sociale 1740-1748** (~8 ans)
+- **Pic oligarchique Léopold Ier 1658-1705 dans l'essor**, à sa place canonique
 
-La v4 adopte donc la structure canonique à trois sous-phases avec une polarisation longue :
-- **Essor oligarchique 1518-1618** (~100 ans, dans la norme haute)
-- **Polarisation des élites 1618-1740** (~122 ans, anormalement long)
-- **Guerre sociale 1740-1748** (8 ans, courte)
+La bascule essor → polarisation se fait à **Passarowitz (1718)**, lorsque l'exutoire militaire extérieur s'épuise réellement et que les élites se replient sur le jeu interne.
 
-### La polarisation longue — justification
+### Le critère structurel : tension interne *dominante*, pas *présente*
 
-La bascule essor → polarisation est marquée par la **défenestration de Prague** (23 mai 1618), événement par lequel les tensions confessionnelles cristallisées depuis un demi-siècle basculent en conflit ouvert. Avant 1618, la dynamique principale est la projection extérieure (Contre-Réforme européenne, guerres turques, politique impériale). Après 1618, la tension interfactions devient dominante.
+Le critère de la bascule essor → polarisation n'est pas l'apparition de tensions internes, mais leur **domination** sur la dynamique de la phase. Tant que l'État central est encore en expansion territoriale active et que les élites disposent d'un débouché extérieur productif, on est en essor — même s'il y a des épisodes confessionnels ou des résolutions asymétriques locales (Verneuerte Landesordnung 1627). La polarisation commence quand l'expansion s'épuise et que les élites se replient sur le jeu interne parce qu'il n'y a plus rien à faire à l'extérieur.
 
-La longueur anormale de la polarisation (122 ans au lieu des 10-40 ans canoniques) s'explique par le cumul d'exutoires qui retardent la résolution interne :
-- **Exutoire impérial** : la guerre de Trente Ans est un conflit pan-européen dans lequel les factions autrichiennes sont absorbées dans un théâtre beaucoup plus large — elle ne peut pas se résoudre par guerre sociale nationale.
-- **Exutoire anti-ottoman** : la Grande Guerre turque (1683-1699) et Passarowitz (1716-1718) relancent massivement la projection extérieure au milieu de la polarisation, permettant un pic oligarchique tardif (Léopold Ier 1658-1705) avant que la dynamique interne ne reprenne le dessus.
-- **Exutoire colonial indirect** : via les Pays-Bas puis l'Italie (Utrecht 1714), l'administration habsbourgeoise dispose de postes extérieurs qui absorbent une part de l'énergie élitaire.
+Appliqué à l'Autriche :
+- **Avant 1718** : l'expansion territoriale est massive et active. Héritage jagellon (1526), Contre-Réforme et confessionnalisation, Guerre de Trente Ans (1618-1648) qui se résout par victoire asymétrique habsbourgeoise sans guerre sociale, Westphalie (1648) confirme la position européenne, lever du siège de Vienne (1683), reconquête de la Hongrie (Buda 1686, Karlowitz 1699), Utrecht (1714) ajoute Pays-Bas et Italie, Passarowitz (1718) ajoute le Banat et Belgrade. Tout cela est de la projection extérieure dominante. Les tensions confessionnelles et provinciales sont *présentes* mais pas *dominantes* — l'énergie élitaire principale est absorbée par l'expansion.
+- **Après 1718** : l'expansion s'épuise et bascule en reflux. Perte de Naples et Sicile (1735), guerre turque désastreuse 1737-1739 avec perte de Belgrade, Pragmatique Sanction laborieuse acceptée seulement contre concessions aux diètes, tensions centre-provinces sur l'axe national. La polarisation interne devient dominante en seulement 22 ans, et culmine à la mort sans héritier mâle de Charles VI (1740).
 
-### Le pic oligarchique dans la polarisation
+### La Guerre de Trente Ans dans l'essor (et non en polarisation)
 
-Une particularité structurelle : le pic oligarchique (Léopold Ier, 1658-1705) est situé à l'**intérieur** de la polarisation, à peu près au milieu. Canoniquement, le pic se place pendant l'essor ; le cadre précise qu'il peut « rester pertinent au début de la polarisation ». Léopold Ier est beaucoup plus profond dans la polarisation que ce que le canon suggère.
+C'est le point le plus contre-intuitif de la lecture retenue. La Guerre de Trente Ans est une guerre confessionnelle massive entre catholiques et protestants — pourquoi ne pas la traiter comme une polarisation autrichienne ?
 
-L'explication est que l'exutoire anti-ottoman crée une « fenêtre de projection extérieure » au milieu de la polarisation — pendant la Grande Guerre turque, l'énergie élitaire se reprojette vers l'extérieur, et Léopold Ier peut incarner un pic de puissance personnelle dans un cadre qui reste oligarchique. C'est une anomalie canonique assumée : l'exutoire retardateur est si fort qu'il permet un pic tardif.
+Réponse : parce que **sa résolution est une victoire asymétrique habsbourgeoise** qui consolide le cadre existant sans produire de guerre sociale. Montagne Blanche (1620) écrase la noblesse protestante bohême, la Verneuerte Landesordnung (1627) absolutise la Bohême seule, et la Westphalie (1648) acte la position habsbourgeoise comme puissance catholique européenne. À la sortie de la guerre, l'État central habsbourgeois est plus fort qu'avant, et la polarisation confessionnelle n'a pas mené à une guerre sociale parce qu'elle a été absorbée dans le théâtre pan-européen avec l'aide d'alliés extérieurs (Espagne, Pologne, Bavière).
+
+C'est exactement le profil d'un épisode de polarisation présente mais non dominante, **qui se résout sans bascule structurelle**. Après la Westphalie, la dynamique principale redevient immédiatement la projection extérieure (anti-ottomane, italienne, belge), et le pic oligarchique Léopold Ier émerge dans cette dynamique à partir de 1658. Si la Guerre de Trente Ans avait été une vraie polarisation déclenchant la phase de polarisation, on n'aurait pas eu un siècle d'expansion productive après.
 
 ### Pourquoi la guerre sociale est bien 1740-1748, pas 1618-1648
 
-Le cadre demande pour la guerre sociale : deux factions oligarchiques + un tiers résolvant qui transcende les deux.
+Le cadre demande pour la guerre sociale : deux factions oligarchiques + un tiers résolvant qui transcende les deux + bascule absolutiste effective sur l'ensemble du territoire.
 
-**Guerre de Trente Ans** (1618-1648) : factions identifiables (noblesse protestante patrimoniale vs administration habsbourgeoise catholique prébendière), mais **pas de tiers résolvant** — Ferdinand II est membre de la faction catholique, c'est une victoire asymétrique. De plus, la résolution n'absolutise pas la monarchie entière (la Verneuerte Landesordnung 1627 ne vaut que pour la Bohême). C'est une polarisation majeure au sein de la sous-phase de polarisation, pas une guerre sociale au sens strict.
+**Guerre de Trente Ans** (1618-1648) : factions identifiables (noblesse protestante patrimoniale vs administration habsbourgeoise catholique prébendière), mais **pas de tiers résolvant** — Ferdinand II est membre de la faction catholique, c'est une victoire asymétrique. De plus, la résolution n'absolutise pas la monarchie entière (la Verneuerte Landesordnung 1627 ne vaut que pour la Bohême). C'est un épisode de tension confessionnelle au sein de l'essor, pas une guerre sociale au sens strict.
 
 **Guerre de Succession d'Autriche** (1740-1748) : factions nationales (défenseurs Pragmatique / contestataires) qui recouvrent un clivage de classe (prébendière viennoise / patrimoniale provinciale, manifestée notamment dans l'épisode bohémien de 1741-1743 avec Charles-Albert de Bavière). **Tiers résolvant** : Marie-Thérèse + dynastie Habsbourg-Lorraine, nouveau cadre administratif importé. **Résolution absolutiste** : réformes Haugwitz 1749 à l'échelle cisleithane. Parallèle exact avec la Guerre de Succession d'Espagne (1700-1714) résolue par Philippe V et la Nueva Planta.
 
@@ -284,16 +302,16 @@ Le pic oligarchique, comme le pic féodal, est simplement le « roi qui sort du 
 - **Prestige européen** : leader de la Grande Guerre turque, coalition européenne.
 - **Cadre institutionnel inchangé** : Léopold opère dans le cadre composite, ne tente pas l'absolutisme. C'est le critère du pic oligarchique — maximum de puissance dans le cadre existant, avant la cristallisation absolutiste.
 
-### Particularité : pic placé dans la polarisation, pas dans l'essor
+### Position canonique dans l'essor
 
-Léopold Ier (1658-1705) se situe à l'intérieur de la sous-phase de polarisation (1618-1740), à peu près en son milieu. C'est atypique par rapport à la règle canonique selon laquelle le pic oligarchique se place pendant l'essor. L'explication structurelle : l'**exutoire anti-ottoman** relance une dynamique de projection extérieure au milieu de la polarisation et crée une « fenêtre de puissance personnelle » qui permet à Léopold Ier d'incarner un pic de puissance personnelle malgré la polarisation en cours. C'est la signature d'un exutoire retardateur particulièrement fort.
+Léopold Ier (1658-1705) se situe au cœur de la sous-phase d'essor (1518-1718), à sa place canonique. Il est exactement à la place où le canon attend un pic oligarchique, dans la sous-phase d'expansion active.
 
 ### Alternatives considérées
 
 - **Ferdinand II (1619-1637)** : victoire confessionnelle et absolutisation de la Bohême. Mais pic partiel à l'échelle composite — il écrase une faction dans un seul royaume. Plus fondamentalement, Ferdinand II est le champion de la faction catholique dans un conflit confessionnel, pas une figure transcendante — il ne « sort du lot » que par rapport à ses adversaires protestants.
-- **Charles VI (1711-1740)** : apogée territoriale (Utrecht 1714, Passarowitz 1718) mais déjà sur le déclin (Pragmatique Sanction difficile, guerre turque désastreuse 1737-1739). Plutôt un post-pic en déclin.
+- **Charles VI (1711-1740)** : apogée territoriale (Utrecht 1714, Passarowitz 1718) mais déjà sur le déclin (Pragmatique Sanction difficile, guerre turque désastreuse 1737-1739). Plutôt un post-pic en déclin, structurellement à la fin de l'essor / début de la polarisation.
 
-Confidence: medium. Léopold Ier est le meilleur candidat selon le critère canonique simple, avec la particularité de placement dans la polarisation.
+Confidence: medium. Léopold Ier est le meilleur candidat selon le critère canonique simple, désormais à sa place canonique dans l'essor.
 
 ---
 
@@ -313,20 +331,18 @@ Confidence: medium.
 
 ---
 
-## 10. Borne de l'Ancien Régime : 1848, pas 1815 (correction par rapport à v2)
+## 10. Borne de l'Ancien Régime : 1848, pas 1815
 
-### Ce qui a changé
+La **Remontrance est la borne stricte d'entrée en Ancien Régime**, pas « fin de l'expansion ». Le Congrès de Vienne (1815) est une fin de l'expansion absolutiste, pas une remontrance — il ne marque donc pas l'entrée en AR. L'entrée en AR est l'insurrection viennoise de 1848, écrasée mais qui ouvre le néo-absolutisme Bach puis le règne sédimentant de François-Joseph.
 
-La v2 faisait commencer l'AR en 1815 (Congrès de Vienne). C'était incohérent avec la règle canonique : la **Remontrance est la borne stricte d'entrée en Ancien Régime**, pas « fin de l'expansion ». Le Congrès de Vienne est une fin de l'expansion absolutiste, pas une remontrance.
-
-### Architecture corrigée
+### Architecture
 
 - **Impérialisme absolutiste 1780-1848** (68 ans). Contient :
   - Pic absolutiste (Joseph II, 1780-1790)
-  - Perturbation guerres napoléoniennes (1792-1815, prolongement par choc exogène)
+  - Épisode révolutionnaire et napoléonien (1792-1815) — non codé comme perturbation (bilan territorial net positif au Congrès de Vienne, institutions intactes, pas d'impact structurel)
   - Fin de l'expansion (Congrès de Vienne, 1815)
   - Période Vormärz metternichienne (1815-1848) comme prolongement post-pic stabilisé
-  - Remontrance (révolutions de 1848)
+  - Remontrance (insurrection viennoise de 1848)
 - **Ancien Régime 1848-1918** (70 ans). Contient :
   - Néo-absolutisme Bach (1849-1859)
   - Défaites structurantes (Solferino 1859, Sadowa 1866)
@@ -344,27 +360,25 @@ Analogue structurel le plus proche : La Gloriosa espagnole (1868), la Polysynodi
 
 ---
 
-## 11. Impérialiste Revanchard autrichien — trois hypothèses (v4)
+## 11. Impérialiste Revanchard autrichien — Hitler comme IR double
 
-### L'enjeu
+### L'hypothèse retenue
 
-La v1 proposait Dollfuss/Schuschnigg comme « IR contraints ». La v2 et la v3 retenaient « pas d'IR autrichien » (Anschluss comme avortement). La v4 explore une **troisième hypothèse** : **Hitler comme Impérialiste Revanchard double, pour les Parcours allemand et autrichien simultanément**. Cette troisième hypothèse est retenue comme hypothèse principale dans la v4.
+**Hitler comme Impérialiste Revanchard double**, pour les Parcours allemand et autrichien simultanément. Hitler est né à Braunau am Inn (Haute-Autriche) en 1889, a passé sa jeunesse à Linz et à Vienne, et adhère pleinement à l'idée pan-germanique qui a dominé la droite autrichienne depuis Schönerer (fin XIXe). L'Anschluss (12 mars 1938) est la réalisation historique de cette idée pan-germanique autrichienne, portée par une figure autrichienne de naissance qui est aussi le chef du Reich. Hitler incarne simultanément l'IR des deux Parcours nationaux : même personne, même projet, même époque.
 
-### Les trois hypothèses
+### Hypothèses alternatives écartées
 
-**Hypothèse A — Pas d'IR autrichien (retenue en v2/v3, écartée en v4).** La RN autrichienne est avortée en phase aiguë/thermidorien par l'Anschluss. Séquence tronquée : phase aiguë Dollfuss → thermidorien Schuschnigg → avortement 1938-1945 → restauration sous tutelle → GR 1955.
+**Pas d'IR autrichien (Anschluss comme avortement).** La RN autrichienne serait avortée en phase aiguë/thermidorien par l'Anschluss. Séquence tronquée : phase aiguë Dollfuss → thermidorien Schuschnigg → avortement 1938-1945 → restauration sous tutelle → GR 1955.
 
 *Pour* : plus sobre historiographiquement, évite d'attribuer Hitler au Parcours autrichien.
 *Contre* : laisse la RN autrichienne structurellement incomplète, crée un « cas unique » d'avortement par une autre RN qui n'a pas d'analogue dans le corpus.
 
-**Hypothèse B — Schuschnigg comme thermidorien-devenu-IR (pattern Cromwell, écartée).** Analogie : Cromwell passe du thermidorien au Lord Protector / IR. Schuschnigg pourrait faire de même en se radicalisant en figure autoritaire impérialiste.
+**Schuschnigg comme thermidorien-devenu-IR (pattern Cromwell).** Analogie : Cromwell passe du thermidorien au Lord Protector / IR. Schuschnigg pourrait faire de même en se radicalisant en figure autoritaire impérialiste.
 
 *Pour* : la durée étendue du moment Schuschnigg (4 ans) peut évoquer une transition progressive.
 *Contre* : Schuschnigg n'a **aucune dimension impérialiste** — aucune projection extérieure, aucune ventilation massive des élites, aucune ambition territoriale. Il est purement défensif, cherchant à préserver l'indépendance. Cromwell, au contraire, lance des guerres (Irlande, Écosse, Pays-Bas), réforme l'armée (New Model Army), et se projette militairement. L'analogie ne tient pas.
 
-**Hypothèse C — Hitler comme IR double (retenue en v4).** Hitler est né à Braunau am Inn (Haute-Autriche) en 1889, a passé sa jeunesse à Linz et à Vienne, et adhère pleinement à l'idée pan-germanique qui a dominé la droite autrichienne depuis Schönerer (fin XIXe). L'Anschluss (12 mars 1938) est la réalisation historique de cette idée pan-germanique autrichienne, portée par une figure autrichienne de naissance qui est aussi le chef du Reich. Hitler incarne simultanément l'IR des deux Parcours nationaux : même personne, même projet, même époque.
-
-### Arguments pour l'hypothèse C
+### Arguments pour Hitler comme IR double
 
 1. **Préserve la séquence canonique complète de la RN autrichienne** : explosion → expérience parlementaire → phase aiguë → thermidorien → IR → restauration → GR. Pas de trou structurel.
 
@@ -374,7 +388,7 @@ La v1 proposait Dollfuss/Schuschnigg comme « IR contraints ». La v2 et la v3 r
 
 4. **Cohérent avec l'idéologie pan-germanique autrichienne** : de Schönerer à Hitler, l'idée pan-germanique est un projet politique **autrichien** qui rêve d'une fusion avec l'Allemagne. Hitler est le produit de ce courant de pensée autrichien, pas une figure allemande qui aurait été imposée de l'extérieur.
 
-### Arguments contre l'hypothèse C
+### Objections historiographiques
 
 1. **Historiographiquement controversée**. L'identité autrichienne post-1945 est construite explicitement **contre** l'idée que Hitler soit autrichien. La doctrine officielle de la Seconde République traite l'Autriche comme « première victime d'Hitler » (Moscow Declaration 1943). Attribuer Hitler au Parcours autrichien heurte cette construction identitaire.
 
@@ -382,17 +396,17 @@ La v1 proposait Dollfuss/Schuschnigg comme « IR contraints ». La v2 et la v3 r
 
 3. **L'Autriche disparaît formellement pendant 1938-1945**. Elle n'a ni gouvernement, ni drapeau, ni armée autrichienne propre. Attribuer l'impérialisme revanchard du Reich au Parcours autrichien alors même que l'Autriche n'existe pas comme État est contre-intuitif.
 
-### Choix de l'hypothèse C comme hypothèse principale
+### Pourquoi la lecture est retenue malgré les objections
 
-La v4 retient **Hitler comme IR double** comme hypothèse principale pour sa cohérence structurelle (séquence canonique complète préservée). Les objections historiographiques sont réelles mais relèvent de l'identité nationale post-1945 construite rétroactivement, pas de la réalité structurelle de 1918-1945. Le fait que l'Autriche post-1945 refuse Hitler ne change rien au fait qu'en 1938, de nombreux Autrichiens ont accueilli l'Anschluss avec enthousiasme et participé massivement au régime nazi — signe structural que l'IR était reconnu comme légitime par une large partie de la population autrichienne à l'époque.
+L'hypothèse est retenue pour sa cohérence structurelle (séquence canonique complète préservée). Les objections historiographiques sont réelles mais relèvent de l'identité nationale post-1945 construite rétroactivement, pas de la réalité structurelle de 1918-1945. Le fait que l'Autriche post-1945 refuse Hitler ne change rien au fait qu'en 1938, de nombreux Autrichiens ont accueilli l'Anschluss avec enthousiasme et participé massivement au régime nazi — signe structural que l'IR était reconnu comme légitime par une large partie de la population autrichienne à l'époque.
 
-Confidence: low. C'est une hypothèse nouvelle, structurellement défendable mais pas évidente. Elle mérite discussion avec Fabry et Deblonde, et elle éclaire potentiellement d'autres cas dans le corpus (existe-t-il d'autres IR partagés entre deux Parcours ?).
+Confidence: medium. Confirmation externe reçue de Philippe et Martin qui arrivent indépendamment à la même lecture. L'hypothèse reste historiographiquement controversée post-1945 — l'identité autrichienne s'étant reconstruite explicitement contre l'appartenance au IIIe Reich — mais elle est structurellement solide. Elle éclaire potentiellement d'autres cas dans le corpus (existe-t-il d'autres IR partagés entre deux Parcours ?).
 
 ---
 
 ## 12. L'Anschluss comme émergence de l'IR — cas unique du corpus
 
-L'Anschluss (12 mars 1938) est, dans la v4, **l'événement qui installe l'Impérialiste Revanchard autrichien** — Hitler. Il n'est plus classé comme perturbation à effet d'avortement mais comme saillant canonique « émergence de l'IR ». Les institutions profondes (droit civil, administration locale, Église, langue, culture) survivent sous couvert allemand, et quand le Reich tombe en 1945, ces institutions permettent la restauration rapide — c'est le pattern canonique post-IR.
+L'Anschluss (12 mars 1938) est **l'événement qui installe l'Impérialiste Revanchard autrichien** — Hitler. Il n'est pas une perturbation à effet d'avortement mais un saillant canonique « émergence de l'IR ». Les institutions profondes (droit civil, administration locale, Église, langue, culture) survivent sous couvert allemand, et quand le Reich tombe en 1945, ces institutions permettent la restauration rapide — c'est le pattern canonique post-IR.
 
 **Cas unique du corpus**. C'est le seul cas où l'IR est partagé entre deux Parcours nationaux simultanément. Distinct des absorptions post-AR de la Bavière (1919) et de Venise (1866), distinct des reboots israéliens (-586, 70), distinct des IR canoniques (Bonaparte, Cromwell, Hitler allemand, qui opèrent sur un seul Parcours). L'unicité autrichienne est la superposition de deux Parcours dans une même séquence impérialiste revanchard pendant 7 ans, suivie d'une dissociation en 1945.
 
@@ -412,52 +426,29 @@ Confidence: high. Aucune alternative raisonnable n'a été identifiée.
 
 ---
 
-## 14. Points de fragilité et questions ouvertes (v4)
+## 14. Points de fragilité et questions ouvertes
 
-1. **L'hypothèse Hitler comme IR double** est la plus fragile et la plus nouvelle. Elle préserve la séquence canonique de la RN autrichienne mais heurte l'historiographie post-1945. **Confidence: low**. Point à discuter en priorité avec Fabry/Deblonde. Existe-t-il d'autres cas dans le corpus où un IR est partagé entre deux Parcours ?
+1. **L'hypothèse Hitler comme IR double** préserve la séquence canonique de la RN autrichienne. Confirmation externe reçue de Philippe et Martin (deux chercheurs indépendants arrivent à la même lecture). **Confidence: medium**. Reste historiographiquement controversée post-1945 mais structurellement solide.
 
 2. **L'absence de DGRO canonique comme trait structurel**. Deux hypothèses complémentaires (élites cisleithanes affaiblies post-guerre de Trente Ans, Hongrie maintenue hors absolutisation par compromis). Le corollaire théorique — l'assise territoriale est-elle strictement nécessaire à une DGRO, ou peut-elle prendre d'autres formes (complots de cour, révolutions de palais) ? — mérite discussion. **Confidence: medium**.
 
 3. **Le Libell de 1518 comme pacte oligarchique** est structurellement atypique (codifie les responsabilités administratives et défensives plutôt que la succession). Le critère « première codification négociée des responsabilités du suzerain » est satisfait, mais le parallèle avec les pactes successoraux classiques reste indirect. **Confidence: medium**.
 
-4. **La polarisation oligarchique longue (1618-1740)** — 122 ans, très au-dessus de la fourchette canonique de 10-40 ans. Le pic oligarchique (Léopold Ier) est à l'intérieur de la polarisation, pas dans l'essor. Ces particularités sont justifiées par les exutoires retardateurs (anti-ottoman, impérial, colonial indirect) mais restent des écarts au canon. **Confidence: medium**.
+4. **Polarisation oligarchique courte (1718-1740, ~22 ans)** dans la fourchette canonique (10-40 ans), pic oligarchique (Léopold Ier) à sa place canonique dans l'essor. L'essor long de 200 ans (1518-1718) correspond à la durée endogène canonique de la sous-phase ; le léger prolongement (~30 ans pour l'ensemble de la phase oligarchique) est expliqué par la seule digestion administrative de la Bohême après la Verneuerte Landesordnung (1627). **Confidence: high**.
 
-5. **La séparation en deux phases féodales** (Babenberg 976-1246 puis Habsbourg 1282-1518) avec reboot entre elles est cohérente avec le cadre allemand H1 mais reste une lecture à valider. **Confidence: medium**.
+5. **La séparation en deux phases féodales** (Babenberg 1198-1246 puis Habsbourg 1358-1518) avec **percolation habsbourgeoise** (1246-1358) entre elles repose sur un élément théorique nouveau — le retour possible en percolation après un avortement biologique de phase féodale. Cette lecture est à valider par d'autres cas comparatifs (Espagne post-711 ? autre ?). **Confidence: medium**.
 
-6. **Maximilien Ier comme pic féodal habsbourgeois** (correction v4, remplace Rudolf IV). Cohérent avec le critère « puissance personnelle maximale », mais Maximilien Ier est aussi l'artisan du pacte, donc pic et fin de phase coïncident. Pattern analogue à Philippe le Bel et Édouard Ier. **Confidence: medium**.
+6. **Pas de pic féodal intermédiaire en phase féodale 2 Habsbourg**. Le cycle féodal habsbourgeois est faiblement dirigé : aucun successeur de Rudolf IV (1358) ne franchit à nouveau le seuil de pic féodal pendant 160 ans, jusqu'à ce que Maximilien Ier — qui n'est pas un pic féodal mais le 1er monarque oligarchique en convalescence post-Corvin — produise directement le pacte de 1518. C'est inhabituel dans le corpus (la plupart des phases féodales produisent plusieurs pics en dents de scie). **Confidence: medium**.
 
-7. **Léopold Ier comme pic oligarchique** est le meilleur candidat selon le critère canonique simple, avec la particularité d'être placé dans la polarisation plutôt que dans l'essor. **Confidence: medium**.
+7. **Léopold Ier comme pic oligarchique** est le meilleur candidat selon le critère canonique simple, à sa place canonique dans l'essor. **Confidence: high**.
 
 8. **La Guerre de Succession d'Autriche comme guerre sociale unique** est structurellement solide mais les factions ne sont pas aussi nettement polarisées (prébendière/patrimoniale) que dans les cas français, anglais ou espagnols — le clivage se joue en partie sur l'axe national (Hongrois vs administration viennoise). **Confidence: medium**.
 
-9. **La distinction Parcours autrichien / Parcours allemand** repose sur l'analogie espagnole qui est structurellement cohérente mais pas évidente culturellement avant 1945. La v4 ajoute une complication : Hitler comme IR double suggère que les deux Parcours se chevauchent temporairement pendant 1938-1945, ce qui pourrait ouvrir une discussion plus large sur l'articulation des Parcours allemand et autrichien.
+9. **La distinction Parcours autrichien / Parcours allemand** repose sur l'analogie espagnole qui est structurellement cohérente mais pas évidente culturellement avant 1945. Hitler comme IR double ajoute une complication : les deux Parcours se chevauchent temporairement pendant 1938-1945, ce qui pourrait ouvrir une discussion plus large sur l'articulation des Parcours allemand et autrichien.
 
-Chacun de ces points est un lieu légitime de discussion. Le Parcours v4 est plus canoniquement complet que v2 et v3 (séquence RN complète, sous-phases oligarchiques restaurées au canon) mais introduit l'hypothèse nouvelle Hitler-IR-double qui est à confirmer.
+10. **L'empire continental autrichien n'a pas prolongé le Parcours** (principe structurel). L'Espagne — autre monarchie composite habsbourgeoise avec un empire massif — voit sa phase oligarchique prolongée à ~345 ans. Venise — empire intégré par provveditori — atteint ~637 ans. L'Autriche, avec un empire continental colossal (Bohême, Hongrie, Pays-Bas, Italie, Galicie), n'affiche que +31 ans (231 ans). La raison : **l'empire autrichien est majoritairement en union personnelle, pas en administration commune**. Chaque couronne conserve sa diète, son droit et ses administrateurs locaux ; les élites viennoises ne sont pas mobilisées pour digérer les marges. Seule exception : la Bohême après 1627, qui explique le modeste +30 ans. **Confidence: high**.
 
----
+11. **Le retour en percolation après un avortement de phase féodale est-il un pattern reproductible ?** (élément théorique nouveau) L'Autriche 1246-1358 est à ma connaissance le premier cas du corpus à montrer explicitement ce pattern. Le cadre théorique avait jusqu'à présent un mécanisme de « reboot » (reset vers le début de la phase interrompue) mais pas de mécanisme de « régression » (retour vers la phase précédente). Cas à explorer : l'Espagne post-711 (effondrement wisigoth, 700 ans de Reconquista avant l'émergence de Castille) est-elle un second cas ? L'Angleterre entre la fin du royaume de Mercie et Ecgberht est-elle un troisième ? La distinction entre reboot et percolation post-avortement devrait être systématisée dans la référence `perturbations.md`. **Confidence: medium**. Point à remonter pour discussion théorique.
 
-## 15. Bilan des révisions successives
+12. **Empire intégré vs union personnelle comme condition nécessaire du choc d'hétérogénéité** (élément théorique nouveau, identifié par Philippe). Un choc d'hétérogénéité n'opère que si l'acquisition territoriale mobilise effectivement les élites du noyau dans un travail de digestion (homogénéisation culturelle, intégration administrative, personnel administratif issu du noyau). L'union personnelle sans administration commune ne produit pas de choc d'hétérogénéité structurel — au plus, une soupape militaire. Principe formalisé dans `perturbations.md`. **Conséquence** : l'ensemble du corpus doit être réévalué pour vérifier que les chocs d'hétérogénéité déjà codés satisfont la condition d'administration commune. Cas à revoir : Espagne (Castille-Aragon comme cas intermédiaire culturellement proche, empire colonial intégré), France (intégration Occitanie / pays périphériques), Angleterre, Piémont, etc. **Confidence: high** sur le principe, à appliquer au reste du corpus.
 
-| Élément | v1 | v2 | v3 | v4 |
-|---|---|---|---|---|
-| Découpage féodal | Une phase de 517 ans | Deux phases + reboot | Deux phases + reboot | Deux phases + reboot (inchangé) |
-| Pic féodal habsbourgeois | Flou | Rudolf IV 1358-65 | Rudolf IV 1358-65 | **Maximilien Ier 1493-1519** (corrigé) |
-| Pacte oligarchique | Absent, résolution diffuse | Innsbrucker Libell 1518 | Innsbrucker Libell 1518 | Innsbrucker Libell 1518 (critère renforcé) |
-| Statut 1519-1522 | Non identifié | DGRO (erronée) | Crise de transition | Crise de transition (inchangé) |
-| 1er monarque oligarchique | Maximilien Ier 1493 | Ferdinand Ier 1522 | Ferdinand Ier 1522 | Ferdinand Ier 1522 (inchangé) |
-| Sous-phases oligarchiques | 3 | 4 (polarisation conf. ajoutée) | 3 (canonique restauré) | **3** (inchangé, mais Guerre de 30 Ans maintenant dans polarisation) |
-| Essor oligarchique | Indéfini | 1518-1699 | 1518-1699 | **1518-1618** (corrigé) |
-| Polarisation | Indéfini | 1618-1740 | 1699-1740 | **1618-1740** (corrigé) |
-| Pic oligarchique | Flou | Léopold Ier 1683-1705 | Léopold Ier 1683-1705 | Léopold Ier 1683-1705 (dans polarisation) |
-| Guerre sociale | Double | Succession d'Autriche 1740-48 | Succession d'Autriche 1740-48 | Succession d'Autriche 1740-48 (inchangé) |
-| 1er monarque absolu | Marie-Thérèse 1749 | Marie-Thérèse 1749 | Marie-Thérèse 1749 | Marie-Thérèse 1749 (inchangé) |
-| DGRO | Absente | 1519-1522 (erronée) | Pas de DGRO (absolutisation fluide) | **Pas de DGRO assumé** (highlight_5) |
-| Rákóczi 1703-1711 | Non discuté | Non discuté | Perturbation polarisation autrichienne | **Parcours hongrois** (retiré du parcours autrichien) |
-| Pic absolutiste | Implicite | Non identifié | Joseph II 1780-1790 | Joseph II 1780-1790 (inchangé) |
-| Borne Ancien Régime | 1815-1918 | 1815-1918 | 1848-1918 | 1848-1918 (inchangé) |
-| IR | Dollfuss/Schuschnigg « contraints » | Pas d'IR | Pas d'IR (avortement par Anschluss) | **Hitler comme IR double** (corrigé) |
-| Anschluss 1938-1945 | Avortement | Avortement | Avortement | **Sous-phase impérialisme revanchard** (corrigé) |
-| Restauration RN | Absente | 1945-1955 | 1945-1955 | 1945-1955 (inchangé) |
-| GR | Staatsvertrag 1955 | Staatsvertrag 1955 | Staatsvertrag 1955 | Staatsvertrag 1955 (inchangé) |
-
-**Les bornes de phase restent inchangées depuis v2** (1518, 1749, 1918, 1955). Les corrections v3 et v4 portent sur la cohérence interne du modèle — sous-phases, saillants internes, critères discriminants — pas sur les dates qui alimentent la régression quantitative. L'usage statistique principal du corpus est donc stable à travers les révisions.

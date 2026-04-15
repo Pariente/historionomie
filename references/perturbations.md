@@ -18,7 +18,7 @@ Le Parcours de construction nationale peut être perturbé par des événements 
 | **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` | Prolongement 🟠 | Habsburg 1516, Bavière 1806, Empire de Cnut 1016, Stato da Màr 1204, croisade des Albigeois 1229 |
 | **Choc exogène** | Ponctuel | `bolt` | Les 4 effets (selon ce que le choc fait) | Voir grille ci-dessous |
 | **Insuffisance interne** | Ponctuel | `close` | Avortement 🔴 | Crises féodales sans PO, absolutisation avortée (Faliero, Pierre Ier) |
-| **Correction d'échelle** | Ponctuel ou graduel | `compress` | Accélération 🔵 | Perte empire colonial espagnol (1808-1826), Portugal 1640, Utrecht 1714 |
+| **Correction d'échelle** | Ponctuel ou graduel | `compress` | Accélération 🔵 | Perte de la Crète vénitienne (1669), fragmentation Visconti (1402), perte de la Silésie autrichienne (1742), perte de l'empire colonial espagnol (1808-1826). Condition : le territoire perdu doit avoir été effectivement digéré par le noyau (cf. §Choc d'hétérogénéité). |
 | **Exutoire** | **Continu** | *(pas de marqueur — implicite)* | Prolongement 🟠 | Venise Stato da Màr, colonies espagnoles, Reconquista, Reislauferei suisse |
 
 Le **choc d'hétérogénéité** ajoute de la diversité vers l'intérieur (gain territorial, afflux culturel). L'**exutoire** projette l'énergie vers l'extérieur (empire, colonies, mercenariat). Les deux produisent un prolongement mais par des voies différentes : le choc repousse le seuil d'homogénéité, l'exutoire absorbe les tensions élitaires. Ils coexistent souvent (l'héritage habsbourgeois crée à la fois l'hétérogénéité et l'exutoire).
@@ -31,10 +31,12 @@ Le choc exogène est le mécanisme le plus polyvalent — son effet dépend de c
 
 | Ce que le choc fait | Effet | Couleur | Exemples |
 |---|---|---|---|
-| Ralentit sans détruire (gel temporaire, occupation) | Prolongement 🟠 | Orange | Crécy-Poitiers (~1346), éclipse napoléonienne du Piémont (1796-1814) |
-| Retire du territoire ou de l'exutoire, force la modernisation | Accélération 🔵 | Bleu | Portugal 1640, Utrecht 1714, Désastre 1898, Napoléon à Milan |
+| Ralentit sans détruire (gel temporaire, occupation) | Prolongement 🟠 | Orange | Crécy-Poitiers (~1346), éclipse napoléonienne du Piémont (1796-1814), Empire de Cnut (1016) |
+| Supprime un exutoire militaire externe, force le recentrage interne | Accélération 🔵 | Bleu | Normandie 1204, Castillon 1453, Solferino 1859, Sadowa 1866, Désastre 1898, Napoléon à Milan |
 | Bloque une transition sans détruire les institutions | Avortement 🔴 | Rouge | France écrase le Trienio 1823, Autriche écrase Venise 1849 |
 | Détruit les institutions et les réseaux humains | Reboot 🟤 | Cramoisi | Babylone -586, Guillaume 1066, Piémont 1536 |
+
+**Note sur l'accélération par fin d'exutoire** : quand une défaite militaire supprime un territoire en **union personnelle** (jamais digéré par le noyau), c'est un `choc_exogene / acceleration` — pas une `correction_echelle`. La distinction tient au mécanisme : la correction d'échelle suppose une digestion préalable (le territoire perdu pesait sur le noyau par sa digestion), le choc exogène de fin d'exutoire suppose seulement que le territoire servait d'exutoire militaire (il absorbait de l'énergie élitaire sans être digéré). Voir §Choc d'hétérogénéité pour le développement complet et §Corollaire symétrique.
 
 ## Affichage sur la frise
 
@@ -110,26 +112,21 @@ L'expansion coloniale n'a pas le même effet selon le moment du Parcours où ell
 | Hellénisation (-332) | Israël | Choc exogène | Prolongement 🟠 | **Non** (culturel) | ◆🟠 `bolt` |
 | Destruction du Temple (70) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
 | **Angleterre** |
-| Empire de Cnut (~1016) | Angleterre | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Empire de Cnut (~1016) | Angleterre | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
 | Conquête normande (1066) | Angleterre | Choc d'hétérogénéité | Reboot 🟤 | Oui | ◆🟤 `restart_alt` |
-| Empire Plantagenêt (~1154) | Angleterre | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Perte de la Normandie (1204) | Angleterre | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Perte de la Normandie (1204) | Angleterre | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
 | Boucles féodales anglaises | Angleterre | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
-| Traité de Troyes (1420) | Angleterre | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Perte de la France (1453) | Angleterre | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Perte de la France (1453) | Angleterre | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
 | **France** |
-| Confiscation Plantagenêt (1204) | France | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
 | Croisade des Albigeois (1229) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | Crécy-Poitiers (~1346) | France | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
 | Azincourt-Troyes (1415-1420) | France | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
 | Intégration Bourgogne-Provence (1477-1481) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | Traité d'Utrecht (1713) | France | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
 | **Espagne** |
-| Union Castille-Aragon (1479) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Héritage habsbourgeois (1516) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Sécession du Portugal (1640) | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| Traité de Westphalie (1648) | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| Traité d'Utrecht (1714) | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Empire colonial américain (1521-1533) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Intégration de l'Aragon (1716) | Espagne | Choc d'hétérogénéité (modéré, proximité culturelle) | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
+| Perte de l'empire colonial américain (1808-1826) | Espagne | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
 | Désastre de 1898 | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
 | **Venise** |
 | Stato da Màr (1204) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
@@ -147,8 +144,16 @@ L'expansion coloniale n'a pas le même effet selon le moment du Parcours où ell
 | Doublement napoléonien (1806) | Bavière | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | **Piémont** |
 | Invasion française (1536) | Piémont | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
-| Acquisition de la Sardaigne (1720) | Piémont | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | Éclipse napoléonienne (1796-1814) | Piémont | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| **Autriche** |
+| Crise féodale — extinction Babenberg (1246) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Crise féodale — Neuberg (1379) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Crise féodale — guerre civile Albert VI (1440s-1463) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Crise féodale — occupation Corvin (1485-1490) | Autriche | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
+| Intégration de la Bohême (1627) | Autriche | Choc d'hétérogénéité | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
+| Perte de la Silésie (1742) | Autriche | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Solferino — perte de la Lombardie (1859) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Sadowa — exclusion de l'Allemagne (1866) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
 | **Suisse** |
 | Invasion française (1798) | Suisse | Choc exogène | Accélération 🔵 | Non | ◆🔵 `bolt` |
 
@@ -246,10 +251,65 @@ Le choc d'hétérogénéité est le saillant qui marque le moment précis où un
 
 Le choc d'hétérogénéité peut avorter une sous-phase en cours. Si la société était en train d'entrer en Ancien Régime (stratification, sédimentation), l'hétérogénéisation défait cette stratification et relance la dynamique d'homogénéisation — ce qui peut reboote la sous-phase d'impérialisme absolutiste.
 
+### Condition nécessaire : administration commune (intégration effective)
+
+**Un choc d'hétérogénéité n'opère que si l'acquisition territoriale mobilise effectivement les élites du noyau dans un travail de digestion des marges** — homogénéisation culturelle, intégration administrative, personnel administratif issu du noyau. C'est la digestion qui absorbe l'énergie élitaire et prolonge la phase en cours. Sans digestion, pas de choc.
+
+**Deux types d'empire à distinguer** :
+
+1. **Empire intégré** (administration commune) : les marges sont administrées directement par des fonctionnaires issus du noyau (magistrats, gouverneurs, intendants, juges), soumises au droit du noyau (ou à un droit imposé depuis le noyau), et leurs élites locales sont soit cooptées dans l'élite du noyau soit écartées. Chaque nouvelle acquisition crée des postes à pourvoir, des responsabilités à distribuer, un travail d'homogénéisation à faire. **C'est un vrai choc d'hétérogénéité qui prolonge structurellement le Parcours.**
+
+2. **Empire en union personnelle** (administration séparée) : les marges conservent leurs propres institutions (diète, assemblée, parlement), leur propre droit coutumier, leurs propres administrateurs locaux. Le souverain partage un titre avec le noyau mais « change de chapeau » institutionnellement quand il passe d'une couronne à l'autre. Les élites du noyau ne sont pas mobilisées pour digérer les marges — elles restent concentrées sur le territoire noyau. **L'union personnelle ne produit pas de choc d'hétérogénéité structurel ; au plus, elle fonctionne comme une soupape militaire (exutoire de guerre, débouché de carrières) qui absorbe temporairement l'énergie élitaire sans la diriger vers un travail d'homogénéisation.**
+
+Cette distinction est **essentielle pour dater correctement un choc d'hétérogénéité**. Dans une monarchie composite où une marge passe progressivement de l'union personnelle à l'administration directe, le choc d'hétérogénéité doit être placé **au moment de l'intégration administrative**, pas au moment de l'acquisition dynastique. Exemple : l'héritage jagellon donne à Ferdinand Ier la couronne de Bohême en 1526, mais la Bohême reste en union personnelle jusqu'en 1627 (Verneuerte Landesordnung) — c'est cette date-là qui constitue le choc d'hétérogénéité pour le Parcours autrichien, pas 1526.
+
+Intensité variable selon la distance culturelle : un choc d'hétérogénéité par intégration d'une marge culturellement proche (langue apparentée, droit similaire, confession commune) est moins intense qu'un choc par intégration d'une marge culturellement distante. Exemple : l'intégration de l'Aragon à la Castille (1469-1716) est un choc d'hétérogénéité, mais moins fort qu'il n'y paraît parce que les deux royaumes sont culturellement proches — analogue à l'intégration France d'oïl/Occitanie au Parcours français.
+
+### Corollaire symétrique : la perte d'une union personnelle n'est pas une correction d'échelle
+
+Le principe est rigoureusement symétrique. **Si une acquisition territoriale n'a pas produit de choc d'hétérogénéité (parce qu'elle est restée en union personnelle, non digérée par le noyau), alors sa perte ne peut pas non plus produire de correction d'échelle structurelle.** Une possession qu'on n'a jamais digérée n'est pas un poids dont la perte « ramène vers l'échelle naturelle » — c'est juste un chapeau qui tombe. L'effet sur le cycle est nul dans les deux sens.
+
+**Critère de la correction d'échelle (`correction_echelle`) au sens strict** : il faut que le territoire perdu ait été effectivement **digéré** par le noyau — administration directe par du personnel issu du noyau, droit imposé depuis le noyau, mobilisation durable des élites centrales. Seules ces pertes ramènent réellement le Parcours vers un « noyau naturel » plus petit et accélèrent la suite.
+
+**Exemples corrects de correction d'échelle** :
+- **Venise 1669** : perte de la Crète, administrée directement par des baili vénitiens depuis 1204. Vraie contraction d'un empire intégré.
+- **Milan 1402** : fragmentation de l'empire Visconti de Gian Galeazzo, administré directement par des podestà et vicari viscontéens. Vraie contraction.
+- **Autriche 1742** : perte de la Silésie, province de la couronne de Bohême intégrée à l'administration habsbourgeoise depuis la Verneuerte Landesordnung (1627). Vraie contraction d'une province digérée.
+- **Espagne 1808-1826** : perte de l'empire colonial américain, administré directement par des vice-rois, corregidores et audiencias castillans pendant trois siècles. **Seule vraie correction d'échelle du Parcours espagnol.**
+
+**Contre-exemples à ne pas coder comme correction d'échelle** :
+- **Espagne** : Portugal 1640, Provinces-Unies (Westphalie 1648), Pays-Bas méridionaux et Italie (Utrecht 1713). Ces possessions étaient en union personnelle avec institutions locales préservées — jamais digérées par les élites castillanes. Leur perte marque seulement la fin d'une soupape militaire européenne, pas un retour vers le noyau naturel.
+- **Angleterre** : Normandie 1204 (Exchequer of Normandy distinct, coutume de Normandie), Gascogne 1453 (sénéchal d'Aquitaine à Bordeaux, droit gascon). Union personnelle. Ces pertes ont un effet structurel réel sur le Parcours anglais (anglicisation forcée, fin de l'exutoire militaire des factions Lancaster/York) mais par un mécanisme différent — voir ci-dessous.
+
+### Choc exogène avec fin d'exutoire militaire
+
+Pour les cas où une défaite militaire externe supprime un exutoire sans qu'il s'agisse d'une digestion préalable, le mécanisme correct est **`choc_exogene`** avec effet **`acceleration`**. L'effet structurel reste réel — la fin de l'exutoire militaire force les élites à se retourner vers le jeu interne — mais le mécanisme ne passe pas par une contraction du territoire digéré.
+
+**Distinction structurelle** :
+- `correction_echelle / acceleration` : le territoire perdu était intégré, sa perte contracte le noyau digéré et force une réduction d'échelle. Accélération par retour à l'échelle naturelle plus petite.
+- `choc_exogene / acceleration` (fin d'exutoire militaire) : le territoire perdu était un exutoire externe (union personnelle, possession continentale lointaine), sa perte supprime la soupape militaire qui détournait l'énergie élitaire. Accélération par recentrage sur le jeu interne.
+
+Les deux produisent le même effet observable (accélération de la phase suivante) mais par des mécanismes distincts. La différence est que la correction d'échelle suppose et valide une digestion préalable ; le choc exogène n'en suppose pas.
+
+**Exemples de choc exogène avec fin d'exutoire militaire** :
+- **Angleterre 1204** (perte de la Normandie, de l'Anjou, du Maine, du Poitou par Jean sans Terre) : coupe les élites anglo-normandes de leurs domaines continentaux, force leur anglicisation et accélère l'homogénéisation vers le pacte (Ordonnances 1311).
+- **Angleterre 1453** (défaite de Castillon, fin de la guerre de Cent Ans) : fin de l'exutoire militaire français qui maintenait l'équilibre précaire entre Lancaster et York. Sans ennemi extérieur, les factions explosent en Guerre des Deux Roses (1455-1485) — la guerre sociale anglaise.
+- **Autriche 1859** (défaite de Solferino, perte de la Lombardie) : la Lombardie n'était vraiment administrée directement que depuis 1815 (44 ans — trop court pour une digestion effective). Sa perte est un choc exogène qui accélère l'AR autrichien.
+- **Autriche 1866** (défaite de Sadowa, perte de la Vénétie + exclusion de l'Allemagne) : la Vénétie, comme la Lombardie, n'avait pas été vraiment digérée depuis 1815. L'exclusion de l'Allemagne n'est pas une perte territoriale mais politique — l'Autriche perd son rôle de puissance directrice de l'espace allemand. L'effet combiné force un réalignement interne majeur (Ausgleich 1867, architecture dualiste).
+
 ### Exemples
 
 **Bavière (1806) :**
-Le doublement napoléonien du territoire (Franconie, Souabe) hétérogénéise brutalement une société bavaroise qui était en train d'entrer en Ancien Régime sous Charles-Théodore. L'intégration de populations franconniennes (protestantes) et souabes dans un État catholique bavarois relance la dynamique impérialiste sous forme modernisatrice (réformes Montgelas). Le choc avorte le premier AR et ouvre un second cycle d'impérialisme absolutiste.
+Le doublement napoléonien du territoire (Franconie, Souabe) hétérogénéise brutalement une société bavaroise qui était en train d'entrer en Ancien Régime sous Charles-Théodore. L'intégration de populations franconniennes (protestantes) et souabes dans un État catholique bavarois relance la dynamique impérialiste sous forme modernisatrice (réformes Montgelas). Le choc avorte le premier AR et ouvre un second cycle d'impérialisme absolutiste. **C'est une intégration administrative directe** — Montgelas applique le modèle napoléonien d'administration centralisée uniforme sur tout le nouveau territoire.
+
+**Venise :**
+L'empire vénitien (stato da Mar, stato da Terra) est administré directement par des provveditori et rettori issus du patriciat vénitien, nommés par la Quarantia. Chaque nouvelle acquisition crée des postes à pourvoir, un butin à partager, un travail d'intégration à faire — ce qui mobilise massivement le patriciat. C'est le cas le plus pur d'empire intégré dans le corpus, et il produit la phase oligarchique la plus longue (~637 ans).
+
+**Autriche habsbourgeoise (contre-exemple) :**
+L'empire continental autrichien est colossal (Bohême, Hongrie, Pays-Bas, Lombardie, Naples, Galicie) mais majoritairement en union personnelle. Chacune de ces couronnes conserve ses institutions (diète de Bohême, diète de Hongrie, États de Brabant, Sénat de Milan, Sejm galicien), son droit coutumier, ses administrateurs locaux. Les acquisitions de Karlowitz 1699 (Hongrie intégrale), Utrecht-Rastatt 1714 (Pays-Bas, Italie), Passarowitz 1718, Galicie 1772 **ne produisent pas de choc d'hétérogénéité structurel** — elles ajoutent des chapeaux au souverain sans mobiliser les élites viennoises pour un travail de digestion. La seule marge qui fait exception est la **Bohême** après la Verneuerte Landesordnung de 1627 : proximité géographique et linguistique, noblesse germanophone, intégration administrative progressive, germanisation culturelle étalée sur le XVIIe-XVIIIe siècle. C'est pourquoi la phase oligarchique autrichienne n'est prolongée que d'environ +30 ans (231 ans, proche de la norme canonique) et non de +145 ans comme l'Espagne ou +437 comme Venise.
+
+**Espagne habsbourgeoise :**
+Cas intermédiaire. L'Aragon conserve ses fueros et institutions propres jusqu'aux décrets de Nueva Planta (1707-1716), ce qui ressemble à une union personnelle. Mais Castille et Aragon sont culturellement très proches (langues apparentées, catholicité commune, traditions convergentes) — analogue à France d'oïl / Occitanie. Donc le choc d'hétérogénéité existe mais est moins intense qu'il ne le serait dans un cas plus culturellement distant. L'empire colonial américain, en revanche, est administré directement (vice-rois, corregidores, audiencias) par du personnel castillan — c'est le vrai moteur du prolongement espagnol (~345 ans de phase oligarchique).
 
 **Israël (-332) :**
 La conquête macédonienne hétérogénéise la société judéenne (hellénisation) sans détruire les institutions (le Grand Prêtre reste en fonction). Le Parcours stagne pendant ~192 ans le temps que les factions se recomposent autour des nouveaux clivages (Oniades vs Tobiades). *Note : le mécanisme est `choc_exogene` (conquête extérieure) et non `choc_heterogeneite` (expansion du territoire). L'hétérogénéisation est culturelle, pas territoriale — la superficie d'Israël ne change pas. Le saillant porte le flag `territorial: false`.*
