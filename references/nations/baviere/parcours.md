@@ -191,12 +191,12 @@
 - summary: Guillaume IV est le premier duc de Bavière régnant sous le cadre codifié de la primogéniture (1506), disposant d'un duché indivisible avec un fisc en consolidation, une administration permanente (héritée des Vicedomsämter), et un contrôle croissant sur l'Église bavaroise.
 - description: Guillaume IV règne de 1508 à 1550, d'abord sous co-régence avec son frère Louis X (dont le rôle diminue après la reconnaissance formelle de la primogéniture). Il hérite d'un duché réunifié et du cadre institutionnel codifié par son père. Son pouvoir n'est pas absolu — les Landstände conservent un véritable pouvoir fiscal et ont même gouverné pendant sa minorité — mais il dispose pour la première fois d'un État central qui survit aux successions sans fragmentation : fisc central (encore dépendant des octrois des états, mais régulier), administration permanente (Vicedomsämter, Landgerichte), et contrôle croissant de l'Église. La distinction avec la phase féodale est nette : après 1506, le pouvoir ne repose plus sur la personne du duc mais sur un cadre institutionnel.
 
-#### Saillant : Pic oligarchique
+#### Saillant : Acmé oligarchique
 - type: saillant
 - start: 1555
 - figure: Albert V
 - subtitle: Albert V
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: medium
 - summary: Albert V (1550-1579) porte le pouvoir ducal oligarchique à son maximum en combinant le contrôle confessionnel (Jésuites) et la centralisation administrative, avant que sa répression des nobles protestants (1564) ne déclenche la polarisation.
 - description: Albert V est le duc le plus puissant de la phase oligarchique bavaroise. Il combine un réseau confessionnel efficace (les Jésuites, solidement implantés à Ingolstadt depuis 1542, deviennent l'ossature idéologique de l'État), une administration en consolidation rapide, et un contrôle croissant sur l'Église bavaroise. Son pouvoir est à son apogée au début des années 1560, avant que la répression des nobles protestants (1564) ne transforme le consensus oligarchique en conflit factieux. Le parallèle avec François Ier en France est partiel : comme François Ier, Albert V pousse la centralisation au point de provoquer la polarisation religieuse qui mène à la guerre sociale. Mais la compression temporelle est extrême — en Bavière, le pic et le début de la polarisation sont séparés de quelques années à peine.
@@ -429,7 +429,7 @@
 | Pic féodal | Louis IV le Bavarois (1328-1347) |
 | Pacte oligarchique | Primogéniture (1506) |
 | 1er monarque oligarchique | Guillaume IV (1508) |
-| Pic oligarchique | Albert V (1555) |
+| Acmé oligarchique | Albert V (1555) |
 | Guerre sociale | 1564-1597 |
 | 1er monarque absolu | Maximilien Ier (1597) |
 | Pic absolutiste [1] | Maximilien III Joseph (1756) |

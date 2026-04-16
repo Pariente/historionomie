@@ -122,10 +122,10 @@ Première sous-phase de la phase oligarchique. L'État central se construit et s
 **Indicateurs observables** (qui peuvent coïncider ou se chevaucher) :
 - L'expansion extérieure cesse d'absorber l'énergie élitaire (souvent marquée par un saillant `fin de l'expansion` : Cateau-Cambrésis 1559, Agnadello 1509, fin des conquêtes anglaises en France)
 - Les factions se structurent politiquement et idéologiquement autour du contrôle de l'administration, de la fiscalité et de la justice
-- Le pic oligarchique (s'il est identifié) peut précéder ou coïncider avec ce basculement, mais n'en est pas le marqueur strict
+- Le acmé oligarchique (s'il est identifié) peut précéder ou coïncider avec ce basculement, mais n'en est pas le marqueur strict
 - Un événement catalyseur peut accélérer le basculement (massacre, crise religieuse, choc exogène) sans pour autant le définir
 
-**Important** : le pic oligarchique se situe **pendant** l'essor oligarchique, pas à sa fin. Il peut même rester pertinent comme figure dominante pendant le début de la polarisation. Ne pas confondre « pic oligarchique » et « fin de l'essor ».
+**Important** : le acmé oligarchique se situe **pendant** l'essor oligarchique, pas à sa fin. Il peut même rester pertinent comme figure dominante pendant le début de la polarisation. Ne pas confondre « acmé oligarchique » et « fin de l'essor ».
 
 ### Exemples
 | Parcours | Début | Fin (basculement) | Durée | Dynamique du basculement |
@@ -200,9 +200,9 @@ Troisième et dernière sous-phase de la phase oligarchique. Le conflit ouvert e
 | Milan [2] | 1780 (réformes joséphines) | 1796 (Napoléon) | ~16 ans |
 
 ### Règle opératoire
-- **Durée typique : 15-60 ans**. Une guerre sociale qui dure plus de 60 ans doit être examinée — soit elle contient une DGRO déguisée, soit le tiers n'est pas encore identifié correctement.
-- **La résolution par un tiers est le marqueur fondamental** : ni la faction patrimoniale ni la faction prébendière ne gagne. Si l'une gagne clairement, ce n'est pas une guerre sociale au sens strict (cf. Contre-Réforme autrichienne qui est une victoire asymétrique catholique, donc pas une guerre sociale).
-- **Le tiers est souvent une nouvelle dynastie ou un prince étranger** : Tudors (Angleterre), Bourbons en Espagne, Habsbourg-Lorraine en Autriche, Henri IV qui change de confession en France.
+- **Durée typique : 15-60 ans**. Une guerre sociale qui dure plus de 60 ans doit être examinée — soit elle contient une DGRO déguisée, soit le 1er MO absolu n'est pas encore identifié correctement.
+- **La résolution par construction d'un nouveau cadre central est le marqueur fondamental**. Trois patterns canoniques (cf. `phase_absolutiste.md` et `elites.md`) : (1) tiers neutre extérieur aux deux factions (Tudor Henri VII, Philippe V Bourbon) ; (2) conversion/transcendance personnelle (Henri IV huguenot converti) ; (3) victoire de faction qui construit le nouveau cadre (Simon Thassi maccabéen → dynastie hasmonéenne).
+- **Distinction critique avec la victoire asymétrique** : si une faction gagne militairement mais ne construit pas de cadre central transcendant nouveau, ce n'est pas une guerre sociale résolue mais une polarisation prolongée. Exemple : Contre-Réforme autrichienne (1620) qui ne résout pas la phase oligarchique autrichienne — celle-ci continue jusqu'à la Guerre de Succession d'Autriche (1740-1748) qui est la vraie guerre sociale autrichienne, résolue par Marie-Thérèse.
 
 ---
 
@@ -414,9 +414,9 @@ Les bornes marquées ⚠️ sont **dynamiques** (basculement de logique, pas un 
 4. **Priorité absolue à la fiabilité des dates** — l'usage principal du corpus est la régression quantitative d'Alyocha. Des bornes floues ou mal justifiées polluent les données.
 5. **Quand une sous-phase « optionnelle » (bascule oligarchique, IR) est absente**, justifier structurellement pourquoi — ne pas simplement l'omettre en silence.
 6. **Positionnement des saillants dans les sous-phases** : certains saillants sont des bornes (éveil féodal, pacte, 1er monarque, 1er monarque absolu, Remontrance, explosion AR, IR, GR), d'autres se situent **à l'intérieur** d'une sous-phase sans marquer ses bornes :
-   - **Pic oligarchique** : interne à l'essor oligarchique
+   - **Acmé oligarchique** : interne à l'essor oligarchique
    - **Fin de l'expansion (oligarchique)** : peut coïncider avec le basculement essor → polarisation, mais n'en est pas la borne stricte
    - **DGRO** : interne à l'absolutisation (son écrasement marque la fin)
    - **Pic absolutiste** : interne à l'impérialisme absolutiste
    - **Fin de l'expansion (absolutiste)** : interne à l'impérialisme absolutiste, peut précéder la Remontrance
-7. **Les saillants canoniques servent de marqueurs récurrents** : éveil féodal, pic féodal, crise féodale, pacte oligarchique, 1er monarque oligarchique, pic oligarchique, fin de l'expansion, guerre sociale, 1er monarque absolu, DGRO, pic absolutiste, remontrance, explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, Glorieuse Révolution.
+7. **Les saillants canoniques servent de marqueurs récurrents** : éveil féodal, pic féodal, crise féodale, pacte oligarchique, 1er monarque oligarchique, acmé oligarchique, fin de l'expansion, guerre sociale, 1er monarque absolu, DGRO, pic absolutiste, remontrance, explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, Glorieuse Révolution.

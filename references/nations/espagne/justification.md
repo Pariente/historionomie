@@ -47,7 +47,7 @@ La guerre sociale doit se jouer à l'échelle NATIONALE. Les conflits Luna/Infan
 
 Le test discriminant absolutiste exige que l'administration centrale ait préséance incontestée sur TOUTES les administrations locales — à l'échelle nationale. Les Rois Catholiques absolutisent la Castille mais PAS l'Aragon (fueros intacts). Philippe II lui-même ne peut pas abolir les fueros aragonais après la révolte de 1591. Le test n'est passé qu'après Nueva Planta (1716).
 
-Les Rois Catholiques sont le **pic oligarchique** — la figure la plus puissante dans le cadre de la monarchie composite. Analogue de François Ier en France (pic oligarchique, Concordat de Bologne, guerres d'Italie — mais le Parlement de Paris conserve ses prérogatives).
+Les Rois Catholiques sont le **acmé oligarchique** — la figure la plus puissante dans le cadre de la monarchie composite. Analogue de François Ier en France (acmé oligarchique, Concordat de Bologne, guerres d'Italie — mais le Parlement de Paris conserve ses prérogatives).
 
 ---
 

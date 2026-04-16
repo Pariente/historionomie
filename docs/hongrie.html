@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Hongrie</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:730px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/hongrie/flag.png' alt='drapeau'>
+        <h1>Hongrie</h1>
+        <span class='header-badge badge-status'>proposition (v3)</span>
+    </div>
+    <div class="header-subtitle">Trianon ? Triaoui !</div>
+</div>
+
+<div class="briefing"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="images/hongrie/stephen-i.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#8B7355;flex-shrink:0;margin-top:3px;"></span>Féodale bouclée par les chocs externes</span><span class="insight-desc">Éveil avec Étienne Ier (1000), cycle Árpád avec pics Ladislas Ier, Béla III, Béla IV post-mongole. Bulle d&#39;or de 1222 = pacte avorté (pattern Magna Carta 1215). Invasion mongole 1241-1242 avorte le cycle. Pacte canonique = élection négociée de Charles Ier Robert après l&#39;extinction Árpád (1301-1308)</span></div></div><div class="insight-item"><img class="insight-img" src="images/hongrie/mathias-corvinus.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Essor angevin, Mohács comme fin de l&#39;expansion, Rákóczi comme guerre sociale</span><span class="insight-desc">Essor canonique 1308-1526 (Charles Ier Robert 1er MO, Louis Ier acmé oligarchique, Mathias Corvin pic tardif). Mohács 1526 marque la fin de l&#39;expansion et déclenche la polarisation. Insurrections kuruc comme polarisation prolongée (Bocskai, Bethlen, Thököly). Guerre sociale avec Rákóczi (1703-1711) résolue par Szatmár — Charles VI construit le nouveau cadre central (Consilium Regium 1723, Pragmatique 1723)</span></div></div><div class="insight-item"><img class="insight-img" src="images/hongrie/joseph-ii.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;margin-top:3px;"></span>Phase absolutiste endogène 1711-1848 sous cadre composite</span><span class="insight-desc">137 ans, dans la norme basse. 1er MO = Charles VI post-Szatmár. Consilium Regium Locumtenentiale (1723) comme organe exécutif central hongrois. Pic absolutiste = Joseph II (1780-1790) — la résistance magyare porte sur l&#39;importation culturelle allemande, pas sur l&#39;absolutisme. Fin de l&#39;expansion = Congrès de Vienne 1815. Remontrance = dissolution de la diète 1811. Ancien Régime 1811-1848 avec Âge des Réformes comme bloc contestataire</span></div></div><div class="insight-item"><img class="insight-img" src="images/hongrie/1956.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px;"></span>Double AR exogène successif — unique dans le corpus</span><span class="insight-desc">RN avortée 1848-1849 (pattern Venise/Milan), écrasement à Világos. AR exogène habsbourgeois 1849-1918 (69 ans, Bach + Ausgleich + François-Joseph), explosion par effondrement 1918. RN 1918-1947 avec Horthy comme IR régentiel, restauration avortée 1945-1947. AR exogène soviétique 1947-1989 (42 ans) avec révolution de 1956 comme réplique avortée. Glorieuse Révolution 1989-1990</span></div></div></div>
+        </div><div class="briefing-questions">
+            <div class="briefing-label">Questions ouvertes</div>
+            <div class="question-item"><span class="question-tag">Bulle d&#39;or 1222 comme pacte avorté</span><span class="question-text">Pattern Magna Carta anglaise : acte écrit, négocié, collectif, mais pas de 1er MO immédiat (86 ans d&#39;écart, rejet explicite par Charles Ier Robert en 1318). Le pacte canonique est le compromis d&#39;élection Charles Ier Robert (1308-1310).</span></div><div class="question-item"><span class="question-tag">Rákóczi comme guerre sociale canonique</span><span class="question-text">Factions kuruc (patrimonial national protestant) vs labanc (prébendier catholique loyaliste), base territoriale, mobilisation populaire, soutien international. Résolution par Szatmár 1711 + construction du nouveau cadre central par Charles VI. Pattern de résolution proche des guerres de religion françaises résolues par Henri IV (compromis qui apaise les deux factions pour consolider l&#39;exécutif central).</span></div><div class="question-item"><span class="question-tag">Double AR exogène</span><span class="question-text">Pattern unique dans le corpus : AR exogène habsbourgeois 1849-1918 puis AR exogène soviétique 1947-1989. Le précédent bohème (v2) documente un seul AR exogène soviétique. La Hongrie cumule les deux, reflétant sa position géopolitique centrale entre deux puissances tutélaires successives.</span></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:10.0607%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:27.4068%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:44.7528%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:62.0989%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:79.4449%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        <div class="tick" style="left:96.7910%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">2000</div>
+        </div>
+        
+        <div class="phase-band" style="left:0.9540%;width:9.1067%;
+            background:#e7e7e7;border-top:3px solid #A0A0A0;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase pré-féodale&lt;/strong&gt; (895 — 1000)&#10;Un siècle de construction depuis la conquête du bassin carpatique (honfoglalás, ~895) jusqu&#39;au couronnement d&#39;Étienne Ier (1000). Árpád et ses successeurs consolident une confédération tribale militairement redoutable. Défaite du Lechfeld (955) force la sédentarisation. Géza amorce la christianisation."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#A0A0A0;">Pré-féodale</div>
+            <div class="phase-band-dates">895 — 1000</div>
+        </div>
+        <div class="phase-band" style="left:10.0607%;width:26.7129%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (1000 — 1308)&#10;Phase féodale prolongée de +108 ans par le choc mongol (1241-1242) et l&#39;extinction Árpád (1301). Éveil avec Étienne Ier (1000). Trois pics féodaux canoniques. La Bulle d&#39;or de 1222 est une préfiguration de pacte qui n&#39;aboutit pas — pattern Magna Carta (1215)."
+            onclick="showDetail(2)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">1000 — 1308</div>
+        </div>
+        <div class="phase-band" style="left:36.7736%;width:34.9523%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (1308 — 1711)&#10;Phase oligarchique prolongée à 403 ans. Essor canonique 1308-1526 (Charles Ier Robert 1er MO, Louis Ier acmé oligarchique, Mathias Corvin pic tardif). Mohács 1526 = fin de l&#39;expansion. Polarisation prolongée 1526-1703 (~177 ans) par la tripartition. Guerre sociale 1703-1711 (Rákóczi), résolue par Szatmár + Charles VI."
+            onclick="showDetail(13)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">1308 — 1711</div>
+        </div>
+        <div class="phase-band" style="left:71.7259%;width:11.8820%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (1711 — 1848)&#10;Phase absolutiste hongroise dans la fourchette basse (137 ans). 1er MO = Charles VI (Charles III) post-Szatmár 1711. Consilium Regium Locumtenentiale 1723 comme organe exécutif central permanent hongrois. Absolutisation fluide sans DGRO sous Charles VI et Marie-Thérèse. Pic absolutiste = Joseph II (1780-1790) — despotisme éclairé avec résistance hongroise à l&#39;importation culturelle allemande. Fin de l&#39;expansion = Congrès de Vienne 1815 (partagée avec Autriche). Remontrance = dissolution de la diète 1811 par François Ier. Ancien Régime 1811-1848 avec Âge des Réformes (Széchenyi, Kossuth, Deák) comme bloc contestataire. Explosion 1848."
+            onclick="showDetail(21)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1711 — 1848</div>
+        </div>
+        <div class="narrow-indicator" style="left:83.6513%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (avortée)&lt;/strong&gt; (1848 — 1849)&#10;RN avortée canonique. Explosion par l&#39;onde de mars 1848 (April Laws ratifiées par Ferdinand V), expérience parlementaire sous Batthyány, phase aiguë avec la Déclaration d&#39;indépendance de Debrecen et Kossuth gouverneur-président. Écrasée par l&#39;intervention russe demandée par François-Joseph. Capitulation à Világos (13 août 1849). Pas de moment thermidorien. Pattern structurellement identique à Venise 1848 (République de Manin) et à Milan 1848 (Cinq Journées)."
+            onclick="showDetail(29)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:83.6080%;width:0.0867%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (avortée)&lt;/strong&gt; (1848 — 1849)&#10;RN avortée canonique. Explosion par l&#39;onde de mars 1848 (April Laws ratifiées par Ferdinand V), expérience parlementaire sous Batthyány, phase aiguë avec la Déclaration d&#39;indépendance de Debrecen et Kossuth gouverneur-président. Écrasée par l&#39;intervention russe demandée par François-Joseph. Capitulation à Világos (13 août 1849). Pas de moment thermidorien. Pattern structurellement identique à Venise 1848 (République de Manin) et à Milan 1848 (Cinq Journées)."
+            onclick="showDetail(29)">
+            
+            
+        </div>
+        <div class="phase-band" style="left:83.6947%;width:5.9844%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Ancien Régime exogène habsbourgeois&lt;/strong&gt; (1849 — 1918)&#10;Phase d&#39;Ancien Régime exogène habsbourgeois de 69 ans (1849-1918). Pattern analogue à l&#39;AR exogène soviétique bohème (1948-1989). Néo-absolutisme Bach 1849-1859 comme phase répressive initiale. Défaites autrichiennes (Solferino 1859, Sadowa 1866) forcent l&#39;accommodation. Compromis de 1867 (Ausgleich) comme normalisation accommodationniste — les élites hongroises acceptent le cadre en échange d&#39;un gouvernement magyar responsable à Budapest. Long règne de François-Joseph (1848-1916, 68 ans) maximisant la sédimentation. Développement économique et culturel remarquable dans un cadre tutélaire. Explosion 1918 par effondrement militaire."
+            onclick="showDetail(35)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1849 — 1918</div>
+        </div>
+        <div class="phase-band" style="left:89.6791%;width:2.5152%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale&lt;/strong&gt; (1918 — 1947)&#10;RN canonique 1918-1947 avec séquence complète jusqu&#39;à la restauration avortée. Révolution initiale 1918-1920 (Károlyi, Kun, Horthy thermidorien). Impérialisme revanchard 1920-1944 avec Horthy comme IR régentiel (revanchisme Trianon, Vienna Awards, alliance Axe, entrée en guerre). Chute 1944-1945 (occupation allemande puis soviétique). Restauration avortée 1945-1947 par tactique du salami communiste. Pas de Glorieuse Révolution atteinte — la Hongrie bascule dans l&#39;AR exogène soviétique."
+            onclick="showDetail(37)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale</div>
+            <div class="phase-band-dates">1918 — 1947</div>
+        </div>
+        <div class="phase-band" style="left:92.1943%;width:3.6427%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Ancien Régime exogène soviétique&lt;/strong&gt; (1947 — 1989)&#10;Phase d&#39;Ancien Régime exogène soviétique de 42 ans. Stalinisme Rákosi 1949-1953 (phase répressive initiale), dégel Imre Nagy 1953-1955, retour Rákosi. **Glorieuse Révolution avortée de 1956** — Nagy revient au pouvoir, annonce le multipartisme et la sortie du Pacte de Varsovie, écrasement par l&#39;Armée rouge le 4 novembre 1956. Normalisation Kádár 1956-1988 (« communisme goulash »). Crise économique et transition 1988-1989."
+            onclick="showDetail(48)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1947 — 1989</div>
+        </div>
+        <div class="narrow-indicator" style="left:95.8803%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (finale)&lt;/strong&gt; (1989 — 1990)&#10;RN finale très courte (1 an), pacifique et négociée. Explosion par proclamation de la République le 23 octobre 1989 (date symbolique reliée à 1956). Restauration démocratique par négociation de la Table ronde, ouverture de la frontière autrichienne (août 1989). Glorieuse Révolution par élections libres 25 mars-8 avril 1990 et gouvernement Antall. Pattern proche de la Bohême RN 2 (1989-1993)."
+            onclick="showDetail(52)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:95.8369%;width:0.0867%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (finale)&lt;/strong&gt; (1989 — 1990)&#10;RN finale très courte (1 an), pacifique et négociée. Explosion par proclamation de la République le 23 octobre 1989 (date symbolique reliée à 1956). Restauration démocratique par négociation de la Table ronde, ouverture de la frontière autrichienne (août 1989). Glorieuse Révolution par élections libres 25 mars-8 avril 1990 et gouvernement Antall. Pattern proche de la Bohême RN 2 (1989-1993)."
+            onclick="showDetail(52)">
+            
+            
+        </div>
+        <div class="phase-band" style="left:95.9237%;width:3.1223%;
+            background:#c6e3ff;border-top:3px solid #1E90FF;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase parlementaire&lt;/strong&gt; (1990 — en cours)&#10;La Hongrie entre dans la phase parlementaire avec les élections libres de 1990 et le gouvernement Antall. Démocratie parlementaire multipartite stable, intégration euro-atlantique (OTAN 1999, UE 2004)."
+            onclick="showDetail(57)">
+            <div class="phase-band-label" style="color:#1E90FF;">Parlementaire</div>
+            <div class="phase-band-dates">1990 — en cours</div>
+        </div>
+        
+        <div class="subphase-band" style="left:0.9540%;width:9.1067%;
+            background:#d4d4d4;border-bottom:2px solid #A0A0A0;"
+            data-tooltip="&lt;strong&gt;Percolation élitaire&lt;/strong&gt; (895 — 1000)&#10;Installation des tribus magyares, raids, défaite du Lechfeld, christianisation sous Géza. Aucun souverain ne franchit le seuil d&#39;éveil féodal."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Percolation élitaire</span>
+        </div>
+        <div class="subphase-band" style="left:10.0607%;width:26.1058%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (1000 — 1301)&#10;Trois siècles de cycle féodal árpádien. Éveil Étienne Ier, pics Ladislas Ier / Béla III / Béla IV, Bulle d&#39;or avortée, choc mongol, reconstruction, décadence. Se termine avec la mort d&#39;André III et l&#39;extinction Árpád (1301)."
+            onclick="showDetail(3)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:36.1665%;width:0.6071%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Bascule oligarchique&lt;/strong&gt; (1301 — 1308)&#10;Sept ans de bascule après l&#39;extinction Árpád. Interrègne et compétition dynastique entre trois candidats étrangers (Venceslas III de Bohême couronné 1301, Otton III de Bavière couronné 1305, Charles Robert d&#39;Anjou couronné symboliquement 1301 mais pas reconnu). Plusieurs cérémonies de couronnement invalides faute de respect des formes canoniques (couronne, lieu, consentement de la diète). La diète magnate impose progressivement Charles Ier Robert en 1308 avant la cérémonie canonique de 1310 à Székesfehérvár avec la Sainte Couronne par l&#39;archevêque d&#39;Esztergom."
+            onclick="showDetail(11)">
+            <span class="subphase-label">Bascule oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:36.7736%;width:18.9072%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (1308 — 1526)&#10;Essor canonique de 218 ans. Charles Ier Robert construit l&#39;État angevin (lucrum camaræ 1323, florin d&#39;or, honores, banderia). Louis Ier porte la Hongrie à son apogée avec les décrets de 1351 (una eademque libertas, aviticitas). Sigismond traverse les guerres hussites. Mathias Corvin comme second acmé oligarchique tardif. Dérive jagellone (1490-1526) interrompue par Mohács."
+            onclick="showDetail(14)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:55.6808%;width:15.3513%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (1526 — 1703)&#10;Polarisation prolongée de 177 ans. Tripartition (1541-1699) avec Hongrie royale habsbourgeoise + Transylvanie ottomane autonome + Pashalik de Buda. Polarisation confessionnelle (catholiques vs protestants) superposée au clivage centralisateur / particulariste. Insurrections Bocskai (1604-1606), Bethlen (1619-1626), Thököly (1678-1685) comme manifestations croissantes. Reconquête anti-ottomane 1683-1699 (Karlowitz) comme exutoire temporaire. Polarisation culmine à la fin du XVIIe siècle."
+            onclick="showDetail(18)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:71.0321%;width:0.6938%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1703 — 1711)&#10;Insurrection de Rákóczi (1703-1711) comme guerre sociale canonique. Factions : kuruc (patrimonial national, protestant, base territoriale Haute-Hongrie et Transylvanie) vs labanc (prébendier catholique loyaliste). Résolution par Szatmár (29 avril 1711) : victoire militaire labanc + intégration des revendications kuruc dans le nouveau cadre central construit par Charles VI."
+            onclick="showDetail(19)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:71.7259%;width:5.9844%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1711 — 1780)&#10;De Szatmár à la mort de Marie-Thérèse. Charles VI (Charles III) et Marie-Thérèse construisent l&#39;État central hongrois sous cadre composite habsbourgeois. Consilium Regium Locumtenentiale (1723), Pragmatique Sanction (1723), codifications progressives, Urbarium (1767). Absolutisation fluide sans DGRO — magnats cooptés via Pálffy."
+            onclick="showDetail(22)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:77.7103%;width:2.6886%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (1780 — 1811)&#10;De Joseph II à la dissolution de la diète de 1811. Joseph II comme pic absolutiste (despotisme éclairé, réformes radicales, résistance hongroise à l&#39;importation culturelle allemande). Léopold II rétraction partielle, François Ier guerres napoléoniennes. Fin de l&#39;expansion = Congrès de Vienne 1815 (partagée avec Autriche). L&#39;impérialisme hongrois est porté par la monarchie habsbourgeoise commune."
+            onclick="showDetail(24)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band narrow" style="left:80.3990%;width:3.2090%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime&lt;/strong&gt; (1811 — 1848)&#10;De la dissolution de la diète (1811) comme Remontrance à l&#39;explosion de 1848. 14 ans sans diète (1811-1825) puis réouverture par François Ier affaibli. Âge des Réformes (1825-1848) comme bloc contestataire : Széchenyi (conservateur progressiste), Kossuth (radical), Deák (libéral modéré), Wesselényi. Blocage croissant, sédimentation, loi sur la langue hongroise 1844 comme dernière concession. Explosion par onde révolutionnaire 1848."
+            onclick="showDetail(26)">
+            <span class="subphase-label">Ancien régime</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:83.6080%;width:0.0867%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1848 — 1849)&#10;Séquence canonique compressée en 17 mois. Explosion (mars 1848, onde viennoise, April Laws, Batthyány), expérience parlementaire (6 mois, gouvernement Batthyány responsable), phase aiguë (Déclaration d&#39;indépendance de Debrecen, Kossuth gouverneur-président), écrasement militaire (Világos, août 1849). Pas de moment thermidorien atteint."
+            onclick="showDetail(30)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band" style="left:83.6947%;width:5.9844%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime exogène&lt;/strong&gt; (1849 — 1918)&#10;Sous-phase unique de 69 ans. Néo-absolutisme Bach 1849-1859, Ausgleich 1867, long règne François-Joseph, développement économique et culturel, Millénaire 1896, bloc contestataire croissant, effondrement 1918."
+            onclick="showDetail(36)">
+            <span class="subphase-label">Ancien régime exogène</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:89.6791%;width:0.1735%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1918 — 1920)&#10;Séquence canonique compressée en 2 ans. Explosion 31 octobre 1918 (Révolution des Chrysanthèmes, Károlyi), expérience parlementaire (République populaire hongroise, novembre 1918-mars 1919), phase aiguë (République des Conseils de Béla Kun, 133 jours), moment thermidorien (contre-révolution de Szeged, Terreur blanche, intervention roumaine, 1919-mars 1920)."
+            onclick="showDetail(38)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:89.8526%;width:2.0815%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Impérialisme revanchard&lt;/strong&gt; (1920 — 1944)&#10;Régence Horthy 1920-1944. Revanchisme territorial obsessionnel contre Trianon, alliance progressive avec l&#39;Italie puis l&#39;Allemagne nazie, récupération partielle des territoires perdus (Vienna Awards 1938 et 1940, Ruthénie 1939, Bačka 1941), entrée en guerre contre l&#39;URSS juin 1941, lois raciales antisémites progressives, effort militaire catastrophique, chute 1944-1945."
+            onclick="showDetail(43)">
+            <span class="subphase-label">Impérialisme revanchard</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:92.0208%;width:0.1735%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt; (1945 — 1947)&#10;Brève restauration démocratique 1945-1947 sous occupation alliée (majoritairement soviétique). Élections libres de novembre 1945 gagnées par les Petits Propriétaires (57%). « Tactique du salami » communiste élimine progressivement les partis non-communistes. Restauration avortée par le Coup de Budapest 1947-1948 — la Hongrie bascule dans l&#39;AR exogène soviétique avant la Glorieuse Révolution."
+            onclick="showDetail(45)">
+            <span class="subphase-label">Restauration</span>
+        </div>
+        <div class="subphase-band narrow" style="left:92.1943%;width:3.6427%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime exogène&lt;/strong&gt; (1947 — 1989)&#10;Sous-phase unique de 42 ans. Stalinisme Rákosi 1949-1953, dégel, retour Rákosi, Glorieuse Révolution avortée de 1956 (tentative d&#39;ancrage parlementaire + sortie du Pacte de Varsovie écrasée par l&#39;Armée rouge), normalisation Kádár 1956-1988, crise économique, transition 1988-1989."
+            onclick="showDetail(49)">
+            <span class="subphase-label">Ancien régime exogène</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:95.8369%;width:0.0867%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1989 — 1990)&#10;Transition démocratique pacifique 1988-1990. Chute de Kádár (mai 1988), réformateurs du MSZMP négocient avec l&#39;opposition, Table ronde (juin-septembre 1989), ouverture de la frontière autrichienne (août 1989), proclamation de la République le 23 octobre 1989, élections libres 25 mars-8 avril 1990, installation du gouvernement Antall."
+            onclick="showDetail(53)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:95.8369%;width:0.0867%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt; (1989 — 1990)&#10;Restauration institutionnelle très courte entre la proclamation de la République (23 octobre 1989) et l&#39;installation du gouvernement Antall après les élections libres (mai 1990). Pas d&#39;IR. Pattern analogue à la restauration bohème 1989-1993."
+            onclick="showDetail(55)">
+            <span class="subphase-label">Restauration</span>
+        </div>
+        
+        
+    <div class="area-chart" style="top:230px;">
+        
+        <div class="area-chart-label" style="left:0.9540%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group has-marges" style="left:10.0607%;width:8.8465%;height:34.4px;"><div class="area-noyau" style="height:13.8px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~80 000 km²"></div><div class="area-marges" style="bottom:13.8px;height:20.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~120 000 km² — Royaume d&#39;Étienne Ier — bassin carpatique"></div></div>
+        <div class="area-step-group has-marges" style="left:18.9072%;width:8.4996%;height:41.3px;"><div class="area-noyau" style="height:13.8px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~80 000 km²"></div><div class="area-marges" style="bottom:13.8px;height:27.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~160 000 km² — + Croatie (Pacta Conventa, union personnelle) — Coloman"></div></div>
+        <div class="area-step-group has-marges" style="left:27.4068%;width:3.6427%;height:48.2px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:32.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~190 000 km² — Apogée árpádienne pré-mongole (Béla III)"></div></div>
+        <div class="area-step-group has-marges" style="left:31.0494%;width:12.1422%;height:48.2px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:32.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~190 000 km² — Post-invasion mongole — territoire maintenu"></div></div>
+        <div class="area-step-group has-marges" style="left:43.1917%;width:9.3669%;height:56.8px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:41.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~240 000 km² — Apogée angevine sous Louis Ier"></div></div>
+        <div class="area-step-group has-marges" style="left:52.5585%;width:3.1223%;height:55.1px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:39.6px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~230 000 km² — Royaume de Mathias Corvin"></div></div>
+        <div class="area-step-group has-marges" style="left:55.6808%;width:1.3010%;height:47.4px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:31.9px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~185 000 km² — Pré-Mohács (Louis II Jagellon)"></div></div>
+        <div class="area-step-group has-marges" style="left:56.9818%;width:5.6375%;height:20.7px;"><div class="area-noyau" style="height:6.9px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~40 000 km²"></div><div class="area-marges" style="bottom:6.9px;height:13.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~80 000 km² — Tripartition — Hongrie royale + Transylvanie + Buda ottomane"></div></div>
+        <div class="area-step-group has-marges" style="left:62.6193%;width:8.0659%;height:24.1px;"><div class="area-noyau" style="height:6.9px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~40 000 km²"></div><div class="area-marges" style="bottom:6.9px;height:17.2px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~100 000 km² — Paix de Zsitvatorok"></div></div>
+        <div class="area-step-group has-marges" style="left:70.6852%;width:1.6479%;height:56.0px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:40.5px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~235 000 km² — Karlowitz — Hongrie réunifiée sous Habsbourg"></div></div>
+        <div class="area-step-group has-marges" style="left:72.3330%;width:12.9228%;height:59.4px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:43.9px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~255 000 km² — + Banat, Temesvár (Passarowitz) — pic territorial"></div></div>
+        <div class="area-step-group has-marges" style="left:85.2559%;width:0.9540%;height:56.0px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:40.5px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~235 000 km² — Ausgleich"></div></div>
+        <div class="area-step-group has-marges" style="left:86.2099%;width:3.6427%;height:62.0px;"><div class="area-noyau" style="height:15.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~90 000 km²"></div><div class="area-marges" style="bottom:15.5px;height:46.5px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~270 000 km² — + Bosnie-Herzégovine"></div></div>
+        <div class="area-step-group" style="left:89.8526%;width:1.5611%;height:16.0px;"><div class="area-noyau" style="height:16.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~93 000 km² — Trianon — réduction au noyau magyar"></div></div>
+        <div class="area-step-group has-marges" style="left:91.4137%;width:0.1735%;height:18.1px;"><div class="area-noyau" style="height:16.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~93 000 km²"></div><div class="area-marges" style="bottom:16.0px;height:2.1px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~12 000 km² — First Vienna Award"></div></div>
+        <div class="area-step-group has-marges" style="left:91.5872%;width:0.0867%;height:23.4px;"><div class="area-noyau" style="height:16.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~93 000 km²"></div><div class="area-marges" style="bottom:16.0px;height:7.4px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~43 000 km² — Second Vienna Award"></div></div>
+        <div class="area-step-group has-marges" style="left:91.6739%;width:0.3469%;height:25.5px;"><div class="area-noyau" style="height:16.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~93 000 km²"></div><div class="area-marges" style="bottom:16.0px;height:9.5px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~55 000 km² — + Ruthénie, Bačka"></div></div>
+        <div class="area-step-group" style="left:92.0208%;width:3.9029%;height:16.0px;"><div class="area-noyau" style="height:16.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~93 000 km² — Retour aux frontières de Trianon"></div></div>
+        <div class="area-step-group" style="left:95.9237%;width:4.0763%;height:16.0px;"><div class="area-noyau" style="height:16.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~93 000 km² — République de Hongrie"></div></div>
+        
+        <div class="area-edge" style="left:18.9072%;height:41.3px;"></div>
+        <div class="area-edge" style="left:27.4068%;height:48.2px;"></div>
+        <div class="area-edge" style="left:31.0494%;height:48.2px;"></div>
+        <div class="area-edge" style="left:43.1917%;height:56.8px;"></div>
+        <div class="area-edge" style="left:52.5585%;height:56.8px;"></div>
+        <div class="area-edge" style="left:55.6808%;height:55.1px;"></div>
+        <div class="area-edge" style="left:56.9818%;height:47.4px;"></div>
+        <div class="area-edge" style="left:62.6193%;height:24.1px;"></div>
+        <div class="area-edge" style="left:70.6852%;height:56.0px;"></div>
+        <div class="area-edge" style="left:72.3330%;height:59.4px;"></div>
+        <div class="area-edge" style="left:85.2559%;height:59.4px;"></div>
+        <div class="area-edge" style="left:86.2099%;height:62.0px;"></div>
+        <div class="area-edge" style="left:89.8526%;height:62.0px;"></div>
+        <div class="area-edge" style="left:91.4137%;height:18.1px;"></div>
+        <div class="area-edge" style="left:91.5872%;height:23.4px;"></div>
+        <div class="area-edge" style="left:91.6739%;height:25.5px;"></div>
+        <div class="area-edge" style="left:92.0208%;height:25.5px;"></div>
+        <div class="area-edge" style="left:95.9237%;height:16.0px;"></div>
+    </div>
+        
+        <div class="area-saillant-group" style="left:55.6808%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Bataille de Mohács (1526)&#10;Le 29 août 1526, l&#39;armée ottomane de Soliman le Magnifique écrase l&#39;armée hongroise à Mohács. Louis II Jagellon meurt, éteignant la dynastie. Tripartition consolidée en 1541 (Hongrie royale, Transylvanie, Pashalik de Buda)."
+                onclick="showDetail(17)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Fin de l&#39;expansion</span><span class="saillant-date">1526</span></div>
+        </div>
+        
+        <div class="saillant-group" style="left:10.0607%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Couronnement et organisation comitale (1000)&#10;Étienne Ier est couronné le 25 décembre 1000 à Esztergom avec une couronne envoyée par le pape Sylvestre II. Archevêché d&#39;Esztergom, organisation en comitats, lois écrites, unification militaire par soumission des chefs tribaux rivaux."
+                onclick="showDetail(4)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Couronnement et organisation comitale</span><span class="saillant-date">1000</span></div>
+        </div>
+        <div class="saillant-group" style="left:16.7389%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Saint Ladislas (1077)&#10;Ladislas Ier consolide le royaume árpádien après une génération de crises dynastiques. Législation sévère, défense contre les Coumans, canonisation d&#39;Étienne Ier (1083). Canonisé lui-même en 1192."
+                onclick="showDetail(5)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Saint Ladislas</span><span class="saillant-date">1077</span></div>
+        </div>
+        <div class="saillant-group" style="left:24.9783%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Roi byzantinisant (1172)&#10;Béla III, éduqué à la cour byzantine de Manuel Ier Comnène, porte le royaume árpádien à son apogée pré-mongole. Premier usage de la double croix, cour brillante, revenu annuel parmi les plus élevés d&#39;Europe."
+                onclick="showDetail(6)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Roi byzantinisant</span><span class="saillant-date">1172</span></div>
+        </div>
+        <div class="saillant-group" style="left:29.3148%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Aranybulla (1222)&#10;Le 24 avril 1222, André II promulgue à Székesfehérvár la Bulle d&#39;or qui codifie les privilèges de la noblesse et garantit le ius resistendi. Structure analogue à la Magna Carta anglaise (1215). Pacte avorté — ne produit pas de 1er MO immédiat, rejeté en 1318 par Charles Ier Robert."
+                onclick="showDetail(7)">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Aranybulla</span><span class="saillant-date">1222</span></div>
+        </div>
+        <div class="saillant-group" style="left:30.9627%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Bataille de Mohi (1241)&#10;L&#39;armée mongole de Batu Khan écrase Béla IV à Mohi (11 avril 1241) et saccage le royaume pendant un an. ~25% de population tuée. Retrait mongol inattendu (mars 1242) permet la reconstruction, mais Béla IV doit concéder des privilèges massifs aux magnats — le cycle féodal est paradoxalement renforcé par les concessions de reconstruction."
+                onclick="showDetail(8)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Bataille de Mohi</span><span class="saillant-date">1241</span></div>
+        </div>
+        <div class="saillant-group" style="left:31.0494%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Second fondateur (1242)&#10;Béla IV reconstruit le royaume après l&#39;invasion mongole et est surnommé « second fondateur ». Construction systématique de châteaux de pierre, refondation des villes, immigration encouragée, guerres contre Ottokar II de Bohême."
+                onclick="showDetail(9)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Second fondateur</span><span class="saillant-date">1242</span></div>
+        </div>
+        <div class="saillant-group" style="left:36.1665%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Extinction Árpád (1301)&#10;Le 14 janvier 1301, André III, dernier des Árpád, meurt sans héritier mâle. Interrègne de sept ans avec compétition dynastique entre Venceslas III de Bohême, Otton III de Bavière, Charles Robert d&#39;Anjou."
+                onclick="showDetail(10)">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Extinction Árpád</span><span class="saillant-date">1301</span></div>
+        </div>
+        <div class="saillant-group" style="left:36.7736%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Compromis d&#39;élection (1308)&#10;Après l&#39;extinction Árpád et sept ans de compétition dynastique, la diète magnate élit définitivement Charles Ier Robert en 1308 contre des garanties de respect des privilèges. Cérémonie canonique avec la Sainte Couronne par l&#39;archevêque d&#39;Esztergom en 1310."
+                onclick="showDetail(12)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Compromis d&#39;élection</span><span class="saillant-date">1308</span></div>
+        </div>
+        <div class="saillant-group" style="left:36.7736%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Caroberto d&#39;Anjou (1308)&#10;Charles Ier Robert d&#39;Anjou (r. 1308-1342) est le premier monarque oligarchique hongrois canonique. Réformes fiscales (lucrum camaræ 1323, florin d&#39;or), système des honores, armée banderiale, transfert de la capitale à Visegrád, Congrès de 1335."
+                onclick="showDetail(15)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Caroberto d&#39;Anjou</span><span class="saillant-date">1308</span></div>
+        </div>
+        <div class="saillant-group" style="left:49.7832%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Acmé oligarchique&lt;/strong&gt;&#10;Mátyás Hunyadi (1458)&#10;Mathias Corvin, élu roi par la diète en 1458, est le acmé oligarchique hongrois : centralisation maximale, Armée Noire mercenaire permanente, conquêtes (Vienne 1485-1490, Silésie, Moravie), Bibliotheca Corviniana."
+                onclick="showDetail(16)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé oligarchique</span><span class="saillant-figure">Mátyás Hunyadi</span><span class="saillant-date">1458</span></div>
+        </div>
+        <div class="saillant-group" style="left:71.0321%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Insurrection et compromis de Szatmár (1703)&#10;Insurrection de Rákóczi (1703-1711), résolue par Szatmár 1711 — Pálffy négocie, Charles VI ratifie, construction d&#39;un nouveau cadre central dans les années 1712-1723 (Consilium Regium 1723, Pragmatique Sanction 1723)."
+                onclick="showDetail(20)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Insurrection et compromis de Szatmár</span><span class="saillant-date">1703</span></div>
+        </div>
+        <div class="saillant-group" style="left:71.7259%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Charles III en Hongrie (1711)&#10;Charles VI (Charles III en Hongrie, r. 1711-1740) est le premier monarque absolu hongrois. Il ratifie Szatmár, construit les institutions absolutistes hongroises dans le cadre composite habsbourgeois, consolide l&#39;exécutif central hongrois sans provoquer de DGRO."
+                onclick="showDetail(23)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Charles III en Hongrie</span><span class="saillant-date">1711</span></div>
+        </div>
+        <div class="saillant-group" style="left:77.7103%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Pic absolutiste&lt;/strong&gt;&#10;Despotisme éclairé (1780)&#10;Joseph II (r. seul 1780-1790) est le pic absolutiste hongrois. Despote éclairé rationaliste : abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation (1782), germanisation administrative (1784, rétractée), réorganisation des comitats. Résistance hongroise sur l&#39;importation culturelle, pas sur l&#39;absolutisme."
+                onclick="showDetail(25)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic absolutiste</span><span class="saillant-figure">Despotisme éclairé</span><span class="saillant-date">1780</span></div>
+        </div>
+        <div class="saillant-group" style="left:80.3990%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Remontrance&lt;/strong&gt;&#10;Dissolution de la diète (1811)&#10;La dissolution de la diète de 1811 par François Ier (après refus des subsides sans réformes compensatoires) est la Remontrance hongroise. François Ier impose par décret une dévaluation monétaire (patente de 1811). La diète n&#39;est pas reconvoquée pendant 14 ans (1811-1825)."
+                onclick="showDetail(28)">
+                <span class="material-icons">record_voice_over</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Remontrance</span><span class="saillant-figure">Dissolution de la diète</span><span class="saillant-date">1811</span></div>
+        </div>
+        <div class="saillant-group" style="left:80.7459%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Congrès de Vienne (1815)&#10;Le Congrès de Vienne (1814-1815) marque la fin de l&#39;expansion de la monarchie habsbourgeoise. La Hongrie n&#39;a pas d&#39;expansion propre — elle participe à l&#39;expansion habsbourgeoise commune. Après 1815, ordre conservateur défensif (Vormärz)."
+                onclick="showDetail(27)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Congrès de Vienne</span><span class="saillant-date">1815</span></div>
+        </div>
+        <div class="saillant-group" style="left:83.6080%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Explosion de l&#39;AR&lt;/strong&gt;&#10;Révolution de mars et April Laws (1848)&#10;Le 15 mars 1848, Kossuth prononce son discours à la diète. Manifestations à Pest le même jour. Le 17 mars, Ferdinand V nomme Batthyány Premier ministre. April Laws adoptées et ratifiées le 10 avril 1848 : gouvernement parlementaire responsable, abolition du servage, liberté de presse, armée nationale Honvéd."
+                onclick="showDetail(31)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;AR</span><span class="saillant-figure">Révolution de mars et April Laws</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:83.6080%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Gouvernement Batthyány (1848)&#10;Le gouvernement Batthyány (17 mars 1848 - 2 octobre 1848) est l&#39;expérience parlementaire hongroise : gouvernement responsable, coalition des magnats réformateurs (Batthyány, Széchenyi, Deák, Kossuth, Eötvös), application des April Laws. Interrompue par l&#39;invasion croate de Jellačić."
+                onclick="showDetail(32)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Gouvernement Batthyány</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:83.6947%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Déclaration d&#39;indépendance de Debrecen (1849)&#10;Après la reprise des hostilités et le transfert du gouvernement à Debrecen, Kossuth devient le dirigeant effectif. Le 14 avril 1849, il proclame la Déclaration d&#39;indépendance — déchéance formelle des Habsbourg-Lorraine, Kossuth gouverneur-président. Armée hongroise remporte la campagne de printemps."
+                onclick="showDetail(33)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">Déclaration d&#39;indépendance de Debrecen</span><span class="saillant-date">1849</span></div>
+        </div>
+        <div class="saillant-group" style="left:83.6947%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Écrasement&lt;/strong&gt;&#10;Világos (1849)&#10;François-Joseph fait appel au tsar Nicolas Ier. 200 000 soldats russes entrent en Hongrie en mai-juin 1849. Capitulation de Görgey à Világos le 13 août 1849. Terreur blanche : Batthyány fusillé le 6 octobre, treize généraux pendus à Arad. La RN est avortée avant le moment thermidorien. La Hongrie bascule dans l&#39;Ancien Régime exogène habsbourgeois (Bach 1849-1859, puis Ausgleich 1867, jusqu&#39;à l&#39;effondrement de 1918)."
+                onclick="showDetail(34)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Écrasement</span><span class="saillant-figure">Világos</span><span class="saillant-date">1849</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.6791%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Explosion de l&#39;AR&lt;/strong&gt;&#10;Révolution des Chrysanthèmes (1918)&#10;Le 31 octobre 1918, à Budapest, révolution démocratique portée par le Conseil national hongrois. Károlyi Premier ministre. Tisza István assassiné le même jour. Le 13 novembre, Charles IV renonce aux affaires publiques. Le 16 novembre, République populaire hongroise proclamée. Effondrement de l&#39;AR exogène habsbourgeois en quelques semaines."
+                onclick="showDetail(39)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;AR</span><span class="saillant-figure">Révolution des Chrysanthèmes</span><span class="saillant-date">1918</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.6791%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;République populaire hongroise (1918)&#10;République populaire hongroise de Károlyi (novembre 1918-mars 1919) : gouvernement de coalition démocratique, tentative de réforme agraire, désarmement unilatéral sur pression wilsonienne, pertes territoriales rapides aux mains des voisins."
+                onclick="showDetail(40)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">République populaire hongroise</span><span class="saillant-date">1918</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.7658%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;République hongroise des Conseils (1919)&#10;Le 21 mars 1919, fusion sociaux-démocrates + communistes et proclamation de la République hongroise des Conseils. 133 jours : nationalisation, Terreur rouge, alliance avec la Russie soviétique, guerre contre la Tchécoslovaquie, intervention roumaine, Kun fuit à Vienne 1er août 1919."
+                onclick="showDetail(41)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">République hongroise des Conseils</span><span class="saillant-date">1919</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.7658%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Moment thermidorien&lt;/strong&gt;&#10;Contre-révolution de Szeged (1919)&#10;Gouvernement contre-révolutionnaire de Szeged sous tutelle française. Terreur blanche liquide les anciens communistes et sociaux-démocrates. Horthy commandant en chef. Retrait des Roumains, entrée de Horthy à Budapest le 16 novembre 1919. Élection comme régent le 1er mars 1920."
+                onclick="showDetail(42)">
+                <span class="material-icons">balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Moment thermidorien</span><span class="saillant-figure">Contre-révolution de Szeged</span><span class="saillant-date">1919</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.8526%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Impérialiste Revanchard&lt;/strong&gt;&#10;Régent (1920)&#10;Miklós Horthy, régent du Royaume de Hongrie (1920-1944), incarne l&#39;Impérialiste Revanchard. Revanchisme territorial obsessionnel contre Trianon, alliance progressive avec l&#39;Axe, récupération partielle des territoires (1938-1941), entrée en guerre contre l&#39;URSS juin 1941, chute par occupation allemande mars 1944 puis soviétique fin 1944-début 1945."
+                onclick="showDetail(44)">
+                <span class="material-icons">military_tech</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Impérialiste Revanchard</span><span class="saillant-figure">Régent</span><span class="saillant-date">1920</span></div>
+        </div>
+        <div class="saillant-group" style="left:92.0208%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt;&#10;Gouvernement provisoire et IIe République (1945)&#10;Après la chute de Horthy (1944) et l&#39;arrivée de l&#39;Armée rouge, le gouvernement provisoire de Débrecen (décembre 1944) puis le gouvernement Tildy (novembre 1945) installent un régime démocratique parlementaire. Élections libres du 4 novembre 1945 — les Petits Propriétaires obtiennent 57%, le Parti social-démocrate 17,4%, le Parti communiste 17%. Proclamation de la IIe République hongroise le 1er février 1946. Tildy président, Ferenc Nagy Premier ministre. Restauration démocratique effective mais fragile."
+                onclick="showDetail(46)">
+                <span class="material-icons">diamond</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Restauration</span><span class="saillant-figure">Gouvernement provisoire et IIe République</span><span class="saillant-date">1945</span></div>
+        </div>
+        <div class="saillant-group" style="left:92.1943%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Écrasement&lt;/strong&gt;&#10;Coup de Budapest (1947)&#10;La « tactique du salami » de Rákosi élimine progressivement les partis non-communistes. En 1947-1948, le Parti des petits propriétaires est dissous, le Parti social-démocrate fusionné de force avec les communistes. La restauration démocratique est avortée avant d&#39;atteindre la Glorieuse Révolution. La Hongrie bascule dans l&#39;Ancien Régime exogène soviétique."
+                onclick="showDetail(47)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Écrasement</span><span class="saillant-figure">Coup de Budapest</span><span class="saillant-date">1947</span></div>
+        </div>
+        <div class="saillant-group" style="left:92.9748%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Insurrection de Budapest (1956)&#10;Le 23 octobre 1956, insurrection populaire à Budapest. Imre Nagy revient au pouvoir comme Premier ministre, forme un gouvernement multipartite, annonce la fin du système du parti unique (30 octobre) puis la sortie du Pacte de Varsovie et la neutralité hongroise (1er novembre). Tentative d&#39;ancrage du parlementarisme + rupture avec la tutelle externe — pattern de Glorieuse Révolution. Écrasée par l&#39;intervention militaire soviétique du 4 novembre 1956 (plusieurs milliers de chars, 150 000 soldats, 2 500 morts, 200 000 réfugiés). Nagy arrêté, exécuté en 1958."
+                onclick="showDetail(50)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Insurrection de Budapest</span><span class="saillant-date">1956</span></div>
+        </div>
+        <div class="saillant-group" style="left:92.9748%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Écrasement&lt;/strong&gt;&#10;Intervention soviétique (1956)&#10;Le 4 novembre 1956, l&#39;Armée rouge attaque Budapest avec des forces massives. Combats pendant une semaine. 2 500 Hongrois tués, 200 000 réfugiés. Imre Nagy se réfugie à l&#39;ambassade yougoslave, en sort sur sauf-conduit et est arrêté par les Soviétiques. Jugé en secret, exécuté en 1958. János Kádár, imposé par Moscou, installe la normalisation qui prolonge l&#39;AR exogène pour 33 années supplémentaires."
+                onclick="showDetail(51)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Écrasement</span><span class="saillant-figure">Intervention soviétique</span><span class="saillant-date">1956</span></div>
+        </div>
+        <div class="saillant-group" style="left:95.8369%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Explosion de l&#39;AR&lt;/strong&gt;&#10;Proclamation de la République (1989)&#10;La proclamation de la République de Hongrie le 23 octobre 1989 (date symbolique du début de la révolution de 1956) est l&#39;explosion de l&#39;AR exogène soviétique. Précédée par la Table ronde d&#39;opposition (juin-septembre 1989) et l&#39;ouverture de la frontière autrichienne (août 1989). Suivie par les premières élections libres multipartites (mars-avril 1990)."
+                onclick="showDetail(54)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Explosion de l&#39;AR</span><span class="saillant-figure">Proclamation de la République</span><span class="saillant-date">1989</span></div>
+        </div>
+        <div class="saillant-group" style="left:95.9237%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Élections libres (1990)&#10;Les premières élections libres multipartites du 25 mars et 8 avril 1990 et l&#39;installation du gouvernement József Antall (Forum démocratique hongrois) constituent la Glorieuse Révolution hongroise. La Hongrie entre en phase parlementaire."
+                onclick="showDetail(56)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Élections libres</span><span class="saillant-date">1990</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 16/04/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'prefeodale','title':'Phase pré-féodale','subtitle':'','summary':'Un siècle de construction depuis la conquête du bassin carpatique (honfoglalás, ~895) jusqu\'au couronnement d\'Étienne Ier (1000). Árpád et ses successeurs consolident une confédération tribale militairement redoutable. Défaite du Lechfeld (955) force la sédentarisation. Géza amorce la christianisation.','description':'Les tribus magyares, unifiées sous Árpád, s\'installent dans le bassin carpatique vers 895. Raids de grande ampleur contre l\'Occident pendant un demi-siècle. Défaite du Lechfeld (955) face à Otton Ier force la sédentarisation. Géza (r. 972-997) amorce la christianisation et soumet les chefs tribaux rivaux. Aucun souverain ne franchit le seuil d\'effectivité supra-régionale avant Étienne Ier.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':895,'end':1000,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'prefeodale','title':'Percolation élitaire','subtitle':'','summary':'Installation des tribus magyares, raids, défaite du Lechfeld, christianisation sous Géza. Aucun souverain ne franchit le seuil d\'éveil féodal.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':895,'end':1000,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','subtitle':'','summary':'Phase féodale prolongée de +108 ans par le choc mongol (1241-1242) et l\'extinction Árpád (1301). Éveil avec Étienne Ier (1000). Trois pics féodaux canoniques. La Bulle d\'or de 1222 est une préfiguration de pacte qui n\'aboutit pas — pattern Magna Carta (1215).','description':'**Éveil féodal** : Étienne Ier (r. 997-1038) est couronné le 25 décembre 1000 avec une couronne envoyée par le pape Sylvestre II. Archevêché d\'Esztergom, organisation en comitats, lois écrites, unification militaire. **Cycle féodal pré-mongol** : trois pics se succèdent. Ladislas Ier (1077-1095, canonisé 1192), Coloman (1095-1116, acquiert la Croatie par le Pacta Conventa 1102), Béla III (1172-1196, éduqué à Byzance, apogée pré-mongole). **Préfiguration de pacte avortée — Bulle d\'or de 1222** : sous André II, la noblesse inférieure obtient une charte le 24 avril 1222 à Székesfehérvár, structure analogue à la Magna Carta anglaise. Mais elle ne produit pas de 1er MO immédiat et Charles Ier Robert la rejette explicitement en 1318. **Crise féodale majeure — invasion mongole 1241-1242** : l\'armée de Batu Khan écrase Béla IV à Mohi, ~25% de population tuée. Retrait mongol inattendu. Béla IV reconstruit en concédant des privilèges massifs aux magnats. **Pic post-mongol** : Béla IV (r. 1235-1270), « second fondateur ». **Décadence** : Ladislas IV le Couman, puis André III meurt sans héritier mâle en 1301. **Bascule oligarchique** : interrègne de sept ans, compétition dynastique, élection de Charles Robert en 1308, couronnement canonique 1310.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+108 ans par rapport à la norme. Prolongement par choc mongol qui avorte le cycle en cours, décadence post-1270, extinction Árpád qui force une longue bascule d\'élection.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — compromis d\'élection de Charles Ier Robert d\'Anjou (1308, couronnement canonique 1310) après l\'extinction Árpád (1301) et sept ans d\'interrègne. Pattern d\'élection négociée analogue au Diplôme inaugural de Jean de Luxembourg en Bohême (1311).','resolution_conditions':'Les deux conditions de Deblonde sont réunies en 1301-1308. Homogénéité des élites après trois siècles d\'Árpád ; faiblesse maximale du suzerain (extinction dynastique, interrègne, dynaste étranger adolescent dépendant des magnats).','avortement':'','start':1000,'end':1308,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'Trois siècles de cycle féodal árpádien. Éveil Étienne Ier, pics Ladislas Ier / Béla III / Béla IV, Bulle d\'or avortée, choc mongol, reconstruction, décadence. Se termine avec la mort d\'André III et l\'extinction Árpád (1301).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1000,'end':1301,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Couronnement et organisation comitale','summary':'Étienne Ier est couronné le 25 décembre 1000 à Esztergom avec une couronne envoyée par le pape Sylvestre II. Archevêché d\'Esztergom, organisation en comitats, lois écrites, unification militaire par soumission des chefs tribaux rivaux.','description':'Archétype de l\'éveil féodal d\'une nation chrétienne. Avant lui, les princes magyars sont des chefs tribaux dont l\'autorité dépend du prestige guerrier. Avec Étienne, l\'autorité devient institutionnelle : couronnement par onction, territoire en comitats administrés par des ispáns, justice selon un code écrit. La Sainte Couronne devient le symbole sacré transmissible.','figure':'Étienne Ier','confidence':'high','alternatives':'Géza (972-997) — christianisation amorcée mais pouvoir tribal-patrimonial. Retenu comme précurseur. Étienne Ier franchit le seuil par le couronnement chrétien, l\'archevêché indépendant, l\'organisation comitale et les lois écrites.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1000,'end':1038,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Saint Ladislas','summary':'Ladislas Ier consolide le royaume árpádien après une génération de crises dynastiques. Législation sévère, défense contre les Coumans, canonisation d\'Étienne Ier (1083). Canonisé lui-même en 1192.','description':'Pic féodal canonique. Sévérité législative exemplaire (lois de Szabolcs 1092), défense contre les Coumans, consolidation de l\'autorité royale personnelle.','figure':'Ladislas Ier','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1077,'end':1095,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Roi byzantinisant','summary':'Béla III, éduqué à la cour byzantine de Manuel Ier Comnène, porte le royaume árpádien à son apogée pré-mongole. Premier usage de la double croix, cour brillante, revenu annuel parmi les plus élevés d\'Europe.','description':'Pic féodal classique. Importation de pratiques byzantines, développement de la chancellerie, rayonnement européen (mariage avec Marguerite de France). Son successeur André II décomposera le trésor accumulé par donations massives et expéditions désastreuses — préparant les conditions de la Bulle d\'or.','figure':'Béla III','confidence':'medium','alternatives':'Coloman (1095-1116) — acquiert la Croatie, législateur, mais règne troublé. Retenu comme pic intermédiaire de moindre ampleur. Béla III retenu comme pic canonique par son règne long, sa richesse documentée, son rayonnement européen.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1172,'end':1196,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Aranybulla','summary':'Le 24 avril 1222, André II promulgue à Székesfehérvár la Bulle d\'or qui codifie les privilèges de la noblesse et garantit le ius resistendi. Structure analogue à la Magna Carta anglaise (1215). Pacte avorté — ne produit pas de 1er MO immédiat, rejeté en 1318 par Charles Ier Robert.','description':'Pacte avorté au sens historionomique. Codification collective négociée mais qui ne structure pas la phase suivante. Le cycle féodal continue à boucler avec l\'invasion mongole, Béla IV, Ladislas IV, André III. Pattern Magna Carta 1215.','figure':'André II','confidence':'medium','alternatives':'Lecture alternative : Bulle d\'or comme pacte oligarchique canonique avec Charles Ier Robert comme 1er MO 86 ans plus tard. Écartée pour trois raisons : (1) 86 ans d\'écart sans précédent, (2) rejet explicite par Charles Ier Robert en 1318, (3) aucune consolidation institutionnelle durable ne suit. Parallèle structurel avec la Magna Carta anglaise (1215).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1222,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Bataille de Mohi','summary':'L\'armée mongole de Batu Khan écrase Béla IV à Mohi (11 avril 1241) et saccage le royaume pendant un an. ~25% de population tuée. Retrait mongol inattendu (mars 1242) permet la reconstruction, mais Béla IV doit concéder des privilèges massifs aux magnats — le cycle féodal est paradoxalement renforcé par les concessions de reconstruction.','description':'Le choc mongol est la crise féodale majeure de la phase. Pas un reboot (les institutions ne sont pas détruites), mais un avortement du cycle en cours qui prolonge la phase féodale.','figure':'Béla IV','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1241,'end':1242,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Second fondateur','summary':'Béla IV reconstruit le royaume après l\'invasion mongole et est surnommé « second fondateur ». Construction systématique de châteaux de pierre, refondation des villes, immigration encouragée, guerres contre Ottokar II de Bohême.','description':'Pic féodal atypique car reconstructeur d\'un royaume dévasté. Son action est contrainte par la nécessité de dépendre des magnats pour reconstruire, chaque concession affaiblissant la dynamique vers un pacte résolvant.','figure':'Béla IV','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1242,'end':1270,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Extinction Árpád','summary':'Le 14 janvier 1301, André III, dernier des Árpád, meurt sans héritier mâle. Interrègne de sept ans avec compétition dynastique entre Venceslas III de Bohême, Otton III de Bavière, Charles Robert d\'Anjou.','description':'Crise féodale terminale qui produit les conditions d\'un pacte oligarchique canonique. Trois siècles d\'homogénéisation des magnats + extinction dynastique + absence d\'héritier → les magnats négocient collectivement l\'élection d\'un nouveau dynaste. Pattern analogue à l\'extinction des Capétiens directs en France (1328).','figure':'André III','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1301,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Bascule oligarchique','subtitle':'','summary':'Sept ans de bascule après l\'extinction Árpád. Interrègne et compétition dynastique entre trois candidats étrangers (Venceslas III de Bohême couronné 1301, Otton III de Bavière couronné 1305, Charles Robert d\'Anjou couronné symboliquement 1301 mais pas reconnu). Plusieurs cérémonies de couronnement invalides faute de respect des formes canoniques (couronne, lieu, consentement de la diète). La diète magnate impose progressivement Charles Ier Robert en 1308 avant la cérémonie canonique de 1310 à Székesfehérvár avec la Sainte Couronne par l\'archevêque d\'Esztergom.','description':'Bascule oligarchique canonique (pattern analogue à France 1314-1328 et Angleterre 1307-1327). Les conditions de Deblonde se cristallisent pendant ces sept années : (1) les magnats hongrois confirment leur homogénéité de classe en négociant collectivement les conditions de l\'élection royale, (2) la faiblesse du suzerain est maximale — trois dynastes étrangers successifs sans base locale, chacun dépendant du soutien des magnats pour être reconnu. Charles Ier Robert l\'emporte parce qu\'il accepte les conditions posées par la diète en matière de privilèges nobiliaires et de partage des honores. Sa cérémonie canonique de 1310 avec la Sainte Couronne consacre le nouveau cadre pactiste.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1301,'end':1308,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','subtitle':'Compromis d\'élection','summary':'Après l\'extinction Árpád et sept ans de compétition dynastique, la diète magnate élit définitivement Charles Ier Robert en 1308 contre des garanties de respect des privilèges. Cérémonie canonique avec la Sainte Couronne par l\'archevêque d\'Esztergom en 1310.','description':'Pacte oligarchique atypique par sa forme — compromis d\'élection négocié plutôt qu\'acte écrit unique. Codifie le rapport couronne-noblesse (respect des privilèges, élection par la diète, partage des honores). Canonique parce que négocié collectivement, portant sur les responsabilités du suzerain, immédiatement suivi par le règne effectif d\'un 1er monarque oligarchique. Analogue au cas bohème.','figure':'Charles Ier Robert','confidence':'medium','alternatives':'Bulle d\'or 1222 (écartée, pacte avorté). Le compromis d\'élection de Charles Ier Robert est retenu comme pacte canonique — pattern analogue à Jean de Luxembourg en Bohême (1310-1311).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1308,'end':1310,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'Phase oligarchique prolongée à 403 ans. Essor canonique 1308-1526 (Charles Ier Robert 1er MO, Louis Ier acmé oligarchique, Mathias Corvin pic tardif). Mohács 1526 = fin de l\'expansion. Polarisation prolongée 1526-1703 (~177 ans) par la tripartition. Guerre sociale 1703-1711 (Rákóczi), résolue par Szatmár + Charles VI.','description':'**Test discriminant** : jusqu\'en 1711, la Hongrie n\'a pas d\'administration centrale avec préséance effective. Pendant la tripartition, les magnats conservent leurs juridictions comitales, leur diète, le droit coutumier (Tripartitum de Werbőczy 1514), leurs armées privées. Après Karlowitz (1699), la Hongrie est réunifiée sous souveraineté habsbourgeoise mais en cadre composite. Le test n\'est passé qu\'après Szatmár 1711 et la construction institutionnelle de Charles VI. **Trois séquences structurelles** : essor canonique sous les Angevins, polarisation prolongée par Mohács et la tripartition, guerre sociale Rákóczi résolue par Szatmár.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+203 ans par rapport à la norme. Prolongement principal : Mohács (1526) et la tripartition ottomane-habsbourgeoise (1541-1699) gèlent la dynamique interne pendant 177 ans. La guerre sociale arrive avec Rákóczi quand le cadre habsbourgeois post-Karlowitz rétablit les conditions d\'une consolidation.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale — insurrection de Rákóczi (1703-1711), résolue par le compromis de Szatmár (29 avril 1711) négocié par Pálffy János avec Charles VI. Pattern hybride : victoire militaire labanc + intégration des revendications kuruc dans un nouveau cadre central construit par Charles VI (Consilium Regium Locumtenentiale 1723, Pragmatique Sanction 1723). Pattern proche des guerres de religion françaises (Henri IV qui offre des garanties aux deux factions pour consolider l\'exécutif central).','resolution_conditions':'Les factions sont cristallisées sur deux siècles de tripartition et de polarisation confessionnelle. Rákóczi porte la dernière grande insurrection qui mobilise la noblesse patrimoniale, les paysans ruthènes et slovaques, et les soutiens internationaux. Son échec militaire permet à la faction loyaliste d\'imposer un nouveau cadre central, mais l\'épuisement mutuel force l\'intégration des revendications adverses.','avortement':'','start':1308,'end':1711,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'Essor canonique de 218 ans. Charles Ier Robert construit l\'État angevin (lucrum camaræ 1323, florin d\'or, honores, banderia). Louis Ier porte la Hongrie à son apogée avec les décrets de 1351 (una eademque libertas, aviticitas). Sigismond traverse les guerres hussites. Mathias Corvin comme second acmé oligarchique tardif. Dérive jagellone (1490-1526) interrompue par Mohács.','description':'**Charles Ier Robert** (r. 1308-1342) construit méthodiquement l\'État central : lucrum camaræ (1323, premier impôt direct), florin d\'or, récupération des domaines royaux, système des honores, armée banderiale, transfert de la capitale à Visegrád, Congrès de Visegrád (1335). **Louis Ier le Grand** (r. 1342-1382) porte la monarchie à son acmé oligarchique : Dalmatie (1358), union personnelle avec la Pologne (1370), campagnes napolitaines, influence balkanique. Décrets de 1351 (una eademque libertas, aviticitas). **Sigismond de Luxembourg** (r. 1387-1437) : défaite de Nicopolis (1396), guerres hussites, révolte paysanne Budai Nagy Antal (1437). **Mathias Corvin** (r. 1458-1490), élu non dynastique, acmé oligarchique tardif : Armée Noire permanente, conquêtes (Vienne 1485-1490, Silésie, Moravie), Bibliotheca Corviniana. **Dérive jagellone** (Vladislav II 1490-1516, Louis II 1516-1526) : pattern Pologne-Lituanie, noblesse reprend le pouvoir, Armée Noire dissoute, Tripartitum de Werbőczy (1514), révolte Dózsa (1514). Mohács 1526 interrompt.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1308,'end':1526,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Caroberto d\'Anjou','summary':'Charles Ier Robert d\'Anjou (r. 1308-1342) est le premier monarque oligarchique hongrois canonique. Réformes fiscales (lucrum camaræ 1323, florin d\'or), système des honores, armée banderiale, transfert de la capitale à Visegrád, Congrès de 1335.','description':'1er MO exemplaire qui construit les trois marqueurs canoniques de la transition féodal → oligarchique : fisc permanent (lucrum camaræ), administration centrale (honores), armée permanente (banderia). Règne de 34 ans qui ancre durablement ces institutions. Sa rétraction explicite de la Bulle d\'or en 1318 confirme que le pacte oligarchique hongrois n\'est pas la Bulle mais le compromis d\'élection 1308.','figure':'Charles Ier Robert','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1308,'end':1342,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Acmé oligarchique','subtitle':'Mátyás Hunyadi','summary':'Mathias Corvin, élu roi par la diète en 1458, est le acmé oligarchique hongrois : centralisation maximale, Armée Noire mercenaire permanente, conquêtes (Vienne 1485-1490, Silésie, Moravie), Bibliotheca Corviniana.','description':'Acmé oligarchique canonique. Élection non dynastique par la diète, centralisation administrative maximale (Armée Noire, fiscalité rationalisée, bureaucratie renforcée), projection extérieure maximale (occupation de Vienne, Silésie, Moravie), mécénat humaniste. Essai d\'absolutisation précoce (pattern Charles IV en Bohême) qui ne franchit pas le seuil structurel — à sa mort, les magnats dissolvent l\'Armée Noire et imposent Vladislav II Jagellon, la dérive jagellone reprend immédiatement.','figure':'Mathias Corvin','confidence':'high','alternatives':'Louis Ier le Grand (1342-1382) — apogée territoriale (Dalmatie, union polonaise, campagnes napolitaines, décrets de 1351 avec una eademque libertas et aviticitas). Écarté comme acmé oligarchique canonique — Louis Ier est une figure structurante de l\'essor (décrets de 1351 confirment le cadre pactiste) mais la signature du acmé oligarchique au sens strict (puissance personnelle maximale + projection extérieure maximale + essai d\'absolutisation précoce) est clairement portée par Mathias Corvin.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1458,'end':1490,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','subtitle':'Bataille de Mohács','summary':'Le 29 août 1526, l\'armée ottomane de Soliman le Magnifique écrase l\'armée hongroise à Mohács. Louis II Jagellon meurt, éteignant la dynastie. Tripartition consolidée en 1541 (Hongrie royale, Transylvanie, Pashalik de Buda).','description':'Mohács est à la fois la fin de l\'expansion oligarchique hongroise (bascule essor → polarisation) et une perturbation de type choc exogène avec effet de prolongement. Les institutions de base ne sont pas détruites (pas un reboot), mais la fragmentation territoriale gèle la dynamique interne pour 150 ans. Pattern analogue au choc assyrien sur Israël (-722).','figure':'Louis II / Soliman le Magnifique','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1526,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'Polarisation prolongée de 177 ans. Tripartition (1541-1699) avec Hongrie royale habsbourgeoise + Transylvanie ottomane autonome + Pashalik de Buda. Polarisation confessionnelle (catholiques vs protestants) superposée au clivage centralisateur / particulariste. Insurrections Bocskai (1604-1606), Bethlen (1619-1626), Thököly (1678-1685) comme manifestations croissantes. Reconquête anti-ottomane 1683-1699 (Karlowitz) comme exutoire temporaire. Polarisation culmine à la fin du XVIIe siècle.','description':'La polarisation hongroise est prolongée par la tripartition. Tripartition 1541-1699, polarisation confessionnelle catholiques vs protestants, insurrections kuruc successives (Bocskai 1604-1606 avec la paix de Vienne, Bethlen 1619-1626 avec la paix de Nikolsburg, Wesselényi 1664-1670, Thököly 1678-1685) qui sont toutes des manifestations de polarisation croissante sans tiers résolvant. Reconquête anti-ottomane 1683-1699 (Vienne 1683, Buda 1686, Zenta 1697, Karlowitz 1699) comme exutoire militaire qui retarde encore la guerre sociale. Après Karlowitz, la pression fiscale habsbourgeoise et la répression des protestants cristallisent le clivage — Rákóczi éclate en 1703.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1526,'end':1703,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'Insurrection de Rákóczi (1703-1711) comme guerre sociale canonique. Factions : kuruc (patrimonial national, protestant, base territoriale Haute-Hongrie et Transylvanie) vs labanc (prébendier catholique loyaliste). Résolution par Szatmár (29 avril 1711) : victoire militaire labanc + intégration des revendications kuruc dans le nouveau cadre central construit par Charles VI.','description':'La guerre sociale hongroise est l\'apogée de la polarisation prolongée. **Les factions** : kuruc = faction patrimoniale (noblesse protestante, gentry, attachée aux privilèges des comitats, libertés religieuses, autonomie) avec base territoriale en Haute-Hongrie et Transylvanie et mobilisation des paysans ruthènes et slovaques ; labanc = faction prébendière (noblesse catholique liée à l\'administration habsbourgeoise, clergé, élite urbaine germanophile). **Le conflit** : insurrection armée de 8 ans, batailles rangées (Trencsén 1708), déposition formelle des Habsbourg par la diète d\'Ónod (1707), soutiens internationaux (Louis XIV, Pierre le Grand), élection de Rákóczi comme prince de Transylvanie (1704) et duc de Hongrie (1705). **La résolution** : épuisement mutuel, Pálffy János (magnat hongrois catholique loyaliste, labanc) négocie avec les kuruc en l\'absence de Rákóczi. Charles VI ratifie. Le compromis de Szatmár accorde amnistie, libertés religieuses, maintien de la constitution hongroise. Pattern hybride de résolution : victoire militaire labanc + intégration des revendications kuruc + construction d\'un nouveau cadre central par Charles VI (Consilium Regium Locumtenentiale 1723, Pragmatique Sanction 1723). Pattern proche des guerres de religion françaises résolues par Henri IV (compromis apaisant les deux factions pour consolider l\'exécutif central).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1703,'end':1711,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Insurrection et compromis de Szatmár','summary':'Insurrection de Rákóczi (1703-1711), résolue par Szatmár 1711 — Pálffy négocie, Charles VI ratifie, construction d\'un nouveau cadre central dans les années 1712-1723 (Consilium Regium 1723, Pragmatique Sanction 1723).','description':'Rákóczi passe les marqueurs canoniques de la guerre sociale : factions clairement identifiables (kuruc patrimonial vs labanc prébendier), clivage superposé (économique + confessionnel + national), base territoriale, mobilisation populaire délaissée par les prébendiers, projet politique transcendant, soutiens internationaux, marqueurs forts d\'abus de pouvoir exécutif. Pattern de résolution hybride proche des guerres de religion françaises — compromis qui intègre les revendications des deux factions pour consolider l\'exécutif central. Charles VI construit effectivement le nouveau cadre central hongrois dans les années 1712-1723.','figure':'François II Rákóczi','confidence':'medium','alternatives':'Lecture alternative 1 : Rákóczi comme DGRO autrichienne. Écartée — base territoriale et humaine intégralement hongroise, objectif politique hongrois, résolution confirme l\'exception hongroise. Lecture alternative 2 : guerre sociale reportée à 1848. Écartée — 1848 est structurellement une RN avortée (explosion d\'AR sédimenté, pattern Venise/Milan), pas une guerre sociale oligarchique.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1703,'end':1711,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','subtitle':'','summary':'Phase absolutiste hongroise dans la fourchette basse (137 ans). 1er MO = Charles VI (Charles III) post-Szatmár 1711. Consilium Regium Locumtenentiale 1723 comme organe exécutif central permanent hongrois. Absolutisation fluide sans DGRO sous Charles VI et Marie-Thérèse. Pic absolutiste = Joseph II (1780-1790) — despotisme éclairé avec résistance hongroise à l\'importation culturelle allemande. Fin de l\'expansion = Congrès de Vienne 1815 (partagée avec Autriche). Remontrance = dissolution de la diète 1811 par François Ier. Ancien Régime 1811-1848 avec Âge des Réformes (Széchenyi, Kossuth, Deák) comme bloc contestataire. Explosion 1848.','description':'**Test discriminant** : à partir de 1711, l\'administration centrale hongroise acquiert une préséance effective via le Consilium Regium Locumtenentiale (1723). Cet organe exécutif permanent à Presbourg gouverne la Hongrie au nom du roi, exerce la tutelle sur les comitats, applique les édits royaux. Les comitats conservent une autonomie administrative subordonnée — pattern analogue aux intendants + parlements en France de Louis XIV. La Pragmatique Sanction (1723) est ratifiée par la diète hongroise, consolidant le cadre dynastique. Ce cadre est subordonné au cadre absolutiste habsbourgeois plus large, mais cela n\'empêche pas la Hongrie d\'avoir son propre cycle absolutiste composite (pattern Castille pré-Nueva Planta, Bohême pré-Haugwitz). **Absolutisation fluide sans DGRO** : les magnats hongrois sont cooptés dans le nouveau cadre via Pálffy et la génération post-Szatmár — pattern analogue à Venise et Bavière post-1597. **Pic absolutiste Joseph II** : le despotisme éclairé joséphiste (1780-1790) est le pic canonique. Abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation (1782), germanisation administrative. La résistance magyare porte sur l\'importation culturelle allemande (langue, refus du couronnement), pas sur l\'absolutisme comme tel. Beaucoup de réformes sont maintenues après la rétraction des plus visibles par Léopold II. **Remontrance** : dissolution de la diète en 1811 par François Ier + période sans diète 1811-1825. Pattern Remontrance canonique — classe parlementaire tente de négocier, échoue, voie institutionnelle fermée. **AR 1811-1848** : sédimentation des élites magnates conservatrices, Âge des Réformes (1825-1848) comme bloc contestataire structuré, blocage des réformes, explosion 1848.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-63 ans par rapport à la norme. Phase dans la fourchette basse. Pattern compressé — phase absolutiste hongroise courte sous cadre composite subordonné à Vienne. Compensation partielle avec une phase oligarchique prolongée.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Explosion de l\'Ancien Régime — révolution de mars 1848, April Laws ratifiées par Ferdinand V, gouvernement Batthyány. Basculement des élites contestataires contre le cadre conservateur métternichien. Déclenchement de la Révolution Nationale hongroise.','resolution_conditions':'L\'AR hongrois est sédimenté depuis la Remontrance (dissolution de la diète 1811) et le Vormärz. L\'Âge des Réformes (1825-1848) cristallise un bloc contestataire structuré (Széchenyi, Kossuth, Deák, Wesselényi). Crise financière de 1847, famines, onde de choc révolutionnaire Paris → Vienne → Budapest.','avortement':'','start':1711,'end':1848,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'De Szatmár à la mort de Marie-Thérèse. Charles VI (Charles III) et Marie-Thérèse construisent l\'État central hongrois sous cadre composite habsbourgeois. Consilium Regium Locumtenentiale (1723), Pragmatique Sanction (1723), codifications progressives, Urbarium (1767). Absolutisation fluide sans DGRO — magnats cooptés via Pálffy.','description':'L\'absolutisation hongroise est l\'œuvre conjointe de Charles VI (1711-1740) et de Marie-Thérèse (1740-1780). Consilium Regium Locumtenentiale créé en 1723 comme organe exécutif central permanent à Presbourg, sous la présidence du Palatin. Pragmatique Sanction (1723) ratifiée par la diète hongroise. Cours royales (Tabula Septemviralis, Tabula Regia Judicia) renforcées. Tereziánum (1746) intègre la noblesse hongroise à l\'élite viennoise. Scène de Presbourg 1741 (« Vitam et sanguinem pro rege nostro Maria Theresia ! ») comme consolidation symbolique. Urbarium (1767) codifie les obligations des paysans. Absolutisation fluide sans DGRO — les magnats hongrois acceptent le cadre composite car il leur donne un gouvernement hongrois à Presbourg plutôt qu\'une tutelle viennoise directe.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1711,'end':1780,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Charles III en Hongrie','summary':'Charles VI (Charles III en Hongrie, r. 1711-1740) est le premier monarque absolu hongrois. Il ratifie Szatmár, construit les institutions absolutistes hongroises dans le cadre composite habsbourgeois, consolide l\'exécutif central hongrois sans provoquer de DGRO.','description':'Charles VI est le 1er monarque absolu canonique du Parcours hongrois. Pattern de « dynaste déjà présent qui accepte le nouveau cadre » — il succède à son frère Joseph Ier en 1711 et accepte le cadre construit par Pálffy. Le Consilium Regium Locumtenentiale créé en 1723 matérialise l\'État central hongrois. La Pragmatique Sanction est ratifiée par la diète hongroise en 1723 — acte où la classe oligarchique ratifie volontairement son insertion dans le cadre absolutiste dynastique. Fin structurelle de la phase oligarchique, début effectif de l\'absolutisation.','figure':'Charles VI','confidence':'medium','alternatives':'Marie-Thérèse — confirme et développe le cadre posé par Charles VI, pas la figure pivot. Joseph II — pic absolutiste, pas 1er MO. Charles VI retenu parce qu\'il ratifie le compromis de Szatmár et construit le nouveau cadre central hongrois (Consilium Regium 1723, Pragmatique Sanction 1723).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1711,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'De Joseph II à la dissolution de la diète de 1811. Joseph II comme pic absolutiste (despotisme éclairé, réformes radicales, résistance hongroise à l\'importation culturelle allemande). Léopold II rétraction partielle, François Ier guerres napoléoniennes. Fin de l\'expansion = Congrès de Vienne 1815 (partagée avec Autriche). L\'impérialisme hongrois est porté par la monarchie habsbourgeoise commune.','description':'L\'impérialisme absolutiste hongrois se déploie dans le cadre commun de la monarchie habsbourgeoise. **Joseph II (1780-1790)** est le pic absolutiste : despotisme éclairé au maximum avec réformes radicales (abolition du servage personnel 1781, Patent de tolérance 1781, sécularisation 1782, allemand comme langue administrative 1784 rétracté, réorganisation des comitats en districts, refus du couronnement). Résistance magyare sur l\'importation culturelle mais pas sur l\'absolutisme — beaucoup de réformes maintenues. Léopold II rétraction partielle. François Ier (1792-1835) conservateur-militaire gère les guerres napoléoniennes avec la Hongrie comme source de troupes et de ressources. La dissolution de la diète en 1811 (après que celle-ci refuse d\'accorder les subsides sans réformes compensatoires) marque la fin de cette sous-phase par la Remontrance.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1780,'end':1811,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Pic absolutiste','subtitle':'Despotisme éclairé','summary':'Joseph II (r. seul 1780-1790) est le pic absolutiste hongrois. Despote éclairé rationaliste : abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation (1782), germanisation administrative (1784, rétractée), réorganisation des comitats. Résistance hongroise sur l\'importation culturelle, pas sur l\'absolutisme.','description':'Joseph II est l\'archétype du despote éclairé. Pic absolutiste hongrois canonique au même titre qu\'en Autriche et en Bohême — même programme appliqué aux trois royaumes. La résistance hongroise porte sur trois points spécifiques (langue, couronnement, comitats) — elle ne conteste pas l\'absolutisme comme tel. Beaucoup de réformes (servage, tolérance, sécularisation, contrôle ecclésiastique) sont acceptées et maintenues.','figure':'Joseph II','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1780,'end':1790,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime','subtitle':'','summary':'De la dissolution de la diète (1811) comme Remontrance à l\'explosion de 1848. 14 ans sans diète (1811-1825) puis réouverture par François Ier affaibli. Âge des Réformes (1825-1848) comme bloc contestataire : Széchenyi (conservateur progressiste), Kossuth (radical), Deák (libéral modéré), Wesselényi. Blocage croissant, sédimentation, loi sur la langue hongroise 1844 comme dernière concession. Explosion par onde révolutionnaire 1848.','description':'L\'AR hongrois est court (37 ans) mais intense. La période Metternich (1815-1848) est un Vormärz conservateur classique. Après la dissolution de la diète en 1811 comme Remontrance, la diète n\'est pas reconvoquée pendant 14 ans. Sa réouverture en 1825 marque l\'entrée en AR sédimenté où les réformes profondes sont désormais bloquées. L\'Âge des Réformes (1825-1848) est l\'expression canonique du bloc contestataire en AR. Quatre figures structurent le mouvement : Széchenyi István (conservateur progressiste — modernisation économique, pont des Chaînes, Académie hongroise 1825, *Hitel* 1830), Kossuth Lajos (radical libéral — presse politique *Pesti Hírlap* 1841, indépendantisme, magyarisation), Deák Ferenc (libéral modéré — juriste, médiateur), Wesselényi Miklós (gentry réformatrice transylvaine). Diètes successives (1825, 1830, 1832-1836, 1839-1840, 1843-1844, 1847-1848) tentent des réformes, se heurtent au blocage viennois. Concession symbolique majeure : la langue hongroise comme langue officielle en 1844. Bloc élitaire conservateur (magnats aulici, clergé) vs bloc contestataire structuré. Pattern AR canonique. Explosion par l\'onde de choc de février 1848 (Paris) puis mars 1848 (Vienne).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1811,'end':1848,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fin de l\'expansion','subtitle':'Congrès de Vienne','summary':'Le Congrès de Vienne (1814-1815) marque la fin de l\'expansion de la monarchie habsbourgeoise. La Hongrie n\'a pas d\'expansion propre — elle participe à l\'expansion habsbourgeoise commune. Après 1815, ordre conservateur défensif (Vormärz).','description':'Comme pour l\'Autriche, le Congrès de Vienne est la fin de l\'expansion absolutiste hongroise par effet commun. Après 1815, pas de projection extérieure possible.','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1815,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Remontrance','subtitle':'Dissolution de la diète','summary':'La dissolution de la diète de 1811 par François Ier (après refus des subsides sans réformes compensatoires) est la Remontrance hongroise. François Ier impose par décret une dévaluation monétaire (patente de 1811). La diète n\'est pas reconvoquée pendant 14 ans (1811-1825).','description':'Remontrance canonique. Tentative institutionnelle de la classe parlementaire pour obtenir des réformes fiscales, échec, dissolution de la diète, mesure fiscale unilatérale par décret, 14 ans d\'absence de l\'organe représentatif hongrois. Analogue structurel à la Polysynodie française (1715-1718), l\'Apology of the Commons anglaise (1604), la Correzione vénitienne (1761), le Landtag bavarois de 1848. La réouverture de la diète en 1825 marque l\'entrée en AR — la classe contestataire retrouve une voie institutionnelle mais dans le cadre d\'un AR sédimenté.','figure':'François Ier','confidence':'medium','alternatives':'Lecture alternative : pas de Remontrance identifiable, pattern compressé. Écartée — la dissolution de la diète en 1811 présente les trois traits canoniques : classe parlementaire tente de négocier, échec, fermeture de la voie institutionnelle.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1811,'end':1825,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale (avortée)','subtitle':'','summary':'RN avortée canonique. Explosion par l\'onde de mars 1848 (April Laws ratifiées par Ferdinand V), expérience parlementaire sous Batthyány, phase aiguë avec la Déclaration d\'indépendance de Debrecen et Kossuth gouverneur-président. Écrasée par l\'intervention russe demandée par François-Joseph. Capitulation à Világos (13 août 1849). Pas de moment thermidorien. Pattern structurellement identique à Venise 1848 (République de Manin) et à Milan 1848 (Cinq Journées).','description':'La RN hongroise suit la séquence canonique jusqu\'à la phase aiguë puis est écrasée par intervention externe. **Explosion** : 15 mars 1848, Kossuth prononce son discours devant la diète de Presbourg à la nouvelle de la révolution viennoise. April Laws ratifiées par Ferdinand V le 10 avril 1848. Gouvernement Batthyány responsable devant le parlement. Abolition du servage, liberté de presse, armée nationale Honvéd. **Expérience parlementaire** : coalition des magnats réformateurs (Batthyány, Széchenyi, Deák, Kossuth, Eötvös). Interrompue par l\'invasion croate de Jellačić en septembre 1848. **Phase aiguë** : Kossuth devient le dirigeant effectif. 14 avril 1849, Déclaration d\'indépendance de Debrecen — déchéance formelle des Habsbourg, Kossuth gouverneur-président. Armée hongroise sous Görgey remporte la campagne de printemps. **Écrasement** : François-Joseph (successeur de Ferdinand depuis décembre 1848) fait appel au tsar Nicolas Ier. 200 000 soldats russes entrent en Hongrie en mai-juin 1849. Kossuth abdique en faveur de Görgey qui capitule à Világos le 13 août 1849. Terreur blanche post-Világos : Batthyány fusillé le 6 octobre 1849, treize généraux hongrois pendus à Arad le même jour.','figure':'','confidence':'','alternatives':'','step':'','deviation':'RN avortée — durée tronquée par intervention externe avant le moment thermidorien.','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Écrasement par intervention russo-habsbourgeoise. La RN hongroise est avortée avant le moment thermidorien. Pattern analogue à Venise 1848 et Milan 1848. Suivie par l\'installation d\'un Ancien Régime exogène habsbourgeois (néo-absolutisme Bach puis Ausgleich jusqu\'à 1918).','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Séquence canonique compressée en 17 mois. Explosion (mars 1848, onde viennoise, April Laws, Batthyány), expérience parlementaire (6 mois, gouvernement Batthyány responsable), phase aiguë (Déclaration d\'indépendance de Debrecen, Kossuth gouverneur-président), écrasement militaire (Világos, août 1849). Pas de moment thermidorien atteint.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'AR','subtitle':'Révolution de mars et April Laws','summary':'Le 15 mars 1848, Kossuth prononce son discours à la diète. Manifestations à Pest le même jour. Le 17 mars, Ferdinand V nomme Batthyány Premier ministre. April Laws adoptées et ratifiées le 10 avril 1848 : gouvernement parlementaire responsable, abolition du servage, liberté de presse, armée nationale Honvéd.','description':'Explosion canonique d\'un AR sédimenté. Effondrement simultané de légitimité (Ferdinand V faible, Metternich renversé à Vienne) et de capacité financière (crise de 1847, famines). Basculement immédiat des élites — les magnats réformateurs prennent le pouvoir dans le cadre institutionnel. Les April Laws sont adoptées légalement et ratifiées par Ferdinand V.','figure':'Lajos Batthyány','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Gouvernement Batthyány','summary':'Le gouvernement Batthyány (17 mars 1848 - 2 octobre 1848) est l\'expérience parlementaire hongroise : gouvernement responsable, coalition des magnats réformateurs (Batthyány, Széchenyi, Deák, Kossuth, Eötvös), application des April Laws. Interrompue par l\'invasion croate de Jellačić.','description':'Expérience parlementaire courte (6 mois) mais canonique. Premier gouvernement hongrois responsable au sens parlementaire moderne. Coalition large qui tente de construire un régime constitutionnel sur la base des April Laws. Échec précipité par la question des nationalités et le revirement de Vienne.','figure':'Lajos Batthyány','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'Déclaration d\'indépendance de Debrecen','summary':'Après la reprise des hostilités et le transfert du gouvernement à Debrecen, Kossuth devient le dirigeant effectif. Le 14 avril 1849, il proclame la Déclaration d\'indépendance — déchéance formelle des Habsbourg-Lorraine, Kossuth gouverneur-président. Armée hongroise remporte la campagne de printemps.','description':'Phase aiguë structurellement canonique — radicalisation, prise de pouvoir par la faction la plus révolutionnaire, rupture formelle avec l\'ordre ancien, mobilisation militaire massive. Le moment thermidorien n\'est pas atteint — l\'intervention russe demandée par François-Joseph renverse la situation militaire.','figure':'Lajos Kossuth','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1849,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Écrasement','subtitle':'Világos','summary':'François-Joseph fait appel au tsar Nicolas Ier. 200 000 soldats russes entrent en Hongrie en mai-juin 1849. Capitulation de Görgey à Világos le 13 août 1849. Terreur blanche : Batthyány fusillé le 6 octobre, treize généraux pendus à Arad. La RN est avortée avant le moment thermidorien. La Hongrie bascule dans l\'Ancien Régime exogène habsbourgeois (Bach 1849-1859, puis Ausgleich 1867, jusqu\'à l\'effondrement de 1918).','description':'L\'écrasement militaire russo-habsbourgeois avorte la RN hongroise avant qu\'elle ne se complète. Pattern identique à Milan 1848 (Custoza / Novara) et à Venise 1849. Codé comme choc exogène avec effet d\'avortement. Suivi immédiatement par l\'installation du néo-absolutisme Bach qui inaugure la phase d\'Ancien Régime exogène habsbourgeois.','figure':'Paskevich / Haynau','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1849,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Ancien Régime exogène habsbourgeois','subtitle':'','summary':'Phase d\'Ancien Régime exogène habsbourgeois de 69 ans (1849-1918). Pattern analogue à l\'AR exogène soviétique bohème (1948-1989). Néo-absolutisme Bach 1849-1859 comme phase répressive initiale. Défaites autrichiennes (Solferino 1859, Sadowa 1866) forcent l\'accommodation. Compromis de 1867 (Ausgleich) comme normalisation accommodationniste — les élites hongroises acceptent le cadre en échange d\'un gouvernement magyar responsable à Budapest. Long règne de François-Joseph (1848-1916, 68 ans) maximisant la sédimentation. Développement économique et culturel remarquable dans un cadre tutélaire. Explosion 1918 par effondrement militaire.','description':'Phase d\'Ancien Régime exogène canonique (dérivation autorisée par CLAUDE.md, précédents : Piémont post-1748 sous influence habsbourgeoise, Bohême post-1948 sous influence soviétique). Caractéristiques : régime tutélaire imposé après écrasement d\'une séquence RN, maintien formel de certaines institutions nationales avec subordination à la puissance dominante, stabilisation progressive par accommodation, sédimentation des élites, bloc contestataire qui monte jusqu\'à l\'explosion finale. **Phase répressive Bach (1849-1859)** : constitution hongroise suspendue, diète dissoute, fonctionnaires allemands et tchèques, langue administrative allemande, droit autrichien imposé, émigrations massives. **Accommodation Ausgleich (1859-1867)** : défaites autrichiennes (Solferino 1859 — perte de la Lombardie, Sadowa 1866 — exclusion de l\'Allemagne, perte de la Vénétie) privent Vienne des moyens de maintenir l\'absolutisme direct. Deák négocie patiemment depuis l\'intérieur (« résistance de velours »). Compromis de 1867 ratifié par la diète hongroise le 29 mai 1867, François-Joseph couronné roi de Hongrie à Budapest le 8 juin 1867. Création d\'un gouvernement hongrois responsable devant le parlement à Budapest, armée royale hongroise (Honvéd), administration hongroise unifiée, monnaie commune mais budget séparé, trois ministères communs. Pattern analogue à la normalisation Kádár dans l\'AR exogène soviétique : après la répression, la puissance tutélaire accorde une autonomie accrue en échange de l\'acceptation du cadre fondamental. **Sédimentation et développement (1867-1918)** : François-Joseph règne 68 ans. Développement économique et culturel remarquable — Budapest devient une métropole européenne de 700 000 habitants, boom ferroviaire, industrialisation, magyarisation progressive des minorités. Millénaire 1896 comme apogée de prestige dans l\'AR tutélaire. Bloc contestataire croissant (sociaux-démocrates, nationalités minoritaires, radicaux 48ards). Tisza István comme chancelier de crise 1913-1917, entrée en guerre mondiale, défaites cumulatives. **Effondrement 1918** : octobre-novembre 1918, défaite militaire, effondrement de la Double Monarchie, Révolution des Chrysanthèmes qui déclenche la RN suivante.','figure':'','confidence':'','alternatives':'','step':'','deviation':'Phase atypique structurellement — AR exogène habsbourgeois de longue durée (69 ans). Pattern nouveau documenté, analogue à l\'AR exogène soviétique bohème (41 ans).','typical_duration':'variable','perturbation_type':'','affected_motor':'','note':'','resolution':'Effondrement de la Double Monarchie à la défaite militaire de 1918. Révolution des Chrysanthèmes (31 octobre 1918) — l\'explosion ouvre la Révolution Nationale suivante.','resolution_conditions':'L\'AR exogène habsbourgeois tient pendant 69 ans grâce à la combinaison de la répression initiale (Bach), de l\'accommodation (Ausgleich 1867) et de la légitimité dynastique (long règne de François-Joseph). Il s\'effondre quand la défaite militaire de 1918 détruit simultanément la légitimité et la capacité financière du régime dualiste.','avortement':'','start':1849,'end':1918,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime exogène','subtitle':'','summary':'Sous-phase unique de 69 ans. Néo-absolutisme Bach 1849-1859, Ausgleich 1867, long règne François-Joseph, développement économique et culturel, Millénaire 1896, bloc contestataire croissant, effondrement 1918.','description':'L\'AR exogène habsbourgeois suit le pattern canonique identifié pour la Bohême post-1948. Phase répressive initiale (Bach), accommodation post-défaites (Ausgleich), sédimentation dans un cadre tutélaire, explosion par effondrement de la puissance dominante. La particularité hongroise est la forte autonomie accordée par l\'Ausgleich (gouvernement responsable, parlement, armée, administration propre) — elle donne à l\'AR exogène hongrois un caractère plus « accommodé » que l\'AR exogène soviétique qui suivra, mais ne change pas sa nature structurelle.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1849,'end':1918,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale','subtitle':'','summary':'RN canonique 1918-1947 avec séquence complète jusqu\'à la restauration avortée. Révolution initiale 1918-1920 (Károlyi, Kun, Horthy thermidorien). Impérialisme revanchard 1920-1944 avec Horthy comme IR régentiel (revanchisme Trianon, Vienna Awards, alliance Axe, entrée en guerre). Chute 1944-1945 (occupation allemande puis soviétique). Restauration avortée 1945-1947 par tactique du salami communiste. Pas de Glorieuse Révolution atteinte — la Hongrie bascule dans l\'AR exogène soviétique.','description':'Cette RN suit la séquence canonique complète (révolution initiale → impérialisme revanchard → début de restauration) mais elle est avortée au moment thermidorien de la restauration par le Coup de Budapest communiste, analogue au Coup de Prague bohème de 1948. La chute de Horthy (1944-1945) par défaite externe ouvre une brève restauration démocratique sous tutelle alliée — analogue partielle à la restauration autrichienne 1945-1955 mais sans zone d\'occupation occidentale. Les élections libres de novembre 1945 donnent 57% aux Petits Propriétaires, mais le contrôle communiste des ministères-clés (Intérieur, police secrète ÁVO) permet la répression graduelle. La restauration est avortée en 1947-1948.','figure':'','confidence':'','alternatives':'','step':'','deviation':'RN canonique (29 ans) dans la fourchette basse. Avortée au moment de la restauration par Coup de Budapest — pattern analogue à la Bohême 1918-1948 dont la RN est avortée au moment de la Glorieuse Révolution par le Coup de Prague.','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Restauration avortée par le Coup de Budapest communiste (1947-1948), qui fait basculer la Hongrie dans l\'Ancien Régime exogène soviétique. La Glorieuse Révolution ne sera atteinte que 42 ans plus tard, après le second AR exogène.','resolution_conditions':'La restauration démocratique post-Horthy (1945-1947) est écrasée par la « tactique du salami » communiste soutenue par l\'occupation soviétique, analogue au Coup de Prague bohème de 1948. La Hongrie retombe dans un régime tutélaire après une séquence RN qui a complété les trois premières sous-phases (révolution initiale, impérialisme revanchard, début de restauration).','avortement':'','start':1918,'end':1947,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Séquence canonique compressée en 2 ans. Explosion 31 octobre 1918 (Révolution des Chrysanthèmes, Károlyi), expérience parlementaire (République populaire hongroise, novembre 1918-mars 1919), phase aiguë (République des Conseils de Béla Kun, 133 jours), moment thermidorien (contre-révolution de Szeged, Terreur blanche, intervention roumaine, 1919-mars 1920).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1918,'end':1920,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'AR','subtitle':'Révolution des Chrysanthèmes','summary':'Le 31 octobre 1918, à Budapest, révolution démocratique portée par le Conseil national hongrois. Károlyi Premier ministre. Tisza István assassiné le même jour. Le 13 novembre, Charles IV renonce aux affaires publiques. Le 16 novembre, République populaire hongroise proclamée. Effondrement de l\'AR exogène habsbourgeois en quelques semaines.','description':'Explosion déclenchée par la défaite militaire et l\'effondrement de la Double Monarchie. Assassinat de Tisza István le jour même de l\'explosion symbolise la rupture.','figure':'Mihály Károlyi','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1918,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'République populaire hongroise','summary':'République populaire hongroise de Károlyi (novembre 1918-mars 1919) : gouvernement de coalition démocratique, tentative de réforme agraire, désarmement unilatéral sur pression wilsonienne, pertes territoriales rapides aux mains des voisins.','description':'Expérience parlementaire classique qui combine enthousiasme démocratique et incapacité à gérer la crise externe. Pacifisme de Károlyi rend la défense militaire impossible. Le désarmement de l\'armée (29 octobre 1918) prive la République de tout moyen de défense.','figure':'Mihály Károlyi','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1918,'end':1919,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'République hongroise des Conseils','summary':'Le 21 mars 1919, fusion sociaux-démocrates + communistes et proclamation de la République hongroise des Conseils. 133 jours : nationalisation, Terreur rouge, alliance avec la Russie soviétique, guerre contre la Tchécoslovaquie, intervention roumaine, Kun fuit à Vienne 1er août 1919.','description':'Phase aiguë canonique — radicalisation maximale, prise de pouvoir par l\'extrême-gauche, élimination des modérés, Terreur, alliance avec une puissance révolutionnaire extérieure. Durée de 133 jours comparable à d\'autres phases aiguës du corpus.','figure':'Béla Kun','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1919,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Moment thermidorien','subtitle':'Contre-révolution de Szeged','summary':'Gouvernement contre-révolutionnaire de Szeged sous tutelle française. Terreur blanche liquide les anciens communistes et sociaux-démocrates. Horthy commandant en chef. Retrait des Roumains, entrée de Horthy à Budapest le 16 novembre 1919. Élection comme régent le 1er mars 1920.','description':'Moment thermidorien brutal qui liquide les restes de la gauche révolutionnaire. Terreur blanche (1919-1921) fait quelques milliers de victimes. Élection de Horthy comme régent ouvre la sous-phase d\'impérialisme revanchard.','figure':'Miklós Horthy','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1919,'end':1920,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Impérialisme revanchard','subtitle':'','summary':'Régence Horthy 1920-1944. Revanchisme territorial obsessionnel contre Trianon, alliance progressive avec l\'Italie puis l\'Allemagne nazie, récupération partielle des territoires perdus (Vienna Awards 1938 et 1940, Ruthénie 1939, Bačka 1941), entrée en guerre contre l\'URSS juin 1941, lois raciales antisémites progressives, effort militaire catastrophique, chute 1944-1945.','description':'Horthy incarne un Impérialiste Revanchard canonique malgré sa forme régentielle atypique. Les quatre fonctions de l\'IR sont remplies : projection impérialiste extérieure (revanchisme Trianon comme doctrine officielle pendant 24 ans, récupération de 36% des pertes), ventilation des élites par la méritocratie (Terreur blanche, promotion des officiers de Szeged), verticalité autoritaire (dictature parlementaire, parti dominant), chute par défaite externe (1944-1945). Durée inhabituelle (24 ans) expliquée par l\'absence de guerre européenne avant 1939 + forme régentielle stabilisante.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1920,'end':1944,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Impérialiste Revanchard','subtitle':'Régent','summary':'Miklós Horthy, régent du Royaume de Hongrie (1920-1944), incarne l\'Impérialiste Revanchard. Revanchisme territorial obsessionnel contre Trianon, alliance progressive avec l\'Axe, récupération partielle des territoires (1938-1941), entrée en guerre contre l\'URSS juin 1941, chute par occupation allemande mars 1944 puis soviétique fin 1944-début 1945.','description':'IR canonique atypique par sa forme (régent sous monarchie vacante) et par sa durée (24 ans). Pattern analogue partiel au Franco espagnol (IR conservateur-militaire longue durée) mais avec chute par défaite externe comme Napoléon et Hitler.','figure':'Miklós Horthy','confidence':'medium','alternatives':'Hypothèse alternative : pas d\'IR hongrois, Horthy comme simple régent conservateur. Écartée parce que les quatre fonctions canoniques de l\'IR sont structurellement remplies.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1920,'end':1944,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Restauration','subtitle':'','summary':'Brève restauration démocratique 1945-1947 sous occupation alliée (majoritairement soviétique). Élections libres de novembre 1945 gagnées par les Petits Propriétaires (57%). « Tactique du salami » communiste élimine progressivement les partis non-communistes. Restauration avortée par le Coup de Budapest 1947-1948 — la Hongrie bascule dans l\'AR exogène soviétique avant la Glorieuse Révolution.','description':'La restauration post-Horthy est structurellement analogue à la restauration autrichienne 1945-1955 mais échoue là où l\'autrichienne réussit. Trois raisons : (1) zone d\'occupation soviétique exclusive (pas de présence alliée occidentale), (2) Parti communiste soutenu par Moscou, (3) élites démocratiques progressivement éliminées. Élection libre de novembre 1945 (57% aux Petits Propriétaires) ne suffit pas — le contrôle communiste des ministères-clés (Intérieur, police secrète ÁVO) permet la répression graduelle. Entre 1945 et 1948-1949, les partis non-communistes sont successivement éliminés. Proclamation de la République populaire hongroise en 1949. Pas de Glorieuse Révolution atteinte — la Hongrie bascule dans l\'AR exogène soviétique.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1945,'end':1947,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Restauration','subtitle':'Gouvernement provisoire et IIe République','summary':'Après la chute de Horthy (1944) et l\'arrivée de l\'Armée rouge, le gouvernement provisoire de Débrecen (décembre 1944) puis le gouvernement Tildy (novembre 1945) installent un régime démocratique parlementaire. Élections libres du 4 novembre 1945 — les Petits Propriétaires obtiennent 57%, le Parti social-démocrate 17,4%, le Parti communiste 17%. Proclamation de la IIe République hongroise le 1er février 1946. Tildy président, Ferenc Nagy Premier ministre. Restauration démocratique effective mais fragile.','description':'Saillant Restauration canonique. La chute de l\'IR (Horthy) par défaite externe ouvre un régime à base élargie mais pas encore pleinement parlementaire. Pattern analogue à la Restauration Bourbon française (1815) ou à la Restauration Stuart anglaise (1660) par le fait qu\'elle revient à un cadre politique antérieur à l\'IR. Les institutions de la Première République sont partiellement réactivées (Constitution de 1946 néanmoins largement nouvelle, la couronne de Saint-Étienne comme symbole étant suspendue). La présence soviétique et le contrôle communiste des ministères-clés (Intérieur, ÁVO) rendent la restauration fragile dès le départ — elle sera avortée deux ans plus tard par le Coup de Budapest.','figure':'Zoltán Tildy / Ferenc Nagy','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1945,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Écrasement','subtitle':'Coup de Budapest','summary':'La « tactique du salami » de Rákosi élimine progressivement les partis non-communistes. En 1947-1948, le Parti des petits propriétaires est dissous, le Parti social-démocrate fusionné de force avec les communistes. La restauration démocratique est avortée avant d\'atteindre la Glorieuse Révolution. La Hongrie bascule dans l\'Ancien Régime exogène soviétique.','description':'Coup de Budapest analogue au Coup de Prague bohème de 1948. La restauration démocratique est écrasée par la pression soviétique et la tactique communiste interne. La RN hongroise reste structurellement inachevée — elle a complété la révolution initiale et l\'impérialisme revanchard, mais pas la Glorieuse Révolution. La Hongrie retombe dans un second AR exogène, soviétique cette fois.','figure':'Mátyás Rákosi','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1947,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Ancien Régime exogène soviétique','subtitle':'','summary':'Phase d\'Ancien Régime exogène soviétique de 42 ans. Stalinisme Rákosi 1949-1953 (phase répressive initiale), dégel Imre Nagy 1953-1955, retour Rákosi. **Glorieuse Révolution avortée de 1956** — Nagy revient au pouvoir, annonce le multipartisme et la sortie du Pacte de Varsovie, écrasement par l\'Armée rouge le 4 novembre 1956. Normalisation Kádár 1956-1988 (« communisme goulash »). Crise économique et transition 1988-1989.','description':'Phase d\'AR exogène strictement analogue à l\'AR exogène soviétique bohème (1948-1989). **Stalinisme Rákosi (1949-1953)** : Mátyás Rákosi impose un régime stalinien classique — collectivisation forcée, industrialisation lourde, procès politiques (procès Rajk 1949, exécution de László Rajk), culte de la personnalité, répression massive par l\'ÁVH. **Dégel (1953-1955)** : mort de Staline, Imre Nagy Premier ministre avec programme réformateur. Retour forcé de Rákosi en 1955. **Glorieuse Révolution avortée de 1956** : le 23 octobre, insurrection populaire à Budapest, retour de Nagy au pouvoir, formation d\'un gouvernement multipartite, annonce de la sortie du Pacte de Varsovie et de la neutralité (1er novembre). **Structurellement, c\'est une tentative de Glorieuse Révolution** — ancrage du parlementarisme multipartite + rupture avec la tutelle extérieure — qui reprend et achèverait la RN 1918-1947 interrompue à la restauration par le Coup de Budapest. Pattern analogue à la tentative de GR bohème de 1948, avortée par le Coup de Prague, sauf qu\'en Hongrie la tentative arrive 9 ans plus tard à l\'intérieur de l\'AR exogène, et qu\'elle est écrasée militairement par l\'URSS. Intervention du 4 novembre 1956 : plusieurs milliers de chars, 150 000 soldats, combats pendant une semaine, 2 500 Hongrois tués, 200 000 réfugiés. Nagy arrêté, jugé en secret, exécuté en 1958. **Normalisation Kádár (1956-1988)** : János Kádár, imposé par Moscou, pratique une normalisation différente de Rákosi — répression initiale sévère (exécutions 1957-1961), puis assouplissement progressif. « Celui qui n\'est pas contre nous est avec nous » (1962). Nouveau Mécanisme Économique (1968). « Communisme goulash ». Pattern accommodationniste plus doux que la normalisation Husák bohème. **Crise et transition (1988-1989)** : chute de Kádár en mai 1988, réformateurs du MSZMP (Pozsgay, Nyers), dialogue avec l\'opposition. Table ronde des partis (13 juin-18 septembre 1989). Réhabilitation d\'Imre Nagy, funérailles nationales le 16 juin 1989. Ouverture de la frontière autrichienne en août 1989. Proclamation de la République de Hongrie le 23 octobre 1989.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'variable','perturbation_type':'','affected_motor':'','note':'','resolution':'Sortie par effondrement du bloc soviétique (1989) — chute du Mur de Berlin, effondrement en cascade des régimes est-européens, transition démocratique pacifique hongroise. Pattern analogue à la sortie bohème.','resolution_conditions':'L\'AR exogène soviétique tient pendant 42 ans grâce à l\'appui militaire et politique de l\'URSS. Une tentative de Glorieuse Révolution en 1956 est écrasée par l\'intervention militaire soviétique, prolongeant l\'AR exogène sous forme de normalisation Kádár. Il s\'effondre finalement quand l\'appui soviétique disparaît avec la perestroïka de Gorbatchev.','avortement':'','start':1947,'end':1989,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime exogène','subtitle':'','summary':'Sous-phase unique de 42 ans. Stalinisme Rákosi 1949-1953, dégel, retour Rákosi, Glorieuse Révolution avortée de 1956 (tentative d\'ancrage parlementaire + sortie du Pacte de Varsovie écrasée par l\'Armée rouge), normalisation Kádár 1956-1988, crise économique, transition 1988-1989.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1947,'end':1989,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Glorieuse Révolution','subtitle':'Insurrection de Budapest','summary':'Le 23 octobre 1956, insurrection populaire à Budapest. Imre Nagy revient au pouvoir comme Premier ministre, forme un gouvernement multipartite, annonce la fin du système du parti unique (30 octobre) puis la sortie du Pacte de Varsovie et la neutralité hongroise (1er novembre). Tentative d\'ancrage du parlementarisme + rupture avec la tutelle externe — pattern de Glorieuse Révolution. Écrasée par l\'intervention militaire soviétique du 4 novembre 1956 (plusieurs milliers de chars, 150 000 soldats, 2 500 morts, 200 000 réfugiés). Nagy arrêté, exécuté en 1958.','description':'Saillant de Glorieuse Révolution avorté — lecture structurelle nouvelle dans le corpus. 1956 n\'est pas une nouvelle RN (pas d\'explosion d\'un Ancien Régime sédimenté, pas de cycle révolution initiale + IR + restauration à rejouer) mais une **réplique terminale** qui tente d\'achever la RN 1918-1947 dont la Glorieuse Révolution avait été empêchée par le Coup de Budapest. Les trois marqueurs canoniques de la Glorieuse Révolution sont présents : (1) ancrage démocratique (gouvernement multipartite, retour au pluralisme politique), (2) ancrage parlementaire (réactivation des institutions représentatives), (3) ancrage identitaire et de souveraineté (sortie du Pacte de Varsovie, déclaration de neutralité, rupture explicite avec la tutelle soviétique). Pattern analogue partiel à la tentative de GR bohème de 1948 avortée par le Coup de Prague, mais avec un décalage temporel : la Bohême a sa GR avortée au moment précis de la restauration, alors que la Hongrie voit sa tentative de GR arriver 9 ans après le Coup de Budapest, à l\'intérieur de l\'AR exogène soviétique. Écrasée par intervention militaire externe, prolonge l\'AR exogène pour 33 années supplémentaires (normalisation Kádár) jusqu\'à la vraie Glorieuse Révolution de 1989-1990.','figure':'Imre Nagy','confidence':'medium','alternatives':'Lecture alternative 1 : 1956 comme nouvelle RN avortée. Écartée parce que les marqueurs de 1956 sont structurellement ceux d\'une Glorieuse Révolution — ancrage du parlementarisme multipartite, sortie de la tutelle externe, annonce de la neutralité. Ce n\'est pas une explosion d\'AR qui ouvrirait une nouvelle séquence révolutionnaire (révolution initiale → IR → restauration → GR) mais une réplique terminale qui tente d\'ancrer définitivement le cadre parlementaire. Lecture alternative 2 : 1956 comme Remontrance tardive. Écartée parce que 1956 dépasse largement le cadre institutionnel (insurrection armée, sortie unilatérale du Pacte de Varsovie, multipartisme). 1956 est retenue comme **Glorieuse Révolution avortée** — elle reprend et tenterait d\'achever la RN 1918-1947 dont la restauration avait été avortée par le Coup de Budapest de 1947-1948.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1956,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Écrasement','subtitle':'Intervention soviétique','summary':'Le 4 novembre 1956, l\'Armée rouge attaque Budapest avec des forces massives. Combats pendant une semaine. 2 500 Hongrois tués, 200 000 réfugiés. Imre Nagy se réfugie à l\'ambassade yougoslave, en sort sur sauf-conduit et est arrêté par les Soviétiques. Jugé en secret, exécuté en 1958. János Kádár, imposé par Moscou, installe la normalisation qui prolonge l\'AR exogène pour 33 années supplémentaires.','description':'Écrasement militaire de la Glorieuse Révolution avortée de 1956. Pattern identique à l\'écrasement russo-habsbourgeois de 1849 (Világos) et à l\'écrasement du Printemps de Prague par le Pacte de Varsovie en 1968. La vraie Glorieuse Révolution hongroise arrivera 33 ans plus tard, en 1989-1990, quand l\'effondrement du bloc soviétique rendra la tutelle intenable.','figure':'Nikita Khrouchtchev / János Kádár','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1956,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale (finale)','subtitle':'','summary':'RN finale très courte (1 an), pacifique et négociée. Explosion par proclamation de la République le 23 octobre 1989 (date symbolique reliée à 1956). Restauration démocratique par négociation de la Table ronde, ouverture de la frontière autrichienne (août 1989). Glorieuse Révolution par élections libres 25 mars-8 avril 1990 et gouvernement Antall. Pattern proche de la Bohême RN 2 (1989-1993).','description':'La RN finale hongroise est l\'inverse structurel des deux RN précédentes — courte, pacifique, sans interruption, avec une Glorieuse Révolution claire. Elle bénéficie de l\'effondrement du bloc soviétique. Transition démocratique entièrement pacifique. Les marqueurs canoniques sont tous présents : ancrage démocratique par élections libres multipartites, ancrage parlementaire par le nouveau régime constitutionnel, ancrage identitaire par la sortie de l\'orbite soviétique et l\'orientation européenne. Pas d\'IR (pattern Autriche 1918-1955, Bohême 1989-1993 — RN courte sans IR). La GR est ancrée durablement (OTAN 1999, UE 2004).','figure':'','confidence':'','alternatives':'','step':'','deviation':'Très courte (1 an) par rapport à la fourchette canonique. Pattern proche des RN courtes du corpus (Espagne 1975-1978, Bohême 1989-1993) — RN post-effondrement soviétique qui bénéficie d\'un substrat institutionnel et élitaire préexistant.','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Glorieuse Révolution — élections libres multipartites de mars-avril 1990 et installation du gouvernement Antall. La Hongrie entre en phase parlementaire.','resolution_conditions':'La RN finale est rendue possible par l\'effondrement du bloc soviétique (1989) qui lève la contrainte exogène. Elle est très courte parce qu\'elle bénéficie de la mémoire institutionnelle des deux RN précédentes (1848 et 1918) et du substrat élitaire reconstruit pendant la dissidence.','avortement':'','start':1989,'end':1990,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Transition démocratique pacifique 1988-1990. Chute de Kádár (mai 1988), réformateurs du MSZMP négocient avec l\'opposition, Table ronde (juin-septembre 1989), ouverture de la frontière autrichienne (août 1989), proclamation de la République le 23 octobre 1989, élections libres 25 mars-8 avril 1990, installation du gouvernement Antall.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1989,'end':1990,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Explosion de l\'AR','subtitle':'Proclamation de la République','summary':'La proclamation de la République de Hongrie le 23 octobre 1989 (date symbolique du début de la révolution de 1956) est l\'explosion de l\'AR exogène soviétique. Précédée par la Table ronde d\'opposition (juin-septembre 1989) et l\'ouverture de la frontière autrichienne (août 1989). Suivie par les premières élections libres multipartites (mars-avril 1990).','description':'Explosion pacifique et négociée. Pattern analogue à la Révolution de Velours bohème (1989) ou à la transition espagnole post-Franco. La date symbolique du 23 octobre relie l\'explosion à l\'insurrection de 1956, donnant sens à la séquence complète de la RN hongroise — 1848 première explosion, 1918 seconde explosion, 1956 réplique avortée, 1989 résolution ancrée.','figure':'Imre Pozsgay / József Antall','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1989,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Restauration','subtitle':'','summary':'Restauration institutionnelle très courte entre la proclamation de la République (23 octobre 1989) et l\'installation du gouvernement Antall après les élections libres (mai 1990). Pas d\'IR. Pattern analogue à la restauration bohème 1989-1993.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1989,'end':1990,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','subtitle':'Élections libres','summary':'Les premières élections libres multipartites du 25 mars et 8 avril 1990 et l\'installation du gouvernement József Antall (Forum démocratique hongrois) constituent la Glorieuse Révolution hongroise. La Hongrie entre en phase parlementaire.','description':'GR canonique — parlementarisme stable, alternance démocratique, intégration euro-atlantique (OTAN 1999, UE 2004). Ancrée durablement. Clôt la séquence RN hongroise triphasique qui a duré 142 ans depuis la première explosion de 1848.','figure':'József Antall','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1990,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'parlementaire','title':'Phase parlementaire','subtitle':'','summary':'La Hongrie entre dans la phase parlementaire avec les élections libres de 1990 et le gouvernement Antall. Démocratie parlementaire multipartite stable, intégration euro-atlantique (OTAN 1999, UE 2004).','description':'La phase parlementaire hongroise est stable et fonctionnelle. L\'adhésion à l\'OTAN (12 mars 1999) puis à l\'Union européenne (1er mai 2004) ancre la Hongrie dans le cadre euro-atlantique. Le Parcours hongrois, après une phase oligarchique prolongée, une phase absolutiste dans la norme, et une séquence triphasique RN / AR exogène habsbourgeois / RN / AR exogène soviétique / RN finale, trouve enfin son aboutissement.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1990,'end':null,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 7;
+    const BASE_TOP = 315;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Acmé oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Pic absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description">${e.description}</div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

@@ -143,12 +143,12 @@
 - summary: Omri fonde l'État central du royaume d'Israël en Samarie, marquant le passage décisif d'une société tribale à un véritable État territorial doté d'une administration, d'un fisc et d'une armée permanente.
 - description: Omri transforme le royaume d'Israël en un véritable État territorial centré sur Samarie, avec une administration centrale, une fiscalité organisée et une armée permanente. La stèle de Mesha, source extra-biblique majeure, décrit les conquêtes omrides en Moab, Galaad et Ammon. Son fils Ahab poursuit cette politique par des alliances matrimoniales stratégiques, épousant notamment Jézabel, princesse de Tyr. En -853, lors de la bataille de Qarqar contre l'Assyrie, Ahab déploie 2 000 chars et 10 000 fantassins à 400 km de sa capitale — un effort logistique qui atteste d'un appareil étatique sophistiqué. Les ostraca de Samarie (-770) confirment l'existence d'un système fiscal permanent et structuré.
 
-#### Saillant : Pic oligarchique
+#### Saillant : Acmé oligarchique
 - type: saillant
 - start: -770
 - figure: Jéroboam II
 - subtitle: Jéroboam II
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: high
 - summary: Sous Jéroboam II, le royaume d'Israël atteint son extension maximale, de la Syrie à la mer Morte, avec une prospérité économique et une capacité administrative sans précédent.
 - description: Le règne de Jéroboam II représente l'apogée de la puissance oligarchique du royaume d'Israël. Le territoire s'étend de la Syrie à la mer Morte, le commerce régional est intensifié, et les palais décorés d'ivoires témoignent d'une prospérité remarquable. L'administration unifiée démontre une capacité centrale à collecter des ressources sur un vaste territoire. Ce pic de puissance, cependant, masque des tensions internes croissantes que les prophètes Amos et Osée ne tarderont pas à dénoncer, annonçant la phase de polarisation des élites.

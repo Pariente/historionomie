@@ -33,7 +33,8 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
 | `references/sous_phases.md` | **Grille opératoire des sous-phases** : marqueurs de début/fin, durées typiques, exemples extraits des parcours validés | **Toujours lire en deuxième**, avant d'identifier une sous-phase |
-| `references/phase_feodale.md` | Phase féodale : sous-phases, saillants (éveil féodal, pic féodal), marqueurs | La question porte sur la phase féodale |
+| `references/phase_pre_feodale.md` | Phase pré-féodale : percolation élitaire (Deblonde), marqueurs, exemples | La question porte sur la percolation ou la pré-féodale |
+| `references/phase_feodale.md` | Phase féodale : coagulation, bascule, saillants (éveil féodal, pic féodal, pacte oligarchique), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
 | `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, pic absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
 | `references/phase_rn.md` | Révolution Nationale : sous-phases (révolution initiale, IR, restauration), saillants (explosion AR, phase aiguë, thermidorien, IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
@@ -111,7 +112,7 @@ Pour **chaque phase** identifiée (féodale, puis oligarchique, puis absolutiste
 
 1. **Les saillants canoniques sont-ils tous présents ?**
    - **Féodale** : éveil, pic(s) féodal(aux), crise(s) féodale(s), **pacte oligarchique** (généralement très formel — loi salique, Ordonnances, primogéniture, Libell, etc.)
-   - **Oligarchique** : 1er monarque oligarchique, pic oligarchique, polarisation, **guerre sociale** (deux factions + tiers résolvant)
+   - **Oligarchique** : 1er monarque oligarchique, acmé oligarchique, polarisation, **guerre sociale** (deux factions + tiers résolvant)
    - **Absolutiste** : 1er monarque absolu, pic absolutiste, fin d'expansion, remontrance, Ancien Régime
    - **RN** : les 7 étapes (explosion AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, restauration, Glorieuse Révolution)
    
@@ -195,7 +196,7 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 
 **Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
-- **Oligarchique** : 1er monarque oligarchique, Pic oligarchique, Fin de l'expansion, Guerre sociale
+- **Oligarchique** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale
 - **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Pic absolutiste, Fin de l'expansion, Remontrance
 - **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
 
@@ -272,7 +273,7 @@ Les écarts sont toujours significatifs. Ne pas les ignorer — les expliquer.
 
 ### Humilité épistémique
 
-L'historionomie est un cadre en construction. Certains saillants sont bien établis (éveil féodal, 1er monarque oligarchique, guerre sociale), d'autres sont encore en cours de validation (pic féodal, pic oligarchique). Signaler les incertitudes plutôt que de forcer une identification.
+L'historionomie est un cadre en construction. Certains saillants sont bien établis (éveil féodal, 1er monarque oligarchique, guerre sociale), d'autres sont encore en cours de validation (pic féodal, acmé oligarchique). Signaler les incertitudes plutôt que de forcer une identification.
 
 Quand l'analyse d'une nouvelle nation révèle un cas qui ne colle pas au modèle, c'est potentiellement une découverte — pas un échec. Le signaler et en discuter.
 

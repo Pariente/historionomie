@@ -17,13 +17,22 @@ Le **bloc contestataire** (ED + EG) a-t-il **renversé le bloc élitaire** ? Le 
 
 Le test s'applique à l'échelle **nationale** — c'est-à-dire à l'échelle de l'entité dont on suit le Parcours. Dans une monarchie composite (ex. : Espagne habsbourgeoise, Saint-Empire), l'administration centrale doit avoir préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau. Si le noyau est absolutisé mais que des entités associées conservent leurs propres institutions (fueros, Cortès, droit propre), le test N'EST PAS passé.
 
-**Exemple :** Les Rois Catholiques (1479) absolutisent la Castille, mais la Couronne d'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques — qui sont le pic oligarchique.
+**Exemple :** Les Rois Catholiques (1479) absolutisent la Castille, mais la Couronne d'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques — qui sont le acmé oligarchique.
 
 ### Marqueurs nécessaires
 
-- L'administration centrale a préséance incontestée sur les administrations locales (à l'échelle nationale)
+- L'administration centrale a préséance incontestée sur les administrations locales **de facto et de jure** (à l'échelle nationale)
 - L'exécutif peut agir sans frein juridique des oligarques (guerre, impôts, justice)
+- Les entités décentralisées perdent leur autonomie fiscale
 - Une figure ou dynastie issue de la guerre sociale, qui ne s'identifie à aucune des anciennes factions
+
+### Piège : la codification écrite du droit n'est PAS un marqueur discriminant
+
+Une erreur fréquente est de prendre l'existence (ou l'absence) d'une codification écrite du droit comme test discriminant absolutiste. **C'est faux**, et l'Angleterre en est la preuve : elle n'a **jamais** codifié son droit (common law non-codifiée), et pourtant elle est canoniquement absolutisée à partir d'Henri VII (1485). Si la codification écrite était un test, l'Angleterre n'aurait jamais passé ce test, ce qui est manifestement faux.
+
+Le test discriminant ne porte pas sur la **forme** (code écrit / coutume / law reports) mais sur la **substance** : est-ce que l'administration centrale a préséance **de jure** sur les administrations locales ? Cette préséance peut être établie par codification écrite (modèle français, espagnol post-Nueva Planta, autrichien post-Haugwitz) ou par évolution coutumière (modèle anglais). Le marqueur structurel est la préséance, pas la forme dans laquelle elle s'exprime.
+
+Symétriquement, **un projet de codification écrite rejeté n'est pas en soi une preuve d'échec absolutiste**. Il peut être rejeté pour des raisons nationales (par exemple, l'importation de droit étranger mal vécue par une conscience nationale déjà établie) sans que cela invalide les autres marqueurs structurels. Pour évaluer si une nation a franchi le seuil absolutiste, il faut appliquer la grille complète des marqueurs nécessaires (préséance de jure, autonomie fiscale, frein juridique sur la guerre, etc.), pas se reposer sur le seul critère de la codification.
 
 ### Marqueurs fréquents (non nécessaires)
 
@@ -40,14 +49,25 @@ Les structures institutionnelles de la phase oligarchique ne disparaissent pas, 
 
 ### Saillant : 1er monarque absolu (tout début de la sous-phase)
 
-La figure qui résout la guerre sociale et inaugure la concentration du pouvoir. Il ne s'identifie à aucune des factions oligarchiques — il est au-dessus d'elles et s'appuie sur l'appareil administratif et les clientèles populaires délaissées.
+La figure qui résout la guerre sociale et inaugure la concentration du pouvoir central. Le critère structurel **n'est pas** que la figure soit ethniquement ou idéologiquement « au-dessus » des factions — c'est qu'elle **construise un nouveau cadre central qui transcende structurellement les divisions précédentes**, en s'appuyant sur l'appareil administratif et les clientèles populaires délaissées.
+
+Trois patterns canoniques de résolution :
+
+1. **Pattern « tiers neutre »** — la figure vient effectivement d'en dehors des deux factions. Exemples : Henri VII Tudor (étranger gallois, étranger aux York et Lancaster) ; Philippe V Bourbon (Français imposé en Espagne, étranger aux factions austraciste et borboniste espagnoles) ; Marie-Thérèse + Habsbourg-Lorraine (nouvelle branche dynastique après la guerre de Succession d'Autriche).
+
+2. **Pattern « conversion / transcendance personnelle »** — la figure vient d'une des factions mais transcende son origine par un acte qui le place au-dessus. Exemple : Henri IV Bourbon, qui vient du camp huguenot mais se convertit au catholicisme (« Paris vaut bien une messe ») et promulgue l'Édit de Nantes comme acte d'autorité royale au-dessus des deux camps.
+
+3. **Pattern « victoire de faction qui construit le nouveau cadre »** — la figure vient clairement d'une des factions et la fait gagner militairement, mais elle construit ensuite un pouvoir central nouveau qui dépasse structurellement la simple victoire de camp. Exemple canonique : Simon Thassi (-140), issu du camp maccabéen/yahviste, qui construit la dynastie hasmonéenne en cumulant les fonctions de Grand Prêtre + stratège + ethnarque rendues héréditaires — c'est le nouveau cadre central qui transcende, pas la neutralité personnelle.
+
+Le test discriminant n'est donc **pas** « venir d'aucune faction » mais « construire un nouveau cadre central qui rend les anciennes divisions structurellement obsolètes et concentre le pouvoir au-dessus d'elles ». Une victoire d'une faction qui se contente de marginaliser l'autre sans construire de nouveau cadre n'est pas une résolution de guerre sociale au sens canonique — c'est une victoire asymétrique (cf. Contre-Réforme autrichienne 1620 → polarisation prolongée jusqu'à 1740).
 
 **Exemples :**
 - Israël antique : Josias (-640) — centralisation du culte au Temple, destruction des bamot, envoi d'agents royaux sur tout le territoire, unification juridique par le Deutéronome
-- Israël (prolongement) : Simon Thassi (-140) — cumul des fonctions de Grand Prêtre, stratège et ethnarque, rendu héréditaire
-- France : Henri IV (1598) — résolution des Guerres de Religion, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully)
-- Angleterre : Henri VII (1485) — création d'une nouvelle dynastie émancipée des York et des Lancaster
-- Venise : Inquisiteurs d'État (~1669) — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs d'État, rendus permanents en 1583 et devenus progressivement autonomes, ne s'identifient à aucune des factions (giovani/vecchi) et dominent les deux. Leur base est la classe administrative des cittadini (analogue de la noblesse de robe).
+- Israël (prolongement) : Simon Thassi (-140) — issu du camp yahviste maccabéen, mais construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire). Pattern victoire de faction transcendante.
+- France : Henri IV (1598) — issu du camp huguenot, converti pour transcender, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully). Pattern conversion/transcendance personnelle.
+- Angleterre : Henri VII (1485) — création d'une nouvelle dynastie émancipée des York et des Lancaster. Pattern tiers neutre.
+- Espagne : Philippe V (1714) — Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta. Pattern tiers neutre.
+- Venise : Inquisiteurs d'État (~1669) — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs d'État, rendus permanents en 1583 et devenus progressivement autonomes, ne s'identifient à aucune des factions (giovani/vecchi) et dominent les deux. Leur base est la classe administrative des cittadini. Pattern tiers neutre institutionnel.
 
 ### Caractéristiques
 

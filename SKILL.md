@@ -52,7 +52,7 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 
 **Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
-- **Oligarchique** : 1er monarque oligarchique, Pic oligarchique, Fin de l'expansion, Guerre sociale
+- **Oligarchique** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale
 - **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Pic absolutiste, Fin de l'expansion, Remontrance
 - **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
 
@@ -102,7 +102,7 @@ Utiliser la recherche web pour rassembler les informations historiques. Chercher
 
 **Phase féodale** : premier chef supra-régional (éveil féodal), rois forts (pics féodaux), extinctions dynastiques / partitions / crises (crises féodales), pacte oligarchique formel.
 
-**Phase oligarchique** : premier souverain avec fisc/armée/administration permanents (1er monarque olig), pic oligarchique, fin de l'expansion extérieure, deux factions en conflit, tiers résolvant (guerre sociale).
+**Phase oligarchique** : premier souverain avec fisc/armée/administration permanents (1er monarque olig), acmé oligarchique, fin de l'expansion extérieure, deux factions en conflit, tiers résolvant (guerre sociale).
 
 **Phase absolutiste** : 1er monarque absolu, dernière révolte oligarchique armée (DGRO), pic absolutiste interne à l'impérialisme, fin de l'expansion, Remontrance (dernière tentative institutionnelle écrasée).
 

@@ -254,7 +254,7 @@ SAILLANT_ICONS = {
     "Crise féodale": "bolt",
     "Pacte oligarchique": "gavel",
     "1er monarque oligarchique": "stars",
-    "Pic oligarchique": "terrain",
+    "Acmé oligarchique": "terrain",
     "Fin de l'expansion": "block",
     "Guerre sociale": "local_fire_department",
     "1er monarque absolu": "crown",
@@ -1086,7 +1086,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {{
 // Layout saillants: measure real label widths and assign rows to avoid overlap
 (function layoutSaillants() {{
     const ROW_HEIGHT = 90;
-    const MAX_ROWS = 6;
+    const MAX_ROWS = 7;
     const BASE_TOP = {area_chart_top + 85 if has_area_data else 200};
     const MARGIN = 6; // px of horizontal breathing room between labels
 
@@ -1224,7 +1224,7 @@ function showDetail(idx) {{
         'Crise féodale': 'Effondrement du système personnel du suzerain',
         'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\\'exécutif',
         '1er monarque oligarchique': 'Premier souverain disposant d\\'un État central permanent',
-        'Pic oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Acmé oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
         'Fin de l\\'expansion': 'L\\'expansion extérieure cesse, les tensions internes prennent le relais',
         'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\\'État central',
         '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',

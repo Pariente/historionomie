@@ -127,7 +127,7 @@
 - actual_duration: ~180 ans
 - resolution: Guerre sociale — Torriani contre Visconti (1240-1277) — résolue par Ottone Visconti à Desio (1277). Création de la signoria.
 - summary: Phase portée par le système communal. Milan mène la Ligue lombarde, triomphe à Legnano (1176), obtient la Paix de Constance (1183). La polarisation capitanei/Credenza éclate au XIIIe siècle. Les Della Torre (prébendière) vs les Visconti (patrimoniale). Desio (1277) résout le conflit.
-- description: Le système communal est un des plus sophistiqués d'Europe : consuls (1097), podestariat (1186), Credenza di Sant'Ambrogio (1198), capitanat du peuple (1240). La destruction par Barberousse (1162) est une perturbation intra-phase qui renforce paradoxalement l'identité. La Paix de Constance (1183) est le pic oligarchique. Cortenuova (1237) marque la fin de l'expansion. La guerre sociale oppose la Credenza/Della Torre (prébendière, artisans, guildes) aux capitanei/Visconti (patrimoniale, foncière). Ottone Visconti, archevêque nommé par le pape, tranche à Desio (1277) et crée un régime nouveau — la signoria.
+- description: Le système communal est un des plus sophistiqués d'Europe : consuls (1097), podestariat (1186), Credenza di Sant'Ambrogio (1198), capitanat du peuple (1240). La destruction par Barberousse (1162) est une perturbation intra-phase qui renforce paradoxalement l'identité. La Paix de Constance (1183) est le acmé oligarchique. Cortenuova (1237) marque la fin de l'expansion. La guerre sociale oppose la Credenza/Della Torre (prébendière, artisans, guildes) aux capitanei/Visconti (patrimoniale, foncière). Ottone Visconti, archevêque nommé par le pape, tranche à Desio (1277) et crée un régime nouveau — la signoria.
 - deviation: -20 ans. Écart modéré.
 
 ### Subphase : Essor oligarchique (1097-1200)
@@ -146,12 +146,12 @@
 - confidence: medium
 - summary: Le système communal (1097) fonctionne comme un « monarque oligarchique » collectif — fisc permanent (estimo, douanes), milices permanentes, administration institutionnalisée (consuls, podestà, conseils). Comme Venise, le « monarque » est le système, pas une personne.
 
-#### Saillant : Pic oligarchique — Paix de Constance
+#### Saillant : Acmé oligarchique — Paix de Constance
 - type: saillant
 - start: 1183
 - figure: Ligue lombarde
 - subtitle: Ligue lombarde
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: medium
 - summary: La Paix de Constance (1183) consacre l'auto-gouvernement des cités lombardes. Milan est au sommet de son prestige communal — leader de la Ligue, vainqueur de Legnano (1176).
 
@@ -360,13 +360,13 @@
 - confidence: medium
 - summary: Le système Sénat/patriciat formalisé par les Novae Constitutiones (1541) fonctionne comme un « monarque oligarchique » collectif — fisc autonome (villes avec base fiscale propre), milice patricienne, administration institutionnalisée (Sénat avec droit de veto et d'interinazione, Conseil des 60 Décurions cooptés, Grand Chancelier avec veto absolu). Comme Venise et la commune du 1er cycle, le « monarque » est le système, pas une personne.
 
-#### Saillant : Pic oligarchique — Carlo Borromeo
+#### Saillant : Acmé oligarchique — Carlo Borromeo
 - type: saillant
 - start: 1564
 - end: 1584
 - figure: Carlo Borromeo
 - subtitle: Carlo Borromeo
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: medium
 - summary: Carlo Borromeo (archevêque 1564-1584) porte le Milan espagnol à son prestige maximal. Il incarne l'homogénéisation culturelle (Contre-Réforme, visite pastorale de chaque paroisse, séminaires, discipline liturgique). Son autorité morale surpasse celle du gouverneur espagnol. Canonisé en 1610, il devient le patron de Milan — figure d'identité lombarde par excellence.
 
@@ -556,7 +556,7 @@
 | Crise féodale | Querelle des Investitures (1045-1097) | — |
 | Pacte oligarchique | Commune (1097) | Novae Constitutiones (1541) |
 | 1er monarque oligarchique | Système communal (1097) | Système Sénat/patriciat (1541) |
-| Pic oligarchique | Paix de Constance (1183) | Borromeo (1564-1584) |
+| Acmé oligarchique | Paix de Constance (1183) | Borromeo (1564-1584) |
 | Fin de l'expansion (olig.) | Cortenuova (1237) | Peste de 1630 |
 | Guerre sociale | Torriani contre Visconti (1240-1277) | Patriciat contre réformateurs (1780-1796) |
 | 1er monarque absolu | Ottone Visconti (1277) | Napoléon (1796) |

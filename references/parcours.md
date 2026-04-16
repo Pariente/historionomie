@@ -43,6 +43,16 @@ Le Parcours ne nécessite pas que la nation soit formellement unifiée ou souver
 - **Sans unification formelle**, une nation peut avoir un Parcours propre. L'Allemagne et l'Italie avancent dans leur Parcours bien avant leur unification politique au XIXe siècle.
 - **Dans un empire multi-national**, le Parcours est porté par l'ethnie du cœur de l'empire — les Turcs de Roumélie pour l'Empire ottoman, les Autrichiens germanophones pour l'Empire habsbourgeois.
 
+### Les noms ne sont pas la réalité
+
+Ce qui détermine la phase d'une nation, c'est le **fonctionnement réel** de ses institutions et de sa société, pas leur étiquette formelle. Les institutions portent souvent des noms qui ne correspondent pas à leur rôle structurel :
+
+- La France a des « parlements » (cours de justice) bien avant d'être un État-nation parlementaire. Le mot « parlement » ne signifie pas la même chose structurellement.
+- Israël moderne a un régime formellement parlementaire, mais le fonctionnement réel de ses institutions et de sa société est oligarchique (au moins jusqu'à Netanyahou).
+- Les États-Unis ont une « Constitution » et un « Congrès » dès 1787, mais le fonctionnement réel est féodal (pouvoir reposant sur des réseaux interpersonnels entre grands acteurs, pas d'État central permanent au sens fiscal et monétaire) jusqu'à la création de la Fed (1913).
+
+Face à une institution, la question n'est jamais « comment s'appelle-t-elle ? » mais « comment fonctionne-t-elle réellement ? ». Un « parlement » peut être un outil absolutiste, une « monarchie » peut être structurellement oligarchique, une « démocratie » peut être structurellement féodale.
+
 ### Comment mapper un nouveau Parcours
 
 La méthode la plus efficace pour mapper le Parcours d'une nation non encore analysée est de **commencer par les saillants**, pas par les phases. Les saillants sont des événements ponctuels, identifiables dans les sources historiques. Les phases se déduisent ensuite.
@@ -149,7 +159,7 @@ Ce principe a une conséquence méthodologique : pour identifier la phase d'une 
 ## Vue d'ensemble des phases
 
 **Phase féodale (~200 ans, peut boucler).** Interconnexion des réseaux claniques et lignagers. Un chef des chefs émerge, dont l'autorité repose sur des liens de vassalité d'homme à homme. Pas d'administration centrale permanente. L'édifice est fragile et dépend de la personne du suzerain. Des **pics féodaux** (rois forts) alternent avec des **crises féodales** (fragmentation post-pic). Le pacte oligarchique ne survient que quand **deux conditions** sont réunies simultanément : homogénéité des oligarques à l'échelle du royaume + faiblesse du suzerain (Deblonde). Si la phase boucle (crises sans pacte), elle peut durer bien plus de 200 ans (cf. Angleterre : ~500 ans, 5 boucles). Cf. `phase_feodale.md`.
-- Sous-phases : coagulation → apogée féodale → bascule oligarchique (avec boucles possibles)
+- Sous-phases : coagulation des élites → [bascule oligarchique] (avec boucles possibles)
 
 **Phase oligarchique (~200 ans).** Émergence de l'État central — impôt permanent, armée permanente, administration centrale. L'État central se renforce progressivement face aux pouvoirs locaux. Cf. `phase_oligarchique.md`.
 - Sous-phases : essor oligarchique → polarisation des élites → guerre sociale
@@ -185,7 +195,7 @@ Voir `references/nations/*/parcours.md` pour le détail et `references/nations/*
 | Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Charles Quint (1519) | Orseolo (~991) | Louis IV (~1328) | Philippe Ier d'Achaïe (~1295) |
 | Pacte oligarchique | — (non identifié) | — | Loi salique (1317) | Ordonnances (1311) | Augsbourg (1555) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) |
 | 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Grand Électeur (1640) | Contarini (~1043) / système | Guillaume IV (~1508) | Amédée VIII (~1430) / Emmanuel Philibert (1559) |
-| Pic oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | — | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) |
+| Acmé oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | — | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) |
 | Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | — | Agnadello (1509) | — | Mort Ch. Emmanuel Ier (1630) |
 | Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Conflit Électeur/États (~1660-1713) | Tensions institutionnelles (~1628-1669) | ~1564-1597 | Madamisti/Principisti (~1637-1696) |
 | 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Frédéric-Guillaume Ier (1713) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) |

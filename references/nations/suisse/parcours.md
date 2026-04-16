@@ -174,16 +174,16 @@ Les deux moteurs opèrent à des échelles partiellement distinctes :
 - summary: Le « monarque oligarchique » suisse est le proto-État confédéral : la Tagsatzung comme organe délibératif et les baillages communs (Gemeine Herrschaften) comme territoires administrés conjointement. Ce proto-État est faible comparé aux appareils cantonaux (pas de fisc unifié, pas d'armée permanente), mais il est réel : il administre des territoires, lève des revenus, envoie des fonctionnaires (baillis). C'est une sorte d'UE médiévale — et c'est le contrôle de ce proto-État qui constitue l'enjeu de la compétition entre factions pour le reste de la phase.
 - description: Le proto-État confédéral s'est constitué progressivement à partir du début du XVe siècle. L'Argovie (conquise en 1415) est le premier baillage commun ; la Thurgovie, le Tessin, le comté de Baden et d'autres territoires suivent. Après l'expansion à 13 cantons (1501-1513), le système est pleinement opérationnel : la Tagsatzung siège plusieurs fois par an, chaque canton délègue deux représentants, les baillages communs sont administrés par des baillis (Landvögte) en rotation bisannuelle entre les cantons souverains. Le système de mobilisation militaire cantonale permet de lever jusqu'à 36 000 hommes. Les marqueurs institutionnels classiques (fisc, armée, administration permanents et unifiés) n'existent qu'au niveau cantonal — Berne, Zurich et Lucerne disposent chacune de leur propre appareil étatique. Mais le proto-État confédéral est l'institution supra-cantonale dont le contrôle structure la compétition politique entre cantons, et c'est à ce niveau que se jouera la guerre sociale.
 
-#### Saillant : Pic oligarchique
+#### Saillant : Acmé oligarchique
 - type: saillant
 - start: 1512
 - end: 1515
 - figure: La Confédération
 - subtitle: Occupation de Milan
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: medium
 - summary: L'occupation suisse du duché de Milan (1512-1515), confirmée par la victoire de Novara (1513), porte la Confédération au sommet de son influence internationale. Pour la première fois, une confédération de communautés alpines contrôle un État princier étranger et négocie d'égal à égal avec les grandes puissances européennes.
-- description: Le pic oligarchique suisse culmine avec l'occupation de Milan. Après avoir contribué à chasser les Français de Lombardie, les Confédérés installent Massimiliano Sforza comme duc sous leur protection et contrôlent de facto le duché. La victoire de Novara (6 juin 1513), où les piquiers suisses repoussent une armée française supérieure en nombre, confirme le statut de la Suisse comme puissance militaire de premier plan. Cette période correspond au maximum de projection de puissance de la Confédération : elle est courtisée par toutes les grandes puissances, les pensions étrangères affluent, et le prestige militaire suisse est au zénith. Mais cette puissance repose sur la cohésion militaire cantonale, pas sur un État central — elle est intrinsèquement fragile.
+- description: Le acmé oligarchique suisse culmine avec l'occupation de Milan. Après avoir contribué à chasser les Français de Lombardie, les Confédérés installent Massimiliano Sforza comme duc sous leur protection et contrôlent de facto le duché. La victoire de Novara (6 juin 1513), où les piquiers suisses repoussent une armée française supérieure en nombre, confirme le statut de la Suisse comme puissance militaire de premier plan. Cette période correspond au maximum de projection de puissance de la Confédération : elle est courtisée par toutes les grandes puissances, les pensions étrangères affluent, et le prestige militaire suisse est au zénith. Mais cette puissance repose sur la cohésion militaire cantonale, pas sur un État central — elle est intrinsèquement fragile.
 
 #### Saillant : Fin de l'expansion
 - type: saillant

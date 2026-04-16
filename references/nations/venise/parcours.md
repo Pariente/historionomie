@@ -207,12 +207,12 @@
 - summary: Venise conquiert un vaste arrière-pays continental (Bergame, Brescia, Vérone, Padoue, Frioul) entre 1404 et 1428. La superficie double à nouveau, ajoutant un exutoire terrestre au Stato da Màr maritime et prolongeant encore l'essor oligarchique.
 - description: La conquête de la Terraferma (1404-1428) transforme Venise d'une cité-État maritime en une puissance territoriale majeure en Italie du Nord. Bergame, Brescia, Vérone, Padoue, Vicence, le Frioul passent sous contrôle vénitien. Ce deuxième choc d'hétérogénéité ajoute une population continentale, avec ses propres traditions juridiques et politiques, à l'empire maritime existant. Le mécanisme de prolongement est double : l'expansion terrestre offre un nouvel exutoire aux élites (guerres contre Milan, administration des provinces) et retarde la polarisation qui ne se cristallisera qu'après Agnadello (1509).
 
-#### Saillant : Pic oligarchique — Foscari et l'apogée de la Terraferma
+#### Saillant : Acmé oligarchique — Foscari et l'apogée de la Terraferma
 - type: saillant
 - start: 1440
 - figure: Francesco Foscari
 - subtitle: Foscari
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: medium
 - alternatives: Enrico Dandolo (~1192-1205) — prestige extraordinaire (IVe croisade, création du Stato da Màr), mais Venise ne contrôle pas encore la Terraferma. Dandolo est le pic de la puissance maritime seule. Foscari est retenu car il incarne le pic de la puissance combinée (maritime + terrestre).
 - summary: Francesco Foscari (doge 1423-1457) préside le plus long dogat de l'histoire vénitienne et porte la puissance vénitienne à son maximum combiné : empire maritime hérité de Dandolo ET Terraferma à son extension maximale (Bergame, Brescia, Crema, Ravenne). Venise est à la fois puissance maritime et puissance terrestre — le vrai pic.
@@ -464,7 +464,7 @@
 | Crise féodale | Crise franque (804-810) |
 | Pacte oligarchique | Abolition de la co-régence (1032) |
 | 1er monarque oligarchique | Contarini (1043) / système post-1032 |
-| Pic oligarchique | Foscari (1440) |
+| Acmé oligarchique | Foscari (1440) |
 | Fin de l'expansion | Agnadello (1509) |
 | Guerre sociale | Giovani vs vecchi / triomphe des Inquisiteurs (1628-1669) |
 | 1er monarque absolu | Inquisiteurs d'État (1669) |

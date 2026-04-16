@@ -57,15 +57,15 @@
 - confidence: medium
 - summary: Identique à H1.
 
-#### Saillant : Pic oligarchique
+#### Saillant : Acmé oligarchique
 - type: saillant
 - start: 1740
 - end: 1786
 - figure: Frédéric II le Grand
-- title: Pic oligarchique
+- title: Acmé oligarchique
 - confidence: low
-- alternatives: Dans H1, Frédéric le Grand est le pic absolutiste. Dans H2, il est le pic oligarchique — figure exécutive très puissante mais qui coexiste encore avec des pouvoirs locaux autonomes (les Junkers gardent le contrôle des campagnes, les provinces ont leur administration propre). Le problème est que Frédéric le Grand ne « coexiste » pas vraiment — il impose sa volonté sans consultation. C'est un argument en faveur de H1.
-- summary: Grande puissance, despotisme éclairé. Mais dans H2, c'est un pic oligarchique, pas absolutiste.
+- alternatives: Dans H1, Frédéric le Grand est le pic absolutiste. Dans H2, il est le acmé oligarchique — figure exécutive très puissante mais qui coexiste encore avec des pouvoirs locaux autonomes (les Junkers gardent le contrôle des campagnes, les provinces ont leur administration propre). Le problème est que Frédéric le Grand ne « coexiste » pas vraiment — il impose sa volonté sans consultation. C'est un argument en faveur de H1.
+- summary: Grande puissance, despotisme éclairé. Mais dans H2, c'est un acmé oligarchique, pas absolutiste.
 
 ### Perturbation : Guerres napoléoniennes
 - type: perturbation

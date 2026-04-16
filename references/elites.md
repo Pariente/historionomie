@@ -58,11 +58,16 @@ Les élites **non-gouvernementales** — en particulier la bourgeoisie des ville
 
 ## La guerre sociale : triomphe de l'État central
 
-La guerre sociale est le conflit de fin de phase oligarchique. Elle ne se résout pas par la victoire d'une faction sur l'autre, mais par le triomphe de l'État central sur les deux factions.
+La guerre sociale est le conflit entre les deux factions élitaires — prébendière et patrimoniale — à la fin de la phase oligarchique. Deux critères essentiels :
 
-Les clientèles délaissées par les deux types d'élites sont mobilisées par une figure ou une dynastie nouvelle, qui ne s'identifie à aucune des factions en place. Cette figure tire sa légitimité d'en bas (les populations délaissées) et d'en haut (l'appareil administratif devenu indispensable). Les deux anciennes factions subsistent mais sont affaiblies — le pouvoir leur a échappé au profit du centre.
+1. **La structure du conflit est élitaire** — prébendière vs patrimoniale. La religion, la région, la dynastie peuvent servir de mécanisme de distinction, mais la cause structurelle est la lutte pour le contrôle de l'État central.
+2. **La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction : c'est l'émergence d'un cadre qui transcende le clivage précédent.
 
-C'est pour cette raison que la guerre sociale débouche sur l'absolutisme : la figure qui émerge ne dépend d'aucune des anciennes factions, et les deux sont suffisamment affaiblies pour que l'absolutisation puisse commencer.
+C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.
+
+**La figure résolvante est en général un tiers** — une figure s'appuyant sur les clientèles délaissées par les deux factions et sur la classe moyenne administrative pour forcer les puissants à plier (Henri IV, Henri VII, Philippe V). Mais le tiers neutre est une observation empirique fréquente, pas un critère structurel. Dans le cas d'Israël (prolongement), la dynastie hasmonéenne (Maccabées) n'est pas un tiers — une faction a clairement gagné — mais le critère essentiel est satisfait : un nouveau cadre avec renforcement du pouvoir central.
+
+Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne militairement mais sans qu'un nouveau cadre central émerge — la guerre sociale n'est tout simplement **pas résolue**, et la phase oligarchique se poursuit.
 
 ### Important : la guerre sociale n'est pas une guerre religieuse
 

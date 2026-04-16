@@ -230,9 +230,9 @@ Marie-Thérèse (avec les réformes Haugwitz de 1749) est le **1er monarque abso
 
 **Ferdinand II (1619 ou 1627)** : écrase la Bohême à la Montagne Blanche, la Verneuerte Landesordnung (1627) absolutise la Bohême seule. Mais ne s'étend pas au reste de la monarchie. Ferdinand II est une victoire confessionnelle asymétrique au niveau d'un royaume, pas un 1er monarque absolu à l'échelle nationale. Le test discriminant échoue : les Chancelleries restent distinctes, les diètes provinciales autrichiennes conservent leurs pouvoirs, la Hongrie est totalement à l'écart.
 
-**Léopold Ier (1658-1705)** : reconquête de la Hongrie, prestige européen, mais la monarchie reste composite. Léopold Ier est retenu comme **pic oligarchique** — sommet de la puissance dans le cadre existant.
+**Léopold Ier (1658-1705)** : reconquête de la Hongrie, prestige européen, mais la monarchie reste composite. Léopold Ier est retenu comme **acmé oligarchique** — sommet de la puissance dans le cadre existant.
 
-**Charles VI (1711-1740)** : la Pragmatique Sanction (1713) est un effort de stabilisation de la succession, mais elle est obtenue par concessions plutôt que par imposition. Pas d'absolutisation effective. Charles VI est plutôt un post-pic oligarchique.
+**Charles VI (1711-1740)** : la Pragmatique Sanction (1713) est un effort de stabilisation de la succession, mais elle est obtenue par concessions plutôt que par imposition. Pas d'absolutisation effective. Charles VI est plutôt un post-acmé oligarchique.
 
 **Joseph II (1780-1790)** : approfondit l'absolutisme sans le commencer. C'est le pic absolutiste, pas le 1er monarque absolu.
 
@@ -247,7 +247,7 @@ Marie-Thérèse est structurellement analogue à Philippe V en Espagne après la
 - **Essor oligarchique 1518-1718** (~200 ans, exactement dans la norme canonique)
 - **Polarisation des élites 1718-1740** (~22 ans, dans la fourchette canonique 10-40)
 - **Guerre sociale 1740-1748** (~8 ans)
-- **Pic oligarchique Léopold Ier 1658-1705 dans l'essor**, à sa place canonique
+- **Acmé oligarchique Léopold Ier 1658-1705 dans l'essor**, à sa place canonique
 
 La bascule essor → polarisation se fait à **Passarowitz (1718)**, lorsque l'exutoire militaire extérieur s'épuise réellement et que les élites se replient sur le jeu interne.
 
@@ -265,7 +265,7 @@ C'est le point le plus contre-intuitif de la lecture retenue. La Guerre de Trent
 
 Réponse : parce que **sa résolution est une victoire asymétrique habsbourgeoise** qui consolide le cadre existant sans produire de guerre sociale. Montagne Blanche (1620) écrase la noblesse protestante bohême, la Verneuerte Landesordnung (1627) absolutise la Bohême seule, et la Westphalie (1648) acte la position habsbourgeoise comme puissance catholique européenne. À la sortie de la guerre, l'État central habsbourgeois est plus fort qu'avant, et la polarisation confessionnelle n'a pas mené à une guerre sociale parce qu'elle a été absorbée dans le théâtre pan-européen avec l'aide d'alliés extérieurs (Espagne, Pologne, Bavière).
 
-C'est exactement le profil d'un épisode de polarisation présente mais non dominante, **qui se résout sans bascule structurelle**. Après la Westphalie, la dynamique principale redevient immédiatement la projection extérieure (anti-ottomane, italienne, belge), et le pic oligarchique Léopold Ier émerge dans cette dynamique à partir de 1658. Si la Guerre de Trente Ans avait été une vraie polarisation déclenchant la phase de polarisation, on n'aurait pas eu un siècle d'expansion productive après.
+C'est exactement le profil d'un épisode de polarisation présente mais non dominante, **qui se résout sans bascule structurelle**. Après la Westphalie, la dynamique principale redevient immédiatement la projection extérieure (anti-ottomane, italienne, belge), et le acmé oligarchique Léopold Ier émerge dans cette dynamique à partir de 1658. Si la Guerre de Trente Ans avait été une vraie polarisation déclenchant la phase de polarisation, on n'aurait pas eu un siècle d'expansion productive après.
 
 ### Pourquoi la guerre sociale est bien 1740-1748, pas 1618-1648
 
@@ -288,11 +288,11 @@ Confidence: medium. La polarisation prébendière/patrimoniale est moins nette q
 
 ---
 
-## 8. Pic oligarchique : Léopold Ier
+## 8. Acmé oligarchique : Léopold Ier
 
 ### Critère canonique
 
-Le pic oligarchique, comme le pic féodal, est simplement le « roi qui sort du lot par la puissance de son pouvoir personnel ». Dans le cas oligarchique, cette puissance s'exerce dans le cadre des institutions du pacte, avec projection extérieure importante.
+Le acmé oligarchique, comme le pic féodal, est simplement le « roi qui sort du lot par la puissance de son pouvoir personnel ». Dans le cas oligarchique, cette puissance s'exerce dans le cadre des institutions du pacte, avec projection extérieure importante.
 
 ### Pourquoi Léopold Ier
 
@@ -300,11 +300,11 @@ Le pic oligarchique, comme le pic féodal, est simplement le « roi qui sort du 
 - **Victoire symbolique majeure** : lever du siège de Vienne (1683), retournement de la pression ottomane.
 - **Reconquête complète** : Hongrie 1683-1699 (Buda 1686, Zenta 1697, Karlowitz 1699), plus grande expansion territoriale depuis Ferdinand Ier.
 - **Prestige européen** : leader de la Grande Guerre turque, coalition européenne.
-- **Cadre institutionnel inchangé** : Léopold opère dans le cadre composite, ne tente pas l'absolutisme. C'est le critère du pic oligarchique — maximum de puissance dans le cadre existant, avant la cristallisation absolutiste.
+- **Cadre institutionnel inchangé** : Léopold opère dans le cadre composite, ne tente pas l'absolutisme. C'est le critère du acmé oligarchique — maximum de puissance dans le cadre existant, avant la cristallisation absolutiste.
 
 ### Position canonique dans l'essor
 
-Léopold Ier (1658-1705) se situe au cœur de la sous-phase d'essor (1518-1718), à sa place canonique. Il est exactement à la place où le canon attend un pic oligarchique, dans la sous-phase d'expansion active.
+Léopold Ier (1658-1705) se situe au cœur de la sous-phase d'essor (1518-1718), à sa place canonique. Il est exactement à la place où le canon attend un acmé oligarchique, dans la sous-phase d'expansion active.
 
 ### Alternatives considérées
 
@@ -434,13 +434,13 @@ Confidence: high. Aucune alternative raisonnable n'a été identifiée.
 
 3. **Le Libell de 1518 comme pacte oligarchique** est structurellement atypique (codifie les responsabilités administratives et défensives plutôt que la succession). Le critère « première codification négociée des responsabilités du suzerain » est satisfait, mais le parallèle avec les pactes successoraux classiques reste indirect. **Confidence: medium**.
 
-4. **Polarisation oligarchique courte (1718-1740, ~22 ans)** dans la fourchette canonique (10-40 ans), pic oligarchique (Léopold Ier) à sa place canonique dans l'essor. L'essor long de 200 ans (1518-1718) correspond à la durée endogène canonique de la sous-phase ; le léger prolongement (~30 ans pour l'ensemble de la phase oligarchique) est expliqué par la seule digestion administrative de la Bohême après la Verneuerte Landesordnung (1627). **Confidence: high**.
+4. **Polarisation oligarchique courte (1718-1740, ~22 ans)** dans la fourchette canonique (10-40 ans), acmé oligarchique (Léopold Ier) à sa place canonique dans l'essor. L'essor long de 200 ans (1518-1718) correspond à la durée endogène canonique de la sous-phase ; le léger prolongement (~30 ans pour l'ensemble de la phase oligarchique) est expliqué par la seule digestion administrative de la Bohême après la Verneuerte Landesordnung (1627). **Confidence: high**.
 
 5. **La séparation en deux phases féodales** (Babenberg 1198-1246 puis Habsbourg 1358-1518) avec **percolation habsbourgeoise** (1246-1358) entre elles repose sur un élément théorique nouveau — le retour possible en percolation après un avortement biologique de phase féodale. Cette lecture est à valider par d'autres cas comparatifs (Espagne post-711 ? autre ?). **Confidence: medium**.
 
 6. **Pas de pic féodal intermédiaire en phase féodale 2 Habsbourg**. Le cycle féodal habsbourgeois est faiblement dirigé : aucun successeur de Rudolf IV (1358) ne franchit à nouveau le seuil de pic féodal pendant 160 ans, jusqu'à ce que Maximilien Ier — qui n'est pas un pic féodal mais le 1er monarque oligarchique en convalescence post-Corvin — produise directement le pacte de 1518. C'est inhabituel dans le corpus (la plupart des phases féodales produisent plusieurs pics en dents de scie). **Confidence: medium**.
 
-7. **Léopold Ier comme pic oligarchique** est le meilleur candidat selon le critère canonique simple, à sa place canonique dans l'essor. **Confidence: high**.
+7. **Léopold Ier comme acmé oligarchique** est le meilleur candidat selon le critère canonique simple, à sa place canonique dans l'essor. **Confidence: high**.
 
 8. **La Guerre de Succession d'Autriche comme guerre sociale unique** est structurellement solide mais les factions ne sont pas aussi nettement polarisées (prébendière/patrimoniale) que dans les cas français, anglais ou espagnols — le clivage se joue en partie sur l'axe national (Hongrois vs administration viennoise). **Confidence: medium**.
 
