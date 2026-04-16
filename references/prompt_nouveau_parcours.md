@@ -12,7 +12,7 @@ Ce fichier contient le prompt standard à utiliser pour lancer l'analyse histori
 Produis une proposition de Parcours de construction nationale pour [NATION].
 
 **Préparation obligatoire (avant toute recherche historique)** :
-1. Lis `references/parcours.md` (cadre théorique général) et `references/sous_phases.md` (grille opératoire des sous-phases, marqueurs de bornes, exemples empiriques).
+1. Lis `references/parcours.md` (cadre théorique général, tableau des bornes de sous-phases). Si la question porte sur une phase spécifique, lire aussi le fichier `phase_*.md` correspondant.
 2. Revois les feedback memories chargées automatiquement (naming canonique, catégorisation des événements, bornes de sous-phases, trois pièges, vérification par phase).
 3. Si la nation a un statut particulier (monarchie composite, nation tardivement unifiée, cas de reboot, interférence avec un Parcours voisin), lis aussi au moins deux parcours analogues dans `references/nations/` pour avoir des points de comparaison.
 
@@ -35,7 +35,7 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
 
 - **DGRO en fin de phase oligarchique / pendant la sous-phase absolutisation**, jamais au début de la phase oligarchique. Le mot « dernière » a un sens structurel : c'est le dernier sursaut oligarchique avant l'ancrage absolutiste, pas une résistance au pacte fondateur.
 
-- **Trois pièges de bornes de sous-phases** (cf. `sous_phases.md` et `feedback_bornes_sous_phases_pieges.md`) :
+- **Trois pièges de bornes de sous-phases** (cf. tableau des bornes dans `parcours.md` et `feedback_bornes_sous_phases_pieges.md`) :
   - **Essor oligarchique → polarisation des élites** : basculement de dynamique, pas un saillant. La sous-phase se termine quand la dynamique principale cesse d'être la projection vers l'extérieur et devient la tension entre factions (prébendière vs patrimoniale) pour le contrôle de l'État central.
   - **Absolutisation → impérialisme absolutiste** : borne = fin de la DGRO (consensus absolutiste établi), pas le acmé absolutiste (qui est interne à l'impérialisme absolutiste).
   - **Impérialisme absolutiste → ancien régime** : borne = Remontrance stricte, pas « fin de l'expansion » qui peut coïncider ou précéder.

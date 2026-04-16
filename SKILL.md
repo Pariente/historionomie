@@ -26,7 +26,6 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
-| `references/sous_phases.md` | **Grille opératoire des sous-phases** : marqueurs de début/fin, durées typiques, exemples extraits des parcours validés | **Toujours lire en deuxième**, avant d'identifier une sous-phase |
 | `references/phase_feodale.md` | Phase féodale : sous-phases, saillants (éveil féodal, pic féodal), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
 | `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, acmé absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
@@ -68,7 +67,7 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 
 ## Bornes de sous-phases — règles opératoires
 
-Consulter `references/sous_phases.md` pour la grille complète des marqueurs. Règles fondamentales :
+Consulter le tableau récapitulatif des bornes dans `references/parcours.md`. Règles fondamentales :
 
 1. **Une borne est généralement un saillant canonique** — jamais une date arrondie « approximative ». Deux exceptions : essor→polarisation (basculement de dynamique, pas un saillant).
 2. **La fin d'une sous-phase et le début de la suivante coïncident**.
@@ -94,7 +93,7 @@ Tout événement historique relève de l'une de quatre catégories :
 
 ### Étape 1 : Lire le cadre théorique
 
-Lire `references/parcours.md` puis `references/sous_phases.md`. Si la question porte sur une phase spécifique, lire aussi le fichier phase_*.md correspondant.
+Lire `references/parcours.md`. Si la question porte sur une phase spécifique, lire aussi le fichier phase_*.md correspondant.
 
 ### Étape 2 : Rechercher l'histoire de la nation
 
@@ -118,7 +117,7 @@ Utiliser la recherche web pour rassembler les informations historiques. Chercher
 2. **Le pacte oligarchique en particulier est une nécessité** : il est généralement très formel (loi salique, Ordonnances, primogéniture, Libell, etc.). Chercher activement.
 3. **Durées cohérentes** avec la norme (ou écart expliqué par une perturbation identifiée).
 4. **Test discriminant passé à la bonne échelle** (pour monarchies composites : toutes les administrations locales).
-5. **Bornes des sous-phases correctement identifiées** via `sous_phases.md`, attention aux trois pièges (essor→pol dynamique, absolutisation→impérial = DGRO, impérial→AR = Remontrance).
+5. **Bornes des sous-phases correctement identifiées** via le tableau des bornes dans `parcours.md`, attention aux trois pièges (essor→pol dynamique, absolutisation→impérial = DGRO, impérial→AR = Remontrance).
 
 ### Étape 4 : Vérification globale finale — complétude événementielle
 

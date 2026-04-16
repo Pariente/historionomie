@@ -32,7 +32,6 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
-| `references/sous_phases.md` | **Grille opératoire des sous-phases** : marqueurs de début/fin, durées typiques, exemples extraits des parcours validés | **Toujours lire en deuxième**, avant d'identifier une sous-phase |
 | `references/phase_pre_feodale.md` | Phase pré-féodale : percolation élitaire (Deblonde), marqueurs, exemples | La question porte sur la percolation ou la pré-féodale |
 | `references/phase_feodale.md` | Phase féodale : coagulation, bascule, saillants (éveil féodal, pic féodal, pacte oligarchique), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
@@ -216,7 +215,7 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 
 ### Bornes de sous-phases — règles opératoires
 
-Consulter `references/sous_phases.md` pour la grille complète des marqueurs. Règles fondamentales :
+Consulter le tableau récapitulatif des bornes dans `references/parcours.md`. Règles fondamentales :
 
 1. **Une borne est toujours un saillant ou un événement identifiable** — jamais une date « arrondie approximative ».
 2. **La fin d'une sous-phase et le début de la suivante coïncident** (ou se chevauchent de 1-2 ans maximum).

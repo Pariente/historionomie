@@ -144,6 +144,39 @@ Le Parcours utilise deux types d'outils d'analyse :
 
 Certains éléments sont les deux à la fois : la guerre sociale et l'Ancien Régime sont des sous-phases (on peut décrire leur mécanique) et des saillants (facilement identifiables dans n'importe quel parcours).
 
+### Tableau récapitulatif des bornes de sous-phases
+
+Les bornes marquées ⚠️ sont **dynamiques** (basculement de logique, pas un saillant-pivot). Toutes les autres sont des **saillants canoniques**.
+
+| Sous-phase | Marqueur de début | Marqueur de fin | Durée typique |
+|---|---|---|---|
+| Percolation élitaire | Fragmentation / identité émergente | **Éveil féodal** | ~90-120 ans |
+| Coagulation des élites | **Éveil féodal** | **Crise féodale terminale** OU **Pacte oligarchique** direct | ~100-250 ans |
+| Bascule oligarchique | **Crise féodale terminale** | **Pacte oligarchique** + 1er monarque olig | ~10-20 ans |
+| Essor oligarchique | **1er monarque oligarchique** | ⚠️ Basculement de dynamique (projection extérieure → tension interfactions) | ~70-100 ans |
+| Polarisation des élites | ⚠️ Basculement de dynamique | **Début de la guerre sociale** | ~10-40 ans |
+| Guerre sociale | Premier épisode ouvert du conflit | **1er monarque absolu** | ~15-60 ans |
+| Absolutisation | **1er monarque absolu** | **Fin de la DGRO** (consensus absolutiste) | ~30-70 ans |
+| Impérialisme absolutiste | **Fin de la DGRO** / consensus absolutiste | **Remontrance** | ~45-100 ans |
+| Ancien régime | **Remontrance** | **Éclatement de l'AR** | ~35-100 ans |
+| Révolution initiale | **Éclatement de l'AR** | **Émergence de l'IR** | ~10-15 ans |
+| Impérialisme revanchard | Prise de pouvoir de l'IR | **Chute de l'IR** | ~10-16 ans |
+| Restauration | **Chute de l'IR** | **Glorieuse Révolution** | ~3-40 ans |
+
+### Règles générales pour identifier les bornes
+
+1. **Une borne est généralement un saillant ou un événement identifiable** — jamais une date arrondie. Deux exceptions : essor → polarisation et polarisation → guerre sociale sont des **basculements de dynamique**, pas des saillants-pivots.
+2. **La fin d'une sous-phase et le début de la suivante coïncident** (ou se chevauchent de ~1-2 ans).
+3. **Les bornes ne doivent pas être forcées pour obtenir des durées typiques** — si la durée est atypique, l'expliquer par une perturbation.
+4. **Priorité absolue à la fiabilité des dates** — l'usage principal du corpus est la régression quantitative d'Alyocha.
+5. **Quand une sous-phase optionnelle est absente** (bascule oligarchique, IR), justifier structurellement pourquoi.
+6. **Positionnement des saillants dans les sous-phases** — certains saillants sont des bornes, d'autres se situent à l'intérieur d'une sous-phase :
+   - **Acmé oligarchique** : interne à l'essor oligarchique
+   - **Fin de l'expansion (oligarchique)** : peut coïncider avec le basculement essor → polarisation, mais n'en est pas la borne stricte
+   - **DGRO** : interne à l'absolutisation (son écrasement marque la fin)
+   - **Acmé absolutiste** : interne à l'impérialisme absolutiste
+   - **Fin de l'expansion (absolutiste)** : interne à l'impérialisme absolutiste, peut précéder la Remontrance
+
 ### Les saillants sont des marqueurs, pas des conditions
 
 Le Parcours progresse quand l'un ou l'autre des deux moteurs avance. Une nation peut être factuellement à une phase donnée (par le niveau combiné de ses deux moteurs) **sans en présenter tous les saillants typiques**. En particulier, quand une nation est politiquement fragmentée mais culturellement homogène, les saillants politiques (monarques) peuvent être absents alors que la phase est bien celle que l'état des moteurs indique.
