@@ -266,8 +266,8 @@
 - typical_duration: ~200 ans
 - actual_duration: ~197 ans
 - resolution: Absorption dans le Parcours italien (1866)
-- summary: La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d'État après 1669 et le pic absolutiste de Morosini (1688). L'absolutisme vénitien est institutionnel — ce n'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l'absolutisme, il l'achève. L'Ancien Régime se poursuit sous domination étrangère (1797-1866), traversant la RN avortée de 1848-1849 sans que celle-ci ne brise la phase absolutiste : l'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin.
-- description: L'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (1688), élu doge à l'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le pic absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d'Oro brûlé —, et l'Ancien Régime se poursuit sous domination autrichienne. La RN avortée de 1848-1849 ne brise pas la phase absolutiste : elle la traverse. L'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin, et l'AR exogène reprend jusqu'au plébiscite de 1866 qui absorbe Venise dans le Parcours italien. La durée totale (~197 ans) est dans la norme des ~200 ans typiques.
+- summary: La phase absolutiste vénitienne commence avec la suprématie endogène des Inquisiteurs d'État après 1669 et le acmé absolutiste de Morosini (1688). L'absolutisme vénitien est institutionnel — ce n'est pas une personne qui concentre le pouvoir mais un appareil. Après le traité de Passarowitz (1718), le système entre en Ancien Régime : sédimentation (barnabotti), rayonnement culturel (Vivaldi, Canaletto, Tiepolo, Goldoni), et contestations du régime (Correzione de 1761, Pisani-Contarini 1779) qui ne sont pas des DGRO mais des défis de type polysynodie. Napoléon (1797) complète l'absolutisation en détruisant les structures oligarchiques résiduelles — il ne crée pas l'absolutisme, il l'achève. L'Ancien Régime se poursuit sous domination étrangère (1797-1866), traversant la RN avortée de 1848-1849 sans que celle-ci ne brise la phase absolutiste : l'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin.
+- description: L'absolutisme vénitien est le plus original des Parcours connus : il est incarné non par un monarque mais par un appareil — les Inquisiteurs d'État, dont le réseau de surveillance (bocche dei leoni, espions, archives secrètes) confère une suprématie de facto sur toutes les institutions. Francesco Morosini (1688), élu doge à l'unanimité depuis le champ de bataille après la reconquête de la Morée, représente le acmé absolutiste. Après Passarowitz (1718), le système entre en Ancien Régime avec les marqueurs classiques : sédimentation (barnabotti, patriciat en déclin), rayonnement culturel (Vivaldi, Canaletto, Goldoni), et contestations de type polysynodie écrasées par les Inquisiteurs. L'intervention de Bonaparte (1797) détruit les institutions endogènes — Grand Conseil dissous, Libro d'Oro brûlé —, et l'Ancien Régime se poursuit sous domination autrichienne. La RN avortée de 1848-1849 ne brise pas la phase absolutiste : elle la traverse. L'Autriche rétablit immédiatement son pouvoir après l'écrasement de la République de Manin, et l'AR exogène reprend jusqu'au plébiscite de 1866 qui absorbe Venise dans le Parcours italien. La durée totale (~197 ans) est dans la norme des ~200 ans typiques.
 - deviation: Dans la norme (~197 ans pour ~200 ans typiques).
 - confidence: medium
 - markers: |
@@ -308,12 +308,12 @@
 - summary: Après la résolution de la guerre sociale (1669), les Inquisiteurs d'État exercent une suprématie de facto sur toutes les autres institutions vénitiennes. C'est un absolutisme sans monarque — le pouvoir est concentré dans un appareil, pas dans une personne.
 - description: Le « 1er monarque absolu » vénitien n'est pas une personne mais une institution : les Inquisiteurs d'État. Après 1669, leur autorité est incontestée. Le réseau de surveillance (bocche dei leoni, espions, rapports confidentiels) donne à trois magistrats — renouvelés annuellement mais disposant d'une continuité institutionnelle grâce aux archives et à la classe administrative des cittadini — un pouvoir supérieur à celui de tout autre organe. Le Sénat et le Grand Conseil subsistent mais ne peuvent plus contester les décisions de l'exécutif. Les Avogadori de Comun (magistrats contrôleurs) sont impuissants. C'est l'aboutissement du processus enclenché en 1583, quand les Inquisiteurs ont été rendus permanents.
 
-#### Saillant : Pic absolutiste — Morosini
+#### Saillant : Acmé absolutiste — Morosini
 - type: saillant
 - start: 1688
 - figure: Francesco Morosini
 - subtitle: Morosini
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: high
 - summary: Francesco Morosini reconquiert la Morée (1684-1699), est élu doge à l'unanimité depuis le champ de bataille (1688), porte le titre de « Peloponnesiaco ». C'est le pic de prestige absolutiste — analogue à Louis XIV pour la France ou Élisabeth Ire pour l'Angleterre.
 - description: Francesco Morosini est la figure la plus marquante de la phase absolutiste vénitienne. Général victorieux, il reconquiert la Morée (Péloponnèse) entre 1684 et 1699 dans une campagne brillante qui fait de Venise, pour la dernière fois, une puissance conquérante. En 1688, il est élu doge à l'unanimité depuis le champ de bataille — fait sans précédent dans l'histoire de la République. Son titre de « Peloponnesiaco » est le dernier titre de gloire vénitien. C'est le même homme qui, en 1669, avait signé la capitulation de Candie sans autorisation du Sénat — un acte d'exécutif pur qui illustre la nature de l'absolutisme vénitien. Le pic Morosini est au Parcours vénitien ce que le règne de Louis XIV est au Parcours français : l'apogée du prestige et de la puissance avant la sédimentation de l'Ancien Régime.
@@ -468,7 +468,7 @@
 | Fin de l'expansion | Agnadello (1509) |
 | Guerre sociale | Giovani vs vecchi / triomphe des Inquisiteurs (1628-1669) |
 | 1er monarque absolu | Inquisiteurs d'État (1669) |
-| Pic absolutiste | Morosini (1688) |
+| Acmé absolutiste | Morosini (1688) |
 | Fin de l'expansion | Passarowitz (1718) |
 | Avortement | Conquête par Bonaparte (1797) |
 | Explosion de l'AR | Insurrection de mars 1848 |
@@ -500,7 +500,7 @@
 | Fin de l'expansion | Cateau-Cambrésis (1559) | ? | Agnadello (1509) |
 | Guerre sociale | Guerres de Religion (1562-1598) | Guerre des Roses (1455-1485) | Tensions institutionnelles (1628-1669) |
 | 1er monarque absolu | Henri IV (1598) | Henri VII (1485) | Inquisiteurs (1669) |
-| Pic absolutiste | Louis XIV (~1661-1715) | Élisabeth Ire (~1558-1603) | Morosini (1688) |
+| Acmé absolutiste | Louis XIV (~1661-1715) | Élisabeth Ire (~1558-1603) | Morosini (1688) |
 | DGRO | Fronde (1648-1653) | Pilgrimage of Grace (1536) | Aucune (pas d'assise territoriale) |
 | Phase absolutiste | ~191 ans | ~157 ans | ~179 ans |
 | Avortement | — | — | Bonaparte (1797) |

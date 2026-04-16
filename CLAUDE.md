@@ -1,7 +1,7 @@
 ---
 name: historionomie
 description: >
-  Cadre théorique et boîte à outils pour l'historionomie de Philippe Fabry : analyser le Parcours de construction nationale d'une nation, identifier ses phases (féodale, oligarchique, absolutiste, Révolution Nationale, parlementaire), ses saillants, ses perturbations, et comparer des parcours nationaux entre eux. Utiliser ce skill dès que l'utilisateur mentionne l'historionomie, Philippe Fabry, Antoine Deblonde, le Parcours de construction nationale, ou demande d'analyser l'histoire d'une nation en termes de construction étatique et d'homogénéisation culturelle. Utiliser aussi quand l'utilisateur cherche à identifier des saillants (éveil féodal, premier monarque oligarchique, pic absolutiste, guerre sociale, Impérialiste Revanchard, Glorieuse Révolution), à comparer des trajectoires nationales, à identifier des perturbations (reboot, prolongement), ou à appliquer la grille du clivage gauche-droite de Fabry & Portal. Ce skill est pertinent même quand l'utilisateur ne mentionne pas explicitement l'historionomie mais pose des questions sur la dynamique de construction nationale d'un pays, les transitions de régime, ou les parallèles structurels entre trajectoires historiques.
+  Cadre théorique et boîte à outils pour l'historionomie de Philippe Fabry : analyser le Parcours de construction nationale d'une nation, identifier ses phases (féodale, oligarchique, absolutiste, Révolution Nationale, parlementaire), ses saillants, ses perturbations, et comparer des parcours nationaux entre eux. Utiliser ce skill dès que l'utilisateur mentionne l'historionomie, Philippe Fabry, Antoine Deblonde, le Parcours de construction nationale, ou demande d'analyser l'histoire d'une nation en termes de construction étatique et d'homogénéisation culturelle. Utiliser aussi quand l'utilisateur cherche à identifier des saillants (éveil féodal, premier monarque oligarchique, acmé absolutiste, guerre sociale, Impérialiste Revanchard, Glorieuse Révolution), à comparer des trajectoires nationales, à identifier des perturbations (reboot, prolongement), ou à appliquer la grille du clivage gauche-droite de Fabry & Portal. Ce skill est pertinent même quand l'utilisateur ne mentionne pas explicitement l'historionomie mais pose des questions sur la dynamique de construction nationale d'un pays, les transitions de régime, ou les parallèles structurels entre trajectoires historiques.
 ---
 
 # Historionomie — Parcours de construction nationale
@@ -36,7 +36,7 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | `references/phase_pre_feodale.md` | Phase pré-féodale : percolation élitaire (Deblonde), marqueurs, exemples | La question porte sur la percolation ou la pré-féodale |
 | `references/phase_feodale.md` | Phase féodale : coagulation, bascule, saillants (éveil féodal, pic féodal, pacte oligarchique), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
-| `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, pic absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
+| `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, acmé absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
 | `references/phase_rn.md` | Révolution Nationale : sous-phases (révolution initiale, IR, restauration), saillants (explosion AR, phase aiguë, thermidorien, IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
 | `references/phase_parlementaire.md` | Phase parlementaire, technocratique, dominat | La question porte sur les phases post-RN |
 | `references/elites.md` | Matrice 2×2 des élites (prébendières/patrimoniales × gouvernementales/non-gouvernementales), mécanismes d'absolutisation, guerre sociale | La question touche à la dynamique des élites |
@@ -82,7 +82,7 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 **Pour identifier la phase absolutiste :**
 - Qui résout la guerre sociale et concentre le pouvoir ? (1er monarque absolu)
 - L'administration centrale a-t-elle préséance sur les administrations locales ?
-- Y a-t-il un pic d'impérialisme et de prestige ? (pic absolutiste)
+- Y a-t-il un pic d'impérialisme et de prestige ? (acmé absolutiste)
 - Y a-t-il sédimentation des élites, sclérose, bloc contestataire ? (Ancien Régime)
 
 **Pour identifier la RN :**
@@ -113,7 +113,7 @@ Pour **chaque phase** identifiée (féodale, puis oligarchique, puis absolutiste
 1. **Les saillants canoniques sont-ils tous présents ?**
    - **Féodale** : éveil, pic(s) féodal(aux), crise(s) féodale(s), **pacte oligarchique** (généralement très formel — loi salique, Ordonnances, primogéniture, Libell, etc.)
    - **Oligarchique** : 1er monarque oligarchique, acmé oligarchique, polarisation, **guerre sociale** (deux factions + tiers résolvant)
-   - **Absolutiste** : 1er monarque absolu, pic absolutiste, fin d'expansion, remontrance, Ancien Régime
+   - **Absolutiste** : 1er monarque absolu, acmé absolutiste, fin d'expansion, remontrance, Ancien Régime
    - **RN** : les 7 étapes (explosion AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, restauration, Glorieuse Révolution)
    
    Si un saillant canonique manque, **c'est un signal d'alarme** : soit l'histoire a été mal lue (chercher plus fort), soit le cas est structurellement atypique. Dans le second cas, justifier explicitement en comparant à un cas comparable du corpus (ex. : Venise n'a pas de 1er monarque oligarchique personnel — c'est une institution). **Ne jamais se contenter de dire « absent, résolution diffuse »** sans justification structurelle solide.
@@ -197,7 +197,7 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 **Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
 - **Oligarchique** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale
-- **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Pic absolutiste, Fin de l'expansion, Remontrance
+- **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance
 - **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
 
 **Distinction saillant vs sous-phase** :

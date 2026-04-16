@@ -373,7 +373,7 @@
 - resolution: AVORTÉE — le Parcours est interrompu par la liquidation hadrienne (135). Le peuple juif préserve son homogénéité culturelle en exil pendant 1800 ans, permettant une reprise au XIXe siècle.
 - resolution_conditions: Non atteintes. Hadrien déploie 6 légions, rase Jérusalem, interdit le judaïsme. La destruction est si totale que le Parcours ne peut pas reprendre sur ce territoire — mais le peuple préserve son homogénéité culturelle en exil.
 - summary: La deuxième phase absolutiste s'étend des Hasmonéens à Bar Kokhva et parcourt l'intégralité de la séquence typique — absolutisation, impérialisme absolutiste, Ancien Régime — en 275 ans, traversant la RN avortée de 66-70 sans que celle-ci ne brise la phase. Le reboot post-70 ramène le Parcours en phase absolutiste, et Bar Kokhva (132) incarne un bref impérialisme absolutiste avant la liquidation hadrienne.
-- description: La deuxième phase absolutiste s'étend sur 275 ans, de Simon Thassi à Bar Kokhva. Simon Thassi inaugure l'absolutisation en concentrant entre ses mains la grande prêtrise, le commandement militaire et l'ethnarchie. La révolte pharisienne contre Alexandre Jannée, écrasée dans le sang (800 crucifixions), clôt la dernière résistance oligarchique. Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent, une armée professionnelle de mercenaires et un monopole absolu de la force. Après sa mort en -4, le royaume passe sous procurateurs romains, ouvrant un Ancien Régime marqué par la sédimentation sadducéenne et la montée du bloc contestataire pharisien-zélote. La RN avortée de 66-70 traverse la phase sans la briser : la destruction du Temple provoque un reboot qui ramène le Parcours en phase absolutiste, l'homogénéité culturelle étant préservée par l'académie de Yavné. Bar Kokhva (132-135) incarne un bref impérialisme absolutiste avant la liquidation définitive par Hadrien.
+- description: La deuxième phase absolutiste s'étend sur 275 ans, de Simon Thassi à Bar Kokhva. Simon Thassi inaugure l'absolutisation en concentrant entre ses mains la grande prêtrise, le commandement militaire et l'ethnarchie. La révolte pharisienne contre Alexandre Jannée, écrasée dans le sang (800 crucifixions), clôt la dernière résistance oligarchique. Hérode Ier incarne le acmé absolutiste avec un programme monumental sans précédent, une armée professionnelle de mercenaires et un monopole absolu de la force. Après sa mort en -4, le royaume passe sous procurateurs romains, ouvrant un Ancien Régime marqué par la sédimentation sadducéenne et la montée du bloc contestataire pharisien-zélote. La RN avortée de 66-70 traverse la phase sans la briser : la destruction du Temple provoque un reboot qui ramène le Parcours en phase absolutiste, l'homogénéité culturelle étant préservée par l'académie de Yavné. Bar Kokhva (132-135) incarne un bref impérialisme absolutiste avant la liquidation définitive par Hadrien.
 - deviation: Prolongée (~275 ans pour ~200 ans typiques) — le reboot de 70 relance la phase absolutiste au lieu de la clore.
 
 ### Subphase : Absolutisation
@@ -409,20 +409,20 @@
 - type: subphase
 - phase: absolutiste
 - start: -88
-- end: 4
+- end: -4
 - title: Impérialisme absolutiste
 - summary: Après la réconciliation de Salomé Alexandra avec les Pharisiens, le royaume entre dans sa phase d'impérialisme absolutiste, culminant avec le pic hérodien — faste monumental, armée professionnelle, prestige maximal — malgré la vassalisation romaine de -63 qui ne provoque pas de reboot.
 - description: Salomé Alexandra (-76 à -67) réconcilie le pouvoir avec les Pharisiens, inaugurant une période de consensus absolutiste. La vassalisation romaine de -63 (Pompée) ne provoque pas de reboot : Rome ne détruit pas les institutions judéennes, ne déporte pas les élites et tolère les particularismes religieux. Le judaïsme est suffisamment consolidé pour absorber le choc culturel romain sans hétérogénéisation significative. Le Parcours se poursuit donc sous tutelle romaine, ce qui n'est pas exceptionnel — le Parcours est porté par un peuple, pas par la souveraineté formelle.
 
-#### Saillant : Pic absolutiste
+#### Saillant : Acmé absolutiste
 - type: saillant
 - start: -20
 - figure: Hérode Ier
 - subtitle: Hérode Ier
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: high
-- summary: Hérode Ier incarne le pic absolutiste avec un programme monumental sans précédent — agrandissement considérable du Temple, fondation de Césarée, forteresses de Massada et Hérodion — une armée professionnelle de mercenaires et un monopole royal absolu de la force.
-- description: Le règne d'Hérode Ier (-37 à -4) représente l'acmé de la puissance absolutiste judéenne. Après avoir éliminé tous ses rivaux, Hérode déploie un faste royal sans précédent : agrandissement considérable du Temple (travaux majeurs achevés entre -20 et ~-15), fondation de Césarée Maritime, reconstruction de Samarie (rebaptisée Sébaste), construction des forteresses de Massada et d'Hérodion. Son armée professionnelle, composée de mercenaires gaulois, thraces et germains, lui assure un monopole absolu de la force. L'acmé de puissance se situe autour de -20, moment où convergent le prestige monumental, la capacité militaire et le contrôle territorial maximal — c'est le marqueur classique du pic absolutiste, comparable à Louis XIV ou Soliman le Magnifique.
+- summary: Hérode Ier incarne le acmé absolutiste avec un programme monumental sans précédent — agrandissement considérable du Temple, fondation de Césarée, forteresses de Massada et Hérodion — une armée professionnelle de mercenaires et un monopole royal absolu de la force.
+- description: Le règne d'Hérode Ier (-37 à -4) représente l'acmé de la puissance absolutiste judéenne. Après avoir éliminé tous ses rivaux, Hérode déploie un faste royal sans précédent : agrandissement considérable du Temple (travaux majeurs achevés entre -20 et ~-15), fondation de Césarée Maritime, reconstruction de Samarie (rebaptisée Sébaste), construction des forteresses de Massada et d'Hérodion. Son armée professionnelle, composée de mercenaires gaulois, thraces et germains, lui assure un monopole absolu de la force. L'acmé de puissance se situe autour de -20, moment où convergent le prestige monumental, la capacité militaire et le contrôle territorial maximal — c'est le marqueur classique du acmé absolutiste, comparable à Louis XIV ou Soliman le Magnifique.
 
 #### Saillant : Fin de l'expansion
 - type: saillant
@@ -430,13 +430,22 @@
 - subtitle: Mort d'Hérode
 - title: Fin de l'expansion
 - confidence: high
-- summary: La mort d'Hérode en -4 entraîne la division du royaume entre ses trois fils, puis la déposition d'Archélaüs et le passage de la Judée sous procurateurs romains, mettant fin à toute possibilité d'expansion.
-- description: La mort d'Hérode en -4 révèle la fragilité d'un pouvoir construit autour d'un seul homme. Le royaume est divisé entre ses trois fils : Archélaüs reçoit la Judée, Antipas la Galilée, Philippe la Trachonitide. Archélaüs, incapable de maintenir l'ordre (massacre de 3 000 Juifs lors de la Pâque), est déposé par Rome en l'an 6 et remplacé par des procurateurs romains. L'expansion est définitivement terminée : le territoire est désormais encadré par Rome, et aucun souverain judéen ne dispose plus des moyens de projeter sa puissance vers l'extérieur. Le Parcours entre dans la phase d'Ancien Régime.
+- summary: La mort d'Hérode en -4 entraîne la division du royaume entre ses trois fils, mettant fin à toute possibilité d'expansion.
+- description: La mort d'Hérode en -4 révèle la fragilité d'un pouvoir construit autour d'un seul homme. Le royaume est divisé entre ses trois fils : Archélaüs reçoit la Judée, Antipas la Galilée, Philippe la Trachonitide. L'expansion est définitivement terminée : le territoire est désormais encadré par Rome, et aucun souverain judéen ne dispose plus des moyens de projeter sa puissance vers l'extérieur.
 
-### Subphase : Ancien Régime (4-66)
+#### Saillant : Remontrance
+- type: saillant
+- start: -4
+- subtitle: Ambassade juive à Auguste
+- title: Remontrance
+- confidence: medium
+- summary: Une ambassade de 50 délégués juifs, soutenue par 8 000 Juifs de Rome, pétitionne Auguste pour l'exclusion de tous les Hérodiens du pouvoir et l'octroi d'une autonomie interne sous un magistrat modéré.
+- description: Immédiatement après la mort d'Hérode (-4), les élites juives envoient une ambassade de 50 délégués à Auguste, soutenue par 8 000 Juifs résidant à Rome. Ils demandent l'exclusion de tous les Hérodiens du gouvernement, l'incorporation de la Judée à la province de Syrie, et la nomination d'un magistrat modéré qui laisserait au pays une autonomie interne (Josèphe, Antiquités XVII, 11). C'est une contestation frontale de l'ordre absolutiste hérodien — les élites demandent explicitement moins de concentration du pouvoir et plus de collégialité. Auguste tranche par un compromis (Archélaüs ethnarque, pas roi), mais le système hérodien est structurellement condamné. Le Parcours entre en Ancien Régime.
+
+### Subphase : Ancien Régime (-4 à 66)
 - type: subphase
 - phase: absolutiste
-- start: 4
+- start: -4
 - end: 66
 - title: Ancien Régime
 - summary: L'Ancien Régime judéen présente tous les marqueurs classiques : sédimentation de l'aristocratie sadducéenne, pression fiscale écrasante, surproduction élitaire, littérature contestataire (apocalyptique et messianique), et formation d'un bloc contestataire pharisien-zélote face au bloc élitaire sadducéen et pro-romain.

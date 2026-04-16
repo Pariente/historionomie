@@ -2,7 +2,7 @@
 
 Ce document présente le raisonnement derrière l'hypothèse retenue dans `parcours.md` (v2), les alternatives écartées avec leurs arguments pour et contre (*machlokot*), les points fragiles, et les comparaisons avec les parcours connus.
 
-La v2 est une révision substantielle de la v1 suite à une discussion méthodologique avec Thomas sur quatre points centraux : (1) Mohács comme fin de l'expansion, (2) Rákóczi comme guerre sociale canonique, (3) marqueurs d'absolutisme au XVIIIe siècle hongrois, (4) 1848 comme RN avortée canonique (pas Remontrance). La nouvelle lecture est **structurellement plus orthodoxe** que la v1 : phase absolutiste dans la fourchette canonique, Rákóczi comme guerre sociale, Joseph II comme pic absolutiste, 1848 comme explosion d'AR sédimenté (pattern Venise/Milan). Elle introduit un pattern nouveau : **double AR exogène successif** (habsbourgeois 1849-1918 + soviétique 1947-1989).
+La v2 est une révision substantielle de la v1 suite à une discussion méthodologique avec Thomas sur quatre points centraux : (1) Mohács comme fin de l'expansion, (2) Rákóczi comme guerre sociale canonique, (3) marqueurs d'absolutisme au XVIIIe siècle hongrois, (4) 1848 comme RN avortée canonique (pas Remontrance). La nouvelle lecture est **structurellement plus orthodoxe** que la v1 : phase absolutiste dans la fourchette canonique, Rákóczi comme guerre sociale, Joseph II comme acmé absolutiste, 1848 comme explosion d'AR sédimenté (pattern Venise/Milan). Elle introduit un pattern nouveau : **double AR exogène successif** (habsbourgeois 1849-1918 + soviétique 1947-1989).
 
 La confidence générale du parcours est **medium**. Il devrait être considéré comme une **hypothèse de travail sérieuse** dans la même catégorie épistémique que la Bohême (v2).
 
@@ -99,7 +99,7 @@ Ce pattern est proche du **Pattern #3 (victoire de faction qui construit le nouv
 | Expansion territoriale / impérialisme | Partielle (partagée avec Autriche : Passarowitz 1718, guerres turques) |
 | Codification juridique | Partielle (Tripartitum reste en vigueur mais interprété dans le cadre absolutiste) |
 
-### Pic absolutiste : Joseph II (1780-1790)
+### Acmé absolutiste : Joseph II (1780-1790)
 
 Joseph II applique le même programme de despote éclairé à ses trois royaumes (Autriche, Bohême, Hongrie). En Hongrie : abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation de monastères contemplatifs (1782), allemand comme langue administrative (1784, rétracté), réorganisation des comitats en districts numériques, refus du couronnement.
 
@@ -140,7 +140,7 @@ En 1848, la Hongrie est-elle en impérialisme absolutiste actif ou en AR sédime
 - Pas d'impérialisme actif depuis le Congrès de Vienne (1815)
 - Explosion par déclencheur externe + crise financière + humiliation (onde de 1848)
 
-**Zéro marqueur d'impérialisme actif** : pas de guerres d'agression, pas de colonialisme, pas de prestige monarchique maximal, pas de pic absolutiste en cours, pas d'expansion territoriale.
+**Zéro marqueur d'impérialisme actif** : pas de guerres d'agression, pas de colonialisme, pas de prestige monarchique maximal, pas de acmé absolutiste en cours, pas d'expansion territoriale.
 
 **Verdict** : la Hongrie en 1848 est clairement en AR sédimenté, pas en impérialisme actif. Le test du critère 1 tranche pour la RN.
 
@@ -238,7 +238,7 @@ Différence : la Hongrie a **deux** AR exogènes (habsbourgeois + soviétique), 
 
 ### Comparaison 3 : Autriche — cadre composite habsbourgeois
 
-Le Parcours hongrois interfère continuellement avec le Parcours autrichien sans s'y confondre. Points communs : pic absolutiste Joseph II (1780-1790) simultané, Congrès de Vienne 1815 comme fin de l'expansion commune, explosion 1918 par effondrement commun. Différences : la Hongrie a sa propre guerre sociale (Rákóczi) alors que la guerre sociale autrichienne est la Succession d'Autriche (1740-1748) ; la Hongrie a son propre 1er MO (Charles VI 1711) alors que l'Autriche a son propre (Marie-Thérèse 1749) ; la Hongrie a sa propre RN avortée (1848) et son AR exogène habsbourgeois (1849-1918) alors que l'Autriche suit un cycle différent.
+Le Parcours hongrois interfère continuellement avec le Parcours autrichien sans s'y confondre. Points communs : acmé absolutiste Joseph II (1780-1790) simultané, Congrès de Vienne 1815 comme fin de l'expansion commune, explosion 1918 par effondrement commun. Différences : la Hongrie a sa propre guerre sociale (Rákóczi) alors que la guerre sociale autrichienne est la Succession d'Autriche (1740-1748) ; la Hongrie a son propre 1er MO (Charles VI 1711) alors que l'Autriche a son propre (Marie-Thérèse 1749) ; la Hongrie a sa propre RN avortée (1848) et son AR exogène habsbourgeois (1849-1918) alors que l'Autriche suit un cycle différent.
 
 ### Comparaison 4 : Espagne — cadre composite composite avec exceptions
 
@@ -260,7 +260,7 @@ Pattern comparable : monarchie composite, guerre sociale résolue par nouveau ca
 
 6. **Horthy comme IR régentiel** : pattern nouveau (régent d'un royaume sans roi) et durée inhabituelle (24 ans). Cohérent structurellement avec les quatre fonctions de l'IR mais mérite validation sur d'autres cas (Franco espagnol comme pattern comparable).
 
-7. **Le Millénaire de 1896 comme pic de prestige dans l'AR** (et non pic absolutiste) : lecture atypique mais cohérente avec le fait que la Hongrie est en AR exogène, pas en impérialisme actif. Le Millénaire est une démonstration de prestige culturel dans un cadre tutélaire, pas une apogée absolutiste autonome.
+7. **Le Millénaire de 1896 comme pic de prestige dans l'AR** (et non acmé absolutiste) : lecture atypique mais cohérente avec le fait que la Hongrie est en AR exogène, pas en impérialisme actif. Le Millénaire est une démonstration de prestige culturel dans un cadre tutélaire, pas une apogée absolutiste autonome.
 
 ---
 
@@ -270,7 +270,7 @@ Le Parcours hongrois v2 est structurellement **beaucoup plus orthodoxe** que la 
 
 - Phase féodale 1000-1308 (~308 ans) : inchangée, prolongée par choc mongol + extinction Árpád
 - **Phase oligarchique 1308-1711 (~403 ans)** : essor canonique 1308-1526 (Charles Ier Robert, Louis Ier, Mathias Corvin), **Mohács 1526 comme fin de l'expansion**, polarisation 1526-1703 (tripartition, insurrections kuruc), **guerre sociale 1703-1711 (Rákóczi)** résolue par Szatmár + Charles VI construisant le nouveau cadre
-- **Phase absolutiste 1711-1848 (~137 ans, dans la norme basse)** : absolutisation Charles VI + Marie-Thérèse, **pic absolutiste Joseph II 1780-1790**, fin de l'expansion Congrès de Vienne 1815, **Remontrance dissolution de la diète 1811**, AR 1825-1848 avec Âge des Réformes comme bloc contestataire
+- **Phase absolutiste 1711-1848 (~137 ans, dans la norme basse)** : absolutisation Charles VI + Marie-Thérèse, **acmé absolutiste Joseph II 1780-1790**, fin de l'expansion Congrès de Vienne 1815, **Remontrance dissolution de la diète 1811**, AR 1825-1848 avec Âge des Réformes comme bloc contestataire
 - **Révolution Nationale 1848-1990 (~142 ans)** : **RN 1 avortée 1848-1849** (pattern Venise/Milan), **AR exogène habsbourgeois 1849-1918** (69 ans, pattern Bach + Ausgleich + FJ + Millénaire + explosion 1918), RN 2 canonique 1918-1990 (Horthy IR + AR exogène soviétique 1947-1989 + 1956 réplique avortée + **GR 1989-1990**)
 - Phase parlementaire depuis 1990
 

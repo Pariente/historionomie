@@ -201,7 +201,7 @@
 - typical_duration: ~200 ans
 - actual_duration: ~222 ans
 - resolution: La phase est interrompue par les guerres d'Italie (1499-1535), qui reboote Milan en phase oligarchique. L'AR des Sforza (1454-1499) n'explose pas — il est avorté par le choc d'hétérogénéité des guerres d'Italie.
-- summary: Portée par les Visconti (1277-1447) puis les Sforza (1450-1499). Absolutisation progressive (Matteo I → Azzone → Gian Galeazzo). Pic absolutiste : Gian Galeazzo (1395-1402, 26 villes, titre ducal). Effondrement post-Gian Galeazzo (1402). Remontrance : République Ambrosienne (1447-1450). AR (1454-1499) interrompu par l'invasion française.
+- summary: Portée par les Visconti (1277-1447) puis les Sforza (1450-1499). Absolutisation progressive (Matteo I → Azzone → Gian Galeazzo). Acmé absolutiste : Gian Galeazzo (1395-1402, 26 villes, titre ducal). Effondrement post-Gian Galeazzo (1402). Remontrance : République Ambrosienne (1447-1450). AR (1454-1499) interrompu par l'invasion française.
 - description: L'absolutisme milanais 1er cycle est PERSONNEL, pas institutionnel. Chaque fois que le souverain disparaît (mort de Gian Galeazzo 1402, mort de Filippo Maria 1447), le système s'effondre et les structures oligarchiques réapparaissent (République Ambrosienne). Ce caractère personnel expliquera le reboot de 1499 : quand la dynastie Sforza est éliminée, l'absolutisme s'effondre et le substrat oligarchique refait surface.
 - deviation: +22 ans.
 
@@ -254,13 +254,13 @@
 - summary: Gian Galeazzo obtient le titre ducal (1395) et contrôle 26 cités de Gênes à Bologne (~30 000 km²). L'expansion triple la superficie et crée un empire hétérogène — Gênois, Bolonais, Pisans ne sont pas des Milanais. Ce choc d'hétérogénéité prolonge la phase absolutiste.
 - description: Le duché de Milan sous Gian Galeazzo (1395-1402) s'étend bien au-delà du contado lombard originel pour englober 26 cités de l'Italie du Nord, de Gênes à l'ouest à Bologne à l'est, de Belluno au nord à Sienne au sud. La superficie passe de ~10 000 km² (cœur lombard) à ~30 000 km². Les populations des cités conquises — Gênes, Bologne, Pise, Sienne, Pérouse — ont chacune leurs propres institutions, traditions et identités. Ce choc d'hétérogénéité prolonge la phase absolutiste en offrant un exutoire à l'expansion et en élevant le seuil d'homogénéité. Mais l'empire est entièrement personnel : il s'effondre instantanément à la mort de Gian Galeazzo en 1402.
 
-#### Saillant : Pic absolutiste — Gian Galeazzo Visconti
+#### Saillant : Acmé absolutiste — Gian Galeazzo Visconti
 - type: saillant
 - start: 1395
 - end: 1402
 - figure: Gian Galeazzo Visconti
 - subtitle: Gian Galeazzo Visconti
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: high
 - summary: Premier duc de Milan (1395), 26 villes, Consiglio Segreto, 2M florins de revenus annuels. En passe d'unifier l'Italie du nord quand il meurt (1402). L'effondrement immédiat confirme le caractère personnel de l'absolutisme.
 
@@ -468,13 +468,13 @@
 - title: Impérialisme absolutiste
 - summary: Le Royaume d'Italie (1805) s'étend (Vénétie 1805, Marches 1808, Trentin 1810). Code civil (1806). Armée de 80 000-90 000 hommes en 1812. Participation à toutes les campagnes napoléoniennes (Espagne, Autriche, Russie). Impérialisme sous tutelle impériale française.
 
-#### Saillant : Pic absolutiste — Royaume d'Italie napoléonien
+#### Saillant : Acmé absolutiste — Royaume d'Italie napoléonien
 - type: saillant
 - start: 1810
 - end: 1812
 - figure: Eugène de Beauharnais
 - subtitle: Eugène de Beauharnais
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: medium
 - summary: Le Royaume d'Italie atteint son apogée vers 1810-1812 : 6,7 millions d'habitants, 24 départements, expansion maximale (Vénétie, Marches, Trentin), armée de 80 000-90 000 hommes atteignant la parité qualitative avec les unités françaises, revenus fiscaux au maximum (1,3% d'impôt non collecté en 1808). L'impérialisme absolutiste est au zénith — mais sous tutelle impériale française.
 
@@ -561,7 +561,7 @@
 | Guerre sociale | Torriani contre Visconti (1240-1277) | Patriciat contre réformateurs (1780-1796) |
 | 1er monarque absolu | Ottone Visconti (1277) | Napoléon (1796) |
 | DGRO | Retour Della Torre (1302-1311) | — |
-| Pic absolutiste | Gian Galeazzo (1395-1402) | Eugène de Beauharnais (1810-1812) |
+| Acmé absolutiste | Gian Galeazzo (1395-1402) | Eugène de Beauharnais (1810-1812) |
 | Remontrance | Rép. Ambrosienne (1447-1450) | — |
 | Avortement | 1499 (invasion française) | — |
 | Ancien Régime | 1454-1499 (avorté) | 1814-1848 |

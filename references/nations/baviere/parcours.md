@@ -241,7 +241,7 @@
 - typical_duration: ~200 ans
 - actual_duration: ~321 ans
 - resolution: Explosion de l'Ancien Régime (1918) → RN avortée (absorbée dans la RN allemande)
-- summary: La phase absolutiste bavaroise est la plus longue du Parcours. L'absolutisation (1597-1679) est l'œuvre de Maximilien Ier. L'impérialisme absolutiste (1679-1848) culmine sous Max-Emmanuel (1691, pic absolutiste), est brisé par Blenheim (1704), rebondit sous Maximilien III Joseph (absolutisme éclairé), puis connaît un prolongement majeur : le doublement napoléonien du territoire (1806, Franconie et Souabe) hétérogénéise la société et relance la dynamique impérialiste. Les réformes Montgelas (1799-1817) ventilent les élites. La Polysynodie de 1848 (la classe parlementaire tente de prendre des prérogatives au roi) échoue et ouvre l'Ancien Régime (1848-1918). L'absorption dans l'Empire allemand (1871) gèle le Parcours. L'AR explose en 1918 (Eisner, République des Conseils).
+- summary: La phase absolutiste bavaroise est la plus longue du Parcours. L'absolutisation (1597-1679) est l'œuvre de Maximilien Ier. L'impérialisme absolutiste (1679-1848) culmine sous Max-Emmanuel (1691, acmé absolutiste), est brisé par Blenheim (1704), rebondit sous Maximilien III Joseph (absolutisme éclairé), puis connaît un prolongement majeur : le doublement napoléonien du territoire (1806, Franconie et Souabe) hétérogénéise la société et relance la dynamique impérialiste. Les réformes Montgelas (1799-1817) ventilent les élites. La Polysynodie de 1848 (la classe parlementaire tente de prendre des prérogatives au roi) échoue et ouvre l'Ancien Régime (1848-1918). L'absorption dans l'Empire allemand (1871) gèle le Parcours. L'AR explose en 1918 (Eisner, République des Conseils).
 - description: L'allongement considérable de la phase (+121 ans) s'explique par l'accumulation de perturbations qui ralentissent la dynamique sans l'interrompre : guerre de Trente Ans (~30% de pertes démographiques), occupations autrichiennes (1704-1714, 1742-1745), et surtout le prolongement napoléonien de 1806. Le doublement du territoire (Franconie, Souabe — gains permanents confirmés au Congrès de Vienne) hétérogénéise la société bavaroise, ralentissant le moteur culturel et relançant l'impérialisme absolutiste sous une forme modernisatrice (réformes Montgelas). La Polysynodie de 1848 — tentative de la classe parlementaire de s'imposer face au roi — échoue comme toutes les Polysynodies et marque le vrai début de l'AR. L'absorption dans l'Empire allemand (1871) gèle ensuite le Parcours : la Bavière est suffisamment homogène pour une RN, mais la réalité politique est bloquée par la suzeraineté prussienne. L'AR se maintient artificiellement pendant 47 ans (1871-1918) avant d'exploser.
 - deviation: +121 ans par rapport à la norme (~200 ans). Prolongement napoléonien (1806, hétérogénéisation territoriale, ~70 ans d'effet), guerre de Trente Ans (~30 ans d'effet), occupations autrichiennes (~20 ans d'effet cumulé).
 
@@ -270,19 +270,19 @@
 - start: 1679
 - end: 1777
 - title: Impérialisme absolutiste
-- summary: Premier cycle. Max-Emmanuel porte la Bavière au sommet (pic absolutiste 1691, gouverneur des Pays-Bas espagnols). Blenheim (1704) brise l'élan. Occupation autrichienne (1704-1714). Charles VII (1742) atteint le titre impérial sans le pouvoir. Maximilien III Joseph (1745-1777) incarne l'absolutisme éclairé tardif.
-- description: Max-Emmanuel (1679-1704) — gouverneur des Pays-Bas espagnols, guerrier ottoman, bâtisseur de Nymphenburg et Schleissheim — porte la Bavière au pic absolutiste. Blenheim (13 août 1704) met la Bavière hors jeu et entraîne dix ans d'occupation autrichienne (1704-1714), le Sendlinger Mordweihnacht (25 décembre 1705, ~1 100 insurgés massacrés), puis la restauration (Rastatt 1714). Charles VII (1742-1745), élu empereur du Saint-Empire, est immédiatement occupé par l'Autriche — triomphe pyrrhique. Maximilien III Joseph (1745-1777) tourne les moyens de l'État vers l'intérieur : Codex Maximilianeus (1756), Académie des Sciences (1759), école obligatoire (1771), abolition de la censure jésuite. C'est un impérialisme absolutiste reconverti vers l'intérieur, analogue à Frédéric le Grand en Prusse.
+- summary: Premier cycle. Max-Emmanuel porte la Bavière au sommet (acmé absolutiste 1691, gouverneur des Pays-Bas espagnols). Blenheim (1704) brise l'élan. Occupation autrichienne (1704-1714). Charles VII (1742) atteint le titre impérial sans le pouvoir. Maximilien III Joseph (1745-1777) incarne l'absolutisme éclairé tardif.
+- description: Max-Emmanuel (1679-1704) — gouverneur des Pays-Bas espagnols, guerrier ottoman, bâtisseur de Nymphenburg et Schleissheim — porte la Bavière au acmé absolutiste. Blenheim (13 août 1704) met la Bavière hors jeu et entraîne dix ans d'occupation autrichienne (1704-1714), le Sendlinger Mordweihnacht (25 décembre 1705, ~1 100 insurgés massacrés), puis la restauration (Rastatt 1714). Charles VII (1742-1745), élu empereur du Saint-Empire, est immédiatement occupé par l'Autriche — triomphe pyrrhique. Maximilien III Joseph (1745-1777) tourne les moyens de l'État vers l'intérieur : Codex Maximilianeus (1756), Académie des Sciences (1759), école obligatoire (1771), abolition de la censure jésuite. C'est un impérialisme absolutiste reconverti vers l'intérieur, analogue à Frédéric le Grand en Prusse.
 
-#### Saillant : Pic absolutiste
+#### Saillant : Acmé absolutiste
 - type: saillant
 - start: 1756
 - figure: Maximilien III Joseph
 - subtitle: Maximilien III Joseph
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: medium
 - alternatives: Max-Emmanuel (1691) — prestige et projection extérieure maximaux, mais son édifice s'effondre à Blenheim. Maximilien III Joseph est retenu car il incarne la puissance intérieure consolidée maximale.
 - summary: Maximilien III Joseph (1745-1777) porte l'État bavarois à son maximum d'efficacité et de sophistication : Codex Maximilianeus (1756), Académie des Sciences (1759), école obligatoire (1771), abolition de la censure jésuite — le pouvoir central le plus consolidé de l'histoire bavaroise.
-- description: Maximilien III Joseph est le pic absolutiste du premier cycle. Privé de toute possibilité d'expansion extérieure après l'échec de Charles VII, il tourne les moyens de l'État vers l'intérieur avec une efficacité remarquable. Le Codex Maximilianeus bavaricus civilis (1756) est la codification juridique la plus complète d'Allemagne avant le Code Napoléon. L'Académie des Sciences de Munich (1759) place la Bavière sur la carte intellectuelle européenne. L'école obligatoire (1771) est un instrument d'homogénéisation culturelle sans précédent. L'abolition de la censure jésuite libère la production intellectuelle. C'est l'analogue d'Élisabeth Ière en Angleterre : le pouvoir domestique consolidé au maximum, la projection culturelle plutôt que militaire, le moment de puissance effective maximale avant la sclérose.
+- description: Maximilien III Joseph est le acmé absolutiste du premier cycle. Privé de toute possibilité d'expansion extérieure après l'échec de Charles VII, il tourne les moyens de l'État vers l'intérieur avec une efficacité remarquable. Le Codex Maximilianeus bavaricus civilis (1756) est la codification juridique la plus complète d'Allemagne avant le Code Napoléon. L'Académie des Sciences de Munich (1759) place la Bavière sur la carte intellectuelle européenne. L'école obligatoire (1771) est un instrument d'homogénéisation culturelle sans précédent. L'abolition de la censure jésuite libère la production intellectuelle. C'est l'analogue d'Élisabeth Ière en Angleterre : le pouvoir domestique consolidé au maximum, la projection culturelle plutôt que militaire, le moment de puissance effective maximale avant la sclérose.
 
 #### Saillant : Fin de l'expansion — Blenheim
 - type: saillant
@@ -335,12 +335,12 @@
 - summary: Second cycle. Montgelas projette la puissance étatique vers l'intérieur : intégration territoriale, réforme administrative, uniformisation juridique, constitution (1818). La Remontrance de 1848 échoue et ouvre le second AR.
 - description: Le second cycle d'impérialisme absolutiste est dirigé vers l'intérieur plutôt que vers la conquête. Montgelas (1799-1817) modernise radicalement l'État : imposition de la noblesse et du clergé, sécularisation des biens ecclésiastiques, cadastre complet, abolition du servage (1808), constitution de 1808 puis de 1818 (parlement bicaméral). Le royaume de Bavière (1806) projette un prestige nouveau. C'est l'analogue fonctionnel de l'impérialisme classique : l'État se projette avec la même énergie, mais vers l'homogénéisation plutôt que vers l'expansion. Après le renvoi de Montgelas (1817), Louis Ier (1825-1848) s'aliène toutes les factions. L'affaire Lola Montez (1846-1848) cristallise l'opposition. La Remontrance de 1848 — le Landtag vote des réformes ambitieuses après l'abdication de Louis Ier, mais Maximilien II les vide de leur substance — clôt le second cycle.
 
-#### Saillant : Pic absolutiste (2e cycle)
+#### Saillant : Acmé absolutiste (2e cycle)
 - type: saillant
 - start: 1835
 - figure: Louis Ier
 - subtitle: Louis Ier
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: medium
 - alternatives: Montgelas (~1808) — modernisateur, mais opère sous pression napoléonienne, pas en position de puissance autonome. Louis Ier est retenu car il incarne la projection autonome du prestige bavarois.
 - summary: Louis Ier (1825-1848) transforme Munich en « Athènes sur l'Isar » — Alte Pinakothek, Neue Pinakothek, Glyptothek, Ludwigskirche, Befreiungshalle — et projette le prestige culturel bavarois à l'échelle européenne. C'est le pic du second cycle d'impérialisme absolutiste.
@@ -432,10 +432,10 @@
 | Acmé oligarchique | Albert V (1555) |
 | Guerre sociale | 1564-1597 |
 | 1er monarque absolu | Maximilien Ier (1597) |
-| Pic absolutiste [1] | Maximilien III Joseph (1756) |
+| Acmé absolutiste [1] | Maximilien III Joseph (1756) |
 | Fin de l'expansion | Blenheim (1704) |
 | Choc d'hétérogénéité | Doublement napoléonien (1806) |
-| Pic absolutiste [2] | Louis Ier (1835) |
+| Acmé absolutiste [2] | Louis Ier (1835) |
 | Remontrance | 1848 (échoue) |
 | Ancien Régime | 1848-1918 |
 | Explosion de l'AR | Eisner (7 nov 1918) |

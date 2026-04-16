@@ -64,7 +64,7 @@
 - figure: Frédéric II le Grand
 - title: Acmé oligarchique
 - confidence: low
-- alternatives: Dans H1, Frédéric le Grand est le pic absolutiste. Dans H2, il est le acmé oligarchique — figure exécutive très puissante mais qui coexiste encore avec des pouvoirs locaux autonomes (les Junkers gardent le contrôle des campagnes, les provinces ont leur administration propre). Le problème est que Frédéric le Grand ne « coexiste » pas vraiment — il impose sa volonté sans consultation. C'est un argument en faveur de H1.
+- alternatives: Dans H1, Frédéric le Grand est le acmé absolutiste. Dans H2, il est le acmé oligarchique — figure exécutive très puissante mais qui coexiste encore avec des pouvoirs locaux autonomes (les Junkers gardent le contrôle des campagnes, les provinces ont leur administration propre). Le problème est que Frédéric le Grand ne « coexiste » pas vraiment — il impose sa volonté sans consultation. C'est un argument en faveur de H1.
 - summary: Grande puissance, despotisme éclairé. Mais dans H2, c'est un acmé oligarchique, pas absolutiste.
 
 ### Perturbation : Guerres napoléoniennes

@@ -64,7 +64,7 @@ La méthode la plus efficace pour mapper le Parcours d'une nation non encore ana
 2. **Remonter ~200 ans** pour chercher l'éveil féodal (premier chef supra-régional). Cette phase étant pauvre en traces, on la reconstruit souvent a posteriori à partir de la date du 1er monarque oligarchique.
 3. **Identifier la guerre sociale** — conflit entre deux factions d'élites, résolu par l'émergence d'un tiers. La guerre sociale est souvent très visible dans les sources.
 4. **Identifier le 1er monarque absolu** — la figure qui résout la guerre sociale.
-5. **Chercher le pic absolutiste** (~100-150 ans après le 1er monarque absolu) et l'Ancien Régime qui suit.
+5. **Chercher le acmé absolutiste** (~100-150 ans après le 1er monarque absolu) et l'Ancien Régime qui suit.
 6. **Chercher la RN** — si elle a eu lieu.
 7. **Vérifier les durées** — tout écart significatif par rapport aux ~200 ans typiques signale une perturbation à identifier.
 
@@ -140,7 +140,7 @@ Cette grille est essentielle pour lire la Révolution Nationale.
 Le Parcours utilise deux types d'outils d'analyse :
 
 - Les **sous-phases** découpent chaque phase en étapes successives, pour en comprendre la mécanique. Exemple : la phase absolutiste se découpe en absolutisation → impérialisme absolutiste → Ancien Régime.
-- Les **saillants** sont des éléments facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison entre parcours nationaux. Ce sont généralement des éléments ponctuels (le règne d'un monarque, un événement clé). Exemples : l'éveil féodal, le premier monarque oligarchique, le pic absolutiste.
+- Les **saillants** sont des éléments facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison entre parcours nationaux. Ce sont généralement des éléments ponctuels (le règne d'un monarque, un événement clé). Exemples : l'éveil féodal, le premier monarque oligarchique, le acmé absolutiste.
 
 Certains éléments sont les deux à la fois : la guerre sociale et l'Ancien Régime sont des sous-phases (on peut décrire leur mécanique) et des saillants (facilement identifiables dans n'importe quel parcours).
 
@@ -200,10 +200,10 @@ Voir `references/nations/*/parcours.md` pour le détail et `references/nations/*
 | Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Conflit Électeur/États (~1660-1713) | Tensions institutionnelles (~1628-1669) | ~1564-1597 | Madamisti/Principisti (~1637-1696) |
 | 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Frédéric-Guillaume Ier (1713) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) |
 | Dernière grande révolte olig. | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — | — (pas d'assise) | — (pas d'assise) | Affaire Graneri (1722-1723) |
-| Pic absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Frédéric le Grand (~1760) | Morosini (~1688) | Max. III Joseph (~1756) / Louis Ier (~1835) | Ch. Emmanuel III (~1748) |
+| Acmé absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Frédéric le Grand (~1760) | Morosini (~1688) | Max. III Joseph (~1756) / Louis Ier (~1835) | Ch. Emmanuel III (~1748) |
 | Fin de l'expansion (abs.) | — | Mort d'Hérode (-4) | Utrecht (1713) | — | — | Passarowitz (1718) | Blenheim (1704) | Aix-la-Chapelle (1748) |
-| Remontrance | — | — | Polysynodie (1715) | Apology of the Commons (1604) | — | Correzione (1761) | Landtag (1848) | Révolte de 1821 |
-| Ancien Régime | — (interrompu) | 4 à 66 | ~1715-1789 | ~1603-1642 | ~1890-1918 | ~1718-1848 | ~1848-1918 | ~1748-1861 (éclipse 1796-1814) |
+| Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) | — | Correzione (1761) | Landtag (1848) | Révolte de 1821 |
+| Ancien Régime | — (interrompu) | -4 à 66 | ~1715-1789 | ~1603-1642 | ~1890-1918 | ~1718-1848 | ~1848-1918 | ~1748-1861 (éclipse 1796-1814) |
 | Début de la RN | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | Révolution de Novembre (1918) | République de Manin (1848) | Eisner (1918) | — (absorbée, 1861) |
 | Impérialiste Revanchard | — | — | Bonaparte (1799) | Cromwell (1653) | Hitler (1933) | — (RN avortée) | — (absorbée) | — (absorbée) |
 | Glorieuse Révolution | — | — | 1830 | 1688 | Réunification (1990) | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) |

@@ -413,15 +413,15 @@
 - summary: Louis XIV porte le pouvoir absolu à son apogée en domestiquant la noblesse à Versailles, en étendant le territoire français à son maximum et en imposant l'homogénéisation religieuse par la révocation de l'Édit de Nantes, avant que l'épuisement militaire et financier ne marque le début du déclin.
 - description: Louis XIV porte le pouvoir absolu à son apogée en combinant trois leviers : la domestication de la noblesse à Versailles (1682), qui transforme les grands seigneurs en aristocratie de cour dépendante de la faveur royale ; l'extension territoriale maximale consacrée par la Trêve de Ratisbonne (1684) ; et l'homogénéisation religieuse forcée par la révocation de l'Édit de Nantes (1685). L'administration royale — Colbert, Louvois, Vauban — fonctionne comme une machine étatique d'une efficacité sans précédent. Mais après ce triple sommet, les guerres de la Ligue d'Augsbourg et de Succession d'Espagne épuisent le royaume, et le Traité d'Utrecht (1713) puis la mort de Louis XIV (1715) clôturent l'ère impériale.
 
-#### Saillant : Pic absolutiste
+#### Saillant : Acmé absolutiste
 - type: saillant
 - start: 1682
 - figure: Louis XIV
 - subtitle: Louis XIV
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: high
 - summary: L'installation de la cour à Versailles en 1682, la Trêve de Ratisbonne en 1684 qui marque l'extension territoriale maximale et la révocation de l'Édit de Nantes en 1685 constituent le triple sommet du pouvoir absolu français, après quoi le déclin s'amorce irréversiblement.
-- description: Louis XIV atteint le sommet de sa puissance entre 1682 et 1685, dans ce qui constitue le pic absolutiste le mieux documenté de tous les parcours nationaux. L'installation de la cour à Versailles en 1682 achève la domestication de la noblesse, désormais transformée en aristocratie de cour entièrement dépendante de la faveur royale. La Trêve de Ratisbonne en 1684 consacre l'extension territoriale maximale du royaume, avec l'annexion de Strasbourg, du Luxembourg et de Courtrai. La révocation de l'Édit de Nantes en 1685 vise l'homogénéisation religieuse forcée, portant le moteur culturel à son maximum d'intensité. Après ce triple sommet, le déclin s'amorce : la Guerre de la Ligue d'Augsbourg à partir de 1688, la désastreuse Guerre de Succession d'Espagne à partir de 1701 et les famines de 1693 et 1709 épuisent le royaume et révèlent les limites du système.
+- description: Louis XIV atteint le sommet de sa puissance entre 1682 et 1685, dans ce qui constitue le acmé absolutiste le mieux documenté de tous les parcours nationaux. L'installation de la cour à Versailles en 1682 achève la domestication de la noblesse, désormais transformée en aristocratie de cour entièrement dépendante de la faveur royale. La Trêve de Ratisbonne en 1684 consacre l'extension territoriale maximale du royaume, avec l'annexion de Strasbourg, du Luxembourg et de Courtrai. La révocation de l'Édit de Nantes en 1685 vise l'homogénéisation religieuse forcée, portant le moteur culturel à son maximum d'intensité. Après ce triple sommet, le déclin s'amorce : la Guerre de la Ligue d'Augsbourg à partir de 1688, la désastreuse Guerre de Succession d'Espagne à partir de 1701 et les famines de 1693 et 1709 épuisent le royaume et révèlent les limites du système.
 
 #### Saillant : Traité d'Utrecht
 - type: saillant

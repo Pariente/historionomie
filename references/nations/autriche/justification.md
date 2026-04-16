@@ -234,7 +234,7 @@ Marie-Thérèse (avec les réformes Haugwitz de 1749) est le **1er monarque abso
 
 **Charles VI (1711-1740)** : la Pragmatique Sanction (1713) est un effort de stabilisation de la succession, mais elle est obtenue par concessions plutôt que par imposition. Pas d'absolutisation effective. Charles VI est plutôt un post-acmé oligarchique.
 
-**Joseph II (1780-1790)** : approfondit l'absolutisme sans le commencer. C'est le pic absolutiste, pas le 1er monarque absolu.
+**Joseph II (1780-1790)** : approfondit l'absolutisme sans le commencer. C'est le acmé absolutiste, pas le 1er monarque absolu.
 
 Marie-Thérèse est structurellement analogue à Philippe V en Espagne après la Guerre de Succession : nouvelle dynastie de facto, nouveau modèle administratif, centralisation forcée après une guerre de succession européenne.
 
@@ -315,17 +315,17 @@ Confidence: medium. Léopold Ier est le meilleur candidat selon le critère cano
 
 ---
 
-## 9. Pic absolutiste : Joseph II
+## 9. Acmé absolutiste : Joseph II
 
 ### Pourquoi Joseph II
 
-Le pic absolutiste est canoniquement situé à l'intérieur de la sous-phase d'impérialisme absolutiste. Pour l'Autriche, deux cycles cohabitent, coupés par les guerres napoléoniennes :
+Le acmé absolutiste est canoniquement situé à l'intérieur de la sous-phase d'impérialisme absolutiste. Pour l'Autriche, deux cycles cohabitent, coupés par les guerres napoléoniennes :
 - **Cycle 1 (1749-1792)** : Marie-Thérèse → Joseph II. Pic = Joseph II (1780-1790).
-- **Cycle 2 (1815-1848)** : Metternich, impérialisme absolutiste conservateur post-napoléonien. Pas de figure claire de « pic absolutiste » — Metternich est chancelier, pas souverain, et le régime est consolidé mais pas brillant.
+- **Cycle 2 (1815-1848)** : Metternich, impérialisme absolutiste conservateur post-napoléonien. Pas de figure claire de « acmé absolutiste » — Metternich est chancelier, pas souverain, et le régime est consolidé mais pas brillant.
 
 Joseph II est le pic : despote éclairé radical, moyens administratifs puissants, projection vers l'intérieur (modernisation), rationalisation culturelle (germanisation, édit de tolérance, sécularisations). Pousse la réforme au-delà de ce que la société peut accepter — caractéristique du pic qui cristallise la résistance qui prépare l'AR.
 
-Alternative écartée : Metternich comme pic absolutiste 2e cycle. Mais Metternich n'est pas monarque, et l'ère Metternich est plus une stabilisation post-crise qu'un sommet de projection. Joseph II reste le pic unique.
+Alternative écartée : Metternich comme acmé absolutiste 2e cycle. Mais Metternich n'est pas monarque, et l'ère Metternich est plus une stabilisation post-crise qu'un sommet de projection. Joseph II reste le pic unique.
 
 Confidence: medium.
 
@@ -338,7 +338,7 @@ La **Remontrance est la borne stricte d'entrée en Ancien Régime**, pas « fin 
 ### Architecture
 
 - **Impérialisme absolutiste 1780-1848** (68 ans). Contient :
-  - Pic absolutiste (Joseph II, 1780-1790)
+  - Acmé absolutiste (Joseph II, 1780-1790)
   - Épisode révolutionnaire et napoléonien (1792-1815) — non codé comme perturbation (bilan territorial net positif au Congrès de Vienne, institutions intactes, pas d'impact structurel)
   - Fin de l'expansion (Congrès de Vienne, 1815)
   - Période Vormärz metternichienne (1815-1848) comme prolongement post-pic stabilisé

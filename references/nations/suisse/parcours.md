@@ -259,25 +259,25 @@ Les deux moteurs opèrent à des échelles partiellement distinctes :
 - summary: Le « 1er monarque absolu » suisse n'est pas une personne mais un système : le patriciat trans-confessionnel qui, après la résolution du clivage confessionnel (1712), exerce un pouvoir incontesté au niveau cantonal. C'est un absolutisme institutionnel, analogue aux Inquisiteurs d'État vénitiens.
 - description: L'identification du « 1er monarque absolu » suisse est le point le plus incertain du Parcours. La confiance est basse parce que l'absolutisme opère au niveau cantonal et non confédéral, et parce qu'il n'y a pas de figure personnelle (pas de Henri IV, pas de Josias, pas de Maximilien Ier). Le parallèle le plus pertinent est Venise, où les Inquisiteurs d'État constituent un « monarque absolu » institutionnel. De même, le patriciat suisse est une classe qui exerce un pouvoir absolu sans être incarnée par un seul individu. La fermeture des patriciats (Berne 1643, Fribourg 1627-1684, Lucerne fin XVIIe) est un processus progressif qui atteint son aboutissement après la résolution du clivage confessionnel (1712). Après cette date, aucune force — ni confessionnelle, ni populaire, ni institutionnelle — ne peut contester le pouvoir patricien dans les cantons urbains.
 
-### Subphase : Impérialisme absolutiste / Pic absolutiste (1712-~1760)
+### Subphase : Impérialisme absolutiste / Acmé absolutiste (1712-~1760)
 - type: subphase
 - phase: absolutiste
 - start: 1712
 - end: ~1760
 - title: Impérialisme absolutiste
-- summary: L'impérialisme suisse est entièrement intérieur — il prend la forme de la consolidation administrative des territoires sujets et du rayonnement culturel des Lumières suisses. Le pic absolutiste se situe vers 1740-1760, quand Berne est au sommet de sa puissance et de son prestige.
+- summary: L'impérialisme suisse est entièrement intérieur — il prend la forme de la consolidation administrative des territoires sujets et du rayonnement culturel des Lumières suisses. Le acmé absolutiste se situe vers 1740-1760, quand Berne est au sommet de sa puissance et de son prestige.
 - description: La Suisse ne peut pas pratiquer l'impérialisme expansionniste (territoire trop petit, neutralité, absence d'armée confédérale). Mais la dynamique absolutiste se manifeste sous d'autres formes. Au niveau cantonal, Berne pousse sa domination administrative sur ses territoires sujets à un niveau d'efficacité remarquable. Les Bernois exercent un pouvoir incontesté sur le Pays de Vaud (conquis en 1536), l'Argovie (conquise en 1415), et d'autres territoires. Le système des baillis bernois fonctionne avec la régularité d'une bureaucratie moderne. Parallèlement, les Lumières suisses rayonnent : Albrecht von Haller (1708-1777), physiologiste et poète bernois, est l'un des esprits les plus respectés d'Europe. La famille Bernoulli et Leonhard Euler (tous deux bâlois) dominent les mathématiques européennes. La « République des Lettres » suisse est disproportionnée par rapport à la taille du pays. Le mercenariat continue de servir d'exutoire aux ambitions militaires des familles patriciennes.
 
-#### Saillant : Pic absolutiste
+#### Saillant : Acmé absolutiste
 - type: saillant
 - start: ~1740
 - end: ~1760
 - figure: Le patriciat bernois
 - subtitle: Berne au zénith
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: low
-- summary: Le pic absolutiste suisse se situe vers 1740-1760, quand le patriciat bernois est au sommet de son pouvoir territorial, administratif et culturel. Berne est le plus grand État-cité au nord des Alpes, administrant un territoire vaste avec une efficacité bureaucratique remarquable.
-- description: Le pic absolutiste suisse est difficile à dater précisément parce qu'il n'est pas incarné par une figure personnelle. Il correspond au moment où le système patricien fonctionne avec une efficacité maximale et un prestige maximal. À Berne, le Grand Conseil (Grosser Rat) de 200 membres et le Petit Conseil (Kleiner Rat) de 27 membres administrent un territoire qui s'étend de l'Argovie au nord au Pays de Vaud au sud-ouest. L'administration bernoise est l'une des plus efficaces d'Europe continentale. Les familles patriciennes — les von Erlach, von Wattenwyl, von Fischer, von Steiger — cumulent richesse, culture et pouvoir. Le rayonnement culturel est à son apogée : Haller, Bodmer, la Société Helvétique (fondée en 1761). La confiance est basse parce que l'identification du pic est impressionniste — il n'y a pas de Versailles suisse, pas de conquête marquante, pas de figure emblématique unique.
+- summary: Le acmé absolutiste suisse se situe vers 1740-1760, quand le patriciat bernois est au sommet de son pouvoir territorial, administratif et culturel. Berne est le plus grand État-cité au nord des Alpes, administrant un territoire vaste avec une efficacité bureaucratique remarquable.
+- description: Le acmé absolutiste suisse est difficile à dater précisément parce qu'il n'est pas incarné par une figure personnelle. Il correspond au moment où le système patricien fonctionne avec une efficacité maximale et un prestige maximal. À Berne, le Grand Conseil (Grosser Rat) de 200 membres et le Petit Conseil (Kleiner Rat) de 27 membres administrent un territoire qui s'étend de l'Argovie au nord au Pays de Vaud au sud-ouest. L'administration bernoise est l'une des plus efficaces d'Europe continentale. Les familles patriciennes — les von Erlach, von Wattenwyl, von Fischer, von Steiger — cumulent richesse, culture et pouvoir. Le rayonnement culturel est à son apogée : Haller, Bodmer, la Société Helvétique (fondée en 1761). La confiance est basse parce que l'identification du pic est impressionniste — il n'y a pas de Versailles suisse, pas de conquête marquante, pas de figure emblématique unique.
 
 ### Subphase : Ancien Régime (~1760-1798)
 - type: subphase

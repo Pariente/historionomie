@@ -350,13 +350,13 @@
 - summary: Charles Emmanuel III porte le Piémont à son prestige maximal. Guerre de Succession de Pologne (Guastalla 1734, gains de Novara et Tortona). Guerre de Succession d'Autriche (Assietta 1747, gains de Vigevano). L'armée piémontaise est parmi les plus disciplinées d'Europe.
 - description: **Marqueurs de l'impérialisme absolutiste** : multiplication des guerres d'agression (deux guerres de succession en 18 ans). Professionnalisation de l'encadrement militaire (armée piémontaise au maximum d'efficacité, victoire d'Assietta 1747 — 7 400 Piémontais repoussent 27 000 Franco-Espagnols). Expansion territoriale (Novara, Tortona, Vigevano). Consensus absolutiste : la polarisation des élites est faible — la noblesse est domestiquée, l'administration est efficace, le prestige militaire légitime le régime. **Pourquoi cette sous-phase est courte (~18 ans).** Le Piémont-Sardaigne est un petit État — il n'a pas les moyens d'une politique impérialiste prolongée comme la France de Louis XIV. L'expansion est opportuniste (profiter des guerres de succession européennes) plutôt que systématique. Après Aix-la-Chapelle (1748), il n'y a plus d'opportunité de conquête, et Charles Emmanuel III opte pour la neutralité. La brièveté de l'impérialisme est proportionnelle à la taille de l'État.
 
-#### Saillant : Pic absolutiste — Charles Emmanuel III
+#### Saillant : Acmé absolutiste — Charles Emmanuel III
 - type: saillant
 - start: 1730
 - end: 1748
 - figure: Charles Emmanuel III
 - subtitle: Charles Emmanuel III
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: high
 - summary: Charles Emmanuel III (r. 1730-1773) porte le Piémont-Sardaigne au sommet de sa puissance. Guerre de Succession de Pologne : occupe Milan, victoire de Guastalla (1734), gains de Novara et Tortona (Traité de Vienne 1738). Guerre de Succession d'Autriche : victoire éclatante d'Assietta (1747), récupération de la Savoie et de Nice, gain de Vigevano (Traité d'Aix-la-Chapelle 1748). Prestige militaire maximal.
 - description: Charles Emmanuel III est l'analogue piémontais de Louis XIV, d'Élisabeth Ière ou de Morosini — la figure qui incarne l'apogée du prestige absolutiste. L'armée piémontaise, réformée par son père, est à son maximum d'efficacité. La victoire d'Assietta (19 juillet 1747) — 7 400 Piémontais repoussant 27 000 Franco-Espagnols avec des pertes de 5 000 contre 200 — entre dans la légende militaire piémontaise. Après Aix-la-Chapelle (1748), Charles Emmanuel III opte pour la neutralité dans la guerre de Sept Ans, et le système entre progressivement en sédimentation.

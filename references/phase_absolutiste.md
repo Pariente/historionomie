@@ -1,6 +1,6 @@
 # Phase absolutiste
 
-La phase absolutiste achève l'élimination des réseaux féodaux et oligarchiques par le pouvoir central. L'administration centrale acquiert une supériorité incontestée, de facto et de jure, sur les administrations locales. Le pouvoir devient moins personnel, plus immanent.
+La phase absolutiste achève l'élimination des réseaux féodaux et oligarchiques par le pouvoir central. Ce qui la distingue structurellement de la phase oligarchique : **l'administration centrale surclasse déjà les administrations locales**. En phase oligarchique, l'État central existe mais doit encore composer avec les pouvoirs locaux. En phase absolutiste, la préséance est acquise — de facto et de jure — et le pouvoir central peut agir sans frein juridique des oligarques. Le pouvoir devient moins personnel, plus immanent.
 
 **Les « égaux » de cette phase** sont en théorie l'ensemble de la nation — l'homogénéisation culturelle s'étend progressivement à des couches de plus en plus larges de la population (alphabétisation, langue commune, conscience nationale). Mais l'administration centrale, qui intègre les nouvelles élites, finit par se sédimenter : les places sont prises, la mobilité sociale se fige, les rentes deviennent insupportables. **Résolution** : l'**éclatement de la sédimentation** — la Révolution Nationale brise l'ancien ordre devenu insoutenable.
 
@@ -15,16 +15,17 @@ Le **bloc contestataire** (ED + EG) a-t-il **renversé le bloc élitaire** ? Le 
 
 ### Échelle d'application du test
 
-Le test s'applique à l'échelle **nationale** — c'est-à-dire à l'échelle de l'entité dont on suit le Parcours. Dans une monarchie composite (ex. : Espagne habsbourgeoise, Saint-Empire), l'administration centrale doit avoir préséance sur TOUTES les administrations locales du territoire national — pas seulement celles du noyau. Si le noyau est absolutisé mais que des entités associées conservent leurs propres institutions (fueros, Cortès, droit propre), le test N'EST PAS passé.
+Le test s'applique à l'échelle du **territoire national du Parcours qu'on suit** (noyau + marges), pas à l'échelle de tout ce que la couronne possède. Le Parcours suit un *peuple*, pas un empire. Les territoires sous union personnelle qui ont leur propre Parcours ne font pas partie du territoire national et ne comptent pas pour le test.
 
-**Exemple :** Les Rois Catholiques (1479) absolutisent la Castille, mais la Couronne d'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques — qui sont le acmé oligarchique.
+- **Espagne** : l'Aragon fait partie du territoire national espagnol. Les Rois Catholiques (1479) absolutisent la Castille, mais l'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques — qui sont l'acmé oligarchique.
+- **Autriche** : la Hongrie a son propre Parcours et n'est pas le territoire national autrichien. Marie-Thérèse absolutise les Erbländer et la Bohême (réformes Haugwitz 1749), et le test est passé à cette échelle — même si la Hongrie conserve sa Diète et ses institutions propres sous union personnelle.
 
 ### Marqueurs nécessaires
 
-- L'administration centrale a préséance incontestée sur les administrations locales **de facto et de jure** (à l'échelle nationale)
+- L'administration centrale a **déjà** préséance sur les administrations locales **de facto et de jure** (à l'échelle nationale) — c'est ce qui distingue la phase absolutiste de la phase oligarchique : en phase absolutiste, l'administration centrale surclasse déjà les administrations locales
 - L'exécutif peut agir sans frein juridique des oligarques (guerre, impôts, justice)
 - Les entités décentralisées perdent leur autonomie fiscale
-- Une figure ou dynastie issue de la guerre sociale, qui ne s'identifie à aucune des anciennes factions
+- La résolution de la guerre sociale a produit un nouveau cadre central qui subordonne les anciennes factions (la figure résolvante est régulièrement un tiers neutre s'appuyant sur les clientèles délaissées, mais pas systématiquement)
 
 ### Piège : la codification écrite du droit n'est PAS un marqueur discriminant
 
@@ -49,25 +50,22 @@ Les structures institutionnelles de la phase oligarchique ne disparaissent pas, 
 
 ### Saillant : 1er monarque absolu (tout début de la sous-phase)
 
-La figure qui résout la guerre sociale et inaugure la concentration du pouvoir central. Le critère structurel **n'est pas** que la figure soit ethniquement ou idéologiquement « au-dessus » des factions — c'est qu'elle **construise un nouveau cadre central qui transcende structurellement les divisions précédentes**, en s'appuyant sur l'appareil administratif et les clientèles populaires délaissées.
+La figure qui résout la guerre sociale et inaugure la concentration du pouvoir central. Deux critères essentiels de la résolution (cf. `phase_oligarchique.md` pour le détail) :
 
-Trois patterns canoniques de résolution :
+1. **La structure du conflit est élitaire** — prébendière vs patrimoniale.
+2. **La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques.
 
-1. **Pattern « tiers neutre »** — la figure vient effectivement d'en dehors des deux factions. Exemples : Henri VII Tudor (étranger gallois, étranger aux York et Lancaster) ; Philippe V Bourbon (Français imposé en Espagne, étranger aux factions austraciste et borboniste espagnoles) ; Marie-Thérèse + Habsbourg-Lorraine (nouvelle branche dynastique après la guerre de Succession d'Autriche).
+En général, la figure résolvante est un **tiers** — s'appuyant sur les clientèles délaissées et la classe moyenne administrative pour forcer les puissants à plier (Henri IV, Henri VII, Philippe V). Mais le tiers neutre est une observation empirique fréquente, pas un critère structurel. Dans le cas d'Israël (prolongement), la dynastie hasmonéenne n'est pas un tiers — une faction a clairement gagné — mais le critère essentiel est satisfait.
 
-2. **Pattern « conversion / transcendance personnelle »** — la figure vient d'une des factions mais transcende son origine par un acte qui le place au-dessus. Exemple : Henri IV Bourbon, qui vient du camp huguenot mais se convertit au catholicisme (« Paris vaut bien une messe ») et promulgue l'Édit de Nantes comme acte d'autorité royale au-dessus des deux camps.
-
-3. **Pattern « victoire de faction qui construit le nouveau cadre »** — la figure vient clairement d'une des factions et la fait gagner militairement, mais elle construit ensuite un pouvoir central nouveau qui dépasse structurellement la simple victoire de camp. Exemple canonique : Simon Thassi (-140), issu du camp maccabéen/yahviste, qui construit la dynastie hasmonéenne en cumulant les fonctions de Grand Prêtre + stratège + ethnarque rendues héréditaires — c'est le nouveau cadre central qui transcende, pas la neutralité personnelle.
-
-Le test discriminant n'est donc **pas** « venir d'aucune faction » mais « construire un nouveau cadre central qui rend les anciennes divisions structurellement obsolètes et concentre le pouvoir au-dessus d'elles ». Une victoire d'une faction qui se contente de marginaliser l'autre sans construire de nouveau cadre n'est pas une résolution de guerre sociale au sens canonique — c'est une victoire asymétrique (cf. Contre-Réforme autrichienne 1620 → polarisation prolongée jusqu'à 1740).
+Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne sans qu'un nouveau cadre central émerge — la guerre sociale n'est pas résolue, et la phase oligarchique se poursuit.
 
 **Exemples :**
 - Israël antique : Josias (-640) — centralisation du culte au Temple, destruction des bamot, envoi d'agents royaux sur tout le territoire, unification juridique par le Deutéronome
-- Israël (prolongement) : Simon Thassi (-140) — issu du camp yahviste maccabéen, mais construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire). Pattern victoire de faction transcendante.
-- France : Henri IV (1598) — issu du camp huguenot, converti pour transcender, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully). Pattern conversion/transcendance personnelle.
-- Angleterre : Henri VII (1485) — création d'une nouvelle dynastie émancipée des York et des Lancaster. Pattern tiers neutre.
-- Espagne : Philippe V (1714) — Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta. Pattern tiers neutre.
-- Venise : Inquisiteurs d'État (~1669) — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs d'État, rendus permanents en 1583 et devenus progressivement autonomes, ne s'identifient à aucune des factions (giovani/vecchi) et dominent les deux. Leur base est la classe administrative des cittadini. Pattern tiers neutre institutionnel.
+- Israël (prolongement) : Simon Thassi (-140) — issu du camp yahviste maccabéen, construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire)
+- France : Henri IV (1598) — issu du camp huguenot, converti, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully)
+- Angleterre : Henri VII (1485) — tiers, création d'une nouvelle dynastie émancipée des York et des Lancaster
+- Espagne : Philippe V (1714) — tiers, Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta
+- Venise : Inquisiteurs d'État (~1669) — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs, devenus progressivement autonomes, dominent les deux factions (giovani/vecchi). Leur base est la classe administrative des cittadini.
 
 ### Caractéristiques
 
@@ -89,7 +87,7 @@ Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources
 
 ### Saillant : Dernière grande révolte oligarchique
 
-Les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte clôt l'absolutisation et ouvre l'impérialisme absolutiste.
+Les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites. Ce saillant n'est **pas toujours présent** — quand il est absent, la transition de l'absolutisation vers l'impérialisme se fait sans rupture, portée simplement par la mécanique de mise au pas des oligarques.
 
 **Exemples :**
 - Israël (prolongement) : révolte pharisienne contre Alexandre Jannée (~-94) — 800 rebelles crucifiés
@@ -113,7 +111,7 @@ Après avoir mis au pas tous les grands féodaux, le pouvoir central dispose de 
 
 La durée de cette sous-phase dépend du rapport de force avec les voisins : une nation puissante maintiendra longtemps un impérialisme expansionniste ; une nation faible verra cette phase très courte, voire inexistante.
 
-### Saillant : Pic absolutiste (pendant cette sous-phase)
+### Saillant : Acmé absolutiste (pendant cette sous-phase)
 
 La figure qui incarne le sommet de la puissance absolutiste — expansion maximale, prestige maximal, domestication complète des élites. C'est un des saillants principaux de tout le Parcours.
 
@@ -125,7 +123,7 @@ La figure qui incarne le sommet de la puissance absolutiste — expansion maxima
 
 ### Marqueurs forts
 
-- La sous-phase commence souvent par la fin de la dernière grande révolte oligarchique
+- Quand la DGRO est présente, la sous-phase commence par son échec. Sinon, la transition est portée par la dynamique d'ensemble : le faste, la grandeur, l'impérialisme deviennent la mécanique principale.
 - La polarisation politique des élites est devenue faible — consensus absolutiste
 
 ### Marqueurs observables
@@ -197,26 +195,21 @@ Cette recomposition est une condition nécessaire à l'éclatement de la Révolu
 - Accroissement de l'alphabétisation
 - Construction d'infrastructures commerciales
 
-## Tentatives d'absolutisation avortées
-
-Avant que les conditions de la guerre sociale ne soient réunies, des figures individuelles peuvent tenter de rallier les clientèles exclues contre l'oligarchie — c'est-à-dire de forcer la transition vers l'absolutisme avant terme. Ces tentatives échouent systématiquement parce que les trois conditions nécessaires ne sont pas réunies simultanément :
-
-1. **L'administration centrale n'est pas assez autonome** pour servir de base au « tiers »
-2. **Les élites ne sont pas polarisées** — elles protègent collectivement le pacte oligarchique
-3. **Les clientèles populaires ne sont pas structurées** ou ne sont pas prêtes à suivre
-
-**Exemples :**
-- Venise — Marino Faliero (1355) : le doge tente de rallier les non-nobles. Les arsenalotti refusent. L'oligarchie est unie. Faliero est décapité.
-- Rome — les Gracques (133-121 av. J.-C.) : les tribuns tentent de rallier le peuple contre l'oligarchie sénatoriale. Tués. L'oligarchie est trop unie.
-- Rome — Cola di Rienzo (1347) : tente de rallier le peuple romain contre les barons. Chassé puis tué.
-- Florence — la révolte des Ciompi (1378) : les ouvriers de la laine prennent brièvement le pouvoir. L'oligarchie (Albizzi) les écrase. Mais Florence finira par s'absolutiser (Médicis) — les Ciompi sont une tentative prématurée.
-
 ## Tableau récapitulatif
 
-| Parcours | 1er monarque absolu | Pic absolutiste | Ancien Régime | Début de la RN |
+Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus).
+
+| Parcours | 1er monarque absolu | Acmé absolutiste | Ancien Régime | Début de la RN |
 |---|---|---|---|---|
 | Israël antique | Josias (-640) | — (interrompu en -609) | — (interrompu) | — |
-| Israël (prolongement) | Simon Thassi (-140) | Hérode (~-37 à -4) | 4 à 66 | Grande Révolte (66) |
-| France | Henri IV (1598) | Louis XIV (~1661-1715) | ~1715-1789 | 1789 |
-| Angleterre | Henri VII (1485) | Élisabeth Ière (~1558-1603) | ~1603-1642 | Guerre civile (1642) |
+| Israël (prolongement) | Simon Thassi (-140) | Hérode (~-20) | -4 à 66 | Grande Révolte (66) |
+| Milan | Ottone Visconti (1277) | Gian Galeazzo Visconti (~1395) | ~1447-1499 | — (absorbée) |
+| Angleterre | Henri VII (1485) | Élisabeth Ière (~1580) | ~1603-1642 | Guerre civile (1642) |
+| Bavière | Maximilien Ier (1597) | Max. III Joseph (~1756) | ~1848-1918 | Eisner (1918) |
+| France | Henri IV (1598) | Louis XIV (~1682) | ~1715-1789 | 1789 |
 | Venise | Inquisiteurs d'État (~1669) | Morosini (~1688) | ~1718-1848 | République de Manin (1848) |
+| Piémont | Victor Amédée II (~1696) | Ch. Emmanuel III (~1748) | ~1748-1861 | — (absorbée) |
+| Allemagne (Prusse) | Frédéric-Guillaume Ier (1713) | Frédéric le Grand (~1760) | ~1890-1918 | Révolution de Novembre (1918) |
+| Espagne | Philippe V (1714) | Charles III (~1770) | ~1788-1808 | Dos de Mayo (1808) |
+| Suisse | Patriciat trans-confessionnel (1712) | — | ~1780-1798 | République helvétique (1798) |
+| Autriche | Marie-Thérèse (1749) | Joseph II (~1780) | ~1815-1918 | Révolution (1918) |

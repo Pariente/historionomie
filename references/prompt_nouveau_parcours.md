@@ -37,7 +37,7 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
 
 - **Trois pièges de bornes de sous-phases** (cf. `sous_phases.md` et `feedback_bornes_sous_phases_pieges.md`) :
   - **Essor oligarchique → polarisation des élites** : basculement de dynamique, pas un saillant. La sous-phase se termine quand la dynamique principale cesse d'être la projection vers l'extérieur et devient la tension entre factions (prébendière vs patrimoniale) pour le contrôle de l'État central.
-  - **Absolutisation → impérialisme absolutiste** : borne = fin de la DGRO (consensus absolutiste établi), pas le pic absolutiste (qui est interne à l'impérialisme absolutiste).
+  - **Absolutisation → impérialisme absolutiste** : borne = fin de la DGRO (consensus absolutiste établi), pas le acmé absolutiste (qui est interne à l'impérialisme absolutiste).
   - **Impérialisme absolutiste → ancien régime** : borne = Remontrance stricte, pas « fin de l'expansion » qui peut coïncider ou précéder.
 
 - **Pacte oligarchique = nécessité structurelle** entre la coagulation/bascule et l'essor oligarchique. Il est généralement très formel (loi salique, Ordonnances, primogéniture, Libell, chartes négociées avec les états dans un contexte de souverain affaibli). Ne jamais conclure « absent, résolution diffuse » sans justification structurelle solide appuyée sur un cas comparable du corpus (ex. : Venise où le pacte est institutionnel et non personnel).

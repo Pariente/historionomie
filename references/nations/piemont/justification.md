@@ -68,7 +68,7 @@
 **Arguments pour un épisode non étiqueté** :
 - La remontrance est normalement une tentative INSTITUTIONNELLE, pas une révolte militaire armée (garnison d'Alessandria). C'est plus violent qu'une Polysynodie.
 - Le parallèle avec 1905 en Russie suggère une catégorie intermédiaire entre remontrance et explosion de l'AR
-- La remontrance est normalement à la charnière impérialisme → AR, pas 70+ ans après le pic absolutiste
+- La remontrance est normalement à la charnière impérialisme → AR, pas 70+ ans après le acmé absolutiste
 
 **Décision** : remontrance retenue malgré les réserves, parce que le profil des acteurs et le mécanisme correspondent mieux à la remontrance qu'à toute autre catégorie. Le déplacement temporel s'explique par l'éclipse napoléonienne qui empêche la remontrance naturelle (~1748-1773) de se produire.
 

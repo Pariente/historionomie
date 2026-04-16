@@ -155,7 +155,7 @@ Le parallèle avec Henri IV est remarquable :
 
 ---
 
-## 7. Le pic absolutiste : Max-Emmanuel vs alternatives
+## 7. Le acmé absolutiste : Max-Emmanuel vs alternatives
 
 ### Hypothèse retenue : Max-Emmanuel (~1691-1704)
 
@@ -165,11 +165,11 @@ Max-Emmanuel gouverne les Pays-Bas espagnols, combat les Ottomans, bâtit une co
 
 **Charles VII (1742-1745)** : prestige formel maximal (empereur du Saint-Empire), mais sans pouvoir réel. La Bavière est immédiatement occupée par l'Autriche. Ce n'est pas un pic de puissance mais un pic de prestige — et un prestige pyrrhique.
 
-**Maximilien III Joseph (~1756)** : absolutisme éclairé abouti (Codex, Académie, école obligatoire). Mais le pic absolutiste au sens historionomique est le moment d'expansion et de puissance maximales, pas de réforme intérieure. Maximilien III Joseph est un souverain d'Ancien Régime, pas d'impérialisme absolutiste.
+**Maximilien III Joseph (~1756)** : absolutisme éclairé abouti (Codex, Académie, école obligatoire). Mais le acmé absolutiste au sens historionomique est le moment d'expansion et de puissance maximales, pas de réforme intérieure. Maximilien III Joseph est un souverain d'Ancien Régime, pas d'impérialisme absolutiste.
 
 ### Question ouverte
 
-Le fait que le « pic » se termine par un désastre (Blenheim) pose question. En France, Louis XIV a aussi des désastres en fin de règne (Guerre de Succession d'Espagne), mais son apogée est clairement antérieure. En Bavière, l'apogée et le désastre sont plus rapprochés. Mais le principe est le même : le pic absolutiste est le moment de maximum, pas le bilan final.
+Le fait que le « pic » se termine par un désastre (Blenheim) pose question. En France, Louis XIV a aussi des désastres en fin de règne (Guerre de Succession d'Espagne), mais son apogée est clairement antérieure. En Bavière, l'apogée et le désastre sont plus rapprochés. Mais le principe est le même : le acmé absolutiste est le moment de maximum, pas le bilan final.
 
 ---
 

@@ -199,12 +199,12 @@
 - summary: De Frédéric le Grand à Bismarck. Expansion, unification, prestige maximal.
 - description: Sous-phase longue (~150 ans) intégrant une perturbation napoléonienne et l'unification bismarckienne.
 
-#### Saillant : Pic absolutiste (phase 1 — prussien)
+#### Saillant : Acmé absolutiste (phase 1 — prussien)
 - type: saillant
 - start: 1740
 - end: 1786
 - figure: Frédéric II le Grand
-- title: Pic absolutiste (prussien)
+- title: Acmé absolutiste (prussien)
 - confidence: high
 - summary: Conquête de la Silésie, despotisme éclairé, prestige maximal. La Prusse devient grande puissance.
 - description: Frédéric II le Grand (1740-1786). Conquête de la Silésie (1740-1742, 1756-1763). Survit à la Guerre de Sept Ans contre trois grandes puissances. Despotisme éclairé — réforme juridique (abolition de la torture), tolérance religieuse, développement économique. Code Frédéricien. La Prusse passe de moyenne à grande puissance européenne. Prestige militaire et intellectuel maximal (amitié avec Voltaire). Armée parfaitement disciplinée.
@@ -219,17 +219,17 @@
 - description: Napoléon écrase la Prusse à Iéna et Auerstedt (1806). Traité de Tilsit — la Prusse perd la moitié de son territoire. Humiliation totale. Mais les institutions ne sont pas détruites — c'est un prolongement, pas un reboot. Les réformes Stein-Hardenberg (1807-1815) modernisent l'État : abolition du servage, réforme militaire (Scharnhorst, Gneisenau — service universel), libéralisation économique. La Prusse sort renforcée.
 - affected_motor: Les deux perturbés mais non détruits
 
-#### Saillant : Pic absolutiste (phase 2 — allemand)
+#### Saillant : Acmé absolutiste (phase 2 — allemand)
 - type: saillant
 - start: 1862
 - end: 1890
 - figure: Bismarck / Guillaume Ier
-- title: Pic absolutiste (allemand)
+- title: Acmé absolutiste (allemand)
 - confidence: medium
-- alternatives: On pourrait considérer Bismarck comme un 1er monarque absolu plutôt qu'un pic absolutiste (voir H2). Mais dans H1, l'absolutisation est déjà accomplie par Frédéric-Guillaume Ier. Bismarck est plutôt l'achèvement de l'impérialisme absolutiste — il unifie l'Allemagne par le fer et le sang, exactement comme un pic absolutiste projette la puissance de l'État.
+- alternatives: On pourrait considérer Bismarck comme un 1er monarque absolu plutôt qu'un acmé absolutiste (voir H2). Mais dans H1, l'absolutisation est déjà accomplie par Frédéric-Guillaume Ier. Bismarck est plutôt l'achèvement de l'impérialisme absolutiste — il unifie l'Allemagne par le fer et le sang, exactement comme un acmé absolutiste projette la puissance de l'État.
 - summary: Unification de l'Allemagne (1871). Guerres victorieuses, Realpolitik, Reich bismarckien.
 - description: Bismarck, ministre-président de Prusse (1862), puis chancelier du Reich (1871-1890). Guerres d'unification : contre le Danemark (1864), l'Autriche (1866, Sadowa), la France (1870-1871, Sedan). Proclamation de l'Empire allemand à Versailles (18 janvier 1871). Kulturkampf — mise sous contrôle du catholicisme (marqueur absolutiste). Lois antisocialistes. Système bismarckien d'alliances européennes. Prestige maximal de l'État prussien-allemand.
-- note: La question Bismarck est le pivot de toute l'analyse allemande. En H1, il est un pic absolutiste (impérialisme au service de l'unification). En H2, il est un 1er monarque absolu (résolvant la guerre sociale de 1848-1871). La question est : l'absolutisme commence-t-il avec Frédéric-Guillaume Ier (1713) ou avec Bismarck (1871) ?
+- note: La question Bismarck est le pivot de toute l'analyse allemande. En H1, il est un acmé absolutiste (impérialisme au service de l'unification). En H2, il est un 1er monarque absolu (résolvant la guerre sociale de 1848-1871). La question est : l'absolutisme commence-t-il avec Frédéric-Guillaume Ier (1713) ou avec Bismarck (1871) ?
 
 ### Subphase : Ancien Régime
 - type: subphase

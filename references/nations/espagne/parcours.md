@@ -286,7 +286,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - actual_duration: ~217 ans
 - resolution: Explosion de l'Ancien Régime (1931) — les élections municipales révèlent le rejet de la monarchie, Alphonse XIII part, la Seconde République est proclamée.
 - resolution_conditions: L'exutoire colonial a totalement disparu (Désastre de 1898). La sédimentation des élites est achevée. Le turno pacífico est discrédité. Primo de Rivera (1923-1930) a échoué.
-- summary: La phase absolutiste espagnole commence avec Philippe V et la Nueva Planta (1714-1716) et dure ~217 ans — quasi dans la norme. L'absolutisation est rapide (~56 ans). Charles III (~1770) est le pic absolutiste. L'empire colonial prolonge légèrement l'impérialisme. La Gloriosa (1868) est la remontrance — son échec ouvre l'AR. Le turno pacífico (1874-1931) est le système d'AR. Le Désastre de 1898 accélère la sclérose en éliminant le dernier exutoire colonial. AR : ~57 ans, dans la norme.
+- summary: La phase absolutiste espagnole commence avec Philippe V et la Nueva Planta (1714-1716) et dure ~217 ans — quasi dans la norme. L'absolutisation est rapide (~56 ans). Charles III (~1770) est le acmé absolutiste. L'empire colonial prolonge légèrement l'impérialisme. La Gloriosa (1868) est la remontrance — son échec ouvre l'AR. Le turno pacífico (1874-1931) est le système d'AR. Le Désastre de 1898 accélère la sclérose en éliminant le dernier exutoire colonial. AR : ~57 ans, dans la norme.
 - description: **Test discriminant (absolutiste vs RN)** : le bloc contestataire N'A PAS renversé le bloc élitaire avant 1931. La classe administrative/militaire conserve le contrôle même pendant les turbulences du XIXe siècle. Les événements de 1808-1898 (Cadix, guerres carlistes, La Gloriosa, pronunciamientos) sont des conflits INTRA-absolutistes — la classe militaire/administrative ne perd jamais le contrôle. Le turno pacífico (1874-1931) est le dernier système d'AR. **L'empire colonial** prolonge l'impérialisme : revenus, carrières, focus extérieur. La perte progressive (1808-1826 : Amérique ; 1898 : Cuba, Philippines) ACCÉLÈRE le Parcours — exactement comme la perte des possessions vénitiennes accélère chaque transition.
 - deviation: +17 ans par rapport à la norme (~200 ans). Deux facteurs de prolongement modéré : (1) l'intégration de l'Aragon par la Nueva Planta (1707-1716) comme choc d'hétérogénéité modéré (proximité culturelle Castille-Aragon) en début de phase ; (2) l'exutoire colonial américain qui continue d'absorber l'énergie élitaire jusqu'aux indépendances (1808-1826).
 
@@ -327,14 +327,14 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - start: ~1770
 - end: 1874
 - title: Impérialisme absolutiste
-- summary: Charles III (~1770) est le pic absolutiste — réformes bourboniennes, expulsion des Jésuites, domestication complète des élites. L'empire colonial prolonge l'impérialisme. La perte des colonies américaines (1808-1826) accélère le déclin. La Gloriosa (1868) est la remontrance — elle échoue et son échec (Restauration, 1874) marque l'entrée en AR.
+- summary: Charles III (~1770) est le acmé absolutiste — réformes bourboniennes, expulsion des Jésuites, domestication complète des élites. L'empire colonial prolonge l'impérialisme. La perte des colonies américaines (1808-1826) accélère le déclin. La Gloriosa (1868) est la remontrance — elle échoue et son échec (Restauration, 1874) marque l'entrée en AR.
 
-#### Saillant : Pic absolutiste
+#### Saillant : Acmé absolutiste
 - type: saillant
 - start: ~1770
 - figure: Charles III
 - subtitle: Charles III
-- title: Pic absolutiste
+- title: Acmé absolutiste
 - confidence: high
 - summary: Charles III (r. 1759-1788) incarne le sommet de l'absolutisme espagnol. Réformes bourboniennes complètes, expulsion des Jésuites (1767), libre commerce colonial (1778), domestication des élites (Aranda, Campomanes, Floridablanca). Premier monarque véritablement absolu sur tout le territoire et au sommet de sa maîtrise administrative.
 
@@ -478,7 +478,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 | Correction d'échelle | Indépendances américaines (1808-1826) — seule vraie correction d'échelle. Les pertes européennes antérieures (Portugal 1640, Provinces-Unies 1648, Italie/Pays-Bas 1713) sont des fins de soupape militaire sans effet structurel. |
 | Guerre sociale | Guerre de Succession d'Espagne (1700-1714) |
 | 1er monarque absolu | Philippe V (1714) |
-| Pic absolutiste | Charles III (~1770) |
+| Acmé absolutiste | Charles III (~1770) |
 | Remontrance | La Gloriosa + Sexenio (1868-1874) |
 | Fin de l'expansion (abs.) | Désastre de 1898 |
 | Ancien Régime | ~1874-1931 |

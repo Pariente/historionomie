@@ -44,11 +44,11 @@ Depuis 1973, le Chili est en phase absolutiste — de manière **atypique** : le
 
 **Décision retenue** : Balmaceda, avec confidence LOW. Le critère dynamique (saturation de l'exutoire) donne l'avantage à Balmaceda, mais le choix reste discutable parce que Bulnes/Montt représentent une forme plus canonique de pic institutionnel. À re-examiner dans une v2.
 
-### Hésitation 5 : faut-il identifier un pic absolutiste dans la phase absolutiste en cours ?
+### Hésitation 5 : faut-il identifier un acmé absolutiste dans la phase absolutiste en cours ?
 
 **Candidats** : Ricardo Lagos (2000-2006, pic de prestige international), Michelle Bachelet (2006-2010, pic de popularité domestique), la période d'accession à l'OCDE (2010), Sebastián Piñera 1 (2010-2014, période de plus forte croissance).
 
-**Décision retenue** : pas de pic absolutiste identifié, par honnêteté épistémique. Aucun de ces candidats ne s'impose structurellement, et il est probablement trop tôt pour identifier un pic dans une phase qui est peut-être à peine à sa moitié. À ajouter quand l'évidence sera claire.
+**Décision retenue** : pas de acmé absolutiste identifié, par honnêteté épistémique. Aucun de ces candidats ne s'impose structurellement, et il est probablement trop tôt pour identifier un pic dans une phase qui est peut-être à peine à sa moitié. À ajouter quand l'évidence sera claire.
 
 ## Hypothèses écartées
 
@@ -92,7 +92,7 @@ Tentant parce qu'O'Higgins tente effectivement de créer des institutions nation
 | 1er MA = Pinochet 1973 | medium | Alternative « parenthèse autoritaire » possible. |
 | Absolutisation fluide sans DGRO | medium | Justification structurelle correcte mais non classique. |
 | Impérialisme absolutiste économique non militaire 1990-en cours | LOW | Lecture nouvelle, discutable — pourrait être au contraire une phase parlementaire précoce. |
-| Absence de pic absolutiste, fin de l'expansion absolutiste, remontrance | LOW | Trop tôt, absence assumée. |
+| Absence de acmé absolutiste, fin de l'expansion absolutiste, remontrance | LOW | Trop tôt, absence assumée. |
 | 2019 estallido social non codé | (pas de saillant) | Honnêteté épistémique — trop récent pour un codage canonique. |
 
 ## Comparaisons structurelles

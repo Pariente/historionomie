@@ -238,7 +238,7 @@ Première sous-phase de la phase absolutiste. Le 1er monarque absolu met au pas 
 ## Absolutiste — Impérialisme absolutiste
 
 ### Définition
-Deuxième sous-phase. Après avoir mis au pas tous les grands féodaux (fin de la DGRO), le pouvoir central dispose de moyens économiques encore jamais vus. Il les utilise pour une politique impérialiste et expansionniste. L'exécutif développe des mécanismes destinés à encadrer socialement les oligarques et la noblesse. C'est souvent l'apogée du prestige de la nation. **Le pic absolutiste (saillant canonique) se situe à l'intérieur de cette sous-phase**, pas à sa borne.
+Deuxième sous-phase. Après avoir mis au pas tous les grands féodaux (fin de la DGRO), le pouvoir central dispose de moyens économiques encore jamais vus. Il les utilise pour une politique impérialiste et expansionniste. L'exécutif développe des mécanismes destinés à encadrer socialement les oligarques et la noblesse. C'est souvent l'apogée du prestige de la nation. **Le acmé absolutiste (saillant canonique) se situe à l'intérieur de cette sous-phase**, pas à sa borne.
 
 ### Marqueur de début
 **Fin de la Dernière Grande Révolte Oligarchique** (saillant canonique) — c'est le marqueur principal. Après l'écrasement de la DGRO, la polarisation politique des élites devient faible et un consensus absolutiste s'installe. Le pouvoir central peut alors projeter ses moyens vers l'extérieur.
@@ -272,7 +272,7 @@ Ne pas confondre avec la DGRO : la Remontrance est une contestation **institutio
 
 ### Règle opératoire
 - **Durée très variable : 45-100 ans**. Dépend de la capacité de la nation à projeter sa puissance.
-- **Le pic absolutiste est interne à cette sous-phase** — Louis XIV, Élisabeth Ière, Charles III d'Espagne, Morosini à Venise. Son emplacement à l'intérieur de l'impérialisme absolutiste varie.
+- **Le acmé absolutiste est interne à cette sous-phase** — Louis XIV, Élisabeth Ière, Charles III d'Espagne, Morosini à Venise. Son emplacement à l'intérieur de l'impérialisme absolutiste varie.
 - **La Remontrance est le marqueur de fin strict** — pas « fin de l'expansion » qui peut précéder. Même si l'expansion est arrêtée par un traité, l'impérialisme absolutiste continue tant que la Remontrance n'est pas intervenue.
 
 ---
@@ -417,6 +417,6 @@ Les bornes marquées ⚠️ sont **dynamiques** (basculement de logique, pas un 
    - **Acmé oligarchique** : interne à l'essor oligarchique
    - **Fin de l'expansion (oligarchique)** : peut coïncider avec le basculement essor → polarisation, mais n'en est pas la borne stricte
    - **DGRO** : interne à l'absolutisation (son écrasement marque la fin)
-   - **Pic absolutiste** : interne à l'impérialisme absolutiste
+   - **Acmé absolutiste** : interne à l'impérialisme absolutiste
    - **Fin de l'expansion (absolutiste)** : interne à l'impérialisme absolutiste, peut précéder la Remontrance
-7. **Les saillants canoniques servent de marqueurs récurrents** : éveil féodal, pic féodal, crise féodale, pacte oligarchique, 1er monarque oligarchique, acmé oligarchique, fin de l'expansion, guerre sociale, 1er monarque absolu, DGRO, pic absolutiste, remontrance, explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, Glorieuse Révolution.
+7. **Les saillants canoniques servent de marqueurs récurrents** : éveil féodal, pic féodal, crise féodale, pacte oligarchique, 1er monarque oligarchique, acmé oligarchique, fin de l'expansion, guerre sociale, 1er monarque absolu, DGRO, acmé absolutiste, remontrance, explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, Glorieuse Révolution.
