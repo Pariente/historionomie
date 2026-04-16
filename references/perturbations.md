@@ -249,7 +249,7 @@ Le choc assyrien anéantit le royaume d'Israël. Sa population fuit massivement 
 
 Le choc d'hétérogénéité est le saillant qui marque le moment précis où une expansion territoriale ou un afflux de population hétérogénéise brutalement la société, déclenchant un prolongement. C'est le mécanisme déclencheur du prolongement — l'événement ponctuel qui fait basculer le ratio d'homogénéité.
 
-Le choc d'hétérogénéité peut avorter une sous-phase en cours. Si la société était en train d'entrer en Ancien Régime (stratification, sédimentation), l'hétérogénéisation défait cette stratification et relance la dynamique d'homogénéisation — ce qui peut reboote la sous-phase d'impérialisme absolutiste.
+Le choc d'hétérogénéité peut avorter une sous-phase en cours. Si la société était en train d'entrer en Ancien Régime (stratification, sédimentation), l'hétérogénéisation défait cette stratification et relance la dynamique d'homogénéisation — ce qui peut rebooter la sous-phase d'impérialisme absolutiste.
 
 ### Condition nécessaire : administration commune (intégration effective)
 
@@ -313,27 +313,6 @@ Cas intermédiaire. L'Aragon conserve ses fueros et institutions propres jusqu'a
 
 **Israël (-332) :**
 La conquête macédonienne hétérogénéise la société judéenne (hellénisation) sans détruire les institutions (le Grand Prêtre reste en fonction). Le Parcours stagne pendant ~192 ans le temps que les factions se recomposent autour des nouveaux clivages (Oniades vs Tobiades). *Note : le mécanisme est `choc_exogene` (conquête extérieure) et non `choc_heterogeneite` (expansion du territoire). L'hétérogénéisation est culturelle, pas territoriale — la superficie d'Israël ne change pas. Le saillant porte le flag `territorial: false`.*
-
-## Absence de DGRO canonique — phénomène à expliquer
-
-Dans certains Parcours, la Dernière Grande Révolte Oligarchique (DGRO), qui termine canoniquement la sous-phase d'absolutisation, est **absente**. L'absolutisation se déroule sans moment-pivot d'écrasement armé — on parle d'« absolutisation fluide ».
-
-Cas documentés dans le corpus :
-- **Venise** : pas de DGRO. Les patriciens n'ont pas d'assise territoriale propre (tous dans le lagon), et le basculement absolutiste se fait institutionnellement via les Inquisiteurs d'État.
-- **Bavière** (post-1597) : pas de DGRO. Les Wittelsbach ont substitué les ministériaux (Dienstmannen) aux vassaux féodaux dès le XIIIe siècle, supprimant la base territoriale de la noblesse, et Maximilien Ier construit un appareil bureaucratique neuf.
-- **Autriche** : pas de DGRO canonique attribuable au Parcours autrichien proprement dit. Les révoltes armées des marges (Rákóczi 1703-1711, révolte bohême 1741-1743 pendant la guerre sociale, Révolution brabançonne 1789-1790) relèvent probablement de parcours locaux distincts (hongrois, tchèque, belge) plutôt que du Parcours autrichien central.
-
-**Le phénomène est observé mais la cause exacte reste à déterminer.** Plusieurs hypothèses sont possibles et ne s'excluent pas :
-
-1. **Hypothèse « élites affaiblies post-guerre sociale »** : après une guerre sociale particulièrement décisive, les oligarques survivants sont trop affaiblis pour organiser une dernière grande révolte armée. La DGRO n'a pas lieu parce que la base humaine qui la rendrait possible est détruite.
-
-2. **Hypothèse « absence d'assise territoriale »** : quand les oligarques n'ont pas de seigneuries territoriales d'où ils pourraient se retrancher pour résister au pouvoir central (Venise, Bavière post-ministérialisation), ils n'ont tout simplement pas les moyens matériels d'une révolte armée. Mais cette hypothèse est incomplète — on pourrait imaginer des formes non territoriales de DGRO (complots de cour, révolutions de palais), et il reste à comprendre pourquoi elles ne se produisent pas dans ces cas.
-
-3. **Hypothèse « empires multi-nationaux »** : quand un Parcours national porte un empire qui recouvre d'autres parcours locaux, les révoltes oligarchiques à grande échelle tendent à relever des parcours locaux plutôt que du parcours central. Mais ce n'est qu'un cas particulier (Autriche, Venise dans une certaine mesure), et l'absence de DGRO se rencontre aussi dans des cas non impériaux (Bavière).
-
-**Règle opératoire** : ne pas forcer l'identification d'une DGRO qui n'existe pas. Si l'analyse d'un Parcours ne trouve pas de candidat solide, accepter l'« absolutisation fluide » comme possibilité structurelle et documenter l'absence avec les hypothèses explicatives applicables au cas. L'absence de DGRO est un trait structurel observable qui mérite d'être marqué dans le Parcours, pas un signal d'alarme forçant une identification hasardeuse.
-
----
 
 ## Rébellion périphérique
 
