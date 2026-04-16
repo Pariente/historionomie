@@ -12,9 +12,9 @@ Ce fichier contient le prompt standard à utiliser pour lancer l'analyse histori
 Produis une proposition de Parcours de construction nationale pour [NATION].
 
 **Préparation obligatoire (avant toute recherche historique)** :
-1. Lis `references/parcours.md` (cadre théorique général, tableau des bornes de sous-phases). Si la question porte sur une phase spécifique, lire aussi le fichier `phase_*.md` correspondant.
+1. Lis `references/parcours.md` (cadre théorique général, tableau des bornes de sous-phases). Pour chaque phase analysée, consulter aussi le fichier `phase_*.md` correspondant.
 2. Revois les feedback memories chargées automatiquement (naming canonique, catégorisation des événements, bornes de sous-phases, trois pièges, vérification par phase).
-3. Si la nation a un statut particulier (monarchie composite, nation tardivement unifiée, cas de reboot, interférence avec un Parcours voisin), lis aussi au moins deux parcours analogues dans `references/nations/` pour avoir des points de comparaison.
+3. Si la nation a un statut particulier (empire multi-national, nation tardivement unifiée, cas de reboot, interférence avec un Parcours voisin), lis aussi au moins deux parcours analogues dans `references/nations/` pour avoir des points de comparaison.
 
 **Règles strictes de l'analyse** :
 
@@ -45,7 +45,7 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
 - **Distinction saillant / sous-phase** :
   - `ancien régime` et `révolution initiale` sont des sous-phases **seulement**
   - `Restauration` est à la fois un saillant (le moment) et une sous-phase (la durée)
-  - `Impérialiste Revanchard` (-iste) est un saillant (avènement de la figure) ; `impérialisme revanchard` (-isme) est la sous-phase (durée)
+  - `Émergence de l'IR` est un saillant (avènement de la figure autoritaire) ; `impérialisme revanchard` est la sous-phase (durée)
   - `Éclatement de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien` sont les 4 saillants internes à la sous-phase `révolution initiale`
 
 **Workflow obligatoire** :
@@ -56,7 +56,7 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
    - Tous les saillants canoniques attendus sont-ils présents ?
    - Si un manque, est-ce mal lu ou structurellement atypique (à justifier comparativement) ?
    - Les durées sont-elles cohérentes (ou écart expliqué par une perturbation identifiée) ?
-   - Le test discriminant est-il passé à la bonne échelle (cas particulier des monarchies composites) ?
+   - Le test discriminant est-il passé à la bonne échelle (territoire national du Parcours = noyau + marges, pas l'ensemble des possessions de la couronne) ?
    - Les bornes des sous-phases sont-elles correctement identifiées (attention aux 3 pièges) ?
 4. **Vérification globale finale** après la dernière phase : lister tous les événements majeurs documentés de l'histoire de la nation et vérifier qu'aucun ne reste inexpliqué historionomiquement. Chaque événement doit être soit un saillant canonique, soit une perturbation, soit une anecdote à mentionner en description, soit un élément nouveau théorique à signaler.
 5. **Production des livrables** (voir ci-dessous).
@@ -91,4 +91,5 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
 
 ## Historique
 
-- **v1 (2026-04-14)** : première version du prompt canonique, rédigée après la révision méthodologique consolidée (vérification par phase, liste fermée naming, catégorisation à 4 niveaux, 3 pièges de bornes, DGRO en fin de phase olig).
+- **v1 (2026-04-14)** : première version du prompt canonique.
+- **v2 (2026-04-17)** : alignement avec la refonte méthodologique (renommages acmé/éclatement/émergence, 2 critères guerre sociale, territoire national du Parcours, suppression sous_phases.md).
