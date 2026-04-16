@@ -320,11 +320,11 @@ Les deux moteurs opèrent à des échelles partiellement distinctes :
 - title: Révolution initiale
 - summary: De l'invasion française (mars 1798) à la chute de Napoléon (1815). La séquence explosion → expérience parlementaire → phase aiguë se déroule en 5 ans (1798-1803). Le moment thermidorien (Acte de Médiation, 1803) dure ensuite 12 ans, anormalement long parce qu'il est adossé à la puissance napoléonienne. Quand Napoléon tombe, le compromis thermidorien tombe avec lui et la Restauration commence (Congrès de Vienne, 1815). Pas d'Impérialiste Revanchard — la Suisse est trop petite pour l'impérialisme revanchard, et la phase IR est structurellement absorbée par le protectorat napoléonien.
 
-#### Saillant : Explosion de l'AR
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1798
 - subtitle: Invasion française
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le 5 mars 1798, les troupes françaises envahissent la Suisse. Le 12 avril, 121 délégués cantonaux proclament la République helvétique, « une et indivisible ». L'Ancien Régime confédéral est détruit en quelques semaines : souveraineté cantonale abolie, droits féodaux abrogés, distinction entre cantons souverains et territoires sujets supprimée.
 - description: L'explosion de l'Ancien Régime suisse est la plus brutale du corpus : elle est provoquée par une invasion étrangère, non par un effondrement intérieur. Les troupes françaises du Directoire envahissent la Suisse en mars 1798, renversant en quelques semaines un système vieux de trois siècles. La résistance est réelle mais vaine : les cantons centraux (Uri, Schwyz, Nidwald) lèvent une armée d'environ 10 000 hommes sous Alois von Reding pour résister à l'envahisseur, mais la disproportion des forces est écrasante. La République helvétique, proclamée le 12 avril 1798, impose une constitution unitaire sur le modèle français : abolition de la souveraineté cantonale, des droits féodaux, des territoires sujets ; égalité civique, centralisation administrative, uniformisation juridique. Le trésor bernois (6 millions de francs) est saisi par les Français. C'est un basculement total : les élites qui soutenaient l'Ancien Régime basculent dans l'opposition (les patriciens bernois sont dépossédés), un gouvernement de coalition élargie remplace l'exécutif absolutiste — les marqueurs nécessaires de la RN sont réunis.

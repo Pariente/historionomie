@@ -46,7 +46,7 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
   - `ancien régime` et `révolution initiale` sont des sous-phases **seulement**
   - `Restauration` est à la fois un saillant (le moment) et une sous-phase (la durée)
   - `Impérialiste Revanchard` (-iste) est un saillant (avènement de la figure) ; `impérialisme revanchard` (-isme) est la sous-phase (durée)
-  - `Explosion de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien` sont les 4 saillants internes à la sous-phase `révolution initiale`
+  - `Éclatement de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien` sont les 4 saillants internes à la sous-phase `révolution initiale`
 
 **Workflow obligatoire** :
 

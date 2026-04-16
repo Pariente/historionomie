@@ -143,7 +143,7 @@ La RN suisse suit les étapes canoniques avec une précision remarquable :
 
 | Étape | France | Angleterre | Suisse |
 |---|---|---|---|
-| Explosion de l'AR | 1789 | 1642 | 1798 |
+| Éclatement de l'AR | 1789 | 1642 | 1798 |
 | Expérience parlementaire | 1789-1791 | 1640-1648 | 1798-1802 |
 | Phase aiguë | 1792-1794 | 1649 | 1802 |
 | Moment thermidorien | 1794-1799 | 1649-1653 | 1803 |

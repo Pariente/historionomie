@@ -261,7 +261,7 @@ SAILLANT_ICONS = {
     "1er monarque absolu (du reboot)": "crown",
     "Dernière grande révolte oligarchique": "whatshot",
     "Acmé absolutiste": "terrain",
-    "Explosion de l'AR": "flash_on",
+    "Éclatement de l'AR": "flash_on",
     "Expérience parlementaire": "account_balance",
     "Phase aiguë": "skull",
     "Moment thermidorien": "balance",

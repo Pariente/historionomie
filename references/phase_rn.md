@@ -34,7 +34,7 @@ L'**Ancien Régime a-t-il explosé** ? Les élites qui soutenaient le régime on
 
 La première période de la RN couvre l'explosion de l'Ancien Régime, l'expérience parlementaire, la montée aux extrêmes (phase aiguë), et la reprise en main par le centre (moment thermidorien). C'est la période la plus turbulente — dix ans pour la France (1789-1799), huit ans pour l'Angleterre (1640-1648/1653).
 
-### Saillant : Explosion de l'Ancien Régime
+### Saillant : Éclatement de l'AR
 
 L'Ancien Régime est ruiné et discrédité. Une partie des élites lâche le régime. Le basculement des élites est le déclencheur immédiat : tant que les élites prennent le parti du pouvoir, le régime tient ; quand elles basculent, la révolution devient possible.
 
@@ -91,6 +91,15 @@ Le moment où la figure autoritaire prend le pouvoir.
 
 L'IR finit par tomber, de manière exogène (défaite militaire) ou endogène (tension sociale). Il est remplacé par un régime avec une base élargie, mais pas encore pleinement parlementaire.
 
+### Saillant : Restauration
+
+Le moment où l'ancien ordre (ou un ordre conservateur) est restauré après la chute de l'IR. C'est à la fois un saillant (le moment de la restauration) et le début de la sous-phase du même nom (la durée pendant laquelle cet ordre restauré se maintient).
+
+**Exemples :**
+- France : Restauration bourbonienne (1815) — Louis XVIII après Waterloo
+- Angleterre : Restauration Stuart (1660) — Charles II après la mort de Cromwell
+- Allemagne : Occupation alliée et division (1945) — fin du régime nazi
+
 ### Saillant : Glorieuse Révolution
 
 Une réplique de la révolution initiale finit d'ancrer le parlementarisme dans la vie politique. La base politique est élargie fortement et définitivement. C'est la transition vers l'État-nation parlementaire.
@@ -110,6 +119,16 @@ Si la population a atteint un niveau d'homogénéité suffisant — souvent cata
 ### Vers le Dominat
 
 Si la population n'a pas atteint un niveau d'homogénéité socioculturelle suffisant, le pays bascule en phase de Dominat.
+
+## Cas particulier : RN contre un occupant
+
+La RN peut éclater contre un occupant étranger, pas seulement contre un pouvoir absolutiste local. La condition nécessaire côté peuple est la même : une **homogénéité culturelle suffisante** pour prétendre à une RN. Le Parcours est porté par un peuple, pas par des institutions — même sans institutions propres ni appareil étatique, si le peuple est culturellement au niveau RN, la RN peut éclater.
+
+Deux configurations :
+
+1. **Les institutions locales sont absolutistes, le suzerain est formel** — le Parcours local est en AR propre. L'explosion est contre l'ordre absolutiste local. Exemple : Israël sous Rome (66), où le Sanhédrin et l'aristocratie sadducéenne fonctionnent sous tutelle romaine.
+
+2. **Les institutions locales sont totalement subordonnées à l'occupant** — le Parcours local est en AR exogène (cf. `phase_absolutiste.md`). Les conditions d'AR (pression fiscale, mobilité bloquée, sédimentation) sont imposées par l'occupant, mais la réaction du peuple est endogène. Exemple : Venise sous l'Autriche (1848), Milan sous les Habsbourg.
 
 ## Cas particulier : Révolution Nationale avortée
 
@@ -155,7 +174,7 @@ Le marqueur le plus discriminant est la nature du leadership : **autorité héri
 | Sous-phase / Saillant | France | Angleterre | Israël (avortée) | Venise (avortée) |
 |---|---|---|---|---|
 | **Révolution initiale** | 1789-1799 | 1640-1653 | 66-70 | 1848-1849 |
-| → Explosion de l'AR | 1789 | 1642 | 66 | mars 1848 |
+| → Éclatement de l'AR | 1789 | 1642 | 66 | mars 1848 |
 | → Expérience parlementaire | 1789-1791 | 1640-1648 | 66-67 | mars 1848 - août 1849 |
 | → Phase aiguë | 1792-1794 | 1649 | 67-70 | Amorce : mars 1849 (pouvoirs illimités) |
 | → Moment thermidorien | 1794-1799 | 1649-1653 | — (écrasée) | — (écrasée) |

@@ -284,7 +284,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - title: Phase absolutiste
 - typical_duration: ~200 ans
 - actual_duration: ~217 ans
-- resolution: Explosion de l'Ancien Régime (1931) — les élections municipales révèlent le rejet de la monarchie, Alphonse XIII part, la Seconde République est proclamée.
+- resolution: Éclatement de l'AR (1931) — les élections municipales révèlent le rejet de la monarchie, Alphonse XIII part, la Seconde République est proclamée.
 - resolution_conditions: L'exutoire colonial a totalement disparu (Désastre de 1898). La sédimentation des élites est achevée. Le turno pacífico est discrédité. Primo de Rivera (1923-1930) a échoué.
 - summary: La phase absolutiste espagnole commence avec Philippe V et la Nueva Planta (1714-1716) et dure ~217 ans — quasi dans la norme. L'absolutisation est rapide (~56 ans). Charles III (~1770) est le acmé absolutiste. L'empire colonial prolonge légèrement l'impérialisme. La Gloriosa (1868) est la remontrance — son échec ouvre l'AR. Le turno pacífico (1874-1931) est le système d'AR. Le Désastre de 1898 accélère la sclérose en éliminant le dernier exutoire colonial. AR : ~57 ans, dans la norme.
 - description: **Test discriminant (absolutiste vs RN)** : le bloc contestataire N'A PAS renversé le bloc élitaire avant 1931. La classe administrative/militaire conserve le contrôle même pendant les turbulences du XIXe siècle. Les événements de 1808-1898 (Cadix, guerres carlistes, La Gloriosa, pronunciamientos) sont des conflits INTRA-absolutistes — la classe militaire/administrative ne perd jamais le contrôle. Le turno pacífico (1874-1931) est le dernier système d'AR. **L'empire colonial** prolonge l'impérialisme : revenus, carrières, focus extérieur. La perte progressive (1808-1826 : Amérique ; 1898 : Cuba, Philippines) ACCÉLÈRE le Parcours — exactement comme la perte des possessions vénitiennes accélère chaque transition.
@@ -400,11 +400,11 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - title: Révolution initiale
 - summary: Explosion (1931) → expérience parlementaire (Seconde République, 1931-1936) → phase aiguë (Guerre civile, 1936-1939). Séquence rapide (8 ans), comparable à la France (1789-1799, 10 ans) et à l'Angleterre (1642-1649, 7 ans).
 
-#### Saillant : Explosion de l'Ancien Régime
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1931
 - subtitle: Chute de la monarchie
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: En avril 1931, les élections municipales révèlent un soutien massif aux républicains. Alphonse XIII part en exil. La Seconde République est proclamée le 14 avril.
 
@@ -440,7 +440,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - end: 1975
 - figure: Francisco Franco
 - subtitle: Franco
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - confidence: medium
 - summary: Franco (r. 1939-1975) est l'IR contraint. Il émerge de la phase aiguë, concentre le pouvoir personnel, fusionne les factions (Phalange, carlistes, monarchistes, militaires, Église). Le revanchisme est frustré (Espagne trop faible). Le tournant technocratique (Opus Dei, années 1960) ventile les élites et modernise l'économie. Franco meurt dans son lit — le seul IR du corpus qui n'est ni vaincu ni renversé.
 

@@ -396,7 +396,7 @@ C'est un cas inédit du corpus de **double régime sous union personnelle**. Le 
 
 ### RN 1 : 1918-1948 (avortée)
 
-- **Explosion de l'AR habsbourgeois** : 28 octobre 1918
+- **Éclatement de l'AR habsbourgeois** : 28 octobre 1918
 - **Révolution initiale** : 1918-1938 (Première République Masaryk-Beneš, expérience parlementaire stable)
 - **Interruption nazie (perturbation)** : 1938-1945 (Munich + Protectorat)
 - **Brève réouverture** : 1945-1948 (3ème République, restauration démocratique partielle)
@@ -414,7 +414,7 @@ C'est un cas inédit du corpus de **double régime sous union personnelle**. Le 
 
 ### RN 2 : 1989-1993
 
-- **Explosion de l'AR exogène soviétique** : Révolution de Velours (17-29 novembre 1989), Havel président
+- **Éclatement de l'AR exogène soviétique** : Révolution de Velours (17-29 novembre 1989), Havel président
 - **Restauration démocratique** : 1989-1992
 - **Glorieuse Révolution** : Velvet Divorce (1er janvier 1993), fondation de la Tchéquie moderne
 - **Phase parlementaire** : 1993-

@@ -205,5 +205,5 @@ Voir `references/nations/*/parcours.md` pour le détail et `references/nations/*
 | Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) | — | Correzione (1761) | Landtag (1848) | Révolte de 1821 |
 | Ancien Régime | — (interrompu) | -4 à 66 | ~1715-1789 | ~1603-1642 | ~1890-1918 | ~1718-1848 | ~1848-1918 | ~1748-1861 (éclipse 1796-1814) |
 | Début de la RN | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | Révolution de Novembre (1918) | République de Manin (1848) | Eisner (1918) | — (absorbée, 1861) |
-| Impérialiste Revanchard | — | — | Bonaparte (1799) | Cromwell (1653) | Hitler (1933) | — (RN avortée) | — (absorbée) | — (absorbée) |
+| Émergence de l'IR | — | — | Bonaparte (1799) | Cromwell (1653) | Hitler (1933) | — (RN avortée) | — (absorbée) | — (absorbée) |
 | Glorieuse Révolution | — | — | 1830 | 1688 | Réunification (1990) | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) |

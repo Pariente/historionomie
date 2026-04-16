@@ -54,11 +54,11 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
 - **Oligarchique** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale
 - **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance
-- **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
+- **RN** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
 
 **Distinction saillant vs sous-phase** :
 - `ancien régime` est une sous-phase **seulement** (pas un saillant).
-- `révolution initiale` est une sous-phase **seulement** — elle contient à l'intérieur les 4 saillants : Explosion de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
+- `révolution initiale` est une sous-phase **seulement** — elle contient à l'intérieur les 4 saillants : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
 - `Restauration` est à la fois un **saillant** (moment de restauration — ex. 1815 en France) et une **sous-phase** (durée où l'ancien ordre est restauré — ex. 1815-1830).
 - `Impérialiste Revanchard` (-*iste*) est un **saillant** : avènement de la figure (ex. Bonaparte 1er consul 1799). `impérialisme revanchard` (-*isme*) est la **sous-phase** : durée pendant laquelle la nation est portée par cette dynamique.
 

@@ -484,11 +484,11 @@
 - summary: La RN parcourt en quatre ans seulement les étapes de l'explosion, de l'expérience parlementaire et de la phase aiguë, mais l'écrasement romain empêche toute suite : il n'y a ni moment thermidorien, ni Impérialiste Revanchard, ni Restauration, ni Glorieuse Révolution.
 - description: La Révolution Nationale judéenne traverse les trois premières étapes de la séquence typique en un temps extrêmement compressé — quatre ans seulement. L'explosion de l'Ancien Régime, l'expérience parlementaire et la phase aiguë s'enchaînent sans répit. Mais l'intervention militaire romaine écrase la révolte avant qu'elle ne puisse atteindre le moment thermidorien, c'est-à-dire la purge de l'extrême-gauche par le centre et la droite. La RN est donc avortée : aucune des étapes ultérieures — Impérialiste Revanchard, Restauration, Glorieuse Révolution — ne peut se produire. C'est cette interruption qui explique le reboot vers la phase absolutiste.
 
-#### Saillant : Explosion de l'AR
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 66
 - subtitle: Massacre de Florus
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le massacre ordonné par le procurateur Florus provoque le basculement des élites romanisées elles-mêmes dans la révolte, signe que l'Ancien Régime a atteint le point de rupture où même ses bénéficiaires refusent de le défendre.
 - description: Le procurateur Florus pille le trésor du Temple et ordonne un massacre sur l'Agora de Jérusalem (3 600 morts), provoquant un basculement décisif : les élites romanisées, jusqu'ici loyales à Rome, rejoignent la révolte. Eleazar ben Hanania, capitaine du Temple, suspend les sacrifices quotidiens en l'honneur de l'empereur — acte de rupture symbolique avec l'ordre impérial. La garnison romaine est massacrée. Ce basculement des élites modérées dans le camp contestataire est le marqueur classique de l'explosion de l'Ancien Régime : le système est devenu si insupportable que même ses principaux bénéficiaires refusent de le défendre.

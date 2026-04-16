@@ -197,7 +197,7 @@ La perturbation allonge la phase absolutiste (~10 ans) sans en modifier la dynam
 
 ### Marqueurs de RN présents
 
-1. **Explosion de l'AR** : perte de légitimité (Lola Montez) + basculement des élites → abdication forcée
+1. **Éclatement de l'AR** : perte de légitimité (Lola Montez) + basculement des élites → abdication forcée
 2. **Convergence ED/EG** : les catholiques conservateurs ET les libéraux-démocrates convergent contre le roi — bloc contestataire classique
 3. **Expérience parlementaire** : réformes substantielles (suffrage, presse, responsabilité ministérielle)
 

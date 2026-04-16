@@ -37,7 +37,7 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | `references/phase_feodale.md` | Phase féodale : coagulation, bascule, saillants (éveil féodal, pic féodal, pacte oligarchique), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
 | `references/phase_absolutiste.md` | Phase absolutiste : sous-phases (absolutisation, impérialisme, AR), saillants (1er monarque absolu, acmé absolutiste, DGRO), marqueurs | La question porte sur la phase absolutiste |
-| `references/phase_rn.md` | Révolution Nationale : sous-phases (révolution initiale, IR, restauration), saillants (explosion AR, phase aiguë, thermidorien, IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
+| `references/phase_rn.md` | Révolution Nationale : sous-phases (révolution initiale, IR, restauration), saillants (éclatement de l'AR, phase aiguë, thermidorien, IR, Glorieuse Révolution), conditions de sortie | La question porte sur la RN |
 | `references/phase_parlementaire.md` | Phase parlementaire, technocratique, dominat | La question porte sur les phases post-RN |
 | `references/elites.md` | Matrice 2×2 des élites (prébendières/patrimoniales × gouvernementales/non-gouvernementales), mécanismes d'absolutisation, guerre sociale | La question touche à la dynamique des élites |
 | `references/perturbations.md` | 3 mécanismes (choc d'hétérogénéité, choc exogène, insuffisance interne) × 4 effets (prolongement, accélération, avortement, reboot) + exutoire (état continu). Rébellion périphérique. Affichage sur la frise (losanges, couleurs, icônes) | La question touche à un choc externe, une déviation des durées typiques, ou un exutoire |
@@ -86,8 +86,8 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 - Y a-t-il sédimentation des élites, sclérose, bloc contestataire ? (Ancien Régime)
 
 **Pour identifier la RN :**
-- Y a-t-il une explosion de l'ordre ancien, une expérience parlementaire, une phase aiguë ?
-- Y a-t-il une figure d'Impérialiste Revanchard ?
+- Y a-t-il une éclatement de l'ordre ancien, une expérience parlementaire, une phase aiguë ?
+- Y a-t-il une figure d'IR (Impérialiste Revanchard) ?
 - Y a-t-il une Glorieuse Révolution qui ancre le parlementarisme ?
 
 **Pour identifier les perturbations :**
@@ -114,7 +114,7 @@ Pour **chaque phase** identifiée (féodale, puis oligarchique, puis absolutiste
    - **Féodale** : éveil, pic(s) féodal(aux), crise(s) féodale(s), **pacte oligarchique** (généralement très formel — loi salique, Ordonnances, primogéniture, Libell, etc.)
    - **Oligarchique** : 1er monarque oligarchique, acmé oligarchique, polarisation, **guerre sociale** (deux factions + tiers résolvant)
    - **Absolutiste** : 1er monarque absolu, acmé absolutiste, fin d'expansion, remontrance, Ancien Régime
-   - **RN** : les 7 étapes (explosion AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, restauration, Glorieuse Révolution)
+   - **RN** : les 7 étapes (éclatement de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, restauration, Glorieuse Révolution)
    
    Si un saillant canonique manque, **c'est un signal d'alarme** : soit l'histoire a été mal lue (chercher plus fort), soit le cas est structurellement atypique. Dans le second cas, justifier explicitement en comparant à un cas comparable du corpus (ex. : Venise n'a pas de 1er monarque oligarchique personnel — c'est une institution). **Ne jamais se contenter de dire « absent, résolution diffuse »** sans justification structurelle solide.
 
@@ -176,7 +176,7 @@ L'historionomie est une discipline en cours de construction. L'utilisateur peut 
 
 ### Priorité absolue : fiabilité des durées
 
-L'usage principal du corpus est la **quantification statistique** (régression d'Alyocha Coencas sur les durées de phase). Plus il y a de parcours, plus la régression est robuste. Cela implique que **la fiabilité des dates de bornes** (éveil féodal, pacte, 1er monarque oligarchique, guerre sociale, 1er monarque absolu, explosion AR, Glorieuse Révolution) est la **première priorité absolue** de toute analyse. Sous-phases, naming, descriptions sont des raffinements secondaires — les durées sont l'enjeu.
+L'usage principal du corpus est la **quantification statistique** (régression d'Alyocha Coencas sur les durées de phase). Plus il y a de parcours, plus la régression est robuste. Cela implique que **la fiabilité des dates de bornes** (éveil féodal, pacte, 1er monarque oligarchique, guerre sociale, 1er monarque absolu, éclatement de l'AR, Glorieuse Révolution) est la **première priorité absolue** de toute analyse. Sous-phases, naming, descriptions sont des raffinements secondaires — les durées sont l'enjeu.
 
 Ne jamais forcer une date pour que les durées « collent mieux ». Les écarts atypiques sont toujours le signal d'une perturbation à identifier, pas d'une borne à déplacer.
 
@@ -198,13 +198,13 @@ Dérivations exceptionnelles uniquement sur précédent documenté (ex. : `nouve
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
 - **Oligarchique** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale
 - **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance
-- **RN** : Explosion de l'Ancien Régime, Expérience parlementaire, Phase aiguë, Moment thermidorien, Impérialiste Revanchard, Restauration, Glorieuse Révolution
+- **RN** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution
 
 **Distinction saillant vs sous-phase** :
 - `Ancien régime` est une sous-phase **seulement** (pas un saillant). Le « moment » de l'entrée en AR est marqué par la Remontrance, pas par un saillant « Ancien Régime ».
-- `Révolution initiale` est une sous-phase **seulement** — elle contient à l'intérieur les 4 saillants : Explosion de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
+- `Révolution initiale` est une sous-phase **seulement** — elle contient à l'intérieur les 4 saillants : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
 - `Restauration` est à la fois un **saillant** (le moment où l'ancien ordre est restauré — ex. 1815 en France) ET une **sous-phase** (la durée pendant laquelle il dure — ex. 1815-1830).
-- `Impérialiste Revanchard` (-*iste*) est un **saillant** — l'avènement de la figure (ex. Bonaparte 1er consul, 1799). `impérialisme revanchard` (-*isme*) est la **sous-phase** — la durée pendant laquelle la nation est portée par cette dynamique (ex. 1799-1815).
+- `Émergence de l'IR` est un **saillant** — l'avènement de la figure autoritaire (ex. Bonaparte 1er consul, 1799). `impérialisme revanchard` est la **sous-phase** — la durée pendant laquelle la nation est portée par cette dynamique (ex. 1799-1815).
 
 **Tout événement qui n'est pas dans la liste fermée n'est PAS un saillant** — c'est soit une **perturbation** (avec mécanisme + effet, parcimonieusement), soit une **mention dans la description** d'une sous-phase. Ne JAMAIS créer des saillants ad hoc avec des noms inventés (« Victoire de la Contre-Réforme », « Compromis austro-hongrois », « Privilegium Minus »). Les saillants sont des éléments codifiés.
 

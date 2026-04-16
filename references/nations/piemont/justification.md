@@ -82,7 +82,7 @@
 
 **Hypothèses écartées** :
 - **Remontrance** : écarté. Les acteurs ne sont pas la classe administrative piémontaise contestant le pouvoir — ce sont des nationalistes italiens utilisant le Piémont comme véhicule.
-- **Explosion de l'AR / début de la RN** : écarté. Pas de marqueurs de RN (pas d'expérience parlementaire endogène, pas de phase aiguë, pas d'IR piémontais). Thomas a identifié que la RN est italienne (1918-19), pas piémontaise.
+- **Éclatement de l'AR / début de la RN** : écarté. Pas de marqueurs de RN (pas d'expérience parlementaire endogène, pas de phase aiguë, pas d'IR piémontais). Thomas a identifié que la RN est italienne (1918-19), pas piémontaise.
 - **Seconde remontrance** : écarté. Avoir deux remontrances est atypique et la chronologie de 1848 montre clairement une réaction aux événements extérieurs.
 
 ## 2. Hypothèses écartées

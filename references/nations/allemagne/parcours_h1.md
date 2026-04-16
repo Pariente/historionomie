@@ -260,13 +260,13 @@
 - summary: De la Révolution de Novembre à la Réunification. RN longue (~72 ans) et très perturbée.
 - deviation: dans la norme haute (~72 ans)
 
-### Subphase : Explosion de l'Ancien Régime
+### Subphase : Éclatement de l'AR
 - type: subphase
 - phase: rn
 - step: 1
 - start: 1918
 - end: 1919
-- title: Explosion de l'Ancien Régime
+- title: Éclatement de l'AR
 - summary: Révolution de Novembre. Guillaume II abdique. Les marins de Kiel se mutinent.
 - description: Mutinerie des marins de Kiel (3 novembre 1918). Révolution de Novembre — conseils d'ouvriers et de soldats dans toute l'Allemagne. Guillaume II abdique (9 novembre). Philipp Scheidemann proclame la République. L'ancien régime impérial s'effondre en quelques jours. L'armistice est signé le 11 novembre.
 
@@ -295,7 +295,7 @@
 - start: 1934
 - end: 1945
 - figure: Adolf Hitler
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - step: 5
 - confidence: medium
 - alternatives: Hitler est-il un IR classique ou un phénomène aberrant ? L'IR est normalement une figure qui ventile les élites par la méritocratie et canalise les tensions par l'impérialisme. Hitler fait les deux (promotion au mérite dans la Wehrmacht et le parti, Lebensraum). Mais l'ampleur des crimes nazis est sans commune mesure avec les excès de Napoléon ou Cromwell. La question est de savoir si le modèle historionomique rend compte de cette différence d'échelle, ou s'il la perd. En termes structurels, Hitler occupe la position d'IR. En termes moraux et d'échelle, c'est un cas extrême.

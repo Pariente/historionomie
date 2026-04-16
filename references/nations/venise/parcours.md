@@ -397,12 +397,12 @@
     - Amorce de phase aiguë : l'assemblée vote les « pouvoirs illimités » pour Manin (mars 1849) — escalade vers la phase radicale
     - Coalition large multi-classe (bourgeoisie, arsenalotti, artisans, ex-patriciens, soldats déserteurs)
 
-#### Saillant : Explosion de l'AR — insurrection de mars 1848
+#### Saillant : Éclatement de l'AR — insurrection de mars 1848
 - type: saillant
 - start: 1848
 - figure: Daniele Manin
 - subtitle: Insurrection de mars
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le 22 mars 1848, Daniele Manin proclame la République de San Marco après la capitulation de la garnison autrichienne. Les arsenalotti s'emparent de l'Arsenal, les élites collaboratrices basculent, le régime autrichien s'effondre à Venise.
 - description: Manin (avocat, petit-fils d'un juif converti, aucun lien avec l'ancien patriciat) et Niccolò Tommaseo (linguiste dalmate) sont les figures centrales de l'insurrection. Libérés de prison par une manifestation populaire le 17 mars, ils prennent la tête du mouvement en cinq jours. Le 22 mars, les arsenalotti — ouvriers de l'Arsenal, seule force organisée du peuple vénitien — s'emparent de leur lieu de travail. La garnison autrichienne capitule sans combat majeur. Manin proclame la République depuis la place Saint-Marc, invoquant le nom et les symboles de l'ancienne République pour un projet nouveau. C'est l'explosion classique de l'AR : perte simultanée de légitimité et de capacité financière du régime, basculement des élites, gouvernement de coalition élargie.
@@ -471,7 +471,7 @@
 | Acmé absolutiste | Morosini (1688) |
 | Fin de l'expansion | Passarowitz (1718) |
 | Avortement | Conquête par Bonaparte (1797) |
-| Explosion de l'AR | Insurrection de mars 1848 |
+| Éclatement de l'AR | Insurrection de mars 1848 |
 | Expérience parlementaire | République de Manin (1848-1849) |
 | Phase aiguë (amorcée) | Pouvoirs illimités pour Manin (mars 1849) |
 | Écrasement | Capitulation (août 1849) |

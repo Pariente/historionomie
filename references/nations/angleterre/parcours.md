@@ -507,13 +507,13 @@
 - summary: La crise éclate avec le Long Parlement de 1640, qui démantèle les instruments du pouvoir personnel de Charles Ier. La guerre civile, l'exécution du roi en 1649 et la proclamation du Commonwealth traversent les quatre premières étapes de la Révolution Nationale à un rythme accéléré.
 - description: La convocation du Long Parlement en novembre 1640, rendue nécessaire par la révolte écossaise des Covenanters, déclenche un basculement irrésistible. Le Parlement abolit la Chambre étoilée et la Cour de la Haute Commission, exécute le comte de Strafford — principal ministre et homme de confiance de Charles Ier — et impose le Triennial Act. La tentative de Charles Ier d'arrêter cinq membres du Parlement en janvier 1642 provoque la rupture définitive et le déclenchement de la guerre civile. Le Parlement gouverne pendant la guerre grâce à la New Model Army créée en 1645 sous la direction d'Oliver Cromwell et Thomas Fairfax. L'Épuration de Pride en décembre 1648 marque le basculement vers la phase aiguë : les presbytériens modérés sont expulsés, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649 — acte régicide qui radicalise irréversiblement le processus révolutionnaire. Le Commonwealth est proclamé et la monarchie abolie.
 
-#### Saillant : Explosion de l'Ancien Régime
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1640
 - end: 1642
 - figure: Charles Ier
 - subtitle: Guerre civile
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentative du roi d'arrêter cinq parlementaires déclenche la guerre civile.
 - description: L'explosion de l'Ancien Régime anglais commence avec la convocation du Long Parlement en novembre 1640. En quelques mois, le Parlement abolit la Chambre étoilée, supprime la Cour de la Haute Commission, interdit le Ship Money et fait exécuter le comte de Strafford en mai 1641 — principal architecte de la politique de « thorough » de Charles Ier. La rapidité de cet effondrement témoigne de la sclérose avancée du système : les instruments du pouvoir personnel royal, qui avaient fonctionné pendant la règle personnelle de 1629-1640, se révèlent incapables de résister à la pression d'un Parlement déterminé. La tentative de Charles Ier d'arrêter cinq membres de la Chambre des communes en janvier 1642 transforme la crise institutionnelle en conflit armé, exactement comme la fuite de Louis XVI à Varennes radicalisa la Révolution française un siècle et demi plus tard.
@@ -555,7 +555,7 @@
 - phase: rn
 - start: 1653
 - end: 1660
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - figure: Oliver Cromwell
 - summary: Cromwell, devenu Lord Protecteur, incarne la figure de l'Impérialiste Revanchard : il restaure la verticalité du pouvoir, ventile les élites par la méritocratie militaire, projette la puissance anglaise vers l'extérieur et unifie administrativement les Îles Britanniques, avant de mourir en 1658 sans successeur capable.
 - description: Oliver Cromwell est l'Impérialiste Revanchard du Parcours anglais, figure autoritaire qui renoue avec la verticalité du pouvoir après le chaos révolutionnaire. Devenu Lord Protecteur en décembre 1653, il gouverne avec l'appui de l'armée et d'un réseau de Major-Generals qui administrent directement les régions — préfiguration du système préfectoral napoléonien. L'armée elle-même est une machine méritocratique : les officiers sont promus selon leurs capacités, non leur naissance, ce qui ventile les élites en renouvelant la classe dirigeante. Sur le plan extérieur, Cromwell projette la puissance anglaise en conquérant la Jamaïque en 1655, en imposant le respect aux puissances européennes et en unifiant administrativement l'Angleterre, l'Écosse et l'Irlande. Mais comme tout Impérialiste Revanchard, son régime ne lui survit pas : sa mort en 1658 est suivie de l'effondrement rapide du Protectorat sous son fils Richard, incapable de maintenir l'allégeance de l'armée.
@@ -565,7 +565,7 @@
 - start: 1653
 - figure: Oliver Cromwell
 - subtitle: Protectorat
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - confidence: high
 - summary: Cromwell s'empare du pouvoir en dissolvant le Rump Parliament et en devenant Lord Protecteur, instaurant un régime méritocratique et impérialiste qui projette la puissance anglaise vers les Caraïbes et l'Europe.
 - description: Cromwell devient Lord Protecteur en décembre 1653, après avoir dissous successivement le Rump Parliament et le Barebones Parliament. Son régime combine la restauration de l'ordre intérieur — les Major-Generals imposent la discipline puritaine dans les régions — avec une projection de puissance extérieure agressive : conquête de la Jamaïque en 1655, guerre contre l'Espagne, alliance avec la France de Mazarin, victoire de la bataille des Dunes en 1658. L'armée, fondée sur le mérite et non sur la naissance, constitue le principal vecteur de mobilité sociale et absorbe les tensions de la société post-révolutionnaire. Cromwell est le Bonaparte anglais — avec cette différence qu'il précède Bonaparte d'un siècle et demi, confirmant que la séquence de la Révolution Nationale est structurelle et non contingente.

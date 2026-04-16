@@ -508,12 +508,12 @@
 - description: Les Cinque Giornate (18-22 mars 1848) présentent les saillants initiaux d'une RN : explosion de l'AR (insurrection populaire, 1 600 barricades, garnison chassée), expérience parlementaire (Governo provvisorio avec factions concurrentes : fusionnistes/Casati vs républicains/Cattaneo vs mazziniens), amorce de phase aiguë (marginalisation des démocrates, concentration des pouvoirs). L'écrasement autrichien (Custoza juillet 1848, retour de Radetzky août 1848) avorte la RN avant que le cycle ne se complète. Le parallèle avec la RN vénitienne avortée de la même année (République de Manin) est structurel. Le vote de fusion avec le Piémont (561 002 contre 681, 8 juin 1848) montre que les Milanais choisissent eux-mêmes de fusionner leur Parcours dans le Parcours piémontais/italien.
 - confidence: low
 
-#### Saillant : Explosion de l'AR — Cinque Giornate
+#### Saillant : Éclatement de l'AR — Cinque Giornate
 - type: saillant
 - start: 1848
 - figure: Carlo Cattaneo
 - subtitle: Cinque Giornate
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: low
 - summary: Les Cinque Giornate (18-22 mars 1848) sont l'explosion de l'AR milanais. Le boycott du tabac (1er janvier 1848) cristallise le mécontentement. Les nouvelles de la révolution de Vienne (17 mars) déclenchent l'insurrection : 1 600 barricades, la garnison de Radetzky (~13 000 hommes) est chassée en cinq jours. Le clivage G-D saute : patriotes aristocratiques (ED) et républicains démocrates (EG, Cattaneo) convergent contre le bloc élitaire austro-collaborant.
 
@@ -567,6 +567,6 @@
 | Ancien Régime | 1454-1499 (avorté) | 1814-1848 |
 | **Perturbation** | — | **Peste de 1630 (prolongement)** |
 | **Reboot** | — | **Guerres d'Italie (1499-1535)** |
-| Explosion de l'AR | — (avortée par le reboot) | Cinque Giornate (1848) |
+| Éclatement de l'AR | — (avortée par le reboot) | Cinque Giornate (1848) |
 | Expérience parlementaire | — | Governo provvisorio (1848) |
 | Écrasement | — | Custoza / Novara (1849, avortée) |

@@ -240,7 +240,7 @@
 - title: Phase absolutiste
 - typical_duration: ~200 ans
 - actual_duration: ~321 ans
-- resolution: Explosion de l'Ancien Régime (1918) → RN avortée (absorbée dans la RN allemande)
+- resolution: Éclatement de l'AR (1918) → RN avortée (absorbée dans la RN allemande)
 - summary: La phase absolutiste bavaroise est la plus longue du Parcours. L'absolutisation (1597-1679) est l'œuvre de Maximilien Ier. L'impérialisme absolutiste (1679-1848) culmine sous Max-Emmanuel (1691, acmé absolutiste), est brisé par Blenheim (1704), rebondit sous Maximilien III Joseph (absolutisme éclairé), puis connaît un prolongement majeur : le doublement napoléonien du territoire (1806, Franconie et Souabe) hétérogénéise la société et relance la dynamique impérialiste. Les réformes Montgelas (1799-1817) ventilent les élites. La Polysynodie de 1848 (la classe parlementaire tente de prendre des prérogatives au roi) échoue et ouvre l'Ancien Régime (1848-1918). L'absorption dans l'Empire allemand (1871) gèle le Parcours. L'AR explose en 1918 (Eisner, République des Conseils).
 - description: L'allongement considérable de la phase (+121 ans) s'explique par l'accumulation de perturbations qui ralentissent la dynamique sans l'interrompre : guerre de Trente Ans (~30% de pertes démographiques), occupations autrichiennes (1704-1714, 1742-1745), et surtout le prolongement napoléonien de 1806. Le doublement du territoire (Franconie, Souabe — gains permanents confirmés au Congrès de Vienne) hétérogénéise la société bavaroise, ralentissant le moteur culturel et relançant l'impérialisme absolutiste sous une forme modernisatrice (réformes Montgelas). La Polysynodie de 1848 — tentative de la classe parlementaire de s'imposer face au roi — échoue comme toutes les Polysynodies et marque le vrai début de l'AR. L'absorption dans l'Empire allemand (1871) gèle ensuite le Parcours : la Bavière est suffisamment homogène pour une RN, mais la réalité politique est bloquée par la suzeraineté prussienne. L'AR se maintient artificiellement pendant 47 ans (1871-1918) avant d'exploser.
 - deviation: +121 ans par rapport à la norme (~200 ans). Prolongement napoléonien (1806, hétérogénéisation territoriale, ~70 ans d'effet), guerre de Trente Ans (~30 ans d'effet), occupations autrichiennes (~20 ans d'effet cumulé).
@@ -375,15 +375,15 @@
 - title: Révolution Nationale avortée
 - status: avortée
 - summary: La RN bavaroise éclate le 7 novembre 1918 (Eisner renverse Louis III, deux jours avant Berlin). Elle atteint l'expérience parlementaire (État libre, élections de janvier 1919) et la phase aiguë (République des Conseils, avril 1919) avant d'être écrasée par les troupes fédérales allemandes (Reichswehr + Freikorps, mai 1919) et absorbée dans la RN allemande (Weimar). Le fait qu'Eisner agisse deux jours avant Berlin et que la République des Conseils soit la plus radicale d'Allemagne confirme l'existence d'une dynamique spécifiquement bavaroise — c'est la RN bavaroise qui reprend, mais elle est immédiatement avalée par la RN allemande.
-- description: La RN bavaroise de 1918 va bien plus loin dans la séquence que la Polysynodie de 1848. Elle atteint les étapes 1 à 4 du schéma classique. Explosion de l'AR : le 7 novembre 1918, Kurt Eisner (USPD) renverse Louis III avec le soutien des conseils d'ouvriers et de soldats — premier roi allemand à tomber. Expérience parlementaire : l'État libre de Bavière est proclamé, des élections sont organisées le 12 janvier 1919 (l'USPD d'Eisner n'obtient que 2,5%). Phase aiguë : après l'assassinat d'Eisner le 21 février 1919, la radicalisation s'accélère. Le 6 avril, la République des Conseils est proclamée — d'abord sous Ernst Toller (6 jours), puis sous Eugen Leviné (bolchevique). Armée rouge, contrôle ouvrier des usines. C'est la phase aiguë la plus radicale de toutes les RN allemandes de 1918-1919. Écrasement : le 3 mai 1919, la Reichswehr et les Freikorps écrasent la République des Conseils. La RN bavaroise est terminée — absorbée dans la RN allemande (Weimar). La brutalité de la répression nourrit directement le terreau d'extrême-droite dont émergera le mouvement nazi à Munich.
+- description: La RN bavaroise de 1918 va bien plus loin dans la séquence que la Polysynodie de 1848. Elle atteint les étapes 1 à 4 du schéma classique. Éclatement de l'AR : le 7 novembre 1918, Kurt Eisner (USPD) renverse Louis III avec le soutien des conseils d'ouvriers et de soldats — premier roi allemand à tomber. Expérience parlementaire : l'État libre de Bavière est proclamé, des élections sont organisées le 12 janvier 1919 (l'USPD d'Eisner n'obtient que 2,5%). Phase aiguë : après l'assassinat d'Eisner le 21 février 1919, la radicalisation s'accélère. Le 6 avril, la République des Conseils est proclamée — d'abord sous Ernst Toller (6 jours), puis sous Eugen Leviné (bolchevique). Armée rouge, contrôle ouvrier des usines. C'est la phase aiguë la plus radicale de toutes les RN allemandes de 1918-1919. Écrasement : le 3 mai 1919, la Reichswehr et les Freikorps écrasent la République des Conseils. La RN bavaroise est terminée — absorbée dans la RN allemande (Weimar). La brutalité de la répression nourrit directement le terreau d'extrême-droite dont émergera le mouvement nazi à Munich.
 
-### Saillant : Explosion de l'Ancien Régime
+### Saillant : Éclatement de l'AR
 - type: saillant
 - phase: rn
 - start: 1918
 - figure: Kurt Eisner
 - subtitle: 7 novembre 1918
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le 7 novembre 1918, Kurt Eisner renverse Louis III — premier roi allemand à tomber, deux jours avant la révolution à Berlin.
 
@@ -438,7 +438,7 @@
 | Acmé absolutiste [2] | Louis Ier (1835) |
 | Remontrance | 1848 (échoue) |
 | Ancien Régime | 1848-1918 |
-| Explosion de l'AR | Eisner (7 nov 1918) |
+| Éclatement de l'AR | Eisner (7 nov 1918) |
 | Expérience parlementaire | État libre (1919) |
 | Phase aiguë | République des Conseils (avril 1919) |
 | Écrasement / absorption | Mai 1919 (→ RN allemande) |

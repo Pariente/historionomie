@@ -315,7 +315,7 @@ Le Parcours hongrois présente trois traits structurels qui le distinguent de to
 - title: Phase absolutiste
 - typical_duration: ~200 ans
 - actual_duration: ~137 ans
-- resolution: Explosion de l'Ancien Régime — révolution de mars 1848, April Laws ratifiées par Ferdinand V, gouvernement Batthyány. Basculement des élites contestataires contre le cadre conservateur métternichien. Déclenchement de la Révolution Nationale hongroise.
+- resolution: Éclatement de l'AR — révolution de mars 1848, April Laws ratifiées par Ferdinand V, gouvernement Batthyány. Basculement des élites contestataires contre le cadre conservateur métternichien. Déclenchement de la Révolution Nationale hongroise.
 - resolution_conditions: L'AR hongrois est sédimenté depuis la Remontrance (dissolution de la diète 1811) et le Vormärz. L'Âge des Réformes (1825-1848) cristallise un bloc contestataire structuré (Széchenyi, Kossuth, Deák, Wesselényi). Crise financière de 1847, famines, onde de choc révolutionnaire Paris → Vienne → Budapest.
 - summary: Phase absolutiste hongroise dans la fourchette basse (137 ans). 1er MO = Charles VI (Charles III) post-Szatmár 1711. Consilium Regium Locumtenentiale 1723 comme organe exécutif central permanent hongrois. Absolutisation fluide sans DGRO sous Charles VI et Marie-Thérèse. Acmé absolutiste = Joseph II (1780-1790) — despotisme éclairé avec résistance hongroise à l'importation culturelle allemande. Fin de l'expansion = Congrès de Vienne 1815 (partagée avec Autriche). Remontrance = dissolution de la diète 1811 par François Ier. Ancien Régime 1811-1848 avec Âge des Réformes (Széchenyi, Kossuth, Deák) comme bloc contestataire. Explosion 1848.
 - description: **Test discriminant** : à partir de 1711, l'administration centrale hongroise acquiert une préséance effective via le Consilium Regium Locumtenentiale (1723). Cet organe exécutif permanent à Presbourg gouverne la Hongrie au nom du roi, exerce la tutelle sur les comitats, applique les édits royaux. Les comitats conservent une autonomie administrative subordonnée — pattern analogue aux intendants + parlements en France de Louis XIV. La Pragmatique Sanction (1723) est ratifiée par la diète hongroise, consolidant le cadre dynastique. Ce cadre est subordonné au cadre absolutiste habsbourgeois plus large, mais cela n'empêche pas la Hongrie d'avoir son propre cycle absolutiste composite (pattern Castille pré-Nueva Planta, Bohême pré-Haugwitz). **Absolutisation fluide sans DGRO** : les magnats hongrois sont cooptés dans le nouveau cadre via Pálffy et la génération post-Szatmár — pattern analogue à Venise et Bavière post-1597. **Acmé absolutiste Joseph II** : le despotisme éclairé joséphiste (1780-1790) est le pic canonique. Abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation (1782), germanisation administrative. La résistance magyare porte sur l'importation culturelle allemande (langue, refus du couronnement), pas sur l'absolutisme comme tel. Beaucoup de réformes sont maintenues après la rétraction des plus visibles par Léopold II. **Remontrance** : dissolution de la diète en 1811 par François Ier + période sans diète 1811-1825. Pattern Remontrance canonique — classe parlementaire tente de négocier, échoue, voie institutionnelle fermée. **AR 1811-1848** : sédimentation des élites magnates conservatrices, Âge des Réformes (1825-1848) comme bloc contestataire structuré, blocage des réformes, explosion 1848.
@@ -419,12 +419,12 @@ Le Parcours hongrois présente trois traits structurels qui le distinguent de to
 - title: Révolution initiale
 - summary: Séquence canonique compressée en 17 mois. Explosion (mars 1848, onde viennoise, April Laws, Batthyány), expérience parlementaire (6 mois, gouvernement Batthyány responsable), phase aiguë (Déclaration d'indépendance de Debrecen, Kossuth gouverneur-président), écrasement militaire (Világos, août 1849). Pas de moment thermidorien atteint.
 
-#### Saillant : Explosion de l'AR
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1848
 - figure: Lajos Batthyány
 - subtitle: Révolution de mars et April Laws
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le 15 mars 1848, Kossuth prononce son discours à la diète. Manifestations à Pest le même jour. Le 17 mars, Ferdinand V nomme Batthyány Premier ministre. April Laws adoptées et ratifiées le 10 avril 1848 : gouvernement parlementaire responsable, abolition du servage, liberté de presse, armée nationale Honvéd.
 - description: Explosion canonique d'un AR sédimenté. Effondrement simultané de légitimité (Ferdinand V faible, Metternich renversé à Vienne) et de capacité financière (crise de 1847, famines). Basculement immédiat des élites — les magnats réformateurs prennent le pouvoir dans le cadre institutionnel. Les April Laws sont adoptées légalement et ratifiées par Ferdinand V.
@@ -515,12 +515,12 @@ Le Parcours hongrois présente trois traits structurels qui le distinguent de to
 - title: Révolution initiale
 - summary: Séquence canonique compressée en 2 ans. Explosion 31 octobre 1918 (Révolution des Chrysanthèmes, Károlyi), expérience parlementaire (République populaire hongroise, novembre 1918-mars 1919), phase aiguë (République des Conseils de Béla Kun, 133 jours), moment thermidorien (contre-révolution de Szeged, Terreur blanche, intervention roumaine, 1919-mars 1920).
 
-#### Saillant : Explosion de l'AR
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1918
 - figure: Mihály Károlyi
 - subtitle: Révolution des Chrysanthèmes
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: Le 31 octobre 1918, à Budapest, révolution démocratique portée par le Conseil national hongrois. Károlyi Premier ministre. Tisza István assassiné le même jour. Le 13 novembre, Charles IV renonce aux affaires publiques. Le 16 novembre, République populaire hongroise proclamée. Effondrement de l'AR exogène habsbourgeois en quelques semaines.
 - description: Explosion déclenchée par la défaite militaire et l'effondrement de la Double Monarchie. Assassinat de Tisza István le jour même de l'explosion symbolise la rupture.
@@ -573,7 +573,7 @@ Le Parcours hongrois présente trois traits structurels qui le distinguent de to
 - end: 1944
 - figure: Miklós Horthy
 - subtitle: Régent
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - confidence: medium
 - alternatives: Hypothèse alternative : pas d'IR hongrois, Horthy comme simple régent conservateur. Écartée parce que les quatre fonctions canoniques de l'IR sont structurellement remplies.
 - summary: Miklós Horthy, régent du Royaume de Hongrie (1920-1944), incarne l'Impérialiste Revanchard. Revanchisme territorial obsessionnel contre Trianon, alliance progressive avec l'Axe, récupération partielle des territoires (1938-1941), entrée en guerre contre l'URSS juin 1941, chute par occupation allemande mars 1944 puis soviétique fin 1944-début 1945.
@@ -692,12 +692,12 @@ Le Parcours hongrois présente trois traits structurels qui le distinguent de to
 - title: Révolution initiale
 - summary: Transition démocratique pacifique 1988-1990. Chute de Kádár (mai 1988), réformateurs du MSZMP négocient avec l'opposition, Table ronde (juin-septembre 1989), ouverture de la frontière autrichienne (août 1989), proclamation de la République le 23 octobre 1989, élections libres 25 mars-8 avril 1990, installation du gouvernement Antall.
 
-#### Saillant : Explosion de l'AR
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1989
 - figure: Imre Pozsgay / József Antall
 - subtitle: Proclamation de la République
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: La proclamation de la République de Hongrie le 23 octobre 1989 (date symbolique du début de la révolution de 1956) est l'explosion de l'AR exogène soviétique. Précédée par la Table ronde d'opposition (juin-septembre 1989) et l'ouverture de la frontière autrichienne (août 1989). Suivie par les premières élections libres multipartites (mars-avril 1990).
 - description: Explosion pacifique et négociée. Pattern analogue à la Révolution de Velours bohème (1989) ou à la transition espagnole post-Franco. La date symbolique du 23 octobre relie l'explosion à l'insurrection de 1956, donnant sens à la séquence complète de la RN hongroise — 1848 première explosion, 1918 seconde explosion, 1956 réplique avortée, 1989 résolution ancrée.

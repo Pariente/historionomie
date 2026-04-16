@@ -478,11 +478,11 @@
 - summary: Les dix années qui séparent la prise de la Bastille du coup d'État de Bonaparte voient se succéder à un rythme accéléré l'explosion de l'Ancien Régime, la tentative parlementaire de la monarchie constitutionnelle, la phase aiguë de la Terreur et le moment thermidorien du Directoire.
 - description: Cette décennie de bouleversements concentre en un temps très court les quatre premières étapes de la Révolution Nationale. L'Ancien Régime explose sous le poids de la crise financière et de la contestation élitaire, le parlementarisme est tenté avec la monarchie constitutionnelle de 1791, les radicaux jacobins prennent le contrôle et instaurent la Terreur, puis le centre reprend la main avec la réaction thermidorienne et le Directoire. Chaque étape prépare mécaniquement la suivante, dans une dynamique que l'on retrouve dans toutes les Révolutions Nationales.
 
-#### Saillant : Explosion de l'Ancien Régime
+#### Saillant : Éclatement de l'AR
 - type: saillant
 - start: 1789
 - subtitle: Prise de la Bastille
-- title: Explosion de l'AR
+- title: Éclatement de l'AR
 - confidence: high
 - summary: La convocation des États généraux pour résoudre la crise financière déclenche un basculement irrésistible : le tiers état et une partie de la noblesse libérale renversent l'ordre ancien en quelques semaines, de la prise de la Bastille le 14 juillet à l'abolition des privilèges dans la nuit du 4 août.
 - description: L'explosion de l'Ancien Régime est déclenchée par la convocation des États généraux, rendue nécessaire par la crise financière héritée de la dette de la guerre d'Indépendance américaine. Le tiers état, rejoint par une partie de la noblesse libérale et du bas clergé, se constitue en Assemblée nationale et prête le Serment du Jeu de paume, affirmant sa souveraineté constituante. La prise de la Bastille le 14 juillet 1789 transforme la crise institutionnelle en révolution populaire, et la nuit du 4 août voit l'abolition des privilèges féodaux, démolissant en quelques heures l'architecture sociale de l'Ancien Régime. La rapidité de cet effondrement est caractéristique d'un système absolutiste arrivé au terme de sa sclérose.
@@ -522,7 +522,7 @@
 - phase: rn
 - start: 1799
 - end: 1815
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - summary: Bonaparte s'empare du pouvoir par le coup d'État du 18 Brumaire et incarne la figure de l'Impérialiste Revanchard : il restaure la verticalité du pouvoir, ventile les élites par la méritocratie, unifie le droit par le Code civil et projette la puissance française à l'échelle de toute l'Europe, avant d'être défait par une coalition exogène à Waterloo en 1815.
 - description: Napoléon Bonaparte est l'Impérialiste Revanchard du Parcours français, figure autoritaire qui renoue avec la verticalité du pouvoir après le chaos révolutionnaire. Il ventile les élites en remplaçant le critère de naissance par le mérite — Légion d'honneur, lycées, préfectures, carrières ouvertes aux talents — ce qui renouvelle la classe dirigeante et absorbe les tensions sociales. Son impérialisme militaire à l'échelle européenne canalise les énergies nationales vers l'extérieur. Mais comme tout Impérialiste Revanchard, sa chute est exogène : c'est la coalition européenne qui le défait à Waterloo en 1815, pas une révolution intérieure.
 
@@ -531,7 +531,7 @@
 - start: 1799
 - figure: Bonaparte
 - subtitle: 18 Brumaire
-- title: Impérialiste Revanchard
+- title: Émergence de l'IR
 - confidence: high
 - summary: Le coup d'État du 18 Brumaire le 9 novembre 1799 porte Bonaparte au pouvoir ; il instaure le Consulat puis l'Empire et réalise l'unification juridique définitive du pays par le Code civil, acte fondateur de l'État-nation moderne français.
 - description: Bonaparte s'empare du pouvoir par le coup d'État du 18 Brumaire le 9 novembre 1799, mettant fin au Directoire agonisant. Il instaure d'abord le Consulat, puis se fait couronner empereur en 1804. Sa contribution décisive au Parcours français est la ventilation des élites par la méritocratie — la Légion d'honneur récompense le talent, les lycées forment une nouvelle élite, les préfets administrent rationnellement le territoire — et surtout le Code civil de 1804, qui unifie le droit sur l'ensemble du territoire national et consacre les principes d'égalité civile issus de la Révolution. Cette unification juridique est un acquis irréversible qui survivra à la chute de Napoléon et constitue l'un des héritages les plus durables de la Révolution Nationale française.

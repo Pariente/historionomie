@@ -348,7 +348,7 @@ La **Remontrance est la borne stricte d'entrée en Ancien Régime**, pas « fin 
   - Défaites structurantes (Solferino 1859, Sadowa 1866)
   - Ausgleich (1867) — architecture dualiste
   - Règne sédimentant de François-Joseph (1848-1916, 68 ans)
-  - Explosion de l'AR (effondrement de 1918)
+  - Éclatement de l'AR (effondrement de 1918)
 
 La durée AR de 70 ans est bien dans la norme (35-100 ans) et proche de la moyenne.
 
