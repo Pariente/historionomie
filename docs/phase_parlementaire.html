@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase parlementaire — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #1E90FF; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html" class="active">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Phase parlementaire</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#phase-parlementaire-l-état-nation-parlementaire-enp">Phase parlementaire — l&#x27;État-nation parlementaire (ENP)</a></li>
+<ul>
+<li><a href="#la-citoyenneté-est-un-processus">La citoyenneté est un processus</a></li>
+<li><a href="#mécanique-intégration-progressive-des-exclus">Mécanique : intégration progressive des exclus</a></li>
+<li><a href="#le-choix-de-bastiat-et-la-pente-vers-la-social-démocratie">Le choix de Bastiat et la pente vers la social-démocratie</a></li>
+<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
+<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
+</ul>
+<li><a href="#phase-technocratique-dégénérescence-de-l-enp">Phase technocratique — dégénérescence de l&#x27;ENP</a></li>
+<ul>
+<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
+</ul>
+<li><a href="#dominat">Dominat</a></li>
+<ul>
+<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
+<li><a href="#parallèle-avec-l-ancien-régime-absolutiste">Parallèle avec l&#x27;Ancien Régime absolutiste</a></li>
+</ul>
+</ul></nav>
+<article>
+<h2 id="phase-parlementaire-l-état-nation-parlementaire-enp">Phase parlementaire &mdash; l'État-nation parlementaire (ENP)<a class="anchor" href="#phase-parlementaire-l-état-nation-parlementaire-enp">#</a></h2>
+<p>Aboutissement du Parcours de construction nationale. L'appareil de l'État central est <strong>subordonné à la représentation nationale</strong> à travers un parlement. La chambre basse est la source ultime du pouvoir. La phase parlementaire est très stable et peut durer très longtemps.</p>
+<h3 id="la-citoyenneté-est-un-processus">La citoyenneté est un processus<a class="anchor" href="#la-citoyenneté-est-un-processus">#</a></h3>
+<p>La définition de « citoyen » peut être conditionnelle et s'élargir progressivement. L'Angleterre est un ENP dès la Glorieuse Révolution de 1688, bien avant le suffrage universel &mdash; c'est un processus. De même, Athènes ou Corinthe excluaient les femmes, les étrangers et les esclaves : cela n'enlève rien au caractère parlementaire de ces cités, car dans le référentiel civilisationnel de la Grèce du IVe siècle, ces catégories étaient considérées comme des biens, pas comme des citoyens potentiels.</p>
+<p>Le marqueur structurel n'est pas « tous les habitants votent », mais « l'appareil d'État est subordonné à la représentation nationale ».</p>
+<h3 id="mécanique-intégration-progressive-des-exclus">Mécanique : intégration progressive des exclus<a class="anchor" href="#mécanique-intégration-progressive-des-exclus">#</a></h3>
+<p>La phase parlementaire résout les tensions sociales <strong>pacifiquement</strong>. Tout au long de la phase, l'extrême-gauche (le camp des exclus &mdash; ceux qui n'ont pas de siège à la table des négociations) fait intégrer, petit à petit, les exclus dans le système.</p>
+<p>En France : suffrage censitaire, puis élargi, puis universel masculin. Mais pas seulement le vote &mdash; aussi les règles du jeu, rendues progressivement plus équitables : droit du travail, protections sociales, congés payés, sécurité de l'emploi. Les ouvriers ont progressivement tout obtenu et ont cessé de voter à gauche dès les années 1970-1980. Un ouvrier français propriétaire de son lotissement, avec une voiture, les 37 heures, les congés payés et la sécurité de l'emploi est suffisamment embourgeoisé pour ne plus être révolutionnaire.</p>
+<p>C'est la raison pour laquelle l'EG se déplace : quand un groupe d'exclus est intégré, l'EG représente les <em>nouveaux</em> exclus. En France aujourd'hui, l'EG représente presque exclusivement les intérêts de la classe des nouveaux exclus (les immigrés afro-arabo-musulmans).</p>
+<h3 id="le-choix-de-bastiat-et-la-pente-vers-la-social-démocratie">Le choix de Bastiat et la pente vers la social-démocratie<a class="anchor" href="#le-choix-de-bastiat-et-la-pente-vers-la-social-démocratie">#</a></h3>
+<p>Quand un groupe obtient un siège à la table des négociations, il peut soit utiliser le pouvoir politique pour <strong>mettre fin à la spoliation légale</strong> (l'utilisation de l'impôt pour financer des activités dont on bénéficie soi-même), soit pour <strong>y prendre part</strong>. La pente naturelle est d'y prendre part &mdash; et c'est toujours ce qui se passe.</p>
+<p>Conséquence : la taille de l'État central croît, et croît plus qu'elle ne l'a jamais fait dans aucune autre phase du Parcours. Progressivement s'installe un régime très socialiste et néanmoins démocratique : la <strong>social-démocratie</strong>. La nation couvre l'ensemble de ses membres par la sécurité sociale, la solidarité nationale, la redistribution.</p>
+<p><strong>Ce régime n'est possible que si la nation est très fortement homogène.</strong> La social-démocratie revient à couvrir par la solidarité nationale l'ensemble de la population : pour que cela soit acceptable, il faut que les gens considèrent que n'importe quel autre membre de la nation est comme un cousin éloigné. Une forte hétérogénéité culturelle rend la solidarité nationale insoutenable &mdash; les gens refusent de payer pour des « étrangers ».</p>
+<h3 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h3>
+<p><strong>Test discriminant (parlementaire vs RN tardive) :</strong> La <strong>chambre basse</strong> est-elle la <strong>source ultime du pouvoir</strong> de façon pérenne et incontestée ? Le pouvoir administratif est-il <strong>subordonné</strong> à la représentation nationale ?</p>
+<ul>
+  <li><strong>Non</strong> → encore en RN (Restauration, régime transitoire).</li>
+  <li><strong>Oui</strong> → phase parlementaire.</li>
+</ul>
+<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<ul>
+  <li>Chambre basse source ultime du pouvoir</li>
+  <li>Système électoral représentatif (même à franchise restreinte)</li>
+  <li>Le pouvoir administratif est subordonné à la représentation nationale</li>
+  <li>Résolution pacifique des tensions sociales par intégration progressive des exclus</li>
+</ul>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1688</span></div><span class="card-desc">Depuis la Glorieuse Révolution</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1830</span></div><span class="card-desc">Depuis 1830 (avec des interruptions)</span></div></div>
+</div>
+<h2 id="phase-technocratique-dégénérescence-de-l-enp">Phase technocratique &mdash; dégénérescence de l'ENP<a class="anchor" href="#phase-technocratique-dégénérescence-de-l-enp">#</a></h2>
+<p>La social-démocratie peut se retourner contre le peuple. À mesure que l'État grossit &mdash; et surtout si les conditions amènent une nouvelle forme d'hétérogénéité alors que l'État est déjà très gros &mdash; la classe des administrateurs et des élites prébendières accapare le pouvoir <strong>contre</strong> la représentation nationale.</p>
+<p>L'État tire sa légitimité de lui-même. Le Léviathan administratif est devenu si puissant qu'il peut renverser ou contourner les décisions de la chambre basse. Les élus découvrent que leurs décisions sont inapplicables sans la coopération de l'administration &mdash; et l'administration ne coopère que si ça l'arrange.</p>
+<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<ul>
+  <li>L'administration peut renverser ou contourner les décisions de la chambre basse</li>
+  <li>La taille de l'État et le périmètre de son action augmentent sans cesse</li>
+  <li>Croissance continue du nombre de fonctionnaires</li>
+  <li>Les élites administratives se sédimentent et deviennent une classe à part</li>
+</ul>
+<h2 id="dominat">Dominat<a class="anchor" href="#dominat">#</a></h2>
+<p>L'administration est devenue si puissante qu'elle <em>est</em> le gouvernement de facto. Les lois ne sont plus réellement votées mais décidées par des comités administratifs. C'est structurellement un <strong>reboot en Ancien Régime</strong> &mdash; une élite sédimentée (la bureaucratie) monopolise le pouvoir et les rentes, la mobilité sociale se fige, et le système devient incapable de se réformer. La différence avec l'AR absolutiste est que cette élite n'est plus une aristocratie militaire ou de cour, mais une bureaucratie.</p>
+<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<ul>
+  <li>Administration = coalition gagnante de jure</li>
+  <li>Les décisions sont prises par des comités administratifs, non par les élus</li>
+  <li>Sédimentation des élites administratives</li>
+  <li>Le système se maintient par inertie, pas par légitimité</li>
+</ul>
+<h3 id="parallèle-avec-l-ancien-régime-absolutiste">Parallèle avec l'Ancien Régime absolutiste<a class="anchor" href="#parallèle-avec-l-ancien-régime-absolutiste">#</a></h3>
+<p>Le Dominat reproduit la structure de l'Ancien Régime : une élite sédimentée monopolise le pouvoir et les rentes, la mobilité sociale se fige, et le système devient incapable de se réformer. Comme dans l'AR absolutiste, un bloc contestataire finit par se former &mdash; mais les formes que prend cette contestation dans un dominat post-parlementaire restent une question théorique ouverte.</p>
+
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

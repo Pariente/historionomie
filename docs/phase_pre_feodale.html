@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase pré-féodale — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #A0A0A0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html" class="active">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Phase pré-féodale</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#sous-phase-unique-percolation-élitaire">Sous-phase unique : percolation élitaire</a></li>
+<ul>
+<li><a href="#marqueur-de-début">Marqueur de début</a></li>
+<li><a href="#marqueur-de-fin">Marqueur de fin</a></li>
+<li><a href="#nature-de-la-phase">Nature de la phase</a></li>
+<li><a href="#exemples">Exemples</a></li>
+</ul>
+</ul></nav>
+<article>
+<p>La phase pré-féodale est la période qui précède l'émergence d'un pouvoir supra-régional effectif. Le pouvoir est distribué entre micro-pouvoirs locaux sans centre. Une identité ethnoculturelle et une structure sociale proto-aristocratique peuvent exister, mais aucun chef n'exerce d'autorité supra-régionale effective.</p>
+<p>La phase pré-féodale n'est pas toujours comptée dans le Parcours. Si l'éveil féodal coïncide avec le début du Parcours (Babenberg 976, Wittelsbach 1180), la pré-féodale n'apparaît pas. Si en revanche un titre royal ou une entité politique existe pendant ~100 ans sans pouvoir effectif, c'est une percolation élitaire à documenter.</p>
+<h2 id="sous-phase-unique-percolation-élitaire">Sous-phase unique : percolation élitaire<a class="anchor" href="#sous-phase-unique-percolation-élitaire">#</a></h2>
+<p>Le terme « percolation » est emprunté à la théorie des systèmes dynamiques (Deblonde). En physique, la percolation désigne le moment où, dans un système distribué, un chemin continu se forme à travers le réseau &mdash; le seuil critique au-delà duquel le système passe d'un état fragmenté à un état connecté. C'est un phénomène de <strong>transition de phase</strong> : avant le seuil, les connexions locales existent mais ne forment pas de réseau global ; au seuil, un chemin continu apparaît soudainement.</p>
+<p>En historionomie, la percolation est la période où le pouvoir est <strong>distribué</strong> &mdash; fragmenté entre des micro-pouvoirs locaux sans centre. Des liens se forment et se défont, des alliances se nouent et se rompent, sans direction ni structure. Le phénomène est encore distribué : il n'y a pas de centre.</p>
+<p>Un jour, un chemin continu se forme : un chef émerge qui est assez fort pour <strong>forcer les autres à se positionner par rapport à lui</strong>. Ce n'est pas un simple titre (comme Hugues Capet en 987, que ses vassaux ignorent) &mdash; c'est un pouvoir réel qui structure le jeu politique. C'est l'<strong>éveil féodal</strong>, et il marque la fin de la percolation et le début de la phase féodale. À partir de là, il y a un centre, et les terroirs s'agrègent autour de lui &mdash; ou en opposition à lui, mais le résultat est le même : le jeu politique est structuré.</p>
+<h3 id="marqueur-de-début">Marqueur de début<a class="anchor" href="#marqueur-de-début">#</a></h3>
+<p><strong>Apparition d'une entité politique distincte sans pouvoir centralisé</strong> &mdash; typiquement la fragmentation post-impériale (Carolingiens, Rome), ou l'émergence d'un titre royal sans effet. Ce n'est généralement pas un saillant nommé, mais un point de départ conventionnel (traité de Verdun 843 pour la France, etc.).</p>
+<h3 id="marqueur-de-fin">Marqueur de fin<a class="anchor" href="#marqueur-de-fin">#</a></h3>
+<p><strong>Éveil féodal</strong> (saillant canonique) &mdash; premier chef supra-régional dont l'autorité est <strong>effective</strong>, qui force les autres à se positionner par rapport à lui.</p>
+<h3 id="nature-de-la-phase">Nature de la phase<a class="anchor" href="#nature-de-la-phase">#</a></h3>
+<p>La pré-féodale est par nature difficile à documenter : pas de structure centralisée, peu de traces écrites, chronologie floue. La borne de début est souvent conventionnelle. La borne de fin (l'éveil féodal) est mieux identifiable car elle marque un changement qualitatif &mdash; l'apparition d'un centre.</p>
+<h3 id="exemples">Exemples<a class="anchor" href="#exemples">#</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Parcours</th>
+    <th>Début</th>
+    <th>Fin (éveil féodal)</th>
+    <th>Durée</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>France</td>
+    <td>987 (Hugues Capet nominal)</td>
+    <td>1108 (Louis VI le Gros)</td>
+    <td>~121 ans</td>
+  </tr>
+  <tr>
+    <td>Angleterre</td>
+    <td>~600 (Heptarchie)</td>
+    <td>~829 (Ecgberht)</td>
+    <td>~229 ans</td>
+  </tr>
+  <tr>
+    <td>Israël antique</td>
+    <td>~-1200 (Juges)</td>
+    <td>~-1080 (Saül)</td>
+    <td>~120 ans</td>
+  </tr>
+  <tr>
+    <td>Milan</td>
+    <td>888 (fragmentation carolingienne)</td>
+    <td>979 (Landolfo II)</td>
+    <td>~91 ans</td>
+  </tr>
+  <tr>
+    <td>Castille</td>
+    <td>~930 (Fernán González)</td>
+    <td>~1035 (Ferdinand Ier)</td>
+    <td>~105 ans</td>
+  </tr>
+</tbody>
+</table></div>
+
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

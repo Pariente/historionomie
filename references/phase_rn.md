@@ -38,40 +38,44 @@ La première période de la RN couvre l'explosion de l'Ancien Régime, l'expéri
 
 L'Ancien Régime est ruiné et discrédité. Une partie des élites lâche le régime. Le basculement des élites est le déclencheur immédiat : tant que les élites prennent le parti du pouvoir, le régime tient ; quand elles basculent, la révolution devient possible.
 
-**Exemples :**
-- France : convocation des États généraux (1789), prise de la Bastille
-- Angleterre : Charles Ier tente de lever des impôts sans le Parlement (1640)
-- Israël : le massacre de Florus pousse les élites romanisées dans la révolte (66)
-- Venise : insurrection de mars 1848 — les arsenalotti prennent l'Arsenal, la garnison autrichienne capitule, Manin proclame la République de San Marco
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1789 | Convocation des États généraux, prise de la Bastille |
+| Angleterre | 1640 | Charles Ier tente de lever des impôts sans le Parlement |
+| Israël | 66 | Le massacre de Florus pousse les élites romanisées dans la révolte |
+| Venise | mars 1848 | Insurrection — les arsenalotti prennent l'Arsenal, la garnison autrichienne capitule, Manin proclame la République de San Marco |
 
 ### Saillant : Expérience parlementaire
 
 Les élites qui ont renversé l'ancien ordre proposent un régime à base politique élargie. Une coalition aussi large ne peut se gouverner que de manière collégiale : on expérimente le parlementarisme.
 
-**Exemples :**
-- France : Assemblée nationale constituante (1789-1791)
-- Angleterre : Long Parliament (1640-1648)
-- Israël : gouvernement provisoire de coalition (66-67), frappe du shekel « Israël »
-- Venise : République de San Marco (1848-1849) — assemblée élue au suffrage universel, factions concurrentes (républicains, fusionnistes, mazziniens), transferts de pouvoir entre factions
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1789-1791 | Assemblée nationale constituante |
+| Angleterre | 1640-1648 | Long Parliament |
+| Israël | 66-67 | Gouvernement provisoire de coalition, frappe du shekel « Israël » |
+| Venise | 1848-1849 | République de San Marco — assemblée élue au suffrage universel, factions concurrentes (républicains, fusionnistes, mazziniens), transferts de pouvoir entre factions |
 
 ### Saillant : Phase aiguë
 
 L'extrême-gauche (les révolutionnaires les plus radicaux) prend le contrôle et élimine les modérés. L'activation idéologique des masses rend possible des pouvoirs très autoritaires, reposant sur une coalition gagnante étroite et très militante.
 
-**Exemples :**
-- France : la Terreur, Robespierre (1792-1794)
-- Angleterre : exécution de Charles Ier (1649)
-- Israël : les Zélotes éliminent les modérés (67-70)
-- Venise : amorce seulement — l'assemblée vote les « pouvoirs illimités » pour Manin (mars 1849), mais l'Autriche écrase la République avant que l'escalade ne se complète
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1792-1794 | La Terreur, Robespierre |
+| Angleterre | 1649 | Exécution de Charles Ier |
+| Israël | 67-70 | Les Zélotes éliminent les modérés |
+| Venise | mars 1849 | Amorce seulement — l'assemblée vote les « pouvoirs illimités » pour Manin, mais l'Autriche écrase la République avant que l'escalade ne se complète |
 
 ### Saillant : Moment thermidorien
 
 Le centre et la droite reprennent le pouvoir et purgent l'extrême-gauche. Un régime plus stable émerge, mais avec une base moins large.
 
-**Exemples :**
-- France : réaction thermidorienne (1794), Directoire (1795-1799)
-- Angleterre : Rump Parliament (1649-1653)
-- Israël : la RN est écrasée par Rome avant cette étape
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1794-1799 | Réaction thermidorienne, Directoire |
+| Angleterre | 1649-1653 | Rump Parliament |
+| Israël | | La RN est écrasée par Rome avant cette étape |
 
 ## Sous-phase 2 : Impérialiste Revanchard
 
@@ -81,11 +85,12 @@ Figure autoritaire qui renoue avec la verticalité du pouvoir. Sa coalition gagn
 
 Le moment où la figure autoritaire prend le pouvoir.
 
-**Exemples :**
-- France : Bonaparte, coup d'État du 18 Brumaire (1799)
-- Angleterre : Cromwell, Lord Protector (1653)
-- Allemagne : Hitler (1933)
-- Russie : Staline
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1799 | Bonaparte, coup d'État du 18 Brumaire |
+| Angleterre | 1653 | Cromwell, Lord Protector |
+| Allemagne | 1933 | Hitler |
+| Russie | | Staline |
 
 ## Sous-phase 3 : Restauration
 
@@ -95,18 +100,20 @@ L'IR finit par tomber, de manière exogène (défaite militaire) ou endogène (t
 
 Le moment où l'ancien ordre (ou un ordre conservateur) est restauré après la chute de l'IR. C'est à la fois un saillant (le moment de la restauration) et le début de la sous-phase du même nom (la durée pendant laquelle cet ordre restauré se maintient).
 
-**Exemples :**
-- France : Restauration bourbonienne (1815) — Louis XVIII après Waterloo
-- Angleterre : Restauration Stuart (1660) — Charles II après la mort de Cromwell
-- Allemagne : Occupation alliée et division (1945) — fin du régime nazi
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1815 | Restauration bourbonienne — Louis XVIII après Waterloo |
+| Angleterre | 1660 | Restauration Stuart — Charles II après la mort de Cromwell |
+| Allemagne | 1945 | Occupation alliée et division — fin du régime nazi |
 
 ### Saillant : Glorieuse Révolution
 
 Une réplique de la révolution initiale finit d'ancrer le parlementarisme dans la vie politique. La base politique est élargie fortement et définitivement. C'est la transition vers l'État-nation parlementaire.
 
-**Exemples :**
-- France : Révolution de 1830 (les Trois Glorieuses)
-- Angleterre : Glorieuse Révolution de 1688
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1830 | Révolution de 1830 (les Trois Glorieuses) |
+| Angleterre | 1688 | Glorieuse Révolution |
 
 ## Conditions de sortie de la Révolution Nationale
 
@@ -134,9 +141,10 @@ Deux configurations :
 
 La Révolution Nationale peut être écrasée par une puissance extérieure avant d'atteindre son terme. Dans ce cas, le Parcours est interrompu.
 
-**Exemple :**
-- Israël (prolongement) : la Grande Révolte de 66 suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome en 70 avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal.
-- Venise : la République de Manin (1848-1849) suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël (prolongement) | 66-70 | La Grande Révolte suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal |
+| Venise | 1848-1849 | La République de Manin suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète |
 
 ## Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)
 

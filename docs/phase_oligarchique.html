@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase oligarchique — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #2E8B57; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html" class="active">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Phase oligarchique</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
+<ul>
+<li><a href="#test-discriminant-oligarchique-vs-absolutiste">Test discriminant (oligarchique vs absolutiste)</a></li>
+<li><a href="#marqueurs-nécessaires">Marqueurs nécessaires</a></li>
+<li><a href="#marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)</a></li>
+</ul>
+<li><a href="#sous-phase-1-essor-oligarchique">Sous-phase 1 : Essor oligarchique</a></li>
+<ul>
+<li><a href="#saillant-1er-monarque-oligarchique-t0">1er monarque oligarchique (T0)</a></li>
+<li><a href="#saillant-acmé-oligarchique">Acmé oligarchique</a></li>
+<li><a href="#saillant-fin-de-l-expansion-tournant-essor-polarisation">Fin de l&#x27;expansion (tournant essor → polarisation)</a></li>
+<li><a href="#structure-institutionnelle">Structure institutionnelle</a></li>
+<li><a href="#marqueurs-forts-initiaux">Marqueurs forts initiaux</a></li>
+<li><a href="#marqueurs-forts-en-cours-de-phase">Marqueurs forts en cours de phase</a></li>
+<li><a href="#marqueurs-observables">Marqueurs observables</a></li>
+</ul>
+<li><a href="#sous-phase-2-polarisation-des-élites">Sous-phase 2 : Polarisation des élites</a></li>
+<ul>
+<li><a href="#l-expansion-retarde-la-polarisation">L&#x27;expansion retarde la polarisation</a></li>
+<li><a href="#exemples-de-polarisation">Exemples de polarisation</a></li>
+</ul>
+<li><a href="#sous-phase-3-guerre-sociale">Sous-phase 3 : Guerre sociale</a></li>
+<ul>
+<li><a href="#les-deux-critères-essentiels">Les deux critères essentiels</a></li>
+<li><a href="#la-figure-résolvante">La figure résolvante</a></li>
+<li><a href="#exemples">Exemples</a></li>
+</ul>
+<li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
+<article>
+<p>Durant toute la phase oligarchique, l'État central <strong>grossit progressivement</strong>. Le souverain n'est pas encore en règne absolu : de grands seigneurs peuvent encore contester son autorité, et des instances importantes restent aux mains des oligarques plutôt que sous le contrôle de l'appareil d'État central. Mais à mesure que l'État grossit, une <strong>nouvelle classe d'élites</strong> se forme : des grands serviteurs de l'État, ou des familles liées à cette nouvelle donne &mdash; parfois d'anciens lignages féodaux reconvertis, parfois des familles nouvelles.</p>
+<p>La phase produit ainsi progressivement deux élites aux intérêts divergents :</p>
+<ul>
+  <li>La <strong>classe prébendière</strong> (Weber) : élite dont le revenu dépend de l'État &mdash; charges, faveurs, accès aux réseaux commerciaux structurés par le pouvoir central. Elle est associée au commerce, aux échanges et à l'administration, où le souverain recrute ses fonctionnaires.</li>
+  <li>La <strong>classe patrimoniale</strong> (Weber) : élite dont le revenu repose sur un patrimoine propre, foncier ou productif, indépendant du pouvoir central. Issue de l'aristocratie de la phase féodale, elle est plutôt terrienne, rurale, traditionaliste.</li>
+</ul>
+<p>Les activités de la classe prébendière étant naturellement plus faciles à contrôler par l'exécutif central, celui-ci va les promouvoir. La polarisation entre les deux classes, lente au début, s'accélère quand les aventures extérieures cessent de servir d'exutoire &mdash; et l'affrontement entre les deux factions finit par structurer toute la fin de la phase.</p>
+<p><strong>Les « égaux » de cette phase</strong> sont les oligarques &mdash; les anciens seigneurs féodaux devenus une classe structurée &mdash; auxquels viennent s'ajouter les nouvelles élites. Le pacte oligarchique de la phase précédente ne peut plus tenir : il y a « trop de monde autour de la table ». <strong>Résolution</strong> : la <strong>guerre sociale</strong> aboutit à la subordination des anciens réseaux lignagers au pouvoir administratif central.</p>
+<h2 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h2>
+<h3 id="test-discriminant-oligarchique-vs-absolutiste">Test discriminant (oligarchique vs absolutiste)<a class="anchor" href="#test-discriminant-oligarchique-vs-absolutiste">#</a></h3>
+<p>L'<strong>administration centrale</strong> a-t-elle <strong>préséance de facto</strong> sur les administrations locales ? L'exécutif peut-il agir (déclarer la guerre, lever des impôts, rendre la justice) <strong>sans l'accord des oligarques</strong> ?</p>
+<ul>
+  <li><strong>Non</strong> → phase oligarchique. L'État central existe mais doit composer avec les pouvoirs locaux. Les oligarques disposent de leurs propres appareils fiscaux, militaires et judiciaires.</li>
+  <li><strong>Oui</strong> → phase absolutiste. L'administration centrale s'est imposée ; les administrations locales sont devenues ses supplétifs.</li>
+</ul>
+<p><strong>Échelle d'application :</strong> Le test s'applique à l'échelle nationale. Dans une monarchie composite, si le noyau est absolutisé mais que des entités associées conservent leurs propres institutions, le test reste négatif &mdash; la nation est encore en phase oligarchique. L'expansion (coloniale, impériale) prolonge alors la phase oligarchique, pas la phase absolutiste (qui n'a pas encore commencé).</p>
+<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<ul>
+  <li>Fisc permanent central (même coexistant avec des fiscs locaux)</li>
+  <li>Armée permanente soldée par l'exécutif</li>
+  <li>Administration centrale (même embryonnaire)</li>
+  <li>Coexistence de l'appareil central avec des pouvoirs locaux encore autonomes</li>
+</ul>
+<h3 id="marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires">#</a></h3>
+<ul>
+  <li>Codification du droit et assemblées des élites</li>
+  <li>Deux factions identifiables (prébendière vs patrimoniale)</li>
+  <li>Mercenariat de masse</li>
+  <li>Conflits entre l'exécutif et le pouvoir judiciaire (surtout en fin de phase)</li>
+</ul>
+<h2 id="sous-phase-1-essor-oligarchique">Sous-phase 1 : Essor oligarchique<a class="anchor" href="#sous-phase-1-essor-oligarchique">#</a></h2>
+<p>Après le pacte oligarchique, la nation se dote de nouveaux outils &mdash; fisc permanent, armée permanente, administration centrale &mdash; et peut déployer une <strong>énergie focalisée</strong> vers l'extérieur. C'est l'essor oligarchique : la période la plus dynamique de la phase. Le souverain utilise cette puissance nouvelle pour conquérir de nouveaux territoires et projeter la nation vers l'extérieur (sauf si le différentiel de puissance avec les voisins l'interdit).</p>
+<p><strong>Tant que cette projection extérieure fonctionne comme mode d'enrichissement et exutoire</strong>, la polarisation des élites est retardée. Les conquêtes et le commerce extérieur absorbent l'énergie des élites et les enrichissent &mdash; elles n'ont pas besoin de se battre pour le contrôle de l'État central. La codification du droit, la protection de la propriété privée et la concurrence entre élites favorisent la croissance économique.</p>
+<h3 id="saillant-1er-monarque-oligarchique-t0">1er monarque oligarchique (T0)<a class="anchor" href="#saillant-1er-monarque-oligarchique-t0">#</a></h3>
+<p>Le premier souverain qui dispose d'un État central &mdash; impôt permanent, armée permanente, administration. Il marque le passage d'une chefferie féodale à un véritable État territorial.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">-885</span></div><span class="card-desc">Omri</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1328</span></div><span class="card-desc">Philippe VI de Valois &mdash; premier roi sous les règles codifiées (loi salique)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1327</span></div><span class="card-desc">Édouard III &mdash; premier roi après les Ordonnances de 1311 et la bascule oligarchique</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~1043</span></div><span class="card-desc">Domenico Contarini / système &mdash; premier doge stable sous le régime post-dynastique, avec fisc commercial permanent, flotte permanente, administration en institutionnalisation. Le « monarque » vénitien est le système institutionnel plus que la personne du doge</span></div></div>
+</div>
+<h3 id="saillant-acmé-oligarchique"><span class="material-symbols-outlined h3-icon" style="color:#2E8B57;">terrain</span>Acmé oligarchique<a class="anchor" href="#saillant-acmé-oligarchique">#</a></h3>
+<p><strong>Définition simple</strong> : le moment où le pouvoir central (et la puissance de la nation) est au plus fort pendant la phase oligarchique. Un souverain qui « sort du lot par la puissance de son pouvoir personnel », combinée à la projection extérieure maximale de la nation dans le cadre oligarchique existant. L'acmé se situe typiquement dans l'essor ou au début de la polarisation, mais sa position chronologique varie considérablement selon les cas &mdash; ce n'est pas une position fixe dans la phase.</p>
+<p><strong>L'acmé correspond au point de saturation de l'exutoire externe.</strong> Vérification empirique sur le corpus : la fraction de la phase oligarchique où se situe l'acmé (0 = début, 1 = fin) varie de 0.13 (Suisse, ~1512) à 0.71 (Autriche, Léopold Ier ~1683). Le pattern qui se dégage n'est pas une position temporelle fixe mais une corrélation dynamique &mdash; <strong>l'acmé arrive quand l'exutoire externe cesse de produire son surplus d'énergie</strong>. Quand l'exutoire est court, l'acmé est précoce (Espagne : Rois Catholiques à 0.36, l'essor maritime et ibérique sature rapidement). Quand l'exutoire est très long, l'acmé est tardif (Venise : Foscari à 0.64 ; Autriche : Léopold Ier à 0.71, porté par l'exutoire anti-ottoman qui relance la projection extérieure au milieu de la polarisation). Les cas sans exutoire prolongé se regroupent autour de 0.45-0.55 (France, Angleterre, Milan, Bavière, Israël &mdash; « charnière essor/polarisation »).</p>
+<p>Conséquence méthodologique : <strong>ne pas chercher l'acmé oligarchique à une fraction fixe de la phase</strong>. Identifier plutôt le moment où la combinaison « puissance personnelle du souverain + projection extérieure maximale » est à son sommet. Ce moment peut arriver très tôt, en milieu de phase, ou très tard selon la dynamique de l'exutoire.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-770</span></div><span class="card-desc">Jéroboam II (position ~0.47)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">~1515</span></div><span class="card-desc">François Ier (position ~0.53) &mdash; Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~1350</span></div><span class="card-desc">Édouard III (position ~0.56)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">~1492</span></div><span class="card-desc">Rois Catholiques (position ~0.36) &mdash; pic précoce, expansion maritime et ibérique qui sature rapidement</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~1440</span></div><span class="card-desc">Francesco Foscari (position ~0.64) &mdash; plus long dogat de l'histoire vénitienne (1423-1457), expansion maximale de la Terraferma. Foscari agit dans le cadre de la promissione ducale &mdash; le Conseil des Dix le force à démissionner en 1457</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">~1555</span></div><span class="card-desc">Albert V (position ~0.54)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Autriche</span><span class="card-date">~1683-1705</span></div><span class="card-desc">Léopold Ier (position ~0.71) &mdash; pic très tardif porté par l'exutoire anti-ottoman qui relance une dynamique de projection extérieure au milieu de la polarisation</span></div></div>
+</div>
+<h3 id="saillant-fin-de-l-expansion-tournant-essor-polarisation">Fin de l'expansion (tournant essor → polarisation)<a class="anchor" href="#saillant-fin-de-l-expansion-tournant-essor-polarisation">#</a></h3>
+<p>Le moment où l'expansion extérieure cesse de fonctionner et les tensions internes prennent le relais. Marque le tournant entre l'essor dynamique et la polarisation des élites.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-746</span></div><span class="card-desc">Mort de Jéroboam II &mdash; instabilité, pression assyrienne</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">France (Deblonde)</span><span class="card-date">1559</span></div><span class="card-desc">Traité de Cateau-Cambrésis &mdash; fin des Guerres d'Italie, mort d'Henri II</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1509</span></div><span class="card-desc">Agnadello / Ligue de Cambrai &mdash; Venise perd toute la Terraferma avant de la récupérer. Fin de l'expansion agressive ; les guerres deviennent purement défensives</span></div></div>
+</div>
+<h3 id="structure-institutionnelle">Structure institutionnelle<a class="anchor" href="#structure-institutionnelle">#</a></h3>
+<ul>
+  <li>Chambre haute représentant les grands seigneurs et oligarques (cœur initial du pouvoir)</li>
+  <li>Pouvoir exécutif arbitre entre les oligarques</li>
+  <li>Assemblée populaire ou chambre basse (validation de la légitimité populaire)</li>
+  <li>Pouvoir judiciaire conçu comme contre-pouvoir, avec souvent une « Cour Suprême »</li>
+  <li>Appareil gouvernemental fortement décentralisé, avec au moins un deuxième échelon capable de lever des impôts et de légiférer</li>
+  <li>Partis politiques de nature clientéliste</li>
+</ul>
+<h3 id="marqueurs-forts-initiaux">Marqueurs forts initiaux<a class="anchor" href="#marqueurs-forts-initiaux">#</a></h3>
+<ul>
+  <li>Mise par écrit ou codification légale des rapports de force entre l'exécutif central et les oligarques</li>
+  <li>Premières troupes soldées en numéraire par l'exécutif central</li>
+  <li>Apparition d'un fisc central, coexistant avec les fiscs oligarchiques locaux</li>
+  <li>Polarisation faible des élites (encore majoritairement issues de l'aristocratie de la phase précédente)</li>
+</ul>
+<h3 id="marqueurs-forts-en-cours-de-phase">Marqueurs forts en cours de phase<a class="anchor" href="#marqueurs-forts-en-cours-de-phase">#</a></h3>
+<ul>
+  <li>Fonctionnaires payés en numéraire par l'exécutif central</li>
+  <li>L'exécutif acquiert le droit de lever des troupes sur tout le territoire en cas de guerre</li>
+  <li>Droit d'appel au chef de l'exécutif pour les membres du corps civique</li>
+  <li>Première assemblée des élites prébendières</li>
+  <li>Administration parallèle répondant directement à l'exécutif, sans préséance sur les administrations locales</li>
+  <li>Formation d'un « conseil privé » au sommet de cette administration parallèle</li>
+  <li>L'exécutif développe des contournements juridiques pour s'accaparer de facto la politique extérieure et la gestion militaire</li>
+</ul>
+<h3 id="marqueurs-observables">Marqueurs observables<a class="anchor" href="#marqueurs-observables">#</a></h3>
+<ul>
+  <li>Activité militaire accrue</li>
+  <li>(Ré)apparition du mercenariat de masse</li>
+  <li>Croissance économique</li>
+</ul>
+<h2 id="sous-phase-2-polarisation-des-élites">Sous-phase 2 : Polarisation des élites<a class="anchor" href="#sous-phase-2-polarisation-des-élites">#</a></h2>
+<p>Dès que les aventures extérieures cessent de rapporter &mdash; par saturation, défaite, ou fermeture des débouchés &mdash; la dynamique principale de la nation change. La question n'est plus « comment s'enrichir à l'extérieur ? » mais « <strong>qui contrôle l'État central ?</strong> ». Car l'État a grossi pendant l'essor : il lève des impôts, distribue des charges, structure le commerce, rend la justice. Pour les élites, s'assurer que cet appareil ne soit pas utilisé <em>contre</em> elles &mdash; et même qu'il soit utilisé <em>pour</em> elles &mdash; devient la priorité.</p>
+<p>C'est le déclencheur de la polarisation : les deux classes d'élites, prébendière et patrimoniale, se structurent en factions rivales pour le contrôle de l'administration centrale, de la fiscalité et de la justice. L'élite patrimoniale fédère une clientèle plutôt rurale ; l'élite prébendière une clientèle plutôt urbaine.</p>
+<p>Le progrès technique et l'homogénéisation socioculturelle font que l'administration parallèle finit par doubler toutes les administrations oligarchiques. Les activités de la classe patrimoniale deviennent elles aussi de plus en plus faciles à contrôler par l'exécutif central. Les élites patrimoniales se rallient donc progressivement à l'administration, abandonnant leurs clientèles rurales.</p>
+<h3 id="l-expansion-retarde-la-polarisation">L'expansion retarde la polarisation<a class="anchor" href="#l-expansion-retarde-la-polarisation">#</a></h3>
+<p>L'expansion extérieure peut considérablement retarder la polarisation. Tant que les élites disposent de débouchés extérieurs (conquêtes, commerce, colonies), la lutte pour le contrôle de l'État central ne devient pas la question vitale &mdash; les tensions sont absorbées par l'exutoire. C'est le mécanisme analogue aux boucles de la phase féodale : une condition non remplie empêche la transition.</p>
+<p><strong>Condition essentielle : les territoires acquis doivent être directement administrés par la nation.</strong> L'exutoire ne fonctionne que si les élites ont quelque chose à <em>prendre</em> de l'expansion &mdash; des charges, des terres, des revenus accessibles via l'administration centrale. Si les administrations locales des territoires acquis restent intactes (union personnelle, lien de suzeraineté), les élites de la nation conquérante n'y ont pas accès et l'expansion ne sert pas d'exutoire.</p>
+<ul>
+  <li><strong>Venise</strong> : l'empire colonial vénitien (Stato da Màr, Terraferma) est directement administré par des patriciens vénitiens → vrai exutoire, polarisation retardée de plusieurs siècles.</li>
+  <li><strong>Espagne</strong> : l'empire colonial américain est administré par des fonctionnaires castillans (vice-rois, audiencias, corregidores) → vrai exutoire.</li>
+  <li><strong>Autriche</strong> : l'empire habsbourgeois est vaste en Europe, mais pendant la phase oligarchique, l'Autriche n'a pas subordonné les administrations locales (Bohême, Hongrie, etc.) à sa propre administration centrale. Les élites autrichiennes n'ont rien à « prendre » de ces territoires → pas un vrai exutoire, et la phase oligarchique autrichienne n'est pas aussi longue que celle de Venise ou de l'Espagne.</li>
+  <li><strong>Angleterre médiévale</strong> : les conquêtes anglaises en France n'ont pas été administrées par des barons anglais &mdash; les territoires ont continué à opérer avec leurs propres administrations → pas un exutoire au sens strict.</li>
+</ul>
+<p><strong>Règle opératoire</strong> : l'expansion prolonge la phase EN COURS. Vérifier (1) via le test discriminant que la phase est bien celle qui est en cours au moment de l'expansion, et (2) que les territoires sont directement administrés par la nation &mdash; sinon l'expansion n'est pas un exutoire.</p>
+<p><strong>Venise</strong> : la phase oligarchique dure ~637 ans (~1032-~1669) parce que l'expansion permanente (Stato da Màr, Terraferma, guerres ottomanes) fournit continuellement des débouchés. La polarisation ne commence sérieusement qu'après Agnadello (1509), et la guerre sociale ne se résout qu'après la perte de la Crète (1669).</p>
+<p><strong>Espagne</strong> : la phase oligarchique dure ~345 ans (1369-1714), prolongée par la Reconquista, l'empire colonial américain et le choc d'hétérogénéité habsbourgeois (1516). L'empire colonial prolonge la phase OLIGARCHIQUE (pas l'absolutiste) parce que les fueros aragonais sont encore intacts &mdash; le test discriminant absolutiste n'est pas passé à l'échelle nationale.</p>
+<h3 id="exemples-de-polarisation">Exemples de polarisation<a class="anchor" href="#exemples-de-polarisation">#</a></h3>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-760 à -725</span></div><span class="card-desc">Dénonciation par les prophètes Amos et Osée des inégalités sociales, de la corruption et du luxe scandaleux des élites</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Israël antique (reboot)</span></div><span class="card-desc">Affrontement Oniades (patrimoniale, sacerdotale) vs Tobiades (prébendière, hellénisée)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~1509-~1628</span></div><span class="card-desc">Giovani (prébendier &mdash; commerciaux, intellectuels, Sarpi) vs vecchi (patrimonial &mdash; riches, institutionnels, pro-papauté). Polarisation retardée par les exutoires extérieurs, accélérée après Agnadello (1509). Correzione de 1582 : le Grand Conseil arrache des pouvoirs au Conseil des Dix. Affaire Zeno (1628) : dernière tentative de réforme, échouée</span></div></div>
+</div>
+<h2 id="sous-phase-3-guerre-sociale">Sous-phase 3 : Guerre sociale<a class="anchor" href="#sous-phase-3-guerre-sociale">#</a></h2>
+<p>La guerre sociale est à la fois une <strong>sous-phase</strong> (la durée du conflit entre factions) et un <strong>saillant</strong> (le moment de son déclenchement). En tant que saillant, « Guerre sociale » marque le <em>déclenchement</em> du conflit &mdash; pas sa durée.</p>
+<p>On désigne par « guerre sociale » le conflit entre les deux factions élitaires &mdash; prébendière et patrimoniale &mdash; à la fin de la phase oligarchique. Ce conflit ne prend pas nécessairement la forme d'une guerre ouverte : il peut consister en un climat de tensions institutionnelles, de luttes de palais, d'assassinats et de tentatives de réforme avortées (Israël antique sous Manassé, Venise ~1628-1669).</p>
+<h3 id="les-deux-critères-essentiels">Les deux critères essentiels<a class="anchor" href="#les-deux-critères-essentiels">#</a></h3>
+<p><strong>1. La structure du conflit est élitaire</strong> &mdash; prébendière vs patrimoniale. La religion, la région, la dynastie, la langue peuvent servir de <strong>mécanisme de distinction</strong> entre les deux factions, mais la cause structurelle du conflit est toujours la lutte pour le contrôle de l'État central entre des élites dont le mode d'enrichissement diverge (cf. <code>elites.md</code> pour le détail). Les « guerres de religion » ou les « guerres dynastiques » sont des guerres sociales déguisées quand elles satisfont ce critère structurel.</p>
+<p><strong>2. La résolution conduit à un nouveau cadre</strong> &mdash; qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.</p>
+<h3 id="la-figure-résolvante">La figure résolvante<a class="anchor" href="#la-figure-résolvante">#</a></h3>
+<p>En général, on observe que la figure qui résout la guerre sociale est un <strong>tiers</strong> &mdash; une figure populiste s'appuyant sur les clientèles délaissées par les deux factions et sur la classe moyenne administrative pour forcer les puissants à plier devant le pouvoir central. Henri IV, Henri VII, Philippe V offrent des concessions et un compromis légal qui en réalité renforcent le pouvoir central. L'abandon progressif des clientèles par les élites rend ces populations disponibles pour de telles figures.</p>
+<p>Mais le tiers neutre est une <strong>observation empirique fréquente</strong>, pas un critère structurel. Dans le cas d'Israël (prolongement), la guerre sociale se superpose à une guerre d'indépendance : la dynastie hasmonéenne (les Maccabées) n'est pas un tiers &mdash; une faction a clairement gagné. Mais le critère essentiel est satisfait : ce qui suit est bien un nouveau cadre du pouvoir, avec renforcement du pouvoir central et subordination des oligarques.</p>
+<p>Si les deux critères ne sont pas satisfaits &mdash; en particulier si une faction gagne militairement mais sans qu'un nouveau cadre central émerge &mdash; la guerre sociale n'est tout simplement <strong>pas résolue</strong>, et la phase oligarchique se poursuit.</p>
+<h3 id="exemples">Exemples<a class="anchor" href="#exemples">#</a></h3>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-700 à -641</span></div><span class="card-desc">Faction pro-assyrienne/syncrétiste (prébendière) vs faction yahviste/nationaliste (patrimoniale). Ni l'une ni l'autre ne l'emporte : c'est Josias qui émerge comme premier monarque absolu</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Israël antique (prolongement)</span><span class="card-date">~-175 à -140</span></div><span class="card-desc">Oniades vs Tobiades. Ni l'une ni l'autre ne prend le pouvoir : c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">~1562-1598</span></div><span class="card-desc">Guerres de Religion. Ni la Ligue catholique ni les Princes protestants ne l'emportent : ce sont ceux qui soutiennent le Roi (Henri IV) qui gagnent. La monarchie capétienne est renforcée</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~1455-1485</span></div><span class="card-desc">Guerre des Deux-Roses. Ni les York ni les Lancaster ne gagnent : Henri VII crée une nouvelle dynastie (les Tudor)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~1628-1669</span></div><span class="card-desc">Tensions institutionnelles. Après l'échec de la réforme Zeno (1628), l'exécutif (Inquisiteurs d'État) consolide son pouvoir sans opposition. La guerre de Candie (1645-1669) sert de véhicule à la concentration exécutive (délégation d'autorité en urgence permanente). La perte de la Crète (1669) force l'homogénéisation territoriale. Le « tiers » vénitien est institutionnel : les Inquisiteurs d'État, servis par la classe administrative des cittadini (analogue de la noblesse de robe). Ni les giovani ni les vecchi ne l'emportent : c'est l'appareil d'État</span></div></div>
+</div>
+<section class="examples">
+<h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
+<p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
+<div class="saillant-list">
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#2E8B57;">stars</span><span>1er monarque oligarchique</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Omri</span><span class="card-date">-885</span></div><span class="card-desc">Omri est le premier souverain disposant d&#x27;un État central — fisc permanent, armée permanente, administration — marquant le passage du test discriminant : le pouvoir central n&#x27;es...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Domenico Contarini (premier doge stable sous le nouveau régime)</span><span class="card-date">1043</span></div><span class="card-desc">Domenico Contarini (doge 1043-1070) est le premier doge à gouverner de manière stable sous le régime post-dynastique, avec un fisc commercial permanent, une flotte permanente, e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Commune de Milan</span><span class="card-date">1097</span></div><span class="card-desc">Le système communal (1097) fonctionne comme un « monarque oligarchique » collectif — il satisfait les trois marqueurs nécessaires : fisc permanent central (estimo, douanes), arm...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Charles Ier Robert</span><span class="card-date">1308</span></div><span class="card-desc">Charles Ier Robert d&#x27;Anjou (r. 1308-1342) est le premier souverain hongrois disposant d&#x27;un État central — fisc permanent (lucrum camaræ 1323, florin d&#x27;or), administration centra...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Jean de Luxembourg</span><span class="card-date">1310</span></div><span class="card-desc">Jean de Luxembourg (r. 1310-1346) est le premier souverain bohême disposant d&#x27;un État central — fisc permanent (berna generalis à partir de 1310-1311), armée, administration de ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Édouard III</span><span class="card-date">1327</span></div><span class="card-desc">Édouard III est le premier roi d&#x27;Angleterre dont le pouvoir s&#x27;exerce dans un cadre institutionnel codifié par le pacte oligarchique de 1311, avec un appareil étatique permanent ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Philippe VI</span><span class="card-date">1328</span></div><span class="card-desc">Philippe VI est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique di...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Henri II de Trastámara</span><span class="card-date">1369</span></div><span class="card-desc">Henri II (r. 1369-1379) est le premier souverain disposant d&#x27;un Etat central sous le cadre codifie du pacte trastamara. Les marqueurs necessaires sont presents : fisc permanent ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Charles VII</span><span class="card-date">1429</span></div><span class="card-desc">Charles VII est le premier roi de la seconde phase oligarchique, dont la légitimité repose sur le nouveau pacte de Chinon (1428) confirmé par le sacre à Reims (1429). Il reconst...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Amédée VIII</span><span class="card-date">1430</span></div><span class="card-desc">Amédée VIII est le premier souverain régnant sous un cadre institutionnel codifié (Statuta Sabaudiae, 1430), disposant d&#x27;une Camera dei Conti permanente, d&#x27;une administration en...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">La Tagsatzung et les baillages communs</span><span class="card-date">~1501</span></div><span class="card-desc">Le « monarque oligarchique » suisse est institutionnel, pas personnel — conformément au principe « les saillants sont des marqueurs, pas des conditions ». Le proto-État confédér...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Guillaume IV</span><span class="card-date">1508</span></div><span class="card-desc">Guillaume IV est le premier souverain régnant sous le cadre codifié du pacte oligarchique (primogéniture 1506), disposant d&#x27;un fisc permanent, d&#x27;une administration permanente (V...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Maximilien Ier</span><span class="card-date">1518</span></div><span class="card-desc">Maximilien Ier (1518-1519) est le premier monarque oligarchique autrichien. Il convoque le premier Generallandtag commun de tous les Erbländer à Innsbruck, négocie et promulgue ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Sénat de Milan</span><span class="card-date">1541</span></div><span class="card-desc">Le système Sénat/patriciat formalisé par les Novae Constitutiones (1541) satisfait les trois marqueurs nécessaires de la phase oligarchique : fisc permanent central (villes avec...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Emmanuel Philibert</span><span class="card-date">1559</span></div><span class="card-desc">Emmanuel Philibert (r. 1553-1580) est le 1er monarque oligarchique du 2e cycle. Victorieux à Saint-Quentin (1557), il récupère ses territoires au Traité de Cateau-Cambrésis (155...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Frédéric-Guillaume, Grand Électeur</span><span class="card-date">~1640</span></div><span class="card-desc">Premier souverain disposant d&#x27;un fisc permanent (Kontribution), d&#x27;une armée permanente et d&#x27;une administration centralisée (Geheimer Rat). Le pouvoir survit à sa succession — le...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Joaquín Prieto</span><span class="card-date">1831</span></div><span class="card-desc">Joaquín Prieto (1831-1841) est le premier souverain chilien disposant d&#x27;un État central — fisc douanier permanent, armée permanente, administration territoriale d&#x27;intendances. L...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#2E8B57;">terrain</span><span>Acmé oligarchique</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Jéroboam II</span><span class="card-date">-770</span></div><span class="card-desc">Sous Jéroboam II, le royaume d&#x27;Israël atteint le point de saturation de l&#x27;exutoire externe — extension maximale de la Syrie à la mer Morte, combinaison de puissance personnelle ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Ligue lombarde</span><span class="card-date">1183</span></div><span class="card-desc">La Paix de Constance (1183) consacre l&#x27;auto-gouvernement des cités lombardes. Milan est au sommet de sa puissance communale et de sa projection extérieure — leader de la Ligue, ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri V</span><span class="card-date">1415</span></div><span class="card-desc">Henri V porte la monarchie oligarchique anglaise à son sommet absolu avec la victoire d&#x27;Azincourt (1415) et le Traité de Troyes (1420), qui lui accorde la couronne de France — u...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Francesco Foscari</span><span class="card-date">1440</span></div><span class="card-desc">Foscari correspond au point de saturation de l&#x27;exutoire externe : puissance personnelle maximale du souverain combinée avec la projection extérieure maximale de la nation (empir...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Georges de Podiebrad</span><span class="card-date">1458</span></div><span class="card-desc">Élu unanimement par la diète bohême le 2 mars 1458, Georges de Podiebrad est le premier roi de Bohême élu en son nom propre sans prétention dynastique. Hussite utraquiste modéré...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Mathias Corvin</span><span class="card-date">1458</span></div><span class="card-desc">Mathias Corvin, élu roi par la diète en 1458, est le acmé oligarchique hongrois : centralisation maximale, Armée Noire mercenaire permanente, conquêtes (Vienne 1485-1490, Silési...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Isabelle Ière et Ferdinand V</span><span class="card-date">1492</span></div><span class="card-desc">Les Rois Catholiques (Isabelle de Castille, r. 1474-1504, et Ferdinand d&#x27;Aragon, r. 1479-1516) sont le acmé oligarchique espagnol — la figure exécutive la plus puissante dans le...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">La Confédération</span><span class="card-date">1512</span></div><span class="card-desc">L&#x27;occupation de Milan (1512-1515) correspond au point de saturation de l&#x27;exutoire externe, conformément à la corrélation dynamique identifiée sur le corpus : l&#x27;acmé arrive quand...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">François Ier</span><span class="card-date">1515</span></div><span class="card-desc">François Ier porte la monarchie oligarchique française à son apogée avec le Concordat de Bologne en 1516, qui lui donne le contrôle des nominations ecclésiastiques, la victoire ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Albert V</span><span class="card-date">1555</span></div><span class="card-desc">Albert V (1550-1579) est l&#x27;acmé oligarchique : puissance personnelle du souverain maximale, combinée à la projection confessionnelle (Jésuites). Position ~0.54 dans la phase — c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Carlo Borromeo</span><span class="card-date">1564</span></div><span class="card-desc">Carlo Borromeo (archevêque 1564-1584) porte le Milan espagnol au sommet de sa puissance et de son prestige — acmé oligarchique au sens de la combinaison « puissance personnelle ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Charles Emmanuel Ier</span><span class="card-date">1600</span></div><span class="card-desc">Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l&#x27;expansionniste agressif qui porte l&#x27;énergie oligarchique à son maximum. Saisie du marquisat de Saluzzo (1588, conf...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Léopold Ier</span><span class="card-date">1658</span></div><span class="card-desc">Léopold Ier (r. 1658-1705) porte la monarchie habsbourgeoise à son maximum de puissance dans le cadre oligarchique composite. Règne long (47 ans), victoire symbolique majeure (l...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">José Manuel Balmaceda</span><span class="card-date">1886</span></div><span class="card-desc">José Manuel Balmaceda, président de 1886 à 1891, incarne le acmé oligarchique chilien : Chile vient de gagner la guerre du Pacifique (1879-1884) et contrôle le monopole mondial ...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#2E8B57;">block</span><span>Fin de l&#x27;expansion</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Mort de Jéroboam II</span><span class="card-date">-746</span></div><span class="card-desc">La mort de Jéroboam II en -746 marque le tournant essor / polarisation : l&#x27;expansion extérieure cesse de fonctionner comme exutoire, et la dynamique principale de la nation pass...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Mort d&#x27;Hérode</span><span class="card-date">-4</span></div><span class="card-desc">La mort d&#x27;Hérode en -4 marque le tournant impérialisme / Ancien Régime : le pouvoir central atteint les limites de son expansion, le territoire est divisé et encadré par Rome, e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Frédéric II de Hohenstaufen</span><span class="card-date">1237</span></div><span class="card-desc">La défaite de Cortenuova (1237) face à Frédéric II marque la fin de l&#x27;expansion agressive — le Carroccio est capturé. Après Cortenuova, la projection extérieure cesse de fonctio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Rodolphe Ier de Habsbourg</span><span class="card-date">1278</span></div><span class="card-desc">La défaite et la mort d&#x27;Ottokar II à Marchfeld (26 août 1278) met fin à l&#x27;hégémonie centre-européenne bohême et fait perdre au royaume ses marges austro-alpines. Ces territoires...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Baugé</span><span class="card-date">1421</span></div><span class="card-desc">La bataille de Baugé (22 mars 1421) — première défaite anglaise en bataille rangée depuis Azincourt — brise le mythe d&#x27;invincibilité et marque le début du renversement de la dyn...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Agnadello</span><span class="card-date">1509</span></div><span class="card-desc">La Ligue de Cambrai inflige à Venise la défaite d&#x27;Agnadello (1509) : toute la Terraferma est perdue avant d&#x27;être récupérée par la diplomatie. L&#x27;épisode marque la fin de l&#x27;expans...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">François Ier</span><span class="card-date">1515</span></div><span class="card-desc">La bataille de Marignan (1515) marque le tournant essor → polarisation. L&#x27;expansion extérieure collective cesse de fonctionner comme exutoire — la question passe de « comment pr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Cateau-Cambrésis</span><span class="card-date">1559</span></div><span class="card-desc">Le Traité de Cateau-Cambrésis met fin aux Guerres d&#x27;Italie en 1559 et la mort accidentelle d&#x27;Henri II la même année ferme la soupape extérieure qui canalisait les tensions entre...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">L&#x27;Invincible Armada</span><span class="card-date">1588</span></div><span class="card-desc">La defaite de l&#x27;Armada (1588) marque le tournant de l&#x27;expansion exterieure vers la polarisation interne. Les guerres deviennent defensives et la soupape militaire europeenne s&#x27;e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Jacques Ier</span><span class="card-date">1603</span></div><span class="card-desc">La mort d&#x27;Élisabeth Ière et la succession Stuart en 1603 ferment la soupape d&#x27;expansion élisabéthaine et ouvrent une période de sclérose où le système perd sa capacité à canalis...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Peste de 1630</span><span class="card-date">1630</span></div><span class="card-desc">La peste de 1630 marque la fin de l&#x27;expansion oligarchique et le basculement de dynamique vers la polarisation. Avant la peste, le Milan espagnol est l&#x27;un des territoires les pl...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Charles Emmanuel Ier</span><span class="card-date">1630</span></div><span class="card-desc">Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l&#x27;expansionniste agressif : saisie du marquisat de Saluzzo (1588, confirmée par le Traité de Lyon 1601 en échange de...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Blenheim</span><span class="card-date">1704</span></div><span class="card-desc">La bataille de Blenheim (13 août 1704) marque le tournant impérialisme → sclérose : le pouvoir central atteint les limites de son expansion extérieure. Dix ans d&#x27;occupation autr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Traité de Passarowitz</span><span class="card-date">1718</span></div><span class="card-desc">Le traité de Passarowitz (21 juillet 1718), signé après la guerre victorieuse d&#x27;Eugène de Savoie contre les Ottomans, marque le sommet et la fin de l&#x27;expansion oligarchique autr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Passarowitz</span><span class="card-date">1718</span></div><span class="card-desc">Le traité de Passarowitz (1718) entérine la perte de la Morée et marque la fin définitive de toute expansion vénitienne. À partir de cette date, le système entre en Ancien Régime.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Aix-la-Chapelle</span><span class="card-date">1748</span></div><span class="card-desc">Le Traité d&#x27;Aix-la-Chapelle (1748) entérine les derniers gains territoriaux piémontais (Vigevano) et marque la fin définitive de l&#x27;expansion. Après cette date, le système entre ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Giuseppe Prina</span><span class="card-date">1814</span></div><span class="card-desc">L&#x27;effondrement napoléonien (1814) met fin à l&#x27;expansion — le pouvoir central atteint les limites de son potentiel d&#x27;expansion et l&#x27;impérialisme s&#x27;essouffle (saillant canonique m...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Congrès de Vienne</span><span class="card-date">1815</span></div><span class="card-desc">Le Congrès de Vienne (1814-1815), orchestré par Metternich, consolide l&#x27;Empire d&#x27;Autriche dans ses frontières de l&#x27;ordre européen post-napoléonien. Après 1815, l&#x27;Autriche est en...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Congrès de Vienne</span><span class="card-date">1815</span></div><span class="card-desc">Le Congrès de Vienne (1814-1815) marque la fin de l&#x27;expansion de la monarchie habsbourgeoise. La Hongrie n&#x27;a pas d&#x27;expansion propre — elle participe à l&#x27;expansion habsbourgeoise...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Domingo Santa María</span><span class="card-date">1884</span></div><span class="card-desc">Le Traité d&#x27;Ancón (20 octobre 1883), ratifié en 1884, conclut la guerre du Pacifique par la cession au Chili de Tarapacá à perpétuité et d&#x27;Antofagasta. La même année, la pacific...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Désastre de 1898</span><span class="card-date">1898</span></div><span class="card-desc">La perte de Cuba, des Philippines et de Porto Rico (1898) elimine le dernier exutoire colonial. Apres 1898, le Parcours accelere : l&#x27;AR ne dure que ~33 ans (1898-1931). Analogue...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#2E8B57;">local_fire_department</span><span>Guerre sociale</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Manassé vs yahvistes</span><span class="card-date">-700</span></div><span class="card-desc">Guerre sociale classique : la faction prébendière (élites marchandes pro-assyriennes, Manassé) affronte la faction patrimoniale (élites rurales yahvistes). Ni l&#x27;une ni l&#x27;autre n...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Révolte des Maccabées</span><span class="card-date">-175</span></div><span class="card-desc">Les deux critères de la guerre sociale sont satisfaits : (1) conflit structurellement prébendière (Tobiades, fermiers d&#x27;impôts hellénisés) vs patrimoniale (Oniades, aristocratie...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Napo della Torre / Ottone Visconti</span><span class="card-date">1240</span></div><span class="card-desc">Les deux critères structurels de la guerre sociale sont satisfaits. Critère 1 (structure élitaire prébendière vs patrimoniale) : les Della Torre/Torriani (prébendière — Credenza...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri VII</span><span class="card-date">1455</span></div><span class="card-desc">Les Guerres des Roses satisfont les deux critères de la guerre sociale. La structure est élitaire (Lancaster prébendière vs York patrimoniale, le mécanisme de distinction est dy...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1562</span></div><span class="card-desc">Les Guerres de Religion satisfont les deux critères de la guerre sociale : structure élitaire (la noblesse terrienne patrimoniale, ligueuse ou protestante, affronte l&#x27;administra...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Faillite et tiers</span><span class="card-date">1564</span></div><span class="card-desc">Le conflit satisfait les deux critères structurels : (1) structure élitaire prébendière vs patrimoniale (Weber), avec la confession comme mécanisme de distinction ; (2) résoluti...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Ferdinand II et Frédéric V</span><span class="card-date">1618</span></div><span class="card-desc">Seconde défenestration de Prague (23 mai 1618) : reprise de la guerre sociale avortée 200 ans plus tôt, mêmes factions prébendière (Habsbourg catholiques, clergé romain, nobless...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Giovani vs Vecchi</span><span class="card-date">1628</span></div><span class="card-desc">Premier critère structurel satisfait : giovani (prébendières, commerce et réseaux étatiques) contre vecchi (patrimoniales, patrimoine foncier et charges héritées). Second critèr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Christine de France / Victor Amédée II</span><span class="card-date">1637</span></div><span class="card-desc">La guerre sociale piémontaise satisfait les deux critères structurels. Premier critère : conflit élitaire prébendière (Madamisti — nouvelles familles administratives/de cour, dé...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Guerre des Paysans — Guerres de Villmergen</span><span class="card-date">1653</span></div><span class="card-desc">La guerre sociale suisse (1653-1712) satisfait les deux critères structurels : conflit prébendière (cantons protestants) vs patrimoniale (cantons catholiques) pour le contrôle d...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Guerre de Succession d&#x27;Espagne</span><span class="card-date">1700</span></div><span class="card-desc">La GSE (1700-1714) satisfait les deux critères structurels de la guerre sociale. Premier critère : le conflit oppose élites centralisatrices castillanes (prébendière, dépendante...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Louis II / Soliman le Magnifique</span><span class="card-date">1703</span></div><span class="card-desc">Insurrection de Rákóczi (1703-1711) comme guerre sociale canonique. Factions : kuruc (patrimonial national, protestant, base territoriale Haute-Hongrie et Transylvanie) vs laban...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">François II Rákóczi</span><span class="card-date">1703</span></div><span class="card-desc">Insurrection de Rákóczi (1703-1711), résolue par Szatmár 1711. Les deux critères structurels de la guerre sociale sont satisfaits : (1) structure élitaire du conflit — kuruc (pa...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Marie-Thérèse / François de Lorraine</span><span class="card-date">1740</span></div><span class="card-desc">La Guerre de Succession d&#x27;Autriche satisfait les deux critères structurels de la guerre sociale. (1) Structure élitaire prébendière vs patrimoniale — élites centralisatrices vie...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Joseph II / Pietro Verri</span><span class="card-date">1780</span></div><span class="card-desc">Critère 1 (structure élitaire prébendière vs patrimoniale) : le patriciat foncier (patrimoniale — 259 familles contrôlant plus de la moitié des terres, revenus indépendants du c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Salvador Allende / Augusto Pinochet</span><span class="card-date">1970</span></div><span class="card-desc">Entre septembre 1970 et septembre 1973, les deux critères structurels de la guerre sociale sont satisfaits. (1) Structure élitaire du conflit : faction prébendière (UP — adminis...</span></div></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

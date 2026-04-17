@@ -58,11 +58,12 @@ La **superficie de référence** d'une nation à un moment donné se décompose 
 
 La distinction noyau/marges est la traduction territoriale des deux moteurs du Parcours. Le noyau correspond au territoire où l'homogénéisation culturelle est accomplie ; les marges correspondent au territoire où elle ne l'est pas encore.
 
-**Exemples de décomposition noyau/marges :**
-- **Angleterre** : noyau = Angleterre (~130 000 km²) ; marges = Normandie, Gascogne, pays de Galles, Irlande, Écosse (selon les périodes)
-- **France** : noyau = France d'oïl ; marges = France d'oc (Languedoc, Provence), Bretagne, Alsace
-- **Espagne** : noyau = Castille ; marges = Aragon, Catalogne, Pays-Bas, Naples, Sicile
-- **Venise** : noyau = lagune (~1 000 km²) ; marges = Stato da Màr (Crète, Eubée) + Terraferma (Bergame, Brescia, etc.)
+| Nation | Noyau | Marges |
+|---|---|---|
+| Angleterre | Angleterre (~130 000 km²) | Normandie, Gascogne, pays de Galles, Irlande, Écosse (selon les périodes) |
+| France | France d'oïl | France d'oc (Languedoc, Provence), Bretagne, Alsace |
+| Espagne | Castille | Aragon, Catalogne, Pays-Bas, Naples, Sicile |
+| Venise | Lagune (~1 000 km²) | Stato da Màr (Crète, Eubée) + Terraferma (Bergame, Brescia, etc.) |
 
 **Transitions marge → noyau** : un territoire peut commencer comme marge et rejoindre le noyau quand l'homogénéisation culturelle y est accomplie. Ces transitions sont approximées par des dates ponctuelles :
 - Pays de Galles : marge à partir de 1282 (conquête), noyau à partir de 1536 (Laws in Wales Acts)
@@ -271,15 +272,17 @@ Le principe est rigoureusement symétrique. **Si une acquisition territoriale n'
 
 **Critère de la correction d'échelle (`correction_echelle`) au sens strict** : il faut que le territoire perdu ait été effectivement **digéré** par le noyau — administration directe par du personnel issu du noyau, droit imposé depuis le noyau, mobilisation durable des élites centrales. Seules ces pertes ramènent réellement le Parcours vers un « noyau naturel » plus petit et accélèrent la suite.
 
-**Exemples corrects de correction d'échelle** :
-- **Venise 1669** : perte de la Crète, administrée directement par des baili vénitiens depuis 1204. Vraie contraction d'un empire intégré.
-- **Milan 1402** : fragmentation de l'empire Visconti de Gian Galeazzo, administré directement par des podestà et vicari viscontéens. Vraie contraction.
-- **Autriche 1742** : perte de la Silésie, province de la couronne de Bohême intégrée à l'administration habsbourgeoise depuis la Verneuerte Landesordnung (1627). Vraie contraction d'une province digérée.
-- **Espagne 1808-1826** : perte de l'empire colonial américain, administré directement par des vice-rois, corregidores et audiencias castillans pendant trois siècles. **Seule vraie correction d'échelle du Parcours espagnol.**
+| Nation | Date | Exemple |
+|---|---|---|
+| Venise | 1669 | Perte de la Crète, administrée directement par des baili vénitiens depuis 1204. Vraie contraction d'un empire intégré. |
+| Milan | 1402 | Fragmentation de l'empire Visconti de Gian Galeazzo, administré directement par des podestà et vicari viscontéens. Vraie contraction. |
+| Autriche | 1742 | Perte de la Silésie, province de la couronne de Bohême intégrée à l'administration habsbourgeoise depuis la Verneuerte Landesordnung (1627). Vraie contraction d'une province digérée. |
+| Espagne | 1808-1826 | Perte de l'empire colonial américain, administré directement par des vice-rois, corregidores et audiencias castillans pendant trois siècles. Seule vraie correction d'échelle du Parcours espagnol. |
 
-**Contre-exemples à ne pas coder comme correction d'échelle** :
-- **Espagne** : Portugal 1640, Provinces-Unies (Westphalie 1648), Pays-Bas méridionaux et Italie (Utrecht 1713). Ces possessions étaient en union personnelle avec institutions locales préservées — jamais digérées par les élites castillanes. Leur perte marque seulement la fin d'une soupape militaire européenne, pas un retour vers le noyau naturel.
-- **Angleterre** : Normandie 1204 (Exchequer of Normandy distinct, coutume de Normandie), Gascogne 1453 (sénéchal d'Aquitaine à Bordeaux, droit gascon). Union personnelle. Ces pertes ont un effet structurel réel sur le Parcours anglais (anglicisation forcée, fin de l'exutoire militaire des factions Lancaster/York) mais par un mécanisme différent — voir ci-dessous.
+| Nation | Exemple |
+|---|---|
+| Espagne | Portugal 1640, Provinces-Unies (Westphalie 1648), Pays-Bas méridionaux et Italie (Utrecht 1713). Ces possessions étaient en union personnelle avec institutions locales préservées — jamais digérées par les élites castillanes. Leur perte marque seulement la fin d'une soupape militaire européenne, pas un retour vers le noyau naturel. |
+| Angleterre | Normandie 1204 (Exchequer of Normandy distinct, coutume de Normandie), Gascogne 1453 (sénéchal d'Aquitaine à Bordeaux, droit gascon). Union personnelle. Ces pertes ont un effet structurel réel sur le Parcours anglais (anglicisation forcée, fin de l'exutoire militaire des factions Lancaster/York) mais par un mécanisme différent — voir ci-dessous. |
 
 ### Choc exogène avec fin d'exutoire militaire
 
@@ -291,11 +294,12 @@ Pour les cas où une défaite militaire externe supprime un exutoire sans qu'il 
 
 Les deux produisent le même effet observable (accélération de la phase suivante) mais par des mécanismes distincts. La différence est que la correction d'échelle suppose et valide une digestion préalable ; le choc exogène n'en suppose pas.
 
-**Exemples de choc exogène avec fin d'exutoire militaire** :
-- **Angleterre 1204** (perte de la Normandie, de l'Anjou, du Maine, du Poitou par Jean sans Terre) : coupe les élites anglo-normandes de leurs domaines continentaux, force leur anglicisation et accélère l'homogénéisation vers le pacte (Ordonnances 1311).
-- **Angleterre 1453** (défaite de Castillon, fin de la guerre de Cent Ans) : fin de l'exutoire militaire français qui maintenait l'équilibre précaire entre Lancaster et York. Sans ennemi extérieur, les factions explosent en Guerre des Deux Roses (1455-1485) — la guerre sociale anglaise.
-- **Autriche 1859** (défaite de Solferino, perte de la Lombardie) : la Lombardie n'était vraiment administrée directement que depuis 1815 (44 ans — trop court pour une digestion effective). Sa perte est un choc exogène qui accélère l'AR autrichien.
-- **Autriche 1866** (défaite de Sadowa, perte de la Vénétie + exclusion de l'Allemagne) : la Vénétie, comme la Lombardie, n'avait pas été vraiment digérée depuis 1815. L'exclusion de l'Allemagne n'est pas une perte territoriale mais politique — l'Autriche perd son rôle de puissance directrice de l'espace allemand. L'effet combiné force un réalignement interne majeur (Ausgleich 1867, architecture dualiste).
+| Nation | Date | Exemple |
+|---|---|---|
+| Angleterre | 1204 | Perte de la Normandie, de l'Anjou, du Maine, du Poitou par Jean sans Terre : coupe les élites anglo-normandes de leurs domaines continentaux, force leur anglicisation et accélère l'homogénéisation vers le pacte (Ordonnances 1311). |
+| Angleterre | 1453 | Défaite de Castillon, fin de la guerre de Cent Ans : fin de l'exutoire militaire français qui maintenait l'équilibre précaire entre Lancaster et York. Sans ennemi extérieur, les factions explosent en Guerre des Deux Roses (1455-1485) — la guerre sociale anglaise. |
+| Autriche | 1859 | Défaite de Solferino, perte de la Lombardie : la Lombardie n'était vraiment administrée directement que depuis 1815 (44 ans — trop court pour une digestion effective). Sa perte est un choc exogène qui accélère l'AR autrichien. |
+| Autriche | 1866 | Défaite de Sadowa, perte de la Vénétie + exclusion de l'Allemagne : la Vénétie, comme la Lombardie, n'avait pas été vraiment digérée depuis 1815. L'exclusion de l'Allemagne n'est pas une perte territoriale mais politique — l'Autriche perd son rôle de puissance directrice de l'espace allemand. L'effet combiné force un réalignement interne majeur (Ausgleich 1867, architecture dualiste). |
 
 ### Exemples
 
@@ -325,10 +329,11 @@ Ce phénomène relève du Parcours de l'empire, non de celui de la nation soumis
 **Guerre de Kitos (115-117) :**
 Le soulèvement embrase simultanément la Cyrénaïque, l'Égypte et Chypre, mais mobilise principalement les communautés juives de diaspora — la Judée elle-même n'est pas ou très marginalement impliquée. Il survient au moment précis où Trajan, à l'apogée absolutiste romaine, engage l'Empire dans sa campagne parthique. Ce n'est pas une étape du Parcours juif — c'est une rébellion périphérique du Parcours romain.
 
-**Autres illustrations :**
-- Angleterre sous Henri VIII : Pilgrimage of Grace dans le Nord (1536), rébellion des Fitzgerald en Irlande (1534-1535)
-- France sous Louis XIV : Camisards des Cévennes (1702), Bonnets Rouges de Bretagne (1675), résistance huguenote après la révocation de l'Édit de Nantes (1685)
-- Russie sous Alexandre II : insurrection polonaise de 1863, résistance caucasienne
-- Japon sous Meiji : guerre de Boshin (1868-1869), rébellions de Saga (1874) et Shinpuren (1876), révolte de Satsuma (1877)
+| Nation | Exemple |
+|---|---|
+| Angleterre sous Henri VIII | Pilgrimage of Grace dans le Nord (1536), rébellion des Fitzgerald en Irlande (1534-1535) |
+| France sous Louis XIV | Camisards des Cévennes (1702), Bonnets Rouges de Bretagne (1675), résistance huguenote après la révocation de l'Édit de Nantes (1685) |
+| Russie sous Alexandre II | Insurrection polonaise de 1863, résistance caucasienne |
+| Japon sous Meiji | Guerre de Boshin (1868-1869), rébellions de Saga (1874) et Shinpuren (1876), révolte de Satsuma (1877) |
 
 Dans chaque cas, l'État central, au moment où il impose son autorité avec le plus de vigueur, provoque à ses marges la contestation.

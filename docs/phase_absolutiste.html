@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase absolutiste — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #6A0DAD; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html" class="active">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Phase absolutiste</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
+<ul>
+<li><a href="#test-discriminant-absolutiste-vs-rn">Test discriminant (absolutiste vs RN)</a></li>
+<li><a href="#échelle-d-application-du-test">Échelle d&#x27;application du test</a></li>
+<li><a href="#marqueurs-nécessaires">Marqueurs nécessaires</a></li>
+<li><a href="#piège-la-codification-écrite-du-droit-n-est-pas-un-marqueur-discriminant">Piège : la codification écrite du droit n&#x27;est PAS un marqueur discriminant</a></li>
+<li><a href="#marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)</a></li>
+</ul>
+<li><a href="#sous-phase-1-absolutisation-50-à-100-ans">Sous-phase 1 : Absolutisation (~50 à 100 ans)</a></li>
+<ul>
+<li><a href="#saillant-1er-monarque-absolu-tout-début-de-la-sous-phase">1er monarque absolu (tout début de la sous-phase)</a></li>
+<li><a href="#caractéristiques">Caractéristiques</a></li>
+<li><a href="#mise-sous-contrôle-du-pouvoir-judiciaire">Mise sous contrôle du pouvoir judiciaire</a></li>
+<li><a href="#saillant-dernière-grande-révolte-oligarchique">Dernière grande révolte oligarchique</a></li>
+<li><a href="#marqueurs-observables">Marqueurs observables</a></li>
+</ul>
+<li><a href="#sous-phase-2-impérialisme-absolutiste">Sous-phase 2 : Impérialisme absolutiste</a></li>
+<ul>
+<li><a href="#saillant-acmé-absolutiste-pendant-cette-sous-phase">Acmé absolutiste (pendant cette sous-phase)</a></li>
+<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
+<li><a href="#marqueurs-observables">Marqueurs observables</a></li>
+<li><a href="#saillant-fin-de-l-expansion-tournant-impérialisme-ancien-régime">Fin de l&#x27;expansion (tournant impérialisme → Ancien Régime)</a></li>
+<li><a href="#saillant-remontrance-tournant-impérialisme-ancien-régime">Remontrance (tournant impérialisme → Ancien Régime)</a></li>
+</ul>
+<li><a href="#sous-phase-3-ancien-régime-35-à-100-ans">Sous-phase 3 : Ancien Régime (~35 à 100 ans)</a></li>
+<ul>
+<li><a href="#caractéristiques">Caractéristiques</a></li>
+<li><a href="#le-clivage-gauche-droite-saute">Le clivage gauche-droite saute</a></li>
+<li><a href="#marqueurs-observables">Marqueurs observables</a></li>
+</ul>
+<li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
+<article>
+<p>La phase absolutiste achève l'élimination des réseaux féodaux et oligarchiques par le pouvoir central. Ce qui la distingue structurellement de la phase oligarchique : <strong>l'administration centrale surclasse déjà les administrations locales</strong>. En phase oligarchique, l'État central existe mais doit encore composer avec les pouvoirs locaux. En phase absolutiste, la préséance est acquise &mdash; de facto et de jure &mdash; et le pouvoir central peut agir sans frein juridique des oligarques. Le pouvoir devient moins personnel, plus immanent.</p>
+<p><strong>Les « égaux » de cette phase</strong> sont en théorie l'ensemble de la nation &mdash; l'homogénéisation culturelle s'étend progressivement à des couches de plus en plus larges de la population (alphabétisation, langue commune, conscience nationale). Mais l'administration centrale, qui intègre les nouvelles élites, finit par se sédimenter : les places sont prises, la mobilité sociale se fige, les rentes deviennent insupportables. <strong>Résolution</strong> : l'<strong>éclatement de la sédimentation</strong> &mdash; la Révolution Nationale brise l'ancien ordre devenu insoutenable.</p>
+<h2 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h2>
+<h3 id="test-discriminant-absolutiste-vs-rn">Test discriminant (absolutiste vs RN)<a class="anchor" href="#test-discriminant-absolutiste-vs-rn">#</a></h3>
+<p>Le <strong>bloc contestataire</strong> (ED + EG) a-t-il <strong>renversé le bloc élitaire</strong> ? Le régime absolutiste a-t-il perdu simultanément sa <strong>légitimité</strong> et sa <strong>capacité financière</strong> ?</p>
+<ul>
+  <li><strong>Non</strong> → phase absolutiste. Le pouvoir central contrôle la situation, même si la contestation monte (Ancien Régime).</li>
+  <li><strong>Oui</strong> → Révolution Nationale. L'ordre ancien a explosé.</li>
+</ul>
+<h3 id="échelle-d-application-du-test">Échelle d'application du test<a class="anchor" href="#échelle-d-application-du-test">#</a></h3>
+<p>Le test s'applique à l'échelle du <strong>territoire national du Parcours qu'on suit</strong> (noyau + marges), pas à l'échelle de tout ce que la couronne possède. Le Parcours suit un <em>peuple</em>, pas un empire. Les territoires sous union personnelle qui ont leur propre Parcours ne font pas partie du territoire national et ne comptent pas pour le test.</p>
+<ul>
+  <li><strong>Espagne</strong> : l'Aragon fait partie du territoire national espagnol. Les Rois Catholiques (1479) absolutisent la Castille, mais l'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques &mdash; qui sont l'acmé oligarchique.</li>
+  <li><strong>Autriche</strong> : la Hongrie a son propre Parcours et n'est pas le territoire national autrichien. Marie-Thérèse absolutise les Erbländer et la Bohême (réformes Haugwitz 1749), et le test est passé à cette échelle &mdash; même si la Hongrie conserve sa Diète et ses institutions propres sous union personnelle.</li>
+</ul>
+<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<ul>
+  <li>L'administration centrale a <strong>déjà</strong> préséance sur les administrations locales <strong>de facto et de jure</strong> (à l'échelle nationale) &mdash; c'est ce qui distingue la phase absolutiste de la phase oligarchique : en phase absolutiste, l'administration centrale surclasse déjà les administrations locales</li>
+  <li>L'exécutif peut agir sans frein juridique des oligarques (guerre, impôts, justice)</li>
+  <li>Les entités décentralisées perdent leur autonomie fiscale</li>
+  <li>La résolution de la guerre sociale a produit un nouveau cadre central qui subordonne les anciennes factions (la figure résolvante est régulièrement un tiers neutre s'appuyant sur les clientèles délaissées, mais pas systématiquement)</li>
+</ul>
+<h3 id="piège-la-codification-écrite-du-droit-n-est-pas-un-marqueur-discriminant">Piège : la codification écrite du droit n'est PAS un marqueur discriminant<a class="anchor" href="#piège-la-codification-écrite-du-droit-n-est-pas-un-marqueur-discriminant">#</a></h3>
+<p>Une erreur fréquente est de prendre l'existence (ou l'absence) d'une codification écrite du droit comme test discriminant absolutiste. <strong>C'est faux</strong>, et l'Angleterre en est la preuve : elle n'a <strong>jamais</strong> codifié son droit (common law non-codifiée), et pourtant elle est canoniquement absolutisée à partir d'Henri VII (1485). Si la codification écrite était un test, l'Angleterre n'aurait jamais passé ce test, ce qui est manifestement faux.</p>
+<p>Le test discriminant ne porte pas sur la <strong>forme</strong> (code écrit / coutume / law reports) mais sur la <strong>substance</strong> : est-ce que l'administration centrale a préséance <strong>de jure</strong> sur les administrations locales ? Cette préséance peut être établie par codification écrite (modèle français, espagnol post-Nueva Planta, autrichien post-Haugwitz) ou par évolution coutumière (modèle anglais). Le marqueur structurel est la préséance, pas la forme dans laquelle elle s'exprime.</p>
+<p>Symétriquement, <strong>un projet de codification écrite rejeté n'est pas en soi une preuve d'échec absolutiste</strong>. Il peut être rejeté pour des raisons nationales (par exemple, l'importation de droit étranger mal vécue par une conscience nationale déjà établie) sans que cela invalide les autres marqueurs structurels. Pour évaluer si une nation a franchi le seuil absolutiste, il faut appliquer la grille complète des marqueurs nécessaires (préséance de jure, autonomie fiscale, frein juridique sur la guerre, etc.), pas se reposer sur le seul critère de la codification.</p>
+<h3 id="marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires">#</a></h3>
+<ul>
+  <li>Mise sous tutelle de la religion / contrôle de la hiérarchie ecclésiastique</li>
+  <li>Expansion territoriale et impérialisme</li>
+  <li>Domestication de la noblesse par la cour</li>
+  <li>Sédimentation des élites et surproduction élitaire (en fin de phase)</li>
+</ul>
+<h2 id="sous-phase-1-absolutisation-50-à-100-ans">Sous-phase 1 : Absolutisation (~50 à 100 ans)<a class="anchor" href="#sous-phase-1-absolutisation-50-à-100-ans">#</a></h2>
+<p>L'absolutisation est le processus par lequel le pouvoir central, après avoir triomphé dans la guerre sociale, met au pas les grands féodaux et oligarques. L'ancienne aristocratie est incorporée dans l'administration (intégration) ou écartée du pouvoir (exclusion). Cf. elites.md pour le détail de ces mécanismes.</p>
+<p>Les structures institutionnelles de la phase oligarchique ne disparaissent pas, mais l'administration parallèle rattachée à l'exécutif central a désormais pleine préséance de facto sur elles.</p>
+<h3 id="saillant-1er-monarque-absolu-tout-début-de-la-sous-phase">1er monarque absolu (tout début de la sous-phase)<a class="anchor" href="#saillant-1er-monarque-absolu-tout-début-de-la-sous-phase">#</a></h3>
+<p>La figure qui résout la guerre sociale et inaugure la concentration du pouvoir central. Deux critères essentiels de la résolution (cf. <code>phase_oligarchique.md</code> pour le détail) :</p>
+<p>1. <strong>La structure du conflit est élitaire</strong> &mdash; prébendière vs patrimoniale.</p>
+<p>2. <strong>La résolution conduit à un nouveau cadre</strong> &mdash; qui renforce le pouvoir central et subordonne les grands oligarques.</p>
+<p>En général, la figure résolvante est un <strong>tiers</strong> &mdash; s'appuyant sur les clientèles délaissées et la classe moyenne administrative pour forcer les puissants à plier (Henri IV, Henri VII, Philippe V). Mais le tiers neutre est une observation empirique fréquente, pas un critère structurel. Dans le cas d'Israël (prolongement), la dynastie hasmonéenne n'est pas un tiers &mdash; une faction a clairement gagné &mdash; mais le critère essentiel est satisfait.</p>
+<p>Si les deux critères ne sont pas satisfaits &mdash; en particulier si une faction gagne sans qu'un nouveau cadre central émerge &mdash; la guerre sociale n'est pas résolue, et la phase oligarchique se poursuit.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">-640</span></div><span class="card-desc">Josias &mdash; centralisation du culte au Temple, destruction des bamot, envoi d'agents royaux sur tout le territoire, unification juridique par le Deutéronome</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">-140</span></div><span class="card-desc">Simon Thassi &mdash; issu du camp yahviste maccabéen, construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1598</span></div><span class="card-desc">Henri IV &mdash; issu du camp huguenot, converti, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1485</span></div><span class="card-desc">Henri VII &mdash; tiers, création d'une nouvelle dynastie émancipée des York et des Lancaster</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">1714</span></div><span class="card-desc">Philippe V &mdash; tiers, Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~1669</span></div><span class="card-desc">Inquisiteurs d'État &mdash; le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs, devenus progressivement autonomes, dominent les deux factions (giovani/vecchi). Leur base est la classe administrative des cittadini</span></div></div>
+</div>
+<h3 id="caractéristiques">Caractéristiques<a class="anchor" href="#caractéristiques">#</a></h3>
+<ul>
+  <li>L'exécutif central acquiert un droit d'inspection incontesté et de facto sur tous les habitants</li>
+  <li>L'administration centrale a préséance incontestée sur les administrations locales, qui deviennent ses supplétifs directs</li>
+  <li>L'exécutif peut déclarer la guerre sans frein juridique de la part des oligarques</li>
+  <li>Les entités décentralisées perdent leur autonomie fiscale</li>
+  <li>La polarisation des élites commence à un niveau élevé et se tasse progressivement au fur et à mesure que le consensus absolutiste se met en place</li>
+</ul>
+<h3 id="mise-sous-contrôle-du-pouvoir-judiciaire">Mise sous contrôle du pouvoir judiciaire<a class="anchor" href="#mise-sous-contrôle-du-pouvoir-judiciaire">#</a></h3>
+<p>Un marqueur important de l'absolutisation est la soumission du pouvoir judiciaire à l'exécutif. L'exécutif développe les moyens de renverser ou court-circuiter les décisions judiciaires défavorables (révocation des juges, remplacement de leur nomination par les chambres, rattachement idéologique des cours supérieures). Le pouvoir judiciaire, qui servait en fin de phase oligarchique à freiner l'exécutif, perd cette capacité de freinage.</p>
+<p>Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources » juridique, qui consiste en fait à supprimer la capacité des oligarques à interpréter le droit en leur faveur.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">-622</span></div><span class="card-desc">Josias ordonne la « redécouverte » du Livre de la Loi, qui impose une norme écrite unifiée supplantant les traditions locales</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">-140</span></div><span class="card-desc">Le décret confère les titres « pour toujours, jusqu'à ce qu'un prophète digne de foi se lève » &mdash; abolition de facto du contre-pouvoir prophétique</span></div></div>
+</div>
+<h3 id="saillant-dernière-grande-révolte-oligarchique"><span class="material-symbols-outlined h3-icon" style="color:#6A0DAD;">whatshot</span>Dernière grande révolte oligarchique<a class="anchor" href="#saillant-dernière-grande-révolte-oligarchique">#</a></h3>
+<p>Les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites. Ce saillant n'est <strong>pas toujours présent</strong> &mdash; quand il est absent, la transition de l'absolutisation vers l'impérialisme se fait sans rupture, portée simplement par la mécanique de mise au pas des oligarques.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">~-94</span></div><span class="card-desc">Révolte pharisienne contre Alexandre Jannée &mdash; 800 rebelles crucifiés</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1648-1653</span></div><span class="card-desc">La Fronde &mdash; Princes et parlementaires contre Mazarin. Dernier sursaut</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~1534-1540</span></div><span class="card-desc">Henri VIII &mdash; dissolution des monastères, Pilgrimage of Grace écrasé</span></div></div>
+</div>
+<p><strong>Cas particulier : absence de DGRO.</strong> La Dernière Grande Révolte Oligarchique suppose que les oligarques disposent d'une <strong>assise territoriale locale</strong> depuis laquelle résister (Condé à Bordeaux, les seigneurs du Nord en Angleterre, les Pharisiens avec leur base populaire). Si les oligarques sont concentrés dans un seul lieu sans base territoriale propre, la DGRO est impossible &mdash; l'absolutisation est « fluide ».</p>
+<p><strong>Exemple :</strong> À Venise, tous les patriciens vivent dans le lagon. Ils n'ont pas de seigneuries avec des clientèles armées &mdash; leurs propriétés de Terraferma sont des investissements agricoles, et le système de rotation des rettori empêche tout enracinement. L'absolutisation par les Inquisiteurs se fait sans DGRO. Les contestations ultérieures (Correzione de 1761, Pisani-Contarini 1779) sont des tentatives de type « Polysynodie » (contestation du régime par la classe administrative, comme la Polysynodie de 1715 en France ou l'Apology of the Commons de 1604 en Angleterre), pas des révoltes oligarchiques au sens strict.</p>
+<h3 id="marqueurs-observables">Marqueurs observables<a class="anchor" href="#marqueurs-observables">#</a></h3>
+<ul>
+  <li>Accroissement de la production réglementaire centrale au détriment des réglementations décentralisées</li>
+  <li>Mise sous tutelle de la religion &mdash; fin de la liberté religieuse</li>
+  <li>Ouverture de la fonction publique aux « roturiers » (individus non issus de la coalition gagnante)</li>
+  <li>Contrôle de l'exécutif sur la hiérarchie ecclésiastique</li>
+</ul>
+<h2 id="sous-phase-2-impérialisme-absolutiste">Sous-phase 2 : Impérialisme absolutiste<a class="anchor" href="#sous-phase-2-impérialisme-absolutiste">#</a></h2>
+<p>Après avoir mis au pas tous les grands féodaux, le pouvoir central dispose de moyens économiques encore jamais vus. Il les utilise pour une politique impérialiste et expansionniste. L'exécutif développe des mécanismes destinés à encadrer socialement les oligarques et la noblesse.</p>
+<p>La durée de cette sous-phase dépend du rapport de force avec les voisins : une nation puissante maintiendra longtemps un impérialisme expansionniste ; une nation faible verra cette phase très courte, voire inexistante.</p>
+<h3 id="saillant-acmé-absolutiste-pendant-cette-sous-phase">Acmé absolutiste (pendant cette sous-phase)<a class="anchor" href="#saillant-acmé-absolutiste-pendant-cette-sous-phase">#</a></h3>
+<p>La figure qui incarne le sommet de la puissance absolutiste &mdash; expansion maximale, prestige maximal, domestication complète des élites. C'est un des saillants principaux de tout le Parcours.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">~-20</span></div><span class="card-desc">Hérode &mdash; reconstruction du Temple à une échelle monumentale, expansion territoriale maximale, cour somptueuse, élimination des Hasmonéens survivants</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">~1682</span></div><span class="card-desc">Louis XIV &mdash; Versailles, domestication de la noblesse par la cour, expansion territoriale, révocation de l'Édit de Nantes (homogénéisation forcée)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~1580</span></div><span class="card-desc">Élisabeth Ière &mdash; défaite de l'Armada espagnole, début de l'expansion coloniale, âge d'or culturel (Shakespeare), prestige maximal de la monarchie Tudor</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~1688</span></div><span class="card-desc">Francesco Morosini &mdash; reconquête de la Morée (1684-1699), élu doge à l'unanimité au premier tour alors qu'il commande la flotte en Égine. Titre de « Peloponnesiaco ». Prestige maximal. En 1669, il avait signé la reddition de Candie sans autorisation du Sénat &mdash; l'exécutif militaire agit souverainement</span></div></div>
+</div>
+<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<ul>
+  <li>Quand la DGRO est présente, la sous-phase commence par son échec. Sinon, la transition est portée par la dynamique d'ensemble : le faste, la grandeur, l'impérialisme deviennent la mécanique principale.</li>
+  <li>La polarisation politique des élites est devenue faible &mdash; consensus absolutiste</li>
+</ul>
+<h3 id="marqueurs-observables">Marqueurs observables<a class="anchor" href="#marqueurs-observables">#</a></h3>
+<ul>
+  <li>Multiplication des guerres d'agression</li>
+  <li>Début de colonialisme</li>
+  <li>Professionnalisation de l'encadrement militaire</li>
+  <li>La noblesse parle couramment une langue unifiée</li>
+  <li>Interdiction des armées privées</li>
+  <li>Construction d'infrastructures militaires</li>
+</ul>
+<h3 id="saillant-fin-de-l-expansion-tournant-impérialisme-ancien-régime">Fin de l'expansion (tournant impérialisme → Ancien Régime)<a class="anchor" href="#saillant-fin-de-l-expansion-tournant-impérialisme-ancien-régime">#</a></h3>
+<p>Le pouvoir central atteint les limites de son expansion. Les guerres deviennent coûteuses et les victoires rares. L'impérialisme s'essouffle.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">-4</span></div><span class="card-desc">Mort d'Hérode &mdash; le royaume est divisé, plus de conquêtes</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1713-1715</span></div><span class="card-desc">Traité d'Utrecht, mort de Louis XIV &mdash; fin de l'expansionnisme</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~1603</span></div><span class="card-desc">Fin du règne d'Élisabeth &mdash; succession aux Stuart</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1718</span></div><span class="card-desc">Traité de Passarowitz &mdash; perte définitive de la Morée, dernière possession lointaine. Venise se replie sur le lagon et le Veneto</span></div></div>
+</div>
+<h3 id="saillant-remontrance-tournant-impérialisme-ancien-régime">Remontrance (tournant impérialisme → Ancien Régime)<a class="anchor" href="#saillant-remontrance-tournant-impérialisme-ancien-régime">#</a></h3>
+<p>La remontrance est la dernière tentative de la classe administrative, parlementaire ou aristocratique de reprendre des prérogatives au pouvoir absolu par les voies institutionnelles. Elle échoue systématiquement &mdash; et son échec marque l'entrée en Ancien Régime, en fermant la dernière voie de réforme.</p>
+<p>Le mécanisme est constant : les élites qui ont été intégrées à l'appareil absolutiste (noblesse de robe, parlementaires, patriciat) tentent de redistribuer le pouvoir en leur faveur. Elles n'ont pas la force de renverser l'exécutif (ce n'est pas une DGRO &mdash; elles n'ont pas d'assise territoriale), mais elles ont assez de poids institutionnel pour formuler une exigence formelle. L'exécutif écoute, puis ignore ou écrase la tentative.</p>
+<p>Ne pas confondre la remontrance avec une DGRO : la DGRO est une révolte armée des oligarques à base territoriale, qui constitue le dernier sursaut de la phase d'absolutisation. La remontrance intervient plus tard, une fois l'absolutisation accomplie &mdash; c'est une contestation institutionnelle, pas militaire.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1604</span></div><span class="card-desc">Apology of the Commons &mdash; les Communes affirment leurs prérogatives face à Jacques Ier. Ignorée</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1715</span></div><span class="card-desc">Polysynodie &mdash; le Régent remplace les ministres par des conseils aristocratiques. Échoue en 1718</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1761, 1779</span></div><span class="card-desc">Correzione de Querini, Pisani-Contarini &mdash; tentatives de redistribuer le pouvoir au sein du patriciat. Écrasées par les Inquisiteurs</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">1848</span></div><span class="card-desc">Landtag &mdash; la classe parlementaire vote des réformes substantielles (suffrage, presse, responsabilité ministérielle). Maximilien II les vide de leur substance</span></div></div>
+</div>
+<h2 id="sous-phase-3-ancien-régime-35-à-100-ans">Sous-phase 3 : Ancien Régime (~35 à 100 ans)<a class="anchor" href="#sous-phase-3-ancien-régime-35-à-100-ans">#</a></h2>
+<p>Le pouvoir central arrive aux limites physiques de son potentiel d'expansion, jusqu'à épuisement des finances. L'ancienne aristocratie militaire perd sa légitimité, qui reposait sur les guerres victorieuses. La nouvelle aristocratie de robe, issue de la bourgeoisie ayant rejoint l'administration, se tourne vers l'investissement intensif dans le territoire national, déclenchant une forte croissance économique et le démarrage d'une alphabétisation de masse.</p>
+<p>Mais les élites se sédimentent. La mobilité sociale se fige. Les rentes deviennent insupportables. L'homogénéité culturelle atteint un sommet &mdash; mais elle alimente désormais la contestation du régime, non sa légitimation.</p>
+<p>L'Ancien Régime, contrairement aux autres phases, ne s'achève pas par une transition ordonnée : la sédimentation des élites et leur refus de tout changement significatif rendent la rupture inévitable.</p>
+<h3 id="caractéristiques">Caractéristiques<a class="anchor" href="#caractéristiques">#</a></h3>
+<ul>
+  <li>Le poids de l'appareil administratif (« conseil privé ») s'accroît, voire s'autonomise</li>
+  <li>La « noblesse de robe » et la « haute bourgeoisie » acquièrent un accès à toutes les couches du pouvoir</li>
+  <li>La polarisation politique des élites s'accroît, mais les élites contestataires sont socialement écartées, voire ostracisées</li>
+  <li>Surproduction élitaire : trop de prétendants aux positions de pouvoir par rapport aux places disponibles</li>
+</ul>
+<h3 id="le-clivage-gauche-droite-saute">Le clivage gauche-droite saute<a class="anchor" href="#le-clivage-gauche-droite-saute">#</a></h3>
+<p>En Ancien Régime, le clivage gauche-droite classique se décompose :</p>
+<ul>
+  <li>Le centre-droit et le centre-gauche fusionnent en un <strong>bloc élitaire</strong> qui profite du système</li>
+  <li>L'extrême-droite (réactionnaires, nostalgiques de l'ancien ordre) et l'extrême-gauche (révolutionnaires, exclus) convergent en un <strong>bloc contestataire</strong></li>
+</ul>
+<p>Cette recomposition est une condition nécessaire à l'éclatement de la Révolution Nationale.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span></div><span class="card-desc">Les Sadducéens (noblesse de robe, aristocratie sacerdotale pro-romaine) tiennent le pouvoir ; les Pharisiens (ED, nostalgiques hasmonéens) et les Zélotes (EG, révolutionnaires) forment le bloc contestataire</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span></div><span class="card-desc">Aristocratie de cour versaillaise sédimentée ; la bourgeoisie dynamique mais exclue du pouvoir forme le terreau de 1789</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span></div><span class="card-desc">Favoritisme Stuart (Buckingham), monopoles royaux ; les Puritains (EG) et l'opposition aristocratique traditionnelle convergent contre la cour</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span></div><span class="card-desc">Les barnabotti (ED, nobles appauvris nostalgiques de l'égalité patricienne) et la bourgeoisie intellectuelle (EG, réformateurs) convergent contre le bloc élitaire (familles riches contrôlant les Inquisiteurs). La Correzione de 1761 et le mouvement Pisani-Contarini de 1779 sont les manifestations de ce bloc contestataire</span></div></div>
+</div>
+<h3 id="marqueurs-observables">Marqueurs observables<a class="anchor" href="#marqueurs-observables">#</a></h3>
+<ul>
+  <li>Croissance économique</li>
+  <li>Unification culturelle, production littéraire accrue, expansion de la langue nationale</li>
+  <li>Accroissement de l'alphabétisation</li>
+  <li>Construction d'infrastructures commerciales</li>
+</ul>
+<section class="examples">
+<h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
+<p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
+<div class="saillant-list">
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#6A0DAD;font-variation-settings:'FILL' 1;">crown</span><span>1er monarque absolu</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Josias</span><span class="card-date">-640</span></div><span class="card-desc">Josias résout la guerre sociale comme figure tierce (enfant-roi sans attache factionnelle) et satisfait les deux critères de résolution : le conflit prébendière/patrimoniale est...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Simon Thassi</span><span class="card-date">-140</span></div><span class="card-desc">Simon Thassi satisfait les deux critères de résolution de la guerre sociale : le conflit prébendière/patrimoniale est clos, et un nouveau cadre central émerge (cumul héréditaire...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Bar Kokhva</span><span class="card-date">132</span></div><span class="card-desc">Bar Kokhva prend le titre de Nassi (prince), reçoit l&#x27;onction messianique de Rabbi Akiva et exerce un pouvoir absolu sans aucune consultation, incarnant non pas un révolutionnai...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Ottone Visconti</span><span class="card-date">1277</span></div><span class="card-desc">Ottone Visconti satisfait les deux critères structurels de la résolution de la guerre sociale. Critère 1 (structure élitaire) : le conflit Torriani/Visconti oppose bien prébendi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri VII</span><span class="card-date">1485</span></div><span class="card-desc">Henri Tudor résout les Guerres des Roses en s&#x27;emparant du pouvoir comme figure tierce à Bosworth, puis brise le pouvoir des magnats, reconstruit le fisc et installe une nouvelle...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Maximilien Ier</span><span class="card-date">1597</span></div><span class="card-desc">Maximilien Ier satisfait les deux critères du 1er monarque absolu : il résout la guerre sociale (ni la faction patrimoniale ni la prébendière ne l&#x27;emportent) et produit un nouve...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Henri IV</span><span class="card-date">1598</span></div><span class="card-desc">Henri IV satisfait les deux critères de la résolution de la guerre sociale : il instaure un nouveau cadre central qui subordonne les anciens réseaux oligarchiques (l&#x27;Édit de Nan...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Ferdinand II</span><span class="card-date">1620</span></div><span class="card-desc">Ferdinand II (r. Bohême 1617-1637) résout la guerre sociale par victoire de faction et inaugure la phase absolutiste par la Verneuerte Landesordnung (1627). Il satisfait les deu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Inquisiteurs d&#x27;État</span><span class="card-date">1669</span></div><span class="card-desc">Les Inquisiteurs d&#x27;État satisfont les deux critères de résolution de la guerre sociale : la structure du conflit (giovani/vecchi) est élitaire — prébendière vs patrimoniale —, e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Victor Amédée II</span><span class="card-date">1696</span></div><span class="card-desc">Victor Amédée II satisfait les deux critères de la résolution de la guerre sociale : il instaure un nouveau cadre central (intendants, perequazione, secrétariats d&#x27;État) qui sub...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Le système patricien</span><span class="card-date">1712</span></div><span class="card-desc">Le « 1er monarque absolu » suisse est le patriciat trans-confessionnel après 1712. Les deux critères de la résolution de la guerre sociale sont satisfaits : (1) le conflit oppos...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Frédéric-Guillaume Ier (le Roi-Sergent)</span><span class="card-date">1713</span></div><span class="card-desc">Le test discriminant oligarchique/absolutiste bascule : le Generaldirektorium donne à l&#x27;administration centrale une préséance incontestée sur les administrations locales. L&#x27;exéc...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Philippe V</span><span class="card-date">1714</span></div><span class="card-desc">Philippe V (r. 1700-1746) est le 1er monarque absolu espagnol. Il passe le test discriminant absolutiste à l&#x27;échelle nationale : les décrets de Nueva Planta (1707-1716) abolisse...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Marie-Thérèse</span><span class="card-date">1749</span></div><span class="card-desc">Marie-Thérèse (r. 1740-1780) est la première souveraine qui passe le test discriminant absolutiste à l&#x27;échelle nationale. Les réformes Haugwitz de 1749 font que l&#x27;administration...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Napoléon Bonaparte</span><span class="card-date">1796</span></div><span class="card-desc">Napoléon satisfait les deux critères structurels de la résolution de la guerre sociale. Critère 1 (structure élitaire) : le conflit patriciat/réformateurs oppose bien prébendièr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Augusto Pinochet</span><span class="card-date">1973</span></div><span class="card-desc">Augusto Pinochet (1973-1990) est le 1er monarque absolu chilien. Le test discriminant absolutiste est passé : après le coup d&#x27;État, l&#x27;administration centrale acquiert une préséa...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#6A0DAD;">whatshot</span><span>Dernière grande révolte oligarchique</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Alexandre Jannée</span><span class="card-date">-94</span></div><span class="card-desc">Dernière résistance organisée des anciennes élites oligarchiques — les Pharisiens font appel au roi séleucide mais le sentiment national ramène une partie des rebelles, signe qu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Guido della Torre</span><span class="card-date">1302</span></div><span class="card-desc">Guido della Torre chasse Matteo I (1302) et gouverne 9 ans. Henri VII restaure Matteo I (1311). C&#x27;est le dernier sursaut de la faction oligarchique (Della Torre/Credenza) avant ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri VIII</span><span class="card-date">1536</span></div><span class="card-desc">Le Pilgrimage of Grace de 1536, soulèvement massif du nord de l&#x27;Angleterre contre la dissolution des monastères et la rupture avec Rome, constitue la dernière tentative des anci...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Condé</span><span class="card-date">1648</span></div><span class="card-desc">La Fronde (1648-1653) est le dernier sursaut de résistance oligarchique contre le pouvoir absolu en construction : les parlementaires puis les princes du sang se soulèvent contr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Maurizio Ignazio Graneri</span><span class="card-date">1722</span></div><span class="card-desc">En 1722-1723, le Sénat de Turin refuse unanimement d&#x27;enregistrer (interinare) un édit royal dans l&#x27;affaire Revello. Le second président du Sénat, Maurizio Ignazio Graneri, accus...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#6A0DAD;">terrain</span><span>Acmé absolutiste</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Hérode Ier</span><span class="card-date">-20</span></div><span class="card-desc">Hérode incarne l&#x27;acmé absolutiste — expansion maximale, prestige monumental maximal, domestication complète des élites — avec tous les marqueurs de la sous-phase d&#x27;impérialisme ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Gian Galeazzo Visconti</span><span class="card-date">1395</span></div><span class="card-desc">Gian Galeazzo incarne les trois marqueurs de l&#x27;acmé absolutiste : expansion maximale (26 villes, ~30 000 km²), prestige maximal (premier duc de Milan, 1395, titre impérial), dom...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Élisabeth Ière</span><span class="card-date">1588</span></div><span class="card-desc">La défaite de l&#x27;Armada espagnole en 1588, l&#x27;expansion coloniale et l&#x27;éclat culturel de l&#x27;ère shakespearienne portent le prestige de la monarchie absolutiste anglaise à son somme...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Louis XIV</span><span class="card-date">1682</span></div><span class="card-desc">L&#x27;installation de la cour à Versailles en 1682, la Trêve de Ratisbonne en 1684 qui marque l&#x27;extension territoriale maximale et la révocation de l&#x27;Édit de Nantes en 1685 constitu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Francesco Morosini</span><span class="card-date">1688</span></div><span class="card-desc">Morosini satisfait la définition de l&#x27;acmé absolutiste : expansion maximale (reconquête de la Morée), prestige maximal (élection unanime au dogat depuis le champ de bataille, ti...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Charles Emmanuel III</span><span class="card-date">1730</span></div><span class="card-desc">Charles Emmanuel III (r. 1730-1773) porte le Piémont-Sardaigne au sommet de sa puissance. Guerre de Succession de Pologne : occupe Milan, victoire de Guastalla (1734), gains de ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Le patriciat bernois</span><span class="card-date">~1740</span></div><span class="card-desc">Le acmé absolutiste suisse (~1740-1760) correspond au maximum de puissance du système patricien bernois : expansion administrative maximale, prestige culturel au zénith, domesti...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Maximilien III Joseph</span><span class="card-date">1756</span></div><span class="card-desc">Maximilien III Joseph incarne le sommet de la puissance absolutiste du premier cycle : expansion maximale de l&#x27;appareil central vers l&#x27;intérieur (Codex Maximilianeus, Académie d...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Charles III</span><span class="card-date">~1770</span></div><span class="card-desc">Charles III (r. 1759-1788) incarne le sommet de la puissance absolutiste espagnole — expansion maximale, prestige maximal, domestication complete des elites. Les marqueurs frequ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Joseph II</span><span class="card-date">1780</span></div><span class="card-desc">Joseph II (r. seul 1780-1790) incarne le acmé absolutiste autrichien : réformateur rationaliste, il pousse la modernisation au-delà de ce que sa société peut accepter. Édit de t...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Eugène de Beauharnais</span><span class="card-date">1810</span></div><span class="card-desc">Le Royaume d&#x27;Italie atteint son apogée vers 1810-1812 : expansion maximale, prestige maximal, domestication complète des élites — les trois marqueurs de l&#x27;acmé absolutiste. 6,7 ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Louis Ier</span><span class="card-date">1835</span></div><span class="card-desc">Louis Ier incarne l&#x27;acmé absolutiste du second cycle : projection maximale du prestige (Munich « Athènes sur l&#x27;Isar »), domestication des élites, autocratisme assumé. L&#x27;État, co...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#2E8B57;">block</span><span>Fin de l&#x27;expansion</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Mort de Jéroboam II</span><span class="card-date">-746</span></div><span class="card-desc">La mort de Jéroboam II en -746 marque le tournant essor / polarisation : l&#x27;expansion extérieure cesse de fonctionner comme exutoire, et la dynamique principale de la nation pass...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Mort d&#x27;Hérode</span><span class="card-date">-4</span></div><span class="card-desc">La mort d&#x27;Hérode en -4 marque le tournant impérialisme / Ancien Régime : le pouvoir central atteint les limites de son expansion, le territoire est divisé et encadré par Rome, e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Frédéric II de Hohenstaufen</span><span class="card-date">1237</span></div><span class="card-desc">La défaite de Cortenuova (1237) face à Frédéric II marque la fin de l&#x27;expansion agressive — le Carroccio est capturé. Après Cortenuova, la projection extérieure cesse de fonctio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Rodolphe Ier de Habsbourg</span><span class="card-date">1278</span></div><span class="card-desc">La défaite et la mort d&#x27;Ottokar II à Marchfeld (26 août 1278) met fin à l&#x27;hégémonie centre-européenne bohême et fait perdre au royaume ses marges austro-alpines. Ces territoires...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Baugé</span><span class="card-date">1421</span></div><span class="card-desc">La bataille de Baugé (22 mars 1421) — première défaite anglaise en bataille rangée depuis Azincourt — brise le mythe d&#x27;invincibilité et marque le début du renversement de la dyn...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Agnadello</span><span class="card-date">1509</span></div><span class="card-desc">La Ligue de Cambrai inflige à Venise la défaite d&#x27;Agnadello (1509) : toute la Terraferma est perdue avant d&#x27;être récupérée par la diplomatie. L&#x27;épisode marque la fin de l&#x27;expans...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">François Ier</span><span class="card-date">1515</span></div><span class="card-desc">La bataille de Marignan (1515) marque le tournant essor → polarisation. L&#x27;expansion extérieure collective cesse de fonctionner comme exutoire — la question passe de « comment pr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Cateau-Cambrésis</span><span class="card-date">1559</span></div><span class="card-desc">Le Traité de Cateau-Cambrésis met fin aux Guerres d&#x27;Italie en 1559 et la mort accidentelle d&#x27;Henri II la même année ferme la soupape extérieure qui canalisait les tensions entre...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">L&#x27;Invincible Armada</span><span class="card-date">1588</span></div><span class="card-desc">La defaite de l&#x27;Armada (1588) marque le tournant de l&#x27;expansion exterieure vers la polarisation interne. Les guerres deviennent defensives et la soupape militaire europeenne s&#x27;e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Jacques Ier</span><span class="card-date">1603</span></div><span class="card-desc">La mort d&#x27;Élisabeth Ière et la succession Stuart en 1603 ferment la soupape d&#x27;expansion élisabéthaine et ouvrent une période de sclérose où le système perd sa capacité à canalis...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Peste de 1630</span><span class="card-date">1630</span></div><span class="card-desc">La peste de 1630 marque la fin de l&#x27;expansion oligarchique et le basculement de dynamique vers la polarisation. Avant la peste, le Milan espagnol est l&#x27;un des territoires les pl...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Charles Emmanuel Ier</span><span class="card-date">1630</span></div><span class="card-desc">Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l&#x27;expansionniste agressif : saisie du marquisat de Saluzzo (1588, confirmée par le Traité de Lyon 1601 en échange de...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Blenheim</span><span class="card-date">1704</span></div><span class="card-desc">La bataille de Blenheim (13 août 1704) marque le tournant impérialisme → sclérose : le pouvoir central atteint les limites de son expansion extérieure. Dix ans d&#x27;occupation autr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Traité de Passarowitz</span><span class="card-date">1718</span></div><span class="card-desc">Le traité de Passarowitz (21 juillet 1718), signé après la guerre victorieuse d&#x27;Eugène de Savoie contre les Ottomans, marque le sommet et la fin de l&#x27;expansion oligarchique autr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Passarowitz</span><span class="card-date">1718</span></div><span class="card-desc">Le traité de Passarowitz (1718) entérine la perte de la Morée et marque la fin définitive de toute expansion vénitienne. À partir de cette date, le système entre en Ancien Régime.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Aix-la-Chapelle</span><span class="card-date">1748</span></div><span class="card-desc">Le Traité d&#x27;Aix-la-Chapelle (1748) entérine les derniers gains territoriaux piémontais (Vigevano) et marque la fin définitive de l&#x27;expansion. Après cette date, le système entre ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Giuseppe Prina</span><span class="card-date">1814</span></div><span class="card-desc">L&#x27;effondrement napoléonien (1814) met fin à l&#x27;expansion — le pouvoir central atteint les limites de son potentiel d&#x27;expansion et l&#x27;impérialisme s&#x27;essouffle (saillant canonique m...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Congrès de Vienne</span><span class="card-date">1815</span></div><span class="card-desc">Le Congrès de Vienne (1814-1815), orchestré par Metternich, consolide l&#x27;Empire d&#x27;Autriche dans ses frontières de l&#x27;ordre européen post-napoléonien. Après 1815, l&#x27;Autriche est en...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Congrès de Vienne</span><span class="card-date">1815</span></div><span class="card-desc">Le Congrès de Vienne (1814-1815) marque la fin de l&#x27;expansion de la monarchie habsbourgeoise. La Hongrie n&#x27;a pas d&#x27;expansion propre — elle participe à l&#x27;expansion habsbourgeoise...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Domingo Santa María</span><span class="card-date">1884</span></div><span class="card-desc">Le Traité d&#x27;Ancón (20 octobre 1883), ratifié en 1884, conclut la guerre du Pacifique par la cession au Chili de Tarapacá à perpétuité et d&#x27;Antofagasta. La même année, la pacific...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Désastre de 1898</span><span class="card-date">1898</span></div><span class="card-desc">La perte de Cuba, des Philippines et de Porto Rico (1898) elimine le dernier exutoire colonial. Apres 1898, le Parcours accelere : l&#x27;AR ne dure que ~33 ans (1898-1931). Analogue...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#6A0DAD;">record_voice_over</span><span>Remontrance</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Ambassade juive à Auguste</span><span class="card-date">-4</span></div><span class="card-desc">Remontrance classique : la classe administrative et aristocratique tente de reprendre des prérogatives au pouvoir absolu par les voies institutionnelles (ambassade à Auguste). L...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Capitani e Difensori della Libertà</span><span class="card-date">1447</span></div><span class="card-desc">À la mort de Filippo Maria (1447), la classe communale tente de reprendre des prérogatives au pouvoir absolu par les voies institutionnelles — remontrance classique (comme la Po...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Jacques Ier</span><span class="card-date">1604</span></div><span class="card-desc">En 1604, la Chambre des communes rédige l&#x27;Apology of the Commons (Form of Apology and Satisfaction), affirmant ses prérogatives face à Jacques Ier Stuart — liberté de parole, im...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Philippe d&#x27;Orléans</span><span class="card-date">1715</span></div><span class="card-desc">À la mort de Louis XIV (1715), le Régent Philippe d&#x27;Orléans remplace les ministres par des conseils aristocratiques (Polysynodie). La haute noblesse tente de reprendre des préro...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Société Helvétique</span><span class="card-date">1761</span></div><span class="card-desc">La Société Helvétique (1761) est la remontrance suisse — dernière tentative de la classe administrative et intellectuelle de reprendre des prérogatives au pouvoir absolu par les...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Angelo Querini</span><span class="card-date">1761</span></div><span class="card-desc">La Correzione de 1761 est la remontrance vénitienne : dernière tentative de la classe administrative et patricienne de reprendre des prérogatives au pouvoir absolutiste par les ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">François Ier</span><span class="card-date">1811</span></div><span class="card-desc">La dissolution de la diète de 1811 par François Ier est la Remontrance hongroise : la classe parlementaire tente de négocier des réformes fiscales par les voies institutionnelle...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Santorre di Santa Rosa</span><span class="card-date">1821</span></div><span class="card-desc">En mars 1821, des officiers libéraux de la garnison d&#x27;Alessandria se soulèvent et exigent la Constitution espagnole de 1812. Victor Emmanuel Ier abdique. Charles Albert, régent,...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Ferdinand Ier / François-Joseph</span><span class="card-date">1848</span></div><span class="card-desc">Les révolutions viennoises de 1848 sont la Remontrance autrichienne. La première phase (13 mars 1848) fait tomber Metternich, ouvre une brève expérience constitutionnelle et un ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">1848</span></div><span class="card-desc">Tentative de la classe administrative et parlementaire de redistribuer le pouvoir en sa faveur par les voies institutionnelles. L&#x27;exécutif écoute puis vide les réformes de leur ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">František Palacký et Alfred zu Windischgrätz</span><span class="card-date">1848</span></div><span class="card-desc">En juin 1848, dans le sillage des révolutions européennes, Palacký organise le Congrès slave de Prague (2-12 juin 1848) qui réclame une fédéralisation de l&#x27;Empire sur base natio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">La Gloriosa + Sexenio</span><span class="card-date">1868</span></div><span class="card-desc">La Gloriosa (1868) et le Sexenio Democrático (1868-1874) sont la remontrance espagnole — la dernière tentative de la classe parlementaire d&#x27;imposer un régime constitutionnel. Co...</span></div></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

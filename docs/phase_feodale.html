@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase féodale — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #8B7355; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html" class="active">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Phase féodale</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#coagulation-des-élites">Coagulation des élites</a></li>
+<li><a href="#conditions-du-pacte-oligarchique">Conditions du pacte oligarchique</a></li>
+<ul>
+<li><a href="#accroissement-de-l-échelle-et-sécession">Accroissement de l&#x27;échelle et sécession</a></li>
+<li><a href="#nature-de-la-phase-et-contexte-technologique">Nature de la phase et contexte technologique</a></li>
+</ul>
+<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
+<ul>
+<li><a href="#test-discriminant-féodal-vs-oligarchique">Test discriminant (féodal vs oligarchique)</a></li>
+<li><a href="#marqueurs-nécessaires">Marqueurs nécessaires</a></li>
+<li><a href="#marqueurs-fréquents-non-nécessaires-dépendants-de-l-époque">Marqueurs fréquents (non nécessaires, dépendants de l&#x27;époque)</a></li>
+</ul>
+<li><a href="#saillants-de-la-phase-féodale">Saillants de la phase féodale</a></li>
+<ul>
+<li><a href="#saillant-éveil-féodal">Éveil féodal</a></li>
+<li><a href="#saillant-pic-féodal-récurrent">Pic féodal (récurrent)</a></li>
+<li><a href="#saillant-crise-féodale-récurrent">Crise féodale (récurrent)</a></li>
+<li><a href="#saillant-pacte-oligarchique">Pacte oligarchique</a></li>
+<li><a href="#critère-discriminant-première-codification-négociée-et-entérinée-des-responsabilités-du-suzerain">Critère discriminant : première codification négociée et entérinée des responsabilités du suzerain</a></li>
+<li><a href="#marqueurs-forts-de-la-transition">Marqueurs forts de la transition</a></li>
+</ul>
+<li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
+<article>
+<p>La phase féodale est caractérisée par un pouvoir qui repose sur des <strong>liens interpersonnels</strong> &mdash; serments de vassalité, loyautés de clan, alliances d'homme à homme &mdash; et non sur une administration avec des processus ancrés dans la culture. Le terme « féodal » ne désigne pas nécessairement une noblesse héréditaire ni une société médiévale : il désigne un mode de gouvernement où les relations personnelles du souverain sont le ciment du pouvoir.</p>
+<p>Cette fragilité est structurelle et liée au <strong>nombre de Dunbar</strong> (~150 personnes) : un souverain ne peut maintenir des relations de confiance personnelle qu'avec un cercle restreint &mdash; son premier échelon de vassaux, et au plus le deuxième. L'édifice politique tout entier dépend de ces liens. À chaque succession, la stabilité du royaume est <strong>rejouée</strong> : si le nouveau souverain n'a pas la stature pour maintenir ou reconstruire ce réseau de confiance, l'édifice peut vaciller ou se défaire. C'est cette épreuve récurrente qui distingue la phase féodale des phases suivantes, où les institutions portent la continuité indépendamment de la personne du souverain.</p>
+<p>Des institutions peuvent apparaître pendant la phase féodale &mdash; Philippe le Bel crée le Parlement de Paris et la Chambre des comptes, les rois anglo-saxons disposent du Danegeld et des shires. Mais ce sont des outils du roi, créés à sa discrétion et dépendants de sa personne. Ce n'est pas la même chose que le pacte oligarchique.</p>
+<p><strong>Les « égaux » de cette phase</strong> sont les grands seigneurs féodaux. La question « entre égaux, quelles règles nous donnons-nous ? » se pose pour la première fois. <strong>Résolution</strong> : le <strong>pacte oligarchique</strong> &mdash; les seigneurs codifient collectivement les règles du jeu. C'est un compromis : chacun accepte de perdre un peu de liberté en échange de la garantie de ses droits, de son rôle, et de la stabilité du royaume &mdash; ce qui est dans l'intérêt de tous, et dans leur intérêt de classe. Et c'est cette stabilité qui permettra au souverain de développer une administration centrale, faisant progressivement monter une nouvelle classe &mdash; les grands serviteurs de l'État &mdash; face aux anciens féodaux. Les graines du conflit oligarchique sont plantées.</p>
+<p>La phase féodale commence à l'<strong>éveil féodal</strong> et s'achève au <strong>pacte oligarchique</strong>. La période qui précède l'éveil féodal &mdash; la <strong>percolation élitaire</strong> &mdash; appartient à la phase pré-féodale (cf. <code>phase_pre_feodale.md</code>).</p>
+<h2 id="coagulation-des-élites">Coagulation des élites<a class="anchor" href="#coagulation-des-élites">#</a></h2>
+<p>Après l'éveil féodal, il y a un <strong>centre</strong> &mdash; le suzerain. Les élites se « coagulent » autour de lui ou contre lui. Le processus est directionnel : l'homogénéité des élites progresse à mesure qu'elles interagissent, s'affrontent, et développent une conscience de classe.</p>
+<p>La coagulation est ponctuée de <strong>pics féodaux</strong> (rois forts dont le pouvoir personnel est au sommet) et de <strong>crises féodales</strong> (effondrements post-pic quand le système personnel se fragmente). Les pics <strong>accélèrent</strong> l'homogénéisation en cristallisant l'opposition des barons et en répandant l'administration. Chaque crise <strong>teste</strong> si le seuil d'homogénéité est atteint.</p>
+<p>Le processus s'achève quand les deux conditions du pacte sont réunies simultanément : homogénéité suffisante + faiblesse du suzerain → <strong>pacte oligarchique</strong>.</p>
+<p><strong>La coagulation peut boucler.</strong> Si une crise survient mais que l'homogénéité est insuffisante, le pacte échoue et un nouveau pic émerge &mdash; le cycle recommence. L'Angleterre boucle 5 fois sur ~500 ans avant que le pacte n'aboutisse (Ordonnances de 1311). La France ne connaît pas de crise féodale précoce &mdash; contingence liée à la qualité des rois capétiens avant les Rois maudits &mdash; et atteint le pacte en ~210 ans (~1108-1317).</p>
+<p><strong>L'alignement des deux moteurs détermine si la coagulation boucle.</strong> Un démarrage précoce n'est pas forcément un avantage &mdash; ce qui compte, c'est que les deux moteurs (État central + homogénéité culturelle) progressent ensemble :</p>
+<ul>
+  <li><strong>Angleterre</strong> : le moteur étatique démarre tôt (Ecgberht ~829, les rois anglo-saxons disposent de vrais moyens &mdash; Danegeld, shires, monnaie centralisée). Mais le moteur culturel est bloqué (Anglo-Saxons + Scandinaves du Danelaw). Résultat : le Parcours boucle 5 fois sur ~500 ans, parce que la condition de résolution (conscience de classe homogène) n'est jamais atteinte.</li>
+  <li><strong>France</strong> : le moteur étatique est en retard (les Capétiens sont faibles pendant 120 ans). Mais le moteur culturel progresse en silence (la langue d'oïl se stabilise, l'identité capétienne se constitue autour de la cour de Paris). Quand Louis VI démarre le Parcours (~1108), les deux moteurs sont alignés &mdash; la coagulation progresse sans blocage structurel.</li>
+</ul>
+<h2 id="conditions-du-pacte-oligarchique">Conditions du pacte oligarchique<a class="anchor" href="#conditions-du-pacte-oligarchique">#</a></h2>
+<p>Le pacte nécessite <strong>deux conditions simultanées</strong> :</p>
+<p>1. <strong>Homogénéité des oligarques à l'échelle du royaume</strong> &mdash; les seigneurs doivent se percevoir comme une classe avec des intérêts communs, ce qui requiert une homogénéité culturelle suffisante entre eux.</p>
+<p>2. <strong>Moment de faiblesse du suzerain</strong> &mdash; le roi doit être assez faible pour que les oligarques puissent imposer la codification.</p>
+<p>Les deux conditions doivent être réunies <strong>en même temps</strong>. C'est pour cela que le pacte survient très vite après la crise féodale (France : 1314→1317, Angleterre : 1307→1311) &mdash; dès que la faiblesse apparaît, le pacte se fait immédiatement si l'homogénéité est déjà là.</p>
+<p><strong>Si faiblesse SANS homogénéité</strong> → chaos politique (« Anarchie ») jusqu'à réémergence d'un nouveau pic féodal. Le Parcours <strong>boucle</strong> (cf. l'Angleterre : l'Anarchie de 1135 ne produit pas de pacte, car le pacte devrait se jouer à l'échelle de l'Empire Plantagenêt, trop hétérogène).</p>
+<p><strong>Si homogénéité SANS faiblesse</strong> → d'abord <strong>aventures extérieures</strong> (le roi fort projette la puissance vers l'extérieur), puis <strong>tensions sociales croissantes</strong> (cf. l'Angleterre entre 1204 et 1307 : les barons sont homogènes à l'échelle anglaise, mais les rois sont forts → Galles, Écosse, tensions croissantes → le pacte attend la faiblesse d'Édouard II).</p>
+<h3 id="accroissement-de-l-échelle-et-sécession">Accroissement de l'échelle et sécession<a class="anchor" href="#accroissement-de-l-échelle-et-sécession">#</a></h3>
+<p>Quand l'échelle du royaume <strong>augmente</strong> (conquête, union dynastique), le seuil d'homogénéité nécessaire au pacte <strong>remonte</strong>. L'homogénéité qui suffisait à l'ancienne échelle ne suffit plus à la nouvelle. Le Parcours peut alors :</p>
+<ul>
+  <li><strong>Stagner</strong> tant que le roi est fort et que l'empire hétérogène tient par la force</li>
+  <li><strong>Sécessionner</strong> quand le roi est faible &mdash; le morceau homogène se détache et poursuit son Parcours à son échelle propre</li>
+</ul>
+<p>La sécession n'est pas un échec du Parcours &mdash; c'est un <strong>mécanisme de correction d'échelle</strong>. Le Parcours ajuste sa taille pour correspondre au niveau réel d'homogénéité.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">~-930</span></div><span class="card-desc">Salomon étend le royaume au-delà du seuil d'homogénéité. Roboam est faible → les tribus du nord font sécession. Le Parcours continue à l'échelle réduite (Samarie)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Empire carolingien</span><span class="card-date">843</span></div><span class="card-desc">Charlemagne unifie un territoire trop hétérogène. Ses successeurs sont faibles → Verdun, l'empire se scinde en trois morceaux plus homogènes</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Empire Plantagenêt</span><span class="card-date">1204</span></div><span class="card-desc">Henri II crée un empire (Angleterre + Normandie + Anjou + Aquitaine). Philippe Auguste conquiert la Normandie → l'échelle redescend à l'échelle anglaise → le pacte devient possible</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Empire de Cnut</span><span class="card-date">1035</span></div><span class="card-desc">Angleterre + Danemark + Norvège. Trop hétérogène. Fragmentation à la mort de Cnut</span></div></div>
+</div>
+<h3 id="nature-de-la-phase-et-contexte-technologique">Nature de la phase et contexte technologique<a class="anchor" href="#nature-de-la-phase-et-contexte-technologique">#</a></h3>
+<p>Le double moteur (homogénéité culturelle × construction de l'État central) opère de la même façon structurelle quelle que soit l'époque, mais les <strong>marqueurs de surface</strong> changent avec le niveau technologique. Une phase féodale en l'an 1000 se manifeste par une société rurale, une faible alphabétisation, peu de traces administratives. Une phase féodale au XIXe siècle (les États-Unis avant 1913) se manifeste dans une société éduquée, alphabétisée et riche &mdash; mais où le pouvoir fédéral repose sur des réseaux interpersonnels et des compromis entre grands acteurs, sans État central permanent au sens fiscal et monétaire. Les critères structurels sont les mêmes (pouvoir reposant sur des liens personnels, stabilité rejouée à chaque succession) ; seule l'apparence change.</p>
+<p>On reconstruit souvent la phase féodale a posteriori, en partant de la date &mdash; mieux attestée &mdash; du début de la phase oligarchique.</p>
+<p>Durée typique endogène : ~200 ans (peut être beaucoup plus longue si la phase boucle &mdash; cf. l'Angleterre, ~500 ans avec 5 boucles).</p>
+<h2 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h2>
+<h3 id="test-discriminant-féodal-vs-oligarchique">Test discriminant (féodal vs oligarchique)<a class="anchor" href="#test-discriminant-féodal-vs-oligarchique">#</a></h3>
+<p>Le pouvoir central <strong>est-il en péril à la mort du souverain</strong> ? L'existence du fisc, de l'armée et de l'administration dépend-elle de la personne du souverain ?</p>
+<ul>
+  <li><strong>Oui</strong> → phase féodale. Le pouvoir repose sur des liens personnels ; l'édifice peut vaciller ou se défaire à chaque succession difficile (l'Angleterre ne se fragmente pas après la Magna Carta ou l'Anarchie, mais ça tangue sévèrement).</li>
+  <li><strong>Non</strong> → phase oligarchique. L'État a acquis une existence propre, indépendante de la personne du souverain.</li>
+</ul>
+<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<ul>
+  <li>Un chef supra-régional dont l'autorité couvre le territoire (même symboliquement)</li>
+  <li>Des liens de vassalité d'homme à homme comme mode de gouvernement</li>
+  <li>Pas d'administration centrale permanente indépendante de la personne du souverain (des institutions embryonnaires peuvent exister, mais elles sont des outils du roi)</li>
+</ul>
+<h3 id="marqueurs-fréquents-non-nécessaires-dépendants-de-l-époque">Marqueurs fréquents (non nécessaires, dépendants de l'époque)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires-dépendants-de-l-époque">#</a></h3>
+<ul>
+  <li>Société très rurale, faible alphabétisation (corrélats typiques des phases féodales médiévales, pas des conditions structurelles)</li>
+  <li>Fragmentation ou instabilité du territoire à la mort du suzerain</li>
+  <li>Frappes monétaires irrégulières ou locales</li>
+  <li>Conflits entre chefs rivaux pour la suprématie</li>
+</ul>
+<h2 id="saillants-de-la-phase-féodale">Saillants de la phase féodale<a class="anchor" href="#saillants-de-la-phase-féodale">#</a></h2>
+<h3 id="saillant-éveil-féodal"><span class="material-symbols-outlined h3-icon" style="color:#8B7355;">wb_sunny</span>Éveil féodal<a class="anchor" href="#saillant-éveil-féodal">#</a></h3>
+<p><strong>Le tout premier saillant du Parcours</strong> &mdash; le point de départ de la construction nationale. C'est le premier chef dont l'autorité supra-régionale est <strong>effective</strong> : pas simplement un titre, mais un pouvoir réel qui force les autres à se positionner par rapport à lui. À partir de là, il y a un centre, et les terroirs s'agrègent autour de lui ou en opposition à lui.</p>
+<p>La distinction est entre un roi <strong>titulaire</strong> (qui porte le titre et joue au plus un rôle d'arbitre symbolique, mais n'a pas lui-même la capacité de déployer des forces comparables à celles d'un grand seigneur féodal) et un <strong>souverain féodal effectif</strong> (qui dispose personnellement d'une puissance militaire et politique de premier plan). Le premier est un précurseur ; le second est l'éveil féodal.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-1080</span></div><span class="card-desc">Saül &mdash; acclamé roi après une victoire militaire, chef de guerre effectif</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~726</span></div><span class="card-desc">Orso Ipato &mdash; premier doge exerçant une autorité effective sur la lagune</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~829 ; 1066</span></div><span class="card-desc">Ecgberht ; puis Guillaume le Conquérant après le reboot normand</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">~1108</span></div><span class="card-desc">Louis VI le Gros. Hugues Capet (987) n'est qu'un roi titulaire &mdash; ses vassaux l'ignorent, il n'a pas la puissance d'un grand féodal. Louis VI dispose de forces propres et force les autres à se positionner</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">~1035</span></div><span class="card-desc">Ferdinand Ier &mdash; premier roi de Castille et León à exercer une hégémonie effective</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Suisse</span><span class="card-date">1291</span></div><span class="card-desc">Bundesbrief &mdash; éveil collectif, pas individuel : les trois cantons s'unissent contre les Habsbourg</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">USA</span><span class="card-date">~1776</span></div><span class="card-desc">L'indépendance crée une entité politique dont le pouvoir repose sur des réseaux interpersonnels entre grands acteurs</span></div></div>
+</div>
+<h3 id="saillant-pic-féodal-récurrent"><span class="material-symbols-outlined h3-icon" style="color:#8B7355;">terrain</span>Pic féodal (récurrent)<a class="anchor" href="#saillant-pic-féodal-récurrent">#</a></h3>
+<p>Un roi fort, au sommet de sa puissance personnelle. Il projette la puissance vers l'extérieur (conquêtes, aventures militaires), développe l'administration, et cristallise l'opposition des barons &mdash; ce qui <strong>accélère l'homogénéisation</strong>. Son édifice est personnel et fragile : il se fragmente quand le roi meurt ou que ses héritiers sont faibles.</p>
+<p>Il peut y avoir <strong>plusieurs pics féodaux</strong> dans une même phase si celle-ci boucle (cf. Angleterre : Æthelstan, Edgar, Cnut, Henri Ier, Henri II, Édouard Ier).</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-1003, ~-960</span></div><span class="card-desc">David, Salomon</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">~764, ~811, ~959, ~991</span></div><span class="card-desc">Galbaio, Partecipazio, Candiano, Orseolo &mdash; 4 pics sur ~300 ans</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">~930, ~965, ~1025, ~1120, ~1170, ~1295</span></div><span class="card-desc">Æthelstan, Edgar, Cnut, Henri Ier, Henri II, Édouard Ier</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">~1085, 1230, ~1265, 1340</span></div><span class="card-desc">Alphonse VI, Ferdinand III, Alphonse X, Alphonse XI</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">~1214, ~1295</span></div><span class="card-desc">Philippe Auguste, Philippe le Bel</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">~1328, ~1450</span></div><span class="card-desc">Louis IV, Ludwig IX &mdash; phase longue à cause des partitions récurrentes</span></div></div>
+</div>
+<h3 id="saillant-crise-féodale-récurrent"><span class="material-symbols-outlined h3-icon" style="color:#8B7355;">close</span>Crise féodale (récurrent)<a class="anchor" href="#saillant-crise-féodale-récurrent">#</a></h3>
+<p>L'effondrement du système personnel construit par un pic féodal. Le roi meurt ou ses héritiers ruinent le système. L'édifice vacille ou se fragmente. Les oligarques pourraient imposer un pacte &mdash; mais seulement si les deux conditions sont réunies (homogénéité + faiblesse). Sinon : avortement, le cycle recommence.</p>
+<p>La crise féodale est le <strong>seul cas de chevauchement formel</strong> entre saillant canonique et perturbation : quand elle avorte, c'est structurellement une perturbation (mécanisme : insuffisance interne ; effet : avortement). Quand elle aboutit au pacte, elle reste un saillant canonique sans perturbation associée.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span><span class="card-date">~-930</span></div><span class="card-desc">Roboam &mdash; schisme → avortement (correction d'échelle)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1135, ~1205, 1307</span></div><span class="card-desc">L'Anarchie → avortement ; Jean sans Terre → avortement ; Édouard II → pacte (Ordonnances, 1311)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">1255, 1349, 1392</span></div><span class="card-desc">Partitions → avortements successifs, le duché se morcelle et se recompose</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">1282</span></div><span class="card-desc">Crise → avortement</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1314</span></div><span class="card-desc">Fils de Philippe le Bel → pacte (loi salique, 1317)</span></div></div>
+</div>
+<h3 id="saillant-pacte-oligarchique"><span class="material-symbols-outlined h3-icon" style="color:#8B7355;">gavel</span>Pacte oligarchique<a class="anchor" href="#saillant-pacte-oligarchique">#</a></h3>
+<p>Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la structure de l'exécutif. C'est la <strong>résolution</strong> de la phase féodale &mdash; le passage à la phase oligarchique.</p>
+<p>Le pacte ne survient que quand les deux conditions sont réunies simultanément : homogénéité des oligarques à l'échelle du royaume + moment de faiblesse du suzerain. C'est pour cela que le pacte survient très vite après la crise (France : 1314→1317, Angleterre : 1307→1311).</p>
+<h3 id="critère-discriminant-première-codification-négociée-et-entérinée-des-responsabilités-du-suzerain">Critère discriminant : première codification négociée et entérinée des responsabilités du suzerain<a class="anchor" href="#critère-discriminant-première-codification-négociée-et-entérinée-des-responsabilités-du-suzerain">#</a></h3>
+<p>Le pacte oligarchique est <strong>la première codification collective, négociée et entérinée, des responsabilités du suzerain</strong>. Trois éléments discriminants :</p>
+<p>1. <strong>Codification</strong> &mdash; un acte écrit, formel, qui fixe des règles.</p>
+<p>2. <strong>Responsabilités du suzerain</strong> &mdash; le pacte codifie ce que le suzerain <em>doit</em> faire (règles de succession, obligations fiscales, règles de levée d'armée, partage de la souveraineté), pas simplement ce qu'il <em>peut</em> faire.</p>
+<p>3. <strong>Négocié et entériné</strong> &mdash; issu d'une assemblée collective des oligarques (diète, états, Landtag, Cortès, parlement), non d'une décision unilatérale du souverain.</p>
+<p>Ce critère permet de distinguer le pacte oligarchique des <strong>créations institutionnelles unilatérales</strong> du souverain, qui ne sont pas des pactes : Philippe le Bel crée le Parlement de Paris, la Chambre des comptes et une administration bureaucratique, mais ces créations sont unilatérales &mdash; le vrai pacte oligarchique français est la loi salique de 1317, négociée par les états au moment de la crise de succession. De même, Omri en Israël antique crée un État avec administration, fisc et armée permanents, mais unilatéralement &mdash; et c'est pourquoi Israël n'a pas de pacte oligarchique canonique identifié.</p>
+<p>Vérification empirique sur le corpus : 11 parcours canoniques sur 12 satisfont ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Autriche, Allemagne, USA). Israël antique est la seule exception documentée &mdash; Omri crée l'État sans codification négociée, ce qui laisse la phase féodale israélite sans pacte canonique.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1317</span></div><span class="card-desc">Loi salique / États généraux &mdash; codification des règles de succession par l'assemblée politique</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1311</span></div><span class="card-desc">Ordonnances &mdash; les Lords Ordainers imposent des contraintes institutionnelles à Édouard II</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">1369-1371</span></div><span class="card-desc">Règlement trastámara &mdash; mercedes enriqueñas + Audiencia, Henri II usurpateur négocie avec la noblesse</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">1506</span></div><span class="card-desc">Décret de primogéniture &mdash; Albert IV codifie l'indivisibilité devant les Landstände</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Autriche</span><span class="card-date">1518</span></div><span class="card-desc">Innsbrucker Libell &mdash; Maximilien Ier codifie la défense, l'administration et la fiscalité en Generallandtag des Erbländer</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">USA</span><span class="card-date">1913</span></div><span class="card-desc">Création de la Fed et de l'IRS &mdash; codification de la structure fiscale et monétaire fédérale</span></div></div>
+</div>
+<p><strong>Cas limite : « suzerain collectif »</strong> &mdash; À Venise et à Milan, le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les « responsabilités de l'exécutif » qui sont codifiées collectivement, mais la forme est institutionnelle.</p>
+<p><strong>Note :</strong> Le pacte oligarchique n'est pas universel dans sa forme. En Israël antique, le schisme de ~-930 (rejet de la monarchie salomonienne par les tribus du nord) joue un rôle fonctionnellement analogue &mdash; c'est un acte par lequel la communauté politique rejette un exécutif devenu insoutenable &mdash; mais il prend la forme d'une sécession, pas d'une codification. Dans les sociétés anciennes, les outils institutionnels de codification n'existent pas encore ; la « codification » passe par la rupture.</p>
+<h3 id="marqueurs-forts-de-la-transition">Marqueurs forts de la transition<a class="anchor" href="#marqueurs-forts-de-la-transition">#</a></h3>
+<ul>
+  <li>Codification juridique et légale du rapport entre les oligarques/grands féodaux et l'exécutif</li>
+  <li>Faiblesse de l'exécutif (succession difficile, régence, souverain incompétent)</li>
+  <li>Les oligarques s'organisent en une classe structurée avec des intérêts communs</li>
+  <li>Rébellions des grands féodaux imposant des contraintes à l'exécutif</li>
+</ul>
+<section class="examples">
+<h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
+<p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
+<div class="saillant-list">
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#8B7355;">wb_sunny</span><span>Éveil féodal</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Saül</span><span class="card-date">-1080</span></div><span class="card-desc">Saül est le premier chef supra-régional effectif d&#x27;Israël — acclamé roi après une victoire militaire contre les Ammonites, son autorité couvre plusieurs tribus mais repose entiè...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Orso Ipato</span><span class="card-date">726</span></div><span class="card-desc">Orso Ipato est le premier doge historiquement attesté, élu en 726 contre la volonté de Byzance, exerçant une autorité militaire et politique réelle sur l&#x27;ensemble de la lagune.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Ecgberht de Wessex</span><span class="card-date">829</span></div><span class="card-desc">Ecgberht est le premier roi à imposer la suprématie du Wessex sur toute l&#x27;Angleterre, forçant les autres royaumes (Mercie, Northumbrie) à se positionner par rapport à lui.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Henri Ier l&#x27;Oiseleur</span><span class="card-date">~919</span></div><span class="card-desc">Premier chef supra-régional effectif de la Francie orientale post-carolingienne. Élu par les ducs, il exerce une autorité personnelle réelle sur les principautés germaniques.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Landolfo II da Carcano</span><span class="card-date">979</span></div><span class="card-desc">Landolfo II da Carcano (archevêque 979-998) est le premier chef dont l&#x27;autorité supra-régionale est effective — il s&#x27;étend sur les territoires de plusieurs comtés et crée le sys...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Étienne Ier</span><span class="card-date">1000</span></div><span class="card-desc">Étienne Ier est couronné le 25 décembre 1000 à Esztergom. Premier chef magyar dont l&#x27;autorité supra-régionale est effective — il soumet les chefs tribaux rivaux et organise le t...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Ferdinand Ier</span><span class="card-date">~1035</span></div><span class="card-desc">Ferdinand Ier (r. 1035-1065) est le premier roi de Castille. Il hérite du comté, conquiert León (1037), et impose tribut aux royaumes musulmans de Tolède, Saragosse et Séville. ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Guillaume le Conquérant</span><span class="card-date">1066</span></div><span class="card-desc">Guillaume le Conquérant remplace intégralement l&#x27;aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal et réalise le Domesday Book. C&#x27;est l&#x27;évei...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Vratislav II</span><span class="card-date">1085</span></div><span class="card-desc">Vratislav II (duc 1061, roi 1085-1092) est le premier Přemyslide à franchir le seuil d&#x27;effectivité supra-régionale. Duc compétent qui contient la rébellion de son frère Conrad (...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Louis VI le Gros</span><span class="card-date">1108</span></div><span class="card-desc">Louis VI le Gros est le premier Capétien à exercer une autorité supra-régionale effective, en pacifiant l&#x27;Île-de-France et en convoquant avec succès le ban royal en 1124 contre ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Léopold VI</span><span class="card-date">1198</span></div><span class="card-desc">Léopold VI de Babenberg (r. 1198-1230) franchit le seuil d&#x27;effectivité supra-régionale. Règne long de 32 ans sur un duché Autriche+Styrie réunifié, cour littéraire brillante, au...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Louis Ier le Kelheimer</span><span class="card-date">1204</span></div><span class="card-desc">Louis Ier le Kelheimer satisfait le critère de l&#x27;éveil féodal : premier souverain dont l&#x27;autorité supra-régionale est effective (pas simplement titulaire). Il fonde des villes, ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Thomas II</span><span class="card-date">1233</span></div><span class="card-desc">Thomas II (1233-1259) est le premier seigneur de Piémont, recevant les terres piémontaises en apanage après la partition de 1233. Il tente d&#x27;occuper Turin (1250) mais se heurte ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Les trois cantons forestiers (Uri, Schwyz, Unterwalden)</span><span class="card-date">1291</span></div><span class="card-desc">Le Bundesbrief du 1er août 1291 unit les trois cantons forestiers dans une « Ligue perpétuelle » (Ewiger Bund). C&#x27;est le premier centre politique supra-régional effectif de l&#x27;es...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Rudolf IV</span><span class="card-date">1358</span></div><span class="card-desc">Rudolf IV (r. 1358-1365) franchit le seuil d&#x27;effectivité féodale habsbourgeoise. Premier duc Habsbourg dont l&#x27;autorité personnelle est effective sur des Erbländer multi-régionau...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Mateo de Toro Zambrano</span><span class="card-date">1810</span></div><span class="card-desc">Le 18 septembre 1810, le cabildo de Santiago, transformé en assemblée ouverte, désigne une Primera Junta Nacional de Gobierno sous la présidence de Mateo de Toro Zambrano. Offic...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#8B7355;">terrain</span><span>Pic féodal</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">David</span><span class="card-date">-1003</span></div><span class="card-desc">David est reconnu roi de tout Israël par un pacte contractuel (brith) avec les anciens du Nord, conquiert Jérusalem comme capitale neutre et écrase les Philistins. Son édifice r...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Salomon</span><span class="card-date">-960</span></div><span class="card-desc">Salomon porte l&#x27;édifice féodal à son sommet — réseau lignager de David, réseaux commerciaux avec Tyr et Saba, construction du Temple — mais le test discriminant reste positif : ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Maurizio Galbaio</span><span class="card-date">764</span></div><span class="card-desc">Premier doge à régner durablement (22 ans, 764-787), engageant Venise sur la voie de l&#x27;indépendance et tentant la succession héréditaire par co-régence avec son fils Giovanni.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Agnello Partecipazio</span><span class="card-date">811</span></div><span class="card-desc">Fondateur de la dynastie Partecipazio, il transfère la capitale à Rialto, construit le premier palais ducal. Sa dynastie produit sept doges sur ~130 ans (811-942).</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Æthelstan</span><span class="card-date">~927</span></div><span class="card-desc">Premier roi à gouverner effectivement toute l&#x27;Angleterre. Il conquiert York, remporte Brunanburh et porte l&#x27;autorité royale personnelle à un niveau sans précédent.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Edgar le Pacifique</span><span class="card-date">~959</span></div><span class="card-desc">Roi stable, réformes monétaires, Regularis Concordia. L&#x27;autorité royale est au maximum dans une Angleterre prospère. Mais la crise de succession à sa mort ne débouche sur aucun ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Pietro IV Candiano</span><span class="card-date">959</span></div><span class="card-desc">Pietro IV Candiano (959-976) tente d&#x27;importer la féodalité terrienne à Venise (domaines continentaux, hommage à l&#x27;empereur germanique). Révolte de 976 : palais ducal brûlé, doge...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Pietro II Orseolo</span><span class="card-date">991</span></div><span class="card-desc">Le doge le plus puissant de la période féodale : conquête de la Dalmatie (1000), privilèges commerciaux de Byzance (992), alliances dynastiques européennes. L&#x27;apogée du pouvoir ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Cnut le Grand</span><span class="card-date">~1016</span></div><span class="card-desc">Cnut bâtit un empire anglo-scandinave (Angleterre + Danemark + Norvège) et règne avec autorité. Mais l&#x27;augmentation d&#x27;échelle élève le seuil d&#x27;homogénéité requis pour un pacte, ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Ariberto d&#x27;Intimiano</span><span class="card-date">1018</span></div><span class="card-desc">Ariberto (archevêque 1018-1045) porte le pouvoir archiépiscopal à son maximum absolu — pic féodal classique. Son édifice est entièrement personnel et fragile : il se fragmente à...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Henri III</span><span class="card-date">~1039</span></div><span class="card-desc">Sommet de l&#x27;autorité personnelle impériale. La fragmentation post-pic (minorité d&#x27;Henri IV, Querelle des Investitures) confirme le diagnostic féodal : le pouvoir ne survit pas à...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Ladislas Ier</span><span class="card-date">1077</span></div><span class="card-desc">Ladislas Ier consolide le royaume árpádien après une génération de crises dynastiques. Législation sévère, défense contre les Coumans, canonisation d&#x27;Étienne Ier (1083). Canonis...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Alphonse VI</span><span class="card-date">1085</span></div><span class="card-desc">Alphonse VI (r. 1072-1109) reunifie Castille et Leon, conquiert Tolede (1085) et se proclame « Imperator totius Hispaniae ». Premier pouvoir veritablement supra-regional, mais l...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri Ier</span><span class="card-date">1120</span></div><span class="card-desc">Henri Ier crée l&#x27;Échiquier comme instrument fiscal permanent, réunifie l&#x27;Angleterre et la Normandie sous une seule couronne, et impose une paix royale remarquable. Le pouvoir es...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri II Plantagenêt</span><span class="card-date">1170</span></div><span class="card-desc">Henri II développe le common law, les assises itinérantes et un appareil judiciaire centralisé. Il règne aussi sur un empire continental (Normandie, Anjou, Aquitaine) qui foncti...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Béla III</span><span class="card-date">1172</span></div><span class="card-desc">Béla III, éduqué à la cour byzantine de Manuel Ier Comnène, porte le royaume árpádien à son apogée pré-mongole. Premier usage de la double croix, cour brillante, revenu annuel p...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Ottokar Ier</span><span class="card-date">1198</span></div><span class="card-desc">Ottokar Ier (r. 1198-1230) obtient de Frédéric II de Hohenstaufen la Bulle d&#x27;Or de Sicile (26 septembre 1212) qui confirme définitivement l&#x27;hérédité du titre royal bohême et rec...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Philippe Auguste</span><span class="card-date">1214</span></div><span class="card-desc">La victoire de Bouvines en 1214 consacre Philippe Auguste comme le premier suzerain fort du Parcours français, capable de projeter sa puissance militaire bien au-delà de l&#x27;Île-d...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Ferdinand III</span><span class="card-date">1230</span></div><span class="card-desc">Ferdinand III (r. 1217/1230-1252) réalise l&#x27;union définitive de Castille et León (1230) et conquiert Cordoue (1236), Jaén (1246) et Séville (1248). Le territoire castillan doubl...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Béla IV</span><span class="card-date">1242</span></div><span class="card-desc">Béla IV reconstruit le royaume après l&#x27;invasion mongole et est surnommé « second fondateur ». Construction systématique de châteaux de pierre, refondation des villes, immigratio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Louis IX</span><span class="card-date">1250</span></div><span class="card-desc">Louis IX porte le prestige personnel de la monarchie capétienne à un niveau sans égal en Europe — deux croisades, arbitre de la chrétienté, canonisé en 1297 — tout en étendant c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Ottokar II</span><span class="card-date">1253</span></div><span class="card-desc">Ottokar II (r. 1253-1278), petit-fils d&#x27;Ottokar Ier, construit en 25 ans une hégémonie centre-européenne inédite : acquisition de l&#x27;Autriche (1251), de la Styrie (1260), de la C...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Alphonse X</span><span class="card-date">~1265</span></div><span class="card-desc">Alphonse X (r. 1252-1284) entreprend les Siete Partidas (~1265) et le Fuero Real — tentative de codification qui anticipe la phase oligarchique sans en reunir les conditions. Le...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Philippe le Bel</span><span class="card-date">1285</span></div><span class="card-desc">Philippe le Bel pousse le pouvoir royal personnel à son maximum en s&#x27;appuyant sur ses légistes pour affronter la papauté et convoquer les premiers États généraux, mais ce pouvoi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Édouard Ier</span><span class="card-date">1295</span></div><span class="card-desc">Édouard Ier atteint le sommet de son pouvoir vers 1295 avec le Parlement modèle, les Statuts de Westminster et le Quia Emptores, portant l&#x27;autorité royale personnelle à un nivea...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Philippe Ier d&#x27;Achaïe</span><span class="card-date">1295</span></div><span class="card-desc">Philippe Ier d&#x27;Achaïe (r. 1282-1334) porte le pouvoir personnel piémontais à son maximum. Long règne de 52 ans. Il épouse Isabelle de Villehardouin (1301), obtenant le titre de ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Louis IV le Bavarois</span><span class="card-date">1328</span></div><span class="card-desc">Louis IV est un roi fort au sommet de sa puissance personnelle, projetant la puissance vers l&#x27;extérieur (empire de la Hollande au Tyrol) et développant l&#x27;administration (Landrec...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Alphonse XI</span><span class="card-date">1340</span></div><span class="card-desc">Alphonse XI (r. 1312-1350) impose l&#x27;alcabala (1342), codifie le droit (Ordenamiento de Alcala, 1348), cree les regimientos (1345). Mais son oeuvre est personnelle et fragile — i...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Amédée d&#x27;Achaïe</span><span class="card-date">1380</span></div><span class="card-desc">Amédée d&#x27;Achaïe (r. 1367-1402) est le dernier prince stable. Élevé à Chambéry sous la tutelle d&#x27;Amédée VI, il est un vassal loyal. Il développe une administration mixte : focati...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">La Confédération des Huit Cantons</span><span class="card-date">1386</span></div><span class="card-desc">La bataille de Sempach (1386) est la victoire décisive de la Confédération sur les Habsbourg. Le pic est caractéristiquement féodal : puissance militaire collective maximale, ma...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Ludwig IX der Reiche</span><span class="card-date">1450</span></div><span class="card-desc">Ludwig IX der Reiche est le pic féodal tardif — celui qui précède directement la crise terminale. Le test discriminant féodal reste positif : l&#x27;administration (chancellerie, Hof...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">La Confédération des Huit Cantons</span><span class="card-date">1474</span></div><span class="card-desc">Les trois victoires de Grandson, Morat et Nancy (1476-1477) contre Charles le Téméraire portent la puissance collective confédérale à son maximum. C&#x27;est le pic qui déclenche la ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Bernardo O&#x27;Higgins</span><span class="card-date">1817</span></div><span class="card-desc">Bernardo O&#x27;Higgins est Director Supremo du Chili de 1817 à 1823 après la victoire de Chacabuco (1817) et de Maipú (1818) — premier chef à exercer une autorité centrale effective...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#8B7355;">close</span><span>Crise féodale</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Roboam</span><span class="card-date">-930</span></div><span class="card-desc">Roboam refuse de réduire la corvée, provoquant le schisme des dix tribus du Nord. La crise est structurellement une insuffisance interne : les conditions de Deblonde pour le pac...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Crise franque</span><span class="card-date">804</span></div><span class="card-desc">Mécanisme : choc exogène (attaque franque de Pépin dans le lagon). Effet : avortement — les conditions de Deblonde ne sont pas réunies (homogénéité insuffisante, factions pro-fr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Æthelred II</span><span class="card-date">978</span></div><span class="card-desc">L&#x27;assassinat d&#x27;Edward the Martyr ouvre une longue période d&#x27;instabilité sous Æthelred le Malavisé. Aucun pacte n&#x27;émerge — les élites sont trop hétérogènes (Anglo-Saxons + Scandi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Edward le Confesseur</span><span class="card-date">1035</span></div><span class="card-desc">La mort de Cnut provoque la fragmentation de l&#x27;empire anglo-scandinave. Les conditions du pacte ne sont toujours pas réunies : l&#x27;échelle est trop grande et les élites trop hétér...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Erlembaldo (Pataria)</span><span class="card-date">1045</span></div><span class="card-desc">La mort d&#x27;Ariberto (1045) fragmente l&#x27;édifice personnel qu&#x27;il avait construit — crise féodale classique (effondrement post-pic). Les deux conditions de Deblonde sont alors réuni...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Alphonse VII</span><span class="card-date">1157</span></div><span class="card-desc">Alphonse VII (r. 1126-1157) divise deliberement ses royaumes entre ses fils. Mecanisme : insuffisance interne (cf. perturbations.md) — l&#x27;echelle depasse le seuil d&#x27;homogeneite, ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Jean sans Terre</span><span class="card-date">1205</span></div><span class="card-desc">Jean sans Terre ruine le système Plantagenêt : perte de la Normandie (1204), Magna Carta imposée (1215), guerre civile. Crise féodale avortée — l&#x27;homogénéité est encore insuffis...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">André II</span><span class="card-date">1222</span></div><span class="card-desc">Le 24 avril 1222, André II promulgue à Székesfehérvár la Bulle d&#x27;or qui codifie les privilèges de la noblesse et garantit le ius resistendi. Préfiguration de pacte qui ne satisf...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Béla IV</span><span class="card-date">1241</span></div><span class="card-desc">L&#x27;armée mongole de Batu Khan écrase Béla IV à Mohi (11 avril 1241) et saccage le royaume pendant un an. ~25% de population tuée. Retrait mongol inattendu (mars 1242) permet la r...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Frédéric II de Babenberg</span><span class="card-date">1246</span></div><span class="card-desc">Le 15 juin 1246, Frédéric II de Babenberg meurt sans héritier mâle à la bataille de la Leitha contre les Hongrois. L&#x27;Autriche et la Styrie sont sans direction. La phase féodale ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Sanche IV</span><span class="card-date">1282</span></div><span class="card-desc">En 1282, les Cortes de Valladolid agissent collectivement pour declarer Alphonse X inapte. Action collective significative, mais ne satisfait pas le critere du PO : pas de codif...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Édouard II</span><span class="card-date">1307</span></div><span class="card-desc">Le règne d&#x27;Édouard II concentre tous les marqueurs de la crise féodale : roi faible, favoris impopulaires, défaite militaire humiliante à Bannockburn, et finalement déposition e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Les Rois Maudits</span><span class="card-date">1314</span></div><span class="card-desc">Les trois fils de Philippe le Bel — Louis X, Philippe V et Charles IV — meurent successivement sans héritier mâle entre 1314 et 1328, créant un vide de pouvoir qui permet aux gr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">1349</span></div><span class="card-desc">Mécanisme : insuffisance interne (l&#x27;héritage divisible fragmente le duché). Effet : avortement (les conditions de Deblonde ne sont pas réunies — la faiblesse du suzerain est là ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Pierre Ier / Henri II</span><span class="card-date">1350</span></div><span class="card-desc">Pierre Ier (1350-1369) tente de centraliser en s&#x27;appuyant sur le peuple et la communaute juive contre la noblesse — un Faliero castillan (insuffisance interne). L&#x27;oligarchie le ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Jacques d&#x27;Achaïe / Amédée VI</span><span class="card-date">1359</span></div><span class="card-desc">Jacques d&#x27;Achaïe (r. 1334-1367) conteste la suzeraineté de la branche principale et s&#x27;allie aux Visconti. En 1359-1360, Amédée VI le Comte Vert l&#x27;écrase : siège de Pignerol, cap...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Albert III et Léopold III</span><span class="card-date">1379</span></div><span class="card-desc">Le 25 septembre 1379, Albert III et Léopold III divisent formellement les domaines habsbourgeois en deux lignes : Albertine (Autriche propre) et Leopoldine (Styrie, Carinthie, C...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Bavière</span><span class="card-date">1392</span></div><span class="card-desc">Mécanisme : insuffisance interne (héritage divisible, le plus destructeur). Effet : avortement (quatre duchés rivaux, homogénéité encore insuffisante pour un pacte pan-bavarois ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Louis d&#x27;Achaïe</span><span class="card-date">1418</span></div><span class="card-desc">Louis d&#x27;Achaïe (r. 1402-1418), dernier prince de la branche, meurt sans héritiers le 11 décembre 1418, ayant désigné Amédée VIII comme successeur. La succession est pacifique — ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Frédéric III et Albert VI</span><span class="card-date">1440</span></div><span class="card-desc">Le frère cadet de Frédéric III, Albert VI, revendique sa part des domaines habsbourgeois et entre en conflit armé répété. Frédéric III doit céder l&#x27;Autriche intérieure puis la H...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Crise ville-campagne</span><span class="card-date">1477</span></div><span class="card-desc">Après les Guerres de Bourgogne, le partage du butin et l&#x27;admission de Fribourg et Soleure déclenchent une crise qui menace l&#x27;existence même de la Confédération. C&#x27;est la crise f...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Mathias Corvin</span><span class="card-date">1485</span></div><span class="card-desc">Mathias Corvin, roi de Hongrie, conquiert Vienne le 1er juin 1485 et y installe sa cour. Frédéric III est en fuite. Pendant cinq ans, la capitale autrichienne est sous dominatio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Albert IV</span><span class="card-date">1503</span></div><span class="card-desc">Crise féodale terminale : les deux conditions de Deblonde sont réunies simultanément pour la première fois — homogénéité des oligarques pan-bavarois (300 ans de brassage) et fai...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Ramón Freire</span><span class="card-date">1823</span></div><span class="card-desc">Entre l&#x27;abdication d&#x27;O&#x27;Higgins (janvier 1823) et la bataille de Lircay (avril 1830), le Chili connaît huit gouvernements en sept ans et plus de trente cabinets. Fédéralistes, un...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#8B7355;">gavel</span><span>Pacte oligarchique</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Knesset HaGuedola</span><span class="card-date">-516</span></div><span class="card-desc">La Knesset HaGuedola (Grande Assemblée de 120 membres) satisfait le critère de Deblonde : première codification collective, négociée et entérinée, des responsabilités de l&#x27;exécu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Domenico Flabanico (doge de transition)</span><span class="card-date">1032</span></div><span class="card-desc">L&#x27;abolition de la co-régence (1032) satisfait le critère du PO (Coencas) : première codification négociée et entérinée des responsabilités de l&#x27;exécutif, imposée collectivement ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Commune de Milan</span><span class="card-date">1097</span></div><span class="card-desc">Vers 1097, les trois ordres (capitanei, valvassores, cives) établissent un gouvernement consulaire collectif. Ce pacte satisfait le critère discriminant : c&#x27;est la première codi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Charles Ier Robert</span><span class="card-date">1308</span></div><span class="card-desc">Après l&#x27;extinction Árpád et sept ans de compétition dynastique, la diète magnate élit Charles Ier Robert en 1308 contre des garanties de respect des privilèges nobiliaires. Les ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Thomas de Lancaster</span><span class="card-date">1311</span></div><span class="card-desc">Les Ordonnances de 1311, imposées par les Lords Ordainers à Édouard II, constituent le premier pacte oligarchique anglais en codifiant explicitement les contraintes pesant sur l...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Jean de Luxembourg</span><span class="card-date">1311</span></div><span class="card-desc">Peu après son couronnement du 7 février 1311, Jean de Luxembourg accepte le Diplôme inaugural qui codifie ses obligations envers la diète bohême. Les deux conditions de Deblonde...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Philippe V</span><span class="card-date">1317</span></div><span class="card-desc">En 1317, Philippe V convoque les États généraux pour légitimer sa propre succession et fait codifier la loi salique, transformant pour la première fois les règles de succession ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Henri II de Trastámara</span><span class="card-date">1369</span></div><span class="card-desc">Le reglement trastamara (1369-1371) est le pacte oligarchique castillan — premiere codification negociee et enterinee des responsabilites du suzerain (critere du PO). Les merced...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1428</span></div><span class="card-desc">Les États généraux de Chinon (septembre 1428) constituent le nouveau pacte oligarchique : plus de 200 délégués codifient collectivement leur soutien à Charles VII, votent 500 00...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Amédée VIII</span><span class="card-date">1430</span></div><span class="card-desc">Les Statuta Sabaudiae (1430) satisfont le critère de Deblonde du pacte oligarchique : première codification négociée et entérinée des responsabilités du suzerain. Les trois élém...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Sigismond de Luxembourg</span><span class="card-date">1436</span></div><span class="card-desc">Les Compactata, négociés au concile de Bâle (1433) puis ratifiés solennellement par la diète d&#x27;État bohême réunie à Jihlava le 5 juillet 1436, sont un pacte de compromis confess...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Nicolas de Flüe (médiateur)</span><span class="card-date">1481</span></div><span class="card-desc">La Stanser Verkommnis (22 décembre 1481) satisfait le critère discriminant du pacte oligarchique (Coencas) : c&#x27;est la première codification collective, négociée et entérinée, de...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Albert IV</span><span class="card-date">1506</span></div><span class="card-desc">Le décret de primogéniture (8 juillet 1506) satisfait le critère discriminant du pacte oligarchique (Coencas) : c&#x27;est la première codification négociée et entérinée des responsa...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Maximilien Ier</span><span class="card-date">1518</span></div><span class="card-desc">Le 24 mai 1518, Maximilien Ier convoque à Innsbruck une diète générale de tous les états des terres héréditaires habsbourgeoises — premier Generallandtag commun — et promulgue u...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Ferrante Gonzaga</span><span class="card-date">1541</span></div><span class="card-desc">Les Novae Constitutiones Dominii Mediolanensis (1541) satisfont le critère discriminant du pacte oligarchique : c&#x27;est la première codification négociée et entérinée des responsa...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Emmanuel Philibert</span><span class="card-date">1561</span></div><span class="card-desc">Les Ordini Nuovi (1561) remplacent les Statuta Sabaudiae et codifient le nouveau cadre institutionnel piémontais. C&#x27;est le pacte oligarchique du 2e cycle — la codification des r...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Diego Portales</span><span class="card-date">1833</span></div><span class="card-desc">La Constitution de 1833 est le pacte oligarchique chilien canonique. Elle satisfait le critère discriminant de Deblonde : première codification négociée et entérinée des respons...</span></div></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

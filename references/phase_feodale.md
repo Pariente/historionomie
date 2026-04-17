@@ -47,11 +47,12 @@ Quand l'échelle du royaume **augmente** (conquête, union dynastique), le seuil
 
 La sécession n'est pas un échec du Parcours — c'est un **mécanisme de correction d'échelle**. Le Parcours ajuste sa taille pour correspondre au niveau réel d'homogénéité.
 
-**Exemples :**
-- **Israël (~-930)** : Salomon étend le royaume au-delà du seuil d'homogénéité. Roboam est faible → les tribus du nord font sécession. Le Parcours continue à l'échelle réduite (Samarie).
-- **Empire carolingien (843)** : Charlemagne unifie un territoire trop hétérogène. Ses successeurs sont faibles → Verdun, l'empire se scinde en trois morceaux plus homogènes.
-- **Empire Plantagenêt (1204)** : Henri II crée un empire (Angleterre + Normandie + Anjou + Aquitaine). Philippe Auguste conquiert la Normandie → l'échelle redescend à l'échelle anglaise → le pacte devient possible.
-- **Empire de Cnut (1035)** : Angleterre + Danemark + Norvège. Trop hétérogène. Fragmentation à la mort de Cnut.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël | ~-930 | Salomon étend le royaume au-delà du seuil d'homogénéité. Roboam est faible → les tribus du nord font sécession. Le Parcours continue à l'échelle réduite (Samarie) |
+| Empire carolingien | 843 | Charlemagne unifie un territoire trop hétérogène. Ses successeurs sont faibles → Verdun, l'empire se scinde en trois morceaux plus homogènes |
+| Empire Plantagenêt | 1204 | Henri II crée un empire (Angleterre + Normandie + Anjou + Aquitaine). Philippe Auguste conquiert la Normandie → l'échelle redescend à l'échelle anglaise → le pacte devient possible |
+| Empire de Cnut | 1035 | Angleterre + Danemark + Norvège. Trop hétérogène. Fragmentation à la mort de Cnut |
 
 ### Nature de la phase et contexte technologique
 
@@ -91,14 +92,15 @@ Le pouvoir central **est-il en péril à la mort du souverain** ? L'existence du
 
 La distinction est entre un roi **titulaire** (qui porte le titre et joue au plus un rôle d'arbitre symbolique, mais n'a pas lui-même la capacité de déployer des forces comparables à celles d'un grand seigneur féodal) et un **souverain féodal effectif** (qui dispose personnellement d'une puissance militaire et politique de premier plan). Le premier est un précurseur ; le second est l'éveil féodal.
 
-**Exemples :**
-- Israël antique : Saül (~-1080) — acclamé roi après une victoire militaire, chef de guerre effectif
-- Venise : Orso Ipato (~726) — premier doge exerçant une autorité effective sur la lagune
-- Angleterre : Ecgberht (~829) ; puis Guillaume le Conquérant (1066) après le reboot normand
-- France : Louis VI le Gros (~1108). Hugues Capet (987) n'est qu'un roi titulaire — ses vassaux l'ignorent, il n'a pas la puissance d'un grand féodal. Louis VI dispose de forces propres et force les autres à se positionner.
-- Espagne : Ferdinand Ier (~1035) — premier roi de Castille et León à exercer une hégémonie effective
-- Suisse : Bundesbrief (1291) — éveil collectif, pas individuel : les trois cantons s'unissent contre les Habsbourg
-- USA : ~1776 — l'indépendance crée une entité politique dont le pouvoir repose sur des réseaux interpersonnels entre grands acteurs
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-1080 | Saül — acclamé roi après une victoire militaire, chef de guerre effectif |
+| Venise | ~726 | Orso Ipato — premier doge exerçant une autorité effective sur la lagune |
+| Angleterre | ~829 ; 1066 | Ecgberht ; puis Guillaume le Conquérant après le reboot normand |
+| France | ~1108 | Louis VI le Gros. Hugues Capet (987) n'est qu'un roi titulaire — ses vassaux l'ignorent, il n'a pas la puissance d'un grand féodal. Louis VI dispose de forces propres et force les autres à se positionner |
+| Espagne | ~1035 | Ferdinand Ier — premier roi de Castille et León à exercer une hégémonie effective |
+| Suisse | 1291 | Bundesbrief — éveil collectif, pas individuel : les trois cantons s'unissent contre les Habsbourg |
+| USA | ~1776 | L'indépendance crée une entité politique dont le pouvoir repose sur des réseaux interpersonnels entre grands acteurs |
 
 ### Saillant : Pic féodal (récurrent)
 
@@ -106,13 +108,14 @@ Un roi fort, au sommet de sa puissance personnelle. Il projette la puissance ver
 
 Il peut y avoir **plusieurs pics féodaux** dans une même phase si celle-ci boucle (cf. Angleterre : Æthelstan, Edgar, Cnut, Henri Ier, Henri II, Édouard Ier).
 
-**Exemples :**
-- Israël antique : David (~-1003), Salomon (~-960)
-- Venise : Galbaio (~764), Partecipazio (~811), Candiano (~959), Orseolo (~991) — 4 pics sur ~300 ans
-- Angleterre : Æthelstan (~930), Edgar (~965), Cnut (~1025), Henri Ier (~1120), Henri II (~1170), Édouard Ier (~1295)
-- Espagne : Alphonse VI (~1085), Ferdinand III (1230), Alphonse X (~1265), Alphonse XI (1340)
-- France : Philippe Auguste (~1214), Philippe le Bel (~1295)
-- Bavière : Louis IV (~1328), Ludwig IX (~1450) — phase longue à cause des partitions récurrentes
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-1003, ~-960 | David, Salomon |
+| Venise | ~764, ~811, ~959, ~991 | Galbaio, Partecipazio, Candiano, Orseolo — 4 pics sur ~300 ans |
+| Angleterre | ~930, ~965, ~1025, ~1120, ~1170, ~1295 | Æthelstan, Edgar, Cnut, Henri Ier, Henri II, Édouard Ier |
+| Espagne | ~1085, 1230, ~1265, 1340 | Alphonse VI, Ferdinand III, Alphonse X, Alphonse XI |
+| France | ~1214, ~1295 | Philippe Auguste, Philippe le Bel |
+| Bavière | ~1328, ~1450 | Louis IV, Ludwig IX — phase longue à cause des partitions récurrentes |
 
 ### Saillant : Crise féodale (récurrent)
 
@@ -120,12 +123,13 @@ L'effondrement du système personnel construit par un pic féodal. Le roi meurt 
 
 La crise féodale est le **seul cas de chevauchement formel** entre saillant canonique et perturbation : quand elle avorte, c'est structurellement une perturbation (mécanisme : insuffisance interne ; effet : avortement). Quand elle aboutit au pacte, elle reste un saillant canonique sans perturbation associée.
 
-**Exemples :**
-- Israël antique : Roboam (~-930) — schisme → avortement (correction d'échelle)
-- Angleterre : l'Anarchie (1135) → avortement ; Jean sans Terre (~1205) → avortement ; Édouard II (1307) → **pacte** (Ordonnances, 1311)
-- Bavière : partitions de 1255, 1349, 1392 → avortements successifs, le duché se morcelle et se recompose
-- Espagne : crise de 1282 → avortement
-- France : Fils de Philippe le Bel (1314) → **pacte** (loi salique, 1317)
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-930 | Roboam — schisme → avortement (correction d'échelle) |
+| Angleterre | 1135, ~1205, 1307 | L'Anarchie → avortement ; Jean sans Terre → avortement ; Édouard II → **pacte** (Ordonnances, 1311) |
+| Bavière | 1255, 1349, 1392 | Partitions → avortements successifs, le duché se morcelle et se recompose |
+| Espagne | 1282 | Crise → avortement |
+| France | 1314 | Fils de Philippe le Bel → **pacte** (loi salique, 1317) |
 
 ### Saillant : Pacte oligarchique
 
@@ -145,13 +149,14 @@ Ce critère permet de distinguer le pacte oligarchique des **créations institut
 
 Vérification empirique sur le corpus : 11 parcours canoniques sur 12 satisfont ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Autriche, Allemagne, USA). Israël antique est la seule exception documentée — Omri crée l'État sans codification négociée, ce qui laisse la phase féodale israélite sans pacte canonique.
 
-**Exemples :**
-- France : Loi salique / États généraux de 1317 — codification des règles de succession par l'assemblée politique
-- Angleterre : Ordonnances de 1311 — les Lords Ordainers imposent des contraintes institutionnelles à Édouard II
-- Espagne : règlement trastámara (1369-1371) — mercedes enriqueñas + Audiencia, Henri II usurpateur négocie avec la noblesse
-- Bavière : décret de primogéniture de 1506 — Albert IV codifie l'indivisibilité devant les Landstände
-- Autriche : Innsbrucker Libell (1518) — Maximilien Ier codifie la défense, l'administration et la fiscalité en Generallandtag des Erbländer
-- USA : Création de la Fed et de l'IRS (1913) — codification de la structure fiscale et monétaire fédérale
+| Nation | Date | Exemple |
+|---|---|---|
+| France | 1317 | Loi salique / États généraux — codification des règles de succession par l'assemblée politique |
+| Angleterre | 1311 | Ordonnances — les Lords Ordainers imposent des contraintes institutionnelles à Édouard II |
+| Espagne | 1369-1371 | Règlement trastámara — mercedes enriqueñas + Audiencia, Henri II usurpateur négocie avec la noblesse |
+| Bavière | 1506 | Décret de primogéniture — Albert IV codifie l'indivisibilité devant les Landstände |
+| Autriche | 1518 | Innsbrucker Libell — Maximilien Ier codifie la défense, l'administration et la fiscalité en Generallandtag des Erbländer |
+| USA | 1913 | Création de la Fed et de l'IRS — codification de la structure fiscale et monétaire fédérale |
 
 **Cas limite : « suzerain collectif »** — À Venise et à Milan, le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les « responsabilités de l'exécutif » qui sont codifiées collectivement, mais la forme est institutionnelle.
 

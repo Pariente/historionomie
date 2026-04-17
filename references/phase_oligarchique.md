@@ -46,11 +46,12 @@ Après le pacte oligarchique, la nation se dote de nouveaux outils — fisc perm
 
 Le premier souverain qui dispose d'un État central — impôt permanent, armée permanente, administration. Il marque le passage d'une chefferie féodale à un véritable État territorial.
 
-**Exemples :**
-- Israël antique : Omri (-885)
-- France : Philippe VI de Valois (1328) — premier roi sous les règles codifiées (loi salique)
-- Angleterre : Édouard III (1327) — premier roi après les Ordonnances de 1311 et la bascule oligarchique
-- Venise : Domenico Contarini (~1043) / système — premier doge stable sous le régime post-dynastique, avec fisc commercial permanent, flotte permanente, administration en institutionnalisation. Le « monarque » vénitien est le système institutionnel plus que la personne du doge.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | -885 | Omri |
+| France | 1328 | Philippe VI de Valois — premier roi sous les règles codifiées (loi salique) |
+| Angleterre | 1327 | Édouard III — premier roi après les Ordonnances de 1311 et la bascule oligarchique |
+| Venise | ~1043 | Domenico Contarini / système — premier doge stable sous le régime post-dynastique, avec fisc commercial permanent, flotte permanente, administration en institutionnalisation. Le « monarque » vénitien est le système institutionnel plus que la personne du doge |
 
 ### Saillant : Acmé oligarchique
 
@@ -60,23 +61,25 @@ Le premier souverain qui dispose d'un État central — impôt permanent, armée
 
 Conséquence méthodologique : **ne pas chercher l'acmé oligarchique à une fraction fixe de la phase**. Identifier plutôt le moment où la combinaison « puissance personnelle du souverain + projection extérieure maximale » est à son sommet. Ce moment peut arriver très tôt, en milieu de phase, ou très tard selon la dynamique de l'exutoire.
 
-**Exemples :**
-- Israël antique : Jéroboam II (~-770, position ~0.47)
-- France : François Ier (~1515, position ~0.53) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses).
-- Angleterre : Édouard III (~1350, position ~0.56)
-- Espagne : Rois Catholiques (~1492, position ~0.36) — pic précoce, expansion maritime et ibérique qui sature rapidement
-- Venise : Francesco Foscari (~1440, position ~0.64) — plus long dogat de l'histoire vénitienne (1423-1457), expansion maximale de la Terraferma. Foscari agit dans le cadre de la promissione ducale — le Conseil des Dix le force à démissionner en 1457.
-- Bavière : Albert V (~1555, position ~0.54)
-- Autriche : Léopold Ier (~1683-1705, position ~0.71) — pic très tardif porté par l'exutoire anti-ottoman qui relance une dynamique de projection extérieure au milieu de la polarisation
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-770 | Jéroboam II (position ~0.47) |
+| France | ~1515 | François Ier (position ~0.53) — Concordat de Bologne, Guerres d'Italie, cour Renaissance. Reflux après sa mort (tensions religieuses) |
+| Angleterre | ~1350 | Édouard III (position ~0.56) |
+| Espagne | ~1492 | Rois Catholiques (position ~0.36) — pic précoce, expansion maritime et ibérique qui sature rapidement |
+| Venise | ~1440 | Francesco Foscari (position ~0.64) — plus long dogat de l'histoire vénitienne (1423-1457), expansion maximale de la Terraferma. Foscari agit dans le cadre de la promissione ducale — le Conseil des Dix le force à démissionner en 1457 |
+| Bavière | ~1555 | Albert V (position ~0.54) |
+| Autriche | ~1683-1705 | Léopold Ier (position ~0.71) — pic très tardif porté par l'exutoire anti-ottoman qui relance une dynamique de projection extérieure au milieu de la polarisation |
 
 ### Saillant : Fin de l'expansion (tournant essor → polarisation)
 
 Le moment où l'expansion extérieure cesse de fonctionner et les tensions internes prennent le relais. Marque le tournant entre l'essor dynamique et la polarisation des élites.
 
-**Exemples :**
-- Israël antique : mort de Jéroboam II (~-746) — instabilité, pression assyrienne
-- France (Deblonde) : Traité de Cateau-Cambrésis (1559) — fin des Guerres d'Italie, mort d'Henri II
-- Venise : Agnadello / Ligue de Cambrai (1509) — Venise perd toute la Terraferma avant de la récupérer. Fin de l'expansion agressive ; les guerres deviennent purement défensives.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-746 | Mort de Jéroboam II — instabilité, pression assyrienne |
+| France (Deblonde) | 1559 | Traité de Cateau-Cambrésis — fin des Guerres d'Italie, mort d'Henri II |
+| Venise | 1509 | Agnadello / Ligue de Cambrai — Venise perd toute la Terraferma avant de la récupérer. Fin de l'expansion agressive ; les guerres deviennent purement défensives |
 
 ### Structure institutionnelle
 
@@ -137,9 +140,11 @@ L'expansion extérieure peut considérablement retarder la polarisation. Tant qu
 
 ### Exemples de polarisation
 
-- Israël antique : dénonciation par les prophètes Amos et Osée (~-760 à -725) des inégalités sociales, de la corruption et du luxe scandaleux des élites
-- Israël antique (reboot) : affrontement Oniades (patrimoniale, sacerdotale) vs Tobiades (prébendière, hellénisée)
-- Venise (~1509-~1628) : giovani (prébendier — commerciaux, intellectuels, Sarpi) vs vecchi (patrimonial — riches, institutionnels, pro-papauté). Polarisation retardée par les exutoires extérieurs, accélérée après Agnadello (1509). Correzione de 1582 : le Grand Conseil arrache des pouvoirs au Conseil des Dix. Affaire Zeno (1628) : dernière tentative de réforme, échouée.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-760 à -725 | Dénonciation par les prophètes Amos et Osée des inégalités sociales, de la corruption et du luxe scandaleux des élites |
+| Israël antique (reboot) | | Affrontement Oniades (patrimoniale, sacerdotale) vs Tobiades (prébendière, hellénisée) |
+| Venise | ~1509-~1628 | Giovani (prébendier — commerciaux, intellectuels, Sarpi) vs vecchi (patrimonial — riches, institutionnels, pro-papauté). Polarisation retardée par les exutoires extérieurs, accélérée après Agnadello (1509). Correzione de 1582 : le Grand Conseil arrache des pouvoirs au Conseil des Dix. Affaire Zeno (1628) : dernière tentative de réforme, échouée |
 
 ## Sous-phase 3 : Guerre sociale
 
@@ -163,11 +168,13 @@ Si les deux critères ne sont pas satisfaits — en particulier si une faction g
 
 ### Exemples
 
-- Israël antique : faction pro-assyrienne/syncrétiste (prébendière) vs faction yahviste/nationaliste (patrimoniale), ~-700 à -641. Ni l'une ni l'autre ne l'emporte : c'est Josias qui émerge comme premier monarque absolu.
-- Israël antique (prolongement) : Oniades vs Tobiades, ~-175 à -140. Ni l'une ni l'autre ne prend le pouvoir : c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées.
-- France : Guerres de Religion (~1562-1598). Ni la Ligue catholique ni les Princes protestants ne l'emportent : ce sont ceux qui soutiennent le Roi (Henri IV) qui gagnent. La monarchie capétienne est renforcée.
-- Angleterre : Guerre des Deux-Roses (~1455-1485). Ni les York ni les Lancaster ne gagnent : Henri VII crée une nouvelle dynastie (les Tudor).
-- Venise : tensions institutionnelles (~1628-1669). Après l'échec de la réforme Zeno (1628), l'exécutif (Inquisiteurs d'État) consolide son pouvoir sans opposition. La guerre de Candie (1645-1669) sert de véhicule à la concentration exécutive (délégation d'autorité en urgence permanente). La perte de la Crète (1669) force l'homogénéisation territoriale. Le « tiers » vénitien est institutionnel : les Inquisiteurs d'État, servis par la classe administrative des cittadini (analogue de la noblesse de robe). Ni les giovani ni les vecchi ne l'emportent : c'est l'appareil d'État.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | ~-700 à -641 | Faction pro-assyrienne/syncrétiste (prébendière) vs faction yahviste/nationaliste (patrimoniale). Ni l'une ni l'autre ne l'emporte : c'est Josias qui émerge comme premier monarque absolu |
+| Israël antique (prolongement) | ~-175 à -140 | Oniades vs Tobiades. Ni l'une ni l'autre ne prend le pouvoir : c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées |
+| France | ~1562-1598 | Guerres de Religion. Ni la Ligue catholique ni les Princes protestants ne l'emportent : ce sont ceux qui soutiennent le Roi (Henri IV) qui gagnent. La monarchie capétienne est renforcée |
+| Angleterre | ~1455-1485 | Guerre des Deux-Roses. Ni les York ni les Lancaster ne gagnent : Henri VII crée une nouvelle dynastie (les Tudor) |
+| Venise | ~1628-1669 | Tensions institutionnelles. Après l'échec de la réforme Zeno (1628), l'exécutif (Inquisiteurs d'État) consolide son pouvoir sans opposition. La guerre de Candie (1645-1669) sert de véhicule à la concentration exécutive (délégation d'autorité en urgence permanente). La perte de la Crète (1669) force l'homogénéisation territoriale. Le « tiers » vénitien est institutionnel : les Inquisiteurs d'État, servis par la classe administrative des cittadini (analogue de la noblesse de robe). Ni les giovani ni les vecchi ne l'emportent : c'est l'appareil d'État |
 
 ## Tableau récapitulatif
 

@@ -39,10 +39,11 @@ L'affrontement entre ces deux classes marque toute la phase oligarchique :
 
 En fin de phase, les élites patrimoniales se rallient progressivement à l'administration centrale et abandonnent leurs clientèles rurales. Les élites prébendières, devenues dominantes, négligent à leur tour leurs clientèles populaires. Ces clientèles délaissées deviennent disponibles pour des figures populistes — ce qui ouvre la voie à la guerre sociale.
 
-**Exemples :**
-- Israël antique : élites marchandes urbaines pro-assyriennes (prébendières) vs élites rurales terriennes yahvistes (patrimoniales) sous Manassé
-- Israël (prolongement) : Tobiades hellénisés, fermiers d'impôts ptolémaïques (prébendières) vs Oniades, aristocratie sacerdotale légitime (patrimoniales)
-- France : officiers royaux et légistes (prébendières) vs grands barons et ducs (patrimoniales)
+| Nation | Exemple |
+|---|---|
+| Israël antique | Élites marchandes urbaines pro-assyriennes (prébendières) vs élites rurales terriennes yahvistes (patrimoniales) sous Manassé |
+| Israël (prolongement) | Tobiades hellénisés, fermiers d'impôts ptolémaïques (prébendières) vs Oniades, aristocratie sacerdotale légitime (patrimoniales) |
+| France | Officiers royaux et légistes (prébendières) vs grands barons et ducs (patrimoniales) |
 
 ### Le rôle des non-gouvernementales comme levier
 
@@ -52,9 +53,10 @@ Les élites **non-gouvernementales** — en particulier la bourgeoisie des ville
 
 2. **Contre les prébendières gouvernementales qui se sédimentent** : quand les élites prébendières acquièrent trop de pouvoir et tendent à devenir autonomes, le pouvoir central peut promouvoir de nouvelles élites issues de la bourgeoisie pour leur faire concurrence. C'est un mécanisme de ventilation : empêcher qu'une classe au service du pouvoir ne devienne elle-même un pouvoir rival.
 
-**Exemples :**
-- France : les Capétiens octroient des chartes communales pour contrer les grands féodaux ; Philippe Auguste recrute des légistes bourgeois plutôt que des nobles pour son administration
-- Angleterre : Édouard Ier convoque le Model Parliament (1295) incluant les bourgeois pour contrebalancer les barons
+| Nation | Date | Exemple |
+|---|---|---|
+| France | — | Les Capétiens octroient des chartes communales pour contrer les grands féodaux ; Philippe Auguste recrute des légistes bourgeois plutôt que des nobles pour son administration |
+| Angleterre | 1295 | Édouard Ier convoque le Model Parliament incluant les bourgeois pour contrebalancer les barons |
 
 ## La guerre sociale : triomphe de l'État central
 
@@ -86,10 +88,11 @@ Ce point est critique pour lire correctement les conflits confessionnels :
 
 Si ces critères ne sont pas satisfaits, le conflit confessionnel est une **polarisation** intra-oligarchique, pas une guerre sociale au sens strict.
 
-**Exemples :**
-- France : ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont choisi de soutenir le Roi (Henri IV) plutôt que les factions. La monarchie capétienne est renforcée. Le mécanisme de distinction est la religion (catholique/protestant), mais la polarisation sous-jacente est prébendière (administration royale et villes, catholiques du centre) vs patrimoniale (noblesse terrienne du Midi et de l'Ouest, protestante ou ligueuse selon les régions). Le tiers Henri IV résout — guerre sociale.
-- Angleterre : ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée une nouvelle dynastie (les Tudor) qui s'émancipe des deux. Le mécanisme de distinction est dynastique, la polarisation est prébendière/patrimoniale.
-- Israël (prolongement) : ni les Tobiades ni les Oniades ne prennent le pouvoir — c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte. Le mécanisme de distinction est confessionnel (hellénisés vs fidèles yahvistes), la polarisation est prébendière (Tobiades, fermiers d'impôts ptolémaïques) vs patrimoniale (Oniades, aristocratie sacerdotale foncière).
+| Nation | Exemple |
+|---|---|
+| France | Ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont choisi de soutenir le Roi (Henri IV) plutôt que les factions. La monarchie capétienne est renforcée. Le mécanisme de distinction est la religion (catholique/protestant), mais la polarisation sous-jacente est prébendière (administration royale et villes, catholiques du centre) vs patrimoniale (noblesse terrienne du Midi et de l'Ouest, protestante ou ligueuse selon les régions). Le tiers Henri IV résout — guerre sociale. |
+| Angleterre | Ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée une nouvelle dynastie (les Tudor) qui s'émancipe des deux. Le mécanisme de distinction est dynastique, la polarisation est prébendière/patrimoniale. |
+| Israël (prolongement) | Ni les Tobiades ni les Oniades ne prennent le pouvoir — c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte. Le mécanisme de distinction est confessionnel (hellénisés vs fidèles yahvistes), la polarisation est prébendière (Tobiades, fermiers d'impôts ptolémaïques) vs patrimoniale (Oniades, aristocratie sacerdotale foncière). |
 
 ## L'absolutisation comme processus de migration
 
@@ -99,17 +102,19 @@ L'absolutisation est le processus par lequel la case **patrimoniales gouvernemen
 
 Les élites patrimoniales sont domestiquées : on transforme leur source de revenu pour la rendre dépendante du pouvoir central, tout en leur conservant une participation au gouvernement. Elles restent gouvernementales mais perdent leur indépendance économique.
 
-**Exemples :**
-- France : Louis XIV attire la noblesse à Versailles. Les grands, coupés de leurs domaines, deviennent dépendants des pensions et faveurs royales. Leur revenu est désormais prébendier ; leur pouvoir est domestiqué.
-- Israël antique : les Hasmonéens intègrent une partie de l'ancienne aristocratie sacerdotale au nouveau régime en redistribuant les charges du Temple.
+| Nation | Exemple |
+|---|---|
+| France | Louis XIV attire la noblesse à Versailles. Les grands, coupés de leurs domaines, deviennent dépendants des pensions et faveurs royales. Leur revenu est désormais prébendier ; leur pouvoir est domestiqué. |
+| Israël antique | Les Hasmonéens intègrent une partie de l'ancienne aristocratie sacerdotale au nouveau régime en redistribuant les charges du Temple. |
 
 ### Exclusion (patrimoniales gouvernementales → patrimoniales non-gouvernementales)
 
 Les élites patrimoniales sont écartées du pouvoir. Elles conservent leur patrimoine mais perdent toute participation au gouvernement.
 
-**Exemples :**
-- Angleterre : Henri VII, après la Guerre des Deux-Roses, brise les grandes maisons aristocratiques. Les survivants conservent des terres mais sont exclus du pouvoir effectif.
-- Israël antique : les Hasmonéens éliminent ou écartent les élites hellénisées (Tobiades) du pouvoir politique.
+| Nation | Exemple |
+|---|---|
+| Angleterre | Henri VII, après la Guerre des Deux-Roses, brise les grandes maisons aristocratiques. Les survivants conservent des terres mais sont exclus du pouvoir effectif. |
+| Israël antique | Les Hasmonéens éliminent ou écartent les élites hellénisées (Tobiades) du pouvoir politique. |
 
 ### Combinaison des deux
 

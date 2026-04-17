@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Parcours de construction nationale — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #8B7355; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html" class="active">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Le Parcours de construction nationale</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#cadre-théorique">Cadre théorique</a></li>
+<ul>
+<li><a href="#les-deux-moteurs-du-parcours">Les deux moteurs du Parcours</a></li>
+<li><a href="#la-question-fondamentale-du-parcours">La question fondamentale du Parcours</a></li>
+<li><a href="#le-parcours-est-porté-par-un-peuple-pas-par-un-état">Le Parcours est porté par un peuple, pas par un État</a></li>
+<li><a href="#les-noms-ne-sont-pas-la-réalité">Les noms ne sont pas la réalité</a></li>
+<li><a href="#comment-mapper-un-nouveau-parcours">Comment mapper un nouveau Parcours</a></li>
+<li><a href="#superficie-de-référence-noyau-marges">Superficie de référence (noyau + marges)</a></li>
+<li><a href="#durées-typiques-endogènes">Durées typiques endogènes</a></li>
+<li><a href="#le-clivage-gauche-droite-fabry-portal">Le clivage gauche-droite (Fabry &amp; Portal)</a></li>
+<li><a href="#sous-phases-et-saillants">Sous-phases et saillants</a></li>
+</ul>
+<li><a href="#vue-d-ensemble-des-phases">Vue d&#x27;ensemble des phases</a></li>
+<li><a href="#dynamique-des-élites">Dynamique des élites</a></li>
+<li><a href="#perturbations">Perturbations</a></li>
+</ul></nav>
+<article>
+<h2 id="cadre-théorique">Cadre théorique<a class="anchor" href="#cadre-théorique">#</a></h2>
+<p>Le modèle historionomique de Philippe Fabry pose qu'une nation se construit en traversant une succession de phases obligées. Deux moteurs alimentent cette progression : la construction de l'État central et l'homogénéisation culturelle de la nation. Plus la nation avance dans son Parcours, plus son État se consolide et plus sa culture s'unifie &mdash; les deux phénomènes s'alimentant mutuellement. Inversement, une hétérogénéisation brutale (par conquête, occupation, déportation) peut faire régresser le Parcours à une phase antérieure.</p>
+<h3 id="les-deux-moteurs-du-parcours">Les deux moteurs du Parcours<a class="anchor" href="#les-deux-moteurs-du-parcours">#</a></h3>
+<p>La progression dans le Parcours est portée par deux processus qui se renforcent mutuellement :</p>
+<ul>
+  <li><strong>La construction de l'État central</strong> : émergence puis renforcement d'un appareil administratif, fiscal et militaire central, qui s'impose progressivement face aux pouvoirs locaux.</li>
+  <li><strong>L'homogénéisation culturelle</strong> : unification progressive de la langue, de la religion, du droit, des mœurs et de la conscience nationale sur le territoire.</li>
+</ul>
+<p>Ces deux processus sont à la fois les <em>moteurs</em> et les <em>indicateurs</em> du Parcours. Pour situer une nation dans son Parcours, on observe le degré de centralisation de l'État et le degré d'homogénéité culturelle. Pour comprendre un ralentissement ou une accélération, on cherche ce qui a perturbé l'un ou l'autre.</p>
+<p>Tout ce qui <strong>renforce</strong> l'un des deux moteurs (stabilité politique, croissance économique, progrès des communications) fait avancer le Parcours. Tout ce qui <strong>affaiblit</strong> l'un des deux (conquête étrangère, déportation, guerre civile sur le sol national) le ralentit ou le fait régresser.</p>
+<p>Les deux moteurs doivent progresser <strong>ensemble</strong> pour que le Parcours transite d'une phase à la suivante. Un État central avancé ne suffit pas si l'homogénéité culturelle est bloquée &mdash; le Parcours boucle (l'Angleterre anglo-saxonne avait un appareil étatique très sophistiqué &mdash; Danegeld, shires, monnaie centralisée &mdash; mais la cohabitation Anglo-Saxons/Scandinaves bloquait le moteur culturel, empêchant la transition vers la phase oligarchique pendant ~500 ans). Inversement, une homogénéité culturelle forte ne suffit pas sans construction étatique &mdash; le Parcours stagne (la France capétienne avait une identité culturelle en formation autour de la langue d'oïl, mais l'État était quasi inexistant sous les premiers Capétiens). Le Parcours avance le plus vite quand les deux moteurs sont <strong>alignés</strong>.</p>
+<h3 id="la-question-fondamentale-du-parcours">La question fondamentale du Parcours<a class="anchor" href="#la-question-fondamentale-du-parcours">#</a></h3>
+<p>Tout au long du Parcours, la même question se pose : <strong>« entre égaux, quelles règles nous donnons-nous ? »</strong>. Ce qui change d'une phase à l'autre, ce n'est pas la question &mdash; c'est le <strong>cercle des « égaux »</strong> autour de la table, qui s'élargit à mesure que l'homogénéité culturelle progresse.</p>
+<ul>
+  <li>En <strong>phase féodale</strong>, les « égaux » sont les grands seigneurs féodaux. Ils doivent développer une conscience de classe et se donner des règles → le <strong>pacte oligarchique</strong>.</li>
+  <li>En <strong>phase oligarchique</strong>, l'homogénéisation avance, de nouvelles élites émergent (bourgeoisie, administration). Le pacte oligarchique ne peut plus tenir &mdash; il y a « trop de monde autour de la table ». → Résolution : <strong>subordination des anciens réseaux lignagers au pouvoir administratif central</strong>, avec la possibilité de monter socialement en rejoignant l'administration.</li>
+  <li>En <strong>phase absolutiste</strong>, la conscience de classe / conscience nationale s'étend à encore plus de monde. L'administration centrale ne peut plus intégrer tout le monde, les élites se sédimentent, le système se fige. → Résolution : <strong>éclatement de la sédimentation</strong> (Révolution Nationale).</li>
+  <li>En <strong>Révolution Nationale</strong>, la question est résolue définitivement (pour un temps) par la <strong>subordination du pouvoir administratif à la représentation nationale</strong> &mdash; le vote et les élus offrent un siège à tous les citoyens à la table des négociations.</li>
+</ul>
+<p>La construction de l'État central est le <strong>moyen</strong> de répondre à cette question. L'homogénéisation culturelle est ce qui <strong>élargit</strong> le cercle de ceux qui ont le droit de la poser.</p>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Phase</th>
+    <th>Les « égaux »</th>
+    <th>Résolution</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Féodale</td>
+    <td>Les grands seigneurs féodaux</td>
+    <td>Pacte oligarchique</td>
+  </tr>
+  <tr>
+    <td>Oligarchique</td>
+    <td>Les oligarques + les nouvelles élites</td>
+    <td>Subordination des réseaux lignagers au pouvoir administratif</td>
+  </tr>
+  <tr>
+    <td>Absolutiste</td>
+    <td>La nation entière (en théorie)</td>
+    <td>Éclatement de la sédimentation (RN)</td>
+  </tr>
+  <tr>
+    <td>RN</td>
+    <td>Tous les citoyens</td>
+    <td>Subordination du pouvoir administratif à la représentation nationale</td>
+  </tr>
+</tbody>
+</table></div>
+<h3 id="le-parcours-est-porté-par-un-peuple-pas-par-un-état">Le Parcours est porté par un peuple, pas par un État<a class="anchor" href="#le-parcours-est-porté-par-un-peuple-pas-par-un-état">#</a></h3>
+<p>Le Parcours ne nécessite pas que la nation soit formellement unifiée ou souveraine :</p>
+<ul>
+  <li><strong>Sous domination étrangère</strong>, le Parcours continue d'avancer tant que les deux moteurs ne sont pas détruits. Israël progresse sous domination assyrienne, babylonienne, perse, grecque et romaine &mdash; seules les destructions institutionnelles majeures provoquent des reboots.</li>
+  <li><strong>Sans unification formelle</strong>, une nation peut avoir un Parcours propre. L'Allemagne et l'Italie avancent dans leur Parcours bien avant leur unification politique au XIXe siècle.</li>
+  <li><strong>Dans un empire multi-national</strong>, le Parcours est porté par l'ethnie du cœur de l'empire &mdash; les Turcs de Roumélie pour l'Empire ottoman, les Autrichiens germanophones pour l'Empire habsbourgeois.</li>
+</ul>
+<h3 id="les-noms-ne-sont-pas-la-réalité">Les noms ne sont pas la réalité<a class="anchor" href="#les-noms-ne-sont-pas-la-réalité">#</a></h3>
+<p>Ce qui détermine la phase d'une nation, c'est le <strong>fonctionnement réel</strong> de ses institutions et de sa société, pas leur étiquette formelle. Les institutions portent souvent des noms qui ne correspondent pas à leur rôle structurel :</p>
+<ul>
+  <li>La France a des « parlements » (cours de justice) bien avant d'être un État-nation parlementaire. Le mot « parlement » ne signifie pas la même chose structurellement.</li>
+  <li>Israël moderne a un régime formellement parlementaire, mais le fonctionnement réel de ses institutions et de sa société est oligarchique (au moins jusqu'à Netanyahou).</li>
+  <li>Les États-Unis ont une « Constitution » et un « Congrès » dès 1787, mais le fonctionnement réel est féodal (pouvoir reposant sur des réseaux interpersonnels entre grands acteurs, pas d'État central permanent au sens fiscal et monétaire) jusqu'à la création de la Fed (1913).</li>
+</ul>
+<p>Face à une institution, la question n'est jamais « comment s'appelle-t-elle ? » mais « comment fonctionne-t-elle réellement ? ». Un « parlement » peut être un outil absolutiste, une « monarchie » peut être structurellement oligarchique, une « démocratie » peut être structurellement féodale.</p>
+<h3 id="comment-mapper-un-nouveau-parcours">Comment mapper un nouveau Parcours<a class="anchor" href="#comment-mapper-un-nouveau-parcours">#</a></h3>
+<p>La méthode la plus efficace pour mapper le Parcours d'une nation non encore analysée est de <strong>commencer par les saillants</strong>, pas par les phases. Les saillants sont des événements ponctuels, identifiables dans les sources historiques. Les phases se déduisent ensuite.</p>
+<p><strong>Ordre de recherche recommandé :</strong></p>
+<p>0. <strong>Établir la superficie de référence</strong> &mdash; identifier les changements territoriaux majeurs (conquêtes, pertes, unions dynastiques) et les coder en noyau + marges (voir ci-dessous). Cela permet d'identifier les perturbations territoriales avant même d'analyser les phases.</p>
+<p>1. <strong>Identifier le 1er monarque oligarchique</strong> &mdash; c'est le saillant le mieux documenté (premier souverain disposant d'un fisc permanent + armée permanente + administration). Les sources historiques et archéologiques permettent généralement de l'identifier avec confiance.</p>
+<p>2. <strong>Remonter ~200 ans</strong> pour chercher l'éveil féodal (premier chef supra-régional). Cette phase étant pauvre en traces, on la reconstruit souvent a posteriori à partir de la date du 1er monarque oligarchique.</p>
+<p>3. <strong>Identifier la guerre sociale</strong> &mdash; conflit entre deux factions d'élites, résolu par l'émergence d'un tiers. La guerre sociale est souvent très visible dans les sources.</p>
+<p>4. <strong>Identifier le 1er monarque absolu</strong> &mdash; la figure qui résout la guerre sociale.</p>
+<p>5. <strong>Chercher le acmé absolutiste</strong> (~100-150 ans après le 1er monarque absolu) et l'Ancien Régime qui suit.</p>
+<p>6. <strong>Chercher la RN</strong> &mdash; si elle a eu lieu.</p>
+<p>7. <strong>Vérifier les durées</strong> &mdash; tout écart significatif par rapport aux ~200 ans typiques signale une perturbation à identifier.</p>
+<h3 id="superficie-de-référence-noyau-marges">Superficie de référence (noyau + marges)<a class="anchor" href="#superficie-de-référence-noyau-marges">#</a></h3>
+<p>Pour chaque nation, on établit la <strong>superficie de référence</strong> au fil du temps : la taille du territoire que le souverain doit effectivement gouverner. Cette superficie se décompose en :</p>
+<ul>
+  <li><strong>Noyau territorial</strong> : le territoire culturellement homogène avec le cœur de la nation (même langue, même droit). C'est le territoire qui <em>est</em> la nation.</li>
+  <li><strong>Marges</strong> : les territoires hétérogènes sous contrôle de la même couronne (langue différente, droit différent). C'est le territoire que la nation <em>possède</em> sans l'avoir assimilé.</li>
+</ul>
+<p><strong>Comment identifier le noyau et les marges :</strong></p>
+<ul>
+  <li>Le noyau est défini par l'homogénéité culturelle, pas par le contrôle politique. L'Angleterre d'oïl est le noyau français, même avant que le roi n'en contrôle la majorité.</li>
+  <li>Les marges sont les territoires où l'homogénéisation culturelle n'est pas accomplie : langue différente (Occitanie pour la France, Aragon pour l'Espagne), religion différente, institutions propres.</li>
+  <li>Un territoire peut transiter de marge à noyau quand l'homogénéisation y est accomplie. Approximer par une date ponctuelle (ex. : Galles → noyau en 1536 avec les Laws in Wales Acts).</li>
+</ul>
+<p><strong>Pourquoi c'est utile :</strong></p>
+<ul>
+  <li>Les expansions territoriales (chocs d'hétérogénéité) sont directement visibles sur le graphique de superficie → prolongent la phase en cours.</li>
+  <li>Les contractions territoriales (corrections d'échelle) sont aussi visibles → accélèrent la phase en cours.</li>
+  <li>Le ratio marges/noyau indique la charge d'hétérogénéité qui pèse sur le Parcours.</li>
+</ul>
+<p><strong>Données dans le fichier parcours.md :</strong></p>
+<p>La superficie est codée dans une section <code>## Superficie de référence</code> avec le format <code>année: noyau+marges | label</code>. Le label décrit les marges (pas le total). Quand il n'y a pas de marges, pas de <code>+</code>. Les valeurs sont en milliers de km².</p>
+<pre><code>
+## Superficie de référence
+- unit: milliers de km²
+- 1066: 130+30 | Normandie
+- 1204: 130+25 | Gascogne (perte de la Normandie)
+- 1536: 151+1 | Calais (Galles rejoint le noyau)
+</code></pre>
+<p><strong>Première approximation (recommandation Alyocha) :</strong> utiliser la superficie seule, sans pondérer par la population &mdash; les données de population historique sont trop incertaines.</p>
+<p><strong>Règle d'or : le test discriminant prime sur les durées.</strong> Ne pas ajuster l'identification des saillants pour obtenir des durées typiques. Appliquer d'abord le test discriminant de chaque transition de phase, puis expliquer les écarts de durée par des perturbations. Les durées atypiques sont toujours le signal d'une perturbation &mdash; pas d'une erreur d'identification. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme : revérifier le test discriminant.</p>
+<p><strong>Vérifications de cohérence (à appliquer avant de finaliser) :</strong></p>
+<p>1. <strong>Le test discriminant a-t-il été appliqué à la bonne échelle ?</strong> Si la nation est ou a été une monarchie composite (ex. : Espagne habsbourgeoise, Saint-Empire), l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national &mdash; pas seulement celles du noyau.</p>
+<p>2. <strong>L'expansion a-t-elle été attribuée à la bonne phase ?</strong> L'expansion prolonge la phase EN COURS au moment où elle commence (cf. Venise). Vérifier via le test discriminant que la phase identifiée est bien celle qui est en cours.</p>
+<p>3. <strong>La guerre sociale se joue-t-elle à l'échelle pertinente ?</strong> Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale, pas seulement régionale.</p>
+<h3 id="durées-typiques-endogènes">Durées typiques endogènes<a class="anchor" href="#durées-typiques-endogènes">#</a></h3>
+<p>En l'absence de perturbation externe, les phases ont des durées caractéristiques :</p>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Phase</th>
+    <th>Durée typique</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Phase féodale</td>
+    <td>~200 ans</td>
+  </tr>
+  <tr>
+    <td>Phase oligarchique</td>
+    <td>~200 ans</td>
+  </tr>
+  <tr>
+    <td>Phase absolutiste</td>
+    <td>~200 ans</td>
+  </tr>
+  <tr>
+    <td>Révolution Nationale</td>
+    <td>~25-80 ans</td>
+  </tr>
+  <tr>
+    <td>Phase parlementaire</td>
+    <td>Très longue (très stable)</td>
+  </tr>
+</tbody>
+</table></div>
+<p>Les écarts à ces durées sont significatifs et s'expliquent toujours par une perturbation d'un des deux moteurs. Par exemple :</p>
+<ul>
+  <li><strong>Israël antique</strong> : la phase oligarchique dure ~245 ans au lieu de ~200, à cause du choc assyrien (-722) qui détruit le royaume d'Israël et retarde la construction de l'État central en Judée.</li>
+  <li><strong>France</strong> : la phase oligarchique dure ~270 ans (1328-1598), à cause de deux reflux liés à la Guerre de Cent Ans (Crécy-Poitiers ~1346-1364, Charles VI ~1392-1429) qui ralentissent l'essor oligarchique d'environ 55 ans.</li>
+  <li><strong>Angleterre</strong> : la phase oligarchique dure ~213 ans (1272-1485), durée proche de la norme.</li>
+  <li><strong>Venise</strong> : la phase oligarchique dure ~637 ans (1032-~1669), à cause de l'expansion permanente (Stato da Màr, Terraferma) qui retarde la polarisation en fournissant des exutoires extérieurs aux élites. Les pertes territoriales progressives (Chypre 1573, Crète 1669) forcent l'homogénéisation.</li>
+  <li><strong>Piémont</strong> : la phase féodale dure ~197 ans (~1233-~1430) &mdash; dans la norme, le Parcours commence par une correction d'échelle (partition de 1233 qui détache le Piémont du comté de Savoie trans-alpin). La phase oligarchique dure ~266 ans (~1430-~1696), allongée par le prolongement de l'occupation française (1536-1559).</li>
+</ul>
+<h3 id="le-clivage-gauche-droite-fabry-portal">Le clivage gauche-droite (Fabry & Portal)<a class="anchor" href="#le-clivage-gauche-droite-fabry-portal">#</a></h3>
+<p>Le clivage gauche-droite est défini structurellement, indépendamment de toute époque ou de tout lieu :</p>
+<ul>
+  <li><strong>Extrême-droite (ED)</strong> : réactionnaires, nostalgiques de l'ancien ordre, grands perdants de la nouvelle donne.</li>
+  <li><strong>Droite</strong> : conservateurs, cherchent à préserver la stabilité en ralentissant les changements.</li>
+  <li><strong>Gauche</strong> : réformateurs, pensent que réformer pour contenter l'EG permet de maintenir la stabilité.</li>
+  <li><strong>Extrême-gauche (EG)</strong> : révolutionnaires, encore exclus de la nouvelle donne, prêts à renverser la table pour s'y faire une place.</li>
+</ul>
+<p>Cette grille est essentielle pour lire la Révolution Nationale.</p>
+<h3 id="sous-phases-et-saillants">Sous-phases et saillants<a class="anchor" href="#sous-phases-et-saillants">#</a></h3>
+<p>Le Parcours utilise deux types d'outils d'analyse :</p>
+<ul>
+  <li>Les <strong>sous-phases</strong> découpent chaque phase en étapes successives, pour en comprendre la mécanique. Exemple : la phase absolutiste se découpe en absolutisation → impérialisme absolutiste → Ancien Régime.</li>
+  <li>Les <strong>saillants</strong> sont des éléments facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison entre parcours nationaux. Ce sont généralement des éléments ponctuels (le règne d'un monarque, un événement clé). Exemples : l'éveil féodal, le premier monarque oligarchique, le acmé absolutiste.</li>
+</ul>
+<p>Certains éléments sont les deux à la fois : la guerre sociale et l'Ancien Régime sont des sous-phases (on peut décrire leur mécanique) et des saillants (facilement identifiables dans n'importe quel parcours).</p>
+<h2 id="vue-d-ensemble-des-phases">Vue d'ensemble des phases<a class="anchor" href="#vue-d-ensemble-des-phases">#</a></h2>
+<p><strong>Phase féodale (~200 ans, peut boucler).</strong> Interconnexion des réseaux claniques et lignagers. Un chef des chefs émerge, dont l'autorité repose sur des liens de vassalité d'homme à homme. Pas d'administration centrale permanente. L'édifice est fragile et dépend de la personne du suzerain. Des <strong>pics féodaux</strong> (rois forts) alternent avec des <strong>crises féodales</strong> (fragmentation post-pic). Le pacte oligarchique ne survient que quand <strong>deux conditions</strong> sont réunies simultanément : homogénéité des oligarques à l'échelle du royaume + faiblesse du suzerain (Deblonde). Si la phase boucle (crises sans pacte), elle peut durer bien plus de 200 ans (cf. Angleterre : ~500 ans, 5 boucles). Cf. <code>phase_feodale.md</code>.</p>
+<ul>
+  <li>Sous-phases : coagulation des élites → [bascule oligarchique] (avec boucles possibles)</li>
+</ul>
+<p><strong>Phase oligarchique (~200 ans).</strong> Émergence de l'État central &mdash; impôt permanent, armée permanente, administration centrale. L'État central se renforce progressivement face aux pouvoirs locaux. Cf. <code>phase_oligarchique.md</code>.</p>
+<ul>
+  <li>Sous-phases : essor oligarchique → polarisation des élites → guerre sociale</li>
+</ul>
+<p><strong>Phase absolutiste (~200 ans).</strong> L'administration centrale acquiert une supériorité incontestée sur les administrations locales. Le pouvoir central achève l'élimination des réseaux féodaux et oligarchiques. Se conclut par l'Ancien Régime : le système absolutiste à maturité, où les élites se sédimentent, la mobilité sociale se fige, et les rentes deviennent insupportables. Cf. <code>phase_absolutiste.md</code>.</p>
+<ul>
+  <li>Sous-phases : absolutisation (~50-100 ans) → impérialisme absolutiste (durée variable) → Ancien Régime (~35-100 ans)</li>
+</ul>
+<p><strong>Révolution Nationale (~25-80 ans).</strong> Phase troublée qui renverse l'ordre absolutiste. Le clivage gauche-droite saute : le centre-droit et le centre-gauche fusionnent en un bloc élitaire qui profite du système, tandis que l'ED et l'EG convergent en un bloc contestataire. Cf. <code>phase_rn.md</code>.</p>
+<ul>
+  <li>Sous-phases : révolution initiale (explosion de l'AR → expérience parlementaire → phase aiguë → moment thermidorien) → impérialiste revanchard → restauration</li>
+  <li>Saillants clés : explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, émergence de l'IR, glorieuse révolution</li>
+</ul>
+<p><strong>Phase parlementaire &mdash; l'État-nation parlementaire (ENP).</strong> Aboutissement du Parcours de construction nationale. Le pouvoir administratif est subordonné à la représentation nationale. La chambre basse est la source ultime du pouvoir. Cf. <code>phase_parlementaire.md</code>.</p>
+<p><strong>Phase technocratique.</strong> Dégénérescence de l'ENP. Le peuple, disposant du pouvoir politique, l'utilise pour participer à la redistribution plutôt que pour y mettre fin (le choix de Bastiat). La taille de l'État et le périmètre de son action augmentent sans cesse. L'administration grossit jusqu'à devenir un Léviathan capable de renverser les décisions de la chambre basse.</p>
+<p><strong>Dominat.</strong> L'administration est devenue si puissante qu'elle <em>est</em> le gouvernement de facto. Les lois ne sont plus réellement votées mais décidées par des comités administratifs. C'est structurellement un reboot en Ancien Régime &mdash; mais sans nécessairement la figure du monarque absolu.</p>
+<h2 id="dynamique-des-élites">Dynamique des élites<a class="anchor" href="#dynamique-des-élites">#</a></h2>
+<p>La dynamique des élites est un concept transversal qui irrigue toutes les phases du Parcours. Elle est décrite dans <code>elites.md</code>.</p>
+<h2 id="perturbations">Perturbations<a class="anchor" href="#perturbations">#</a></h2>
+<p>Le Parcours peut être perturbé par des événements qui modifient sa vitesse de progression. Une perturbation se décompose en un <strong>mécanisme</strong> (ce qui la cause : choc d'hétérogénéité, choc exogène, insuffisance interne) et un <strong>effet</strong> (ce qui arrive au Parcours : prolongement, accélération, avortement, reboot). L'<strong>exutoire</strong> (projection de puissance continue &mdash; empire, colonies, mercenariat) est un état continu qui prolonge la phase en cours. Le détail est décrit dans <code>perturbations.md</code>.</p>
+
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

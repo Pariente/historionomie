@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les élites — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #8B7355; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html" class="active">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Les élites</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#la-matrice-des-élites">La matrice des élites</a></li>
+<ul>
+<li><a href="#la-matrice-2-2">La matrice 2×2</a></li>
+</ul>
+<li><a href="#dynamique-des-élites-au-fil-du-parcours">Dynamique des élites au fil du Parcours</a></li>
+<ul>
+<li><a href="#phase-féodale">Phase féodale</a></li>
+<li><a href="#phase-oligarchique">Phase oligarchique</a></li>
+<li><a href="#le-rôle-des-non-gouvernementales-comme-levier">Le rôle des non-gouvernementales comme levier</a></li>
+</ul>
+<li><a href="#la-guerre-sociale-triomphe-de-l-état-central">La guerre sociale : triomphe de l&#x27;État central</a></li>
+<ul>
+<li><a href="#important-la-guerre-sociale-n-est-pas-une-guerre-religieuse">Important : la guerre sociale n&#x27;est pas une guerre religieuse</a></li>
+</ul>
+<li><a href="#l-absolutisation-comme-processus-de-migration">L&#x27;absolutisation comme processus de migration</a></li>
+<ul>
+<li><a href="#intégration-patrimoniales-prébendières-gouvernementales">Intégration (patrimoniales → prébendières gouvernementales)</a></li>
+<li><a href="#exclusion-patrimoniales-gouvernementales-patrimoniales-non-gouvernementales">Exclusion (patrimoniales gouvernementales → patrimoniales non-gouvernementales)</a></li>
+<li><a href="#combinaison-des-deux">Combinaison des deux</a></li>
+<li><a href="#l-absolutisme-accompli">L&#x27;absolutisme accompli</a></li>
+</ul>
+<li><a href="#tableau-synthétique-migration-des-élites-au-fil-du-parcours">Tableau synthétique : migration des élites au fil du Parcours</a></li>
+<li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
+<article>
+<h2 id="la-matrice-des-élites">La matrice des élites<a class="anchor" href="#la-matrice-des-élites">#</a></h2>
+<p>Les élites d'une nation se répartissent selon deux axes indépendants :</p>
+<p><strong>Axe 1 : Source du revenu</strong></p>
+<ul>
+  <li><strong>Prébendières</strong> : élites dont le revenu dépend du pouvoir central &mdash; charges, faveurs, accès aux réseaux commerciaux structurés par l'État, postes de fonctionnaires. Leur prospérité est conditionnelle : elle disparaît si le pouvoir central les écarte.</li>
+  <li><strong>Patrimoniales</strong> : élites dont le revenu repose sur un patrimoine propre, foncier ou productif, indépendant du pouvoir central. Leur prospérité est structurelle : elle persiste même sans lien avec l'État.</li>
+</ul>
+<p>La terminologie « prébendière / patrimoniale » est empruntée à Max Weber (<em>Pfründner</em> vs propriétaires indépendants). La prébende désigne un revenu conditionnel attaché à une fonction ou une faveur du pouvoir.</p>
+<p><strong>Axe 2 : Participation au pouvoir</strong></p>
+<ul>
+  <li><strong>Gouvernementales</strong> : élites qui participent effectivement à l'exercice du pouvoir politique (décisions, législation, administration, justice).</li>
+  <li><strong>Non-gouvernementales</strong> : élites qui disposent de richesse et d'influence sociale mais ne participent pas directement à l'exercice du pouvoir.</li>
+</ul>
+<h3 id="la-matrice-2-2">La matrice 2×2<a class="anchor" href="#la-matrice-2-2">#</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Gouvernementales</th>
+    <th>Non-gouvernementales</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><strong>Prébendières</strong></td>
+    <td>Fonctionnaires, administrateurs royaux, fermiers d'impôts, officiers nommés par le pouvoir central</td>
+    <td>Marchands et financiers dépendants de contrats ou privilèges royaux</td>
+  </tr>
+  <tr>
+    <td><strong>Patrimoniales</strong></td>
+    <td>Grands féodaux, aristocratie terrienne siégeant aux assemblées, clergé indépendant disposant de pouvoir politique, bourgeois élus aux parlements ou intégrés dans l'administration</td>
+    <td>Marchands, notables strictement privés, propriétaires fonciers sans rôle politique, clergé local</td>
+  </tr>
+</tbody>
+</table></div>
+<p>Ces catégories ne sont pas étanches : une même famille ou un même groupe peut migrer d'une case à l'autre au cours du Parcours. C'est précisément cette migration qui constitue le moteur politique de la construction nationale.</p>
+<h2 id="dynamique-des-élites-au-fil-du-parcours">Dynamique des élites au fil du Parcours<a class="anchor" href="#dynamique-des-élites-au-fil-du-parcours">#</a></h2>
+<h3 id="phase-féodale">Phase féodale<a class="anchor" href="#phase-féodale">#</a></h3>
+<p>La quasi-totalité des élites sont <strong>patrimoniales gouvernementales</strong> : des chefs de clan dont le pouvoir repose sur leur patrimoine (terres, bétail, fidélités personnelles) et qui participent directement au gouvernement par leur lien de vassalité avec le suzerain. La catégorie prébendière n'existe pratiquement pas &mdash; il n'y a pas encore d'État central capable de distribuer des prébendes.</p>
+<h3 id="phase-oligarchique">Phase oligarchique<a class="anchor" href="#phase-oligarchique">#</a></h3>
+<p>L'émergence de l'État central crée la catégorie prébendière. Le suzerain recrute ses fonctionnaires, distribue des charges, structure des réseaux commerciaux. Une classe <strong>prébendière gouvernementale</strong> apparaît aux côtés de l'aristocratie <strong>traditionnelle gouvernementale</strong>.</p>
+<p>L'affrontement entre ces deux classes marque toute la phase oligarchique :</p>
+<ul>
+  <li>La classe prébendière est naturellement alliée au pouvoir central (elle en dépend)</li>
+  <li>La classe traditionnelle gouvernementale est structurellement rivale du pouvoir central (elle n'en dépend pas et constitue un contre-pouvoir)</li>
+</ul>
+<p>En fin de phase, les élites patrimoniales se rallient progressivement à l'administration centrale et abandonnent leurs clientèles rurales. Les élites prébendières, devenues dominantes, négligent à leur tour leurs clientèles populaires. Ces clientèles délaissées deviennent disponibles pour des figures populistes &mdash; ce qui ouvre la voie à la guerre sociale.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span></div><span class="card-desc">Élites marchandes urbaines pro-assyriennes (prébendières) vs élites rurales terriennes yahvistes (patrimoniales) sous Manassé</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span></div><span class="card-desc">Tobiades hellénisés, fermiers d'impôts ptolémaïques (prébendières) vs Oniades, aristocratie sacerdotale légitime (patrimoniales)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span></div><span class="card-desc">Officiers royaux et légistes (prébendières) vs grands barons et ducs (patrimoniales)</span></div></div>
+</div>
+<h3 id="le-rôle-des-non-gouvernementales-comme-levier">Le rôle des non-gouvernementales comme levier<a class="anchor" href="#le-rôle-des-non-gouvernementales-comme-levier">#</a></h3>
+<p>Les élites <strong>non-gouvernementales</strong> &mdash; en particulier la bourgeoisie des villes &mdash; jouent un rôle crucial bien qu'elles ne participent pas directement au pouvoir. Le pouvoir central les utilise comme <strong>levier</strong> dans deux situations :</p>
+<p>1. <strong>Contre les patrimoniales gouvernementales</strong> : le roi s'appuie sur les bourgeois pour diminuer les contre-pouvoirs aristocratiques. Les communes, les chartes de franchise, les parlements représentatifs incluant le tiers état &mdash; tout cela renforce le pouvoir central en créant un contrepoids aux grands féodaux et oligarques.</p>
+<p>2. <strong>Contre les prébendières gouvernementales qui se sédimentent</strong> : quand les élites prébendières acquièrent trop de pouvoir et tendent à devenir autonomes, le pouvoir central peut promouvoir de nouvelles élites issues de la bourgeoisie pour leur faire concurrence. C'est un mécanisme de ventilation : empêcher qu'une classe au service du pouvoir ne devienne elle-même un pouvoir rival.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">—</span></div><span class="card-desc">Les Capétiens octroient des chartes communales pour contrer les grands féodaux ; Philippe Auguste recrute des légistes bourgeois plutôt que des nobles pour son administration</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1295</span></div><span class="card-desc">Édouard Ier convoque le Model Parliament incluant les bourgeois pour contrebalancer les barons</span></div></div>
+</div>
+<h2 id="la-guerre-sociale-triomphe-de-l-état-central">La guerre sociale : triomphe de l'État central<a class="anchor" href="#la-guerre-sociale-triomphe-de-l-état-central">#</a></h2>
+<p>La guerre sociale est le conflit entre les deux factions élitaires &mdash; prébendière et patrimoniale &mdash; à la fin de la phase oligarchique. Deux critères essentiels :</p>
+<p>1. <strong>La structure du conflit est élitaire</strong> &mdash; prébendière vs patrimoniale. La religion, la région, la dynastie peuvent servir de mécanisme de distinction, mais la cause structurelle est la lutte pour le contrôle de l'État central.</p>
+<p>2. <strong>La résolution conduit à un nouveau cadre</strong> &mdash; qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction : c'est l'émergence d'un cadre qui transcende le clivage précédent.</p>
+<p>C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.</p>
+<p><strong>La figure résolvante est en général un tiers</strong> &mdash; une figure s'appuyant sur les clientèles délaissées par les deux factions et sur la classe moyenne administrative pour forcer les puissants à plier (Henri IV, Henri VII, Philippe V). Mais le tiers neutre est une observation empirique fréquente, pas un critère structurel. Dans le cas d'Israël (prolongement), la dynastie hasmonéenne (Maccabées) n'est pas un tiers &mdash; une faction a clairement gagné &mdash; mais le critère essentiel est satisfait : un nouveau cadre avec renforcement du pouvoir central.</p>
+<p>Si les deux critères ne sont pas satisfaits &mdash; en particulier si une faction gagne militairement mais sans qu'un nouveau cadre central émerge &mdash; la guerre sociale n'est tout simplement <strong>pas résolue</strong>, et la phase oligarchique se poursuit.</p>
+<h3 id="important-la-guerre-sociale-n-est-pas-une-guerre-religieuse">Important : la guerre sociale n'est pas une guerre religieuse<a class="anchor" href="#important-la-guerre-sociale-n-est-pas-une-guerre-religieuse">#</a></h3>
+<p><strong>La guerre sociale n'est jamais une guerre sur une base religieuse.</strong> C'est une guerre entre élites dont le <strong>mode d'enrichissement</strong> est différent et qui luttent pour le contrôle du pouvoir central &mdash; prébendières contre patrimoniales. Quand ces deux élites adoptent des confessions religieuses différentes (comme pendant les Guerres de Religion en France, ou la guerre de Trente Ans en Europe centrale), <strong>la religion est un mécanisme de distinction</strong> entre factions, pas la cause structurelle du conflit.</p>
+<p>Ce point est critique pour lire correctement les conflits confessionnels :</p>
+<ul>
+  <li><strong>Le mécanisme de distinction peut être la religion</strong>, mais il peut aussi être la région (Nord vs Sud), la langue, la couleur politique, la dynastie soutenue, ou toute autre marque d'identification des factions. La religion est un cas fréquent parce qu'elle fournit une identité forte, mais elle n'a aucun statut privilégié.</li>
+  <li><strong>Le conflit reste structurellement économique et politique</strong> : une faction d'élites dont le revenu dépend des faveurs du pouvoir central (prébendière) affronte une faction dont le revenu est indépendant du centre (patrimoniale). Le contrôle de l'État central est l'enjeu, pas le salut des âmes.</li>
+  <li><strong>Les « guerres de religion » ne sont pas toujours des guerres sociales</strong>. La guerre de Trente Ans en Autriche est une polarisation confessionnelle où une faction gagne (victoire catholique habsbourgeoise) sans qu'un nouveau cadre central émerge &mdash; la guerre sociale autrichienne n'est pas résolue, et la phase oligarchique se poursuit jusqu'à la Guerre de Succession d'Autriche (1740-1748).</li>
+  <li><strong>Les « guerres dynastiques » sont des guerres sociales déguisées</strong>. La Guerre des Deux-Roses anglaise oppose York et Lancaster, mais structurellement c'est une lutte entre deux factions oligarchiques dont le clivage est dynastique. Le mécanisme de distinction est dynastique, le conflit est une guerre sociale classique résolue par Henri VII comme tiers.</li>
+</ul>
+<p><strong>Critère pour qu'un conflit confessionnel soit une guerre sociale :</strong></p>
+<p>1. Les deux factions doivent correspondre structurellement à la distinction prébendière/patrimoniale (vérifier le mode d'enrichissement et le rapport au centre).</p>
+<p>2. La résolution doit produire un <strong>nouveau cadre central</strong> qui renforce le pouvoir central et subordonne les oligarques (pas la simple victoire d'une faction sur l'autre).</p>
+<p>Si ces critères ne sont pas satisfaits, le conflit confessionnel est une <strong>polarisation</strong> intra-oligarchique, pas une guerre sociale au sens strict.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span></div><span class="card-desc">Ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont choisi de soutenir le Roi (Henri IV) plutôt que les factions. La monarchie capétienne est renforcée. Le mécanisme de distinction est la religion (catholique/protestant), mais la polarisation sous-jacente est prébendière (administration royale et villes, catholiques du centre) vs patrimoniale (noblesse terrienne du Midi et de l'Ouest, protestante ou ligueuse selon les régions). Le tiers Henri IV résout &mdash; guerre sociale.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span></div><span class="card-desc">Ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée une nouvelle dynastie (les Tudor) qui s'émancipe des deux. Le mécanisme de distinction est dynastique, la polarisation est prébendière/patrimoniale.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span></div><span class="card-desc">Ni les Tobiades ni les Oniades ne prennent le pouvoir &mdash; c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte. Le mécanisme de distinction est confessionnel (hellénisés vs fidèles yahvistes), la polarisation est prébendière (Tobiades, fermiers d'impôts ptolémaïques) vs patrimoniale (Oniades, aristocratie sacerdotale foncière).</span></div></div>
+</div>
+<h2 id="l-absolutisation-comme-processus-de-migration">L'absolutisation comme processus de migration<a class="anchor" href="#l-absolutisation-comme-processus-de-migration">#</a></h2>
+<p>L'absolutisation est le processus par lequel la case <strong>patrimoniales gouvernementales</strong> est vidée. Toutes les élites qui participent au pouvoir doivent dépendre du centre. Deux mécanismes :</p>
+<h3 id="intégration-patrimoniales-prébendières-gouvernementales">Intégration (patrimoniales → prébendières gouvernementales)<a class="anchor" href="#intégration-patrimoniales-prébendières-gouvernementales">#</a></h3>
+<p>Les élites patrimoniales sont domestiquées : on transforme leur source de revenu pour la rendre dépendante du pouvoir central, tout en leur conservant une participation au gouvernement. Elles restent gouvernementales mais perdent leur indépendance économique.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span></div><span class="card-desc">Louis XIV attire la noblesse à Versailles. Les grands, coupés de leurs domaines, deviennent dépendants des pensions et faveurs royales. Leur revenu est désormais prébendier ; leur pouvoir est domestiqué.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span></div><span class="card-desc">Les Hasmonéens intègrent une partie de l'ancienne aristocratie sacerdotale au nouveau régime en redistribuant les charges du Temple.</span></div></div>
+</div>
+<h3 id="exclusion-patrimoniales-gouvernementales-patrimoniales-non-gouvernementales">Exclusion (patrimoniales gouvernementales → patrimoniales non-gouvernementales)<a class="anchor" href="#exclusion-patrimoniales-gouvernementales-patrimoniales-non-gouvernementales">#</a></h3>
+<p>Les élites patrimoniales sont écartées du pouvoir. Elles conservent leur patrimoine mais perdent toute participation au gouvernement.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span></div><span class="card-desc">Henri VII, après la Guerre des Deux-Roses, brise les grandes maisons aristocratiques. Les survivants conservent des terres mais sont exclus du pouvoir effectif.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël antique"><span class="card-title">Israël antique</span></div><span class="card-desc">Les Hasmonéens éliminent ou écartent les élites hellénisées (Tobiades) du pouvoir politique.</span></div></div>
+</div>
+<h3 id="combinaison-des-deux">Combinaison des deux<a class="anchor" href="#combinaison-des-deux">#</a></h3>
+<p>En pratique, l'absolutisation combine les deux mécanismes : certaines élites sont intégrées, d'autres exclues. Le dosage dépend du rapport de force et du parcours national.</p>
+<h3 id="l-absolutisme-accompli">L'absolutisme accompli<a class="anchor" href="#l-absolutisme-accompli">#</a></h3>
+<p>L'absolutisme est <strong>accompli</strong> quand la case « patrimoniales gouvernementales » est vide : toutes les élites qui participent au pouvoir dépendent du centre. C'est l'Ancien Régime.</p>
+<p>Mais cette situation porte en elle les germes de sa propre destruction : les élites prébendières gouvernementales, désormais seules au pouvoir, se sédimentent. La mobilité sociale se fige. Les rentes deviennent insupportables pour la population. Les élites non-gouvernementales (bourgeoisie, classes moyennes) sont exclues du pouvoir malgré leur dynamisme économique. C'est le terreau de la Révolution Nationale.</p>
+<h2 id="tableau-synthétique-migration-des-élites-au-fil-du-parcours">Tableau synthétique : migration des élites au fil du Parcours<a class="anchor" href="#tableau-synthétique-migration-des-élites-au-fil-du-parcours">#</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Phase</th>
+    <th>Patr. gouv.</th>
+    <th>Préb. gouv.</th>
+    <th>Patr. non-gouv.</th>
+    <th>Préb. non-gouv.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Féodale</td>
+    <td>Dominantes</td>
+    <td>Quasi-inexistantes</td>
+    <td>Petites élites terriennes (pas assez puissantes pour rivaliser avec le pouvoir)</td>
+    <td>Quasi-inexistantes</td>
+  </tr>
+  <tr>
+    <td>Oligarchique (essor)</td>
+    <td>Puissantes</td>
+    <td>Émergentes</td>
+    <td>Bourgeoisie des villes, levier du pouvoir central</td>
+    <td>Apparaissent (marchands liés aux réseaux étatiques)</td>
+  </tr>
+  <tr>
+    <td>Oligarchique (polarisation)</td>
+    <td>Rivales du centre</td>
+    <td>En croissance</td>
+    <td>Utilisées comme levier contre les trad. gouv.</td>
+    <td>En croissance</td>
+  </tr>
+  <tr>
+    <td>Guerre sociale</td>
+    <td>Ralliées à l'administration, abandonnent leurs clientèles</td>
+    <td>Négligent leurs clientèles populaires</td>
+    <td>Clientèles délaissées → mobilisées par une figure nouvelle</td>
+    <td>Clientèles délaissées</td>
+  </tr>
+  <tr>
+    <td>Absolutisation</td>
+    <td>En cours de vidange (intégration ou exclusion)</td>
+    <td>Dominantes</td>
+    <td>Levier contre les trad. gouv. restantes</td>
+    <td>Utilisées pour ventiler les préb. gouv. qui se sédimentent</td>
+  </tr>
+  <tr>
+    <td>Ancien Régime</td>
+    <td>Éliminées</td>
+    <td>Sédimentées, seules au pouvoir</td>
+    <td>Dynamiques mais exclues → frustration</td>
+    <td>Dépendantes mais sans pouvoir</td>
+  </tr>
+  <tr>
+    <td>Révolution Nationale</td>
+    <td>—</td>
+    <td>Renversées</td>
+    <td>Accèdent au pouvoir</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td>Parlementaire</td>
+    <td>—</td>
+    <td>Fonctionnaires, administrateurs &mdash; rôle politique réduit mais présent</td>
+    <td>Bourgeoisie au pouvoir via la représentation nationale</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td>Technocratique / Dominat</td>
+    <td>—</td>
+    <td>Sédimentées, accaparent le pouvoir contre la représentation nationale</td>
+    <td>Exclues du pouvoir réel malgré le vote</td>
+    <td>—</td>
+  </tr>
+</tbody>
+</table></div>
+<section class="examples">
+<h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
+<p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
+<div class="saillant-list">
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#2E8B57;">local_fire_department</span><span>Guerre sociale</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Manassé vs yahvistes</span><span class="card-date">-700</span></div><span class="card-desc">Guerre sociale classique : la faction prébendière (élites marchandes pro-assyriennes, Manassé) affronte la faction patrimoniale (élites rurales yahvistes). Ni l&#x27;une ni l&#x27;autre n...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Révolte des Maccabées</span><span class="card-date">-175</span></div><span class="card-desc">Les deux critères de la guerre sociale sont satisfaits : (1) conflit structurellement prébendière (Tobiades, fermiers d&#x27;impôts hellénisés) vs patrimoniale (Oniades, aristocratie...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Napo della Torre / Ottone Visconti</span><span class="card-date">1240</span></div><span class="card-desc">Les deux critères structurels de la guerre sociale sont satisfaits. Critère 1 (structure élitaire prébendière vs patrimoniale) : les Della Torre/Torriani (prébendière — Credenza...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri VII</span><span class="card-date">1455</span></div><span class="card-desc">Les Guerres des Roses satisfont les deux critères de la guerre sociale. La structure est élitaire (Lancaster prébendière vs York patrimoniale, le mécanisme de distinction est dy...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1562</span></div><span class="card-desc">Les Guerres de Religion satisfont les deux critères de la guerre sociale : structure élitaire (la noblesse terrienne patrimoniale, ligueuse ou protestante, affronte l&#x27;administra...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Faillite et tiers</span><span class="card-date">1564</span></div><span class="card-desc">Le conflit satisfait les deux critères structurels : (1) structure élitaire prébendière vs patrimoniale (Weber), avec la confession comme mécanisme de distinction ; (2) résoluti...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Ferdinand II et Frédéric V</span><span class="card-date">1618</span></div><span class="card-desc">Seconde défenestration de Prague (23 mai 1618) : reprise de la guerre sociale avortée 200 ans plus tôt, mêmes factions prébendière (Habsbourg catholiques, clergé romain, nobless...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Giovani vs Vecchi</span><span class="card-date">1628</span></div><span class="card-desc">Premier critère structurel satisfait : giovani (prébendières, commerce et réseaux étatiques) contre vecchi (patrimoniales, patrimoine foncier et charges héritées). Second critèr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Christine de France / Victor Amédée II</span><span class="card-date">1637</span></div><span class="card-desc">La guerre sociale piémontaise satisfait les deux critères structurels. Premier critère : conflit élitaire prébendière (Madamisti — nouvelles familles administratives/de cour, dé...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Guerre des Paysans — Guerres de Villmergen</span><span class="card-date">1653</span></div><span class="card-desc">La guerre sociale suisse (1653-1712) satisfait les deux critères structurels : conflit prébendière (cantons protestants) vs patrimoniale (cantons catholiques) pour le contrôle d...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Guerre de Succession d&#x27;Espagne</span><span class="card-date">1700</span></div><span class="card-desc">La GSE (1700-1714) satisfait les deux critères structurels de la guerre sociale. Premier critère : le conflit oppose élites centralisatrices castillanes (prébendière, dépendante...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Louis II / Soliman le Magnifique</span><span class="card-date">1703</span></div><span class="card-desc">Insurrection de Rákóczi (1703-1711) comme guerre sociale canonique. Factions : kuruc (patrimonial national, protestant, base territoriale Haute-Hongrie et Transylvanie) vs laban...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">François II Rákóczi</span><span class="card-date">1703</span></div><span class="card-desc">Insurrection de Rákóczi (1703-1711), résolue par Szatmár 1711. Les deux critères structurels de la guerre sociale sont satisfaits : (1) structure élitaire du conflit — kuruc (pa...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Marie-Thérèse / François de Lorraine</span><span class="card-date">1740</span></div><span class="card-desc">La Guerre de Succession d&#x27;Autriche satisfait les deux critères structurels de la guerre sociale. (1) Structure élitaire prébendière vs patrimoniale — élites centralisatrices vie...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Joseph II / Pietro Verri</span><span class="card-date">1780</span></div><span class="card-desc">Critère 1 (structure élitaire prébendière vs patrimoniale) : le patriciat foncier (patrimoniale — 259 familles contrôlant plus de la moitié des terres, revenus indépendants du c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Salvador Allende / Augusto Pinochet</span><span class="card-date">1970</span></div><span class="card-desc">Entre septembre 1970 et septembre 1973, les deux critères structurels de la guerre sociale sont satisfaits. (1) Structure élitaire du conflit : faction prébendière (UP — adminis...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#6A0DAD;font-variation-settings:'FILL' 1;">crown</span><span>1er monarque absolu</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Josias</span><span class="card-date">-640</span></div><span class="card-desc">Josias résout la guerre sociale comme figure tierce (enfant-roi sans attache factionnelle) et satisfait les deux critères de résolution : le conflit prébendière/patrimoniale est...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Simon Thassi</span><span class="card-date">-140</span></div><span class="card-desc">Simon Thassi satisfait les deux critères de résolution de la guerre sociale : le conflit prébendière/patrimoniale est clos, et un nouveau cadre central émerge (cumul héréditaire...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Bar Kokhva</span><span class="card-date">132</span></div><span class="card-desc">Bar Kokhva prend le titre de Nassi (prince), reçoit l&#x27;onction messianique de Rabbi Akiva et exerce un pouvoir absolu sans aucune consultation, incarnant non pas un révolutionnai...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Ottone Visconti</span><span class="card-date">1277</span></div><span class="card-desc">Ottone Visconti satisfait les deux critères structurels de la résolution de la guerre sociale. Critère 1 (structure élitaire) : le conflit Torriani/Visconti oppose bien prébendi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Henri VII</span><span class="card-date">1485</span></div><span class="card-desc">Henri Tudor résout les Guerres des Roses en s&#x27;emparant du pouvoir comme figure tierce à Bosworth, puis brise le pouvoir des magnats, reconstruit le fisc et installe une nouvelle...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Maximilien Ier</span><span class="card-date">1597</span></div><span class="card-desc">Maximilien Ier satisfait les deux critères du 1er monarque absolu : il résout la guerre sociale (ni la faction patrimoniale ni la prébendière ne l&#x27;emportent) et produit un nouve...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Henri IV</span><span class="card-date">1598</span></div><span class="card-desc">Henri IV satisfait les deux critères de la résolution de la guerre sociale : il instaure un nouveau cadre central qui subordonne les anciens réseaux oligarchiques (l&#x27;Édit de Nan...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Ferdinand II</span><span class="card-date">1620</span></div><span class="card-desc">Ferdinand II (r. Bohême 1617-1637) résout la guerre sociale par victoire de faction et inaugure la phase absolutiste par la Verneuerte Landesordnung (1627). Il satisfait les deu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Inquisiteurs d&#x27;État</span><span class="card-date">1669</span></div><span class="card-desc">Les Inquisiteurs d&#x27;État satisfont les deux critères de résolution de la guerre sociale : la structure du conflit (giovani/vecchi) est élitaire — prébendière vs patrimoniale —, e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Victor Amédée II</span><span class="card-date">1696</span></div><span class="card-desc">Victor Amédée II satisfait les deux critères de la résolution de la guerre sociale : il instaure un nouveau cadre central (intendants, perequazione, secrétariats d&#x27;État) qui sub...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Le système patricien</span><span class="card-date">1712</span></div><span class="card-desc">Le « 1er monarque absolu » suisse est le patriciat trans-confessionnel après 1712. Les deux critères de la résolution de la guerre sociale sont satisfaits : (1) le conflit oppos...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Frédéric-Guillaume Ier (le Roi-Sergent)</span><span class="card-date">1713</span></div><span class="card-desc">Le test discriminant oligarchique/absolutiste bascule : le Generaldirektorium donne à l&#x27;administration centrale une préséance incontestée sur les administrations locales. L&#x27;exéc...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Philippe V</span><span class="card-date">1714</span></div><span class="card-desc">Philippe V (r. 1700-1746) est le 1er monarque absolu espagnol. Il passe le test discriminant absolutiste à l&#x27;échelle nationale : les décrets de Nueva Planta (1707-1716) abolisse...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Marie-Thérèse</span><span class="card-date">1749</span></div><span class="card-desc">Marie-Thérèse (r. 1740-1780) est la première souveraine qui passe le test discriminant absolutiste à l&#x27;échelle nationale. Les réformes Haugwitz de 1749 font que l&#x27;administration...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Napoléon Bonaparte</span><span class="card-date">1796</span></div><span class="card-desc">Napoléon satisfait les deux critères structurels de la résolution de la guerre sociale. Critère 1 (structure élitaire) : le conflit patriciat/réformateurs oppose bien prébendièr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Augusto Pinochet</span><span class="card-date">1973</span></div><span class="card-desc">Augusto Pinochet (1973-1990) est le 1er monarque absolu chilien. Le test discriminant absolutiste est passé : après le coup d&#x27;État, l&#x27;administration centrale acquiert une préséa...</span></div></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

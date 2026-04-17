@@ -59,13 +59,14 @@ En général, la figure résolvante est un **tiers** — s'appuyant sur les clie
 
 Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne sans qu'un nouveau cadre central émerge — la guerre sociale n'est pas résolue, et la phase oligarchique se poursuit.
 
-**Exemples :**
-- Israël antique : Josias (-640) — centralisation du culte au Temple, destruction des bamot, envoi d'agents royaux sur tout le territoire, unification juridique par le Deutéronome
-- Israël (prolongement) : Simon Thassi (-140) — issu du camp yahviste maccabéen, construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire)
-- France : Henri IV (1598) — issu du camp huguenot, converti, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully)
-- Angleterre : Henri VII (1485) — tiers, création d'une nouvelle dynastie émancipée des York et des Lancaster
-- Espagne : Philippe V (1714) — tiers, Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta
-- Venise : Inquisiteurs d'État (~1669) — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs, devenus progressivement autonomes, dominent les deux factions (giovani/vecchi). Leur base est la classe administrative des cittadini.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | -640 | Josias — centralisation du culte au Temple, destruction des bamot, envoi d'agents royaux sur tout le territoire, unification juridique par le Deutéronome |
+| Israël (prolongement) | -140 | Simon Thassi — issu du camp yahviste maccabéen, construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire) |
+| France | 1598 | Henri IV — issu du camp huguenot, converti, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully) |
+| Angleterre | 1485 | Henri VII — tiers, création d'une nouvelle dynastie émancipée des York et des Lancaster |
+| Espagne | 1714 | Philippe V — tiers, Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta |
+| Venise | ~1669 | Inquisiteurs d'État — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs, devenus progressivement autonomes, dominent les deux factions (giovani/vecchi). Leur base est la classe administrative des cittadini |
 
 ### Caractéristiques
 
@@ -81,18 +82,20 @@ Un marqueur important de l'absolutisation est la soumission du pouvoir judiciair
 
 Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources » juridique, qui consiste en fait à supprimer la capacité des oligarques à interpréter le droit en leur faveur.
 
-**Exemples :**
-- Israël antique : Josias ordonne la « redécouverte » du Livre de la Loi en -622, qui impose une norme écrite unifiée supplantant les traditions locales
-- Israël (prolongement) : le décret de -140 confère les titres « pour toujours, jusqu'à ce qu'un prophète digne de foi se lève » — abolition de facto du contre-pouvoir prophétique
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël antique | -622 | Josias ordonne la « redécouverte » du Livre de la Loi, qui impose une norme écrite unifiée supplantant les traditions locales |
+| Israël (prolongement) | -140 | Le décret confère les titres « pour toujours, jusqu'à ce qu'un prophète digne de foi se lève » — abolition de facto du contre-pouvoir prophétique |
 
 ### Saillant : Dernière grande révolte oligarchique
 
 Les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites. Ce saillant n'est **pas toujours présent** — quand il est absent, la transition de l'absolutisation vers l'impérialisme se fait sans rupture, portée simplement par la mécanique de mise au pas des oligarques.
 
-**Exemples :**
-- Israël (prolongement) : révolte pharisienne contre Alexandre Jannée (~-94) — 800 rebelles crucifiés
-- France : La Fronde (1648-1653) — Princes et parlementaires contre Mazarin. Dernier sursaut.
-- Angleterre : Henri VIII (~1534-1540) — dissolution des monastères, Pilgrimage of Grace écrasé
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël (prolongement) | ~-94 | Révolte pharisienne contre Alexandre Jannée — 800 rebelles crucifiés |
+| France | 1648-1653 | La Fronde — Princes et parlementaires contre Mazarin. Dernier sursaut |
+| Angleterre | ~1534-1540 | Henri VIII — dissolution des monastères, Pilgrimage of Grace écrasé |
 
 **Cas particulier : absence de DGRO.** La Dernière Grande Révolte Oligarchique suppose que les oligarques disposent d'une **assise territoriale locale** depuis laquelle résister (Condé à Bordeaux, les seigneurs du Nord en Angleterre, les Pharisiens avec leur base populaire). Si les oligarques sont concentrés dans un seul lieu sans base territoriale propre, la DGRO est impossible — l'absolutisation est « fluide ».
 
@@ -115,11 +118,12 @@ La durée de cette sous-phase dépend du rapport de force avec les voisins : une
 
 La figure qui incarne le sommet de la puissance absolutiste — expansion maximale, prestige maximal, domestication complète des élites. C'est un des saillants principaux de tout le Parcours.
 
-**Exemples :**
-- Israël (prolongement) : Hérode — reconstruction du Temple à une échelle monumentale, expansion territoriale maximale, cour somptueuse, élimination des Hasmonéens survivants
-- France : Louis XIV — Versailles, domestication de la noblesse par la cour, expansion territoriale, révocation de l'Édit de Nantes (homogénéisation forcée)
-- Angleterre : Élisabeth Ière — défaite de l'Armada espagnole, début de l'expansion coloniale, âge d'or culturel (Shakespeare), prestige maximal de la monarchie Tudor
-- Venise : Francesco Morosini (~1688) — reconquête de la Morée (1684-1699), élu doge à l'unanimité au premier tour alors qu'il commande la flotte en Égine. Titre de « Peloponnesiaco ». Prestige maximal. En 1669, il avait signé la reddition de Candie sans autorisation du Sénat — l'exécutif militaire agit souverainement.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël (prolongement) | ~-20 | Hérode — reconstruction du Temple à une échelle monumentale, expansion territoriale maximale, cour somptueuse, élimination des Hasmonéens survivants |
+| France | ~1682 | Louis XIV — Versailles, domestication de la noblesse par la cour, expansion territoriale, révocation de l'Édit de Nantes (homogénéisation forcée) |
+| Angleterre | ~1580 | Élisabeth Ière — défaite de l'Armada espagnole, début de l'expansion coloniale, âge d'or culturel (Shakespeare), prestige maximal de la monarchie Tudor |
+| Venise | ~1688 | Francesco Morosini — reconquête de la Morée (1684-1699), élu doge à l'unanimité au premier tour alors qu'il commande la flotte en Égine. Titre de « Peloponnesiaco ». Prestige maximal. En 1669, il avait signé la reddition de Candie sans autorisation du Sénat — l'exécutif militaire agit souverainement |
 
 ### Marqueurs forts
 
@@ -139,11 +143,12 @@ La figure qui incarne le sommet de la puissance absolutiste — expansion maxima
 
 Le pouvoir central atteint les limites de son expansion. Les guerres deviennent coûteuses et les victoires rares. L'impérialisme s'essouffle.
 
-**Exemples :**
-- Israël (prolongement) : mort d'Hérode (-4) — le royaume est divisé, plus de conquêtes
-- France : Traité d'Utrecht (1713), mort de Louis XIV (1715) — fin de l'expansionnisme
-- Angleterre : fin du règne d'Élisabeth (~1603) — succession aux Stuart
-- Venise : traité de Passarowitz (1718) — perte définitive de la Morée, dernière possession lointaine. Venise se replie sur le lagon et le Veneto.
+| Nation | Date | Exemple |
+|---|---|---|
+| Israël (prolongement) | -4 | Mort d'Hérode — le royaume est divisé, plus de conquêtes |
+| France | 1713-1715 | Traité d'Utrecht, mort de Louis XIV — fin de l'expansionnisme |
+| Angleterre | ~1603 | Fin du règne d'Élisabeth — succession aux Stuart |
+| Venise | 1718 | Traité de Passarowitz — perte définitive de la Morée, dernière possession lointaine. Venise se replie sur le lagon et le Veneto |
 
 ### Saillant : Remontrance (tournant impérialisme → Ancien Régime)
 
@@ -153,11 +158,12 @@ Le mécanisme est constant : les élites qui ont été intégrées à l'appareil
 
 Ne pas confondre la remontrance avec une DGRO : la DGRO est une révolte armée des oligarques à base territoriale, qui constitue le dernier sursaut de la phase d'absolutisation. La remontrance intervient plus tard, une fois l'absolutisation accomplie — c'est une contestation institutionnelle, pas militaire.
 
-**Exemples :**
-- Angleterre : Apology of the Commons (1604) — les Communes affirment leurs prérogatives face à Jacques Ier. Ignorée.
-- France : Polysynodie (1715) — le Régent remplace les ministres par des conseils aristocratiques. Échoue en 1718.
-- Venise : Correzione de Querini (1761), Pisani-Contarini (1779) — tentatives de redistribuer le pouvoir au sein du patriciat. Écrasées par les Inquisiteurs.
-- Bavière : Landtag de 1848 — la classe parlementaire vote des réformes substantielles (suffrage, presse, responsabilité ministérielle). Maximilien II les vide de leur substance.
+| Nation | Date | Exemple |
+|---|---|---|
+| Angleterre | 1604 | Apology of the Commons — les Communes affirment leurs prérogatives face à Jacques Ier. Ignorée |
+| France | 1715 | Polysynodie — le Régent remplace les ministres par des conseils aristocratiques. Échoue en 1718 |
+| Venise | 1761, 1779 | Correzione de Querini, Pisani-Contarini — tentatives de redistribuer le pouvoir au sein du patriciat. Écrasées par les Inquisiteurs |
+| Bavière | 1848 | Landtag — la classe parlementaire vote des réformes substantielles (suffrage, presse, responsabilité ministérielle). Maximilien II les vide de leur substance |
 
 ## Sous-phase 3 : Ancien Régime (~35 à 100 ans)
 
@@ -182,11 +188,12 @@ En Ancien Régime, le clivage gauche-droite classique se décompose :
 
 Cette recomposition est une condition nécessaire à l'éclatement de la Révolution Nationale.
 
-**Exemples :**
-- Israël (prolongement) : les Sadducéens (noblesse de robe, aristocratie sacerdotale pro-romaine) tiennent le pouvoir ; les Pharisiens (ED, nostalgiques hasmonéens) et les Zélotes (EG, révolutionnaires) forment le bloc contestataire
-- France : aristocratie de cour versaillaise sédimentée ; la bourgeoisie dynamique mais exclue du pouvoir forme le terreau de 1789
-- Angleterre : favoritisme Stuart (Buckingham), monopoles royaux ; les Puritains (EG) et l'opposition aristocratique traditionnelle convergent contre la cour
-- Venise : les barnabotti (ED, nobles appauvris nostalgiques de l'égalité patricienne) et la bourgeoisie intellectuelle (EG, réformateurs) convergent contre le bloc élitaire (familles riches contrôlant les Inquisiteurs). La Correzione de 1761 et le mouvement Pisani-Contarini de 1779 sont les manifestations de ce bloc contestataire.
+| Nation | Exemple |
+|---|---|
+| Israël (prolongement) | Les Sadducéens (noblesse de robe, aristocratie sacerdotale pro-romaine) tiennent le pouvoir ; les Pharisiens (ED, nostalgiques hasmonéens) et les Zélotes (EG, révolutionnaires) forment le bloc contestataire |
+| France | Aristocratie de cour versaillaise sédimentée ; la bourgeoisie dynamique mais exclue du pouvoir forme le terreau de 1789 |
+| Angleterre | Favoritisme Stuart (Buckingham), monopoles royaux ; les Puritains (EG) et l'opposition aristocratique traditionnelle convergent contre la cour |
+| Venise | Les barnabotti (ED, nobles appauvris nostalgiques de l'égalité patricienne) et la bourgeoisie intellectuelle (EG, réformateurs) convergent contre le bloc élitaire (familles riches contrôlant les Inquisiteurs). La Correzione de 1761 et le mouvement Pisani-Contarini de 1779 sont les manifestations de ce bloc contestataire |
 
 ### Marqueurs observables
 

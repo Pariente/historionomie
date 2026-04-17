@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révolution Nationale — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #D4A017; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html" class="active">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Révolution Nationale</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
+<ul>
+<li><a href="#test-discriminant-rn-vs-phase-absolutiste-tardive">Test discriminant (RN vs phase absolutiste tardive)</a></li>
+<li><a href="#marqueurs-nécessaires">Marqueurs nécessaires</a></li>
+<li><a href="#marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)</a></li>
+</ul>
+<li><a href="#sous-phase-1-révolution-initiale">Sous-phase 1 : Révolution initiale</a></li>
+<ul>
+<li><a href="#saillant-éclatement-de-l-ar">Éclatement de l&#x27;AR</a></li>
+<li><a href="#saillant-expérience-parlementaire">Expérience parlementaire</a></li>
+<li><a href="#saillant-phase-aiguë">Phase aiguë</a></li>
+<li><a href="#saillant-moment-thermidorien">Moment thermidorien</a></li>
+</ul>
+<li><a href="#sous-phase-2-impérialiste-revanchard">Sous-phase 2 : Impérialiste Revanchard</a></li>
+<ul>
+<li><a href="#saillant-émergence-de-l-ir">Émergence de l&#x27;IR</a></li>
+</ul>
+<li><a href="#sous-phase-3-restauration">Sous-phase 3 : Restauration</a></li>
+<ul>
+<li><a href="#saillant-restauration">Restauration</a></li>
+<li><a href="#saillant-glorieuse-révolution">Glorieuse Révolution</a></li>
+</ul>
+<li><a href="#conditions-de-sortie-de-la-révolution-nationale">Conditions de sortie de la Révolution Nationale</a></li>
+<ul>
+<li><a href="#vers-l-état-nation-parlementaire">Vers l&#x27;État-nation parlementaire</a></li>
+<li><a href="#vers-le-dominat">Vers le Dominat</a></li>
+</ul>
+<li><a href="#cas-particulier-rn-contre-un-occupant">Cas particulier : RN contre un occupant</a></li>
+<li><a href="#cas-particulier-révolution-nationale-avortée">Cas particulier : Révolution Nationale avortée</a></li>
+<li><a href="#cas-particulier-impérialiste-revanchard-partagé-entre-deux-parcours-hypothèse">Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)</a></li>
+<ul>
+<li><a href="#test-discriminant-rn-avortée-vs-révolte-absolutiste">Test discriminant : RN avortée vs révolte absolutiste</a></li>
+</ul>
+<li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
+<article>
+<p>La Révolution Nationale est la phase troublée qui renverse l'ordre absolutiste. Elle résulte de la convergence de deux facteurs : la perte de légitimité du pouvoir central (souvent par une humiliation, par exemple militaire) et l'épuisement de sa capacité financière (inéluctable du fait de la course aux armements déclenchée par la croissance économique, rendant le système fiscal caduc).</p>
+<p><strong>Les « égaux » de cette phase</strong> sont désormais <strong>tous les citoyens</strong> &mdash; l'homogénéisation culturelle a atteint un niveau où la population entière se perçoit comme une nation. L'administration centrale ne peut plus absorber ce cercle élargi ; le pouvoir doit être réorganisé. <strong>Résolution</strong> : la <strong>subordination du pouvoir administratif à la représentation nationale</strong> &mdash; le vote et les élus offrent un siège à tous les citoyens à la table. C'est la Glorieuse Révolution qui ancre définitivement ce principe.</p>
+<p>Les effets secondaires de la croissance économique (unification culturelle, alphabétisation, urbanisation) provoquent l'émergence de nouvelles élites et l'activation idéologique des masses. Le clivage gauche-droite classique a sauté pendant l'Ancien Régime (cf. <code>phase_absolutiste.md</code>) : le bloc élitaire (centre-droit + centre-gauche) fait face au bloc contestataire (ED + EG). Quand le régime perd simultanément sa légitimité et ses finances, la révolution commence.</p>
+<p>Durée typique endogène : 25 à 80 ans. Le stade de la figure autoritaire est généralement atteint en moins de 20 ans. Si l'Impérialiste Revanchard est vaincu rapidement, la RN sera plus proche de 25 ans. Si la figure autoritaire ne tente pas ou peu d'aventures militaires extérieures, la RN peut atteindre 80 ans.</p>
+<h2 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h2>
+<h3 id="test-discriminant-rn-vs-phase-absolutiste-tardive">Test discriminant (RN vs phase absolutiste tardive)<a class="anchor" href="#test-discriminant-rn-vs-phase-absolutiste-tardive">#</a></h3>
+<p>L'<strong>Ancien Régime a-t-il explosé</strong> ? Les élites qui soutenaient le régime ont-elles <strong>basculé</strong> dans l'opposition ? Un <strong>gouvernement de coalition élargie</strong> (parlementaire ou quasi-parlementaire) a-t-il remplacé l'exécutif absolutiste ?</p>
+<ul>
+  <li><strong>Non</strong> → encore en Ancien Régime. La contestation monte mais le régime tient.</li>
+  <li><strong>Oui</strong> → Révolution Nationale en cours.</li>
+</ul>
+<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<ul>
+  <li>Rupture avec l'ordre absolutiste (pas une simple révolte, mais un changement de régime)</li>
+  <li>Basculement d'une partie significative des élites contre le pouvoir en place</li>
+  <li>Expérience parlementaire ou collégiale, même brève</li>
+</ul>
+<h3 id="marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires">#</a></h3>
+<ul>
+  <li>Crise financière du pouvoir central</li>
+  <li>Humiliation militaire comme déclencheur</li>
+  <li>Montée aux extrêmes après l'expérience parlementaire</li>
+  <li>Figure d'Impérialiste Revanchard</li>
+</ul>
+<h2 id="sous-phase-1-révolution-initiale">Sous-phase 1 : Révolution initiale<a class="anchor" href="#sous-phase-1-révolution-initiale">#</a></h2>
+<p>La première période de la RN couvre l'explosion de l'Ancien Régime, l'expérience parlementaire, la montée aux extrêmes (phase aiguë), et la reprise en main par le centre (moment thermidorien). C'est la période la plus turbulente &mdash; dix ans pour la France (1789-1799), huit ans pour l'Angleterre (1640-1648/1653).</p>
+<h3 id="saillant-éclatement-de-l-ar"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">flash_on</span>Éclatement de l'AR<a class="anchor" href="#saillant-éclatement-de-l-ar">#</a></h3>
+<p>L'Ancien Régime est ruiné et discrédité. Une partie des élites lâche le régime. Le basculement des élites est le déclencheur immédiat : tant que les élites prennent le parti du pouvoir, le régime tient ; quand elles basculent, la révolution devient possible.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1789</span></div><span class="card-desc">Convocation des États généraux, prise de la Bastille</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1640</span></div><span class="card-desc">Charles Ier tente de lever des impôts sans le Parlement</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">66</span></div><span class="card-desc">Le massacre de Florus pousse les élites romanisées dans la révolte</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">mars 1848</span></div><span class="card-desc">Insurrection &mdash; les arsenalotti prennent l'Arsenal, la garnison autrichienne capitule, Manin proclame la République de San Marco</span></div></div>
+</div>
+<h3 id="saillant-expérience-parlementaire"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">account_balance</span>Expérience parlementaire<a class="anchor" href="#saillant-expérience-parlementaire">#</a></h3>
+<p>Les élites qui ont renversé l'ancien ordre proposent un régime à base politique élargie. Une coalition aussi large ne peut se gouverner que de manière collégiale : on expérimente le parlementarisme.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1789-1791</span></div><span class="card-desc">Assemblée nationale constituante</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1640-1648</span></div><span class="card-desc">Long Parliament</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">66-67</span></div><span class="card-desc">Gouvernement provisoire de coalition, frappe du shekel « Israël »</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1848-1849</span></div><span class="card-desc">République de San Marco &mdash; assemblée élue au suffrage universel, factions concurrentes (républicains, fusionnistes, mazziniens), transferts de pouvoir entre factions</span></div></div>
+</div>
+<h3 id="saillant-phase-aiguë"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;font-variation-settings:'FILL' 1;">skull</span>Phase aiguë<a class="anchor" href="#saillant-phase-aiguë">#</a></h3>
+<p>L'extrême-gauche (les révolutionnaires les plus radicaux) prend le contrôle et élimine les modérés. L'activation idéologique des masses rend possible des pouvoirs très autoritaires, reposant sur une coalition gagnante étroite et très militante.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1792-1794</span></div><span class="card-desc">La Terreur, Robespierre</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1649</span></div><span class="card-desc">Exécution de Charles Ier</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">67-70</span></div><span class="card-desc">Les Zélotes éliminent les modérés</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">mars 1849</span></div><span class="card-desc">Amorce seulement &mdash; l'assemblée vote les « pouvoirs illimités » pour Manin, mais l'Autriche écrase la République avant que l'escalade ne se complète</span></div></div>
+</div>
+<h3 id="saillant-moment-thermidorien"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">balance</span>Moment thermidorien<a class="anchor" href="#saillant-moment-thermidorien">#</a></h3>
+<p>Le centre et la droite reprennent le pouvoir et purgent l'extrême-gauche. Un régime plus stable émerge, mais avec une base moins large.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1794-1799</span></div><span class="card-desc">Réaction thermidorienne, Directoire</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1649-1653</span></div><span class="card-desc">Rump Parliament</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span></div><span class="card-desc">La RN est écrasée par Rome avant cette étape</span></div></div>
+</div>
+<h2 id="sous-phase-2-impérialiste-revanchard">Sous-phase 2 : Impérialiste Revanchard<a class="anchor" href="#sous-phase-2-impérialiste-revanchard">#</a></h2>
+<p>Figure autoritaire qui renoue avec la verticalité du pouvoir. Sa coalition gagnante est plus réduite que le régime parlementaire mais plus large que les expériences extrémistes. Il pratique la ventilation des élites et la méritocratie. Pour les nations les plus puissantes, cette figure se lance dans l'impérialisme militaire. La purge permanente de sa coalition accroît la tension sociale et mine la stabilité de la dictature à moyen terme.</p>
+<h3 id="saillant-émergence-de-l-ir"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">military_tech</span>Émergence de l'IR<a class="anchor" href="#saillant-émergence-de-l-ir">#</a></h3>
+<p>Le moment où la figure autoritaire prend le pouvoir.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1799</span></div><span class="card-desc">Bonaparte, coup d'État du 18 Brumaire</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1653</span></div><span class="card-desc">Cromwell, Lord Protector</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1933</span></div><span class="card-desc">Hitler</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Russie</span></div><span class="card-desc">Staline</span></div></div>
+</div>
+<h2 id="sous-phase-3-restauration">Sous-phase 3 : Restauration<a class="anchor" href="#sous-phase-3-restauration">#</a></h2>
+<p>L'IR finit par tomber, de manière exogène (défaite militaire) ou endogène (tension sociale). Il est remplacé par un régime avec une base élargie, mais pas encore pleinement parlementaire.</p>
+<h3 id="saillant-restauration"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">star</span>Restauration<a class="anchor" href="#saillant-restauration">#</a></h3>
+<p>Le moment où l'ancien ordre (ou un ordre conservateur) est restauré après la chute de l'IR. C'est à la fois un saillant (le moment de la restauration) et le début de la sous-phase du même nom (la durée pendant laquelle cet ordre restauré se maintient).</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1815</span></div><span class="card-desc">Restauration bourbonienne &mdash; Louis XVIII après Waterloo</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1660</span></div><span class="card-desc">Restauration Stuart &mdash; Charles II après la mort de Cromwell</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1945</span></div><span class="card-desc">Occupation alliée et division &mdash; fin du régime nazi</span></div></div>
+</div>
+<h3 id="saillant-glorieuse-révolution"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">star</span>Glorieuse Révolution<a class="anchor" href="#saillant-glorieuse-révolution">#</a></h3>
+<p>Une réplique de la révolution initiale finit d'ancrer le parlementarisme dans la vie politique. La base politique est élargie fortement et définitivement. C'est la transition vers l'État-nation parlementaire.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1830</span></div><span class="card-desc">Révolution de 1830 (les Trois Glorieuses)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1688</span></div><span class="card-desc">Glorieuse Révolution</span></div></div>
+</div>
+<h2 id="conditions-de-sortie-de-la-révolution-nationale">Conditions de sortie de la Révolution Nationale<a class="anchor" href="#conditions-de-sortie-de-la-révolution-nationale">#</a></h2>
+<p>En fin de RN, l'homogénéité socioculturelle a généralement fortement augmenté, du fait du brassage social et des purges du mouvement révolutionnaire.</p>
+<h3 id="vers-l-état-nation-parlementaire">Vers l'État-nation parlementaire<a class="anchor" href="#vers-l-état-nation-parlementaire">#</a></h3>
+<p>Si la population a atteint un niveau d'homogénéité suffisant &mdash; souvent catalysé par la rencontre d'une altérité culturelle forte vis-à-vis de l'étranger &mdash; elle entre en régime parlementaire via la Glorieuse Révolution.</p>
+<h3 id="vers-le-dominat">Vers le Dominat<a class="anchor" href="#vers-le-dominat">#</a></h3>
+<p>Si la population n'a pas atteint un niveau d'homogénéité socioculturelle suffisant, le pays bascule en phase de Dominat.</p>
+<h2 id="cas-particulier-rn-contre-un-occupant">Cas particulier : RN contre un occupant<a class="anchor" href="#cas-particulier-rn-contre-un-occupant">#</a></h2>
+<p>La RN peut éclater contre un occupant étranger, pas seulement contre un pouvoir absolutiste local. La condition nécessaire côté peuple est la même : une <strong>homogénéité culturelle suffisante</strong> pour prétendre à une RN. Le Parcours est porté par un peuple, pas par des institutions &mdash; même sans institutions propres ni appareil étatique, si le peuple est culturellement au niveau RN, la RN peut éclater.</p>
+<p>Deux configurations :</p>
+<p>1. <strong>Les institutions locales sont absolutistes, le suzerain est formel</strong> &mdash; le Parcours local est en AR propre. L'explosion est contre l'ordre absolutiste local. Exemple : Israël sous Rome (66), où le Sanhédrin et l'aristocratie sadducéenne fonctionnent sous tutelle romaine.</p>
+<p>2. <strong>Les institutions locales sont totalement subordonnées à l'occupant</strong> &mdash; le Parcours local est en AR exogène (cf. <code>phase_absolutiste.md</code>). Les conditions d'AR (pression fiscale, mobilité bloquée, sédimentation) sont imposées par l'occupant, mais la réaction du peuple est endogène. Exemple : Venise sous l'Autriche (1848), Milan sous les Habsbourg.</p>
+<h2 id="cas-particulier-révolution-nationale-avortée">Cas particulier : Révolution Nationale avortée<a class="anchor" href="#cas-particulier-révolution-nationale-avortée">#</a></h2>
+<p>La Révolution Nationale peut être écrasée par une puissance extérieure avant d'atteindre son terme. Dans ce cas, le Parcours est interrompu.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">66-70</span></div><span class="card-desc">La Grande Révolte suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1848-1849</span></div><span class="card-desc">La République de Manin suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète</span></div></div>
+</div>
+<h2 id="cas-particulier-impérialiste-revanchard-partagé-entre-deux-parcours-hypothèse">Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)<a class="anchor" href="#cas-particulier-impérialiste-revanchard-partagé-entre-deux-parcours-hypothèse">#</a></h2>
+<p>Dans certains cas, une même figure historique peut jouer le rôle d'Impérialiste Revanchard pour <strong>deux Parcours nationaux simultanément</strong>. C'est une hypothèse structurelle nouvelle, identifiée à l'occasion de l'analyse du Parcours autrichien, et qui reste à valider sur d'autres cas du corpus.</p>
+<p><strong>Cas identifié : Hitler comme IR double (allemand et autrichien)</strong></p>
+<p>Hitler est né à Braunau am Inn (Haute-Autriche) en 1889, a passé sa jeunesse à Linz et à Vienne, et adhère pleinement à l'idée pan-germanique qui a dominé la droite autrichienne depuis Schönerer (fin XIXe). L'Anschluss (12 mars 1938) est la réalisation historique de cette idée pan-germanique, portée par une figure autrichienne de naissance qui est aussi le chef du Reich allemand. Dans cette lecture, Hitler incarne simultanément l'IR du Parcours allemand (canonique) et l'IR du Parcours autrichien &mdash; la même personne, le même projet impérialiste revanchard, porté par deux Parcours nationaux qui se chevauchent pendant 1938-1945.</p>
+<p>Pour le Parcours autrichien, les fonctions canoniques de l'IR sont remplies :</p>
+<p>1. <strong>Projection impérialiste extérieure</strong> (conquêtes 1938-1941, guerre mondiale)</p>
+<p>2. <strong>Ventilation des élites par la méritocratie partisane</strong> (le parti nazi recrute massivement en Autriche, notamment dans la jeunesse petite-bourgeoise)</p>
+<p>3. <strong>Verticalité autoritaire</strong> qui transcende les factions de la Première République autrichienne (chrétiens-sociaux et pan-germanistes sont tous deux absorbés dans le parti nazi)</p>
+<p>4. <strong>Chute commune avec le Reich</strong> en mai 1945</p>
+<p>Cette lecture préserve la séquence canonique complète de la RN autrichienne (révolution initiale → IR → restauration → GR) et éclaire un élément biographique curieux &mdash; pourquoi est-ce un Autrichien qui porte l'impérialisme revanchard allemand.</p>
+<p><strong>Objection</strong> : l'historiographie post-1945 refuse l'attribution de Hitler au Parcours autrichien (doctrine de la « première victime »), et Hitler est devenu citoyen allemand en 1932. Ces objections relèvent de l'identité nationale construite rétroactivement, pas de la dynamique structurelle de 1918-1945.</p>
+<p><strong>Question théorique ouverte</strong> : sous quelles conditions un IR peut-il être partagé entre deux Parcours ? Faut-il une proximité culturelle et linguistique fondamentale (comme germanophone Allemagne/Autriche) ? Une phase de RN synchrone ? Une figure biographique ambiguë qui appartient structurellement aux deux nations ? Existe-t-il d'autres cas dans le corpus &mdash; IR partagé entre une nation et une diaspora, entre deux nations culturellement proches, entre un empire et son noyau ethnique ?</p>
+<p>La v4 du Parcours autrichien retient cette hypothèse comme hypothèse principale pour sa cohérence structurelle, tout en reconnaissant qu'elle est nouvelle et mérite discussion théorique.</p>
+<h3 id="test-discriminant-rn-avortée-vs-révolte-absolutiste">Test discriminant : RN avortée vs révolte absolutiste<a class="anchor" href="#test-discriminant-rn-avortée-vs-révolte-absolutiste">#</a></h3>
+<p>Comment distinguer une RN avortée (comme Israël en 66 ou Venise en 1848) d'une révolte absolutiste (comme les Maccabées en -167 ou Bar Kokhba en 132) ?</p>
+<ul>
+  <li><strong>Révolte absolutiste</strong> : un chef militaire ou charismatique, au statut héréditaire ou religieux, à l'autorité incontestée, mène la révolte de bout en bout. Pas de phase parlementaire, pas de factions concurrentes, pas d'assemblée élue. Exemples : Mattathias/Judah Maccabée (autorité sacerdotale héritée), Bar Kokhba (chef militaire endossé comme messie).</li>
+  <li><strong>RN avortée</strong> : la révolte commence par une expérience parlementaire avec assemblée élue et factions concurrentes, puis escalade vers une phase aiguë. Le leadership est construit par l'action politique et l'élection, pas par l'héritage. Exemples : Grande Révolte de 66 (gouvernement de coalition), Venise 1848 (Manin élu, démissionne quand il perd la majorité, réélu, reçoit les pouvoirs illimités par vote).</li>
+</ul>
+<p>Le marqueur le plus discriminant est la nature du leadership : <strong>autorité héritée/charismatique</strong> (révolte absolutiste) vs <strong>autorité construite par l'élection</strong> (RN).</p>
+<section class="examples">
+<h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
+<p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
+<div class="saillant-list">
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;">flash_on</span><span>Éclatement de l&#x27;AR</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Massacre de Florus</span><span class="card-date">66</span></div><span class="card-desc">Le massacre ordonné par le procurateur Florus provoque le basculement des élites romanisées elles-mêmes dans la révolte, signe que l&#x27;Ancien Régime a atteint le point de rupture ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Charles Ier</span><span class="card-date">1640</span></div><span class="card-desc">Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentat...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Prise de la Bastille</span><span class="card-date">1789</span></div><span class="card-desc">La convocation des États généraux pour résoudre la crise financière déclenche un basculement irrésistible : le tiers état et une partie de la noblesse libérale renversent l&#x27;ordr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Invasion française</span><span class="card-date">1798</span></div><span class="card-desc">L&#x27;invasion française (mars 1798) provoque l&#x27;éclatement de l&#x27;Ancien Régime confédéral. Le test discriminant RN vs AR tardif est satisfait : les élites patriciennes ont basculé da...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Lajos Batthyány</span><span class="card-date">1848</span></div><span class="card-desc">Le 15 mars 1848, Kossuth prononce son discours à la diète. Manifestations à Pest le même jour. Le 17 mars, Ferdinand V nomme Batthyány Premier ministre. April Laws adoptées et r...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Carlo Cattaneo</span><span class="card-date">1848</span></div><span class="card-desc">Les Cinque Giornate (18-22 mars 1848) satisfont le test discriminant de l&#x27;éclatement de l&#x27;AR : le bloc contestataire (ED + EG) renverse le bloc élitaire. Le régime absolutiste p...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Daniele Manin</span><span class="card-date">1848</span></div><span class="card-desc">L&#x27;éclatement de l&#x27;AR satisfait les deux conditions canoniques : perte simultanée de la légitimité (humiliation du régime autrichien par les soulèvements européens de 1848) et de...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Karl Renner</span><span class="card-date">1918</span></div><span class="card-desc">Le 12 novembre 1918, au lendemain de l&#x27;abdication (« renonciation à participation aux affaires de l&#x27;État ») de Charles Ier, l&#x27;Assemblée provisoire proclame la République d&#x27;Autri...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Tomáš Garrigue Masaryk</span><span class="card-date">1918</span></div><span class="card-desc">Le 28 octobre 1918, le Comité national tchécoslovaque proclame à Prague l&#x27;indépendance de la République tchécoslovaque. Les institutions habsbourgeoises s&#x27;effondrent. Masaryk, e...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Mihály Károlyi</span><span class="card-date">1918</span></div><span class="card-desc">Le 31 octobre 1918, à Budapest, révolution démocratique portée par le Conseil national hongrois. Károlyi Premier ministre. Tisza István assassiné le même jour. Le 13 novembre, C...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Chute de la monarchie</span><span class="card-date">1931</span></div><span class="card-desc">En avril 1931, le régime perd simultanément sa légitimité et sa capacité financière. Les élections municipales révèlent le basculement des élites — Alphonse XIII part en exil et...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Václav Havel</span><span class="card-date">1989</span></div><span class="card-desc">Entre le 17 et le 29 novembre 1989, des manifestations étudiantes réprimées puis généralisées à Prague forcent le gouvernement communiste à ouvrir des négociations avec le Forum...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;">account_balance</span><span>Expérience parlementaire</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Gouvernement de coalition</span><span class="card-date">66</span></div><span class="card-desc">Un gouvernement provisoire de coalition réunissant Pharisiens, Sadducéens modérés et Zélotes est instauré après la victoire de Beth Horon, et la frappe du shekel inscrit « Israë...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">John Pym</span><span class="card-date">1640</span></div><span class="card-desc">Le Long Parlement gouverne pendant la guerre civile en s&#x27;appuyant sur ses propres comités et sur la New Model Army, première tentative de substituer un gouvernement parlementair...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Constitution de 1791</span><span class="card-date">1789</span></div><span class="card-desc">L&#x27;Assemblée nationale constituante tente d&#x27;instaurer un régime parlementaire en adoptant la Déclaration des droits de l&#x27;homme et du citoyen puis la Constitution de 1791, qui éta...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">République helvétique</span><span class="card-date">1798</span></div><span class="card-desc">La République helvétique (1798-1803) est l&#x27;expérience parlementaire canonique : les élites qui ont renversé l&#x27;ancien ordre proposent un régime à base politique élargie. Une asse...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Lajos Batthyány</span><span class="card-date">1848</span></div><span class="card-desc">Le gouvernement Batthyány (17 mars 1848 - 2 octobre 1848) est l&#x27;expérience parlementaire hongroise : gouvernement responsable, coalition des magnats réformateurs (Batthyány, Szé...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Gabrio Casati</span><span class="card-date">1848</span></div><span class="card-desc">Le Governo provvisorio (22 mars - 6 août 1848) est la première expérience parlementaire milanaise. Trois factions s&#x27;affrontent : les fusionnistes monarchistes (Casati, majorité)...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Daniele Manin</span><span class="card-date">1848</span></div><span class="card-desc">L&#x27;expérience parlementaire vénitienne satisfait le marqueur nécessaire de la RN (expérience collégiale avec factions concurrentes) et le test discriminant « RN vs révolte absolu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Tomáš Garrigue Masaryk et Edvard Beneš</span><span class="card-date">1918</span></div><span class="card-desc">La Première République tchécoslovaque (1918-1938) est l&#x27;une des rares démocraties stables d&#x27;Europe centrale entre les deux guerres. Constitution de 1920, suffrage universel, dom...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Mihály Károlyi</span><span class="card-date">1918</span></div><span class="card-desc">République populaire hongroise de Károlyi (novembre 1918-mars 1919) : gouvernement de coalition démocratique, tentative de réforme agraire, désarmement unilatéral sur pression w...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Karl Renner / Ignaz Seipel</span><span class="card-date">1919</span></div><span class="card-desc">La Première République autrichienne (1919-1933) est l&#x27;expérience parlementaire classique : Assemblée constituante élue, Constitution de 1920 (révisée 1929) inspirée de Hans Kels...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Seconde République</span><span class="card-date">1931</span></div><span class="card-desc">La Seconde République (1931-1936) est l&#x27;expérience parlementaire canonique : coalition élargie, suffrage universel, factions concurrentes. Le gouvernement collégial s&#x27;avère inst...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;font-variation-settings:'FILL' 1;">skull</span><span>Phase aiguë</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Terreur zélote</span><span class="card-date">67</span></div><span class="card-desc">Trois factions armées s&#x27;affrontent à l&#x27;intérieur même de Jérusalem, les Zélotes éliminent les modérés, assassinent le Grand Prêtre et brûlent les réserves de nourriture, reprodu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Oliver Cromwell</span><span class="card-date">1648</span></div><span class="card-desc">L&#x27;Épuration de Pride expulse les modérés du Parlement, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649, et la monarchie est abolie au profit du Commonw...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Robespierre</span><span class="card-date">1792</span></div><span class="card-desc">L&#x27;extrême-gauche structurelle prend le contrôle du pouvoir : la monarchie est abolie le 10 août 1792, la République est proclamée, Louis XVI est exécuté et le Comité de salut pu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Stecklikrieg</span><span class="card-date">1802</span></div><span class="card-desc">Le Stecklikrieg (1802) est la phase aiguë canonique : montée aux extrêmes après l&#x27;échec de l&#x27;expérience parlementaire. Les fédéralistes (ED + modérés) se soulèvent contre les un...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Lajos Kossuth</span><span class="card-date">1849</span></div><span class="card-desc">Après la reprise des hostilités et le transfert du gouvernement à Debrecen, Kossuth devient le dirigeant effectif. Le 14 avril 1849, il proclame la Déclaration d&#x27;indépendance — ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Daniele Manin</span><span class="card-date">1849</span></div><span class="card-desc">Le vote des « pouvoirs illimités » pour Manin (mars 1849) marque l&#x27;amorce de la phase aiguë : concentration du pouvoir dans les mains d&#x27;un seul homme, l&#x27;EG prenant le dessus fac...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Béla Kun</span><span class="card-date">1919</span></div><span class="card-desc">Le 21 mars 1919, fusion sociaux-démocrates + communistes et proclamation de la République hongroise des Conseils. 133 jours : nationalisation, Terreur rouge, alliance avec la Ru...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Engelbert Dollfuss</span><span class="card-date">1933</span></div><span class="card-desc">De mars 1933 (auto-dissolution du Nationalrat par Dollfuss) à juillet 1934 (assassinat de Dollfuss par les nazis autrichiens), l&#x27;Autriche traverse une phase aiguë courte mais vi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Guerre civile</span><span class="card-date">1936</span></div><span class="card-desc">La Guerre civile (1936-1939) est la phase aiguë — montée aux extrêmes où les factions radicales (EG et ED) éliminent les modérés. Le mécanisme canonique d&#x27;activation idéologique...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;">balance</span><span>Moment thermidorien</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Oliver Cromwell</span><span class="card-date">1653</span></div><span class="card-desc">Cromwell dissout le Rump Parliament en avril 1653, mettant fin à l&#x27;expérience parlementaire radicale et rétablissant un pouvoir exécutif fort sous la forme du Protectorat.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">9 Thermidor</span><span class="card-date">1794</span></div><span class="card-desc">La chute de Robespierre le 9 thermidor an II (27 juillet 1794) marque le retour au pouvoir du centre et de la droite, qui purgent l&#x27;extrême-gauche et instaurent le Directoire, r...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Napoléon Bonaparte</span><span class="card-date">1803</span></div><span class="card-desc">L&#x27;Acte de Médiation (1803) est le moment thermidorien : le centre reprend le pouvoir et purge les extrêmes. La particularité est que le Thermidor est imposé de l&#x27;extérieur (Napo...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Kurt Schuschnigg</span><span class="card-date">1934</span></div><span class="card-desc">Kurt Schuschnigg succède à Dollfuss et maintient le régime corporatiste jusqu&#x27;à l&#x27;Anschluss. Pas de radicalisation supplémentaire, pas de projet impérialiste — stabilisation déf...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;">military_tech</span><span>Émergence de l&#x27;IR</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Oliver Cromwell</span><span class="card-date">1653</span></div><span class="card-desc">Cromwell s&#x27;empare du pouvoir en dissolvant le Rump Parliament et en devenant Lord Protecteur, instaurant un régime méritocratique et impérialiste qui projette la puissance angla...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Bonaparte</span><span class="card-date">1799</span></div><span class="card-desc">Le coup d&#x27;État du 18 Brumaire le 9 novembre 1799 porte Bonaparte au pouvoir ; il instaure le Consulat puis l&#x27;Empire et réalise l&#x27;unification juridique définitive du pays par le ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Adolf Hitler</span><span class="card-date">1934</span></div><span class="card-desc">IR canonique : figure autoritaire qui ventile les élites par la méritocratie, canalise les tensions par l&#x27;impérialisme militaire, et dont le régime s&#x27;effondre avec sa personne.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Adolf Hitler</span><span class="card-date">1938</span></div><span class="card-desc">Le 12 mars 1938, Hitler — né à Braunau am Inn, autrichien d&#x27;origine — annexe l&#x27;Autriche au Reich par l&#x27;Anschluss. L&#x27;Autriche disparaît formellement comme État indépendant. Struc...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Francisco Franco</span><span class="card-date">1939</span></div><span class="card-desc">Franco (r. 1939-1975) est l&#x27;IR contraint — il remplit les fonctions canoniques de l&#x27;IR (verticalité autoritaire, ventilation des élites par la méritocratie partisane, fusion des...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;">star</span><span>Restauration</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Déclaration de Breda</span><span class="card-date">1660</span></div><span class="card-desc">Charles II est restauré sur le trône en 1660 dans le cadre de la Déclaration de Breda, qui garantit l&#x27;amnistie générale, la liberté de conscience et le maintien des propriétés a...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Charte de 1814</span><span class="card-date">1815</span></div><span class="card-desc">La chute de Napoléon et le Congrès de Vienne ramènent les Bourbons au pouvoir avec Louis XVIII. La Charte de 1814 établit un régime constitutionnel qui maintient les acquis fond...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Pacte fédéral</span><span class="card-date">1815</span></div><span class="card-desc">Le Congrès de Vienne (1815) met fin au protectorat napoléonien et restaure un ordre conservateur. Le Pacte fédéral de 1815 renforce l&#x27;autonomie cantonale, les patriciats retrouv...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Adolf Hitler</span><span class="card-date">1945</span></div><span class="card-desc">3 ans de tentative de restauration démocratique post-guerre. Beneš revient de Londres, restauration de la République tchécoslovaque (3ème République). Décrets Beneš : expulsion ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Miklós Horthy</span><span class="card-date">1945</span></div><span class="card-desc">Brève restauration démocratique 1945-1947 sous occupation alliée (majoritairement soviétique). Élections libres de novembre 1945 gagnées par les Petits Propriétaires (57%). « Ta...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Zoltán Tildy / Ferenc Nagy</span><span class="card-date">1945</span></div><span class="card-desc">Après la chute de Horthy (1944) et l&#x27;arrivée de l&#x27;Armée rouge, le gouvernement provisoire de Débrecen (décembre 1944) puis le gouvernement Tildy (novembre 1945) installent un ré...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1949</span></div><span class="card-desc">Restauration canonique : un ordre conservateur remplace l&#x27;IR après sa chute. Base politique élargie (Grundgesetz) mais souveraineté incomplète (occupation alliée, division Est-O...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Imre Pozsgay / József Antall</span><span class="card-date">1989</span></div><span class="card-desc">Restauration institutionnelle très courte entre la proclamation de la République (23 octobre 1989) et l&#x27;installation du gouvernement Antall après les élections libres (mai 1990)...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#D4A017;">star</span><span>Glorieuse Révolution</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Guillaume III d&#x27;Orange</span><span class="card-date">1688</span></div><span class="card-desc">L&#x27;invitation faite à Guillaume d&#x27;Orange de débarquer en Angleterre, la fuite de Jacques II et l&#x27;adoption du Bill of Rights en 1689 ancrent définitivement la souveraineté parleme...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Trois Glorieuses</span><span class="card-date">1830</span></div><span class="card-desc">Les Trois Glorieuses des 27, 28 et 29 juillet 1830 renversent Charles X et portent Louis-Philippe au pouvoir dans le cadre d&#x27;une monarchie constitutionnelle parlementaire, ancra...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Guillaume Henri Dufour</span><span class="card-date">1847</span></div><span class="card-desc">La Guerre du Sonderbund (novembre 1847) et la Constitution fédérale (1848) sont la Glorieuse Révolution suisse — l&#x27;acte qui ancre définitivement le parlementarisme et crée l&#x27;Éta...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Leopold Figl / Julius Raab</span><span class="card-date">1955</span></div><span class="card-desc">Le Staatsvertrag de Vienne (15 mai 1955) est signé par les quatre puissances alliées et l&#x27;Autriche. Il rend la pleine souveraineté à l&#x27;Autriche, interdit toute union avec l&#x27;Alle...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Imre Nagy</span><span class="card-date">1956</span></div><span class="card-desc">Le 23 octobre 1956, insurrection populaire à Budapest. Imre Nagy revient au pouvoir comme Premier ministre, forme un gouvernement multipartite, annonce la fin du système du part...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Juan Carlos Ier / Adolfo Suárez</span><span class="card-date">1978</span></div><span class="card-desc">La Transition (1975-1978) est la Glorieuse Révolution espagnole — une réplique de la révolution initiale qui ancre définitivement le parlementarisme. La Constitution de 1978 sub...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1990</span></div><span class="card-desc">Glorieuse Révolution canonique : une réplique de la révolution initiale ancre définitivement le parlementarisme pour l&#x27;ensemble de la nation.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">József Antall</span><span class="card-date">1990</span></div><span class="card-desc">Les premières élections libres multipartites du 25 mars et 8 avril 1990 et l&#x27;installation du gouvernement József Antall (Forum démocratique hongrois) constituent la Glorieuse Ré...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Václav Klaus et Vladimír Mečiar</span><span class="card-date">1993</span></div><span class="card-desc">Le 1er janvier 1993, la Tchécoslovaquie est dissoute pacifiquement en deux États indépendants : la République tchèque et la République slovaque. Accord négocié en 1992 par Klaus...</span></div></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

@@ -181,11 +181,12 @@ Les bornes marquées ⚠️ sont **dynamiques** (basculement de logique, pas un 
 
 Le Parcours progresse quand l'un ou l'autre des deux moteurs avance. Une nation peut être factuellement à une phase donnée (par le niveau combiné de ses deux moteurs) **sans en présenter tous les saillants typiques**. En particulier, quand une nation est politiquement fragmentée mais culturellement homogène, les saillants politiques (monarques) peuvent être absents alors que la phase est bien celle que l'état des moteurs indique.
 
-**Exemples :**
-- **Israël post-exil (-520)** : la nation est en phase oligarchique (Torah comme loi, Knesset haGuedola, Grand Prêtre), mais il n'y a pas de roi — le saillant « 1er monarque oligarchique » n'a pas de figure incarnée. Le Parcours progresse néanmoins.
-- **Allemagne pré-unification (~1713-1871)** : l'homogénéité culturelle est au niveau absolutiste (langue unifiée par Luther, Aufklärung, conscience nationale), mais il n'y a pas de monarque absolu unifié sur l'ensemble de la nation. Le saillant « 1er monarque absolu allemand » n'existe qu'au niveau prussien (Frédéric-Guillaume Ier), pas au niveau national.
-- **Italie pré-unification** : culturellement avancée (Dante, Renaissance, langue italienne), mais politiquement fragmentée — pas de saillants politiques unifiés avant le Risorgimento.
-- **Venise** : le « 1er monarque absolu » n'est pas une personne mais une institution — les Inquisiteurs d'État, devenus autonomes et dominant les factions patricienne. Le saillant « 1er monarque absolu » est institutionnel, pas personnel. Le Parcours progresse néanmoins vers l'absolutisme.
+| Nation | Exemple |
+|---|---|
+| Israël post-exil (-520) | La nation est en phase oligarchique (Torah comme loi, Knesset haGuedola, Grand Prêtre), mais il n'y a pas de roi — le saillant « 1er monarque oligarchique » n'a pas de figure incarnée. Le Parcours progresse néanmoins. |
+| Allemagne pré-unification (~1713-1871) | L'homogénéité culturelle est au niveau absolutiste (langue unifiée par Luther, Aufklärung, conscience nationale), mais il n'y a pas de monarque absolu unifié sur l'ensemble de la nation. Le saillant « 1er monarque absolu allemand » n'existe qu'au niveau prussien (Frédéric-Guillaume Ier), pas au niveau national. |
+| Italie pré-unification | Culturellement avancée (Dante, Renaissance, langue italienne), mais politiquement fragmentée — pas de saillants politiques unifiés avant le Risorgimento. |
+| Venise | Le « 1er monarque absolu » n'est pas une personne mais une institution — les Inquisiteurs d'État, devenus autonomes et dominant les factions patricienne. Le saillant « 1er monarque absolu » est institutionnel, pas personnel. Le Parcours progresse néanmoins vers l'absolutisme. |
 
 Ce principe a une conséquence méthodologique : pour identifier la phase d'une nation fragmentée, on ne peut pas se fier uniquement aux saillants politiques — il faut aussi évaluer le degré d'homogénéité culturelle.
 

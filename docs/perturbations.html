@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perturbations — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #8B7355; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html" class="active">Perturbations</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>Perturbations</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#les-4-effets">Les 4 effets</a></li>
+<li><a href="#les-4-mécanismes-1-état-continu">Les 4 mécanismes + 1 état continu</a></li>
+<ul>
+<li><a href="#grille-mécanisme-effet-pour-le-choc-exogène">Grille mécanisme × effet pour le choc exogène</a></li>
+</ul>
+<li><a href="#affichage-sur-la-frise">Affichage sur la frise</a></li>
+<li><a href="#dimension-territoriale-des-perturbations">Dimension territoriale des perturbations</a></li>
+<ul>
+<li><a href="#noyau-territorial-et-marges">Noyau territorial et marges</a></li>
+<li><a href="#perturbations-territoriales-vs-non-territoriales">Perturbations territoriales vs non territoriales</a></li>
+<li><a href="#perturbations-territoriales-et-graphique-de-superficie">Perturbations territoriales et graphique de superficie</a></li>
+<li><a href="#mécanismes-et-territoire">Mécanismes et territoire</a></li>
+<li><a href="#exutoire-colonial-le-timing-compte">Exutoire colonial : le timing compte</a></li>
+</ul>
+<li><a href="#détail-des-effets">Détail des effets</a></li>
+<ul>
+<li><a href="#questions-diagnostiques">Questions diagnostiques</a></li>
+</ul>
+<li><a href="#profondeur-du-reboot">Profondeur du reboot</a></li>
+<li><a href="#reprise-des-sous-phases-après-perturbation">Reprise des sous-phases après perturbation</a></li>
+<li><a href="#boucles-en-phase-féodale">Boucles en phase féodale</a></li>
+<li><a href="#reboot">Reboot</a></li>
+<ul>
+<li><a href="#exemples">Exemples</a></li>
+</ul>
+<li><a href="#prolongement">Prolongement</a></li>
+<ul>
+<li><a href="#exemple">Exemple</a></li>
+</ul>
+<li><a href="#transfert-de-territoire">Transfert de territoire</a></li>
+<ul>
+<li><a href="#exemple">Exemple</a></li>
+</ul>
+<li><a href="#choc-d-hétérogénéité">Choc d&#x27;hétérogénéité</a></li>
+<ul>
+<li><a href="#condition-nécessaire-administration-commune-intégration-effective">Condition nécessaire : administration commune (intégration effective)</a></li>
+<li><a href="#corollaire-symétrique-la-perte-d-une-union-personnelle-n-est-pas-une-correction-d-échelle">Corollaire symétrique : la perte d&#x27;une union personnelle n&#x27;est pas une correction d&#x27;échelle</a></li>
+<li><a href="#choc-exogène-avec-fin-d-exutoire-militaire">Choc exogène avec fin d&#x27;exutoire militaire</a></li>
+<li><a href="#exemples">Exemples</a></li>
+</ul>
+<li><a href="#rébellion-périphérique">Rébellion périphérique</a></li>
+<ul>
+<li><a href="#exemples">Exemples</a></li>
+</ul>
+<li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
+<article>
+<p>Le Parcours de construction nationale peut être perturbé par des événements qui modifient sa vitesse de progression. Une perturbation se décompose en un <strong>mécanisme</strong> (ce qui cause la perturbation) et un <strong>effet</strong> (ce qui arrive au Parcours). Les perturbations peuvent être <strong>ponctuelles</strong> (un événement) ou <strong>étendues</strong> (une période) &mdash; un événement ponctuel peut déclencher une perturbation étendue (ex. : destruction du Temple → exil babylonien).</p>
+<h2 id="les-4-effets">Les 4 effets<a class="anchor" href="#les-4-effets">#</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Effet</th>
+    <th>Ce qui arrive</th>
+    <th>Couleur (frise)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><strong>Prolongement</strong></td>
+    <td>La phase en cours est rallongée</td>
+    <td>orange</td>
+  </tr>
+  <tr>
+    <td><strong>Accélération</strong></td>
+    <td>La phase en cours est raccourcie</td>
+    <td>bleu</td>
+  </tr>
+  <tr>
+    <td><strong>Avortement</strong></td>
+    <td>Le passage à la phase suivante est bloqué</td>
+    <td>rouge</td>
+  </tr>
+  <tr>
+    <td><strong>Reboot</strong></td>
+    <td>Redémarrage de la phase ou retour à une phase antérieure</td>
+    <td>cramoisi</td>
+  </tr>
+</tbody>
+</table></div>
+<h2 id="les-4-mécanismes-1-état-continu">Les 4 mécanismes + 1 état continu<a class="anchor" href="#les-4-mécanismes-1-état-continu">#</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Mécanisme</th>
+    <th>Type</th>
+    <th>Icône (frise)</th>
+    <th>Effets possibles</th>
+    <th>Exemples</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><strong>Choc d'hétérogénéité</strong></td>
+    <td>Ponctuel ou graduel</td>
+    <td><span class="material-symbols-outlined" style="font-size:1.1rem;vertical-align:-3px;">open_in_full</span></td>
+    <td>Prolongement </td>
+    <td>Habsburg 1516, Bavière 1806, Empire de Cnut 1016, Stato da Màr 1204, croisade des Albigeois 1229</td>
+  </tr>
+  <tr>
+    <td><strong>Choc exogène</strong></td>
+    <td>Ponctuel</td>
+    <td><span class="material-symbols-outlined" style="font-size:1.1rem;vertical-align:-3px;">bolt</span></td>
+    <td>Les 4 effets (selon ce que le choc fait)</td>
+    <td>Voir grille ci-dessous</td>
+  </tr>
+  <tr>
+    <td><strong>Insuffisance interne</strong></td>
+    <td>Ponctuel</td>
+    <td><span class="material-symbols-outlined" style="font-size:1.1rem;vertical-align:-3px;">close</span></td>
+    <td>Avortement </td>
+    <td>Crises féodales sans PO, absolutisation avortée (Faliero, Pierre Ier)</td>
+  </tr>
+  <tr>
+    <td><strong>Correction d'échelle</strong></td>
+    <td>Ponctuel ou graduel</td>
+    <td><span class="material-symbols-outlined" style="font-size:1.1rem;vertical-align:-3px;">compress</span></td>
+    <td>Accélération </td>
+    <td>Perte de la Crète vénitienne (1669), fragmentation Visconti (1402), perte de la Silésie autrichienne (1742), perte de l'empire colonial espagnol (1808-1826). Condition : le territoire perdu doit avoir été effectivement digéré par le noyau (cf. §Choc d'hétérogénéité).</td>
+  </tr>
+  <tr>
+    <td><strong>Exutoire</strong></td>
+    <td><strong>Continu</strong></td>
+    <td><em>(pas de marqueur &mdash; implicite)</em></td>
+    <td>Prolongement </td>
+    <td>Venise Stato da Màr, colonies espagnoles, Reconquista, Reislauferei suisse</td>
+  </tr>
+</tbody>
+</table></div>
+<p>Le <strong>choc d'hétérogénéité</strong> ajoute de la diversité vers l'intérieur (gain territorial, afflux culturel). L'<strong>exutoire</strong> projette l'énergie vers l'extérieur (empire, colonies, mercenariat). Les deux produisent un prolongement mais par des voies différentes : le choc repousse le seuil d'homogénéité, l'exutoire absorbe les tensions élitaires. Ils coexistent souvent (l'héritage habsbourgeois crée à la fois l'hétérogénéité et l'exutoire).</p>
+<p>L'exutoire est un <strong>état continu</strong>, pas un événement. Il n'a pas de marqueur sur la frise. Il apparaît quand un choc d'hétérogénéité le crée, et disparaît quand un choc exogène ou l'épuisement interne le détruit. Sa fin est marquée par le saillant standard <strong>« fin de l'expansion »</strong> (marqueur rond, couleur de la phase &mdash; pas un losange de perturbation).</p>
+<h3 id="grille-mécanisme-effet-pour-le-choc-exogène">Grille mécanisme × effet pour le choc exogène<a class="anchor" href="#grille-mécanisme-effet-pour-le-choc-exogène">#</a></h3>
+<p>Le choc exogène est le mécanisme le plus polyvalent &mdash; son effet dépend de ce qu'il frappe :</p>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Ce que le choc fait</th>
+    <th>Effet</th>
+    <th>Couleur</th>
+    <th>Exemples</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Ralentit sans détruire (gel temporaire, occupation)</td>
+    <td>Prolongement </td>
+    <td>Orange</td>
+    <td>Crécy-Poitiers (~1346), éclipse napoléonienne du Piémont (1796-1814), Empire de Cnut (1016)</td>
+  </tr>
+  <tr>
+    <td>Supprime un exutoire militaire externe, force le recentrage interne</td>
+    <td>Accélération </td>
+    <td>Bleu</td>
+    <td>Normandie 1204, Castillon 1453, Solferino 1859, Sadowa 1866, Désastre 1898, Napoléon à Milan</td>
+  </tr>
+  <tr>
+    <td>Bloque une transition sans détruire les institutions</td>
+    <td>Avortement </td>
+    <td>Rouge</td>
+    <td>France écrase le Trienio 1823, Autriche écrase Venise 1849</td>
+  </tr>
+  <tr>
+    <td>Détruit les institutions et les réseaux humains</td>
+    <td>Reboot </td>
+    <td>Cramoisi</td>
+    <td>Babylone -586, Guillaume 1066, Piémont 1536</td>
+  </tr>
+</tbody>
+</table></div>
+<p><strong>Note sur l'accélération par fin d'exutoire</strong> : quand une défaite militaire supprime un territoire en <strong>union personnelle</strong> (jamais digéré par le noyau), c'est un <code>choc_exogene / acceleration</code> &mdash; pas une <code>correction_echelle</code>. La distinction tient au mécanisme : la correction d'échelle suppose une digestion préalable (le territoire perdu pesait sur le noyau par sa digestion), le choc exogène de fin d'exutoire suppose seulement que le territoire servait d'exutoire militaire (il absorbait de l'énergie élitaire sans être digéré). Voir §Choc d'hétérogénéité pour le développement complet et §Corollaire symétrique.</p>
+<h2 id="affichage-sur-la-frise">Affichage sur la frise<a class="anchor" href="#affichage-sur-la-frise">#</a></h2>
+<p>Les perturbations sont affichées comme des <strong>losanges</strong> () pour les distinguer des saillants normaux (●). La <strong>couleur</strong> encode l'effet, l'<strong>icône</strong> encode le mécanisme.</p>
+<ul>
+  <li><strong>Perturbation ponctuelle</strong> : losange à la date de l'événement</li>
+  <li><strong>Perturbation étendue</strong> : losange pour le déclencheur + bande hachurée pour la durée</li>
+  <li><strong>Exutoire</strong> : pas de marqueur (mentionné dans la description de la durée de la phase)</li>
+  <li><strong>Fin de l'exutoire</strong> : saillant normal « fin de l'expansion » (●, couleur de la phase)</li>
+</ul>
+<h2 id="dimension-territoriale-des-perturbations">Dimension territoriale des perturbations<a class="anchor" href="#dimension-territoriale-des-perturbations">#</a></h2>
+<h3 id="noyau-territorial-et-marges">Noyau territorial et marges<a class="anchor" href="#noyau-territorial-et-marges">#</a></h3>
+<p>La <strong>superficie de référence</strong> d'une nation à un moment donné se décompose en deux composantes :</p>
+<ul>
+  <li><strong>Noyau territorial</strong> : le territoire culturellement homogène avec le cœur de la nation &mdash; même langue, même droit, mêmes institutions. C'est le territoire qui <em>est</em> la nation.</li>
+  <li><strong>Marges</strong> : les territoires hétérogènes sous contrôle de la même couronne &mdash; langue différente, droit différent, culture différente. C'est le territoire que la nation <em>possède</em> sans l'avoir assimilé.</li>
+</ul>
+<p>La distinction noyau/marges est la traduction territoriale des deux moteurs du Parcours. Le noyau correspond au territoire où l'homogénéisation culturelle est accomplie ; les marges correspondent au territoire où elle ne l'est pas encore.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span></div><span class="card-desc">Angleterre (~130 000 km²) &mdash; Normandie, Gascogne, pays de Galles, Irlande, Écosse (selon les périodes)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span></div><span class="card-desc">France d'oïl &mdash; France d'oc (Languedoc, Provence), Bretagne, Alsace</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span></div><span class="card-desc">Castille &mdash; Aragon, Catalogne, Pays-Bas, Naples, Sicile</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span></div><span class="card-desc">Lagune (~1 000 km²) &mdash; Stato da Màr (Crète, Eubée) + Terraferma (Bergame, Brescia, etc.)</span></div></div>
+</div>
+<p><strong>Transitions marge → noyau</strong> : un territoire peut commencer comme marge et rejoindre le noyau quand l'homogénéisation culturelle y est accomplie. Ces transitions sont approximées par des dates ponctuelles :</p>
+<ul>
+  <li>Pays de Galles : marge à partir de 1282 (conquête), noyau à partir de 1536 (Laws in Wales Acts)</li>
+  <li>Écosse : marge à partir de 1603 (union des couronnes), noyau à partir de 1707 (Acts of Union)</li>
+  <li>Languedoc : marge à partir de 1229 (croisade des Albigeois), noyau à partir de 1539 (Villers-Cotterêts)</li>
+  <li>Aragon/Catalogne : marges à partir de 1479 (union dynastique), noyau à partir de 1714 (Nueva Planta)</li>
+</ul>
+<h3 id="perturbations-territoriales-vs-non-territoriales">Perturbations territoriales vs non territoriales<a class="anchor" href="#perturbations-territoriales-vs-non-territoriales">#</a></h3>
+<p>La plupart des perturbations de type <code>choc_heterogeneite</code> et <code>correction_echelle</code> sont <strong>territoriales</strong> &mdash; elles correspondent à un changement de superficie visible sur le graphique d'aire (expansion ou contraction).</p>
+<p>Certaines perturbations utilisent le même mécanisme mais ne sont <strong>pas territoriales</strong> &mdash; elles opèrent par le canal culturel ou institutionnel sans modifier la superficie. Dans ce cas, on ajoute le champ <code>territorial: false</code> dans les données du saillant.</p>
+<p><strong>Exemple</strong> : l'invasion macédonienne d'Israël (-332) est codée <code>choc_exogene / prolongement</code> avec <code>territorial: false</code>. La superficie d'Israël ne change pas &mdash; c'est l'hellénisation culturelle qui prolonge la phase, pas un gain de territoire.</p>
+<h3 id="perturbations-territoriales-et-graphique-de-superficie">Perturbations territoriales et graphique de superficie<a class="anchor" href="#perturbations-territoriales-et-graphique-de-superficie">#</a></h3>
+<p>Sur la frise, les perturbations territoriales (sans <code>territorial: false</code>) dont l'effet est <code>prolongement</code> ou <code>acceleration</code> sont affichées <strong>au-dessus du graphique de superficie</strong> plutôt que dans la rangée principale des saillants. Cela permet de :</p>
+<ul>
+  <li>Associer visuellement l'expansion/contraction au changement de superficie visible sur le graphique</li>
+  <li>Désengorger la rangée principale des saillants</li>
+</ul>
+<p>Les perturbations avec effet <code>reboot</code> ou <code>avortement</code> restent dans la rangée principale, même si elles sont territoriales &mdash; elles relèvent de la dynamique politique du Parcours, pas seulement du territoire.</p>
+<h3 id="mécanismes-et-territoire">Mécanismes et territoire<a class="anchor" href="#mécanismes-et-territoire">#</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Mécanisme</th>
+    <th>Territorial ?</th>
+    <th>Direction</th>
+    <th>Exemples</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Choc d'hétérogénéité</td>
+    <td>Presque toujours oui</td>
+    <td>Expansion (la superficie augmente)</td>
+    <td>Empire de Cnut, Union Castille-Aragon, Stato da Màr</td>
+  </tr>
+  <tr>
+    <td>Correction d'échelle</td>
+    <td>Toujours oui</td>
+    <td>Contraction (la superficie diminue)</td>
+    <td>Perte de la Normandie, Fragmentation Visconti, Perte de la France</td>
+  </tr>
+  <tr>
+    <td>Choc exogène</td>
+    <td>Souvent oui, parfois non</td>
+    <td>Variable (invasion, traité, défaite)</td>
+    <td>Westphalie (territorial), hellénisation (non territorial)</td>
+  </tr>
+  <tr>
+    <td>Insuffisance interne</td>
+    <td>Rarement</td>
+    <td>—</td>
+    <td>Crises féodales (politique, pas territoriale)</td>
+  </tr>
+  <tr>
+    <td>Exutoire (continu)</td>
+    <td>Implicitement</td>
+    <td>Expansion continue</td>
+    <td>Reconquista, Stato da Màr, colonies</td>
+  </tr>
+</tbody>
+</table></div>
+<h3 id="exutoire-colonial-le-timing-compte">Exutoire colonial : le timing compte<a class="anchor" href="#exutoire-colonial-le-timing-compte">#</a></h3>
+<p>L'expansion coloniale n'a pas le même effet selon le moment du Parcours où elle intervient :</p>
+<ul>
+  <li><strong>Pendant une phase active</strong> (féodale, oligarchique, absolutiste) : l'exutoire colonial prolonge la phase en cours en absorbant les tensions internes. C'est le cas de l'Espagne (colonies pendant la phase oligarchique) et de Venise (Stato da Màr pendant l'essor oligarchique).</li>
+  <li><strong>Après la RN</strong> (phase parlementaire) : l'exutoire colonial ne perturbe pas le Parcours, car la phase parlementaire est l'aboutissement du Parcours. C'est le cas de l'Angleterre, dont l'essentiel de l'expansion coloniale intervient après 1688.</li>
+</ul>
+<h2 id="détail-des-effets">Détail des effets<a class="anchor" href="#détail-des-effets">#</a></h2>
+<p>Les sections ci-dessous détaillent chaque effet avec ses mécanismes, exemples, et cas particuliers.</p>
+<h3 id="questions-diagnostiques">Questions diagnostiques<a class="anchor" href="#questions-diagnostiques">#</a></h3>
+<p>Pour identifier l'effet d'une perturbation, deux questions se posent dans cet ordre :</p>
+<p><strong>1. Les institutions sont-elles détruites ?</strong></p>
+<ul>
+  <li><strong>Oui</strong> → reboot. L'État central doit être reconstruit ; le Parcours régresse.</li>
+  <li><strong>Non</strong> → passer à la question 2.</li>
+</ul>
+<p><strong>2. Le Parcours progresse-t-il, stagne-t-il, ou régresse-t-il ?</strong></p>
+<ul>
+  <li><strong>Stagne ou ralentit</strong> (hétérogénéité accrue, gel temporaire) → prolongement.</li>
+  <li><strong>Accélère</strong> (hétérogénéité réduite, exutoire supprimé, modernisation forcée) → accélération.</li>
+  <li><strong>Transition bloquée</strong> (la phase en cours ne peut pas se résoudre) → avortement.</li>
+</ul>
+<h2 id="profondeur-du-reboot">Profondeur du reboot<a class="anchor" href="#profondeur-du-reboot">#</a></h2>
+<p>Le reboot ne ramène pas toujours le Parcours au même point. La profondeur de la régression dépend de l'ampleur de la destruction :</p>
+<ul>
+  <li>Si l'<strong>État central</strong> est détruit mais que les <strong>équilibres entre classes d'élites</strong> subsistent (au moins partiellement), le Parcours régresse d'<strong>une phase</strong> &mdash; il faut reconstruire l'appareil du pouvoir, mais pas les rapports de force entre élites.</li>
+  <li>Si l'État central ET la <strong>structure des élites</strong> sont anéantis, le Parcours peut régresser de <strong>plusieurs phases</strong>.</li>
+</ul>
+<p>Les cas israéliens montrent systématiquement une régression d'une phase :</p>
+<ul>
+  <li>-586 : de la phase absolutiste vers la phase oligarchique &mdash; l'État de Josias est détruit, mais les élites exilées à Babylone conservent leur structure sociale et leur homogénéité culturelle.</li>
+  <li>70 : de la RN vers la phase absolutiste &mdash; toutes les factions sont éliminées sauf les Pharisiens, mais le vide oligarchique et la présence d'un pouvoir central fort (Rome) créent directement les conditions d'entrée en phase absolutiste.</li>
+</ul>
+<p>Le reboot anglais de 1066 (Guillaume le Conquérant) est un cas de régression plus profonde : l'aristocratie anglo-saxonne est intégralement remplacée par une noblesse normande, le système foncier est redistribué, les réseaux de l'ancien État sont détruits. Le Parcours redémarre en phase féodale.</p>
+<h2 id="reprise-des-sous-phases-après-perturbation">Reprise des sous-phases après perturbation<a class="anchor" href="#reprise-des-sous-phases-après-perturbation">#</a></h2>
+<p>L'effet sur les sous-phases diffère selon le type de perturbation :</p>
+<ul>
+  <li><strong>Après un reboot</strong>, le Parcours recommence par la <strong>première sous-phase</strong> de la phase de destination, puisque l'État central doit être reconstruit. Exemple : après le reboot de -586, Israël repasse par l'essor oligarchique (-520 à ~-350) avant d'atteindre la guerre sociale.</li>
+  <li><strong>Après un prolongement</strong>, le Parcours reprend <strong>là où il était bloqué</strong>. Les institutions ayant survécu, il n'est pas nécessaire de repasser par les sous-phases antérieures. Exemple : après le prolongement de -332, Israël ne repasse pas par l'essor oligarchique &mdash; la polarisation des élites reprend (Oniades vs Tobiades) et débouche directement sur la guerre sociale.</li>
+</ul>
+<h2 id="boucles-en-phase-féodale">Boucles en phase féodale<a class="anchor" href="#boucles-en-phase-féodale">#</a></h2>
+<p>La phase féodale est ponctuée de <strong>pics féodaux</strong> (rois forts) suivis de <strong>crises féodales</strong> (effondrement post-pic). Si les conditions du pacte oligarchique ne sont pas réunies (homogénéité insuffisante), le Parcours <strong>boucle</strong> &mdash; un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes. Les boucles allongent la durée de la phase féodale au-delà de la norme endogène de ~200 ans.</p>
+<p><strong>Exemple :</strong> L'Angleterre boucle 5 fois sur ~500 ans (d'Ecgberht ~829 aux Ordonnances de 1311) avant que l'homogénéité des élites anglaises ne soit suffisante pour produire un pacte oligarchique. Chaque cycle (pic → crise → pas de pacte → nouveau pic) fait avancer l'homogénéisation, mais pas assez pour franchir le seuil.</p>
+<p>Ne pas confondre les boucles &mdash; mécanisme structurel où la phase ne peut pas avancer vers la suivante parce que les conditions de résolution ne sont pas réunies &mdash; avec de simples <strong>perturbations intra-phase</strong> (défaites militaires, crises dynastiques) qui ralentissent temporairement la progression sans modifier la dynamique de fond. Une perturbation fait trébucher le Parcours ; une boucle le fait tourner en rond.</p>
+<h2 id="reboot">Reboot<a class="anchor" href="#reboot">#</a></h2>
+<p>Le reboot se produit quand une perturbation externe <strong>détruit les institutions</strong> et anéantit les réseaux humains qui composaient l'appareil du pouvoir central. Le Parcours régresse à une phase antérieure, parce que l'État central doit être reconstruit.</p>
+<p>Le reboot est provoqué par une rupture institutionnelle et démographique majeure : destruction physique de l'État, élimination ou déportation des élites, effondrement de l'économie. Ce qui a mis des siècles à se construire &mdash; les réseaux et la structure de l'État central, les équilibres entre classes &mdash; est rasé.</p>
+<p>Si l'homogénéité culturelle du peuple est préservée malgré la destruction institutionnelle, le redémarrage peut être rapide.</p>
+<h3 id="exemples">Exemples<a class="anchor" href="#exemples">#</a></h3>
+<p><strong>Reboot de la phase absolutiste vers la phase oligarchique (Israël, -586) :</strong></p>
+<p>En -586, Nabuchodonosor II conquiert Jérusalem, détruit le Temple, massacre la population et déporte les élites à Babylone. L'État central s'effondre, la région subit une désurbanisation complète. Mais les élites issues de la diaspora babylonienne conservent une forte homogénéité culturelle entre elles. Au retour d'exil (-520), les villes sont dépeuplées, les cultes étrangers de retour, et la fragmentation du pays ramène le Parcours en début de phase oligarchique.</p>
+<p><strong>Reboot de la RN vers la phase absolutiste (Israël, 70) :</strong></p>
+<p>La destruction du Second Temple par les Romains fait régresser Israël en phase absolutiste, alors qu'il était entré en Révolution Nationale. L'écrasement de la révolte anéantit les réseaux humains qui composaient l'appareil du pouvoir central : Temple, Sanhédrin, Grand Sacerdoce, fiscalité autonome &mdash; rien ne subsiste. La Judée se retrouve avec un vide oligarchique, un pouvoir central fort (mais exercé par Rome), et une homogénéité culturelle forte. Les conditions d'entrée en phase absolutiste sont réunies. C'est ce qui éclaire la révolte de Bar Kokhva (132-135) : Bar Kokhva n'est pas un révolutionnaire national &mdash; c'est un monarque absolu menant une guerre d'indépendance.</p>
+<p><strong>Reboot féodal (Angleterre, 1066) :</strong></p>
+<p>Guillaume le Conquérant redistribue systématiquement les terres, remplace l'aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal (Domesday Book). Les réseaux de l'ancien État anglo-saxon sont détruits. Le Parcours redémarre en phase féodale.</p>
+<h2 id="prolongement">Prolongement<a class="anchor" href="#prolongement">#</a></h2>
+<p>Le prolongement se produit quand une perturbation externe <strong>ne détruit pas les institutions</strong> mais <strong>hétérogénéise la société</strong> et désorganise les élites ainsi que les réseaux dont dépend le pouvoir central. Le Parcours ne recule pas &mdash; il stagne, le temps que les factions se recomposent autour des nouveaux clivages.</p>
+<p>La différence avec le reboot est que les institutions survivent : le Grand Prêtre reste en fonction, les assemblées continuent de siéger, le cadre juridique n'est pas aboli. Mais les élites prébendières perdent ce qui faisait leur puissance (leur intégration aux structures impériales), et la société se fragmente culturellement.</p>
+<h3 id="exemple">Exemple<a class="anchor" href="#exemple">#</a></h3>
+<p><strong>Prolongement de la phase oligarchique (Israël, -332) :</strong></p>
+<p>L'invasion d'Alexandre le Grand perturbe la progression du Parcours &mdash; non par destruction des institutions, mais par désorganisation de la classe qui en permettait l'avancée. Les circuits commerciaux se réorientent vers le monde grec ; la langue administrative change ; les interlocuteurs du pouvoir ne sont plus les mêmes. Les élites prébendières ne sont pas liquidées mais elles perdent leur intégration aux structures impériales. Le Parcours stagne pendant ~192 ans (de -332 à -140), le temps que les factions se recomposent : les Tobiades s'intègrent aux circuits ptolémaïques, la société s'hellénise, de nouveaux clivages apparaissent (Oniades vs Tobiades), et la guerre sociale peut enfin se résoudre.</p>
+<h2 id="transfert-de-territoire">Transfert de territoire<a class="anchor" href="#transfert-de-territoire">#</a></h2>
+<p>Le Parcours n'est pas attaché à un territoire fixe, mais à une communauté humaine : ses élites, ses institutions, son homogénéité culturelle. Si le territoire d'origine est détruit mais que les porteurs du Parcours survivent et se déplacent, le Parcours peut se transférer sur un nouveau territoire.</p>
+<p>Ce transfert le perturbe et l'allonge, mais ne l'interrompt pas.</p>
+<h3 id="exemple">Exemple<a class="anchor" href="#exemple">#</a></h3>
+<p><strong>Transfert de la Samarie vers la Judée (Israël, -722) :</strong></p>
+<p>Le choc assyrien anéantit le royaume d'Israël. Sa population fuit massivement vers le sud, en Judée &mdash; jusqu'alors pauvre et peu urbanisée. Le Parcours se poursuit en Judée : Jérusalem et la Judée connaissent un développement rapide (urbanisation accélérée, consolidation politique, signes d'une administration centrale inexistants avant l'arrivée des Samaritains). Le choc assyrien a allongé la durée de la phase oligarchique, mais ne l'a pas fait redémarrer &mdash; sans doute aidé en cela par la concentration des réfugiés sur un territoire réduit et peu peuplé.</p>
+<h2 id="choc-d-hétérogénéité">Choc d'hétérogénéité<a class="anchor" href="#choc-d-hétérogénéité">#</a></h2>
+<p>Le choc d'hétérogénéité est le saillant qui marque le moment précis où une expansion territoriale ou un afflux de population hétérogénéise brutalement la société, déclenchant un prolongement. C'est le mécanisme déclencheur du prolongement &mdash; l'événement ponctuel qui fait basculer le ratio d'homogénéité.</p>
+<p>Le choc d'hétérogénéité peut avorter une sous-phase en cours. Si la société était en train d'entrer en Ancien Régime (stratification, sédimentation), l'hétérogénéisation défait cette stratification et relance la dynamique d'homogénéisation &mdash; ce qui peut rebooter la sous-phase d'impérialisme absolutiste.</p>
+<h3 id="condition-nécessaire-administration-commune-intégration-effective">Condition nécessaire : administration commune (intégration effective)<a class="anchor" href="#condition-nécessaire-administration-commune-intégration-effective">#</a></h3>
+<p><strong>Un choc d'hétérogénéité n'opère que si l'acquisition territoriale mobilise effectivement les élites du noyau dans un travail de digestion des marges</strong> &mdash; homogénéisation culturelle, intégration administrative, personnel administratif issu du noyau. C'est la digestion qui absorbe l'énergie élitaire et prolonge la phase en cours. Sans digestion, pas de choc.</p>
+<p><strong>Deux types d'empire à distinguer</strong> :</p>
+<p>1. <strong>Empire intégré</strong> (administration commune) : les marges sont administrées directement par des fonctionnaires issus du noyau (magistrats, gouverneurs, intendants, juges), soumises au droit du noyau (ou à un droit imposé depuis le noyau), et leurs élites locales sont soit cooptées dans l'élite du noyau soit écartées. Chaque nouvelle acquisition crée des postes à pourvoir, des responsabilités à distribuer, un travail d'homogénéisation à faire. <strong>C'est un vrai choc d'hétérogénéité qui prolonge structurellement le Parcours.</strong></p>
+<p>2. <strong>Empire en union personnelle</strong> (administration séparée) : les marges conservent leurs propres institutions (diète, assemblée, parlement), leur propre droit coutumier, leurs propres administrateurs locaux. Le souverain partage un titre avec le noyau mais « change de chapeau » institutionnellement quand il passe d'une couronne à l'autre. Les élites du noyau ne sont pas mobilisées pour digérer les marges &mdash; elles restent concentrées sur le territoire noyau. <strong>L'union personnelle ne produit pas de choc d'hétérogénéité structurel ; au plus, elle fonctionne comme une soupape militaire (exutoire de guerre, débouché de carrières) qui absorbe temporairement l'énergie élitaire sans la diriger vers un travail d'homogénéisation.</strong></p>
+<p>Cette distinction est <strong>essentielle pour dater correctement un choc d'hétérogénéité</strong>. Dans une monarchie composite où une marge passe progressivement de l'union personnelle à l'administration directe, le choc d'hétérogénéité doit être placé <strong>au moment de l'intégration administrative</strong>, pas au moment de l'acquisition dynastique. Exemple : l'héritage jagellon donne à Ferdinand Ier la couronne de Bohême en 1526, mais la Bohême reste en union personnelle jusqu'en 1627 (Verneuerte Landesordnung) &mdash; c'est cette date-là qui constitue le choc d'hétérogénéité pour le Parcours autrichien, pas 1526.</p>
+<p>Intensité variable selon la distance culturelle : un choc d'hétérogénéité par intégration d'une marge culturellement proche (langue apparentée, droit similaire, confession commune) est moins intense qu'un choc par intégration d'une marge culturellement distante. Exemple : l'intégration de l'Aragon à la Castille (1469-1716) est un choc d'hétérogénéité, mais moins fort qu'il n'y paraît parce que les deux royaumes sont culturellement proches &mdash; analogue à l'intégration France d'oïl/Occitanie au Parcours français.</p>
+<h3 id="corollaire-symétrique-la-perte-d-une-union-personnelle-n-est-pas-une-correction-d-échelle">Corollaire symétrique : la perte d'une union personnelle n'est pas une correction d'échelle<a class="anchor" href="#corollaire-symétrique-la-perte-d-une-union-personnelle-n-est-pas-une-correction-d-échelle">#</a></h3>
+<p>Le principe est rigoureusement symétrique. <strong>Si une acquisition territoriale n'a pas produit de choc d'hétérogénéité (parce qu'elle est restée en union personnelle, non digérée par le noyau), alors sa perte ne peut pas non plus produire de correction d'échelle structurelle.</strong> Une possession qu'on n'a jamais digérée n'est pas un poids dont la perte « ramène vers l'échelle naturelle » &mdash; c'est juste un chapeau qui tombe. L'effet sur le cycle est nul dans les deux sens.</p>
+<p>**Critère de la correction d'échelle (<code>correction_echelle</code>) au sens strict<strong> : il faut que le territoire perdu ait été effectivement </strong>digéré** par le noyau &mdash; administration directe par du personnel issu du noyau, droit imposé depuis le noyau, mobilisation durable des élites centrales. Seules ces pertes ramènent réellement le Parcours vers un « noyau naturel » plus petit et accélèrent la suite.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1669</span></div><span class="card-desc">Perte de la Crète, administrée directement par des baili vénitiens depuis 1204. Vraie contraction d'un empire intégré.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Milan</span><span class="card-date">1402</span></div><span class="card-desc">Fragmentation de l'empire Visconti de Gian Galeazzo, administré directement par des podestà et vicari viscontéens. Vraie contraction.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Autriche</span><span class="card-date">1742</span></div><span class="card-desc">Perte de la Silésie, province de la couronne de Bohême intégrée à l'administration habsbourgeoise depuis la Verneuerte Landesordnung (1627). Vraie contraction d'une province digérée.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span><span class="card-date">1808-1826</span></div><span class="card-desc">Perte de l'empire colonial américain, administré directement par des vice-rois, corregidores et audiencias castillans pendant trois siècles. Seule vraie correction d'échelle du Parcours espagnol.</span></div></div>
+</div>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Espagne</span></div><span class="card-desc">Portugal 1640, Provinces-Unies (Westphalie 1648), Pays-Bas méridionaux et Italie (Utrecht 1713). Ces possessions étaient en union personnelle avec institutions locales préservées &mdash; jamais digérées par les élites castillanes. Leur perte marque seulement la fin d'une soupape militaire européenne, pas un retour vers le noyau naturel.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span></div><span class="card-desc">Normandie 1204 (Exchequer of Normandy distinct, coutume de Normandie), Gascogne 1453 (sénéchal d'Aquitaine à Bordeaux, droit gascon). Union personnelle. Ces pertes ont un effet structurel réel sur le Parcours anglais (anglicisation forcée, fin de l'exutoire militaire des factions Lancaster/York) mais par un mécanisme différent &mdash; voir ci-dessous.</span></div></div>
+</div>
+<h3 id="choc-exogène-avec-fin-d-exutoire-militaire">Choc exogène avec fin d'exutoire militaire<a class="anchor" href="#choc-exogène-avec-fin-d-exutoire-militaire">#</a></h3>
+<p>Pour les cas où une défaite militaire externe supprime un exutoire sans qu'il s'agisse d'une digestion préalable, le mécanisme correct est **<code>choc_exogene</code><strong> avec effet </strong><code>acceleration</code>**. L'effet structurel reste réel &mdash; la fin de l'exutoire militaire force les élites à se retourner vers le jeu interne &mdash; mais le mécanisme ne passe pas par une contraction du territoire digéré.</p>
+<p><strong>Distinction structurelle</strong> :</p>
+<ul>
+  <li><code>correction_echelle / acceleration</code> : le territoire perdu était intégré, sa perte contracte le noyau digéré et force une réduction d'échelle. Accélération par retour à l'échelle naturelle plus petite.</li>
+  <li><code>choc_exogene / acceleration</code> (fin d'exutoire militaire) : le territoire perdu était un exutoire externe (union personnelle, possession continentale lointaine), sa perte supprime la soupape militaire qui détournait l'énergie élitaire. Accélération par recentrage sur le jeu interne.</li>
+</ul>
+<p>Les deux produisent le même effet observable (accélération de la phase suivante) mais par des mécanismes distincts. La différence est que la correction d'échelle suppose et valide une digestion préalable ; le choc exogène n'en suppose pas.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1204</span></div><span class="card-desc">Perte de la Normandie, de l'Anjou, du Maine, du Poitou par Jean sans Terre : coupe les élites anglo-normandes de leurs domaines continentaux, force leur anglicisation et accélère l'homogénéisation vers le pacte (Ordonnances 1311).</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1453</span></div><span class="card-desc">Défaite de Castillon, fin de la guerre de Cent Ans : fin de l'exutoire militaire français qui maintenait l'équilibre précaire entre Lancaster et York. Sans ennemi extérieur, les factions explosent en Guerre des Deux Roses (1455-1485) &mdash; la guerre sociale anglaise.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Autriche</span><span class="card-date">1859</span></div><span class="card-desc">Défaite de Solferino, perte de la Lombardie : la Lombardie n'était vraiment administrée directement que depuis 1815 (44 ans &mdash; trop court pour une digestion effective). Sa perte est un choc exogène qui accélère l'AR autrichien.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Autriche</span><span class="card-date">1866</span></div><span class="card-desc">Défaite de Sadowa, perte de la Vénétie + exclusion de l'Allemagne : la Vénétie, comme la Lombardie, n'avait pas été vraiment digérée depuis 1815. L'exclusion de l'Allemagne n'est pas une perte territoriale mais politique &mdash; l'Autriche perd son rôle de puissance directrice de l'espace allemand. L'effet combiné force un réalignement interne majeur (Ausgleich 1867, architecture dualiste).</span></div></div>
+</div>
+<h3 id="exemples">Exemples<a class="anchor" href="#exemples">#</a></h3>
+<p><strong>Bavière (1806) :</strong></p>
+<p>Le doublement napoléonien du territoire (Franconie, Souabe) hétérogénéise brutalement une société bavaroise qui était en train d'entrer en Ancien Régime sous Charles-Théodore. L'intégration de populations franconniennes (protestantes) et souabes dans un État catholique bavarois relance la dynamique impérialiste sous forme modernisatrice (réformes Montgelas). Le choc avorte le premier AR et ouvre un second cycle d'impérialisme absolutiste. <strong>C'est une intégration administrative directe</strong> &mdash; Montgelas applique le modèle napoléonien d'administration centralisée uniforme sur tout le nouveau territoire.</p>
+<p><strong>Venise :</strong></p>
+<p>L'empire vénitien (stato da Mar, stato da Terra) est administré directement par des provveditori et rettori issus du patriciat vénitien, nommés par la Quarantia. Chaque nouvelle acquisition crée des postes à pourvoir, un butin à partager, un travail d'intégration à faire &mdash; ce qui mobilise massivement le patriciat. C'est le cas le plus pur d'empire intégré dans le corpus, et il produit la phase oligarchique la plus longue (~637 ans).</p>
+<p><strong>Autriche habsbourgeoise (contre-exemple) :</strong></p>
+<p>L'empire continental autrichien est colossal (Bohême, Hongrie, Pays-Bas, Lombardie, Naples, Galicie) mais majoritairement en union personnelle. Chacune de ces couronnes conserve ses institutions (diète de Bohême, diète de Hongrie, États de Brabant, Sénat de Milan, Sejm galicien), son droit coutumier, ses administrateurs locaux. Les acquisitions de Karlowitz 1699 (Hongrie intégrale), Utrecht-Rastatt 1714 (Pays-Bas, Italie), Passarowitz 1718, Galicie 1772 <strong>ne produisent pas de choc d'hétérogénéité structurel</strong> &mdash; elles ajoutent des chapeaux au souverain sans mobiliser les élites viennoises pour un travail de digestion. La seule marge qui fait exception est la <strong>Bohême</strong> après la Verneuerte Landesordnung de 1627 : proximité géographique et linguistique, noblesse germanophone, intégration administrative progressive, germanisation culturelle étalée sur le XVIIe-XVIIIe siècle. C'est pourquoi la phase oligarchique autrichienne n'est prolongée que d'environ +30 ans (231 ans, proche de la norme canonique) et non de +145 ans comme l'Espagne ou +437 comme Venise.</p>
+<p><strong>Espagne habsbourgeoise :</strong></p>
+<p>Cas intermédiaire. L'Aragon conserve ses fueros et institutions propres jusqu'aux décrets de Nueva Planta (1707-1716), ce qui ressemble à une union personnelle. Mais Castille et Aragon sont culturellement très proches (langues apparentées, catholicité commune, traditions convergentes) &mdash; analogue à France d'oïl / Occitanie. Donc le choc d'hétérogénéité existe mais est moins intense qu'il ne le serait dans un cas plus culturellement distant. L'empire colonial américain, en revanche, est administré directement (vice-rois, corregidores, audiencias) par du personnel castillan &mdash; c'est le vrai moteur du prolongement espagnol (~345 ans de phase oligarchique).</p>
+<p><strong>Israël (-332) :</strong></p>
+<p>La conquête macédonienne hétérogénéise la société judéenne (hellénisation) sans détruire les institutions (le Grand Prêtre reste en fonction). Le Parcours stagne pendant ~192 ans le temps que les factions se recomposent autour des nouveaux clivages (Oniades vs Tobiades). *Note : le mécanisme est <code>choc_exogene</code> (conquête extérieure) et non <code>choc_heterogeneite</code> (expansion du territoire). L'hétérogénéisation est culturelle, pas territoriale &mdash; la superficie d'Israël ne change pas. Le saillant porte le flag <code>territorial: false</code>.*</p>
+<h2 id="rébellion-périphérique">Rébellion périphérique<a class="anchor" href="#rébellion-périphérique">#</a></h2>
+<p>Certains événements qui peuvent avoir l'air importants pour le Parcours d'une nation relèvent en réalité du Parcours d'une supra-entité impériale. La rébellion périphérique est un phénomène que l'on retrouve avec une régularité frappante : à l'apogée absolutiste d'un empire, l'État central provoque à ses marges géographiques et culturelles les conditions de sa propre contestation.</p>
+<p>Ce phénomène relève du Parcours de l'empire, non de celui de la nation soumise. Il ne faut pas le confondre avec une étape du Parcours national.</p>
+<h3 id="exemples">Exemples<a class="anchor" href="#exemples">#</a></h3>
+<p><strong>Guerre de Kitos (115-117) :</strong></p>
+<p>Le soulèvement embrase simultanément la Cyrénaïque, l'Égypte et Chypre, mais mobilise principalement les communautés juives de diaspora &mdash; la Judée elle-même n'est pas ou très marginalement impliquée. Il survient au moment précis où Trajan, à l'apogée absolutiste romaine, engage l'Empire dans sa campagne parthique. Ce n'est pas une étape du Parcours juif &mdash; c'est une rébellion périphérique du Parcours romain.</p>
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Angleterre sous Henri VIII</span></div><span class="card-desc">Pilgrimage of Grace dans le Nord (1536), rébellion des Fitzgerald en Irlande (1534-1535)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">France sous Louis XIV</span></div><span class="card-desc">Camisards des Cévennes (1702), Bonnets Rouges de Bretagne (1675), résistance huguenote après la révocation de l'Édit de Nantes (1685)</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Russie sous Alexandre II</span></div><span class="card-desc">Insurrection polonaise de 1863, résistance caucasienne</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Japon sous Meiji</span></div><span class="card-desc">Guerre de Boshin (1868-1869), rébellions de Saga (1874) et Shinpuren (1876), révolte de Satsuma (1877)</span></div></div>
+</div>
+<p>Dans chaque cas, l'État central, au moment où il impose son autorité avec le plus de vigueur, provoque à ses marges la contestation.</p>
+<section class="examples">
+<h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
+<p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
+<div class="saillant-list">
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">open_in_full</span><span>Choc d&#x27;hétérogénéité</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Conquête normande <span class="badge badge-reboot">Reboot</span></span><span class="card-date">1066</span></div><span class="card-desc">Guillaume remplace intégralement l&#x27;aristocratie anglo-saxonne par une noblesse normande francophone. Le substrat social de la phase féodale est détruit — c&#x27;est un reboot complet...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Stato da Màr <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1204</span></div><span class="card-desc">Mécanisme : choc d&#x27;hétérogénéité (expansion territoriale hétérogénéisant la société). Effet : prolongement de la phase oligarchique en cours. L&#x27;empire maritime créé par la IVe c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Croisade des Albigeois <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1229</span></div><span class="card-desc">Le traité de Paris (1229) rattache le Languedoc à la couronne. Le domaine royal double, mais les marges occitanophones — langue d&#x27;oc, droit romain, culture méridionale — introdu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Empire Visconti <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1395</span></div><span class="card-desc">Gian Galeazzo obtient le titre ducal (1395) et contrôle 26 cités (~30 000 km²). Mécanisme : choc d&#x27;hétérogénéité — l&#x27;expansion triple la superficie et intègre des populations hé...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Conquête de la Terraferma <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1428</span></div><span class="card-desc">Mécanisme : choc d&#x27;hétérogénéité (deuxième expansion hétérogénéisante). Effet : prolongement supplémentaire de la phase oligarchique. L&#x27;ajout d&#x27;un vaste arrière-pays continental...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Intégration Bourgogne-Provence <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1481</span></div><span class="card-desc">La mort de Charles le Téméraire (1477) permet l&#x27;annexion de la Bourgogne (oïl, rejoint le noyau), et l&#x27;héritage provençal (1481) ajoute une nouvelle marge occitanophone au domai...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Empire colonial américain <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1521</span></div><span class="card-desc">Mecanisme : choc d&#x27;heterogeneite (cf. perturbations.md) — l&#x27;empire colonial americain est administre directement par du personnel castillan (vice-rois, corregidores, audiencias)...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Intégration de la Bohême <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1627</span></div><span class="card-desc">Mécanisme : choc d&#x27;hétérogénéité ; effet : prolongement. Après la Montagne Blanche (1620), Ferdinand II impose en 1627 la Verneuerte Landesordnung qui transforme la Bohême d&#x27;une...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Intégration de l&#x27;Aragon <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1716</span></div><span class="card-desc">Mecanisme : choc d&#x27;heterogeneite (cf. perturbations.md) — les decrets de Nueva Planta (1707-1716) transforment l&#x27;Aragon d&#x27;une union personnelle en une integration administrative...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Doublement napoléonien <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1806</span></div><span class="card-desc">Mécanisme : choc d&#x27;hétérogénéité (expansion territoriale directement administrée par le noyau). Effet : prolongement de la phase absolutiste d&#x27;environ 70 ans. L&#x27;intégration de p...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Doublement napoléonien <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1806</span></div><span class="card-desc">Mécanisme : choc d&#x27;hétérogénéité (expansion territoriale directement administrée). Effet : prolongement d&#x27;environ 70 ans — le premier AR est avorté, un second cycle d&#x27;impérialis...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Conquête de l&#x27;Araucanía <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1861</span></div><span class="card-desc">Entre 1861 (fondation du Fuerte Mulchén) et 1883 (occupation de Villarrica), l&#x27;armée chilienne conquiert progressivement la Wallmapu mapuche au sud du Bío-Bío — environ 30 000 k...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Annexions du Norte Grande <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1884</span></div><span class="card-desc">Le Traité d&#x27;Ancón (1883, ratifié 1884) cède au Chili Tarapacá à perpétuité et Antofagasta (laissée par la Bolivie), soit environ 220 000 km² de désert riche en salpêtre peuplé m...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">bolt</span><span>Choc exogène</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Choc assyrien <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">-722</span></div><span class="card-desc">Choc exogène / prolongement : en -722, Sargon II anéantit le royaume d&#x27;Israël. Le Parcours se transfère en Judée sans reboot car les institutions du royaume du Nord ne sont pas ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Destruction du 1er Temple <span class="badge badge-reboot">Reboot</span></span><span class="card-date">-586</span></div><span class="card-desc">Choc exogène / reboot : en -586, Nabuchodonosor II détruit Jérusalem et le Temple, massacre la population et déporte les élites. Les institutions sont intégralement détruites, c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Exil babylonien <span class="badge badge-reboot">Reboot</span></span><span class="card-date">-586</span></div><span class="card-desc">Choc exogène / reboot : l&#x27;exil dure 66 ans. Le premier moteur (État central) est intégralement détruit, mais le second (homogénéité culturelle) est préservé par les élites exilé...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Hellénisation <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">-332</span></div><span class="card-desc">Choc exogène / prolongement (territorial: false) : la conquête macédonienne ne détruit pas les institutions (le Grand Prêtre reste en fonction, les assemblées siègent) mais hété...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Écrasement <span class="badge badge-reboot">Reboot</span></span><span class="card-date">70</span></div><span class="card-desc">Titus assiège Jérusalem et détruit le Second Temple en 70, mettant fin à la RN avant qu&#x27;elle ne puisse atteindre le moment thermidorien et provoquant un reboot du Parcours.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Liquidation <span class="badge badge-avortement">Avortement</span></span><span class="card-date">135</span></div><span class="card-desc">Hadrien écrase la révolte de Bar Kokhva, rase Jérusalem, interdit le judaïsme et renomme la province Syria Palaestina. Le Parcours antique d&#x27;Israël est interrompu.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">804</span></div><span class="card-desc">Mécanisme : choc exogène (attaque franque de Pépin dans le lagon). Effet : avortement — les conditions de Deblonde ne sont pas réunies (homogénéité insuffisante, factions pro-fr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Empire de Cnut <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">~1016</span></div><span class="card-desc">Cnut bâtit un empire couvrant l&#x27;Angleterre, le Danemark et la Norvège. L&#x27;Angleterre est intégrée comme composante d&#x27;un ensemble plus vaste dont elle n&#x27;est plus le centre, et don...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Perte de la Normandie <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1204</span></div><span class="card-desc">Philippe Auguste confisque à Jean sans Terre la Normandie, le Maine, l&#x27;Anjou et le Poitou. Les élites anglo-normandes sont coupées de leurs domaines continentaux, ce qui force l...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1241</span></div><span class="card-desc">L&#x27;armée mongole de Batu Khan écrase Béla IV à Mohi (11 avril 1241) et saccage le royaume pendant un an. ~25% de population tuée. Retrait mongol inattendu (mars 1242) permet la r...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Fin de l&#x27;expansion <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1278</span></div><span class="card-desc">La défaite et la mort d&#x27;Ottokar II à Marchfeld (26 août 1278) met fin à l&#x27;hégémonie centre-européenne bohême et fait perdre au royaume ses marges austro-alpines. Ces territoires...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Conquêtes anglaises <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1346</span></div><span class="card-desc">La chevalerie française est écrasée à Crécy en 1346 puis à Poitiers en 1356, où Jean II le Bon est capturé par les Anglais, plongeant le royaume dans le chaos pendant près de vi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Effondrement des institutions <span class="badge badge-reboot">Reboot</span></span><span class="card-date">1392</span></div><span class="card-desc">La folie de Charles VI (1392) déchaîne la guerre civile Armagnacs-Bourguignons, qui détruit les institutions oligarchiques par des purges croisées. Azincourt (1415) décapite la ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Traité de Troyes <span class="badge badge-reboot">Reboot</span></span><span class="card-date">1420</span></div><span class="card-desc">Le Traité de Troyes (21 mai 1420) annule la loi salique de 1317 en transférant la couronne de France à Henri V d&#x27;Angleterre, détruisant le pacte oligarchique qui fondait la phase.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Perte de la France <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1453</span></div><span class="card-desc">La défaite de Castillon (1453) met fin à la présence anglaise en France continentale. L&#x27;exutoire militaire continental se ferme définitivement, les factions Lancaster et York pe...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Choc exogène <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1462</span></div><span class="card-desc">Le 31 mars 1462, Pie II abolit unilatéralement les Compactata. Paul II excommunie Podiebrad en 1466 et déclare une croisade. Matthias Corvin de Hongrie envahit la Bohême (1468) ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1485</span></div><span class="card-desc">Mathias Corvin, roi de Hongrie, conquiert Vienne le 1er juin 1485 et y installe sa cour. Frédéric III est en fuite. Pendant cinq ans, la capitale autrichienne est sous dominatio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Guerres d&#x27;Italie <span class="badge badge-reboot">Reboot</span></span><span class="card-date">1499</span></div><span class="card-desc">Mécanisme : choc exogène (guerres d&#x27;Italie, 1499-1535). Effet : reboot de la phase absolutiste vers la phase oligarchique. L&#x27;appareil absolutiste Visconti/Sforza est détruit et ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Guerres d&#x27;Italie <span class="badge badge-reboot">Reboot</span></span><span class="card-date">1536</span></div><span class="card-desc">Les guerres d&#x27;Italie détruisent l&#x27;appareil oligarchique des Statuta Sabaudiae et le remplacent par l&#x27;administration française pendant 23 ans. La dynastie survit (Emmanuel Philib...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Peste de 1630 <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1630</span></div><span class="card-desc">Mécanisme : choc exogène (peste bubonique importée par les troupes de la guerre de Succession de Mantoue). Effet : prolongement — les institutions ne sont pas détruites (questio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Guerre sociale <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1703</span></div><span class="card-desc">Insurrection de Rákóczi (1703-1711) comme guerre sociale canonique. Factions : kuruc (patrimonial national, protestant, base territoriale Haute-Hongrie et Transylvanie) vs laban...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Traité d&#x27;Utrecht <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1713</span></div><span class="card-desc">Le Traité d&#x27;Utrecht (1713) solde la Guerre de Succession d&#x27;Espagne par des pertes territoriales (Terre-Neuve, Acadie) et la ruine des finances royales. La mort de Louis XIV en 1...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Occupation napoléonienne <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1796</span></div><span class="card-desc">Mécanisme : choc exogène (occupation napoléonienne). Effet : accélération — le choc exogène importe un modèle d&#x27;État centralisé mature depuis l&#x27;extérieur, comprimant en 18 ans u...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Éclipse napoléonienne <span class="badge badge-prolongement">Prolongement</span></span><span class="card-date">1796</span></div><span class="card-desc">Le Piémont est annexé à la France (1798-1801, puis directement 1801-1814). Toutes les institutions piémontaises sont remplacées par l&#x27;administration française (Code Napoléon, pr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Chute de la République <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1797</span></div><span class="card-desc">Mécanisme : choc exogène (conquête extérieure détruisant les institutions). Effet : avortement — la transition vers la RN est bloquée sans que les institutions absolutistes ne s...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Remontrance <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1848</span></div><span class="card-desc">En juin 1848, dans le sillage des révolutions européennes, Palacký organise le Congrès slave de Prague (2-12 juin 1848) qui réclame une fédéralisation de l&#x27;Empire sur base natio...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Écrasement <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1849</span></div><span class="card-desc">François-Joseph fait appel au tsar Nicolas Ier. 200 000 soldats russes entrent en Hongrie en mai-juin 1849. Capitulation de Görgey à Világos le 13 août 1849. Terreur blanche : B...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Absorption dans le Parcours italien <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1849</span></div><span class="card-desc">Mécanisme : choc exogène (défaite piémontaise à Custoza juillet 1848, puis Novara mars 1849). Effet : avortement — la transition vers la RN est bloquée sans que les institutions...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Écrasement <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1849</span></div><span class="card-desc">Mécanisme : choc exogène (puissance militaire étrangère écrasant la RN en cours). Effet : avortement — la transition vers la phase parlementaire est bloquée sans que les institu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Perte de la Lombardie <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1859</span></div><span class="card-desc">La défaite autrichienne à Solferino (24 juin 1859) contre la France de Napoléon III et le Piémont de Cavour aboutit au traité de Villafranca (11 juillet 1859) puis à la paix de ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Unification italienne <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1861</span></div><span class="card-desc">En 1861, le Piémont absorbe les parcours de Milan, Venise, Naples et des autres États italiens pour créer le Royaume d&#x27;Italie. Le Statuto Albertino — concession d&#x27;AR, pas produi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Exclusion de l&#x27;Allemagne <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1866</span></div><span class="card-desc">La défaite de Sadowa/Königgrätz (3 juillet 1866) contre la Prusse de Bismarck entraîne la dissolution de la Confédération germanique et l&#x27;exclusion définitive de l&#x27;Autriche de l...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Absorption dans le Parcours italien <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1866</span></div><span class="card-desc">Mécanisme : choc exogène (absorption dans un Parcours national plus large). Effet : avortement définitif du Parcours vénitien autonome. Les deux moteurs (État central et homogén...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Restauration <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1945</span></div><span class="card-desc">3 ans de tentative de restauration démocratique post-guerre. Beneš revient de Londres, restauration de la République tchécoslovaque (3ème République). Décrets Beneš : expulsion ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Écrasement <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1947</span></div><span class="card-desc">La « tactique du salami » de Rákosi élimine progressivement les partis non-communistes. En 1947-1948, le Parti des petits propriétaires est dissous, le Parti social-démocrate fu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Glorieuse Révolution avortée <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1948</span></div><span class="card-desc">Le 25 février 1948, sous pression de Moscou, Gottwald orchestre une crise gouvernementale qui amène les communistes au pouvoir exclusif. Démission tactique des ministres non-com...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Glorieuse Révolution <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1956</span></div><span class="card-desc">Le 23 octobre 1956, insurrection populaire à Budapest. Imre Nagy revient au pouvoir comme Premier ministre, forme un gouvernement multipartite, annonce la fin du système du part...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Écrasement <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1956</span></div><span class="card-desc">Le 4 novembre 1956, l&#x27;Armée rouge attaque Budapest avec des forces massives. Combats pendant une semaine. 2 500 Hongrois tués, 200 000 réfugiés. Imre Nagy se réfugie à l&#x27;ambassa...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Réplique de RN avortée <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1968</span></div><span class="card-desc">Le 5 janvier 1968, Alexander Dubček lance le « Printemps de Prague » — « socialisme à visage humain », libéralisation politique et culturelle, préparation de réformes économique...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">close</span><span>Insuffisance interne</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">978</span></div><span class="card-desc">L&#x27;assassinat d&#x27;Edward the Martyr ouvre une longue période d&#x27;instabilité sous Æthelred le Malavisé. Aucun pacte n&#x27;émerge — les élites sont trop hétérogènes (Anglo-Saxons + Scandi...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1035</span></div><span class="card-desc">La mort de Cnut provoque la fragmentation de l&#x27;empire anglo-scandinave. Les conditions du pacte ne sont toujours pas réunies : l&#x27;échelle est trop grande et les élites trop hétér...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">L&#x27;Anarchie <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1135</span></div><span class="card-desc">Dix-neuf ans de guerre civile entre Étienne de Blois et Mathilde l&#x27;Emperesse. La faiblesse du souverain est présente, mais l&#x27;homogénéité des élites ne l&#x27;est pas — d&#x27;autant que l...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1157</span></div><span class="card-desc">Alphonse VII (r. 1126-1157) divise deliberement ses royaumes entre ses fils. Mecanisme : insuffisance interne (cf. perturbations.md) — l&#x27;echelle depasse le seuil d&#x27;homogeneite, ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1205</span></div><span class="card-desc">Jean sans Terre ruine le système Plantagenêt : perte de la Normandie (1204), Magna Carta imposée (1215), guerre civile. Crise féodale avortée — l&#x27;homogénéité est encore insuffis...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1222</span></div><span class="card-desc">Le 24 avril 1222, André II promulgue à Székesfehérvár la Bulle d&#x27;or qui codifie les privilèges de la noblesse et garantit le ius resistendi. Préfiguration de pacte qui ne satisf...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1246</span></div><span class="card-desc">Le 15 juin 1246, Frédéric II de Babenberg meurt sans héritier mâle à la bataille de la Leitha contre les Hongrois. L&#x27;Autriche et la Styrie sont sans direction. La phase féodale ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1282</span></div><span class="card-desc">En 1282, les Cortes de Valladolid agissent collectivement pour declarer Alphonse X inapte. Action collective significative, mais ne satisfait pas le critere du PO : pas de codif...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Bascule oligarchique <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1301</span></div><span class="card-desc">Sept ans de bascule après l&#x27;extinction Árpád. Interrègne et compétition dynastique entre trois candidats étrangers (Venceslas III de Bohême couronné 1301, Otton III de Bavière c...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Bascule oligarchique <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1306</span></div><span class="card-desc">Bascule très courte (5 ans). Interrègne, compétitions dynastiques (Henri de Carinthie, Rodolphe Ier de Habsbourg, Jean de Luxembourg). La diète bohême choisit Jean de Luxembourg...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1349</span></div><span class="card-desc">Mécanisme : insuffisance interne (l&#x27;héritage divisible fragmente le duché). Effet : avortement (les conditions de Deblonde ne sont pas réunies — la faiblesse du suzerain est là ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/piemont/flag.png" alt="Piémont"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1359</span></div><span class="card-desc">Jacques d&#x27;Achaïe (r. 1334-1367) conteste la suzeraineté de la branche principale et s&#x27;allie aux Visconti. En 1359-1360, Amédée VI le Comte Vert l&#x27;écrase : siège de Pignerol, cap...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1379</span></div><span class="card-desc">Le 25 septembre 1379, Albert III et Léopold III divisent formellement les domaines habsbourgeois en deux lignes : Albertine (Autriche propre) et Leopoldine (Styrie, Carinthie, C...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Bavière"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1392</span></div><span class="card-desc">Mécanisme : insuffisance interne (héritage divisible, le plus destructeur). Effet : avortement (quatre duchés rivaux, homogénéité encore insuffisante pour un pacte pan-bavarois ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1440</span></div><span class="card-desc">Le frère cadet de Frédéric III, Albert VI, revendique sa part des domaines habsbourgeois et entre en conflit armé répété. Frédéric III doit céder l&#x27;Autriche intérieure puis la H...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Crise féodale <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1823</span></div><span class="card-desc">Entre l&#x27;abdication d&#x27;O&#x27;Higgins (janvier 1823) et la bataille de Lircay (avril 1830), le Chili connaît huit gouvernements en sept ans et plus de trente cabinets. Fédéralistes, un...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/chili/flag.png" alt="Chili"><span class="card-title">Guerre sociale avortée <span class="badge badge-avortement">Avortement</span></span><span class="card-date">1891</span></div><span class="card-desc">La guerre civile de 1891 oppose Balmaceda (faction prébendière-étatique, revenus dépendant du contrôle central du salpêtre) au Congrès (faction patrimoniale — hacendados et capi...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#ba1a1a;">compress</span><span>Correction d&#x27;échelle</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Fragmentation de l&#x27;empire Visconti <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1402</span></div><span class="card-desc">L&#x27;empire s&#x27;effondre instantanément à la mort de Gian Galeazzo (1402). Mécanisme : correction d&#x27;échelle — les marges avaient été effectivement digérées (administration directe pa...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Perte de la Crète <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1669</span></div><span class="card-desc">Mécanisme : correction d&#x27;échelle (contraction d&#x27;un empire intégré, la Crète ayant été administrée par des baili vénitiens depuis 1204). Effet : accélération de la résolution de ...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Perte de la Silésie <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1742</span></div><span class="card-desc">La Silésie, province riche et industrielle de la couronne de Bohême, est conquise par Frédéric II de Prusse en décembre 1740-1741 et cédée définitivement par le traité de Berlin...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Perte de l&#x27;empire colonial américain <span class="badge badge-acceleration">Accélération</span></span><span class="card-date">1808</span></div><span class="card-desc">Les colonies americaines font secession (1808-1826). Mecanisme : correction d&#x27;echelle (cf. perturbations.md) — le territoire perdu avait ete effectivement digere par le noyau (a...</span></div></div>
+</div>
+</div>
+</details>
+<details class="saillant-details">
+<summary><span class="saillant-left"><span class="material-symbols-outlined" style="color:#888;">circle</span><span>inconnu</span></span><span class="material-symbols-outlined expand-icon">chevron_right</span></summary>
+<div class="saillant-body">
+<div class="saillant-examples">
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Blocage structural — Querelle des Investitures et autonomie princière <span class="badge "></span></span><span class="card-date">~1076</span></div><span class="card-desc">Le moteur de construction de l&#x27;État central est structurellement bloqué au niveau impérial. Le Parcours national se transfère au niveau territorial (Brandebourg-Prusse).</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Guerre de Trente Ans <span class="badge "></span></span><span class="card-date">1618</span></div><span class="card-desc">Choc exogène massif. Les institutions féodales survivent (pas de reboot) mais la société est hétérogénéisée et appauvrie — le Parcours stagne.</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Guerres napoléoniennes <span class="badge "></span></span><span class="card-date">1806</span></div><span class="card-desc">Choc exogène. Les institutions absolutistes survivent (pas de reboot) mais le Parcours est gelé pendant l&#x27;occupation. Les réformes Stein-Hardenberg modernisent l&#x27;État.</span></div></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+</body>
+</html>

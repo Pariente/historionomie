@@ -40,9 +40,10 @@ Conséquence : la taille de l'État central croît, et croît plus qu'elle ne l'
 - Le pouvoir administratif est subordonné à la représentation nationale
 - Résolution pacifique des tensions sociales par intégration progressive des exclus
 
-**Exemples :**
-- Angleterre : depuis la Glorieuse Révolution de 1688
-- France : depuis 1830 (avec des interruptions)
+| Nation | Date | Exemple |
+|---|---|---|
+| Angleterre | 1688 | Depuis la Glorieuse Révolution |
+| France | 1830 | Depuis 1830 (avec des interruptions) |
 
 ## Phase technocratique — dégénérescence de l'ENP
 
