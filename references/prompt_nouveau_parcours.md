@@ -12,9 +12,10 @@ Ce fichier contient le prompt standard à utiliser pour lancer l'analyse histori
 Produis une proposition de Parcours de construction nationale pour [NATION].
 
 **Préparation obligatoire (avant toute recherche historique)** :
-1. Lis `references/parcours.md` (cadre théorique général, tableau des bornes de sous-phases). Pour chaque phase analysée, consulter aussi le fichier `phase_*.md` correspondant.
-2. Revois les feedback memories chargées automatiquement (naming canonique, catégorisation des événements, bornes de sous-phases, trois pièges, vérification par phase).
-3. Si la nation a un statut particulier (empire multi-national, nation tardivement unifiée, cas de reboot, interférence avec un Parcours voisin), lis aussi au moins deux parcours analogues dans `references/nations/` pour avoir des points de comparaison.
+1. Lis `references/parcours.md` (cadre théorique général, question fondamentale des « égaux », tableau des bornes de sous-phases). Pour chaque phase analysée, consulter aussi le fichier `phase_*.md` correspondant.
+2. Lis `references/elites.md` (matrice 2×2, losange politique de Deblonde, formes du clivage factionnel, mécanismes d'absolutisation) et `references/perturbations.md` (mécanismes × effets, empire intégré vs union personnelle, correction_echelle vs choc_exogene fin d'exutoire).
+3. Revois les feedback memories chargées automatiquement (naming canonique, catégorisation des événements, bornes de sous-phases, trois pièges, vérification par phase, critère formel du pacte, guerre sociale enjeu/forme).
+4. Si la nation a un statut particulier (empire multi-national, nation tardivement unifiée, cas de reboot, interférence avec un Parcours voisin), lis aussi au moins deux parcours analogues dans `references/nations/` pour avoir des points de comparaison.
 
 **Règles strictes de l'analyse** :
 
@@ -36,17 +37,38 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
 - **DGRO en fin de phase oligarchique / pendant la sous-phase absolutisation**, jamais au début de la phase oligarchique. Le mot « dernière » a un sens structurel : c'est le dernier sursaut oligarchique avant l'ancrage absolutiste, pas une résistance au pacte fondateur.
 
 - **Trois pièges de bornes de sous-phases** (cf. tableau des bornes dans `parcours.md` et `feedback_bornes_sous_phases_pieges.md`) :
-  - **Essor oligarchique → polarisation des élites** : basculement de dynamique, pas un saillant. La sous-phase se termine quand la dynamique principale cesse d'être la projection vers l'extérieur et devient la tension entre factions (prébendière vs patrimoniale) pour le contrôle de l'État central.
-  - **Absolutisation → impérialisme absolutiste** : borne = fin de la DGRO (consensus absolutiste établi), pas le acmé absolutiste (qui est interne à l'impérialisme absolutiste).
+  - **Essor oligarchique → polarisation des élites** : basculement de dynamique, pas un saillant. La sous-phase se termine quand la dynamique principale cesse d'être la projection vers l'extérieur et devient la tension entre factions pour le contrôle de l'État central.
+  - **Absolutisation → impérialisme absolutiste** : borne = fin de la DGRO (consensus absolutiste établi), pas l'acmé absolutiste (qui est interne à l'impérialisme absolutiste).
   - **Impérialisme absolutiste → ancien régime** : borne = Remontrance stricte, pas « fin de l'expansion » qui peut coïncider ou précéder.
 
-- **Pacte oligarchique = nécessité structurelle** entre la coagulation/bascule et l'essor oligarchique. Il est généralement très formel (loi salique, Ordonnances, primogéniture, Libell, chartes négociées avec les états dans un contexte de souverain affaibli). Ne jamais conclure « absent, résolution diffuse » sans justification structurelle solide appuyée sur un cas comparable du corpus (ex. : Venise où le pacte est institutionnel et non personnel).
+- **Pacte oligarchique = nécessité structurelle** entre la coagulation/bascule et l'essor oligarchique. Critère formel strict (Coencas) : **première codification négociée et entérinée des responsabilités du suzerain** — acte écrit, collectif, issu d'une assemblée des oligarques (diète, états, Landtag, Cortès). Distingue le pacte des créations institutionnelles unilatérales (Philippe le Bel crée le Parlement de Paris et la Chambre des comptes, mais unilatéralement — le vrai pacte français est la loi salique de 1317 ; Omri crée l'État israélite unilatéralement, d'où l'absence de pacte canonique identifié). Vérifié sur 11/12 parcours du corpus. Ne jamais conclure « absent, résolution diffuse » sans justification structurelle solide appuyée sur un cas comparable (ex. : Venise, pacte institutionnel et non personnel).
+
+- **Guerre sociale — enjeu universel, formes variables** (cf. `elites.md`, `phase_oligarchique.md`) :
+  - **Enjeu structurel invariant** : contrôle de l'État central pour l'accès aux prébendes. Ce n'est jamais un conflit confessionnel, régional ou dynastique en soi — la religion, la région, la dynastie sont des **modes d'expression** du clivage.
+  - **Forme variable** : économique pure (prébendier vs patrimonial au sens weberien strict — Lancaster/York, giovani/vecchi), géographique (deux blocs majoritairement patrimoniaux polarisés sur la fracture cœur/marges — France Guerres de Religion), ou mixte (le plus fréquent — Espagne). Ne pas forcer la lecture prébendier/patrimonial quand les deux factions sont du même type.
+  - **Critère de résolution** : (1) l'enjeu doit être le contrôle des prébendes centrales, (2) la résolution doit produire un nouveau cadre central qui subordonne les oligarques. Si une faction gagne sans nouveau cadre, la guerre sociale n'est pas résolue et la phase oligarchique se poursuit.
+
+- **Acmé oligarchique = saturation de l'exutoire externe**, pas position fixe dans la phase. La fraction de la phase où il se situe varie de 0.13 (Suisse) à 0.71 (Autriche, Léopold Ier). Exutoire court → acmé précoce ; exutoire long → acmé tardif. Ne pas chercher l'acmé à une fraction fixe.
+
+- **Perturbations territoriales — distinction fine** (cf. `perturbations.md`) :
+  - **Empire intégré vs union personnelle** : un choc d'hétérogénéité n'opère que si l'acquisition mobilise effectivement les élites du noyau dans un travail de digestion des marges (administration directe, droit imposé, personnel issu du noyau). L'union personnelle ne produit pas de choc structurel — au plus une soupape militaire. Conséquence : le choc d'hétérogénéité se date au moment de l'intégration administrative, pas de l'acquisition dynastique (Bohême autrichienne : 1627, pas 1526).
+  - **Correction d'échelle vs fin d'exutoire militaire** : une perte territoriale n'est `correction_echelle` que si le territoire a été **digéré** (administration directe, personnel du noyau) — Crète vénitienne 1669, Silésie autrichienne 1742, empire colonial espagnol 1808-1826. Une perte de territoire en union personnelle (ou d'une possession récemment acquise et non digérée) est `choc_exogene / acceleration` — Normandie 1204, Castillon 1453, Solferino 1859, Sadowa 1866. Les deux produisent une accélération, mais par des mécanismes distincts.
+
+- **Échelle du test discriminant absolutiste = territoire national du Parcours** (noyau + marges), pas toutes les possessions de la couronne. Une marge qui a son propre Parcours (Hongrie pour l'Autriche) ne compte pas ; une marge intégrée (Aragon pour l'Espagne) compte. Piège classique : identifier les Rois Catholiques comme 1er monarque absolu espagnol alors que l'Aragon conserve ses fueros jusqu'à la Nueva Planta — c'est Philippe V (1714) le vrai 1er monarque absolu, les Rois Catholiques sont l'acmé oligarchique.
+
+- **Piège de la codification écrite** : la codification n'est **pas** un test discriminant absolutiste. L'Angleterre n'a jamais codifié son droit (common law) et est canoniquement absolutisée depuis Henri VII. Le test porte sur la substance (préséance de jure de l'administration centrale), pas la forme (code écrit / coutume).
 
 - **Distinction saillant / sous-phase** :
   - `ancien régime` et `révolution initiale` sont des sous-phases **seulement**
   - `Restauration` est à la fois un saillant (le moment) et une sous-phase (la durée)
   - `Émergence de l'IR` est un saillant (avènement de la figure autoritaire) ; `impérialisme revanchard` est la sous-phase (durée)
   - `Éclatement de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien` sont les 4 saillants internes à la sous-phase `révolution initiale`
+
+- **Cas particuliers de la RN** (cf. `phase_rn.md`) — à connaître pour ne pas forcer une séquence canonique là où elle ne s'applique pas :
+  - **RN avortée** : écrasement par puissance extérieure avant le thermidorien (Israël 70, Venise 1849). Coder comme `choc_exogene / avortement`.
+  - **RN contre occupant** : la RN peut éclater contre un occupant étranger si l'homogénéité culturelle du peuple est suffisante (Venise 1848, Milan napoléonien). Deux configurations : AR propre (Sanhédrin sous Rome) ou **AR exogène** (Venise sous l'Autriche) — dérivation canonique documentée.
+  - **IR double** : hypothèse structurelle nouvelle (Hitler pour Allemagne ET Autriche simultanément). À signaler explicitement si un cas comparable émerge.
+  - **Test discriminant RN avortée vs révolte absolutiste** : une RN commence par une expérience parlementaire avec assemblée élue et factions concurrentes (leadership **construit par l'élection**) ; une révolte absolutiste est portée par un chef à autorité **héritée ou charismatique** (Maccabées, Bar Kokhba).
 
 **Workflow obligatoire** :
 
@@ -93,3 +115,4 @@ Produis une proposition de Parcours de construction nationale pour [NATION].
 
 - **v1 (2026-04-14)** : première version du prompt canonique.
 - **v2 (2026-04-17)** : alignement avec la refonte méthodologique (renommages acmé/éclatement/émergence, 2 critères guerre sociale, territoire national du Parcours, suppression sous_phases.md).
+- **v3 (2026-04-18)** : ajouts méthodologiques — critère formel du pacte oligarchique (Coencas), guerre sociale enjeu/forme (économique pure / géographique / mixte), acmé oligarchique = saturation exutoire, empire intégré vs union personnelle, correction_echelle vs choc_exogene fin d'exutoire, échelle du test absolutiste, piège de la codification écrite, cas particuliers RN (avortée, contre occupant, AR exogène, IR double, test RN vs révolte absolutiste).
