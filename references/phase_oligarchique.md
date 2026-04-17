@@ -150,13 +150,13 @@ L'expansion extérieure peut considérablement retarder la polarisation. Tant qu
 
 La guerre sociale est à la fois une **sous-phase** (la durée du conflit entre factions) et un **saillant** (le moment de son déclenchement). En tant que saillant, « Guerre sociale » marque le *déclenchement* du conflit — pas sa durée.
 
-On désigne par « guerre sociale » le conflit entre les deux factions élitaires — prébendière et patrimoniale — à la fin de la phase oligarchique. Ce conflit ne prend pas nécessairement la forme d'une guerre ouverte : il peut consister en un climat de tensions institutionnelles, de luttes de palais, d'assassinats et de tentatives de réforme avortées (Israël antique sous Manassé, Venise ~1628-1669).
+On désigne par « guerre sociale » le conflit entre deux factions élitaires à la fin de la phase oligarchique. Ce conflit ne prend pas nécessairement la forme d'une guerre ouverte : il peut consister en un climat de tensions institutionnelles, de luttes de palais, d'assassinats et de tentatives de réforme avortées (Israël antique sous Manassé, Venise ~1628-1669).
 
 ### Les deux critères essentiels
 
-**1. La structure du conflit est élitaire** — prébendière vs patrimoniale. La religion, la région, la dynastie, la langue peuvent servir de **mécanisme de distinction** entre les deux factions, mais la cause structurelle du conflit est toujours la lutte pour le contrôle de l'État central entre des élites dont le mode d'enrichissement diverge (cf. `elites.md` pour le détail). Les « guerres de religion » ou les « guerres dynastiques » sont des guerres sociales déguisées quand elles satisfont ce critère structurel.
+**1. L'enjeu du conflit est le contrôle de l'État central** — pour accéder aux prébendes qu'il distribue ou garantir celles qu'on détient déjà. C'est l'invariant structurel. La polarisation en deux factions est universelle, mais la **forme** qu'elle prend dépend du contexte national : économique pure (prébendier/patrimonial au sens weberien strict — Angleterre York/Lancaster, Venise giovani/vecchi), géographique (France Guerres de Religion, clivage Nord/Sud entre deux groupes majoritairement patrimoniaux), ou mixte (le plus fréquent). La religion, la région, la dynastie, la langue sont des **modes d'expression du clivage**, pas sa cause. Cf. `elites.md` pour le détail.
 
-**2. La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.
+**2. La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme — le tiers qui gagne, c'est le parti des prébendes en soi, l'État central comme distributeur souverain.
 
 ### La figure résolvante
 

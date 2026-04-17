@@ -127,13 +127,16 @@ Les écarts à ces durées sont significatifs et s'expliquent toujours par une p
 
 ### Le clivage gauche-droite (Fabry & Portal)
 
-Le clivage gauche-droite est défini structurellement, indépendamment de toute époque ou de tout lieu :
-- **Extrême-droite (ED)** : réactionnaires, nostalgiques de l'ancien ordre, grands perdants de la nouvelle donne.
-- **Droite** : conservateurs, cherchent à préserver la stabilité en ralentissant les changements.
-- **Gauche** : réformateurs, pensent que réformer pour contenter l'EG permet de maintenir la stabilité.
+Le clivage gauche-droite est défini structurellement, indépendamment de toute époque ou de tout lieu. C'est un outil d'analyse universel : il vaut pour la phase oligarchique (guerre sociale), pour la phase absolutiste (bloc élitaire contre bloc contestataire en Ancien Régime), pour la Révolution Nationale, et pour la phase parlementaire. Les quatre positions correspondent à une topologie stable de rapports à la « nouvelle donne » (la distribution actuelle des places au centre du pouvoir) :
+
+- **Extrême-droite (ED)** : réactionnaires, nostalgiques de l'ancien ordre, grands perdants de la nouvelle donne. Radicaux parce qu'ils « font la queue sans places » et voient les nouveaux entrants les doubler.
+- **Droite** : conservateurs, cherchent à préserver la stabilité en ralentissant les changements. Plus souples que l'ED parce qu'ils sont habitués à négocier les places et à un turn over limité.
+- **Gauche** : réformateurs, pensent que réformer pour contenter l'EG permet de maintenir la stabilité. Nouveaux entrants qui demandent leur quota de places au sommet.
 - **Extrême-gauche (EG)** : révolutionnaires, encore exclus de la nouvelle donne, prêts à renverser la table pour s'y faire une place.
 
-Cette grille est essentielle pour lire la Révolution Nationale.
+**Fondement structurel (Deblonde)** : le clivage est une expression de l'**homogénéisation divergente**. Le corps civique (population culturellement homogène au cœur du pouvoir) se structure selon deux axes indépendants — axe social (élites / classes populaires) et axe spatial (cœur géographique du pouvoir / marges et périphéries). La gauche se forme des élites des marges (hautes sur l'axe social, loin du centre géographique) ; la droite se forme des classes populaires du cœur (basses sur l'axe social, proches du centre géographique). Le mouvement temporel d'intégration est **sinistrogyre** : les nouveaux entrants apparaissent à gauche, dérivent vers le centre en s'installant, puis vers la droite en se conservatisant. L'ED est hors du corps civique mais proche ; l'EG est la population hétérogène non intégrée.
+
+Cette grille est essentielle pour lire la guerre sociale ET la Révolution Nationale. En RN, le clivage se **replie** : centre-droit et centre-gauche fusionnent en bloc élitaire, ED et EG convergent en bloc contestataire. Cf. `phase_rn.md`.
 
 ### Sous-phases et saillants
 

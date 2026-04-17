@@ -23,6 +23,59 @@ La terminologie « prébendière / patrimoniale » est empruntée à Max Weber (
 
 Ces catégories ne sont pas étanches : une même famille ou un même groupe peut migrer d'une case à l'autre au cours du Parcours. C'est précisément cette migration qui constitue le moteur politique de la construction nationale.
 
+## Le losange politique (Deblonde) : topologie du clivage
+
+À la matrice 2×2 qui **classe** les élites (source de revenu × participation au pouvoir) s'ajoute une topologie qui **explique le clivage** politique. Antoine Deblonde propose de la représenter par un losange construit sur deux axes indépendants :
+
+- **Axe social** : classes populaires (bas) → élites (haut).
+- **Axe spatial** : marges et périphéries (loin du centre du pouvoir) → cœur géographique du pouvoir (près).
+
+### Les quatre sommets
+
+- **Haut** : centre du pouvoir — élite du cœur géographique (élite + central).
+- **Gauche** : élites des marges — hautes sur l'axe social, loin du centre géographique.
+- **Droite** : classes populaires du cœur — basses sur l'axe social, proches du centre géographique.
+- **Bas** : population hétérogène non intégrée — basses sur les deux axes.
+
+### Le corps civique
+
+Le **corps civique** désigne la population culturellement homogène intégrée au cœur du pouvoir. Il occupe la moitié supérieure du losange : il inclut le centre (élite centrale), une frange d'élites des marges à gauche, et une frange de populaires du cœur à droite. Les populations hétérogènes non intégrées restent hors du corps civique.
+
+### Le clivage politique
+
+Le clivage (gauche/centre/droite) se joue **à l'intérieur du corps civique**, horizontalement :
+
+- **Gauche** : élites des marges — nouveaux entrants réclamant leur quota de places au sommet. Réformateurs.
+- **Centre** : élite centrale installée.
+- **Droite** : classes populaires du cœur — défense de l'ordre établi. Conservatrices parce qu'elles négocient les places avec un turn over limité.
+- **Extrême-droite (ED)** : hors du corps civique mais proche — « font la queue sans places », radicalisées parce qu'elles voient les nouveaux entrants les doubler. D'où leur radicalité asymétrique : les conservateurs (D) sont dans le corps civique et négocient, les réactionnaires (ED) sont aux portes et vont direct à la cogne.
+- **Extrême-gauche (EG)** : population hétérogène non intégrée — veut renverser la table pour entrer.
+
+### Le mouvement sinistrogyre
+
+Le losange est animé d'un **mouvement temporel d'intégration** : les groupes entrent à gauche (nouveaux élites des marges, nouveaux entrants dans le corps civique), dérivent vers le centre en s'installant, puis vers la droite en se conservatisant. C'est le mouvement sinistrogyre — universel, indépendant du lieu et de l'époque. La gauche est structurellement le lieu des nouveaux entrants, la droite le lieu des installés.
+
+### Homogénéisation divergente et clivage
+
+Le clivage est une **expression de l'homogénéisation divergente** — l'un des deux moteurs du Parcours. Quand une nation construit son État central, le cœur devient culturellement et institutionnellement homogénéisé, tandis que les marges restent ou deviennent relativement hétérogènes. Cette divergence alimente la zone basse et la périphérie du losange (populations hétérogènes, élites des marges) et crée la pression sinistrogyre.
+
+La guerre sociale est un moment où cette pression casse le corps civique : les deux factions se forment sur les deux côtés du losange (typiquement gauche et droite, ou parfois droite et ED). La Révolution Nationale est un moment où le clivage se **replie** : centre-droit et centre-gauche fusionnent en bloc élitaire, ED et EG convergent en bloc contestataire (cf. `phase_rn.md`).
+
+### Articulation avec la matrice 2×2
+
+Les deux outils sont complémentaires :
+
+- **La matrice 2×2** classe les élites selon leur source de revenu et leur participation au pouvoir. Photographie statique.
+- **Le losange** décrit la topologie politique du clivage — qui s'oppose à qui, et pourquoi. Fait intervenir la géographie et le temps.
+
+La forme que prend le clivage factionnel dans la guerre sociale dépend de la nature de l'hétérogénéité qui sépare les marges du cœur :
+
+- Si la divergence est principalement **économique** (marges terriennes vs cœur commercial/administratif), le clivage prend la **forme économique pure** (prébendier/patrimonial).
+- Si la divergence est principalement **géographique et culturelle** (cœur et marges partagent un même mode d'enrichissement foncier mais diffèrent par la langue, la région, la confession), le clivage prend la **forme géographique** — deux blocs majoritairement patrimoniaux dont la polarisation suit la fracture cœur/marges.
+- Dans la pratique, les deux se combinent souvent en **forme mixte**.
+
+**Observation importante (Deblonde)** : la matrice prébendier/patrimonial discrimine nettement au **centre impérial** ; les élites des **marges et périphéries** sont structurellement plus opportunistes — leurs allégeances varient selon le contexte local. Analogie USA : les Républicains n'ont jamais cessé d'être le parti des ruraux du nord-est, les Démocrates celui des urbains, mais hors du nord-est les allégeances sont variables. Même effet probable en France du XVIe siècle : le clivage factionnel propre se joue au centre, et les élites provinciales « choisissent leur camp » selon des logiques locales.
+
 ## Dynamique des élites au fil du Parcours
 
 ### Phase féodale
@@ -60,10 +113,10 @@ Les élites **non-gouvernementales** — en particulier la bourgeoisie des ville
 
 ## La guerre sociale : triomphe de l'État central
 
-La guerre sociale est le conflit entre les deux factions élitaires — prébendière et patrimoniale — à la fin de la phase oligarchique. Deux critères essentiels :
+La guerre sociale est le conflit entre deux factions élitaires à la fin de la phase oligarchique. Deux critères essentiels :
 
-1. **La structure du conflit est élitaire** — prébendière vs patrimoniale. La religion, la région, la dynastie peuvent servir de mécanisme de distinction, mais la cause structurelle est la lutte pour le contrôle de l'État central.
-2. **La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction : c'est l'émergence d'un cadre qui transcende le clivage précédent.
+1. **L'enjeu du conflit est le contrôle de l'État central** — pour accéder aux prébendes qu'il distribue ou garantir celles qu'on détient déjà. C'est l'invariant structurel : quelle que soit la forme du clivage qui sépare les deux factions, l'enjeu est toujours le même — qui contrôlera l'appareil central et donc la distribution des places, charges, pensions, contrats, privilèges.
+2. **La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction : c'est l'émergence d'un cadre qui transcende le clivage précédent. Comme le formule Philippe Fabry, « le tiers qui gagne, c'est le parti des prébendes en soi » — l'État central lui-même comme distributeur souverain.
 
 C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.
 
@@ -71,28 +124,48 @@ C'est pour cette raison que la guerre sociale débouche sur l'absolutisme.
 
 Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne militairement mais sans qu'un nouveau cadre central émerge — la guerre sociale n'est tout simplement **pas résolue**, et la phase oligarchique se poursuit.
 
+### Les formes du clivage factionnel
+
+La polarisation en deux factions est universelle ; la **forme** qu'elle prend dépend du contexte national. Trois cas-type :
+
+**Forme économique pure** (la plus fréquente) : une faction est clairement prébendière (revenu dépendant du centre), l'autre clairement patrimoniale (revenu indépendant). C'est le cas modal — celui qui a inspiré la terminologie weberienne et structure la matrice des élites. Le mode d'enrichissement et la ligne de faction coïncident, ce qui rend le clivage facile à lire.
+
+| Nation | Faction prébendière | Faction patrimoniale |
+|---|---|---|
+| Angleterre | Lancaster — patronage royal, ressources de l'État | York — grands domaines fonciers du nord et de l'ouest |
+| Venise | Giovani — commerce, réseaux étatiques | Vecchi — patrimoine foncier et charges institutionnelles héritées |
+| Israël antique | Élites marchandes urbaines pro-assyriennes (Manassé) | Élites rurales terriennes yahvistes |
+| Israël (prolongement) | Tobiades — fermiers d'impôts ptolémaïques | Oniades — aristocratie sacerdotale foncière |
+| Piémont | Madamisti — familles de cour, connexion française | Principisti — vieille noblesse terrienne piémontaise |
+
+**Forme géographique** : deux groupes majoritairement patrimoniaux (ou mixtes) dont la polarisation suit une fracture territoriale cœur/marges. L'enjeu reste le contrôle des prébendes distribuées par le centre, mais le mode d'enrichissement ne discrimine pas les factions — les deux camps sont structurellement proches côté revenu, et le clivage se construit sur la position géographique vis-à-vis du centre du pouvoir.
+
+- **France (Guerres de Religion)** : grande noblesse du Nord-Est (Guise, patrimoniaux insérés à la cour avec prébendes de cour — gouvernements, pensions) vs grande noblesse du Sud-Ouest (Condé-Coligny, patrimoniaux périphériques). Les deux camps sont majoritairement patrimoniaux ; les insiders nordistes disposent aussi de prébendes de cour. Le clivage est géographique (insiders / outsiders au centre), la religion est le mode d'expression superposé.
+
+**Forme mixte** : combinaison des précédentes, souvent avec une superposition de logiques économique, géographique, confessionnelle, dynastique. C'est probablement le cas empirique le plus fréquent en pratique — l'Espagne (Castille centraliste vs Aragon/Catalogne foraliste) combine une fracture économique et géographique.
+
+**Conséquence pour l'analyse** : ne pas forcer la lecture prébendier/patrimonial quand les deux factions sont majoritairement d'un même type (deux blocs patrimoniaux, deux blocs prébendiers). Ce qui compte structurellement est l'enjeu (contrôle des prébendes centrales) et l'existence d'une polarisation — la forme qu'elle prend est un élément à documenter, pas à forcer.
+
 ### Important : la guerre sociale n'est pas une guerre religieuse
 
-**La guerre sociale n'est jamais une guerre sur une base religieuse.** C'est une guerre entre élites dont le **mode d'enrichissement** est différent et qui luttent pour le contrôle du pouvoir central — prébendières contre patrimoniales. Quand ces deux élites adoptent des confessions religieuses différentes (comme pendant les Guerres de Religion en France, ou la guerre de Trente Ans en Europe centrale), **la religion est un mécanisme de distinction** entre factions, pas la cause structurelle du conflit.
+**La guerre sociale n'est jamais un conflit confessionnel, régional ou dynastique en soi.** L'enjeu est toujours le contrôle de l'État central pour la distribution des prébendes. La religion (Guerres de Religion), la région (Castille vs Aragon), la dynastie (York vs Lancaster) sont des **modes d'expression du clivage** — ce qui permet aux factions de se reconnaître, de se distinguer et de mobiliser leurs clientèles. La cause structurelle est ailleurs.
 
 Ce point est critique pour lire correctement les conflits confessionnels :
 
-- **Le mécanisme de distinction peut être la religion**, mais il peut aussi être la région (Nord vs Sud), la langue, la couleur politique, la dynastie soutenue, ou toute autre marque d'identification des factions. La religion est un cas fréquent parce qu'elle fournit une identité forte, mais elle n'a aucun statut privilégié.
-- **Le conflit reste structurellement économique et politique** : une faction d'élites dont le revenu dépend des faveurs du pouvoir central (prébendière) affronte une faction dont le revenu est indépendant du centre (patrimoniale). Le contrôle de l'État central est l'enjeu, pas le salut des âmes.
 - **Les « guerres de religion » ne sont pas toujours des guerres sociales**. La guerre de Trente Ans en Autriche est une polarisation confessionnelle où une faction gagne (victoire catholique habsbourgeoise) sans qu'un nouveau cadre central émerge — la guerre sociale autrichienne n'est pas résolue, et la phase oligarchique se poursuit jusqu'à la Guerre de Succession d'Autriche (1740-1748).
-- **Les « guerres dynastiques » sont des guerres sociales déguisées**. La Guerre des Deux-Roses anglaise oppose York et Lancaster, mais structurellement c'est une lutte entre deux factions oligarchiques dont le clivage est dynastique. Le mécanisme de distinction est dynastique, le conflit est une guerre sociale classique résolue par Henri VII comme tiers.
+- **Les « guerres dynastiques » sont souvent des guerres sociales déguisées**. La Guerre des Deux-Roses anglaise oppose York et Lancaster, mais structurellement c'est une lutte entre deux factions oligarchiques pour le contrôle du centre — forme économique pure, mode d'expression dynastique.
 
-**Critère pour qu'un conflit confessionnel soit une guerre sociale :**
-1. Les deux factions doivent correspondre structurellement à la distinction prébendière/patrimoniale (vérifier le mode d'enrichissement et le rapport au centre).
+**Critère pour qu'un conflit soit une guerre sociale :**
+1. L'enjeu doit être le contrôle de l'État central pour l'accès aux prébendes (pas le salut des âmes, pas l'autonomie régionale, pas la continuité dynastique comme fin en soi).
 2. La résolution doit produire un **nouveau cadre central** qui renforce le pouvoir central et subordonne les oligarques (pas la simple victoire d'une faction sur l'autre).
 
-Si ces critères ne sont pas satisfaits, le conflit confessionnel est une **polarisation** intra-oligarchique, pas une guerre sociale au sens strict.
+Si ces critères ne sont pas satisfaits, le conflit est une **polarisation** intra-oligarchique, pas une guerre sociale au sens strict.
 
 | Nation | Exemple |
 |---|---|
-| France | Ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont choisi de soutenir le Roi (Henri IV) plutôt que les factions. La monarchie capétienne est renforcée. Le mécanisme de distinction est la religion (catholique/protestant), mais la polarisation sous-jacente est prébendière (administration royale et villes, catholiques du centre) vs patrimoniale (noblesse terrienne du Midi et de l'Ouest, protestante ou ligueuse selon les régions). Le tiers Henri IV résout — guerre sociale. |
-| Angleterre | Ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée une nouvelle dynastie (les Tudor) qui s'émancipe des deux. Le mécanisme de distinction est dynastique, la polarisation est prébendière/patrimoniale. |
-| Israël (prolongement) | Ni les Tobiades ni les Oniades ne prennent le pouvoir — c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte. Le mécanisme de distinction est confessionnel (hellénisés vs fidèles yahvistes), la polarisation est prébendière (Tobiades, fermiers d'impôts ptolémaïques) vs patrimoniale (Oniades, aristocratie sacerdotale foncière). |
+| France | Ni la Ligue catholique ni les Princes protestants n'ont gagné les Guerres de Religion. Les grands vainqueurs sont ceux qui ont soutenu le Roi (Henri IV). La monarchie capétienne est renforcée. **Forme géographique** : noblesse du Nord-Est insider (Guise, patrimoniaux + prébendes de cour) vs noblesse du Sud-Ouest outsider (Condé-Coligny, patrimoniaux périphériques) — les deux camps sont majoritairement patrimoniaux. La religion est le mode d'expression. Le tiers Henri IV résout en imposant l'État central comme nouveau cadre. |
+| Angleterre | Ni les York ni les Lancaster n'ont gagné la Guerre des Deux-Roses. Henri VII crée les Tudor. **Forme économique pure** : Lancaster prébendier / York patrimonial. Mode d'expression dynastique. |
+| Israël (prolongement) | Ni les Tobiades ni les Oniades ne prennent le pouvoir — c'est la dynastie hasmonéenne, issue de la révolte populaire des Maccabées, qui l'emporte. **Forme économique pure** : Tobiades (fermiers d'impôts ptolémaïques, prébendiers) / Oniades (aristocratie sacerdotale foncière, patrimoniaux). Mode d'expression confessionnel (hellénisés / fidèles yahvistes). |
 
 ## L'absolutisation comme processus de migration
 
