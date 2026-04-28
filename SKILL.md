@@ -19,6 +19,16 @@ Ce skill permet à Claude d'analyser le Parcours de construction nationale de n'
 
 L'usage principal du corpus est la **quantification statistique** (régression d'Alyocha Coencas sur les durées de phase). La **fiabilité des dates de bornes** (éveil féodal, pacte, 1er monarque oligarchique, guerre sociale, 1er monarque absolu, explosion AR, Glorieuse Révolution) est la **priorité absolue** de toute analyse. Ne jamais forcer une date pour que les durées « collent mieux » — les écarts atypiques sont le signal d'une perturbation à identifier, pas d'une borne à déplacer.
 
+## Pièges méthodologiques à éviter
+
+Cinq pièges récurrents documentés :
+
+1. **Lecture à rebours / télos fixé** — démarrer depuis un événement final connu (absorption, unification, RN supposée) force les phases à s'ajuster. Analyser depuis le début, sans fixer la fin.
+2. **Noms vs fonction** — un régime formellement républicain avec clan dominant peut fonctionner en absolutisme de facto. Test fonctionnel : *l'exécutif peut-il agir sans frein juridique des oligarques ?* Si oui, absolutisme.
+3. **Singularités comme features** — chaque « unique dans le corpus » est une **pénalité, pas une feature**. Trois singularités = cadrage probablement faux.
+4. **Engagement précoce** — un scénario unique choisi tôt force les données. Obligation d'au moins trois scénarios concurrents avant scoring (Étape 3c).
+5. **Corpus comparatif biaisé** — comparer uniquement à des nations de l'issue présumée pré-sélectionne la conclusion. Inclure systématiquement des analogues de chaque issue (RN complétée / avortée / absorption).
+
 ## Cadre théorique — fichiers de référence
 
 Avant toute analyse, lire les fichiers de référence pertinents :
@@ -97,19 +107,53 @@ Lire `references/parcours.md`. Si la question porte sur une phase spécifique, l
 
 ### Étape 2 : Rechercher l'histoire de la nation
 
-Utiliser la recherche web pour rassembler les informations historiques. Chercher spécifiquement les saillants canoniques par phase :
+Utiliser la recherche web pour rassembler les **faits bruts** (dates, acteurs, institutions, événements), sans pré-filtrage par une hypothèse de phase ou de télos. À ce stade on collecte ; la classification attend l'Étape 3.
 
-**Phase féodale** : premier chef supra-régional (éveil féodal), rois forts (pics féodaux), extinctions dynastiques / partitions / crises (crises féodales), pacte oligarchique formel.
+**⚠️ Interdiction de lecture à rebours.** Ne jamais démarrer depuis un événement final connu (absorption, unification, RN supposée) comme télos — cela force les phases à s'y ajuster. Analyser l'histoire depuis le début.
 
-**Phase oligarchique** : premier souverain avec fisc/armée/administration permanents (1er monarque olig), acmé oligarchique, fin de l'expansion extérieure, deux factions en conflit, tiers résolvant (guerre sociale).
+### Étape 3 : Méthode abductive à scénarios concurrents (obligatoire)
 
-**Phase absolutiste** : 1er monarque absolu, dernière révolte oligarchique armée (DGRO), acmé absolutiste interne à l'impérialisme, fin de l'expansion, Remontrance (dernière tentative institutionnelle écrasée).
+Trois sous-étapes séquentielles, **sans raccourci**.
 
-**RN** : explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, avènement IR, Restauration, Glorieuse Révolution.
+#### 3a : Description structurelle non-historionomique
 
-**Perturbations** : durées atypiques → identifier le mécanisme (choc d'hétérogénéité, choc exogène, insuffisance interne, correction d'échelle, exutoire) et l'effet (prolongement, accélération, avortement, reboot).
+Par période historique, répondre à six questions sans vocabulaire historionomique (« féodal », « oligarchique », « absolutiste » **interdits** à ce stade) :
 
-### Étape 3 : Vérifier chaque phase avant de passer à la suivante (obligatoire)
+1. Qui détient le pouvoir effectif ? (personnel, collégial, dynastique, clanique, institutionnel, informel)
+2. Y a-t-il un fisc/armée/administration centrale permanents ?
+3. **L'exécutif peut-il agir sans le frein juridique des grands ?** (test fonctionnel substantiel — « les noms ne sont pas la réalité »)
+4. Y a-t-il une codification écrite du droit ?
+5. Quelles factions ? Revenus conditionnels (prébendiers) ou indépendants (patrimoniaux) ?
+6. Le pouvoir survit-il aux successions ?
+
+Un régime formellement républicain avec un clan dominant (oligarques modernes, dynasties informelles de cité-État) peut fonctionner en absolutisme de facto — le test fonctionnel doit le détecter.
+
+#### 3b : Candidats par saillant
+
+Lister tous les événements candidats pour chaque saillant canonique, sans sélection. Exhaustivité prioritaire.
+
+**Ordre d'identification (par facilité d'observation)** :
+1. **Pacte oligarchique** (le plus formel)
+2. **Guerre sociale** (deux factions + tiers résolvant)
+3. **Révolution Nationale** — chercher le pattern des 6 saillants canoniques (éclatement / parlementaire / phase aiguë / thermidorien / IR / GR) à **n'importe quel moment**, pas seulement à la fin
+4. 1er monarque oligarchique, 1er monarque absolu
+5. Acmés et remontrance
+6. Éveil féodal (déduit en remontant, moins directement observable)
+7. Perturbations
+
+#### 3c : Exploration arborescente de ≥3 scénarios concurrents
+
+**⚠️ Obligation d'au moins trois scénarios** avant scoring (engagement unique = forçage des données).
+
+Scoring de chaque scénario sur :
+- **Durées endogènes** (féodale ~200, olig ~200, abs ~200, RN 25-80) — écarts expliqués par perturbations identifiées
+- **Match des saillants** — critères structurels satisfaits (pas match superficiel)
+- **Analogues dans le corpus** — comparatifs équilibrés de **chaque issue possible** (RN complétée / avortée / absorption)
+- **Nombre de singularités** — chaque « unique dans le corpus » est une **pénalité**, pas une feature. Trois singularités = cadrage probablement faux.
+
+Le scénario dominant gagne ; les écartés sont documentés dans `justification.md` avec arguments pour/contre (machlokot).
+
+### Étape 4 : Vérifier chaque phase du scénario retenu (obligatoire)
 
 **Ne jamais passer à la phase suivante sans avoir vérifié la phase en cours.** Pour chaque phase :
 
@@ -119,15 +163,15 @@ Utiliser la recherche web pour rassembler les informations historiques. Chercher
 4. **Test discriminant passé à la bonne échelle** (pour monarchies composites : toutes les administrations locales).
 5. **Bornes des sous-phases correctement identifiées** via le tableau des bornes dans `parcours.md`, attention aux trois pièges (essor→pol dynamique, absolutisation→impérial = DGRO, impérial→AR = Remontrance).
 
-### Étape 4 : Vérification globale finale — complétude événementielle
+### Étape 5 : Vérification globale finale — complétude événementielle
 
 Après l'analyse de toutes les phases, **passe globale** : lister les événements majeurs documentés de l'histoire de la nation et vérifier qu'**aucun ne reste inexpliqué** historionomiquement. Chaque événement majeur doit être soit un saillant canonique, soit une perturbation, soit une sous-phase, soit intégré à la description d'une phase avec un éclairage structurel. Un événement majeur non expliqué = analyse incomplète.
 
-### Étape 5 : Proposer une analyse argumentée
+### Étape 6 : Proposer une analyse argumentée
 
-Présenter sous forme de : saillants identifiés (dates + justifications), sous-phases avec marqueurs, perturbations, comparaison avec parcours connus, points d'incertitude.
+Présenter sous forme de : saillants identifiés (dates + justifications), sous-phases avec marqueurs, perturbations, scénarios écartés avec leurs raisons, comparaison avec parcours connus, points d'incertitude.
 
-### Étape 6 : Discuter et itérer
+### Étape 7 : Discuter et itérer
 
 L'historionomie est une discipline en construction. Être prêt à réviser sur la base d'arguments solides. **Honnêteté prioritaire** : préférer un parcours avec des trous honnêtes à un parcours faussement complet.
 

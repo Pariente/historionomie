@@ -2,7 +2,7 @@
 
 La Révolution Nationale est la phase troublée qui renverse l'ordre absolutiste. Elle résulte de la convergence de deux facteurs : la perte de légitimité du pouvoir central (souvent par une humiliation, par exemple militaire) et l'épuisement de sa capacité financière (inéluctable du fait de la course aux armements déclenchée par la croissance économique, rendant le système fiscal caduc).
 
-**Les « égaux » de cette phase** sont désormais **tous les citoyens** — l'homogénéisation culturelle a atteint un niveau où la population entière se perçoit comme une nation. L'administration centrale ne peut plus absorber ce cercle élargi ; le pouvoir doit être réorganisé. **Résolution** : la **subordination du pouvoir administratif à la représentation nationale** — le vote et les élus offrent un siège à tous les citoyens à la table. C'est la Glorieuse Révolution qui ancre définitivement ce principe.
+**Les « égaux » de cette phase** sont désormais **la nation tout entière au sens structurel du corps civique** — l'homogénéisation culturelle a atteint un niveau où une portion significative de la population du cœur de la nation se perçoit comme une classe politique. L'administration centrale ne peut plus absorber ce cercle élargi ; le pouvoir doit être réorganisé. **Résolution** : la **subordination du pouvoir administratif à la représentation nationale**, une représentation significativement élargie par rapport à l'AR absolutiste — pas seulement les grands seigneurs ou la famille royale, mais une fraction importante du corps civique, selon les standards culturels de l'époque. C'est la Glorieuse Révolution qui ancre définitivement ce principe. L'extension progressive du cercle des représentés (vers le suffrage universel, puis vers l'inclusion des catégories historiquement exclues — femmes, minorités, etc.) est une dynamique de la phase parlementaire qui suit, pas un critère de la RN (cf. `phase_parlementaire.md`, section « La citoyenneté est un processus »).
 
 Les effets secondaires de la croissance économique (unification culturelle, alphabétisation, urbanisation) provoquent l'émergence de nouvelles élites et l'activation idéologique des masses. Le clivage gauche-droite classique a sauté pendant l'Ancien Régime (cf. `phase_absolutiste.md`) : le bloc élitaire (centre-droit + centre-gauche) fait face au bloc contestataire (ED + EG). Quand le régime perd simultanément sa légitimité et ses finances, la révolution commence.
 
@@ -139,12 +139,53 @@ Deux configurations :
 
 ## Cas particulier : Révolution Nationale avortée
 
-La Révolution Nationale peut être écrasée par une puissance extérieure avant d'atteindre son terme. Dans ce cas, le Parcours est interrompu.
+La Révolution Nationale peut être écrasée par une puissance extérieure avant d'atteindre son terme. Dans ce cas, le Parcours est interrompu et les institutions anciennes sont restaurées.
 
 | Nation | Date | Exemple |
 |---|---|---|
 | Israël (prolongement) | 66-70 | La Grande Révolte suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal |
 | Venise | 1848-1849 | La République de Manin suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète |
+
+## Rappel : la RN est binaire — aboutie ou avortée
+
+Une RN aboutit ou elle avorte. Il n'y a pas de catégorie intermédiaire. Le fait qu'une occupation étrangère ait eu lieu pendant la séquence — pendant la phase aiguë, pendant la restauration, ou entre les deux — ne modifie pas l'aboutissement : ce qui compte est l'issue institutionnelle finale.
+
+- **RN aboutie** : un nouveau cadre institutionnel durable émerge (Glorieuse Révolution ou son équivalent compressé), les institutions absolutistes anciennes ne sont pas restaurées à l'identique, la phase parlementaire s'ouvre (active ou contrariée figée, cf. infra).
+- **RN avortée** : l'ordre ancien est restauré à l'identique, aucun nouveau cadre stable n'émerge, le Parcours est refoulé et les tensions se rejouent ultérieurement.
+
+Exemples où l'occupation étrangère n'a pas fait avorter la RN : France occupée 1815-1818 (RN française aboutit via 1830) ; Allemagne occupée 1918 et années 20 puis 1945 (RN allemande aboutit via 1990). Les interventions étrangères pendant la séquence RN sont des événements intra-phase, pas des modificateurs de l'issue.
+
+**Signature de l'aboutissement** : présence effective d'un nouveau cadre institutionnel stable après la séquence révolutionnaire, avec rupture durable par rapport à l'AR antérieur. Certains saillants canoniques (IR endogène, moment thermidorien, Glorieuse Révolution distincte) peuvent être absents ou compressés sans que cela disqualifie l'aboutissement — l'examen porte sur l'issue institutionnelle, pas sur la complétude formelle des saillants.
+
+## Phase parlementaire qui suit — active vs figée
+
+Quand une RN aboutit, la phase parlementaire qui s'ouvre peut prendre deux formes selon la dynamique d'élargissement du corps civique :
+
+- **Phase parlementaire active** : le mouvement sinistrogyre canonique fonctionne. Le corps civique s'étend progressivement vers l'ensemble de la population au rythme de l'homogénéisation culturelle. C'est la phase parlementaire standard des ENP classiques (Angleterre post-1688, France post-1830, etc.).
+
+- **Phase parlementaire contrariée figée** : les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais le corps civique reste fermé et stable sans dynamique endogène d'élargissement vers la population. Caractéristique des configurations où le compromis institutionnel post-RN a produit un cercle représenté strictement intra-aristocratique (cf. Gênes post-Doria 1528). La stabilité de ce régime est paradoxalement élevée parce que la fusion élitaire a dissous les factions permanentes qui, dans les ENP actifs, constituent le moteur de l'élargissement.
+
+Ce n'est pas une variante inférieure du parlementarisme — c'est une configuration structurelle distincte, où l'aboutissement de la RN est réel mais prend une forme sans dynamique d'élargissement endogène.
+
+### Test discriminant — ENP contrarié figé vs absolutisme collectif forme 2
+
+Les deux patterns produisent des régimes **stables** et **institutionnalisés** sur 200+ ans dans une cité-État, avec des organes collégiaux apparents. Il est facile de les confondre. Le test suivant tranche :
+
+**Question 1 — Le régime a-t-il un organe exécutif central capable d'agir CONTRE l'intérêt d'une majorité du corps élitaire inscrit ?**
+- Oui → forme 2 (institution centrale autonome, type organe de surveillance secret doté de pouvoirs de police/justice sur les membres du patriciat eux-mêmes)
+- Non → ENP contrarié (l'exécutif est structurellement un simple mandataire du corps élitaire, contrôlé, enquêté, limité en durée)
+
+**Question 2 — Existe-t-il une classe administrative distincte du corps élitaire dominant, qui sert d'ossature à l'État central ?**
+- Oui → forme 2 (noblesse de robe, cittadini, fonctionnaires permanents qui instrumentent la magistrature centrale au service d'un pouvoir au-dessus du patriciat)
+- Non → ENP contrarié (l'administration est auto-recrutée au sein du corps élitaire inscrit, sans classe intermédiaire ; les membres des conseils ET les magistrats exécutifs sortent du même vivier)
+
+**Question 3 — Le corps élitaire inscrit est-il élargi par rapport à la phase oligarchique antérieure ?**
+- Non, même cercle → probablement forme 2 (consolidation absolutiste de l'oligarchie préexistante)
+- Oui, élargissement significatif même s'il reste aristocratique (de quelques dizaines de grandes familles à plusieurs centaines, avec admission régulière de nouveaux inscrits) → probablement ENP contrarié (la RN a produit un élargissement réel même s'il reste intra-aristocratique)
+
+**Règle de décision** : deux OUI aux questions 1-2 → forme 2 absolutiste. Deux NON aux questions 1-2 + OUI à la question 3 → ENP contrarié. Autres combinaisons → cas ambigu, documenter dans justification.md comme question ouverte.
+
+**Piège typique** : confondre la stabilité de 200+ ans avec une « phase absolutiste longue ». La stabilité, en soi, ne tranche rien — elle caractérise les deux patterns. Le critère décisif est la **position de l'exécutif par rapport aux élites inscrites** (mandataire contrôlé vs autonome au-dessus).
 
 ## Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)
 

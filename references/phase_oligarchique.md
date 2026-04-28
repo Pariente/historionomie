@@ -44,7 +44,9 @@ Après le pacte oligarchique, la nation se dote de nouveaux outils — fisc perm
 
 ### Saillant : 1er monarque oligarchique (T0)
 
-Le premier souverain qui dispose d'un État central — impôt permanent, armée permanente, administration. Il marque le passage d'une chefferie féodale à un véritable État territorial.
+Le premier souverain qui gouverne dans le cadre ouvert par le pacte oligarchique — c'est-à-dire dont la légitimité repose sur les règles codifiées par le PO, et non plus sur la stature personnelle ou la continuité dynastique implicite. Le saillant est le **premier souverain post-PO**, pas le moment où l'appareil institutionnel atteint sa maturité finale.
+
+**PO et maturation institutionnelle peuvent être étalés.** Le PO acte la bascule (le pouvoir survit désormais aux successions ; cf. `phase_feodale.md`), mais l'appareil oligarchique mature continue de se déployer pendant l'essor. Le décalage typique entre le PO et le 1er monarque oligarchique est court (France : 1317→1328, Angleterre : 1311→1327) ; mais le décalage entre le PO et la maturité institutionnelle complète peut être beaucoup plus long. À Venise, l'abolition de la co-régence (1032) ouvre la phase, Contarini (1043) en est le premier doge stable, mais le cadre institutionnel mature ne s'achève qu'avec la Promissio ducale (1172) — soit ~140 ans de maturation dans la phase déjà ouverte. Cette maturation étalée n'est pas un second PO ; c'est le déploiement progressif des outils oligarchiques (fisc, armée permanente, administration, codification large) au sein de l'essor.
 
 | Nation | Date | Exemple |
 |---|---|---|
@@ -127,12 +129,34 @@ L'expansion extérieure peut considérablement retarder la polarisation. Tant qu
 
 **Condition essentielle : les territoires acquis doivent être directement administrés par la nation.** L'exutoire ne fonctionne que si les élites ont quelque chose à *prendre* de l'expansion — des charges, des terres, des revenus accessibles via l'administration centrale. Si les administrations locales des territoires acquis restent intactes (union personnelle, lien de suzeraineté), les élites de la nation conquérante n'y ont pas accès et l'expansion ne sert pas d'exutoire.
 
-- **Venise** : l'empire colonial vénitien (Stato da Màr, Terraferma) est directement administré par des patriciens vénitiens → vrai exutoire, polarisation retardée de plusieurs siècles.
-- **Espagne** : l'empire colonial américain est administré par des fonctionnaires castillans (vice-rois, audiencias, corregidores) → vrai exutoire.
-- **Autriche** : l'empire habsbourgeois est vaste en Europe, mais pendant la phase oligarchique, l'Autriche n'a pas subordonné les administrations locales (Bohême, Hongrie, etc.) à sa propre administration centrale. Les élites autrichiennes n'ont rien à « prendre » de ces territoires → pas un vrai exutoire, et la phase oligarchique autrichienne n'est pas aussi longue que celle de Venise ou de l'Espagne.
-- **Angleterre médiévale** : les conquêtes anglaises en France n'ont pas été administrées par des barons anglais — les territoires ont continué à opérer avec leurs propres administrations → pas un exutoire au sens strict.
+### Test formel d'exutoire (trois questions binaires)
 
-**Règle opératoire** : l'expansion prolonge la phase EN COURS. Vérifier (1) via le test discriminant que la phase est bien celle qui est en cours au moment de l'expansion, et (2) que les territoires sont directement administrés par la nation — sinon l'expansion n'est pas un exutoire.
+**Avant d'invoquer un exutoire colonial pour expliquer une phase oligarchique longue, appliquer systématiquement les trois questions suivantes. Il faut répondre OUI aux trois pour qu'il y ait vrai exutoire.**
+
+1. **Administration directe ?** Les territoires acquis sont-ils administrés par des fonctionnaires **issus du noyau national** et **nommés par l'État central** (podestà, vice-rois, audiencias, gouverneurs coloniaux) — ou bien par des structures locales, des sociétés privées, des banques semi-autonomes, ou des seigneurs-administrateurs locaux ?
+2. **Revenus fiscaux centraux ?** Les revenus extraits des territoires arrivent-ils dans les caisses de l'État central du noyau — ou bien dans des structures intermédiaires (banques, compagnies privées, confréries marchandes) qui les redistribuent à leurs seuls investisseurs ?
+3. **Accès élitaire central ?** Les élites de la nation conquérante peuvent-elles *prendre* des charges coloniales **via l'administration centrale** (mobilité organisée par l'État) — ou bien l'accès passe-t-il par des réseaux privés, des parts de société, des liens familiaux hors du cadre étatique ?
+
+Trois OUI → vrai exutoire, prolonge la phase en cours.
+Un NON ou plus → exutoire **faible ou inexistant**, ne pas l'invoquer pour expliquer une phase longue. La longueur doit s'expliquer autrement (perturbations exogènes répétées, blocage d'un moteur, non-résolution d'une guerre sociale).
+
+### Structures qui NE comptent pas comme exutoire
+
+- **Sociétés commerciales privées** type mahonas (Mahona di Chio, Mahona di Cipro à Gênes) : géraient des colonies pour leurs investisseurs uniquement ; « presque complète absence de la nation dans l'administration » (cas Chios).
+- **Banques semi-autonomes** type Banco di San Giorgio : administrait Corse et Gazaria après 1453 mais géré par un conseil élu parmi les grands créanciers, institutionnellement autonome de la République — statut ambigu, exutoire partiel au mieux.
+- **Comptoirs marchands privés** (factoreries, entrepôts) : accessibles via réseaux familiaux, pas via mobilité administrative centrale.
+- **Seigneurs-administrateurs locaux** avec autonomie large (gouverneurs héréditaires, podestà locaux auto-recrutés).
+- **Banques privées de cour** finançant directement une couronne étrangère (asientos espagnols des banquiers génois post-1528) : l'État central du noyau ne tire pas de revenus de ces opérations — ce sont des contrats privés. Pas un exutoire étatique.
+
+### Exemples d'exutoires validés et invalidés
+
+- **Venise** : empire colonial (Stato da Màr, Terraferma) administré par des patriciens vénitiens **nommés et tournants depuis Venise**, revenus fiscaux centralisés → vrai exutoire, polarisation retardée de plusieurs siècles. ✓
+- **Espagne** : empire colonial américain administré par des fonctionnaires castillans (vice-rois, audiencias, corregidores) **nommés par la Couronne**, revenus centralisés → vrai exutoire. ✓
+- **Autriche** : empire habsbourgeois vaste en Europe, mais Autriche n'a pas subordonné les administrations locales (Bohême, Hongrie) à sa propre administration centrale → pas un vrai exutoire. ✗
+- **Angleterre médiévale** : conquêtes en France pas administrées par des barons anglais, territoires avec leurs propres administrations → pas un exutoire. ✗
+- **Gênes** : Chios gérée par Mahona privée (Giustiniani), Corse gérée par Banco di San Giorgio semi-autonome, finances espagnoles par contrats privés d'asiento → **pas d'exutoire colonial génois au sens strict**, malgré l'apparence d'un empire. ✗
+
+**Règle opératoire** : l'expansion prolonge la phase EN COURS **seulement si** le test formel en 3 questions est satisfait. Sinon, ne pas l'invoquer pour expliquer une phase longue. Les durées atypiques doivent s'expliquer autrement.
 
 **Venise** : la phase oligarchique dure ~637 ans (~1032-~1669) parce que l'expansion permanente (Stato da Màr, Terraferma, guerres ottomanes) fournit continuellement des débouchés. La polarisation ne commence sérieusement qu'après Agnadello (1509), et la guerre sociale ne se résout qu'après la perte de la Crète (1669).
 
@@ -158,13 +182,15 @@ On désigne par « guerre sociale » le conflit entre deux factions élitaires �
 
 **2. La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme — le tiers qui gagne, c'est le parti des prébendes en soi, l'État central comme distributeur souverain.
 
-### La figure résolvante
+### La figure résolvante — deux patterns canoniques
 
-En général, on observe que la figure qui résout la guerre sociale est un **tiers** — une figure populiste s'appuyant sur les clientèles délaissées par les deux factions et sur la classe moyenne administrative pour forcer les puissants à plier devant le pouvoir central. Henri IV, Henri VII, Philippe V offrent des concessions et un compromis légal qui en réalité renforcent le pouvoir central. L'abandon progressif des clientèles par les élites rend ces populations disponibles pour de telles figures.
+**Pattern 1 (le plus courant) : tiers populiste neutre.** La figure qui résout la guerre sociale est souvent un **tiers non affilié aux deux factions** — figure populiste s'appuyant sur les clientèles délaissées par les deux camps et sur la classe moyenne administrative pour forcer les puissants à plier devant le pouvoir central. Henri IV, Henri VII, Philippe V offrent des concessions et un compromis légal qui en réalité renforcent le pouvoir central. L'abandon progressif des clientèles par les élites rend ces populations disponibles pour de telles figures. C'est le pattern majoritaire dans le corpus et celui qu'on teste en premier.
 
-Mais le tiers neutre est une **observation empirique fréquente**, pas un critère structurel. Dans le cas d'Israël (prolongement), la guerre sociale se superpose à une guerre d'indépendance : la dynastie hasmonéenne (les Maccabées) n'est pas un tiers — une faction a clairement gagné. Mais le critère essentiel est satisfait : ce qui suit est bien un nouveau cadre du pouvoir, avec renforcement du pouvoir central et subordination des oligarques.
+**Pattern 2 (canonique mais moins fréquent) : faction-gagnante qui crée un nouveau cadre.** Une des deux factions en conflit l'emporte militairement ou politiquement, mais au lieu de simplement marginaliser l'autre faction, elle **crée un nouveau cadre central** qui subordonne les anciennes élites (y compris celles de son propre camp). Dans ce pattern, la figure résolvante n'est pas un tiers — c'est un chef de faction — mais le critère structurel reste satisfait : le cadre qui s'installe ensuite n'est pas la reconduction du conflit factionnel, c'est un ordre nouveau qui transcende le clivage précédent. Les cas documentés : Omri en Israël antique (campagne militariste qui exclut unilatéralement les anciennes élites et crée un État central administratif sans pacte formel préalable) ; la dynastie hasmonéenne (Simon Thassi) issue de la faction yahviste maccabéenne, qui construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque) rendu héréditaire. Le pattern 2 est particulièrement fréquent quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive.
 
-Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne militairement mais sans qu'un nouveau cadre central émerge — la guerre sociale n'est tout simplement **pas résolue**, et la phase oligarchique se poursuit.
+**Critère structurel invariant.** Ce qui compte, ce n'est pas la provenance de la figure (tiers vs chef de faction) — c'est l'**émergence d'un nouveau cadre central** qui renforce le pouvoir central et subordonne les anciennes élites oligarchiques. Le tiers neutre est une **observation empirique fréquente**, pas un critère structurel.
+
+**Non-résolution.** Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne militairement mais sans qu'un nouveau cadre central émerge (reconduction du clivage, restauration de l'ordre ancien, fusion oligarchique sans subordination) — la guerre sociale n'est tout simplement **pas résolue**, et la phase oligarchique se poursuit.
 
 ### Exemples
 
@@ -193,4 +219,3 @@ Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus
 | Suisse | Tagsatzung (~1501) | Occupation de Milan (~1512) | Paysans / Villmergen (1653-1712) | Patriciat trans-confessionnel (1712) |
 | Bavière | Guillaume IV (1508) | Albert V (~1555) | ~1564-1597 | Maximilien Ier (1597) |
 | Autriche | Maximilien Ier (1518) | Léopold Ier (~1683) | Succession d'Autriche (1740-1748) | Marie-Thérèse (1749) |
-| Allemagne (Prusse) | Grand Électeur (~1640) | — | ~1660-1713 | Frédéric-Guillaume Ier (1713) |

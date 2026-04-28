@@ -137,17 +137,26 @@ Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la struc
 
 Le pacte ne survient que quand les deux conditions sont réunies simultanément : homogénéité des oligarques à l'échelle du royaume + moment de faiblesse du suzerain. C'est pour cela que le pacte survient très vite après la crise (France : 1314→1317, Angleterre : 1307→1311).
 
-### Critère discriminant : première codification négociée et entérinée des responsabilités du suzerain
+### Critère discriminant : la garantie collective de la stabilité aux successions
 
-Le pacte oligarchique est **la première codification collective, négociée et entérinée, des responsabilités du suzerain**. Trois éléments discriminants :
+**Ce que le pacte oligarchique doit produire structurellement** : la stabilité du régime aux successions est désormais garantie collectivement par les élites, et le pouvoir survit au remplacement du suzerain. C'est le résultat à atteindre — celui qui fait basculer le test discriminant féodal/oligarchique (cf. supra). Le pacte est l'acte par lequel les oligarques fournissent cette garantie.
 
-1. **Codification** — un acte écrit, formel, qui fixe des règles.
-2. **Responsabilités du suzerain** — le pacte codifie ce que le suzerain *doit* faire (règles de succession, obligations fiscales, règles de levée d'armée, partage de la souveraineté), pas simplement ce qu'il *peut* faire.
-3. **Négocié et entériné** — issu d'une assemblée collective des oligarques (diète, états, Landtag, Cortès, parlement), non d'une décision unilatérale du souverain.
+Trois éléments structurels caractérisent l'acte :
 
-Ce critère permet de distinguer le pacte oligarchique des **créations institutionnelles unilatérales** du souverain, qui ne sont pas des pactes : Philippe le Bel crée le Parlement de Paris, la Chambre des comptes et une administration bureaucratique, mais ces créations sont unilatérales — le vrai pacte oligarchique français est la loi salique de 1317, négociée par les états au moment de la crise de succession. De même, Omri en Israël antique crée un État avec administration, fisc et armée permanents, mais unilatéralement — et c'est pourquoi Israël n'a pas de pacte oligarchique canonique identifié.
+1. **Codification** — un acte formel, daté, qui fixe des règles (et non une accumulation coutumière diffuse).
+2. **Caractère collectif** — issu d'une assemblée des oligarques (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers), non d'une décision unilatérale du souverain.
+3. **Moment de faiblesse** — opéré quand les deux conditions de Deblonde (homogénéité + faiblesse) convergent.
 
-Vérification empirique sur le corpus : 11 parcours canoniques sur 12 satisfont ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Autriche, Allemagne, USA). Israël antique est la seule exception documentée — Omri crée l'État sans codification négociée, ce qui laisse la phase féodale israélite sans pacte canonique.
+**Deux chemins admis pour produire la stabilité aux successions.** Empiriquement, le corpus présente deux chemins distincts qui produisent le même résultat structurel ; le critère universel est ce qui est atteint, pas le contenu spécifique de la codification.
+
+- **Chemin A — codification de la succession.** L'acte fixe explicitement qui hérite ou comment l'élection se fait. Le pouvoir survit aux successions parce que la transmission est verrouillée. Cas : France 1317 (loi salique aux États généraux), Venise 1032 (abolition de la co-régence par l'arengo), Bavière 1506 (primogéniture devant les Landstände).
+- **Chemin B — codification de l'exercice du pouvoir.** L'acte ne traite pas de la succession mais encadre l'exercice du pouvoir (consentement aux nominations, contrôle des finances, des campagnes militaires) au point que le pouvoir cesse d'être le patrimoine personnel du suzerain. Le pouvoir survit aux successions parce que le souverain est devenu accessoire à un appareil institutionnel collégial. Cas : Angleterre 1311 (Ordonnances des Lords Ordainers contraignant Édouard II) — preuve empirique : déposition d'Édouard II en 1327 sans que l'État ne vacille.
+
+Les deux chemins sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux (Venise : chemin A en 1032, complété par déploiement de chemin B avec le Minor Consiglio coutumier ~1140 puis la Promissio écrite en 1172 — mais c'est de la maturation institutionnelle dans la phase déjà ouverte par 1032, pas un nouveau PO).
+
+**Distinction avec les créations institutionnelles unilatérales.** Le pacte ne se confond pas avec la simple existence d'institutions centrales. Philippe le Bel crée le Parlement de Paris, la Chambre des comptes et une administration bureaucratique, mais ces créations sont des outils du roi — la loi salique de 1317 est le vrai pacte parce que c'est l'acte par lequel les états entérinent collectivement la règle. De même en Angleterre, l'Échiquier (XIIe), le Parlement (Simon de Montfort 1265, modèle d'Édouard Ier 1295) et la common law préexistent aux Ordonnances de 1311 ; ce que 1311 ajoute, c'est que les barons s'approprient collectivement ces structures et les rendent contraignantes pour le roi. Le test décisif n'est donc pas « les structures existent-elles ? » mais « les oligarques se les sont-ils collectivement appropriées par un acte de codification ? ». Omri en Israël antique crée un État avec administration, fisc et armée permanents, mais unilatéralement — et c'est pourquoi Israël n'a pas de pacte oligarchique canonique identifié.
+
+Vérification empirique sur le corpus : 10 parcours canoniques sur 11 satisfont ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Autriche, USA). Israël antique est la seule exception documentée — Omri crée l'État sans codification négociée, ce qui laisse la phase féodale israélite sans pacte canonique.
 
 | Nation | Date | Exemple |
 |---|---|---|
@@ -178,7 +187,6 @@ Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus
 | Israël antique | Saül (~-1080) | David (~-1003), Salomon (~-960) | Non identifié / Omri (-885) | ~195 ans |
 | Venise | Orso Ipato (~726) | Galbaio (~764), Partecipazio (~811), Candiano (~959), Orseolo (~991) | Abolition co-régence (1032) | ~306 ans |
 | Angleterre [1] (avortée) | Ecgberht (~829) | Æthelstan (~930), Edgar (~965), Cnut (~1025) | — (avortée, reboot normand) | ~237 ans |
-| Allemagne [impériale] (bloquée) | Henri Ier (~919) | Henri III (~1039) | — (bloquée, transfert territorial) | ~330 ans |
 | Milan | Landolfo II (979) | Ariberto (~1018) | Commune (1097) | ~118 ans |
 | Espagne | Ferdinand Ier (~1035) | Alphonse VI (~1085), Ferdinand III (1230), Alphonse X (~1265), Alphonse XI (1340) | Trastámara (1369) | ~334 ans |
 | Angleterre [2] | Guillaume (1066) | Henri Ier (~1120), Henri II (~1170), Édouard Ier (~1295) | Ordonnances (1311) | ~261 ans |
@@ -188,5 +196,4 @@ Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus
 | Piémont | Thomas II (1233) | Philippe Ier d'Achaïe (~1295), Amédée d'Achaïe (~1380) | Statuta Sabaudiae (1430) | ~197 ans |
 | Suisse | Bundesbrief (1291) | Sempach (1386), Guerres de Bourgogne (~1474) | Stanser Verkommnis (1481) | ~190 ans |
 | Autriche [2] | Rudolf IV (1358) | — | Innsbrucker Libell (1518) | ~160 ans |
-| Allemagne [Prusse] | Frédéric Ier (~1415) | — | ~1640 | ~225 ans |
 | USA | ~1776 | Lincoln/Grant (~1865), McKinley/T. Roosevelt (~1905) | Fed + IRS (1913) | ~137 ans |

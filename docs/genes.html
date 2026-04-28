@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Gênes</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:730px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        
+        <h1>Gênes</h1>
+        <span class='header-badge badge-status wip'>à valider</span>
+    </div>
+    <div class="header-subtitle">Parcours de Gênes (Ligurie)</div>
+</div>
+
+
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:0.8631%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:13.1936%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1100</div>
+        </div>
+        <div class="tick" style="left:25.5240%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:37.8545%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1300</div>
+        </div>
+        <div class="tick" style="left:50.1850%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:62.5154%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1500</div>
+        </div>
+        <div class="tick" style="left:74.8459%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:87.1763%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1700</div>
+        </div>
+        <div class="tick" style="left:99.5068%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        
+        <div class="phase-band" style="left:0.8631%;width:11.9605%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (~1000 — 1097)&#10;Phase féodale très courte, caractéristique d&#39;une cité-État italienne dense. Pas de pic féodal individuel identifiable — la structure est urbaine et corporative plutôt que territoriale. Pas de crise féodale formelle non plus — le pacte arrive directement au moment où l&#39;homogénéité de classe et la pression marchande se conjuguent. Les grandes familles héritières des vicomtes carolingiens (Fieschi, Grimaldi, Doria, Spinola, Tartaro) partagent informellement le pouvoir sous supervision épiscopale sommaire."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">~1000 — 1097</div>
+        </div>
+        <div class="phase-band" style="left:12.8237%;width:29.8397%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (1097 — 1339)&#10;Phase oligarchique de durée canonique (~242 ans). Construction institutionnelle rapide. Expansion maritime agressive (Croisades, comptoirs orientaux, victoires sur Pise et Venise). Tension croissante entre aristocratie traditionnelle (Fieschi/Grimaldi Guelphes ; Doria/Spinola Gibelins) et populares (classe marchande enrichie). Résolution endogène en 1339 par révolution populaire qui institue le dogat à vie."
+            onclick="showDetail(4)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">1097 — 1339</div>
+        </div>
+        <div class="phase-band" style="left:42.6634%;width:20.5919%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste (forme 4)&lt;/strong&gt; (1339 — 1506)&#10;Absolutisme collectif par consortium oligarchique (forme 4 canonique). Le dogat à vie institué par la révolution populaire de 1339 ouvre la phase, mais le cadre central est immédiatement capturé par les lignages marchands rivaux (Fregoso/Adorno) qui se coordonnent collectivement. Le Banco di San Giorgio (fondé 1407) formalise institutionnellement le consortium oligarchique qui absorbe progressivement les fonctions d&#39;État. L&#39;appareil central reste propriété collective institutionnalisée du patriciat."
+            onclick="showDetail(12)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1339 — 1506</div>
+        </div>
+        <div class="phase-band" style="left:63.2552%;width:2.7127%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (aboutie)&lt;/strong&gt; (1506 — 1528)&#10;RN aboutie en 22 ans. Saillants présents : Éclatement de l&#39;AR (cappette 1506), Expérience parlementaire (Paolo da Novi 1506-1507), Phase aiguë tronquée (Louis XII 1507), Glorieuse Révolution (Doria 1528). Saillants absents : Moment thermidorien (tronqué par intervention française), Émergence de l&#39;IR (cité-État trop petite pour produire un IR endogène). La sous-phase canonique « Impérialisme revanchard » est de ce fait absente. La sous-phase « Restauration » prend la forme exogène des dominations françaises 1507-1527."
+            onclick="showDetail(20)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale</div>
+            <div class="phase-band-dates">1506 — 1528</div>
+        </div>
+        <div class="phase-band" style="left:65.9679%;width:33.1689%;
+            background:#c6e3ff;border-top:3px solid #1E90FF;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase parlementaire contrariée (figée)&lt;/strong&gt; (1528 — 1797)&#10;Régime aristocratique stable sous tutelle impériale espagnole puis autrichienne. Marqueurs parlementaires formels présents (subordination de l&#39;exécutif, rotation, bicaméralisme, égalité juridique intra-patricien) mais **phase parlementaire figée** : corps civique strictement fermé aux popolari (~800 familles patriciennes, 5 % des foyers), absence de mouvement sinistrogyre d&#39;élargissement endogène pendant 269 ans. Stabilité paradoxalement élevée parce que la pression extérieure garantit le cadre."
+            onclick="showDetail(27)">
+            <div class="phase-band-label" style="color:#1E90FF;">Parlementaire</div>
+            <div class="phase-band-dates">1528 — 1797</div>
+        </div>
+        
+        <div class="subphase-band" style="left:0.8631%;width:11.9605%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (~1000 — 1097)&#10;Coagulation urbaine sans pic féodal individuel. Les grandes familles émergent comme lignages structurants issus des vicomtes carolingiens, sous supervision épiscopale sommaire. Le sac fatimide de 934-935 et la reconstruction accélèrent la conscience civique. La tension latente et l&#39;émergence d&#39;une classe marchande enrichie par les premières activités maritimes précipitent la solution communale collective."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:12.8237%;width:24.7842%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (1097 — 1298)&#10;Construction institutionnelle rapide et projection maritime. Participation aux Croisades, comptoirs orientaux, rivalité avec Pise et Venise. Le podestat étranger (1190, consolidé 1217) et le capitaine du peuple (1257, Guglielmo Boccanegra) sont des basculements institutionnels intra-essor pour gérer les factions montantes — pas des saillants canoniques. L&#39;énergie élitaire est absorbée par le commerce extérieur jusqu&#39;à la fin de l&#39;expansion (Curzola 1298)."
+            onclick="showDetail(5)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:37.6079%;width:2.4661%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (1298 — 1318)&#10;Après la fin de l&#39;expansion (Curzola 1298), la dynamique principale bascule vers la lutte pour le contrôle du commune. Tensions Guelphes (Fieschi/Grimaldi) vs Gibelins (Doria/Spinola), et entre aristocraties traditionnelles et populares-marchands enrichis. Pas de saillant-pivot canonique pour la borne — basculement dynamique, durée ~20 ans dans la norme étendue. Premier épisode ouvert du conflit datable autour de 1318 (reprise des Guelphes après alternance violente)."
+            onclick="showDetail(9)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:40.0740%;width:2.5894%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1318 — 1339)&#10;Conflit ouvert entre aristocrates traditionnels (Fieschi/Grimaldi/Doria/Spinola) et populares (classe marchande enrichie). **Forme mixte** : clivage économique (patrimonial vs prébendier) exprimé via le mode institutionnel (podestat vs capitano del popolo) et politique (Guelphes/Gibelins). Résolution en 1339 par révolution populaire qui acclame Simone Boccanegra (roturier marchand) comme premier doge à vie. Durée ~21 ans, dans la norme canonique (15-60 ans)."
+            onclick="showDetail(10)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:42.6634%;width:8.3847%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1339 — 1407)&#10;Consolidation progressive du cadre forme 4. Le dogat à vie est capturé par les factions marchandes (Fregoso, Adorno) qui excluent effectivement les anciennes aristocraties féodales du pouvoir suprême. Le commune endetté cède progressivement ses fonctions fiscales à des consortiums de créanciers oligarques. Borne fin : fondation du Banco di San Giorgio (1407), qui formalise institutionnellement le consortium et marque la consolidation. **Pas de DGRO** — structurellement absente (patriciat sans assise territoriale)."
+            onclick="showDetail(13)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band" style="left:51.0481%;width:8.3847%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (1407 — 1475)&#10;Apogée coloniale sous le consortium Banco : Chios (via Mahona Giustiniani 1346, conservée), Famagusta (1372-1464), Caffa et la Gazaria, cession formelle de la Corse au Banco (1453). Projection financière et commerciale. **Pas de Remontrance** comme borne fin — structurellement absente (pas de classe administrative). Borne fin par la perte de Caffa (1475), saillant « Fin de l&#39;expansion absolutiste » qui marque l&#39;épuisement de l&#39;exutoire colonial."
+            onclick="showDetail(15)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band narrow" style="left:59.4328%;width:3.8224%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime&lt;/strong&gt; (1475 — 1506)&#10;Ancien Régime court (~31 ans). Borne début par la fin de l&#39;expansion absolutiste (Caffa 1475) — Remontrance structurellement absente. Sédimentation des lignages Fregoso/Adorno, surproduction élitaire compressée par la taille, pression populaire croissante. Le clivage G-D saute : bloc élitaire des grandes familles marchandes dominant le dogat contre bloc contestataire où convergent les anciennes aristocraties marginalisées (ED) et la classe populaire urbaine (EG — artisans, petits commerçants, futurs cappette). La domination française continue depuis 1499 cristallise la convergence contre le bloc élitaire pro-français."
+            onclick="showDetail(19)">
+            <span class="subphase-label">Ancien Régime</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:63.2552%;width:0.1233%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1506 — 1507)&#10;Révolte populaire endogène contre la caste dirigeante Fregoso/Adorno et leur allié français. Éclatement de l&#39;AR forme 4. Expérience parlementaire brève (tribuns plébéiens, dogat Paolo da Novi). Phase aiguë tronquée par Louis XII en avril 1507. Pas de moment thermidorien endogène — la sous-phase se termine par l&#39;écrasement français qui ouvre la sous-phase Restauration (forme exogène)."
+            onclick="showDetail(21)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:63.3785%;width:2.5894%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Restauration (sous forme exogène)&lt;/strong&gt; (1507 — 1528)&#10;Vingt ans de dominations françaises presque continues (1507-1522 puis 1527). **Pas d&#39;IR endogène** — la sous-phase canonique « Impérialisme revanchard » est absente. La période est structurellement une **Restauration sous forme exogène** : les dominations étrangères jouent le rôle fonctionnel de la sous-phase Restauration en empêchant la consolidation endogène d&#39;un nouveau cadre. La sous-phase se termine par la Glorieuse Révolution (Doria 1528)."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Restauration (sous forme exogène)</span>
+        </div>
+        
+        <div class="perturbation-overlay" style="left:49.6917%;width:12.7004%;"
+            data-tooltip="&lt;strong&gt;Dominations étrangères successives&lt;/strong&gt; (1396 — 1499)&#10;Type : &#10;Mécanisme : choc exogène répété (France 1396-1409, Monferrato 1409-1413, Visconti 1421-1435, Sforza 1464-1478 et 1487-1499, France 1499-1512). Effet : prolongement — le cadre central (dogat + Banco) survit aux dominations sans être détruit, mais la dynamique endogène de consolidation est gelée. Chaque faction en déclin appelle une puissance étrangère pour se relever."
+            onclick="showDetail(17)">
+            <span class="perturbation-label">Dominations étrangères successives</span>
+        </div>
+        <div class="perturbation-overlay narrow" style="left:71.5166%;width:0.3699%;"
+            data-tooltip="&lt;strong&gt;Tension vecchi/nuovi — Leges Novae&lt;/strong&gt; (1573 — 1576)&#10;Type : &#10;Ajustement intra-phase. Vecchi (vieille noblesse bancaire, plus proche de l&#39;Espagne) et nuovi (nouvelle noblesse commerçante) négocient le poids relatif de leurs composantes. Résolution par les Leges Novae (1576) qui abolissent les alberghi artificiels de 1528. Fusion progressive qui stabilise le régime."
+            onclick="showDetail(28)">
+            <span class="perturbation-label">Tension vecchi/nuovi — Leges Novae</span>
+        </div>
+        <div class="perturbation-overlay" style="left:69.5438%;width:8.6313%;"
+            data-tooltip="&lt;strong&gt;Siècle des Génois&lt;/strong&gt; (1557 — 1627)&#10;Type : &#10;Exutoire financier privé. Banquiers génois dominent les finances de la monarchie hispanique via les asientos (contrats privés). Enrichit la classe patricienne sans grossir l&#39;État central. Pas un exutoire d&#39;État au sens du test formel."
+            onclick="showDetail(29)">
+            <span class="perturbation-label">Siècle des Génois</span>
+        </div>
+        <div class="perturbation-overlay narrow" style="left:81.7509%;width:0.1233%;"
+            data-tooltip="&lt;strong&gt;Peste de 1656-1657&lt;/strong&gt; (1656 — 1657)&#10;Type : &#10;Peste bubonique, ~50 % mortalité. Institutions intactes mais moteurs au ralenti."
+            onclick="showDetail(30)">
+            <span class="perturbation-label">Peste de 1656-1657</span>
+        </div>
+        <div class="perturbation-overlay" style="left:85.2035%;width:42.1702%;"
+            data-tooltip="&lt;strong&gt;Bombardement français&lt;/strong&gt; (1684 — ?)&#10;Type : &#10;Flotte française sur ordre de Louis XIV en représailles de l&#39;alliance espagnole. Doge Imperiale Lercaro doit se rendre à Versailles présenter ses excuses (1685) — premier doge à sortir de la République pendant son mandat. Humiliation institutionnelle, bascule vers neutralité prudente."
+            onclick="showDetail(31)">
+            <span class="perturbation-label">Bombardement français</span>
+        </div>
+        <div class="perturbation-overlay" style="left:92.8483%;width:34.5253%;"
+            data-tooltip="&lt;strong&gt;Révolte Balilla&lt;/strong&gt; (1746 — ?)&#10;Type : &#10;Révolte populaire (5-10 décembre 1746) contre l&#39;occupation austro-piémontaise pendant la guerre de Succession d&#39;Autriche. Libère la cité. Récupérée par le gouvernement patricien comme victoire républicaine. Pas d&#39;impact institutionnel durable."
+            onclick="showDetail(32)">
+            <span class="perturbation-label">Révolte Balilla</span>
+        </div>
+        <div class="perturbation-overlay" style="left:95.5610%;width:31.8126%;"
+            data-tooltip="&lt;strong&gt;Perte de la Corse&lt;/strong&gt; (1768 — ?)&#10;Type : &#10;Mécanisme : correction d&#39;échelle (perte de la dernière grande marge territoriale après 26 ans de révolte de Paoli). Effet : accélération de la fragilisation finale du régime, prépare la vulnérabilité au choc révolutionnaire français."
+            onclick="showDetail(33)">
+            <span class="perturbation-label">Perte de la Corse</span>
+        </div>
+        
+    <div class="area-chart" style="top:230px;">
+        
+        <div class="area-chart-label" style="left:0.8631%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:12.8237%;width:12.7004%;height:3.4px;"><div class="area-noyau" style="height:3.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~1 000 km² — Gênes et contado immédiat"></div></div>
+        <div class="area-step-group" style="left:25.5240%;width:10.3576%;height:10.3px;"><div class="area-noyau" style="height:10.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~3 000 km² — Rivières ligures en cours d&#39;intégration"></div></div>
+        <div class="area-step-group has-marges" style="left:35.8816%;width:7.6449%;height:55.1px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:37.9px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~11 000 km² — Corse et comptoirs orientaux"></div></div>
+        <div class="area-step-group has-marges" style="left:43.5265%;width:7.5216%;height:62.0px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:44.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~13 000 km² — + Chios sous Mahona Giustiniani (société privée)"></div></div>
+        <div class="area-step-group has-marges" style="left:51.0481%;width:5.6720%;height:62.0px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:44.8px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~13 000 km² — Fondation du Banco di San Giorgio"></div></div>
+        <div class="area-step-group has-marges" style="left:56.7201%;width:2.7127%;height:55.1px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:37.9px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~11 000 km² — Cession Corse et colonies au Banco"></div></div>
+        <div class="area-step-group has-marges" style="left:59.4328%;width:11.2207%;height:34.4px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:17.2px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~5 000 km² — Perte de Caffa et de la Gazaria aux Ottomans"></div></div>
+        <div class="area-step-group has-marges" style="left:70.6535%;width:14.5499%;height:48.2px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~9 000 km² — Perte de Chios, la Corse reste sous Banco"></div></div>
+        <div class="area-step-group has-marges" style="left:85.2035%;width:7.1517%;height:48.2px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~9 000 km² — Bombardement français, bascule vers neutralité"></div></div>
+        <div class="area-step-group has-marges" style="left:92.3551%;width:3.2059%;height:48.2px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km²"></div><div class="area-marges" style="bottom:17.2px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~9 000 km² — Perte de Tabarka (négligeable)"></div></div>
+        <div class="area-step-group" style="left:95.5610%;width:3.5758%;height:17.2px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km² — Perte de la Corse à la France"></div></div>
+        <div class="area-step-group" style="left:99.1369%;width:2.2195%;height:17.2px;"><div class="area-noyau" style="height:17.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km² — Avant République Ligurienne"></div></div>
+        <div class="area-step-group" style="left:101.3564%;width:-1.3564%;height:0.0px;"><div class="area-noyau" style="height:0.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~0 km² — Absorption par le Piémont-Sardaigne"></div></div>
+        
+        <div class="area-edge" style="left:25.5240%;height:10.3px;"></div>
+        <div class="area-edge" style="left:35.8816%;height:55.1px;"></div>
+        <div class="area-edge" style="left:43.5265%;height:62.0px;"></div>
+        <div class="area-edge" style="left:51.0481%;height:62.0px;"></div>
+        <div class="area-edge" style="left:56.7201%;height:62.0px;"></div>
+        <div class="area-edge" style="left:59.4328%;height:55.1px;"></div>
+        <div class="area-edge" style="left:70.6535%;height:48.2px;"></div>
+        <div class="area-edge" style="left:85.2035%;height:48.2px;"></div>
+        <div class="area-edge" style="left:92.3551%;height:48.2px;"></div>
+        <div class="area-edge" style="left:95.5610%;height:48.2px;"></div>
+        <div class="area-edge" style="left:99.1369%;height:17.2px;"></div>
+        <div class="area-edge" style="left:101.3564%;height:17.2px;"></div>
+    </div>
+        
+        <div class="area-saillant-group" style="left:59.4328%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Perte de Caffa (1475)&#10;Mécanisme : correction d&#39;échelle — chute de Caffa face aux Ottomans (juin 1475). Effet : accélération — la perte du réseau commercial crimée-pontique met fin à l&#39;exutoire colonial oriental. Marque la transition impérialisme absolutiste → Ancien Régime (faute de Remontrance comme borne canonique)."
+                onclick="showDetail(18)">
+                <span class="material-icons">compress</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Fin de l&#39;expansion</span><span class="saillant-date">1475</span></div>
+        </div>
+        
+        <div class="saillant-group" style="left:0.8631%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Marca Januensis (~1000)&#10;Émergence de Gênes comme entité autonome au Xe-XIe siècle sous la Marca Januensis des Obertenghi. Éveil diffus, sans figure incarnée — la structure est collective dès le départ."
+                onclick="showDetail(2)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Marca Januensis</span><span class="saillant-date">~1000</span></div>
+        </div>
+        <div class="saillant-group" style="left:12.8237%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Compagna Communis (1097)&#10;La Compagna Communis (1097) satisfait proprement le critère discriminant du pacte oligarchique : première codification négociée et entérinée des responsabilités de l&#39;exécutif, par assemblée des feudataires impériaux + corporations + huit Compagne Rionali sous l&#39;évêque Arialdo. Dès 1099, les consuls sont élus annuellement par assemblée populaire dans la cathédrale San Lorenzo, avec pouvoirs législatif-judiciaire-exécutif codifiés."
+                onclick="showDetail(3)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Compagna Communis</span><span class="saillant-date">1097</span></div>
+        </div>
+        <div class="saillant-group" style="left:13.0703%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Consulat (1099)&#10;Le système consulaire (dès 1099, magistrature annuelle à partir de ~1122) satisfait les marqueurs nécessaires de la phase oligarchique : fisc communal permanent, milices communales permanentes, administration institutionnalisée. Le « monarque » est collectif — cas de suzerain collectif canonique pour cité-État."
+                onclick="showDetail(6)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Consulat</span><span class="saillant-date">1099</span></div>
+        </div>
+        <div class="saillant-group" style="left:35.8816%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Acmé oligarchique&lt;/strong&gt;&#10;Meloria (1284)&#10;Victoire navale écrasante contre Pise (août 1284). Hégémonie en Méditerranée occidentale. Sommet de la puissance communale. Position ~0.93 dans la phase oligarchique (très tardive), soutenue par l&#39;essor commercial maritime exceptionnellement long."
+                onclick="showDetail(7)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé oligarchique</span><span class="saillant-figure">Meloria</span><span class="saillant-date">1284</span></div>
+        </div>
+        <div class="saillant-group" style="left:37.6079%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Curzola (1298)&#10;La victoire de Curzola (1298) contre Venise est le dernier triomphe maritime génois de la phase oligarchique. Marque la fin effective de l&#39;expansion extérieure et la transition vers la polarisation interne. Coïncide avec le basculement essor → polarisation."
+                onclick="showDetail(8)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Curzola</span><span class="saillant-date">1298</span></div>
+        </div>
+        <div class="saillant-group" style="left:40.0740%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Aristocrates contre populares (1318)&#10;**Forme mixte** : aristocratie traditionnelle (patrimoniaux féodaux) contre populares (prébendiers, classe marchande enrichie). **Mode d&#39;expression institutionnel** (podestat/capitano del popolo) et politique (Guelphes/Gibelins). Résolution en 1339 par victoire populaire — pattern 2 (faction-gagnante crée nouveau cadre central via dogat à vie, qui sera capturé collectivement → forme 4)."
+                onclick="showDetail(11)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Aristocrates contre populares</span><span class="saillant-date">1318</span></div>
+        </div>
+        <div class="saillant-group" style="left:42.6634%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Dogat à vie + consortium oligarchique (1339)&#10;Simone Boccanegra, descendant roturier du premier capitano del popolo, est acclamé doge à vie par révolution populaire en 1339. L&#39;institution dogale à vie marque l&#39;ouverture de la phase absolutiste forme 4 : un nouveau cadre central se construit, mais comme propriété collective des lignages oligarchiques (successivement Fregoso/Adorno), formalisé en 1407 par le Banco di San Giorgio."
+                onclick="showDetail(14)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Dogat à vie + consortium oligarchique</span><span class="saillant-date">1339</span></div>
+        </div>
+        <div class="saillant-group" style="left:51.0481%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Acmé absolutiste&lt;/strong&gt;&#10;Apogée coloniale (1407)&#10;Acmé diffuse sur ~1407-1453 — pas de figure individuelle dominante, conformément à la forme 4. Combinaison de l&#39;apogée coloniale (Chios, Famagusta, Gazaria), de la fondation du Banco (1407) et de la cession formelle de la Corse au Banco (1453) qui marque la formalisation maximale du consortium comme appareil d&#39;État collectif."
+                onclick="showDetail(16)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé absolutiste</span><span class="saillant-figure">Apogée coloniale</span><span class="saillant-date">1407</span></div>
+        </div>
+        <div class="saillant-group" style="left:63.2552%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Éclatement de l&#39;AR&lt;/strong&gt;&#10;Rivolta delle Cappette (1506)&#10;En septembre 1506, la population populaire (artisans et petits commerçants — les cappette) se soulève contre la noblesse pro-française et la domination de Louis XII. Nobles chassés, plébéiens élisent huit tribuns à Santa Maria di Castello. Test discriminant satisfait : bloc contestataire renverse bloc élitaire."
+                onclick="showDetail(22)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éclatement de l&#39;AR</span><span class="saillant-figure">Rivolta delle Cappette</span><span class="saillant-date">1506</span></div>
+        </div>
+        <div class="saillant-group" style="left:63.2552%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Tribuns plébéiens et Paolo da Novi (1506)&#10;Octobre-novembre 1506 : magistrature de neuf tribuns plébéiens (Paolo da Novi, Marco da Terrile, Nicola Pittaluga). Le 10 avril 1507, Paolo da Novi (teinturier roturier) est nommé doge — première figure roturière au dogat. Monnaies « Libertas populi Januensis ». Dogat de 18 jours. Revendication explicite de partage 2/3 des charges pour les roturiers."
+                onclick="showDetail(23)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Tribuns plébéiens et Paolo da Novi</span><span class="saillant-date">1506</span></div>
+        </div>
+        <div class="saillant-group" style="left:63.3785%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Écrasement par Louis XII (1507)&#10;Le 28 avril 1507, Louis XII entre dans Gênes à la tête de ses troupes et met fin à la République populaire. Paolo da Novi exécuté le 15 juin 1507. La phase aiguë n&#39;a pas le temps de se radicaliser endogènement — elle est tronquée par intervention extérieure qui joue fonctionnellement le rôle de fermeture de la sous-phase « Révolution initiale »."
+                onclick="showDetail(24)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">Écrasement par Louis XII</span><span class="saillant-date">1507</span></div>
+        </div>
+        <div class="saillant-group" style="left:65.9679%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Réforme Doria (1528)&#10;Andrea Doria reprend Gênes le 12 septembre 1528 au service de Charles Quint et fait reconnaître l&#39;indépendance par l&#39;empereur. Recourant à l&#39;assemblée du peuple, il fait nommer douze réformateurs qui promulguent la nouvelle constitution. Doge élu pour deux ans, 28 alberghi officiels rassemblant une noblesse héréditaire d&#39;environ 800 familles, dissolution des Fregoso et Adorno. Bicamérisme (Maggior 400 + Minor 200), tirage au sort, Syndicato. Glorieuse Révolution canonique sous arbitrage impérial — transition vers phase parlementaire contrariée figée."
+                onclick="showDetail(26)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Réforme Doria</span><span class="saillant-date">1528</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 25/04/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','subtitle':'','summary':'Phase féodale très courte, caractéristique d\'une cité-État italienne dense. Pas de pic féodal individuel identifiable — la structure est urbaine et corporative plutôt que territoriale. Pas de crise féodale formelle non plus — le pacte arrive directement au moment où l\'homogénéité de classe et la pression marchande se conjuguent. Les grandes familles héritières des vicomtes carolingiens (Fieschi, Grimaldi, Doria, Spinola, Tartaro) partagent informellement le pouvoir sous supervision épiscopale sommaire.','description':'Après le bref passage sous contrôle franc et la reconnaissance d\'autonomie par le roi d\'Italie Bérenger II, Gênes émerge comme entité commerciale distincte sous la Marca Januensis des Obertenghi (Xe siècle). Jusqu\'à la fin du XIe siècle, la cité n\'a pas de véritable gouvernement central : l\'évêque préside, les grandes familles se partagent l\'influence. La phase féodale est compressée parce que la concentration urbaine produit rapidement l\'homogénéité de classe nécessaire au pacte, et parce qu\'aucune figure ne parvient à émerger comme suzerain effectif — le pacte passe directement, sans pic féodal marqué et sans bascule oligarchique formelle.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — Compagna Communis (1097) fondée par l\'évêque Arialdo, les feudataires impériaux et les huit Compagne Rionali.','resolution_conditions':'','avortement':'','start':1000,'end':1097,'start_approx':true,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'Coagulation urbaine sans pic féodal individuel. Les grandes familles émergent comme lignages structurants issus des vicomtes carolingiens, sous supervision épiscopale sommaire. Le sac fatimide de 934-935 et la reconstruction accélèrent la conscience civique. La tension latente et l\'émergence d\'une classe marchande enrichie par les premières activités maritimes précipitent la solution communale collective.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1000,'end':1097,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Marca Januensis','summary':'Émergence de Gênes comme entité autonome au Xe-XIe siècle sous la Marca Januensis des Obertenghi. Éveil diffus, sans figure incarnée — la structure est collective dès le départ.','description':'','figure':'Obertenghi','confidence':'low','alternatives':'La date (~Xe siècle) est une approximation diffuse — la documentation est rare. L\'éveil peut être situé à l\'émergence progressive de Gênes comme entité maritime distincte sous les Obertenghi, sans figure individuelle identifiable.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1000,'end':null,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','subtitle':'Compagna Communis','summary':'La Compagna Communis (1097) satisfait proprement le critère discriminant du pacte oligarchique : première codification négociée et entérinée des responsabilités de l\'exécutif, par assemblée des feudataires impériaux + corporations + huit Compagne Rionali sous l\'évêque Arialdo. Dès 1099, les consuls sont élus annuellement par assemblée populaire dans la cathédrale San Lorenzo, avec pouvoirs législatif-judiciaire-exécutif codifiés.','description':'L\'organisation explicitement conçue par imitation des entreprises maritimes consacre le passage d\'un pouvoir informel entre grandes familles à un cadre institutionnel stable. Six consuls originaires de l\'aristocratie féodale et commerçante sont élus annuellement à partir de 1122, avec un Consilium d\'anciens consuls exerçant droit de veto. Le clergé est explicitement exclu — forme de rejet de l\'autorité épiscopale. Après 1097, le pouvoir survit aux changements annuels de consuls sans fragmentation : le test discriminant féodal devient négatif.','figure':'Arialdo (évêque)','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1097,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'Phase oligarchique de durée canonique (~242 ans). Construction institutionnelle rapide. Expansion maritime agressive (Croisades, comptoirs orientaux, victoires sur Pise et Venise). Tension croissante entre aristocratie traditionnelle (Fieschi/Grimaldi Guelphes ; Doria/Spinola Gibelins) et populares (classe marchande enrichie). Résolution endogène en 1339 par révolution populaire qui institue le dogat à vie.','description':'Le système consulaire se déploie en un essor maritime et commercial exceptionnel. Gênes supplante Pise (Meloria 1284) et rivalise avec Venise (Curzola 1298). Le recours au podestat étranger (1190, consolidé 1217) puis l\'émergence du capitaine du peuple (Guglielmo Boccanegra, 1257) sont des basculements institutionnels intra-phase qui tentent sans y parvenir de stabiliser le cadre face aux factions. Les tensions inter-factionnelles — d\'abord Guelphes/Gibelins, puis aristocratie/populares — culminent en guerre sociale au début du XIVe siècle. Elle se résout en 1339 par la victoire populaire qui acclame Simone Boccanegra (roturier, famille marchande) comme premier doge à vie — transition vers la phase absolutiste forme 4.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+42 ans. Écart modéré, dans la marge typique.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale aristocrates traditionnels / populares résolue par révolution populaire de 1339 qui institue le dogat à vie de Simone Boccanegra. Ouverture de la phase absolutiste forme 4 (absolutisme collectif par consortium oligarchique).','resolution_conditions':'','avortement':'','start':1097,'end':1339,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'Construction institutionnelle rapide et projection maritime. Participation aux Croisades, comptoirs orientaux, rivalité avec Pise et Venise. Le podestat étranger (1190, consolidé 1217) et le capitaine du peuple (1257, Guglielmo Boccanegra) sont des basculements institutionnels intra-essor pour gérer les factions montantes — pas des saillants canoniques. L\'énergie élitaire est absorbée par le commerce extérieur jusqu\'à la fin de l\'expansion (Curzola 1298).','description':'La rivalité avec Pise se résout par la victoire écrasante de la Meloria (1284) — acmé oligarchique qui consacre l\'hégémonie en Méditerranée occidentale. La rivalité avec Venise atteint son apogée à Curzola (1298). Après cette double consécration maritime, l\'essor extérieur cesse de fonctionner comme exutoire principal, et la dynamique bascule vers la polarisation interne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1097,'end':1298,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Consulat','summary':'Le système consulaire (dès 1099, magistrature annuelle à partir de ~1122) satisfait les marqueurs nécessaires de la phase oligarchique : fisc communal permanent, milices communales permanentes, administration institutionnalisée. Le « monarque » est collectif — cas de suzerain collectif canonique pour cité-État.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1099,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Acmé oligarchique','subtitle':'Meloria','summary':'Victoire navale écrasante contre Pise (août 1284). Hégémonie en Méditerranée occidentale. Sommet de la puissance communale. Position ~0.93 dans la phase oligarchique (très tardive), soutenue par l\'essor commercial maritime exceptionnellement long.','description':'','figure':'Oberto Doria','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1284,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','subtitle':'Curzola','summary':'La victoire de Curzola (1298) contre Venise est le dernier triomphe maritime génois de la phase oligarchique. Marque la fin effective de l\'expansion extérieure et la transition vers la polarisation interne. Coïncide avec le basculement essor → polarisation.','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1298,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'Après la fin de l\'expansion (Curzola 1298), la dynamique principale bascule vers la lutte pour le contrôle du commune. Tensions Guelphes (Fieschi/Grimaldi) vs Gibelins (Doria/Spinola), et entre aristocraties traditionnelles et populares-marchands enrichis. Pas de saillant-pivot canonique pour la borne — basculement dynamique, durée ~20 ans dans la norme étendue. Premier épisode ouvert du conflit datable autour de 1318 (reprise des Guelphes après alternance violente).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1298,'end':1318,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'Conflit ouvert entre aristocrates traditionnels (Fieschi/Grimaldi/Doria/Spinola) et populares (classe marchande enrichie). **Forme mixte** : clivage économique (patrimonial vs prébendier) exprimé via le mode institutionnel (podestat vs capitano del popolo) et politique (Guelphes/Gibelins). Résolution en 1339 par révolution populaire qui acclame Simone Boccanegra (roturier marchand) comme premier doge à vie. Durée ~21 ans, dans la norme canonique (15-60 ans).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1318,'end':1339,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Aristocrates contre populares','summary':'**Forme mixte** : aristocratie traditionnelle (patrimoniaux féodaux) contre populares (prébendiers, classe marchande enrichie). **Mode d\'expression institutionnel** (podestat/capitano del popolo) et politique (Guelphes/Gibelins). Résolution en 1339 par victoire populaire — pattern 2 (faction-gagnante crée nouveau cadre central via dogat à vie, qui sera capturé collectivement → forme 4).','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1318,'end':1339,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste (forme 4)','subtitle':'','summary':'Absolutisme collectif par consortium oligarchique (forme 4 canonique). Le dogat à vie institué par la révolution populaire de 1339 ouvre la phase, mais le cadre central est immédiatement capturé par les lignages marchands rivaux (Fregoso/Adorno) qui se coordonnent collectivement. Le Banco di San Giorgio (fondé 1407) formalise institutionnellement le consortium oligarchique qui absorbe progressivement les fonctions d\'État. L\'appareil central reste propriété collective institutionnalisée du patriciat.','description':'Sous-phases canoniques difficiles à borner sans DGRO ni Remontrance (toutes deux structurellement absentes — cf. infra). Bornes adoptées par marqueurs alternatifs : Absolutisation jusqu\'à la formalisation institutionnelle du consortium (Banco 1407) ; Impérialisme absolutiste jusqu\'à la fin de l\'expansion coloniale (Caffa 1475) ; Ancien Régime jusqu\'à l\'éclatement (cappette 1506). DGRO structurellement absente : les patriciens génois n\'ont pas d\'assise territoriale propre (pattern documenté également pour Venise). Remontrance structurellement absente : pas de classe administrative distincte du patriciat (pas de noblesse de robe).','figure':'','confidence':'','alternatives':'','step':'','deviation':'-33 ans. Dans la norme.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Révolte des cappette (1506) ouvre la Révolution Nationale — éclatement de l\'Ancien Régime forme 4 par révolte populaire contre la caste dirigeante.','resolution_conditions':'','avortement':'','start':1339,'end':1506,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'Consolidation progressive du cadre forme 4. Le dogat à vie est capturé par les factions marchandes (Fregoso, Adorno) qui excluent effectivement les anciennes aristocraties féodales du pouvoir suprême. Le commune endetté cède progressivement ses fonctions fiscales à des consortiums de créanciers oligarques. Borne fin : fondation du Banco di San Giorgio (1407), qui formalise institutionnellement le consortium et marque la consolidation. **Pas de DGRO** — structurellement absente (patriciat sans assise territoriale).','description':'Boccanegra lui-même est ousté en 1345, exilé à Pise, revient 1356, empoisonné 1363. Schéma instable récurrent : aucun doge individuel ne domine durablement, mais le cadre institutionnel survit aux personnes. Les Fregoso et Adorno émergent comme deux lignages marchands concurrents qui se disputeront le dogat à vie pendant ~170 ans. Les anciennes aristocraties (Fieschi, Doria, Spinola, Grimaldi) conservent prestige et ressources mais sont structurellement écartées du dogat. Le Banco di San Giorgio (1407) formalise l\'appareil fiscal-administratif comme consortium privé de créanciers oligarques — moment structurant qui clôt l\'absolutisation et ouvre l\'impérialisme absolutiste.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1339,'end':1407,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Dogat à vie + consortium oligarchique','summary':'Simone Boccanegra, descendant roturier du premier capitano del popolo, est acclamé doge à vie par révolution populaire en 1339. L\'institution dogale à vie marque l\'ouverture de la phase absolutiste forme 4 : un nouveau cadre central se construit, mais comme propriété collective des lignages oligarchiques (successivement Fregoso/Adorno), formalisé en 1407 par le Banco di San Giorgio.','description':'','figure':'Simone Boccanegra','confidence':'medium','alternatives':'Forme 1a (tiers populiste neutre) écartée — Boccanegra est chef de faction populare, pas tiers. Forme 1b partielle mais incomplète — les populares l\'emportent mais ne produisent pas un exécutif autonome. Forme 2 (institution collective stable) écartée — pas de classe administrative distincte. Forme 3 (tiers exogène imposé) écartée — pas de puissance étrangère installant le cadre. Seule la forme 4 (consortium oligarchique collectif) rend compte du pattern observé.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1339,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'Apogée coloniale sous le consortium Banco : Chios (via Mahona Giustiniani 1346, conservée), Famagusta (1372-1464), Caffa et la Gazaria, cession formelle de la Corse au Banco (1453). Projection financière et commerciale. **Pas de Remontrance** comme borne fin — structurellement absente (pas de classe administrative). Borne fin par la perte de Caffa (1475), saillant « Fin de l\'expansion absolutiste » qui marque l\'épuisement de l\'exutoire colonial.','description':'Les dominations étrangères successives à partir de 1396 (France, Monferrato, Visconti, Sforza) perturbent le cadre politique sans détruire le consortium — signature de la forme 4 où l\'appareil central (Banco) est dissocié du cadre politique factionnellement instable. Le Banco gère les colonies au nom de ses actionnaires-créanciers, qui sont les patriciens génois collectivement. C\'est l\'apogée institutionnelle de la forme 4.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1407,'end':1475,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Acmé absolutiste','subtitle':'Apogée coloniale','summary':'Acmé diffuse sur ~1407-1453 — pas de figure individuelle dominante, conformément à la forme 4. Combinaison de l\'apogée coloniale (Chios, Famagusta, Gazaria), de la fondation du Banco (1407) et de la cession formelle de la Corse au Banco (1453) qui marque la formalisation maximale du consortium comme appareil d\'État collectif.','description':'','figure':'Banco di San Giorgio','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1407,'end':1453,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'absolutiste','title':'Dominations étrangères successives','subtitle':'','summary':'Mécanisme : choc exogène répété (France 1396-1409, Monferrato 1409-1413, Visconti 1421-1435, Sforza 1464-1478 et 1487-1499, France 1499-1512). Effet : prolongement — le cadre central (dogat + Banco) survit aux dominations sans être détruit, mais la dynamique endogène de consolidation est gelée. Chaque faction en déclin appelle une puissance étrangère pour se relever.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1396,'end':1499,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fin de l\'expansion','subtitle':'Perte de Caffa','summary':'Mécanisme : correction d\'échelle — chute de Caffa face aux Ottomans (juin 1475). Effet : accélération — la perte du réseau commercial crimée-pontique met fin à l\'exutoire colonial oriental. Marque la transition impérialisme absolutiste → Ancien Régime (faute de Remontrance comme borne canonique).','description':'','figure':'Ottomans','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1475,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime','subtitle':'','summary':'Ancien Régime court (~31 ans). Borne début par la fin de l\'expansion absolutiste (Caffa 1475) — Remontrance structurellement absente. Sédimentation des lignages Fregoso/Adorno, surproduction élitaire compressée par la taille, pression populaire croissante. Le clivage G-D saute : bloc élitaire des grandes familles marchandes dominant le dogat contre bloc contestataire où convergent les anciennes aristocraties marginalisées (ED) et la classe populaire urbaine (EG — artisans, petits commerçants, futurs cappette). La domination française continue depuis 1499 cristallise la convergence contre le bloc élitaire pro-français.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1475,'end':1506,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale (aboutie)','subtitle':'','summary':'RN aboutie en 22 ans. Saillants présents : Éclatement de l\'AR (cappette 1506), Expérience parlementaire (Paolo da Novi 1506-1507), Phase aiguë tronquée (Louis XII 1507), Glorieuse Révolution (Doria 1528). Saillants absents : Moment thermidorien (tronqué par intervention française), Émergence de l\'IR (cité-État trop petite pour produire un IR endogène). La sous-phase canonique « Impérialisme revanchard » est de ce fait absente. La sous-phase « Restauration » prend la forme exogène des dominations françaises 1507-1527.','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Réforme Doria (1528) sous arbitrage impérial de Charles Quint — Glorieuse Révolution. Nouveau cadre bicaméral, 28 alberghi officiels, noblesse élargie à ~800 familles, doge biennal faible, Syndicato post-mandat. Dissolution des Fregoso et Adorno. Transition vers la phase parlementaire contrariée figée.','resolution_conditions':'','avortement':'','start':1506,'end':1528,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Révolte populaire endogène contre la caste dirigeante Fregoso/Adorno et leur allié français. Éclatement de l\'AR forme 4. Expérience parlementaire brève (tribuns plébéiens, dogat Paolo da Novi). Phase aiguë tronquée par Louis XII en avril 1507. Pas de moment thermidorien endogène — la sous-phase se termine par l\'écrasement français qui ouvre la sous-phase Restauration (forme exogène).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1506,'end':1507,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Éclatement de l\'AR','subtitle':'Rivolta delle Cappette','summary':'En septembre 1506, la population populaire (artisans et petits commerçants — les cappette) se soulève contre la noblesse pro-française et la domination de Louis XII. Nobles chassés, plébéiens élisent huit tribuns à Santa Maria di Castello. Test discriminant satisfait : bloc contestataire renverse bloc élitaire.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1506,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Tribuns plébéiens et Paolo da Novi','summary':'Octobre-novembre 1506 : magistrature de neuf tribuns plébéiens (Paolo da Novi, Marco da Terrile, Nicola Pittaluga). Le 10 avril 1507, Paolo da Novi (teinturier roturier) est nommé doge — première figure roturière au dogat. Monnaies « Libertas populi Januensis ». Dogat de 18 jours. Revendication explicite de partage 2/3 des charges pour les roturiers.','description':'','figure':'Paolo da Novi','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1506,'end':1507,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'Écrasement par Louis XII','summary':'Le 28 avril 1507, Louis XII entre dans Gênes à la tête de ses troupes et met fin à la République populaire. Paolo da Novi exécuté le 15 juin 1507. La phase aiguë n\'a pas le temps de se radicaliser endogènement — elle est tronquée par intervention extérieure qui joue fonctionnellement le rôle de fermeture de la sous-phase « Révolution initiale ».','description':'','figure':'Louis XII','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1507,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Restauration (sous forme exogène)','subtitle':'','summary':'Vingt ans de dominations françaises presque continues (1507-1522 puis 1527). **Pas d\'IR endogène** — la sous-phase canonique « Impérialisme revanchard » est absente. La période est structurellement une **Restauration sous forme exogène** : les dominations étrangères jouent le rôle fonctionnel de la sous-phase Restauration en empêchant la consolidation endogène d\'un nouveau cadre. La sous-phase se termine par la Glorieuse Révolution (Doria 1528).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1507,'end':1528,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','subtitle':'Réforme Doria','summary':'Andrea Doria reprend Gênes le 12 septembre 1528 au service de Charles Quint et fait reconnaître l\'indépendance par l\'empereur. Recourant à l\'assemblée du peuple, il fait nommer douze réformateurs qui promulguent la nouvelle constitution. Doge élu pour deux ans, 28 alberghi officiels rassemblant une noblesse héréditaire d\'environ 800 familles, dissolution des Fregoso et Adorno. Bicamérisme (Maggior 400 + Minor 200), tirage au sort, Syndicato. Glorieuse Révolution canonique sous arbitrage impérial — transition vers phase parlementaire contrariée figée.','description':'','figure':'Andrea Doria','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1528,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'parlementaire','title':'Phase parlementaire contrariée (figée)','subtitle':'','summary':'Régime aristocratique stable sous tutelle impériale espagnole puis autrichienne. Marqueurs parlementaires formels présents (subordination de l\'exécutif, rotation, bicaméralisme, égalité juridique intra-patricien) mais **phase parlementaire figée** : corps civique strictement fermé aux popolari (~800 familles patriciennes, 5 % des foyers), absence de mouvement sinistrogyre d\'élargissement endogène pendant 269 ans. Stabilité paradoxalement élevée parce que la pression extérieure garantit le cadre.','description':'Pas de sous-phases canoniques pour la phase parlementaire dans le cadre théorique. La phase est traversée par plusieurs perturbations : ajustement vecchi/nuovi 1573-1576, exutoire financier privé (siècle des Génois 1557-1627), peste 1656-57, bombardement français 1684, perte de la Corse 1768. Aucune ne déstabilise structurellement le régime — la sortie vient exclusivement du choc exogène révolutionnaire français de 1797.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'Très longue (très stable quand non-contrariée)','perturbation_type':'','affected_motor':'','note':'','resolution':'Choc exogène de la Révolution française — République Ligurienne imposée (1797), annexion à l\'Empire napoléonien (1805), absorption finale par le Piémont-Sardaigne au Congrès de Vienne (1815).','resolution_conditions':'','avortement':'','start':1528,'end':1797,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Tension vecchi/nuovi — Leges Novae','subtitle':'','summary':'Ajustement intra-phase. Vecchi (vieille noblesse bancaire, plus proche de l\'Espagne) et nuovi (nouvelle noblesse commerçante) négocient le poids relatif de leurs composantes. Résolution par les Leges Novae (1576) qui abolissent les alberghi artificiels de 1528. Fusion progressive qui stabilise le régime.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1573,'end':1576,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Siècle des Génois','subtitle':'','summary':'Exutoire financier privé. Banquiers génois dominent les finances de la monarchie hispanique via les asientos (contrats privés). Enrichit la classe patricienne sans grossir l\'État central. Pas un exutoire d\'État au sens du test formel.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1557,'end':1627,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Peste de 1656-1657','subtitle':'','summary':'Peste bubonique, ~50 % mortalité. Institutions intactes mais moteurs au ralenti.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1656,'end':1657,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Bombardement français','subtitle':'','summary':'Flotte française sur ordre de Louis XIV en représailles de l\'alliance espagnole. Doge Imperiale Lercaro doit se rendre à Versailles présenter ses excuses (1685) — premier doge à sortir de la République pendant son mandat. Humiliation institutionnelle, bascule vers neutralité prudente.','description':'','figure':'Louis XIV','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1684,'end':null,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Révolte Balilla','subtitle':'','summary':'Révolte populaire (5-10 décembre 1746) contre l\'occupation austro-piémontaise pendant la guerre de Succession d\'Autriche. Libère la cité. Récupérée par le gouvernement patricien comme victoire républicaine. Pas d\'impact institutionnel durable.','description':'','figure':'Giovan Battista Perasso','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1746,'end':null,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Perte de la Corse','subtitle':'','summary':'Mécanisme : correction d\'échelle (perte de la dernière grande marge territoriale après 26 ans de révolte de Paoli). Effet : accélération de la fragilisation finale du régime, prépare la vulnérabilité au choc révolutionnaire français.','description':'','figure':'Pasquale Paoli / France','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1768,'end':null,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 7;
+    const BASE_TOP = 315;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Acmé oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Acmé absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description">${e.description}</div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

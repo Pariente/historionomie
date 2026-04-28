@@ -172,6 +172,4 @@ Milan et la Bavière partagent le mécanisme d'absorption dans un Parcours natio
 
 3. **1848 : RN milanaise ou Risorgimento ?** La réponse dépend du Parcours piémontais. Si le Piémont et Milan sont suffisamment homogénéisés culturellement en 1848, alors 1848 est un épisode du Parcours piémontais/italien. Si Milan conserve une identité distincte, 1848 est une RN milanaise avortée absorbée dans le Parcours italien.
 
-4. **Florence comme cas comparatif urgent.** Florence suit un parcours commune → signoria → duché très similaire à Milan. L'analyse de Florence confirmerait-elle le pattern du double cycle ? Le Grand-Duché de Toscane sous les Habsbourg-Lorraine est-il aussi structurellement oligarchique ?
-
-5. **Le Royaume d'Italie napoléonien (1805-1814) comme creuset du Parcours italien.** Ce royaume de 6,7M d'habitants couvrant Lombardie + Vénétie + Émilie + Frioul + Trentin + Marches est le premier État nord-italien moderne. C'est peut-être le moment où les Parcours régionaux (Milan, Venise, Bologne...) commencent à fusionner dans un Parcours italien commun.
+4. **Le Royaume d'Italie napoléonien (1805-1814) comme creuset du Parcours italien.** Ce royaume de 6,7M d'habitants couvrant Lombardie + Vénétie + Émilie + Frioul + Trentin + Marches est le premier État nord-italien moderne. C'est peut-être le moment où les Parcours régionaux (Milan, Venise, Bologne...) commencent à fusionner dans un Parcours italien commun.

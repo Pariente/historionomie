@@ -128,7 +128,7 @@ Faliero tente exactement ce que le cadre historionomique décrit comme le mécan
 
 ### Les parallèles avec d'autres tentatives avortées
 
-Faliero n'est pas un cas isolé. Les Gracques à Rome (133-121 av. J.-C.) tentent de rallier la plèbe contre le Sénat et échouent. Cola di Rienzo à Rome (1347) tente de restaurer la République romaine en s'appuyant sur le peuple et échoue. Les Ciompi à Florence (1378) — révolte des cardeurs de laine — prennent brièvement le pouvoir avant d'être écrasés. Tous ces cas partagent la même caractéristique : ce sont des tentatives prématurées d'absolutisation.
+Faliero n'est pas un cas isolé. Les Gracques à Rome (133-121 av. J.-C.) tentent de rallier la plèbe contre le Sénat et échouent. Cola di Rienzo à Rome (1347) tente de restaurer la République romaine en s'appuyant sur le peuple et échoue. Tous ces cas partagent la même caractéristique : ce sont des tentatives prématurées d'absolutisation.
 
 ### Les conditions de l'absolutisation réussie
 
@@ -202,23 +202,6 @@ L'Angleterre offre un parallèle structurel sur la longueur des phases. L'Anglet
 
 Les contestations de type polysynodie éclairent aussi le parallèle. En Angleterre, l'Apology of the Commons (1604) est la tentative du Parlement de contester la concentration de pouvoir dans l'exécutif Stuart. À Venise, Querini (1761) et Pisani (1779) sont les tentatives du patriciat de contester la concentration de pouvoir dans l'appareil inquisitorial. Les deux sont des réflexes oligarchiques contre l'absolutisation — et les deux échouent.
 
-### Avec Gênes (le cas-miroir)
-
-Gênes reste le cas-miroir le plus instructif. Même économie maritime, même rivalité géopolitique, mais instabilité chronique là où Venise est stable. La différence : Gênes n'a pas les mécanismes institutionnels sophistiqués de Venise (système électoral en 10 étapes, Conseil des Dix, scuole, privilèges des arsenalotti). Gênes est une phase oligarchique qui « boucle » par la violence (factions, coups d'État, guerres civiles) sans jamais se stabiliser. Venise est une phase oligarchique qui se stabilise par les institutions — et c'est précisément cette stabilité institutionnelle qui permet la mutation silencieuse des Inquisiteurs d'oligarchiques en absolutistes.
-
-Le contraste suggère que la sophistication institutionnelle est à double tranchant : elle empêche les explosions violentes (pas de guerre civile comme à Gênes), mais elle permet une absolutisation graduelle et invisible (les Inquisiteurs s'autonomisent sans que le patriciat s'en rende compte).
-
-### La question des cités-États italiennes
-
-Florence, Gênes, Milan, Venise — toutes sont en phase oligarchique entre ~1200 et ~1500. Mais leurs trajectoires divergent :
-
-- **Florence** : les Ciompi (1378) échouent comme Faliero, mais les Médicis réussissent au XVe siècle — les conditions sont alors réunies (administration développée, élites polarisées, clientèles structurées).
-- **Gênes** : boucles oligarchiques permanentes, instabilité chronique, jamais de résolution endogène claire.
-- **Milan** : transition rapide vers la seigneurie (Visconti, Sforza) — absolutisme personnel précoce.
-- **Venise** : absolutisation institutionnelle silencieuse par les Inquisiteurs, sans DGRO.
-
-Si ces quatre cas étaient mappés systématiquement, ils constitueraient un laboratoire comparatif exceptionnel pour la phase oligarchique — quatre nations dans le même environnement géographique et économique, avec quatre mécanismes de transition (ou de non-transition) radicalement différents. Le contraste Florence-Venise est particulièrement riche : les Ciompi échouent (1378) comme Faliero (1355), mais les Médicis réussissent au XVe siècle. Qu'est-ce qui a changé entre 1378 et ~1430 ? La réponse à cette question éclairerait les conditions nécessaires de l'absolutisation.
-
 ---
 
 ## 9. Questions ouvertes
@@ -249,6 +232,3 @@ Cette interprétation suggère un enrichissement du cadre : un choc externe peut
 
 Faliero (1355) échoue là où les Inquisiteurs (~1580-1669) réussissent. Le contraste soulève une question générale : quelles conditions distinguent les tentatives d'absolutisation réussies des tentatives avortées ? Les trois conditions identifiées (administration autonome, élites polarisées, clientèles structurées) sont-elles suffisantes ? Ou y a-t-il d'autres facteurs — durée de la phase oligarchique, intensité de l'expansion, degré de fermeture du patriciat ?
 
-### 6. Florence comme cas-test
-
-Florence offre le test le plus riche. Les Ciompi échouent en 1378 — conditions non réunies, comme Faliero. Mais les Médicis réussissent au XVe siècle. Qu'est-ce qui a changé ? L'administration florentine s'est-elle autonomisée ? Les élites se sont-elles polarisées (Albizzi vs Médicis) ? Les clientèles médicéennes (artisans, petite bourgeoisie) étaient-elles assez structurées ? Mapper le Parcours florentin permettrait de tester les conditions de l'absolutisation en les comparant au cas vénitien — même environnement, même époque, résultat différent.

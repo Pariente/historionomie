@@ -55,9 +55,55 @@ La figure qui résout la guerre sociale et inaugure la concentration du pouvoir 
 1. **La structure du conflit est élitaire** — prébendière vs patrimoniale.
 2. **La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques.
 
-En général, la figure résolvante est un **tiers** — s'appuyant sur les clientèles délaissées et la classe moyenne administrative pour forcer les puissants à plier (Henri IV, Henri VII, Philippe V). Mais le tiers neutre est une observation empirique fréquente, pas un critère structurel. Dans le cas d'Israël (prolongement), la dynastie hasmonéenne n'est pas un tiers — une faction a clairement gagné — mais le critère essentiel est satisfait.
+**Deux patterns canoniques pour la figure résolvante** (cf. `phase_oligarchique.md` pour le détail) :
+
+- **Pattern 1 (le plus courant) : tiers populiste neutre** — figure qui ne vient d'aucune des deux factions en conflit et s'appuie sur les clientèles délaissées et la classe moyenne administrative pour forcer les puissants à plier. Exemples : Henri IV, Henri VII, Victor Amédée II. C'est le pattern majoritaire dans le corpus — à tester en premier quand on cherche un 1er monarque absolu.
+
+- **Pattern 2 (canonique mais moins fréquent) : faction-gagnante qui crée un nouveau cadre** — une des deux factions l'emporte, mais le chef qui s'installe ne se contente pas de marginaliser l'autre faction : il crée un cadre central qui subordonne toutes les anciennes élites (y compris celles de son propre camp). Exemples : Omri (campagne militariste israélite, exclusion unilatérale des anciennes élites, création d'un État central administratif sans pacte formel) ; Simon Thassi (faction yahviste maccabéenne, cumul institutionnel Grand Prêtre + stratège + ethnarque rendu héréditaire). Ce pattern est particulièrement fréquent quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive.
+
+**Le tiers neutre est une observation empirique fréquente, pas un critère structurel.** Le critère invariant est l'émergence d'un nouveau cadre central qui renforce le pouvoir central et subordonne les anciennes élites — peu importe que la figure vienne d'en dehors des factions ou d'un des camps vainqueurs.
 
 Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne sans qu'un nouveau cadre central émerge — la guerre sociale n'est pas résolue, et la phase oligarchique se poursuit.
+
+### Formes admises — à épuiser avant de conclure à l'absence
+
+La figure du 1er monarque absolu prend des formes très diverses selon le contexte. **Avant de conclure qu'une nation « n'a pas de 1er monarque absolu »**, vérifier qu'aucune des formes suivantes n'est applicable — l'image mentale par défaut (monarque personnel, stable, titré) est un biais qui masque les formes atypiques mais canoniques.
+
+1. **Figure personnelle stable** — règne individuel long qui résout la guerre sociale et institue un nouveau cadre central. Forme la plus reconnaissable. Peut relever du pattern 1 (tiers populiste neutre : Henri IV, Henri VII, Philippe V, Victor Amédée II, Frédéric-Guillaume Ier, Maximilien Ier) ou du pattern 2 (faction-gagnante qui crée un nouveau cadre : Omri en Israël antique, Simon Thassi en Israël prolongé — figures issues d'un camp vainqueur qui excluent unilatéralement les anciennes élites et construisent un État central administratif sans pacte formel). Le pattern 2 est particulièrement à chercher quand la guerre sociale se superpose à une révolte populaire contre une caste dirigeante exclusive ou à une guerre d'indépendance.
+
+2. **Institution collective stable** — organe qui concentre le pouvoir exécutif sans figure personnelle. Le « monarque » est une magistrature institutionnelle. Exemple canonique : Inquisiteurs d'État à Venise (~1669), devenus autonomes et dominant les factions giovani/vecchi, servis par la classe administrative des cittadini.
+
+3. **Tiers exogène imposé** — puissance extérieure qui joue le rôle de tiers et installe un nouveau cadre central, quand la dynamique endogène n'y parvient pas. Le cadre reste structurellement absolutiste si le test discriminant est satisfait, même si la figure vient de l'extérieur. Exemple canonique : **Napoléon à Milan (1796)** — installation d'un cadre absolutiste nouveau (préfets, Code civil, abolition du patriciat, nouvelle noblesse de service) que la dynamique endogène milanaise ne produisait pas.
+
+4. **Absolutisme collectif par consortium oligarchique** — forme à tester en priorité pour toute cité-État dans un environnement d'États territoriaux. L'appareil central (fiscalité, administration territoriale, armée, coercition) se construit comme **propriété collective institutionnalisée des élites oligarchiques**, sous forme de consortium de créanciers-actionnaires qui absorbe progressivement les fonctions d'État par transfert depuis un commune faible. L'appareil est durable, centralisateur, et exerce toutes les fonctions absolutistes **sur la population et sur les territoires soumis** — mais reste structurellement incapable d'agir contre ses propriétaires-créanciers.
+
+   Cette forme se distingue de la **forme 2** (institution collective stable) : dans la forme 2, l'institution émerge **au-dessus** du patriciat et peut agir contre lui (Inquisiteurs d'État vénitiens avec noblesse de robe distincte type *cittadini*) ; dans la forme 4, l'institution émerge **comme propriété collective** du patriciat et ne peut, par construction, s'en détacher. Pas de classe administrative distincte des oligarques-propriétaires.
+
+   **Marqueurs structurels à chercher :**
+   - Consortium institutionnalisé avec actionnariat aux oligarques-créanciers (gouvernance par protettori/conseil d'administration élu parmi les créanciers)
+   - Transferts documentés de fonctions étatiques (fiscalité, justice, territoires) du commune vers le consortium — signal de *debt capture*
+   - Administration directe de territoires et monopoles fiscaux par le consortium, pas par le commune
+   - L'exécutif politique doit respecter les droits du consortium : toute atteinte entraîne rébellion ou refus de crédit
+   - Absence de classe administrative distincte (pas de noblesse de robe, pas de fonctionnariat professionnel au-dessus des actionnaires)
+   - Isolation effective de l'économie par rapport à la politique (formulation Greif sur Gênes) : la politique reste instable, le consortium reste stable
+
+   **Signature empirique décisive.** Quand une faction capture l'exécutif politique (dogat, magistrature suprême), elle n'accède *pas* au contrôle du consortium — qui reste gouverné collectivement par les oligarques-créanciers incluant ceux de la faction perdante. Le cadre central est stable et ne change pas de propriétaire au gré des alternances politiques.
+
+   **Trajectoire canonique attendue.** La phase absolutiste sous forme 4 peut déboucher soit (a) sur une **RN aboutie** (même en présence d'intervention étrangère pendant la séquence — l'occupation ne modifie pas l'aboutissement, cf. `phase_rn.md`) qui produit ensuite une **phase parlementaire contrariée figée** (corps civique fermé au patriciat élargi, sans dynamique d'élargissement endogène ultérieure vers la population) ; soit (b) directement sur un **AR prolongé** sans RN qui finit par être absorbé. L'issue finale des deux trajectoires se fait typiquement par choc exogène et absorption par un État de taille standard.
+
+   **Spécificité de la phase parlementaire qui suit.** Quand la forme 4 débouche sur une RN aboutie puis une phase parlementaire, celle-ci est **figée** : le corps civique élargi reste strictement intra-patricien (les familles inscrites au registre = la nation politique), sans extension vers les populations exclues. Le mouvement sinistrogyre canonique d'élargissement du cercle représenté ne s'active pas — probablement parce que la fusion oligarchique produite par la forme 4 a dissous les factions élitaires permanentes qui, dans les ENP actifs, constituent le moteur de l'élargissement.
+
+   **Cas canonique** : Banco di San Giorgio à Gênes (1407-1797), documenté par Greif (*Institutions and the Path to the Modern Economy*), Winter (*Polity* 2022, « A Government of Creditors »), Taviani (« A Privatized State »). Machiavelli décrit explicitement le mécanisme en 1532 : le Banco « limite la capacité des doges à se transformer en *signori* ».
+
+   **Cas candidats à tester** :
+   - Florence (Monte Comune + domination Médicis pré-ducat)
+   - Provinces-Unies (VOC + structure confédérale)
+   - Lucques, Raguse, autres cités-États oligarchiques
+   - Cas modernes : oligarchies post-soviétiques à consortium rentier, régimes à capture via dette souveraine privée
+
+   **Condition d'émergence structurelle (hypothèse).** La forme 4 émerge quand l'homogénéisation des élites (Moteur 2) achève la fusion en bloc unifié *avant* que la construction de l'État central (Moteur 1) ne produise un appareil autonome des élites. Les oligarques, déjà coordonnés en classe, peuvent alors institutionnaliser l'appareil central **comme leur propriété collective** plutôt que de laisser émerger un exécutif au-dessus d'eux. Favorisé par : petite taille du territoire, structure économique homogène des élites (pas de clivage foncier/marchand radical), tradition de pacte communal initial.
+
+**Règle** : ne déclarer « pas de 1er monarque absolu » qu'après avoir testé les quatre formes et expliqué pourquoi aucune ne s'applique. L'absence véritable est rare et doit être justifiée structurellement (ex. phase absolutiste jamais atteinte parce que le cycle RN a été déclenché avant par choc exogène, comme pour la Bohême pré-hussite).
 
 | Nation | Date | Exemple |
 |---|---|---|
@@ -65,8 +111,9 @@ Si les deux critères ne sont pas satisfaits — en particulier si une faction g
 | Israël (prolongement) | -140 | Simon Thassi — issu du camp yahviste maccabéen, construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire) |
 | France | 1598 | Henri IV — issu du camp huguenot, converti, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully) |
 | Angleterre | 1485 | Henri VII — tiers, création d'une nouvelle dynastie émancipée des York et des Lancaster |
-| Espagne | 1714 | Philippe V — tiers, Bourbon français imposé après guerre de Succession, abolit les fueros par la Nueva Planta |
 | Venise | ~1669 | Inquisiteurs d'État — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs, devenus progressivement autonomes, dominent les deux factions (giovani/vecchi). Leur base est la classe administrative des cittadini |
+| Milan | 1796 | Napoléon Bonaparte — tiers exogène imposé, installe un cadre absolutiste nouveau (préfets, Code civil, abolition du patriciat) que la dynamique endogène milanaise ne produisait pas |
+| Gênes | 1407 | Banco di San Giorgio — absolutisme collectif par consortium oligarchique, propriété collective des créanciers-actionnaires, capture progressive des fonctions étatiques par *debt capture* |
 
 ### Caractéristiques
 
