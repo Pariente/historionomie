@@ -203,10 +203,9 @@ Les bornes marquées ⚠️ sont **dynamiques** (basculement de logique, pas un 
 
 1. **Une borne est généralement un saillant ou un événement identifiable** — jamais une date arrondie. Deux exceptions : essor → polarisation et polarisation → guerre sociale sont des **basculements de dynamique**, pas des saillants-pivots.
 2. **La fin d'une sous-phase et le début de la suivante coïncident** (ou se chevauchent de ~1-2 ans).
-3. **Les bornes ne doivent pas être forcées pour obtenir des durées typiques** — si la durée est atypique, l'expliquer par une perturbation.
-4. **Priorité absolue à la fiabilité des dates** — l'usage principal du corpus est la régression quantitative d'Alyocha.
-5. **Quand une sous-phase optionnelle est absente** (bascule oligarchique, IR), justifier structurellement pourquoi.
-6. **Positionnement des saillants dans les sous-phases** — certains saillants sont des bornes, d'autres se situent à l'intérieur d'une sous-phase :
+3. **Les bornes ne doivent pas être forcées pour obtenir des durées typiques** — la cohérence d'ensemble du parcours prime sur la conformité aux durées théoriques. Les durées atypiques sont des signaux à interpréter (perturbations identifiées), pas des erreurs à corriger en déplaçant les bornes.
+4. **Quand une sous-phase optionnelle est absente** (bascule oligarchique, IR), justifier structurellement pourquoi.
+5. **Positionnement des saillants dans les sous-phases** — certains saillants sont des bornes, d'autres se situent à l'intérieur d'une sous-phase :
    - **Acmé oligarchique** : interne à l'essor oligarchique
    - **Fin de l'expansion (oligarchique)** : peut coïncider avec le basculement essor → polarisation, mais n'en est pas la borne stricte
    - **DGRO** : interne à l'absolutisation (son écrasement marque la fin)
@@ -262,7 +261,7 @@ Voir `references/nations/*/parcours.md` pour le détail et `references/nations/*
 |---|---|---|---|---|---|---|---|
 | Éveil féodal | Saül (~-1080) | — | Louis VI (1108) | Guillaume (1066, reboot) | Orso Ipato (~726) | Louis Ier (~1204) | Thomas II (~1233) |
 | Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Orseolo (~991) | Louis IV (~1328) | Philippe Ier d'Achaïe (~1295) |
-| Pacte oligarchique | — (non identifié) | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) |
+| Pacte oligarchique | Probable sous Omri (-885), non textuellement attesté | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) |
 | 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Contarini (~1043) / système | Guillaume IV (~1508) | Amédée VIII (~1430) / Emmanuel Philibert (1559) |
 | Acmé oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) |
 | Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | Agnadello (1509) | — | Mort Ch. Emmanuel Ier (1630) |

@@ -69,7 +69,7 @@ Analogies structurelles : romaine (Boccanegra 1339 = Marius+César ouvrant une c
 - subtitle: Compagna Communis
 - title: Pacte oligarchique
 - confidence: high
-- summary: Codification collective des consuls par l'évêque Arialdo, les feudataires impériaux et les Compagne Rionali. Première négociation entérinée des responsabilités de l'exécutif (critère Coencas). Six consuls élus annuellement à partir de 1122.
+- summary: Codification collective des consuls par l'évêque Arialdo, les feudataires impériaux et les Compagne Rionali. Première négociation entérinée des responsabilités de l'exécutif. Six consuls élus annuellement à partir de 1122.
 
 ---
 

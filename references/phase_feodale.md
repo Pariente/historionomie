@@ -154,9 +154,11 @@ Trois éléments structurels caractérisent l'acte :
 
 Les deux chemins sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux (Venise : chemin A en 1032, complété par déploiement de chemin B avec le Minor Consiglio coutumier ~1140 puis la Promissio écrite en 1172 — mais c'est de la maturation institutionnelle dans la phase déjà ouverte par 1032, pas un nouveau PO).
 
-**Distinction avec les créations institutionnelles unilatérales.** Le pacte ne se confond pas avec la simple existence d'institutions centrales. Philippe le Bel crée le Parlement de Paris, la Chambre des comptes et une administration bureaucratique, mais ces créations sont des outils du roi — la loi salique de 1317 est le vrai pacte parce que c'est l'acte par lequel les états entérinent collectivement la règle. De même en Angleterre, l'Échiquier (XIIe), le Parlement (Simon de Montfort 1265, modèle d'Édouard Ier 1295) et la common law préexistent aux Ordonnances de 1311 ; ce que 1311 ajoute, c'est que les barons s'approprient collectivement ces structures et les rendent contraignantes pour le roi. Le test décisif n'est donc pas « les structures existent-elles ? » mais « les oligarques se les sont-ils collectivement appropriées par un acte de codification ? ». Omri en Israël antique crée un État avec administration, fisc et armée permanents, mais unilatéralement — et c'est pourquoi Israël n'a pas de pacte oligarchique canonique identifié.
+**Distinction avec les créations institutionnelles unilatérales.** Le pacte ne se confond pas avec la simple existence d'institutions centrales. Philippe le Bel crée le Parlement de Paris, la Chambre des comptes et une administration bureaucratique, mais ces créations sont des outils du roi — la loi salique de 1317 est le vrai pacte parce que c'est l'acte par lequel les états entérinent collectivement la règle. De même en Angleterre, l'Échiquier (XIIe), le Parlement (Simon de Montfort 1265, modèle d'Édouard Ier 1295) et la common law préexistent aux Ordonnances de 1311 ; ce que 1311 ajoute, c'est que les barons s'approprient collectivement ces structures et les rendent contraignantes pour le roi. Le test décisif n'est donc pas « les structures existent-elles ? » mais « les oligarques se les sont-ils collectivement appropriées par un acte de codification ? ».
 
-Vérification empirique sur le corpus : 10 parcours canoniques sur 11 satisfont ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Autriche, USA). Israël antique est la seule exception documentée — Omri crée l'État sans codification négociée, ce qui laisse la phase féodale israélite sans pacte canonique.
+Vérification empirique sur le corpus : 10 parcours canoniques sur 11 présentent un acte attesté satisfaisant ce critère (France, Angleterre, Espagne, Venise, Milan, Piémont, Bavière, Suisse, Autriche, USA).
+
+**Cas textuellement invisible : Israël antique.** Le test discriminant est passé sous Omri (-885) — armée et fisc permanents, capitale construite (Samarie), succession stable Omri → Achab, dynastie reconnue par les voisins assyriens comme *Bit Humri* sur plus d'un siècle après sa chute. Les marqueurs structurels d'un PO sont donc présents : le pouvoir survit désormais aux successions et est garanti collectivement (le mariage Achab-Jézabel suggère une négociation avec l'aristocratie israélite et phénicienne). Mais l'acte de codification lui-même n'est pas attesté — sources rares au IXe siècle av. J.-C. et corpus biblique tardif et hostile aux Omrides. À traiter comme **PO structurellement probable mais textuellement invisible**, pas comme exception au critère universel. Précédent méthodologique : l'absence de trace écrite d'un acte de codification dans une société à faible production documentaire ne réfute pas l'existence du pacte, dès lors que ses effets structurels sont attestés.
 
 | Nation | Date | Exemple |
 |---|---|---|
@@ -169,7 +171,7 @@ Vérification empirique sur le corpus : 10 parcours canoniques sur 11 satisfont 
 
 **Cas limite : « suzerain collectif »** — À Venise et à Milan, le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les « responsabilités de l'exécutif » qui sont codifiées collectivement, mais la forme est institutionnelle.
 
-**Note :** Le pacte oligarchique n'est pas universel dans sa forme. En Israël antique, le schisme de ~-930 (rejet de la monarchie salomonienne par les tribus du nord) joue un rôle fonctionnellement analogue — c'est un acte par lequel la communauté politique rejette un exécutif devenu insoutenable — mais il prend la forme d'une sécession, pas d'une codification. Dans les sociétés anciennes, les outils institutionnels de codification n'existent pas encore ; la « codification » passe par la rupture.
+**Note sur Israël antique.** Le schisme de ~-930 (rejet de Roboam par les tribus du nord) appartient à la dynamique féodale qui précède le PO ; ce n'est pas le pacte lui-même. Le PO probable est à dater autour de l'avènement d'Omri (-885), moment où le test discriminant est passé (cf. supra) — l'acte n'est pas textuellement attesté mais ses effets structurels sont reconnaissables.
 
 ### Marqueurs forts de la transition
 
@@ -184,7 +186,7 @@ Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus
 
 | Parcours | Éveil féodal | Pics féodaux | Pacte oligarchique | Durée |
 |---|---|---|---|---|
-| Israël antique | Saül (~-1080) | David (~-1003), Salomon (~-960) | Non identifié / Omri (-885) | ~195 ans |
+| Israël antique | Saül (~-1080) | David (~-1003), Salomon (~-960) | Probable sous Omri (-885), non textuellement attesté | ~195 ans |
 | Venise | Orso Ipato (~726) | Galbaio (~764), Partecipazio (~811), Candiano (~959), Orseolo (~991) | Abolition co-régence (1032) | ~306 ans |
 | Angleterre [1] (avortée) | Ecgberht (~829) | Æthelstan (~930), Edgar (~965), Cnut (~1025) | — (avortée, reboot normand) | ~237 ans |
 | Milan | Landolfo II (979) | Ariberto (~1018) | Commune (1097) | ~118 ans |

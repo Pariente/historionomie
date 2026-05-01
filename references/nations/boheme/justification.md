@@ -93,7 +93,7 @@ J'ai donc retiré cette clause spécifique du faisceau anti-absolutiste. Mais l'
 
 ### Argument structurel reformulé : application stricte de la grille Antoine
 
-L'argument pour Charles IV = acmé oligarchique (et non 1er MO absolu) repose sur l'application rigoureuse de la grille des marqueurs canoniques d'Antoine Coencas (cf. `references/phase_absolutiste.md`).
+L'argument pour Charles IV = acmé oligarchique (et non 1er MO absolu) repose sur l'application rigoureuse de la grille des marqueurs canoniques d'Antoine Deblonde (cf. `references/phase_absolutiste.md`).
 
 #### Marqueurs forts d'absolutisation (structurels)
 
