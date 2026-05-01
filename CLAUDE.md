@@ -14,7 +14,7 @@ Ce skill permet à Claude d'analyser le Parcours de construction nationale de n'
 
 ## Ce que ce skill permet de faire
 
-1. **Cartographier un parcours national complet** — identifier les phases, sous-phases, saillants et perturbations d'une nation donnée. **Charger `references/methode_cartographie.md` pour la procédure complète.**
+1. **Cartographier un parcours national complet** — identifier les phases, sous-phases, saillants et perturbations d'une nation donnée. Lancement par `/cartographie [nation]`. **Charger `references/methode_cartographie.md` pour la procédure complète.**
 2. **Comparer des parcours** — aligner les saillants de plusieurs nations et identifier parallèles et divergences.
 3. **Explorer une question historionomique** — appliquer le cadre théorique à un problème historique précis.
 4. **Discuter le cadre théorique** — affiner les concepts, tester leur applicabilité à de nouveaux cas.
@@ -26,7 +26,9 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
-| `references/methode_cartographie.md` | Procédure complète de cartographie d'un parcours (workflow 9 étapes, checklists web, pièges méthodologiques, bornes de sous-phases) | La tâche est de **cartographier un Parcours complet** d'une nation |
+| `references/methode_cartographie.md` | Manuel d'orchestration de la cartographie multi-agent (10 étapes : collecteur Agent 1 → évaluateur Agent 2 → synthèse parent → vérifications → corpus → fichiers de sortie). Contient les prompts de spawn des sous-agents et les Étapes 4-10 (synthèse). | La tâche est de **cartographier un Parcours complet** d'une nation |
+| `references/methode_collecte.md` | Procédure du **Collecteur** (Agent 1) — collecte historique pure, découpage en tranches, sans cadre phasique. Lue par Agent 1 uniquement. | Référencé depuis `methode_cartographie.md` lors du spawn d'Agent 1 |
+| `references/methode_scoring.md` | Procédure de l'**Évaluateur** (Agent 2) — scoring tranche × phase + recherche complémentaire. Lue par Agent 2 uniquement. | Référencé depuis `methode_cartographie.md` lors du spawn d'Agent 2 |
 | `references/phase_pre_feodale.md` | Phase pré-féodale : percolation élitaire (Deblonde), marqueurs, exemples | La question porte sur la percolation ou la pré-féodale |
 | `references/phase_feodale.md` | Phase féodale : coagulation, bascule, saillants (éveil féodal, pic féodal, pacte oligarchique), marqueurs | La question porte sur la phase féodale |
 | `references/phase_oligarchique.md` | Phase oligarchique : sous-phases (essor, polarisation, guerre sociale), saillants, marqueurs | La question porte sur la phase oligarchique |
