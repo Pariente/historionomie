@@ -59,7 +59,8 @@ Utiliser ces questions pour **confirmer** que les saillants identifiés correspo
 
 **Pour identifier la phase oligarchique :**
 - Qui est le premier souverain disposant d'un État central (impôt + armée + administration) ? (1er monarque oligarchique)
-- Y a-t-il une codification du droit ? Une assemblée des élites ?
+- Y a-t-il un acte collectif garantissant la stabilité aux successions — **chemin A** (codification de la succession : loi salique, primogéniture, abolition de co-régence) OU **chemin B** (codification de l'exercice du pouvoir : Ordonnances, contraintes sur les nominations/finances/campagnes, jusqu'à ce que le pouvoir cesse d'être patrimoine personnel) ? Une nation peut combiner les deux successivement (cf. `phase_feodale.md`, critère universel du PO).
+- **Si le test discriminant est passé (le pouvoir survit aux successions, dynastie reconnue, fisc et armée permanents) mais qu'aucun acte de codification n'est attesté** : considérer un PO structurellement probable mais textuellement invisible plutôt que conclure à l'absence (précédent : Israël antique sous Omri, sources rares au IXe siècle av. J.-C.). L'acte ne se déduit pas par défaut, mais l'invisibilité textuelle dans une société à faible production documentaire ne réfute pas son existence dès lors que les effets structurels sont attestés.
 - Quelles sont les deux factions en conflit (prébendière vs patrimoniale) ?
 - Y a-t-il une guerre sociale identifiable ?
 
@@ -165,7 +166,16 @@ Pour **chaque phase** du scénario (féodale, oligarchique, absolutiste, RN dans
    
    Si un saillant canonique manque, **c'est un signal d'alarme**. Soit l'histoire a été mal lue (chercher plus fort), soit le cas est structurellement atypique (justifier alors structurellement). **Ne jamais se contenter de dire « absent, résolution diffuse »** sans justification solide.
 
-2. **Le pacte oligarchique en particulier** : c'est une nécessité structurelle. Généralement très formel (acte écrit, diète, codification collective). Chercher activement : actes de type *Libell*, ordonnances, lois de succession, chartes, pactes de primogéniture, compromis avec les états. Un pacte faiblement identifié = analyse à reprendre.
+2. **Le pacte oligarchique en particulier** : c'est une nécessité structurelle. Critère universel = acte collectif par lequel les oligarques garantissent la stabilité du régime aux successions (le pouvoir survit désormais au remplacement du suzerain). **Deux chemins admis** (cf. `phase_feodale.md`) :
+   - **Chemin A — codification de la succession** : loi salique, primogéniture, abolition de co-régence, règles d'élection. Le pouvoir survit parce que la transmission est verrouillée.
+   - **Chemin B — codification de l'exercice du pouvoir** : Ordonnances, contraintes sur les nominations/finances/campagnes, Libell. Le pouvoir survit parce que le souverain devient accessoire à un appareil collégial.
+   - Une nation peut combiner les deux successivement (Venise : A en 1032, déploiement de B avec Minor Consiglio ~1140 et Promissio 1172).
+   
+   Trois éléments structurels à vérifier dans tous les cas : codification (acte formel daté), caractère collectif (assemblée — diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers), moment de faiblesse (conditions de Deblonde : homogénéité + faiblesse du suzerain).
+   
+   **Cas textuellement invisible** : si le test discriminant est manifestement passé (succession stable, dynastie reconnue, fisc et armée permanents) mais qu'aucun acte n'est attesté, considérer un PO **structurellement probable mais textuellement invisible** plutôt que conclure à l'absence (précédent : Israël antique sous Omri, sources rares au IXe siècle av. J.-C.).
+   
+   Un pacte faiblement identifié sans justification structurelle solide = analyse à reprendre.
 
 3. **Les durées sont-elles cohérentes ?** La phase est-elle proche de la norme (200 ans pour féodale/oligarchique/absolutiste, 25-80 ans pour RN) ? Si écart, est-il expliqué par une perturbation identifiée ?
 
@@ -263,19 +273,15 @@ Ne pas se contenter d'ajouter un paragraphe d'alternative dans justification.md 
 
 ---
 
-## Pièges méthodologiques à éviter
+## Pièges méthodologiques spécifiques à la cartographie
 
-Cinq pièges récurrents documentés :
+Trois pièges propres à la procédure de cartographie. Les anti-patterns universels (« noms vs fonction », « singularités comme features ») sont dans CLAUDE.md.
 
 1. **Lecture à rebours / télos fixé** — démarrer l'analyse depuis un événement final connu (absorption, unification, RN supposée) force mécaniquement les phases à s'ajuster à cette fenêtre. Analyser l'histoire **depuis le début**, sans connaître la fin. La fixation implicite d'un point d'absorption ou d'une date de RN supposée transforme le problème en « comment caser les phases dans cette fenêtre » au lieu de « à quel moment les saillants canoniques apparaissent-ils ».
 
-2. **Noms vs fonction** — un régime formellement républicain avec un clan dominant peut fonctionner en absolutisme de facto. **Appliquer rigoureusement le test fonctionnel** : *l'exécutif peut-il agir sans frein juridique effectif des oligarques ?* Si oui, c'est de l'absolutisme, quelle que soit l'étiquette. Le contrôle des procédures électorales, l'exil d'opposants sans procès, la manipulation des commissions extraordinaires sont autant de marqueurs fonctionnels de l'absolutisme informel de cité-État.
+2. **Engagement précoce dans un scénario** — une fois qu'un cadrage est choisi, l'analyse tend à forcer les données à s'y conformer (invention ad hoc de concepts non-canoniques pour justifier des durées atypiques ou des saillants manquants). **Obligation de l'Étape 3 : scoring bottom-up des marqueurs par tranche, puis trois scénarios structurellement divergents avant scoring final.**
 
-3. **Singularités comme features** — si une analyse conclut qu'une nation est « unique dans le corpus » sur un élément structurel majeur (pas de pic féodal, pas de DGRO, deux acmés absolutistes, pas de remontrance, pas de 1er monarque absolu), c'est presque toujours une erreur de cadrage, pas une découverte. Traiter **chaque singularité comme une hypothèse d'erreur à réfuter**. Trois singularités dans le même parcours = forte présomption de cadrage faux.
-
-4. **Engagement précoce dans un scénario** — une fois qu'un cadrage est choisi, l'analyse tend à forcer les données à s'y conformer (invention ad hoc de concepts non-canoniques pour justifier des durées atypiques ou des saillants manquants). **Obligation de l'Étape 3 : scoring bottom-up des marqueurs par tranche, puis trois scénarios structurellement divergents avant scoring final.**
-
-5. **Ancrage par analogie de surface** — classer la nation par ressemblance culturelle ou géographique avec une nation déjà mappée (« républiques marchandes maritimes », « monarchies catholiques », « empires continentaux ») pendant la recherche ou au début de l'analyse contamine tout le raisonnement. **Toute comparaison avec le corpus est interdite avant l'Étape 5** — elle sert à valider, jamais à cadrer. Le scoring des marqueurs (Étape 3b) se fait sur la tranche seule, sans référence à aucune autre nation.
+3. **Ancrage par analogie de surface** — classer la nation par ressemblance culturelle ou géographique avec une nation déjà mappée (« républiques marchandes maritimes », « monarchies catholiques », « empires continentaux ») pendant la recherche ou au début de l'analyse contamine tout le raisonnement. **Toute comparaison avec le corpus est interdite avant l'Étape 5** — elle sert à valider, jamais à cadrer. Le scoring des marqueurs (Étape 3b) se fait sur la tranche seule, sans référence à aucune autre nation.
 
 ---
 
