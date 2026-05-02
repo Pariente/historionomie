@@ -82,19 +82,28 @@ Scorer les tranches dans un ordre **non-chronologique** (par durée décroissant
 
 ### Pour chaque tranche × phase
 
-Évaluer la présence des marqueurs de la phase dans la tranche. Produire :
+Procédure structurée — chaque `phase_*.md` est désormais opérationnalisé selon une canonical commune que tu dois exploiter systématiquement :
 
-- **Score 0-5** :
-  - 0 : aucun marqueur de cette phase présent
-  - 1 : marqueurs très partiels, vague compatibilité
-  - 2 : quelques marqueurs présents mais incomplets ou contradictoires
-  - 3 : majorité des marqueurs présents, lecture phasique plausible
-  - 4 : marqueurs largement présents, lecture phasique solide
-  - 5 : tous les marqueurs présents, lecture phasique très ferme
+**Étape 1 — Test discriminant**. Applique d'abord le ou les tests discriminants de la phase (section « Comment identifier cette phase / Test discriminant »). Si le test échoue clairement, score bas (0-1) sans aller plus loin.
 
-- **Justification marker par marker** : pour chaque marqueur de la phase (cf. `phase_*.md`), indiquer s'il est présent (avec faits du dossier ou recherche complémentaire) ou absent (avec justification structurelle de l'absence).
+**Étape 2 — Marqueurs nécessaires avec signes observables / contre-signes**. Pour chaque marqueur nécessaire, vérifie :
+- Quels **signes observables** sont attestés dans le dossier (ou par recherche complémentaire) ?
+- Quels **contre-signes** sont attestés (qui réfutent le marqueur) ?
+- Le marqueur est-il **présent**, **absent**, ou **partiellement présent** ?
 
-- **Faits supplémentaires découverts** : si une recherche web a apporté des éléments non présents dans le dossier d'Agent 1, les documenter explicitement (avec sources).
+**Étape 3 — Différencier de configurations voisines non-Parcours**. Avant de scorer ≥ 3, applique systématiquement la section « Différencier de configurations voisines non-Parcours » de la phase. Si la configuration ressemble à une marge impériale, à une révolte absolutiste, à un coup d'État sans rupture, etc., **ne pas scorer la phase** — signaler la configuration voisine.
+
+**Étape 4 — Saillants présents dans la tranche**. Pour chaque saillant canonique de la phase, applique son test discriminant propre + signes observables. Pour la phase absolutiste : épuiser les 4 formes du 1er monarque absolu avant de conclure à l'absence (forme 2 institution collective, forme 3 tiers exogène imposé, forme 4 consortium oligarchique sont à tester explicitement, pas seulement la forme 1 personnelle).
+
+**Étape 5 — Score 0-5** :
+- 0 : aucun marqueur de cette phase présent (ou test discriminant échoue)
+- 1 : marqueurs très partiels, vague compatibilité
+- 2 : quelques marqueurs présents mais incomplets ou contradictoires
+- 3 : majorité des marqueurs présents, lecture phasique plausible (test discriminant passé, configurations voisines exclues)
+- 4 : marqueurs largement présents, lecture phasique solide
+- 5 : tous les marqueurs présents, lecture phasique très ferme
+
+**Étape 6 — Faits supplémentaires découverts** : si une recherche web a apporté des éléments non présents dans le dossier d'Agent 1, les documenter explicitement (avec sources).
 
 ### Méfie-toi des noms historiographiques usuels
 
@@ -110,9 +119,12 @@ Va systématiquement aux **marqueurs structurels** des `phase_*.md` — qui dét
 
 ### Marqueurs piège (à ne pas surinterpréter)
 
-- **Codification écrite** n'est PAS un test discriminant absolutiste à elle seule (l'Angleterre en common law sans codification est en phase oligarchique puis absolutiste). Le test discriminant est la préséance effective de l'administration centrale + capacité de l'exécutif à agir sans frein juridique des oligarques.
-- **Fisc régulier sur les non-exempts** n'est pas non plus un test discriminant absolutiste (la berna generalis bohême ressemble à la taille française mais n'implique pas l'absolutisme).
-- **Transition dynastique** ne signe pas un 1er monarque absolu sans guerre sociale préalable entre factions.
+Les principaux pièges sont documentés dans les phase_*.md correspondants. Quelques-uns à garder en tête :
+
+- **Codification écrite** n'est PAS un test discriminant absolutiste à elle seule (cf. `phase_absolutiste.md` §Piège : la codification écrite). Le vrai test discriminant est la préséance effective de l'administration centrale + capacité de l'exécutif à agir sans frein juridique.
+- **Fisc régulier sur les non-exempts** n'implique pas l'absolutisme — un fisc central peut coexister avec des fiscs locaux autonomes en phase oligarchique.
+- **Transition dynastique** ne signe pas un 1er monarque absolu sans guerre sociale préalable entre factions (cf. `phase_oligarchique.md` §Guerre sociale et `phase_absolutiste.md` §1er monarque absolu).
+- **Stabilité institutionnelle de longue durée** (200+ ans) ne tranche pas entre absolutisme forme 2/4 et ENP contrarié figé (cf. `phase_rn.md` §Test discriminant ENP contrarié figé vs forme 2).
 
 ### Cas particuliers à signaler
 
@@ -140,12 +152,17 @@ Pour **chaque case avec score ≥ 2** :
 ```
 ### Tranche N × Phase X — Score : Y
 
-**Marqueurs présents** :
-- [Marqueur 1] : [fait du dossier ou recherche complémentaire confirmant]
-- [Marqueur 2] : [...]
+**Test discriminant** : [passé / échoué / mitigé] — [justification courte]
 
-**Marqueurs absents** :
-- [Marqueur 3] : [justification structurelle de l'absence]
+**Marqueurs nécessaires** :
+- [Marqueur 1] : présent / absent / partiel
+  - Signes observables attestés : [faits du dossier ou recherche complémentaire]
+  - Contre-signes attestés : [le cas échéant]
+- [Marqueur 2] : ...
+
+**Configurations voisines exclues** : [si le score ≥ 3, expliciter pourquoi la tranche n'est pas une configuration voisine non-Parcours — ex. pas une marge impériale, pas une révolte absolutiste, etc.]
+
+**Saillants identifiés dans la tranche** (s'il y en a) : [saillant + test discriminant + signes observables justifiant]
 
 **Recherche complémentaire** (si effectuée) :
 - Question : [question posée]
