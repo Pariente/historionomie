@@ -125,7 +125,7 @@ Tout événement historique mentionné dans un parcours relève de l'une de quat
 - **Parcours** (majuscule) : le Parcours de construction nationale
 - **Sous-phases** : découpage mécanique d'une phase (liste canonique fermée)
 - **Saillants** : éléments ponctuels facilement identifiables dans le vocabulaire canonique
-- **Classe prébendière / patrimoniale** (Weber) : jamais « mobilière / immobilière »
+- **Classe prébendière / patrimoniale** (matrice Pariente, vocabulaire weberien) : jamais « mobilière / immobilière »
 - **Clivage gauche-droite** : ED (réactionnaires), D (conservateurs), G (réformateurs), EG (révolutionnaires) — définitions structurelles, valables partout et tout le temps
 
 ### Anti-patterns universels

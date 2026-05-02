@@ -4,8 +4,10 @@ Durant toute la phase oligarchique, l'État central **grossit progressivement**.
 
 La phase produit ainsi progressivement deux élites aux intérêts divergents :
 
-- La **classe prébendière** (Weber) : élite dont le revenu dépend de l'État — charges, faveurs, accès aux réseaux commerciaux structurés par le pouvoir central. Elle est associée au commerce, aux échanges et à l'administration, où le souverain recrute ses fonctionnaires.
-- La **classe patrimoniale** (Weber) : élite dont le revenu repose sur un patrimoine propre, foncier ou productif, indépendant du pouvoir central. Issue de l'aristocratie de la phase féodale, elle est plutôt terrienne, rurale, traditionaliste.
+- La **classe prébendière** : élite dont le revenu dépend de l'État — charges, faveurs, accès aux réseaux commerciaux structurés par le pouvoir central. Elle est associée au commerce, aux échanges et à l'administration, où le souverain recrute ses fonctionnaires.
+- La **classe patrimoniale** : élite dont le revenu repose sur un patrimoine propre, foncier ou productif, indépendant du pouvoir central. Issue de l'aristocratie de la phase féodale, elle est plutôt terrienne, rurale, traditionaliste.
+
+(Vocabulaire weberien repris dans le cadre historionomique — l'opposition prébendier/patrimonial comme moteur du Parcours est propre à la matrice Pariente. Voir `elites.md`.)
 
 Les activités de la classe prébendière étant naturellement plus faciles à contrôler par l'exécutif central, celui-ci va les promouvoir. La polarisation entre les deux classes, lente au début, s'accélère quand les aventures extérieures cessent de servir d'exutoire — et l'affrontement entre les deux factions finit par structurer toute la fin de la phase.
 

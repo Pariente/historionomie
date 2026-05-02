@@ -31,3 +31,62 @@ Pour le détail par nation, voir `references/nations/*/parcours.md` et `referenc
 | Glorieuse Révolution | — | — | 1830 | 1688 | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) |
 
 Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1715-1789 ; Angleterre ~1603-1642 ; Venise ~1718-1848 ; Bavière ~1848-1918 ; Piémont ~1748-1861 (éclipse 1796-1814) ; Israël prolongement -4 à 66.
+
+---
+
+## Tableau des perturbations par nation
+
+Pour les définitions des mécanismes et effets, voir `references/perturbations.md`.
+
+| Perturbation | Nation | Mécanisme | Effet | Territorial ? | Marqueur |
+|---|---|---|---|---|---|
+| **Israël** |
+| Choc assyrien (-722) | Israël | Choc exogène | Reboot + transfert 🟤 | Oui | ◆🟤 `bolt` |
+| Conquête babylonienne (-586) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Hellénisation (-332) | Israël | Choc exogène | Prolongement 🟠 | **Non** (culturel) | ◆🟠 `bolt` |
+| Destruction du Temple (70) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| **Angleterre** |
+| Empire de Cnut (~1016) | Angleterre | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| Conquête normande (1066) | Angleterre | Choc d'hétérogénéité | Reboot 🟤 | Oui | ◆🟤 `restart_alt` |
+| Perte de la Normandie (1204) | Angleterre | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Boucles féodales anglaises | Angleterre | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Perte de la France (1453) | Angleterre | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| **France** |
+| Croisade des Albigeois (1229) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Crécy-Poitiers (~1346) | France | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| Azincourt-Troyes (1415-1420) | France | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Intégration Bourgogne-Provence (1477-1481) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Traité d'Utrecht (1713) | France | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| **Espagne** |
+| Empire colonial américain (1521-1533) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Intégration de l'Aragon (1716) | Espagne | Choc d'hétérogénéité (modéré, proximité culturelle) | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
+| Perte de l'empire colonial américain (1808-1826) | Espagne | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Désastre de 1898 | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| **Venise** |
+| Stato da Màr (1204) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Conquête de la Terraferma (1428) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Perte de la Crète (1669) | Venise | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Chute de la République (1797) | Venise | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
+| RN écrasée (1849) | Venise | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
+| **Milan** |
+| Empire Visconti (1395) | Milan | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| Fragmentation Visconti (1402) | Milan | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Invasion française (1499) | Milan | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Occupation napoléonienne (1796) | Milan | Choc exogène | Accélération 🔵 | **Non** (institutionnel) | ◆🔵 `bolt` |
+| **Bavière** |
+| Partitions (1255, 1349, 1392) | Bavière | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Doublement napoléonien (1806) | Bavière | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
+| **Piémont** |
+| Invasion française (1536) | Piémont | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Éclipse napoléonienne (1796-1814) | Piémont | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| **Autriche** |
+| Crise féodale — extinction Babenberg (1246) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Crise féodale — Neuberg (1379) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Crise féodale — guerre civile Albert VI (1440s-1463) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
+| Crise féodale — occupation Corvin (1485-1490) | Autriche | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
+| Intégration de la Bohême (1627) | Autriche | Choc d'hétérogénéité | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
+| Perte de la Silésie (1742) | Autriche | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
+| Solferino — perte de la Lombardie (1859) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Sadowa — exclusion de l'Allemagne (1866) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| **Suisse** |
+| Invasion française (1798) | Suisse | Choc exogène | Accélération 🔵 | Non | ◆🔵 `bolt` |

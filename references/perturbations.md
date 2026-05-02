@@ -1,8 +1,12 @@
 # Perturbations du Parcours
 
-Le Parcours de construction nationale peut être perturbé par des événements qui modifient sa vitesse de progression. Une perturbation se décompose en un **mécanisme** (ce qui cause la perturbation) et un **effet** (ce qui arrive au Parcours). Les perturbations peuvent être **ponctuelles** (un événement) ou **étendues** (une période) — un événement ponctuel peut déclencher une perturbation étendue (ex. : destruction du Temple → exil babylonien).
+Le Parcours de construction nationale peut être perturbé par des événements qui modifient sa vitesse, sa direction ou son niveau de progression. Une perturbation se décompose en un **mécanisme** (ce qui cause la perturbation) et un **effet** (ce qui arrive au Parcours). Les perturbations peuvent être **ponctuelles** (un événement) ou **étendues** (une période) — un événement ponctuel peut déclencher une perturbation étendue (ex. : destruction du Temple → exil babylonien).
 
-## Les 4 effets
+---
+
+## 1. Vue d'ensemble
+
+### Les 4 effets
 
 | Effet | Ce qui arrive | Couleur (frise) |
 |---|---|---|
@@ -11,43 +15,72 @@ Le Parcours de construction nationale peut être perturbé par des événements 
 | **Avortement** | Le passage à la phase suivante est bloqué | 🔴 rouge |
 | **Reboot** | Redémarrage de la phase ou retour à une phase antérieure | 🟤 cramoisi |
 
-## Les 4 mécanismes + 1 état continu
+### Les 5 mécanismes (4 ponctuels + 1 état continu)
 
-| Mécanisme | Type | Icône (frise) | Effets possibles | Exemples |
+| Mécanisme | Type | Icône (frise) |
+|---|---|---|
+| **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` |
+| **Choc exogène** | Ponctuel | `bolt` |
+| **Insuffisance interne** | Ponctuel | `close` |
+| **Correction d'échelle** | Ponctuel ou graduel | `compress` |
+| **Exutoire** | **Continu** | *(pas de marqueur — implicite)* |
+
+### Couplage mécanisme × effet
+
+|  | Prolongement 🟠 | Accélération 🔵 | Avortement 🔴 | Reboot 🟤 |
 |---|---|---|---|---|
-| **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` | Prolongement 🟠 | Habsburg 1516, Bavière 1806, Empire de Cnut 1016, Stato da Màr 1204, croisade des Albigeois 1229 |
-| **Choc exogène** | Ponctuel | `bolt` | Les 4 effets (selon ce que le choc fait) | Voir grille ci-dessous |
-| **Insuffisance interne** | Ponctuel | `close` | Avortement 🔴 | Crises féodales sans PO, absolutisation avortée (Faliero, Pierre Ier) |
-| **Correction d'échelle** | Ponctuel ou graduel | `compress` | Accélération 🔵 | Perte de la Crète vénitienne (1669), fragmentation Visconti (1402), perte de la Silésie autrichienne (1742), perte de l'empire colonial espagnol (1808-1826). Condition : le territoire perdu doit avoir été effectivement digéré par le noyau (cf. §Choc d'hétérogénéité). |
-| **Exutoire** | **Continu** | *(pas de marqueur — implicite)* | Prolongement 🟠 | Venise Stato da Màr, colonies espagnoles, Reconquista, Reislauferei suisse |
+| **Choc d'hétérogénéité** | ✓ | | (peut avorter une sous-phase) | |
+| **Choc exogène** | ✓ | ✓ | ✓ | ✓ |
+| **Insuffisance interne** | | | ✓ | |
+| **Correction d'échelle** | | ✓ | | |
+| **Exutoire** (continu) | ✓ | | | |
 
-Le **choc d'hétérogénéité** ajoute de la diversité vers l'intérieur (gain territorial, afflux culturel). L'**exutoire** projette l'énergie vers l'extérieur (empire, colonies, mercenariat). Les deux produisent un prolongement mais par des voies différentes : le choc repousse le seuil d'homogénéité, l'exutoire absorbe les tensions élitaires. Ils coexistent souvent (l'héritage habsbourgeois crée à la fois l'hétérogénéité et l'exutoire).
+Le **choc exogène** est le seul mécanisme polyvalent — son effet dépend de ce que le choc fait. Les autres mécanismes sont chacun couplés à un effet dominant.
 
-L'exutoire est un **état continu**, pas un événement. Il n'a pas de marqueur sur la frise. Il apparaît quand un choc d'hétérogénéité le crée, et disparaît quand un choc exogène ou l'épuisement interne le détruit. Sa fin est marquée par le saillant standard **« fin de l'expansion »** (marqueur rond, couleur de la phase — pas un losange de perturbation).
-
-### Grille mécanisme × effet pour le choc exogène
-
-Le choc exogène est le mécanisme le plus polyvalent — son effet dépend de ce qu'il frappe :
-
-| Ce que le choc fait | Effet | Couleur | Exemples |
-|---|---|---|---|
-| Ralentit sans détruire (gel temporaire, occupation) | Prolongement 🟠 | Orange | Crécy-Poitiers (~1346), éclipse napoléonienne du Piémont (1796-1814), Empire de Cnut (1016) |
-| Supprime un exutoire militaire externe, force le recentrage interne | Accélération 🔵 | Bleu | Normandie 1204, Castillon 1453, Solferino 1859, Sadowa 1866, Désastre 1898, Napoléon à Milan |
-| Bloque une transition sans détruire les institutions | Avortement 🔴 | Rouge | France écrase le Trienio 1823, Autriche écrase Venise 1849 |
-| Détruit les institutions et les réseaux humains | Reboot 🟤 | Cramoisi | Babylone -586, Guillaume 1066, Piémont 1536 |
-
-**Note sur l'accélération par fin d'exutoire** : quand une défaite militaire supprime un territoire en **union personnelle** (jamais digéré par le noyau), c'est un `choc_exogene / acceleration` — pas une `correction_echelle`. La distinction tient au mécanisme : la correction d'échelle suppose une digestion préalable (le territoire perdu pesait sur le noyau par sa digestion), le choc exogène de fin d'exutoire suppose seulement que le territoire servait d'exutoire militaire (il absorbait de l'énergie élitaire sans être digéré). Voir §Choc d'hétérogénéité pour le développement complet et §Corollaire symétrique.
-
-## Affichage sur la frise
+### Affichage sur la frise
 
 Les perturbations sont affichées comme des **losanges** (◆) pour les distinguer des saillants normaux (●). La **couleur** encode l'effet, l'**icône** encode le mécanisme.
 
-- **Perturbation ponctuelle** : losange à la date de l'événement
-- **Perturbation étendue** : losange pour le déclencheur + bande hachurée pour la durée
-- **Exutoire** : pas de marqueur (mentionné dans la description de la durée de la phase)
-- **Fin de l'exutoire** : saillant normal « fin de l'expansion » (●, couleur de la phase)
+- **Perturbation ponctuelle** : losange à la date de l'événement.
+- **Perturbation étendue** : losange pour le déclencheur + bande hachurée pour la durée.
+- **Exutoire** : pas de marqueur (mentionné dans la description de la durée de la phase).
+- **Fin de l'exutoire** : saillant canonique « fin de l'expansion » (●, couleur de la phase — pas un losange de perturbation).
 
-## Dimension territoriale des perturbations
+---
+
+## 2. Qualifier un événement
+
+### Le triple test
+
+Pour qu'un événement soit qualifié comme perturbation, il faut satisfaire les **trois critères** simultanément :
+
+1. **Mécanisme identifiable** parmi les 5 (choc d'hétérogénéité, choc exogène, insuffisance interne, correction d'échelle, exutoire).
+2. **Effet identifiable** parmi les 4 (prolongement, accélération, avortement, reboot).
+3. **Impact réel sur la trajectoire** : sans cet événement, la durée, le niveau ou la direction d'une phase aurait été différente.
+
+Si l'un des trois fait défaut, l'événement n'est pas une perturbation au sens strict.
+
+### Ce qui n'est PAS une perturbation
+
+**Saillant canonique** — priorité de qualification : si un événement peut être un saillant canonique (cf. liste fermée dans CLAUDE.md), le mettre en saillant, pas en perturbation. *Exception unique* : les **crises féodales** sont à la fois saillant canonique ET perturbation (insuffisance interne / avortement).
+
+**Anecdote de parcours** — événement réel mais sans impact identifiable sur la trajectoire (la phase aurait fait la même chose sans lui). Ne pas le marquer dans le parcours structuré.
+
+**Boucle en phase féodale** — la phase féodale est ponctuée de pics féodaux suivis de crises féodales. Si l'homogénéité des élites reste insuffisante pour produire un Pacte Oligarchique, le Parcours **boucle** : un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes. Ce n'est pas une perturbation au sens strict — c'est le mécanisme structurel intra-phase de la phase féodale, qui prolonge endogènement sa durée au-delà de la norme de ~200 ans.
+
+> *Distinction* : une perturbation fait *trébucher* le Parcours ; une boucle le fait *tourner en rond* sans avancer. Chaque crise féodale individuelle dans une boucle est cependant à la fois un saillant canonique « Crise féodale » et une perturbation insuffisance interne / avortement (cf. §4.4).
+
+**Rébellion périphérique** — un soulèvement aux marges d'un empire à son acmé absolutiste relève du Parcours impérial, non du Parcours de la communauté soumise. À ne pas confondre avec une étape du Parcours national.
+
+> *Test* :
+> - *Rébellion périphérique* : le soulèvement mobilise des populations marginales d'un empire à son acmé absolutiste, et coïncide avec un effort de centralisation/homogénéisation forcée du centre impérial. Le Parcours national de la communauté soumise n'est pas en transition — la rébellion est provoquée par la dynamique du Parcours impérial.
+> - *Étape du Parcours national* : le soulèvement mobilise le corps civique de la nation, intervient à un moment cohérent avec sa dynamique phasique propre, et résout (ou déclenche) une transition structurelle interne. La supra-entité impériale est l'arrière-plan, pas le moteur.
+
+**Élément nouveau théorique** — événement structurellement important qui ne rentre dans aucune catégorie existante (saillant canonique, perturbation, anecdote). À **remonter explicitement** pour discussion théorique, plutôt que forcer dans une catégorie existante.
+
+---
+
+## 3. Dimension territoriale
 
 ### Noyau territorial et marges
 
@@ -56,20 +89,9 @@ La **superficie de référence** d'une nation à un moment donné se décompose 
 - **Noyau territorial** : le territoire culturellement homogène avec le cœur de la nation — même langue, même droit, mêmes institutions. C'est le territoire qui *est* la nation.
 - **Marges** : les territoires hétérogènes sous contrôle de la même couronne — langue différente, droit différent, culture différente. C'est le territoire que la nation *possède* sans l'avoir assimilé.
 
-La distinction noyau/marges est la traduction territoriale des deux moteurs du Parcours. Le noyau correspond au territoire où l'homogénéisation culturelle est accomplie ; les marges correspondent au territoire où elle ne l'est pas encore.
+La distinction noyau/marges est la traduction territoriale des deux moteurs du Parcours. Le noyau correspond au territoire où l'homogénéisation culturelle est accomplie ; les marges au territoire où elle ne l'est pas encore.
 
-| Nation | Noyau | Marges |
-|---|---|---|
-| Angleterre | Angleterre (~130 000 km²) | Normandie, Gascogne, pays de Galles, Irlande, Écosse (selon les périodes) |
-| France | France d'oïl | France d'oc (Languedoc, Provence), Bretagne, Alsace |
-| Espagne | Castille | Aragon, Catalogne, Pays-Bas, Naples, Sicile |
-| Venise | Lagune (~1 000 km²) | Stato da Màr (Crète, Eubée) + Terraferma (Bergame, Brescia, etc.) |
-
-**Transitions marge → noyau** : un territoire peut commencer comme marge et rejoindre le noyau quand l'homogénéisation culturelle y est accomplie. Ces transitions sont approximées par des dates ponctuelles :
-- Pays de Galles : marge à partir de 1282 (conquête), noyau à partir de 1536 (Laws in Wales Acts)
-- Écosse : marge à partir de 1603 (union des couronnes), noyau à partir de 1707 (Acts of Union)
-- Languedoc : marge à partir de 1229 (croisade des Albigeois), noyau à partir de 1539 (Villers-Cotterêts)
-- Aragon/Catalogne : marges à partir de 1479 (union dynastique), noyau à partir de 1714 (Nueva Planta)
+**Transitions marge → noyau** : un territoire peut commencer comme marge et rejoindre le noyau quand l'homogénéisation culturelle y est accomplie. Ces transitions sont approximées par des dates ponctuelles d'accomplissement juridique et linguistique (édit, loi d'union, abolition des particularismes).
 
 ### Perturbations territoriales vs non territoriales
 
@@ -77,9 +99,17 @@ La plupart des perturbations de type `choc_heterogeneite` et `correction_echelle
 
 Certaines perturbations utilisent le même mécanisme mais ne sont **pas territoriales** — elles opèrent par le canal culturel ou institutionnel sans modifier la superficie. Dans ce cas, on ajoute le champ `territorial: false` dans les données du saillant.
 
-**Exemple** : l'invasion macédonienne d'Israël (-332) est codée `choc_exogene / prolongement` avec `territorial: false`. La superficie d'Israël ne change pas — c'est l'hellénisation culturelle qui prolonge la phase, pas un gain de territoire.
+### Mécanismes et territoire
 
-### Perturbations territoriales et graphique de superficie
+| Mécanisme | Territorial ? | Direction |
+|---|---|---|
+| Choc d'hétérogénéité | Presque toujours oui | Expansion (la superficie augmente) |
+| Correction d'échelle | Toujours oui | Contraction (la superficie diminue) |
+| Choc exogène | Souvent oui, parfois non | Variable (invasion, traité, défaite) |
+| Insuffisance interne | Rarement | — |
+| Exutoire (continu) | Implicitement | Expansion continue |
+
+### Affichage : perturbations territoriales et graphique de superficie
 
 Sur la frise, les perturbations territoriales (sans `territorial: false`) dont l'effet est `prolongement` ou `acceleration` sont affichées **au-dessus du graphique de superficie** plutôt que dans la rangée principale des saillants. Cela permet de :
 - Associer visuellement l'expansion/contraction au changement de superficie visible sur le graphique
@@ -87,253 +117,162 @@ Sur la frise, les perturbations territoriales (sans `territorial: false`) dont l
 
 Les perturbations avec effet `reboot` ou `avortement` restent dans la rangée principale, même si elles sont territoriales — elles relèvent de la dynamique politique du Parcours, pas seulement du territoire.
 
-### Mécanismes et territoire
-
-| Mécanisme | Territorial ? | Direction | Exemples |
-|---|---|---|---|
-| Choc d'hétérogénéité | Presque toujours oui | Expansion (la superficie augmente) | Empire de Cnut, Union Castille-Aragon, Stato da Màr |
-| Correction d'échelle | Toujours oui | Contraction (la superficie diminue) | Perte de la Normandie, Fragmentation Visconti, Perte de la France |
-| Choc exogène | Souvent oui, parfois non | Variable (invasion, traité, défaite) | Westphalie (territorial), hellénisation (non territorial) |
-| Insuffisance interne | Rarement | — | Crises féodales (politique, pas territoriale) |
-| Exutoire (continu) | Implicitement | Expansion continue | Reconquista, Stato da Màr, colonies |
-
-### Exutoire colonial : le timing compte
-
-L'expansion coloniale n'a pas le même effet selon le moment du Parcours où elle intervient :
-- **Pendant une phase active** (féodale, oligarchique, absolutiste) : l'exutoire colonial prolonge la phase en cours en absorbant les tensions internes. C'est le cas de l'Espagne (colonies pendant la phase oligarchique) et de Venise (Stato da Màr pendant l'essor oligarchique).
-- **Après la RN** (phase parlementaire) : l'exutoire colonial ne perturbe pas le Parcours, car la phase parlementaire est l'aboutissement du Parcours. C'est le cas de l'Angleterre, dont l'essentiel de l'expansion coloniale intervient après 1688.
-
-## Tableau récapitulatif du corpus
-
-| Perturbation | Nation | Mécanisme | Effet | Territorial ? | Marqueur |
-|---|---|---|---|---|---|
-| **Israël** |
-| Choc assyrien (-722) | Israël | Choc exogène | Reboot + transfert 🟤 | Oui | ◆🟤 `bolt` |
-| Conquête babylonienne (-586) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
-| Hellénisation (-332) | Israël | Choc exogène | Prolongement 🟠 | **Non** (culturel) | ◆🟠 `bolt` |
-| Destruction du Temple (70) | Israël | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
-| **Angleterre** |
-| Empire de Cnut (~1016) | Angleterre | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
-| Conquête normande (1066) | Angleterre | Choc d'hétérogénéité | Reboot 🟤 | Oui | ◆🟤 `restart_alt` |
-| Perte de la Normandie (1204) | Angleterre | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| Boucles féodales anglaises | Angleterre | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
-| Perte de la France (1453) | Angleterre | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| **France** |
-| Croisade des Albigeois (1229) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Crécy-Poitiers (~1346) | France | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
-| Azincourt-Troyes (1415-1420) | France | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
-| Intégration Bourgogne-Provence (1477-1481) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Traité d'Utrecht (1713) | France | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| **Espagne** |
-| Empire colonial américain (1521-1533) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Intégration de l'Aragon (1716) | Espagne | Choc d'hétérogénéité (modéré, proximité culturelle) | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
-| Perte de l'empire colonial américain (1808-1826) | Espagne | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
-| Désastre de 1898 | Espagne | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| **Venise** |
-| Stato da Màr (1204) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Conquête de la Terraferma (1428) | Venise | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Perte de la Crète (1669) | Venise | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
-| Chute de la République (1797) | Venise | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
-| RN écrasée (1849) | Venise | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
-| **Milan** |
-| Empire Visconti (1395) | Milan | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Fragmentation Visconti (1402) | Milan | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
-| Invasion française (1499) | Milan | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
-| Occupation napoléonienne (1796) | Milan | Choc exogène | Accélération 🔵 | **Non** (institutionnel) | ◆🔵 `bolt` |
-| **Bavière** |
-| Partitions (1255, 1349, 1392) | Bavière | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
-| Doublement napoléonien (1806) | Bavière | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| **Piémont** |
-| Invasion française (1536) | Piémont | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
-| Éclipse napoléonienne (1796-1814) | Piémont | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
-| **Autriche** |
-| Crise féodale — extinction Babenberg (1246) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
-| Crise féodale — Neuberg (1379) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
-| Crise féodale — guerre civile Albert VI (1440s-1463) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
-| Crise féodale — occupation Corvin (1485-1490) | Autriche | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
-| Intégration de la Bohême (1627) | Autriche | Choc d'hétérogénéité | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
-| Perte de la Silésie (1742) | Autriche | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
-| Solferino — perte de la Lombardie (1859) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| Sadowa — exclusion de l'Allemagne (1866) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
-| **Suisse** |
-| Invasion française (1798) | Suisse | Choc exogène | Accélération 🔵 | Non | ◆🔵 `bolt` |
-
 ---
 
-## Détail des effets
+## 4. Les mécanismes en détail
 
-Les sections ci-dessous détaillent chaque effet avec ses mécanismes, exemples, et cas particuliers.
+### 4.1 Choc d'hétérogénéité
 
-### Questions diagnostiques
+**Définition** : événement ou processus par lequel une expansion territoriale, un afflux de population, ou l'intégration d'une marge **effectivement digérée** par le noyau hétérogénéise brutalement la société, déclenchant un prolongement de la phase en cours. La condition de digestion est essentielle : sans mobilisation effective des élites du noyau pour intégrer la marge, il n'y a pas de choc.
 
-Pour identifier l'effet d'une perturbation, deux questions se posent dans cet ordre :
-
-**1. Les institutions sont-elles détruites ?**
-- **Oui** → reboot. L'État central doit être reconstruit ; le Parcours régresse.
-- **Non** → passer à la question 2.
-
-**2. Le Parcours progresse-t-il, stagne-t-il, ou régresse-t-il ?**
-- **Stagne ou ralentit** (hétérogénéité accrue, gel temporaire) → prolongement.
-- **Accélère** (hétérogénéité réduite, exutoire supprimé, modernisation forcée) → accélération.
-- **Transition bloquée** (la phase en cours ne peut pas se résoudre) → avortement.
-
-## Profondeur du reboot
-
-Le reboot ne ramène pas toujours le Parcours au même point. La profondeur de la régression dépend de l'ampleur de la destruction :
-
-- Si l'**État central** est détruit mais que les **équilibres entre classes d'élites** subsistent (au moins partiellement), le Parcours régresse d'**une phase** — il faut reconstruire l'appareil du pouvoir, mais pas les rapports de force entre élites.
-- Si l'État central ET la **structure des élites** sont anéantis, le Parcours peut régresser de **plusieurs phases**.
-
-Les cas israéliens montrent systématiquement une régression d'une phase :
-- -586 : de la phase absolutiste vers la phase oligarchique — l'État de Josias est détruit, mais les élites exilées à Babylone conservent leur structure sociale et leur homogénéité culturelle.
-- 70 : de la RN vers la phase absolutiste — toutes les factions sont éliminées sauf les Pharisiens, mais le vide oligarchique et la présence d'un pouvoir central fort (Rome) créent directement les conditions d'entrée en phase absolutiste.
-
-Le reboot anglais de 1066 (Guillaume le Conquérant) est un cas de régression plus profonde : l'aristocratie anglo-saxonne est intégralement remplacée par une noblesse normande, le système foncier est redistribué, les réseaux de l'ancien État sont détruits. Le Parcours redémarre en phase féodale.
-
-## Reprise des sous-phases après perturbation
-
-L'effet sur les sous-phases diffère selon le type de perturbation :
-
-- **Après un reboot**, le Parcours recommence par la **première sous-phase** de la phase de destination, puisque l'État central doit être reconstruit. Exemple : après le reboot de -586, Israël repasse par l'essor oligarchique (-520 à ~-350) avant d'atteindre la guerre sociale.
-- **Après un prolongement**, le Parcours reprend **là où il était bloqué**. Les institutions ayant survécu, il n'est pas nécessaire de repasser par les sous-phases antérieures. Exemple : après le prolongement de -332, Israël ne repasse pas par l'essor oligarchique — la polarisation des élites reprend (Oniades vs Tobiades) et débouche directement sur la guerre sociale.
-
-## Boucles en phase féodale
-
-La phase féodale est ponctuée de **pics féodaux** (rois forts) suivis de **crises féodales** (effondrement post-pic). Si les conditions du pacte oligarchique ne sont pas réunies (homogénéité insuffisante), le Parcours **boucle** — un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes. Les boucles allongent la durée de la phase féodale au-delà de la norme endogène de ~200 ans.
-
-**Exemple :** L'Angleterre boucle 5 fois sur ~500 ans (d'Ecgberht ~829 aux Ordonnances de 1311) avant que l'homogénéité des élites anglaises ne soit suffisante pour produire un pacte oligarchique. Chaque cycle (pic → crise → pas de pacte → nouveau pic) fait avancer l'homogénéisation, mais pas assez pour franchir le seuil.
-
-Ne pas confondre les boucles — mécanisme structurel où la phase ne peut pas avancer vers la suivante parce que les conditions de résolution ne sont pas réunies — avec de simples **perturbations intra-phase** (défaites militaires, crises dynastiques) qui ralentissent temporairement la progression sans modifier la dynamique de fond. Une perturbation fait trébucher le Parcours ; une boucle le fait tourner en rond.
-
-## Reboot
-
-Le reboot se produit quand une perturbation externe **détruit les institutions** et anéantit les réseaux humains qui composaient l'appareil du pouvoir central. Le Parcours régresse à une phase antérieure, parce que l'État central doit être reconstruit.
-
-Le reboot est provoqué par une rupture institutionnelle et démographique majeure : destruction physique de l'État, élimination ou déportation des élites, effondrement de l'économie. Ce qui a mis des siècles à se construire — les réseaux et la structure de l'État central, les équilibres entre classes — est rasé.
-
-Si l'homogénéité culturelle du peuple est préservée malgré la destruction institutionnelle, le redémarrage peut être rapide.
-
-### Exemples
-
-**Reboot de la phase absolutiste vers la phase oligarchique (Israël, -586) :**
-En -586, Nabuchodonosor II conquiert Jérusalem, détruit le Temple, massacre la population et déporte les élites à Babylone. L'État central s'effondre, la région subit une désurbanisation complète. Mais les élites issues de la diaspora babylonienne conservent une forte homogénéité culturelle entre elles. Au retour d'exil (-520), les villes sont dépeuplées, les cultes étrangers de retour, et la fragmentation du pays ramène le Parcours en début de phase oligarchique.
-
-**Reboot de la RN vers la phase absolutiste (Israël, 70) :**
-La destruction du Second Temple par les Romains fait régresser Israël en phase absolutiste, alors qu'il était entré en Révolution Nationale. L'écrasement de la révolte anéantit les réseaux humains qui composaient l'appareil du pouvoir central : Temple, Sanhédrin, Grand Sacerdoce, fiscalité autonome — rien ne subsiste. La Judée se retrouve avec un vide oligarchique, un pouvoir central fort (mais exercé par Rome), et une homogénéité culturelle forte. Les conditions d'entrée en phase absolutiste sont réunies. C'est ce qui éclaire la révolte de Bar Kokhva (132-135) : Bar Kokhva n'est pas un révolutionnaire national — c'est un monarque absolu menant une guerre d'indépendance.
-
-**Reboot féodal (Angleterre, 1066) :**
-Guillaume le Conquérant redistribue systématiquement les terres, remplace l'aristocratie anglo-saxonne par une noblesse normande, impose un nouveau système féodal (Domesday Book). Les réseaux de l'ancien État anglo-saxon sont détruits. Le Parcours redémarre en phase féodale.
-
-## Prolongement
-
-Le prolongement se produit quand une perturbation externe **ne détruit pas les institutions** mais **hétérogénéise la société** et désorganise les élites ainsi que les réseaux dont dépend le pouvoir central. Le Parcours ne recule pas — il stagne, le temps que les factions se recomposent autour des nouveaux clivages.
-
-La différence avec le reboot est que les institutions survivent : le Grand Prêtre reste en fonction, les assemblées continuent de siéger, le cadre juridique n'est pas aboli. Mais les élites prébendières perdent ce qui faisait leur puissance (leur intégration aux structures impériales), et la société se fragmente culturellement.
-
-### Exemple
-
-**Prolongement de la phase oligarchique (Israël, -332) :**
-L'invasion d'Alexandre le Grand perturbe la progression du Parcours — non par destruction des institutions, mais par désorganisation de la classe qui en permettait l'avancée. Les circuits commerciaux se réorientent vers le monde grec ; la langue administrative change ; les interlocuteurs du pouvoir ne sont plus les mêmes. Les élites prébendières ne sont pas liquidées mais elles perdent leur intégration aux structures impériales. Le Parcours stagne pendant ~192 ans (de -332 à -140), le temps que les factions se recomposent : les Tobiades s'intègrent aux circuits ptolémaïques, la société s'hellénise, de nouveaux clivages apparaissent (Oniades vs Tobiades), et la guerre sociale peut enfin se résoudre.
-
-## Transfert de territoire
-
-Le Parcours n'est pas attaché à un territoire fixe, mais à une communauté humaine : ses élites, ses institutions, son homogénéité culturelle. Si le territoire d'origine est détruit mais que les porteurs du Parcours survivent et se déplacent, le Parcours peut se transférer sur un nouveau territoire.
-
-Ce transfert le perturbe et l'allonge, mais ne l'interrompt pas.
-
-### Exemple
-
-**Transfert de la Samarie vers la Judée (Israël, -722) :**
-Le choc assyrien anéantit le royaume d'Israël. Sa population fuit massivement vers le sud, en Judée — jusqu'alors pauvre et peu urbanisée. Le Parcours se poursuit en Judée : Jérusalem et la Judée connaissent un développement rapide (urbanisation accélérée, consolidation politique, signes d'une administration centrale inexistants avant l'arrivée des Samaritains). Le choc assyrien a allongé la durée de la phase oligarchique, mais ne l'a pas fait redémarrer — sans doute aidé en cela par la concentration des réfugiés sur un territoire réduit et peu peuplé.
-
-## Choc d'hétérogénéité
-
-Le choc d'hétérogénéité est le saillant qui marque le moment précis où une expansion territoriale ou un afflux de population hétérogénéise brutalement la société, déclenchant un prolongement. C'est le mécanisme déclencheur du prolongement — l'événement ponctuel qui fait basculer le ratio d'homogénéité.
-
-Le choc d'hétérogénéité peut avorter une sous-phase en cours. Si la société était en train d'entrer en Ancien Régime (stratification, sédimentation), l'hétérogénéisation défait cette stratification et relance la dynamique d'homogénéisation — ce qui peut rebooter la sous-phase d'impérialisme absolutiste.
-
-### Condition nécessaire : administration commune (intégration effective)
-
-**Un choc d'hétérogénéité n'opère que si l'acquisition territoriale mobilise effectivement les élites du noyau dans un travail de digestion des marges** — homogénéisation culturelle, intégration administrative, personnel administratif issu du noyau. C'est la digestion qui absorbe l'énergie élitaire et prolonge la phase en cours. Sans digestion, pas de choc.
-
-**Deux types d'empire à distinguer** :
+**Empire intégré vs empire en union personnelle** — distinction critique :
 
 1. **Empire intégré** (administration commune) : les marges sont administrées directement par des fonctionnaires issus du noyau (magistrats, gouverneurs, intendants, juges), soumises au droit du noyau (ou à un droit imposé depuis le noyau), et leurs élites locales sont soit cooptées dans l'élite du noyau soit écartées. Chaque nouvelle acquisition crée des postes à pourvoir, des responsabilités à distribuer, un travail d'homogénéisation à faire. **C'est un vrai choc d'hétérogénéité qui prolonge structurellement le Parcours.**
 
 2. **Empire en union personnelle** (administration séparée) : les marges conservent leurs propres institutions (diète, assemblée, parlement), leur propre droit coutumier, leurs propres administrateurs locaux. Le souverain partage un titre avec le noyau mais « change de chapeau » institutionnellement quand il passe d'une couronne à l'autre. Les élites du noyau ne sont pas mobilisées pour digérer les marges — elles restent concentrées sur le territoire noyau. **L'union personnelle ne produit pas de choc d'hétérogénéité structurel ; au plus, elle fonctionne comme une soupape militaire (exutoire de guerre, débouché de carrières) qui absorbe temporairement l'énergie élitaire sans la diriger vers un travail d'homogénéisation.**
 
-Cette distinction est **essentielle pour dater correctement un choc d'hétérogénéité**. Dans une monarchie composite où une marge passe progressivement de l'union personnelle à l'administration directe, le choc d'hétérogénéité doit être placé **au moment de l'intégration administrative**, pas au moment de l'acquisition dynastique. Exemple : l'héritage jagellon donne à Ferdinand Ier la couronne de Bohême en 1526, mais la Bohême reste en union personnelle jusqu'en 1627 (Verneuerte Landesordnung) — c'est cette date-là qui constitue le choc d'hétérogénéité pour le Parcours autrichien, pas 1526.
+**Datation correcte** : dans une monarchie composite où une marge passe progressivement de l'union personnelle à l'administration directe, le choc d'hétérogénéité doit être placé **au moment de l'intégration administrative** (codification, union juridique, abolition des particularismes), pas au moment de l'acquisition dynastique.
 
-Intensité variable selon la distance culturelle : un choc d'hétérogénéité par intégration d'une marge culturellement proche (langue apparentée, droit similaire, confession commune) est moins intense qu'un choc par intégration d'une marge culturellement distante. Exemple : l'intégration de l'Aragon à la Castille (1469-1716) est un choc d'hétérogénéité, mais moins fort qu'il n'y paraît parce que les deux royaumes sont culturellement proches — analogue à l'intégration France d'oïl/Occitanie au Parcours français.
+**Intensité variable** : un choc par intégration d'une marge culturellement proche (langue apparentée, droit similaire, confession commune) est moins intense qu'un choc par intégration d'une marge culturellement distante.
 
-### Corollaire symétrique : la perte d'une union personnelle n'est pas une correction d'échelle
+**Avortement de sous-phase** : un choc d'hétérogénéité peut avorter une sous-phase en cours. Si la société entrait en ancien régime (stratification, sédimentation), l'hétérogénéisation défait cette stratification et relance la dynamique d'homogénéisation — ce qui peut rebooter la sous-phase d'impérialisme absolutiste.
 
-Le principe est rigoureusement symétrique. **Si une acquisition territoriale n'a pas produit de choc d'hétérogénéité (parce qu'elle est restée en union personnelle, non digérée par le noyau), alors sa perte ne peut pas non plus produire de correction d'échelle structurelle.** Une possession qu'on n'a jamais digérée n'est pas un poids dont la perte « ramène vers l'échelle naturelle » — c'est juste un chapeau qui tombe. L'effet sur le cycle est nul dans les deux sens.
+**Trois cas-type** :
 
-**Critère de la correction d'échelle (`correction_echelle`) au sens strict** : il faut que le territoire perdu ait été effectivement **digéré** par le noyau — administration directe par du personnel issu du noyau, droit imposé depuis le noyau, mobilisation durable des élites centrales. Seules ces pertes ramènent réellement le Parcours vers un « noyau naturel » plus petit et accélèrent la suite.
+- **Empire intégré** : administration directe par du personnel issu du noyau (provveditori, intendants, vice-rois, corregidores, gouverneurs). Chaque acquisition crée des postes à pourvoir, un butin à partager, un travail d'intégration. C'est le cas pur, et il produit les phases oligarchiques les plus longues.
+- **Choc par expansion brutale + administration uniforme imposée** : doublement de territoire (typiquement par traité ou modernisation napoléonienne) appliquant un modèle administratif unique sur des populations hétérogènes (langue, confession, droit). Avorte parfois une entrée en ancien régime en cours et relance un cycle d'impérialisme absolutiste sous forme modernisatrice.
+- **Choc non territorial** : conquête extérieure qui ne change pas la superficie mais hétérogénéise par voie culturelle (langue administrative imposée, élites cooptées par l'occupant, circuits commerciaux réorientés). Codé `choc_exogene / prolongement` avec `territorial: false`.
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Venise | 1669 | Perte de la Crète, administrée directement par des baili vénitiens depuis 1204. Vraie contraction d'un empire intégré. |
-| Milan | 1402 | Fragmentation de l'empire Visconti de Gian Galeazzo, administré directement par des podestà et vicari viscontéens. Vraie contraction. |
-| Autriche | 1742 | Perte de la Silésie, province de la couronne de Bohême intégrée à l'administration habsbourgeoise depuis la Verneuerte Landesordnung (1627). Vraie contraction d'une province digérée. |
-| Espagne | 1808-1826 | Perte de l'empire colonial américain, administré directement par des vice-rois, corregidores et audiencias castillans pendant trois siècles. Seule vraie correction d'échelle du Parcours espagnol. |
+### 4.2 Choc exogène
 
-| Nation | Exemple |
+**Définition** : événement extérieur ponctuel qui frappe le Parcours. C'est le mécanisme **polyvalent** — son effet dépend de ce que le choc fait :
+
+| Ce que le choc fait | Effet |
 |---|---|
-| Espagne | Portugal 1640, Provinces-Unies (Westphalie 1648), Pays-Bas méridionaux et Italie (Utrecht 1713). Ces possessions étaient en union personnelle avec institutions locales préservées — jamais digérées par les élites castillanes. Leur perte marque seulement la fin d'une soupape militaire européenne, pas un retour vers le noyau naturel. |
-| Angleterre | Normandie 1204 (Exchequer of Normandy distinct, coutume de Normandie), Gascogne 1453 (sénéchal d'Aquitaine à Bordeaux, droit gascon). Union personnelle. Ces pertes ont un effet structurel réel sur le Parcours anglais (anglicisation forcée, fin de l'exutoire militaire des factions Lancaster/York) mais par un mécanisme différent — voir ci-dessous. |
+| Ralentit sans détruire (gel temporaire, occupation) | Prolongement 🟠 |
+| Supprime un exutoire militaire externe, force le recentrage interne | Accélération 🔵 |
+| Bloque une transition sans détruire les institutions | Avortement 🔴 |
+| Détruit les institutions et les réseaux humains | Reboot 🟤 |
 
-### Choc exogène avec fin d'exutoire militaire
+**Cas particulier 1 : choc exogène culturel non territorial**. Conquête extérieure qui ne change pas la superficie mais hétérogénéise par voie culturelle (langue administrative imposée, élites cooptées par l'occupant, circuits commerciaux réorientés). Codé `choc_exogene / prolongement` avec `territorial: false`. C'est le pendant non territorial du choc d'hétérogénéité.
 
-Pour les cas où une défaite militaire externe supprime un exutoire sans qu'il s'agisse d'une digestion préalable, le mécanisme correct est **`choc_exogene`** avec effet **`acceleration`**. L'effet structurel reste réel — la fin de l'exutoire militaire force les élites à se retourner vers le jeu interne — mais le mécanisme ne passe pas par une contraction du territoire digéré.
+**Cas particulier 2 : choc exogène avec fin d'exutoire militaire**. Quand une défaite externe supprime un territoire **en union personnelle** (jamais digéré par le noyau), c'est `choc_exogene / acceleration` — pas une `correction_echelle`.
 
-**Distinction structurelle** :
-- `correction_echelle / acceleration` : le territoire perdu était intégré, sa perte contracte le noyau digéré et force une réduction d'échelle. Accélération par retour à l'échelle naturelle plus petite.
-- `choc_exogene / acceleration` (fin d'exutoire militaire) : le territoire perdu était un exutoire externe (union personnelle, possession continentale lointaine), sa perte supprime la soupape militaire qui détournait l'énergie élitaire. Accélération par recentrage sur le jeu interne.
+> *Distinction critique* :
+> - `correction_echelle / acceleration` : le territoire perdu était intégré, sa perte contracte le noyau digéré et force une réduction d'échelle. Accélération par retour à l'échelle naturelle plus petite.
+> - `choc_exogene / acceleration` (fin d'exutoire militaire) : le territoire perdu était un exutoire externe (union personnelle, possession continentale lointaine), sa perte supprime la soupape militaire qui détournait l'énergie élitaire. Accélération par recentrage sur le jeu interne.
+>
+> Les deux produisent le même effet observable mais par des mécanismes distincts. La correction d'échelle suppose et valide une digestion préalable ; le choc exogène n'en suppose pas.
 
-Les deux produisent le même effet observable (accélération de la phase suivante) mais par des mécanismes distincts. La différence est que la correction d'échelle suppose et valide une digestion préalable ; le choc exogène n'en suppose pas.
+Cas typique de la fin d'exutoire militaire : perte d'une possession continentale en union personnelle qui servait de débouché militaire à des factions oligarchiques. La perte coupe les factions de leur exutoire externe et précipite leur affrontement interne (souvent saillant comme guerre sociale subséquente).
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Angleterre | 1204 | Perte de la Normandie, de l'Anjou, du Maine, du Poitou par Jean sans Terre : coupe les élites anglo-normandes de leurs domaines continentaux, force leur anglicisation et accélère l'homogénéisation vers le pacte (Ordonnances 1311). |
-| Angleterre | 1453 | Défaite de Castillon, fin de la guerre de Cent Ans : fin de l'exutoire militaire français qui maintenait l'équilibre précaire entre Lancaster et York. Sans ennemi extérieur, les factions explosent en Guerre des Deux Roses (1455-1485) — la guerre sociale anglaise. |
-| Autriche | 1859 | Défaite de Solferino, perte de la Lombardie : la Lombardie n'était vraiment administrée directement que depuis 1815 (44 ans — trop court pour une digestion effective). Sa perte est un choc exogène qui accélère l'AR autrichien. |
-| Autriche | 1866 | Défaite de Sadowa, perte de la Vénétie + exclusion de l'Allemagne : la Vénétie, comme la Lombardie, n'avait pas été vraiment digérée depuis 1815. L'exclusion de l'Allemagne n'est pas une perte territoriale mais politique — l'Autriche perd son rôle de puissance directrice de l'espace allemand. L'effet combiné force un réalignement interne majeur (Ausgleich 1867, architecture dualiste). |
+### 4.3 Correction d'échelle
 
-### Exemples
+**Définition** : contraction territoriale du noyau effectivement digéré, qui ramène le Parcours vers son « échelle naturelle » plus petite et accélère la phase en cours.
 
-**Bavière (1806) :**
-Le doublement napoléonien du territoire (Franconie, Souabe) hétérogénéise brutalement une société bavaroise qui était en train d'entrer en Ancien Régime sous Charles-Théodore. L'intégration de populations franconniennes (protestantes) et souabes dans un État catholique bavarois relance la dynamique impérialiste sous forme modernisatrice (réformes Montgelas). Le choc avorte le premier AR et ouvre un second cycle d'impérialisme absolutiste. **C'est une intégration administrative directe** — Montgelas applique le modèle napoléonien d'administration centralisée uniforme sur tout le nouveau territoire.
+**Critère strict** : il faut que le territoire perdu ait été effectivement **digéré** par le noyau — administration directe par du personnel issu du noyau, droit imposé depuis le noyau, mobilisation durable des élites centrales. Seules ces pertes ramènent réellement le Parcours vers un noyau naturel plus petit et accélèrent la suite.
 
-**Venise :**
-L'empire vénitien (stato da Mar, stato da Terra) est administré directement par des provveditori et rettori issus du patriciat vénitien, nommés par la Quarantia. Chaque nouvelle acquisition crée des postes à pourvoir, un butin à partager, un travail d'intégration à faire — ce qui mobilise massivement le patriciat. C'est le cas le plus pur d'empire intégré dans le corpus, et il produit la phase oligarchique la plus longue (~637 ans).
+**Test pratique** : (1) le territoire était-il administré par des fonctionnaires issus du noyau, soumis à son droit ? (2) cette administration intégrée a-t-elle duré assez longtemps pour mobiliser durablement les élites centrales (au moins quelques décennies, idéalement un siècle ou plus) ? Si oui aux deux questions, c'est une correction d'échelle. Si non — institutions locales préservées, élites locales restées maîtresses — la perte ne produit pas de correction d'échelle structurelle, même si elle est militairement spectaculaire (voir alors §4.2 cas particulier 2).
 
-**Autriche habsbourgeoise (contre-exemple) :**
-L'empire continental autrichien est colossal (Bohême, Hongrie, Pays-Bas, Lombardie, Naples, Galicie) mais majoritairement en union personnelle. Chacune de ces couronnes conserve ses institutions (diète de Bohême, diète de Hongrie, États de Brabant, Sénat de Milan, Sejm galicien), son droit coutumier, ses administrateurs locaux. Les acquisitions de Karlowitz 1699 (Hongrie intégrale), Utrecht-Rastatt 1714 (Pays-Bas, Italie), Passarowitz 1718, Galicie 1772 **ne produisent pas de choc d'hétérogénéité structurel** — elles ajoutent des chapeaux au souverain sans mobiliser les élites viennoises pour un travail de digestion. La seule marge qui fait exception est la **Bohême** après la Verneuerte Landesordnung de 1627 : proximité géographique et linguistique, noblesse germanophone, intégration administrative progressive, germanisation culturelle étalée sur le XVIIe-XVIIIe siècle. C'est pourquoi la phase oligarchique autrichienne n'est prolongée que d'environ +30 ans (231 ans, proche de la norme canonique) et non de +145 ans comme l'Espagne ou +437 comme Venise.
+**Corollaire symétrique** : si une acquisition territoriale n'a pas produit de choc d'hétérogénéité (parce qu'elle est restée en union personnelle, non digérée par le noyau), alors sa perte ne peut pas non plus produire de correction d'échelle structurelle. Une possession qu'on n'a jamais digérée n'est pas un poids dont la perte « ramène vers l'échelle naturelle » — c'est juste un chapeau qui tombe. L'effet sur le cycle est nul dans les deux sens.
 
-**Espagne habsbourgeoise :**
-Cas intermédiaire. L'Aragon conserve ses fueros et institutions propres jusqu'aux décrets de Nueva Planta (1707-1716), ce qui ressemble à une union personnelle. Mais Castille et Aragon sont culturellement très proches (langues apparentées, catholicité commune, traditions convergentes) — analogue à France d'oïl / Occitanie. Donc le choc d'hétérogénéité existe mais est moins intense qu'il ne le serait dans un cas plus culturellement distant. L'empire colonial américain, en revanche, est administré directement (vice-rois, corregidores, audiencias) par du personnel castillan — c'est le vrai moteur du prolongement espagnol (~345 ans de phase oligarchique).
+### 4.4 Insuffisance interne
 
-**Israël (-332) :**
-La conquête macédonienne hétérogénéise la société judéenne (hellénisation) sans détruire les institutions (le Grand Prêtre reste en fonction). Le Parcours stagne pendant ~192 ans le temps que les factions se recomposent autour des nouveaux clivages (Oniades vs Tobiades). *Note : le mécanisme est `choc_exogene` (conquête extérieure) et non `choc_heterogeneite` (expansion du territoire). L'hétérogénéisation est culturelle, pas territoriale — la superficie d'Israël ne change pas. Le saillant porte le flag `territorial: false`.*
+**Définition** : blocage interne du Parcours qui empêche une transition phasique. Mécanisme exclusivement avortant : la phase en cours ne peut pas accoucher de la suivante parce que ses conditions structurelles ne sont pas réunies.
 
-## Rébellion périphérique
+**Cas-type 1 : crise féodale sans Pacte Oligarchique**. Un pic féodal s'effondre en crise, mais l'homogénéité des élites est insuffisante pour produire un Pacte Oligarchique. La transition vers la phase oligarchique est avortée ; la phase féodale recommence un cycle pic → crise. Chaque crise individuelle est à la fois saillant canonique « Crise féodale » ET perturbation insuffisance interne / avortement. La répétition de ces cycles est la **boucle féodale** (cf. §2 « Ce qui n'est PAS une perturbation »), qui prolonge endogènement la phase féodale au-delà de la norme de ~200 ans.
 
-Certains événements qui peuvent avoir l'air importants pour le Parcours d'une nation relèvent en réalité du Parcours d'une supra-entité impériale. La rébellion périphérique est un phénomène que l'on retrouve avec une régularité frappante : à l'apogée absolutiste d'un empire, l'État central provoque à ses marges géographiques et culturelles les conditions de sa propre contestation.
+**Cas-type 2 : absolutisation avortée**. Une figure tente de résoudre la guerre sociale et imposer un cadre absolutiste, mais échoue par défaut de soutien (ni les clientèles délaissées, ni la classe moyenne administrative ne convergent suffisamment). Aucun nouveau cadre n'émerge ; la phase oligarchique se poursuit jusqu'à une nouvelle tentative de résolution — qui pourra venir d'un autre tiers, d'une dynastie issue d'une faction, ou d'une intervention exogène.
 
-Ce phénomène relève du Parcours de l'empire, non de celui de la nation soumise. Il ne faut pas le confondre avec une étape du Parcours national.
+### 4.5 Exutoire (état continu)
 
-### Exemples
+**Définition** : état durable où l'énergie élitaire est canalisée vers l'extérieur (empire, colonies, mercenariat, expansion militaire continue). Pas un événement ponctuel — c'est une **condition** du Parcours, qui n'a pas de marqueur losange propre sur la frise.
 
-**Guerre de Kitos (115-117) :**
-Le soulèvement embrase simultanément la Cyrénaïque, l'Égypte et Chypre, mais mobilise principalement les communautés juives de diaspora — la Judée elle-même n'est pas ou très marginalement impliquée. Il survient au moment précis où Trajan, à l'apogée absolutiste romaine, engage l'Empire dans sa campagne parthique. Ce n'est pas une étape du Parcours juif — c'est une rébellion périphérique du Parcours romain.
+**Cycle de l'exutoire** :
+- *Apparition* : déclenchée par un choc d'hétérogénéité qui crée le débouché extérieur, ou par une dynamique militaire/commerciale continue.
+- *Fin* : marquée par le saillant canonique **« fin de l'expansion »** (rond, couleur de la phase — pas un losange de perturbation). Cause : choc exogène qui supprime l'exutoire, ou épuisement interne des moyens de l'expansion.
 
-| Nation | Exemple |
-|---|---|
-| Angleterre sous Henri VIII | Pilgrimage of Grace dans le Nord (1536), rébellion des Fitzgerald en Irlande (1534-1535) |
-| France sous Louis XIV | Camisards des Cévennes (1702), Bonnets Rouges de Bretagne (1675), résistance huguenote après la révocation de l'Édit de Nantes (1685) |
-| Russie sous Alexandre II | Insurrection polonaise de 1863, résistance caucasienne |
-| Japon sous Meiji | Guerre de Boshin (1868-1869), rébellions de Saga (1874) et Shinpuren (1876), révolte de Satsuma (1877) |
+**Distinction choc d'hétérogénéité vs exutoire** : le choc d'hétérogénéité ajoute de la diversité vers l'intérieur (gain territorial digéré, afflux culturel) ; l'exutoire projette l'énergie vers l'extérieur. Les deux produisent un prolongement mais par des voies différentes : le choc repousse le seuil d'homogénéité, l'exutoire absorbe les tensions élitaires. Ils coexistent souvent (un héritage impérial peut créer à la fois l'hétérogénéité par la digestion d'une marge et l'exutoire par l'expansion militaire continue).
 
-Dans chaque cas, l'État central, au moment où il impose son autorité avec le plus de vigueur, provoque à ses marges la contestation.
+**Timing : phase active vs phase parlementaire**.
+- *Pendant une phase active* (féodale, oligarchique, absolutiste) : l'exutoire colonial ou militaire prolonge la phase en cours en absorbant les tensions internes.
+- *Après la RN* (phase parlementaire) : l'exutoire colonial ne perturbe pas le Parcours, car la phase parlementaire est l'aboutissement et n'a pas de transition à venir à retarder.
+
+---
+
+## 5. Les effets en détail
+
+### 5.1 Reboot
+
+**Définition** : perturbation qui détruit les institutions et anéantit les réseaux humains de l'appareil central. Le Parcours régresse à une phase antérieure parce que l'État central doit être reconstruit. Mécanisme typique : choc exogène destructeur (conquête, déportation, écrasement militaire massif).
+
+Le reboot est provoqué par une rupture institutionnelle et démographique majeure : destruction physique de l'État, élimination ou déportation des élites, effondrement de l'économie. Ce qui a mis des siècles à se construire — les réseaux et la structure de l'État central, les équilibres entre classes — est rasé. Si l'homogénéité culturelle du peuple est préservée malgré la destruction institutionnelle, le redémarrage peut être rapide.
+
+**Profondeur du reboot** :
+- Si l'**État central** est détruit mais que les **équilibres entre classes d'élites** subsistent (au moins partiellement), le Parcours régresse d'**une phase**.
+- Si l'État central ET la **structure des élites** sont anéantis, le Parcours peut régresser de **plusieurs phases**.
+
+**Reprise des sous-phases** : toujours par la **première sous-phase** de la phase de destination, puisque l'État central doit être reconstruit.
+
+**Trois cas-type** :
+- **Régression d'une phase, élites préservées** : déportation collective ou exil sans génocide. La communauté élitaire conserve sa structure ; au retour, les conditions de redémarrage sont rapidement réunies et le Parcours reprend une phase en arrière.
+- **Régression d'une phase, vide oligarchique** : révolte écrasée, factions oligarchiques liquidées sauf une. La présence simultanée d'un pouvoir central fort (souvent étranger) et d'une homogénéité culturelle forte recrée directement les conditions d'entrée en phase absolutiste — d'où des configurations où une révolte ultérieure prend la forme d'une guerre d'indépendance d'un monarque absolu, pas d'un nouveau cycle révolutionnaire.
+- **Régression de plusieurs phases (reboot profond)** : aristocratie remplacée intégralement, redistribution foncière, nouveau système juridique imposé. Les réseaux humains et les équilibres entre classes sont anéantis. Le Parcours redémarre en phase féodale.
+
+**Variante : transfert de territoire**. Le Parcours n'est pas attaché à un territoire fixe mais à une communauté humaine. Si le territoire d'origine est détruit mais que les porteurs survivent et se déplacent, le Parcours peut se transférer sur un nouveau territoire. Le transfert le perturbe et l'allonge mais ne l'interrompt pas. Conditions favorisant un transfert réussi : noyau de réfugiés conservant son homogénéité culturelle, territoire d'accueil de petite taille permettant une concentration rapide, absence d'absorption dans une autre communauté élitaire dominante.
+
+### 5.2 Prolongement
+
+**Définition** : perturbation qui ne détruit pas les institutions mais hétérogénéise la société et désorganise les élites ainsi que les réseaux dont dépend le pouvoir central. Le Parcours ne recule pas — il **stagne**, le temps que les factions se recomposent autour des nouveaux clivages. Mécanismes typiques : choc d'hétérogénéité, choc exogène ralentisseur, exutoire (état continu).
+
+La différence avec le reboot est que les institutions survivent : assemblées en fonction, cadre juridique préservé, magistratures suprêmes intactes. Mais les élites prébendières perdent ce qui faisait leur puissance — leur intégration aux structures impériales antérieures —, et la société se fragmente culturellement. Le temps de stagnation est celui que mettent les factions à se recomposer autour des nouveaux clivages avant qu'une guerre sociale ne puisse réellement se résoudre.
+
+**Reprise des sous-phases** : reprend **là où le Parcours était bloqué**. Les institutions ayant survécu, il n'est pas nécessaire de repasser par les sous-phases antérieures.
+
+### 5.3 Avortement
+
+**Définition** : perturbation qui bloque le passage à la phase suivante sans détruire les institutions. La phase en cours ne se résout pas et se prolonge jusqu'à ce qu'un autre événement (résolution endogène ou nouvelle perturbation) débloque la transition.
+
+**Causes typiques** :
+- **Insuffisance interne** : conditions structurelles non réunies (homogénéité insuffisante en féodale, défaut de cadre central résolvant en oligarchique tardive). Cf. §4.4.
+- **Choc exogène bloquant** : intervention extérieure qui empêche une transition (puissance étrangère qui écrase une RN naissante, par exemple).
+- **Choc d'hétérogénéité avortant une sous-phase** : intégration d'une marge qui défait la stratification d'un ancien régime entrant et relance l'impérialisme absolutiste. Cf. §4.1.
+
+### 5.4 Accélération
+
+**Définition** : perturbation qui raccourcit la phase en cours en supprimant un exutoire, en réduisant l'hétérogénéité, ou en forçant une modernisation. Le Parcours avance plus vite vers la phase suivante.
+
+**Causes typiques** :
+- **Correction d'échelle** : perte d'un territoire effectivement digéré qui ramène le noyau à son échelle naturelle plus petite. Cf. §4.3.
+- **Choc exogène avec fin d'exutoire militaire** : perte d'un débouché externe (union personnelle, possession continentale) qui force le recentrage sur le jeu interne. Cf. §4.2 cas particulier 2.
+- **Choc exogène modernisateur** : intervention extérieure qui impose un cadre administratif moderne et balaie les structures anciennes (occupation napoléonienne par exemple).
+
+---
+
+## 6. Flux diagnostique
+
+Pour un événement qu'on cherche à classer, poser les questions dans l'ordre :
+
+**Q1 — Est-ce une perturbation ?**
+Appliquer le triple test : mécanisme + effet + impact réel sur la trajectoire. Si l'un fait défaut → l'événement est saillant canonique, anecdote, ou élément nouveau théorique (voir §2). Sinon, continuer.
+
+**Q2 — Les institutions sont-elles détruites ?**
+- Oui → **reboot**. Évaluer la profondeur (régression d'une phase / de plusieurs).
+- Non → continuer.
+
+**Q3 — Quel mouvement du Parcours ?**
+- Stagne ou ralentit → **prolongement**.
+- Accélère → **accélération**.
+- Transition bloquée (la phase en cours ne peut pas se résoudre) → **avortement**.
+
+**Q4 — Quel mécanisme ?**
+- Expansion territoriale + administration commune effective ? → **choc d'hétérogénéité**.
+- Perte d'un noyau effectivement digéré ? → **correction d'échelle**.
+- Perte d'une possession en union personnelle (jamais digérée) ? → **choc exogène fin d'exutoire militaire** (pas correction d'échelle).
+- Conditions structurelles non réunies en interne ? → **insuffisance interne**.
+- État continu d'expansion extérieure (pas un événement ponctuel) ? → **exutoire**.
+- Intervention extérieure ne rentrant dans aucun cas spécial ? → **choc exogène** générique.
+
+**Q5 — Territorial ?**
+- La superficie change (gain ou perte de territoire effectivement digéré) ? → territorial (sans flag).
+- Le mécanisme opère par le canal culturel ou institutionnel sans changer la superficie ? → `territorial: false`.
