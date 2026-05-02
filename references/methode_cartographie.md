@@ -34,11 +34,19 @@ Si l'un de ces pièges réapparaît malgré tout dans le résultat final, repren
 
 ---
 
-## Étape 1 : Lire le cadre théorique
+## Étape 1 : Lire le cadre théorique et cadrer le périmètre
 
 Lire `references/parcours.md` (cadre, deux moteurs, durées typiques, vue d'ensemble des phases). Si la nation a des particularités identifiables d'emblée (cité-État, taille non-standard, position géographique exceptionnelle), lire aussi les fichiers conceptuels pertinents (`phase_*.md`, `elites.md`, `perturbations.md`).
 
 Ne lire **aucun** `nations/*/parcours.md` ni `justification.md` — la comparaison avec le corpus est interdite avant l'Étape 6.
+
+**Cadrer le périmètre temporel et géographique** avant de spawner Agent 1 (cf. `parcours.md` §« Conséquences pour le périmètre temporel d'analyse ») :
+
+- **Borne de début** : remonter aux **origines plausibles de la nation comme entité culturelle**, pas à la première institution politique repérable. Pour une nation médiévale, cela inclut typiquement la période post-effondrement de l'ordre antérieur (post-romain, post-empire, post-migration) où se fait la percolation élitaire pré-féodale.
+- **Borne de fin** : ne **jamais s'arrêter à la perte de souveraineté**. Continuer tant que la nation existe comme sujet historionomique distinct. Le Parcours ne s'arrête qu'à l'absorption culturelle complète ou à la fusion dans le Parcours d'une autre nation — et même là, l'argument doit être explicite.
+- **Périmètre géographique** : noyau culturel de la nation, en suivant son extension/contraction au cours du temps. Pour une nation absorbée tardivement (cité-État italienne intégrée à l'Italie, royaume intégré à un empire), le périmètre géographique peut se réduire au territoire culturel après absorption — le Parcours continue dans ce noyau résiduel.
+
+**Confirmer ce cadrage avec l'utilisateur** avant de lancer Agent 1, en particulier les deux bornes.
 
 ---
 

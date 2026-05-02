@@ -185,6 +185,15 @@ Le Parcours ne nécessite pas que la nation soit formellement unifiée ou souver
 - **Sans unification politique formelle** : une nation peut avoir un Parcours propre porté par l'homogénéité culturelle, même quand elle est constituée de multiples entités politiques distinctes.
 - **Dans un empire multi-national** : le Parcours est porté par l'ethnie du cœur (celle qui contrôle l'appareil central et dont la culture s'impose). Les ethnies périphériques peuvent avoir leur propre Parcours endogène, en partie indépendant.
 
+### Conséquences pour le périmètre temporel d'analyse
+
+La cartographie d'un Parcours national ne doit **jamais être bornée par les dates de souveraineté politique**. Deux règles opérationnelles :
+
+- **Borne de début** : remonter aux **origines plausibles** de la nation comme entité culturelle distincte, pas seulement aux premières institutions politiques visibles. La phase pré-féodale (percolation élitaire) précède toujours toute structuration politique repérable, et peut elle-même être précédée d'un contexte (effondrement d'un ordre antérieur, migration fondatrice, romanisation puis ré-émergence post-romaine). Une cartographie qui démarre à la première institution médiévale visible manque souvent la phase pré-féodale entière.
+- **Borne de fin** : poursuivre le Parcours **au-delà des pertes d'indépendance**, tant que la nation existe comme entité culturellement distincte. Une nation conquise, partitionnée, ou intégrée à un empire continue d'avancer dans son Parcours sous tutelle. Le Parcours ne s'arrête que quand la nation cesse d'être un sujet historionomique distinct — typiquement par **fusion dans le Parcours d'une autre nation** (assimilation culturelle complète, intégration dans un État-nation plus large dont le Parcours absorbe le sien). Et même là, la frontière est à argumenter : une nation peut conserver un Parcours endogène partiel à l'intérieur d'un ensemble plus vaste (cas des nations périphériques d'empires).
+
+**Erreur typique à éviter** : assimiler « fin de l'État souverain » à « fin du Parcours ». Une cité-État absorbée par un Grand-Duché continue son Parcours dans le cadre de ce Grand-Duché ; un royaume conquis par un empire continue son Parcours sous l'empire ; une nation partitionnée continue son Parcours en plusieurs morceaux. Le critère d'arrêt est **culturel et historionomique**, pas politique.
+
 ## Les noms ne sont pas la réalité
 
 Ce qui détermine la phase d'une nation, c'est le **fonctionnement réel** de ses institutions, pas leur étiquette formelle. Les noms portés par les institutions varient selon les contextes culturels et historiques, et peuvent désigner des fonctions structurellement très différentes : un « parlement » peut être une cour de justice, une chambre représentative, ou une assemblée d'oligarques selon l'époque ; une « monarchie » peut être structurellement absolutiste, oligarchique, ou féodale ; une « république » peut fonctionner en oligarchie de fait. Face à une institution, la question n'est jamais « comment s'appelle-t-elle ? » mais « comment fonctionne-t-elle réellement ? ».
