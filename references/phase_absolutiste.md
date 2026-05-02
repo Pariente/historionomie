@@ -4,250 +4,334 @@ La phase absolutiste achève l'élimination des réseaux féodaux et oligarchiqu
 
 **Les « égaux » de cette phase** sont en théorie l'ensemble de la nation — l'homogénéisation culturelle s'étend progressivement à des couches de plus en plus larges de la population (alphabétisation, langue commune, conscience nationale). Mais l'administration centrale, qui intègre les nouvelles élites, finit par se sédimenter : les places sont prises, la mobilité sociale se fige, les rentes deviennent insupportables. **Résolution** : l'**éclatement de la sédimentation** — la Révolution Nationale brise l'ancien ordre devenu insoutenable.
 
+La phase absolutiste commence à la résolution de la guerre sociale (saillant **1er monarque absolu**) et s'achève à l'**éclatement de l'AR** (entrée en RN, cf. `phase_rn.md`). Durée variable selon la vigueur de l'État central et la taille de la nation.
+
+---
+
 ## Comment identifier cette phase
 
-### Test discriminant (absolutiste vs RN)
+### Test discriminant (absolutiste vs oligarchique tardive ; absolutiste vs RN)
 
-Le **bloc contestataire** (ED + EG) a-t-il **renversé le bloc élitaire** ? Le régime absolutiste a-t-il perdu simultanément sa **légitimité** et sa **capacité financière** ?
+**Vers l'amont (oligarchique tardive vs absolutiste)** : l'administration centrale a-t-elle préséance de facto **et** de jure sur les administrations locales ? L'exécutif peut-il agir (déclarer la guerre, lever des impôts, rendre la justice) **sans frein juridique des oligarques** ?
 
-- **Non** → phase absolutiste. Le pouvoir central contrôle la situation, même si la contestation monte (Ancien Régime).
-- **Oui** → Révolution Nationale. L'ordre ancien a explosé.
+- **Non** → encore en phase oligarchique (cf. `phase_oligarchique.md`).
+- **Oui** → phase absolutiste.
+
+**Vers l'aval (absolutiste vs RN)** : le bloc contestataire (ED + EG) a-t-il renversé le bloc élitaire ? Le régime a-t-il perdu simultanément sa **légitimité** et sa **capacité financière** ?
+
+- **Non** → encore en phase absolutiste (peut être en sous-phase ancien régime, cf. ci-dessous).
+- **Oui** → Révolution Nationale (cf. `phase_rn.md`).
 
 ### Échelle d'application du test
 
 Le test s'applique à l'échelle du **territoire national du Parcours qu'on suit** (noyau + marges), pas à l'échelle de tout ce que la couronne possède. Le Parcours suit un *peuple*, pas un empire. Les territoires sous union personnelle qui ont leur propre Parcours ne font pas partie du territoire national et ne comptent pas pour le test.
 
-- **Espagne** : l'Aragon fait partie du territoire national espagnol. Les Rois Catholiques (1479) absolutisent la Castille, mais l'Aragon conserve ses fueros, ses Cortès, sa monnaie et son droit. Le test n'est passé à l'échelle espagnole qu'après les décrets de Nueva Planta (1716). Philippe V est donc le 1er monarque absolu espagnol, pas les Rois Catholiques — qui sont l'acmé oligarchique.
-- **Autriche** : la Hongrie a son propre Parcours et n'est pas le territoire national autrichien. Marie-Thérèse absolutise les Erbländer et la Bohême (réformes Haugwitz 1749), et le test est passé à cette échelle — même si la Hongrie conserve sa Diète et ses institutions propres sous union personnelle.
-
-### Marqueurs nécessaires
-
-- L'administration centrale a **déjà** préséance sur les administrations locales **de facto et de jure** (à l'échelle nationale) — c'est ce qui distingue la phase absolutiste de la phase oligarchique : en phase absolutiste, l'administration centrale surclasse déjà les administrations locales
-- L'exécutif peut agir sans frein juridique des oligarques (guerre, impôts, justice)
-- Les entités décentralisées perdent leur autonomie fiscale
-- La résolution de la guerre sociale a produit un nouveau cadre central qui subordonne les anciennes factions (la figure résolvante est régulièrement un tiers neutre s'appuyant sur les clientèles délaissées, mais pas systématiquement)
+**Cas-type à reconnaître** :
+- Si une couronne absolutise son noyau pendant que des entités associées conservent leurs propres institutions (fueros, diètes, droits régionaux), le test n'est pas passé à l'échelle nationale tant que ces entités gardent leur autonomie. La nation reste en phase oligarchique. Le 1er monarque absolu national est celui qui codifie l'unification administrative à l'échelle nationale (typiquement par une réforme de type Nueva Planta), pas celui qui absolutise le noyau seul.
+- Si une couronne possède des territoires qui ont leur propre Parcours (union personnelle), ces territoires n'entrent pas dans le test pour le Parcours qu'on suit. L'absolutisation du noyau peut être validée à l'échelle nationale même si l'union personnelle conserve des institutions séparées.
 
 ### Piège : la codification écrite du droit n'est PAS un marqueur discriminant
 
-Une erreur fréquente est de prendre l'existence (ou l'absence) d'une codification écrite du droit comme test discriminant absolutiste. **C'est faux**, et l'Angleterre en est la preuve : elle n'a **jamais** codifié son droit (common law non-codifiée), et pourtant elle est canoniquement absolutisée à partir d'Henri VII (1485). Si la codification écrite était un test, l'Angleterre n'aurait jamais passé ce test, ce qui est manifestement faux.
+Une erreur fréquente consiste à prendre l'existence (ou l'absence) d'une codification écrite du droit comme test discriminant absolutiste. **C'est faux.** Une nation peut être canoniquement absolutisée sans codification écrite (modèle common law non codifiée mais unifiée par cours royales) ; le test discriminant ne porte pas sur la **forme** (code écrit / coutume / law reports) mais sur la **substance** : est-ce que l'administration centrale a préséance de jure sur les administrations locales ?
 
-Le test discriminant ne porte pas sur la **forme** (code écrit / coutume / law reports) mais sur la **substance** : est-ce que l'administration centrale a préséance **de jure** sur les administrations locales ? Cette préséance peut être établie par codification écrite (modèle français, espagnol post-Nueva Planta, autrichien post-Haugwitz) ou par évolution coutumière (modèle anglais). Le marqueur structurel est la préséance, pas la forme dans laquelle elle s'exprime.
+Cette préséance peut être établie par codification écrite ou par évolution coutumière unifiée. Le marqueur structurel est la préséance, pas la forme dans laquelle elle s'exprime.
 
-Symétriquement, **un projet de codification écrite rejeté n'est pas en soi une preuve d'échec absolutiste**. Il peut être rejeté pour des raisons nationales (par exemple, l'importation de droit étranger mal vécue par une conscience nationale déjà établie) sans que cela invalide les autres marqueurs structurels. Pour évaluer si une nation a franchi le seuil absolutiste, il faut appliquer la grille complète des marqueurs nécessaires (préséance de jure, autonomie fiscale, frein juridique sur la guerre, etc.), pas se reposer sur le seul critère de la codification.
+Symétriquement, **un projet de codification écrite rejeté n'est pas en soi une preuve d'échec absolutiste**. Il peut être rejeté pour des raisons nationales (importation de droit étranger mal vécue par une conscience nationale déjà établie) sans que cela invalide les autres marqueurs structurels. Pour évaluer le franchissement du seuil absolutiste, appliquer la grille complète des marqueurs nécessaires, pas se reposer sur le seul critère de la codification.
+
+### Marqueurs nécessaires
+
+#### 1. Préséance de l'administration centrale (de facto et de jure)
+
+**Signes observables** :
+- Appareil fiscal central opérant sur l'ensemble du territoire national, fiscs locaux subordonnés ou abolis
+- Justice centrale qui s'impose aux justices locales, avec recours systématique possible au-dessus des seigneurs
+- Droit unifié à l'échelle nationale (codification écrite ou jurisprudence unifiée)
+
+**Contre-signes** :
+- Fiscs autonomes coexistant sans subordination effective, justice seigneuriale ou régionale sans recours possible
+- Officiers locaux issus de noblesses régionales sans contrôle effectif du centre
+- Régions conservant leurs institutions juridiques propres en pleine autonomie
+
+#### 2. Capacité de l'exécutif à agir sans frein juridique des oligarques
+
+**Signes observables** :
+- Déclaration de guerre par l'exécutif sans consentement obligatoire d'une assemblée d'oligarques
+- Levée d'impôts par décret ou procédure verrouillée par l'exécutif
+- Nominations administratives discrétionnaires sans veto effectif
+
+**Contre-signes** :
+- Convocation obligatoire d'une assemblée d'oligarques pour la guerre, le fisc majeur ou les nominations
+- Veto effectif d'une assemblée sur la fiscalité ou la conduite militaire
+- Cours juridiques capables de bloquer durablement la volonté exécutive
+
+#### 3. Perte de l'autonomie fiscale des entités décentralisées
+
+**Signes observables** :
+- Abolition ou subordination des fiscs régionaux/seigneuriaux préexistants
+- Décrets unifiant le régime fiscal sur tout le territoire national
+- Privilèges fiscaux régionaux survivants seulement à titre révocable par le centre
+
+**Contre-signes** :
+- Persistance de fiscs régionaux indépendants (libertés provinciales, fueros, exemptions territoriales)
+- Régions négociant leur fiscalité comme partenaires plutôt que comme subordonnés
+
+#### 4. Résolution de la guerre sociale par un nouveau cadre central
+
+**Signes observables** :
+- Identification d'un saillant 1er monarque absolu (cf. sous-phase 1)
+- Subordination ou écartement effectif des anciennes factions oligarchiques
+- Nouvelles élites administratives (noblesse de robe, fonctionnariat professionnel) en position centrale, le clivage factionnel antérieur cessant d'être structurant
+
+**Contre-signes** :
+- Factions oligarchiques toujours présentes et alternantes au pouvoir sans subordination effective
+- Aucune émergence d'un cadre central qui transcende le clivage antérieur
 
 ### Marqueurs fréquents (non nécessaires)
 
 - Mise sous tutelle de la religion / contrôle de la hiérarchie ecclésiastique
 - Expansion territoriale et impérialisme
 - Domestication de la noblesse par la cour
-- Sédimentation des élites et surproduction élitaire (en fin de phase)
+- Sédimentation des élites et surproduction élitaire (en fin de phase, sous-phase ancien régime)
+- Construction d'infrastructures monumentales financées par le centre
+- Codification juridique ou unification du droit
+
+### Différencier de configurations voisines non-Parcours
+
+#### a) Phase oligarchique tardive avec administration centrale développée
+
+L'oligarchique tardive ressemble à l'absolutiste précoce parce que l'État central est déjà puissant. Le départ se fait sur la **préséance effective** sur les administrations locales, pas sur la simple présence d'un appareil central.
+
+**Test** : voir test discriminant ci-dessus. Tant que les oligarques disposent de leurs propres appareils fiscaux, militaires ou judiciaires *et que* l'exécutif central doit composer avec eux pour les décisions structurelles, on est encore en phase oligarchique.
+
+#### b) RN amorcée
+
+Une fois la RN déclenchée, la nation n'est plus en phase absolutiste — elle est en RN, même si les institutions absolutistes formelles persistent un temps avant d'être balayées.
+
+**Test** : le bloc contestataire a-t-il renversé le bloc élitaire et le régime absolutiste a-t-il perdu sa légitimité et sa capacité financière ? Si oui, on est entré en RN (cf. `phase_rn.md`).
+
+#### c) Marge ou dominion d'un empire absolutiste actif
+
+Un territoire dominé par un empire dont la phase absolutiste est en cours n'a pas son propre Parcours absolutiste — c'est le Parcours impérial qui opère, et le territoire dominé est en marge. Si une révolte y survient pendant l'acmé absolutiste impériale, c'est typiquement une **rébellion périphérique** (cf. `perturbations.md` §2), pas une étape du Parcours national de la communauté soumise.
+
+**Test** : la communauté soumise dispose-t-elle d'institutions politiques autonomes capables de prendre les décisions stratégiques (paix/guerre, fiscalité majeure, justice de dernière instance) ? Si non, c'est une marge impériale, pas une phase absolutiste nationale autonome.
+
+---
 
 ## Sous-phase 1 : Absolutisation (~50 à 100 ans)
 
-L'absolutisation est le processus par lequel le pouvoir central, après avoir triomphé dans la guerre sociale, met au pas les grands féodaux et oligarques. L'ancienne aristocratie est incorporée dans l'administration (intégration) ou écartée du pouvoir (exclusion). Cf. elites.md pour le détail de ces mécanismes.
+L'absolutisation est le processus par lequel le pouvoir central, après avoir triomphé dans la guerre sociale, met au pas les grands féodaux et oligarques. L'ancienne aristocratie est incorporée dans l'administration (intégration) ou écartée du pouvoir (exclusion). Cf. `elites.md` pour le détail de ces mécanismes.
 
 Les structures institutionnelles de la phase oligarchique ne disparaissent pas, mais l'administration parallèle rattachée à l'exécutif central a désormais pleine préséance de facto sur elles.
 
 ### Saillant : 1er monarque absolu (tout début de la sous-phase)
 
-La figure qui résout la guerre sociale et inaugure la concentration du pouvoir central. Deux critères essentiels de la résolution (cf. `phase_oligarchique.md` pour le détail) :
+**Définition** : la figure (ou institution, ou consortium) qui résout la guerre sociale et inaugure la concentration du pouvoir central. Saillant principal de l'entrée en phase absolutiste.
 
-1. **La structure du conflit est élitaire** — prébendière vs patrimoniale.
-2. **La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques.
+**Critères de résolution** (cf. `phase_oligarchique.md` §Guerre sociale pour le détail) :
+1. La structure du conflit était élitaire (deux factions, enjeu = contrôle de l'État central)
+2. La résolution conduit à un nouveau cadre central qui subordonne les anciennes élites
 
-**Deux patterns canoniques pour la figure résolvante** (cf. `phase_oligarchique.md` pour le détail) :
+**Pattern majoritaire vs pattern minoritaire** : le critère structurel invariant est l'émergence d'un nouveau cadre central. La figure résolvante peut être un tiers populiste neutre (pattern le plus fréquent) ou un chef de faction qui crée un nouveau cadre transcendant son propre camp (pattern moins fréquent mais canonique). Cf. `phase_oligarchique.md` §La figure résolvante.
 
-- **Pattern 1 (le plus courant) : tiers populiste neutre** — figure qui ne vient d'aucune des deux factions en conflit et s'appuie sur les clientèles délaissées et la classe moyenne administrative pour forcer les puissants à plier. Exemples : Henri IV, Henri VII, Victor Amédée II. C'est le pattern majoritaire dans le corpus — à tester en premier quand on cherche un 1er monarque absolu.
+#### Formes admises — à épuiser avant de conclure à l'absence
 
-- **Pattern 2 (canonique mais moins fréquent) : faction-gagnante qui crée un nouveau cadre** — une des deux factions l'emporte, mais le chef qui s'installe ne se contente pas de marginaliser l'autre faction : il crée un cadre central qui subordonne toutes les anciennes élites (y compris celles de son propre camp). Exemples : Omri (campagne militariste israélite, marginalisation des anciennes élites, création d'un État central administratif — le PO correspondant est structurellement probable mais textuellement non attesté, cf. `phase_feodale.md`) ; Simon Thassi (faction yahviste maccabéenne, cumul institutionnel Grand Prêtre + stratège + ethnarque rendu héréditaire). Ce pattern est particulièrement fréquent quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive.
+La figure du 1er monarque absolu prend des formes très diverses. **Avant de conclure qu'une nation « n'a pas de 1er monarque absolu »**, vérifier qu'aucune des quatre formes suivantes n'est applicable. L'image mentale par défaut (monarque personnel, stable, titré) est un biais qui masque les formes atypiques mais canoniques.
 
-**Le tiers neutre est une observation empirique fréquente, pas un critère structurel.** Le critère invariant est l'émergence d'un nouveau cadre central qui renforce le pouvoir central et subordonne les anciennes élites — peu importe que la figure vienne d'en dehors des factions ou d'un des camps vainqueurs.
+##### Forme 1 : figure personnelle stable
 
-Si les deux critères ne sont pas satisfaits — en particulier si une faction gagne sans qu'un nouveau cadre central émerge — la guerre sociale n'est pas résolue, et la phase oligarchique se poursuit.
+Règne individuel long qui résout la guerre sociale et institue un nouveau cadre central. Forme la plus reconnaissable.
 
-### Formes admises — à épuiser avant de conclure à l'absence
+**Signes observables** :
+- Un souverain individuel identifiable régnant pendant ou immédiatement après la guerre sociale
+- Émission de l'acte fondateur de l'absolutisation (édit de pacification, ordonnance d'unification, codification du nouveau cadre)
+- Mise au pas effective des anciennes factions par intégration ou exclusion
+- Continuité dynastique ensuite (le successeur hérite d'un cadre déjà établi)
 
-La figure du 1er monarque absolu prend des formes très diverses selon le contexte. **Avant de conclure qu'une nation « n'a pas de 1er monarque absolu »**, vérifier qu'aucune des formes suivantes n'est applicable — l'image mentale par défaut (monarque personnel, stable, titré) est un biais qui masque les formes atypiques mais canoniques.
+##### Forme 2 : institution collective stable
 
-1. **Figure personnelle stable** — règne individuel long qui résout la guerre sociale et institue un nouveau cadre central. Forme la plus reconnaissable. Peut relever du pattern 1 (tiers populiste neutre : Henri IV, Henri VII, Philippe V, Victor Amédée II, Frédéric-Guillaume Ier, Maximilien Ier) ou du pattern 2 (faction-gagnante qui crée un nouveau cadre : Omri en Israël antique, Simon Thassi en Israël prolongé — figures issues d'un camp vainqueur qui marginalisent les anciennes élites et construisent un État central administratif ; pour Omri, le PO est structurellement probable mais textuellement non attesté, cf. `phase_feodale.md`). Le pattern 2 est particulièrement à chercher quand la guerre sociale se superpose à une révolte populaire contre une caste dirigeante exclusive ou à une guerre d'indépendance.
+Organe qui concentre le pouvoir exécutif sans figure personnelle. Le « monarque » est une magistrature institutionnelle.
 
-2. **Institution collective stable** — organe qui concentre le pouvoir exécutif sans figure personnelle. Le « monarque » est une magistrature institutionnelle. Exemple canonique : Inquisiteurs d'État à Venise (~1669), devenus autonomes et dominant les factions giovani/vecchi, servis par la classe administrative des cittadini.
+**Signes observables** :
+- Une magistrature, une commission ou un conseil exécutif identifiable comme l'organe résolvant la guerre sociale
+- Cette institution émerge **au-dessus** du patriciat ou des oligarques et peut agir contre eux
+- Présence d'une **classe administrative distincte** des oligarques (équivalent de la noblesse de robe), servant l'institution exécutive
+- L'institution est durable et survit aux changements de personnel
 
-3. **Tiers exogène imposé** — puissance extérieure qui joue le rôle de tiers et installe un nouveau cadre central, quand la dynamique endogène n'y parvient pas. Le cadre reste structurellement absolutiste si le test discriminant est satisfait, même si la figure vient de l'extérieur. Exemple canonique : **Napoléon à Milan (1796)** — installation d'un cadre absolutiste nouveau (préfets, Code civil, abolition du patriciat, nouvelle noblesse de service) que la dynamique endogène milanaise ne produisait pas.
+##### Forme 3 : tiers exogène imposé
 
-4. **Absolutisme collectif par consortium oligarchique** — forme à tester en priorité pour toute cité-État dans un environnement d'États territoriaux. L'appareil central (fiscalité, administration territoriale, armée, coercition) se construit comme **propriété collective institutionnalisée des élites oligarchiques**, sous forme de consortium de créanciers-actionnaires qui absorbe progressivement les fonctions d'État par transfert depuis un commune faible. L'appareil est durable, centralisateur, et exerce toutes les fonctions absolutistes **sur la population et sur les territoires soumis** — mais reste structurellement incapable d'agir contre ses propriétaires-créanciers.
+Puissance extérieure qui joue le rôle de tiers et installe un nouveau cadre central, quand la dynamique endogène n'y parvient pas. Le cadre reste structurellement absolutiste si le test discriminant est satisfait.
 
-   Cette forme se distingue de la **forme 2** (institution collective stable) : dans la forme 2, l'institution émerge **au-dessus** du patriciat et peut agir contre lui (Inquisiteurs d'État vénitiens avec noblesse de robe distincte type *cittadini*) ; dans la forme 4, l'institution émerge **comme propriété collective** du patriciat et ne peut, par construction, s'en détacher. Pas de classe administrative distincte des oligarques-propriétaires.
+**Signes observables** :
+- Conquête ou intervention étrangère qui balaie les anciennes factions oligarchiques
+- Installation d'un nouveau cadre administratif (préfets, codifications imposées, nouvelle aristocratie de service)
+- Le test discriminant absolutiste est satisfait après l'imposition, même si la dynamique endogène ne le produisait pas
 
-   **Marqueurs structurels à chercher :**
-   - Consortium institutionnalisé avec actionnariat aux oligarques-créanciers (gouvernance par protettori/conseil d'administration élu parmi les créanciers)
-   - Transferts documentés de fonctions étatiques (fiscalité, justice, territoires) du commune vers le consortium — signal de *debt capture*
-   - Administration directe de territoires et monopoles fiscaux par le consortium, pas par le commune
-   - L'exécutif politique doit respecter les droits du consortium : toute atteinte entraîne rébellion ou refus de crédit
-   - Absence de classe administrative distincte (pas de noblesse de robe, pas de fonctionnariat professionnel au-dessus des actionnaires)
-   - Isolation effective de l'économie par rapport à la politique (formulation Greif sur Gênes) : la politique reste instable, le consortium reste stable
+##### Forme 4 : absolutisme collectif par consortium oligarchique
 
-   **Signature empirique décisive.** Quand une faction capture l'exécutif politique (dogat, magistrature suprême), elle n'accède *pas* au contrôle du consortium — qui reste gouverné collectivement par les oligarques-créanciers incluant ceux de la faction perdante. Le cadre central est stable et ne change pas de propriétaire au gré des alternances politiques.
+**Forme à tester en priorité pour toute cité-État dans un environnement d'États territoriaux.**
 
-   **Trajectoire canonique attendue.** La phase absolutiste sous forme 4 peut déboucher soit (a) sur une **RN aboutie** (même en présence d'intervention étrangère pendant la séquence — l'occupation ne modifie pas l'aboutissement, cf. `phase_rn.md`) qui produit ensuite une **phase parlementaire contrariée figée** (corps civique fermé au patriciat élargi, sans dynamique d'élargissement endogène ultérieure vers la population) ; soit (b) directement sur un **AR prolongé** sans RN qui finit par être absorbé. L'issue finale des deux trajectoires se fait typiquement par choc exogène et absorption par un État de taille standard.
+L'appareil central (fiscalité, administration territoriale, armée, coercition) se construit comme **propriété collective institutionnalisée des élites oligarchiques**, sous forme de consortium de créanciers-actionnaires qui absorbe progressivement les fonctions d'État par transfert depuis un commune faible. L'appareil est durable, centralisateur, et exerce toutes les fonctions absolutistes **sur la population et sur les territoires soumis** — mais reste structurellement incapable d'agir contre ses propriétaires-créanciers.
 
-   **Spécificité de la phase parlementaire qui suit.** Quand la forme 4 débouche sur une RN aboutie puis une phase parlementaire, celle-ci est **figée** : le corps civique élargi reste strictement intra-patricien (les familles inscrites au registre = la nation politique), sans extension vers les populations exclues. Le mouvement sinistrogyre canonique d'élargissement du cercle représenté ne s'active pas — probablement parce que la fusion oligarchique produite par la forme 4 a dissous les factions élitaires permanentes qui, dans les ENP actifs, constituent le moteur de l'élargissement.
+**Cette forme se distingue de la forme 2** : dans la forme 2, l'institution émerge **au-dessus** du patriciat et peut agir contre lui (avec une classe administrative distincte) ; dans la forme 4, l'institution émerge **comme propriété collective** du patriciat et ne peut, par construction, s'en détacher (pas de classe administrative distincte des oligarques-propriétaires).
 
-   **Cas canonique** : Banco di San Giorgio à Gênes (1407-1797), documenté par Greif (*Institutions and the Path to the Modern Economy*), Winter (*Polity* 2022, « A Government of Creditors »), Taviani (« A Privatized State »). Machiavelli décrit explicitement le mécanisme en 1532 : le Banco « limite la capacité des doges à se transformer en *signori* ».
+**Signes observables** :
+- Consortium institutionnalisé avec actionnariat aux oligarques-créanciers, gouvernance par conseil élu parmi les créanciers
+- Transferts documentés de fonctions étatiques (fiscalité, justice, territoires) du commune vers le consortium — signal de *debt capture*
+- Administration directe de territoires et monopoles fiscaux par le consortium, pas par le commune
+- L'exécutif politique doit respecter les droits du consortium : toute atteinte entraîne rébellion ou refus de crédit
+- Absence de classe administrative distincte (pas de noblesse de robe, pas de fonctionnariat professionnel au-dessus des actionnaires)
+- Isolation effective de l'économie par rapport à la politique : la politique reste instable, le consortium reste stable
 
-   **Cas candidats à tester** :
-   - Florence (Monte Comune + domination Médicis pré-ducat)
-   - Provinces-Unies (VOC + structure confédérale)
-   - Lucques, Raguse, autres cités-États oligarchiques
-   - Cas modernes : oligarchies post-soviétiques à consortium rentier, régimes à capture via dette souveraine privée
+**Signature empirique décisive** : quand une faction capture l'exécutif politique (dogat, magistrature suprême), elle n'accède *pas* au contrôle du consortium — qui reste gouverné collectivement par les oligarques-créanciers incluant ceux de la faction perdante. Le cadre central est stable et ne change pas de propriétaire au gré des alternances politiques.
 
-   **Condition d'émergence structurelle (hypothèse).** La forme 4 émerge quand l'homogénéisation des élites (Moteur 2) achève la fusion en bloc unifié *avant* que la construction de l'État central (Moteur 1) ne produise un appareil autonome des élites. Les oligarques, déjà coordonnés en classe, peuvent alors institutionnaliser l'appareil central **comme leur propriété collective** plutôt que de laisser émerger un exécutif au-dessus d'eux. Favorisé par : petite taille du territoire, structure économique homogène des élites (pas de clivage foncier/marchand radical), tradition de pacte communal initial.
+**Trajectoire canonique attendue** : la phase absolutiste sous forme 4 peut déboucher soit (a) sur une **RN aboutie** (même en présence d'intervention étrangère pendant la séquence — l'occupation ne modifie pas l'aboutissement) qui produit ensuite une **phase parlementaire contrariée figée** (corps civique fermé au patriciat élargi, sans dynamique d'élargissement endogène ultérieure vers la population) ; soit (b) directement sur un AR prolongé sans RN qui finit par être absorbé. L'issue finale des deux trajectoires se fait typiquement par choc exogène et absorption par un État de taille standard.
 
-**Règle** : ne déclarer « pas de 1er monarque absolu » qu'après avoir testé les quatre formes et expliqué pourquoi aucune ne s'applique. L'absence véritable est rare et doit être justifiée structurellement (ex. phase absolutiste jamais atteinte parce que le cycle RN a été déclenché avant par choc exogène, comme pour la Bohême pré-hussite).
+**Spécificité de la phase parlementaire qui suit** : quand la forme 4 débouche sur une RN aboutie puis une phase parlementaire, celle-ci est figée — le corps civique élargi reste strictement intra-patricien (les familles inscrites au registre = la nation politique), sans extension vers les populations exclues. Le mouvement sinistrogyre canonique d'élargissement ne s'active pas, probablement parce que la fusion oligarchique produite par la forme 4 a dissous les factions élitaires permanentes qui constituent le moteur de l'élargissement dans les ENP actifs.
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Israël antique | -640 | Josias — centralisation du culte au Temple, destruction des bamot, envoi d'agents royaux sur tout le territoire, unification juridique par le Deutéronome |
-| Israël (prolongement) | -140 | Simon Thassi — issu du camp yahviste maccabéen, construit le nouveau cadre central par cumul institutionnel (Grand Prêtre + stratège + ethnarque, rendu héréditaire) |
-| France | 1598 | Henri IV — issu du camp huguenot, converti, Édit de Nantes comme acte d'autorité royale au-dessus des factions, reconstruction du fisc (Sully) |
-| Angleterre | 1485 | Henri VII — tiers, création d'une nouvelle dynastie émancipée des York et des Lancaster |
-| Venise | ~1669 | Inquisiteurs d'État — le « monarque absolu » vénitien est institutionnel, pas personnel. Les Inquisiteurs, devenus progressivement autonomes, dominent les deux factions (giovani/vecchi). Leur base est la classe administrative des cittadini |
-| Milan | 1796 | Napoléon Bonaparte — tiers exogène imposé, installe un cadre absolutiste nouveau (préfets, Code civil, abolition du patriciat) que la dynamique endogène milanaise ne produisait pas |
-| Gênes | 1407 | Banco di San Giorgio — absolutisme collectif par consortium oligarchique, propriété collective des créanciers-actionnaires, capture progressive des fonctions étatiques par *debt capture* |
+**Condition d'émergence structurelle (hypothèse)** : la forme 4 émerge quand l'homogénéisation des élites (Moteur 2) achève la fusion en bloc unifié *avant* que la construction de l'État central (Moteur 1) ne produise un appareil autonome des élites. Les oligarques, déjà coordonnés en classe, peuvent alors institutionnaliser l'appareil central comme leur propriété collective plutôt que de laisser émerger un exécutif au-dessus d'eux. Favorisé par : petite taille du territoire, structure économique homogène des élites (pas de clivage foncier/marchand radical), tradition de pacte communal initial.
 
-### Caractéristiques
+**Références théoriques** : Greif (*Institutions and the Path to the Modern Economy*), Winter (*Polity* 2022, « A Government of Creditors »), Taviani (« A Privatized State »).
 
-- L'exécutif central acquiert un droit d'inspection incontesté et de facto sur tous les habitants
-- L'administration centrale a préséance incontestée sur les administrations locales, qui deviennent ses supplétifs directs
-- L'exécutif peut déclarer la guerre sans frein juridique de la part des oligarques
-- Les entités décentralisées perdent leur autonomie fiscale
-- La polarisation des élites commence à un niveau élevé et se tasse progressivement au fur et à mesure que le consensus absolutiste se met en place
+##### Règle d'épuisement des formes
+
+Ne déclarer « pas de 1er monarque absolu » qu'après avoir testé les **quatre formes** ci-dessus et expliqué pourquoi aucune ne s'applique. L'absence véritable est rare et doit être justifiée structurellement (typiquement : phase absolutiste jamais atteinte parce que le cycle RN a été déclenché avant par choc exogène, ou parce que la nation a été absorbée).
 
 ### Mise sous contrôle du pouvoir judiciaire
 
-Un marqueur important de l'absolutisation est la soumission du pouvoir judiciaire à l'exécutif. L'exécutif développe les moyens de renverser ou court-circuiter les décisions judiciaires défavorables (révocation des juges, remplacement de leur nomination par les chambres, rattachement idéologique des cours supérieures). Le pouvoir judiciaire, qui servait en fin de phase oligarchique à freiner l'exécutif, perd cette capacité de freinage.
+Marqueur important de l'absolutisation : la soumission du pouvoir judiciaire à l'exécutif. L'exécutif développe les moyens de renverser ou court-circuiter les décisions judiciaires défavorables (révocation des juges, remplacement de leur nomination par les chambres oligarchiques par une nomination directe, rattachement idéologique des cours supérieures). Le pouvoir judiciaire, qui servait en fin de phase oligarchique à freiner l'exécutif, perd cette capacité de freinage.
 
-Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources » juridique, qui consiste en fait à supprimer la capacité des oligarques à interpréter le droit en leur faveur.
+Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources » juridique, qui consiste en fait à supprimer la capacité des oligarques à interpréter le droit en leur faveur. Souvent accompagnée d'une codification ou d'une « redécouverte » de normes anciennes imposées comme nouvelle base unifiée.
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Israël antique | -622 | Josias ordonne la « redécouverte » du Livre de la Loi, qui impose une norme écrite unifiée supplantant les traditions locales |
-| Israël (prolongement) | -140 | Le décret confère les titres « pour toujours, jusqu'à ce qu'un prophète digne de foi se lève » — abolition de facto du contre-pouvoir prophétique |
+### Saillant : Dernière grande révolte oligarchique (DGRO)
 
-### Saillant : Dernière grande révolte oligarchique
+**Définition** : les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites.
 
-Les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites. Ce saillant n'est **pas toujours présent** — quand il est absent, la transition de l'absolutisation vers l'impérialisme se fait sans rupture, portée simplement par la mécanique de mise au pas des oligarques.
+**Test discriminant** : qu'est-ce qui distingue une DGRO d'une révolte ordinaire ou d'une remontrance ?
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Israël (prolongement) | ~-94 | Révolte pharisienne contre Alexandre Jannée — 800 rebelles crucifiés |
-| France | 1648-1653 | La Fronde — Princes et parlementaires contre Mazarin. Dernier sursaut |
-| Angleterre | ~1534-1540 | Henri VIII — dissolution des monastères, Pilgrimage of Grace écrasé |
+1. **Caractère armé** — la DGRO est une révolte effective, pas une simple contestation institutionnelle (cf. Remontrance ci-dessous)
+2. **Assise territoriale** — les oligarques disposent de bases territoriales locales (seigneuries, places fortes, clientèles armées) depuis lesquelles résister
+3. **Caractère terminal** — l'échec marque la fin de la résistance organisée des anciennes élites ; après la DGRO, les oligarques cessent d'être un facteur militaire indépendant
 
-**Cas particulier : absence de DGRO.** La Dernière Grande Révolte Oligarchique suppose que les oligarques disposent d'une **assise territoriale locale** depuis laquelle résister (Condé à Bordeaux, les seigneurs du Nord en Angleterre, les Pharisiens avec leur base populaire). Si les oligarques sont concentrés dans un seul lieu sans base territoriale propre, la DGRO est impossible — l'absolutisation est « fluide ».
+**Signes observables** :
+- Soulèvement armé d'oligarques traditionnels (pas d'élites administratives) avec bases territoriales propres
+- Coalition de seigneurs régionaux contre l'autorité centrale
+- Échec militaire débouchant sur une vague d'exécutions, confiscations, désarmements définitifs
+- Après l'échec, les oligarques traditionnels n'ont plus de force armée propre disponible
 
-**Exemple :** À Venise, tous les patriciens vivent dans le lagon. Ils n'ont pas de seigneuries avec des clientèles armées — leurs propriétés de Terraferma sont des investissements agricoles, et le système de rotation des rettori empêche tout enracinement. L'absolutisation par les Inquisiteurs se fait sans DGRO. Les contestations ultérieures (Correzione de 1761, Pisani-Contarini 1779) sont des tentatives de type « Polysynodie » (contestation du régime par la classe administrative, comme la Polysynodie de 1715 en France ou l'Apology of the Commons de 1604 en Angleterre), pas des révoltes oligarchiques au sens strict.
+#### Cas particulier : absence de DGRO
 
-### Marqueurs observables
+La DGRO suppose que les oligarques disposent d'une **assise territoriale locale** depuis laquelle résister. Si les oligarques sont concentrés dans un seul lieu sans base territoriale propre (typique des cités-États où le patriciat vit dans la cité-mère et où ses propriétés extérieures sont des investissements gérés par rotation administrative), la DGRO est impossible — l'absolutisation est « fluide ».
 
-- Accroissement de la production réglementaire centrale au détriment des réglementations décentralisées
-- Mise sous tutelle de la religion — fin de la liberté religieuse
-- Ouverture de la fonction publique aux « roturiers » (individus non issus de la coalition gagnante)
-- Contrôle de l'exécutif sur la hiérarchie ecclésiastique
+Quand la DGRO est absente, la transition de l'absolutisation vers l'impérialisme se fait sans rupture, portée simplement par la mécanique de mise au pas des oligarques. Les contestations ultérieures de la classe administrative prendront la forme de **remontrances** (cf. ci-dessous, sous-phase 2), pas de DGRO.
+
+### Dynamique de la sous-phase
+
+La polarisation politique des élites est élevée au début de la sous-phase (héritage de la guerre sociale) et se tasse progressivement à mesure que le consensus absolutiste se met en place. La fonction publique s'ouvre aux roturiers (individus non issus de la coalition gagnante), et la production réglementaire centrale s'accroît au détriment des réglementations décentralisées.
+
+---
 
 ## Sous-phase 2 : Impérialisme absolutiste
 
 Après avoir mis au pas tous les grands féodaux, le pouvoir central dispose de moyens économiques encore jamais vus. Il les utilise pour une politique impérialiste et expansionniste. L'exécutif développe des mécanismes destinés à encadrer socialement les oligarques et la noblesse.
 
-La durée de cette sous-phase dépend du rapport de force avec les voisins : une nation puissante maintiendra longtemps un impérialisme expansionniste ; une nation faible verra cette phase très courte, voire inexistante.
+La durée de cette sous-phase dépend du rapport de force avec les voisins : une nation puissante maintiendra longtemps un impérialisme expansionniste ; une nation faible verra cette phase courte, voire inexistante.
 
-### Saillant : Acmé absolutiste (pendant cette sous-phase)
+### Saillant : Acmé absolutiste
 
-La figure qui incarne le sommet de la puissance absolutiste — expansion maximale, prestige maximal, domestication complète des élites. C'est un des saillants principaux de tout le Parcours.
+**Définition** : la figure (ou institution) qui incarne le sommet de la puissance absolutiste — expansion territoriale ou puissance externe maximale, prestige maximal, domestication complète des élites. C'est un des saillants principaux de tout le Parcours.
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Israël (prolongement) | ~-20 | Hérode — reconstruction du Temple à une échelle monumentale, expansion territoriale maximale, cour somptueuse, élimination des Hasmonéens survivants |
-| France | ~1682 | Louis XIV — Versailles, domestication de la noblesse par la cour, expansion territoriale, révocation de l'Édit de Nantes (homogénéisation forcée) |
-| Angleterre | ~1580 | Élisabeth Ière — défaite de l'Armada espagnole, début de l'expansion coloniale, âge d'or culturel (Shakespeare), prestige maximal de la monarchie Tudor |
-| Venise | ~1688 | Francesco Morosini — reconquête de la Morée (1684-1699), élu doge à l'unanimité au premier tour alors qu'il commande la flotte en Égine. Titre de « Peloponnesiaco ». Prestige maximal. En 1669, il avait signé la reddition de Candie sans autorisation du Sénat — l'exécutif militaire agit souverainement |
+**Test discriminant** : qu'est-ce qui distingue l'acmé d'un simple « bon règne » ou d'un pic d'expansion ?
 
-### Marqueurs forts
+1. **Expansion ou puissance maximale** — le sommet effectif de la projection extérieure (territoriale, militaire, commerciale ou diplomatique)
+2. **Domestication complète des anciennes élites** — la noblesse traditionnelle est intégrée à la cour ou à l'administration, sans force politique autonome
+3. **Prestige maximal** — international (traités favorables, hégémonie sur les voisins, alliances recherchées) et culturel (rayonnement intellectuel, religieux, artistique)
 
-- Quand la DGRO est présente, la sous-phase commence par son échec. Sinon, la transition est portée par la dynamique d'ensemble : le faste, la grandeur, l'impérialisme deviennent la mécanique principale.
-- La polarisation politique des élites est devenue faible — consensus absolutiste
+**Signes observables** :
+- Guerre offensive triomphante ou hégémonie sans contestation effective
+- Traités favorables signés au sommet de la puissance
+- Cour ou capitale somptueuse, fastes culturels associés au régime
+- Élites traditionnelles à la cour, sans force politique propre
+- Monopoles religieux, idéologiques ou linguistiques effectifs (homogénéisation forcée)
+- Reconstruction ou expansion d'infrastructures monumentales financées par le centre
 
-### Marqueurs observables
+### Dynamique de la sous-phase
 
-- Multiplication des guerres d'agression
-- Début de colonialisme
-- Professionnalisation de l'encadrement militaire
-- La noblesse parle couramment une langue unifiée
-- Interdiction des armées privées
-- Construction d'infrastructures militaires
+Quand la DGRO est présente, la sous-phase commence par son échec ; sinon, la transition est portée par la dynamique d'ensemble (le faste, la grandeur et l'impérialisme deviennent la mécanique principale). La polarisation politique des élites est devenue faible — consensus absolutiste.
 
-### Saillant : Fin de l'expansion (tournant impérialisme → Ancien Régime)
+Marqueurs récurrents : multiplication des guerres d'agression, début ou intensification du colonialisme, professionnalisation de l'encadrement militaire, monopole effectif de la violence par le centre (interdiction des armées privées), construction d'infrastructures militaires (places fortes, ports, arsenaux), unification linguistique de la noblesse.
 
-Le pouvoir central atteint les limites de son expansion. Les guerres deviennent coûteuses et les victoires rares. L'impérialisme s'essouffle.
+### Saillant : Fin de l'expansion (tournant impérialisme → ancien régime)
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Israël (prolongement) | -4 | Mort d'Hérode — le royaume est divisé, plus de conquêtes |
-| France | 1713-1715 | Traité d'Utrecht, mort de Louis XIV — fin de l'expansionnisme |
-| Angleterre | ~1603 | Fin du règne d'Élisabeth — succession aux Stuart |
-| Venise | 1718 | Traité de Passarowitz — perte définitive de la Morée, dernière possession lointaine. Venise se replie sur le lagon et le Veneto |
+**Définition** : le pouvoir central atteint les limites de son expansion. Les guerres deviennent coûteuses et les victoires rares. L'impérialisme s'essouffle.
 
-### Saillant : Remontrance (tournant impérialisme → Ancien Régime)
+**Test discriminant** : qu'est-ce qui distingue la fin de l'expansion absolutiste d'un revers passager ?
 
-La remontrance est la dernière tentative de la classe administrative, parlementaire ou aristocratique de reprendre des prérogatives au pouvoir absolu par les voies institutionnelles. Elle échoue systématiquement — et son échec marque l'entrée en Ancien Régime, en fermant la dernière voie de réforme.
+1. **Caractère structurel** — arrêt durable de la projection extérieure, pas une défaite ponctuelle suivie d'une reprise
+2. **Limite atteinte** — les rendements de la guerre passent en négatif (les conquêtes coûtent plus qu'elles ne rapportent ; les défenses des acquis épuisent le trésor)
+3. **Recentrage forcé** — l'énergie politique et économique se réoriente vers l'intérieur du territoire national
 
-Le mécanisme est constant : les élites qui ont été intégrées à l'appareil absolutiste (noblesse de robe, parlementaires, patriciat) tentent de redistribuer le pouvoir en leur faveur. Elles n'ont pas la force de renverser l'exécutif (ce n'est pas une DGRO — elles n'ont pas d'assise territoriale), mais elles ont assez de poids institutionnel pour formuler une exigence formelle. L'exécutif écoute, puis ignore ou écrase la tentative.
+**Signes observables** :
+- Traité de paix consacrant des limites territoriales définitives, accepté par le centre comme une perte ou une stagnation
+- Défaites militaires structurelles non rattrapées par des victoires ultérieures
+- Recul commercial structurel (perte de marchés externes, contraction des routes commerciales contrôlées)
+- Recentrage économique sur le territoire propre (investissements infrastructurels internes, productivité agricole et industrielle plutôt que butin extérieur)
 
-Ne pas confondre la remontrance avec une DGRO : la DGRO est une révolte armée des oligarques à base territoriale, qui constitue le dernier sursaut de la phase d'absolutisation. La remontrance intervient plus tard, une fois l'absolutisation accomplie — c'est une contestation institutionnelle, pas militaire.
+### Saillant : Remontrance (tournant impérialisme → ancien régime)
 
-| Nation | Date | Exemple |
-|---|---|---|
-| Angleterre | 1604 | Apology of the Commons — les Communes affirment leurs prérogatives face à Jacques Ier. Ignorée |
-| France | 1715 | Polysynodie — le Régent remplace les ministres par des conseils aristocratiques. Échoue en 1718 |
-| Venise | 1761, 1779 | Correzione de Querini, Pisani-Contarini — tentatives de redistribuer le pouvoir au sein du patriciat. Écrasées par les Inquisiteurs |
-| Bavière | 1848 | Landtag — la classe parlementaire vote des réformes substantielles (suffrage, presse, responsabilité ministérielle). Maximilien II les vide de leur substance |
+**Définition** : la dernière tentative de la classe administrative, parlementaire ou aristocratique de reprendre des prérogatives au pouvoir absolu **par les voies institutionnelles**. Elle échoue systématiquement — et son échec marque l'entrée en ancien régime, en fermant la dernière voie de réforme.
 
-## Sous-phase 3 : Ancien Régime (~35 à 100 ans)
+Le mécanisme est constant : les élites qui ont été intégrées à l'appareil absolutiste (noblesse de robe, parlementaires, patriciat administratif) tentent de redistribuer le pouvoir en leur faveur. Elles n'ont pas la force de renverser l'exécutif (ce n'est pas une DGRO — elles n'ont pas d'assise territoriale armée), mais elles ont assez de poids institutionnel pour formuler une exigence formelle. L'exécutif écoute, puis ignore ou écrase la tentative.
+
+**Test discriminant** : qu'est-ce qui distingue la remontrance d'une autre contestation ?
+
+1. **Acteurs intégrés à l'appareil absolutiste** — la remontrance vient de la classe administrative ou parlementaire intégrée, pas des oligarques traditionnels (qui n'ont plus de force depuis la DGRO ou l'absorption)
+2. **Voie institutionnelle, pas armée** — pétition formelle, déclaration collective d'un corps institutionnel, projet de réforme ; pas une révolte
+3. **Échec systématique** — l'exécutif rejette ou vide la remontrance de sa substance ; elle ne produit aucune redistribution durable du pouvoir
+
+**Signes observables** :
+- Pétition formelle ou déclaration collective d'un corps institutionnel intégré à l'appareil absolutiste (parlement de cour, assemblée parlementaire, conseil du patriciat, équivalents)
+- Demandes portant sur la responsabilité ministérielle, le contrôle fiscal, la consultation obligatoire des assemblées, la redistribution du pouvoir entre exécutif et corps institutionnel
+- Réponse de l'exécutif : rejet pur, ignorance, ou octroi de réformes vidées de leur substance ensuite
+- Pas de répression armée massive (les remontrants ne sont pas des rebelles ; ils sont des élites intégrées qui ont simplement échoué à obtenir gain de cause)
+
+**Distinction avec la DGRO** : la DGRO est une révolte armée des oligarques à base territoriale, en sous-phase d'absolutisation. La remontrance est une contestation institutionnelle d'élites intégrées, en fin de sous-phase d'impérialisme. Une nation peut avoir l'une, l'autre, les deux, ou aucune.
+
+---
+
+## Sous-phase 3 : Ancien régime (~35 à 100 ans)
 
 Le pouvoir central arrive aux limites physiques de son potentiel d'expansion, jusqu'à épuisement des finances. L'ancienne aristocratie militaire perd sa légitimité, qui reposait sur les guerres victorieuses. La nouvelle aristocratie de robe, issue de la bourgeoisie ayant rejoint l'administration, se tourne vers l'investissement intensif dans le territoire national, déclenchant une forte croissance économique et le démarrage d'une alphabétisation de masse.
 
 Mais les élites se sédimentent. La mobilité sociale se fige. Les rentes deviennent insupportables. L'homogénéité culturelle atteint un sommet — mais elle alimente désormais la contestation du régime, non sa légitimation.
 
-L'Ancien Régime, contrairement aux autres phases, ne s'achève pas par une transition ordonnée : la sédimentation des élites et leur refus de tout changement significatif rendent la rupture inévitable.
+L'ancien régime, contrairement aux autres phases, ne s'achève pas par une transition ordonnée : la sédimentation des élites et leur refus de tout changement significatif rendent la rupture inévitable.
 
-### Caractéristiques
+### Caractéristiques structurelles
 
-- Le poids de l'appareil administratif (« conseil privé ») s'accroît, voire s'autonomise
-- La « noblesse de robe » et la « haute bourgeoisie » acquièrent un accès à toutes les couches du pouvoir
-- La polarisation politique des élites s'accroît, mais les élites contestataires sont socialement écartées, voire ostracisées
-- Surproduction élitaire : trop de prétendants aux positions de pouvoir par rapport aux places disponibles
+- Poids de l'appareil administratif (« conseil privé » et équivalents) qui s'accroît voire s'autonomise
+- Noblesse de robe et haute bourgeoisie en accès à toutes les couches du pouvoir
+- Polarisation politique des élites qui s'accroît, mais élites contestataires socialement écartées voire ostracisées
+- Surproduction élitaire : trop de prétendants aux positions de pouvoir
+- Croissance économique soutenue, alphabétisation de masse, expansion de la langue nationale, infrastructures commerciales
+- Tensions fiscales croissantes (l'État s'endette pour la cour et les engagements militaires antérieurs)
+- Apparition d'une littérature critique du régime tolérée puis combattue
 
-### Le clivage gauche-droite saute
+### Le clivage gauche-droite se reconfigure
 
-En Ancien Régime, le clivage gauche-droite classique se décompose :
+En ancien régime, le clivage gauche-droite classique se décompose :
+
 - Le centre-droit et le centre-gauche fusionnent en un **bloc élitaire** qui profite du système
 - L'extrême-droite (réactionnaires, nostalgiques de l'ancien ordre) et l'extrême-gauche (révolutionnaires, exclus) convergent en un **bloc contestataire**
 
-Cette recomposition est une condition nécessaire à l'éclatement de la Révolution Nationale.
+Cette recomposition est une **condition nécessaire à l'éclatement de la Révolution Nationale**. Tant que le clivage GD classique structure encore la politique nationale, on est en sous-phase d'impérialisme ou en début d'ancien régime — pas encore en ancien régime mature.
 
-| Nation | Exemple |
-|---|---|
-| Israël (prolongement) | Les Sadducéens (noblesse de robe, aristocratie sacerdotale pro-romaine) tiennent le pouvoir ; les Pharisiens (ED, nostalgiques hasmonéens) et les Zélotes (EG, révolutionnaires) forment le bloc contestataire |
-| France | Aristocratie de cour versaillaise sédimentée ; la bourgeoisie dynamique mais exclue du pouvoir forme le terreau de 1789 |
-| Angleterre | Favoritisme Stuart (Buckingham), monopoles royaux ; les Puritains (EG) et l'opposition aristocratique traditionnelle convergent contre la cour |
-| Venise | Les barnabotti (ED, nobles appauvris nostalgiques de l'égalité patricienne) et la bourgeoisie intellectuelle (EG, réformateurs) convergent contre le bloc élitaire (familles riches contrôlant les Inquisiteurs). La Correzione de 1761 et le mouvement Pisani-Contarini de 1779 sont les manifestations de ce bloc contestataire |
+**Signes observables de la reconfiguration** :
+- Une élite intégrée occupe toutes les positions structurantes (cour, administration, postes militaires majeurs, hiérarchie ecclésiastique) et apparaît comme une caste fermée
+- Une opposition diverse mais convergente (anciennes factions oligarchiques nostalgiques + nouveaux entrants radicaux exclus du système) commence à se reconnaître mutuellement contre le bloc dominant
+- Le débat politique central oppose défense du système et contestation radicale, plutôt que centre-droit et centre-gauche
+- Les anciens clivages factionnels deviennent secondaires ou folklorisés
 
-### Marqueurs observables
-
-- Croissance économique
-- Unification culturelle, production littéraire accrue, expansion de la langue nationale
-- Accroissement de l'alphabétisation
-- Construction d'infrastructures commerciales
+---
 
 ## Vue corpus
 
