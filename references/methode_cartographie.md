@@ -18,7 +18,7 @@ Trois rôles, chacun avec son contexte fermé :
 2. **Agent 2 — Évaluateur** (`references/methode_scoring.md`)
    - Scoring tranche × phase + justifications marker par marker
    - Reçoit dossier d'Agent 1 + identité de la nation
-   - Accès au cadre (`phase_*.md`, `elites.md`, `perturbations.md`, `parcours.md`) **mais pas aux `nations/*/`**
+   - Accès au cadre (`phase_*.md`, `elites.md`, `perturbations.md`, `parcours.md`) **mais pas aux `nations/*/` ni à `corpus_recapitulatif.md`**
    - Peut faire des recherches web complémentaires
    - Sortie : tableau de scoring + justifications + faits supplémentaires
 
@@ -70,7 +70,7 @@ Spawner un second sous-agent avec :
 > 
 > Lis intégralement `references/methode_scoring.md` puis les fichiers du cadre (`parcours.md`, `phase_*.md`, `elites.md`, `perturbations.md`). Exécute la procédure complète.
 > 
-> Interdiction critique : aucun accès aux `references/nations/*/`.
+> Interdiction critique : aucun accès aux `references/nations/*/` ni à `references/corpus_recapitulatif.md`.
 
 Récupérer le scoring produit.
 
@@ -115,17 +115,17 @@ Pour **chaque scénario**, appliquer les contrôles suivants. Le scénario qui p
 
 ### 5a : Vérification phase par phase (saillants + marqueurs)
 
-Pour chaque phase du scénario, vérifier la présence des saillants canoniques attendus et le satisfaction des marqueurs.
+Pour chaque phase du scénario, vérifier la présence des saillants canoniques attendus et la satisfaction des marqueurs.
 
 #### Phase féodale
-**Saillants attendus** : éveil féodal, pic(s) féodal(aux), crise(s) féodale(s), pacte oligarchique.
+**Saillants attendus** : Éveil féodal, Pic féodal (un ou plusieurs), Crise féodale (une ou plusieurs), Pacte oligarchique.
 **Vérifications** :
 - Quand apparaît le premier chef supra-régional ? (éveil féodal)
 - Y a-t-il un réseau de vassalité d'homme à homme ?
 - Quand apparaît une première administration centrale, un fisc, une armée permanente ? (fin de la phase féodale)
 
 #### Phase oligarchique
-**Saillants attendus** : 1er monarque oligarchique, acmé oligarchique, polarisation, guerre sociale.
+**Saillants attendus** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale.
 **Vérifications** :
 - Qui est le premier souverain disposant d'un État central (impôt + armée + administration) ?
 - Y a-t-il un acte collectif garantissant la stabilité aux successions — **chemin A** (codification de la succession) OU **chemin B** (codification de l'exercice du pouvoir) ? Une nation peut combiner les deux successivement (cf. `phase_feodale.md`).
@@ -135,7 +135,7 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - Y a-t-il une guerre sociale identifiable, et à l'échelle nationale (pas seulement régionale) ?
 
 #### Phase absolutiste
-**Saillants attendus** : 1er monarque absolu (cf. `phase_absolutiste.md` pour les 5 formes admises — à épuiser avant de conclure à l'absence), DGRO, acmé absolutiste, fin d'expansion, remontrance, Ancien Régime.
+**Saillants attendus** : 1er monarque absolu (cf. `phase_absolutiste.md` pour les 5 formes admises — à épuiser avant de conclure à l'absence), Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance.
 **Vérifications** :
 - Qui résout la guerre sociale et concentre le pouvoir ? Tester les deux patterns : tiers populiste neutre ET faction-gagnante qui crée un nouveau cadre.
 - L'administration centrale a-t-elle préséance sur les administrations locales — sur **TOUTES** dans le cas des monarchies composites ?
@@ -144,7 +144,7 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - Pour les cités-États : tester activement la **forme 4** (consortium institutionnalisé de créanciers-actionnaires oligarques qui capture progressivement les fonctions d'État).
 
 #### Révolution Nationale
-**Saillants attendus** : éclatement de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, IR, restauration, Glorieuse Révolution.
+**Saillants attendus** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution.
 **Vérifications** :
 - La phase précédente porte-t-elle bien les marqueurs d'un Ancien Régime absolutiste ? **Sans AR préalable avéré, pas de RN.**
 - Pattern des saillants présent ?

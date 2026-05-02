@@ -14,7 +14,7 @@ Ce skill permet à Claude d'analyser le Parcours de construction nationale de n'
 
 ## Ce que ce skill permet de faire
 
-1. **Cartographier un parcours national complet** — identifier les phases, sous-phases, saillants et perturbations d'une nation donnée. Lancement par `/cartographie [nation]`. **Charger `references/methode_cartographie.md` pour la procédure complète.**
+1. **Cartographier un Parcours national complet** — identifier les phases, sous-phases, saillants et perturbations d'une nation donnée. Lancement par `/cartographie [nation]`. **Charger `references/methode_cartographie.md` pour la procédure complète.**
 2. **Comparer des parcours** — aligner les saillants de plusieurs nations et identifier parallèles et divergences.
 3. **Explorer une question historionomique** — appliquer le cadre théorique à un problème historique précis.
 4. **Discuter le cadre théorique** — affiner les concepts, tester leur applicabilité à de nouveaux cas.
@@ -39,6 +39,7 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | `references/perturbations.md` | 3 mécanismes (choc d'hétérogénéité, choc exogène, insuffisance interne) × 4 effets (prolongement, accélération, avortement, reboot) + exutoire (état continu). Rébellion périphérique. Affichage sur la frise (losanges, couleurs, icônes) | La question touche à un choc externe, une déviation des durées typiques, ou un exutoire |
 | `references/nations/*/parcours.md` | Parcours nationaux déjà mappés — données structurées, hypothèse finale retenue | Pour comparer avec un parcours connu ou générer une infographie |
 | `references/nations/*/justification.md` | Justification des choix, hypothèses écartées, questions ouvertes | Pour comprendre le raisonnement derrière le parcours |
+| `references/corpus_recapitulatif.md` | Tableau aligné des saillants des nations déjà mappées — **lu par le parent uniquement, interdit à Agent 2** (ancrage par analogie) | Pour la comparaison tardive avec corpus (Étape 6 de la cartographie) ou les questions cross-corpus |
 
 ## Principes universels
 
@@ -86,7 +87,7 @@ Les écarts sont toujours significatifs — les expliquer par perturbation ident
 - `absolutisation`, `impérialisme absolutiste`, `ancien régime` (absolutiste). Dérivation rare : `ancien régime exogène`.
 - `révolution initiale`, `impérialisme revanchard`, `restauration` (RN)
 
-Dérivations exceptionnelles uniquement sur précédent documenté.
+Toute autre dérivation requiert un précédent documenté.
 
 **Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
@@ -96,7 +97,7 @@ Dérivations exceptionnelles uniquement sur précédent documenté.
 
 **Distinction saillant vs sous-phase** :
 - `Ancien régime` est une sous-phase **seulement** — l'entrée en AR est marquée par la Remontrance, pas par un saillant « Ancien Régime ».
-- `Révolution initiale` est une sous-phase **seulement** — elle contient les 4 saillants Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
+- `révolution initiale` est une sous-phase **seulement** — elle contient les 4 saillants Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
 - `Restauration` est à la fois un **saillant** (le moment) ET une **sous-phase** (la durée).
 - `Émergence de l'IR` est un **saillant** ; `impérialisme revanchard` est la **sous-phase**.
 

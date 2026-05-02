@@ -36,7 +36,11 @@ Dans cet ordre :
 
 ## Interdictions strictes
 
-**Lecture interdite** : aucun fichier `references/nations/*/parcours.md` ni `references/nations/*/justification.md`. C'est l'interdiction critique : c'est là que se loge l'**ancrage par analogie de surface** (« cette tranche russe ressemble à la France de Louis XIV »).
+**Lectures interdites** :
+- Aucun fichier `references/nations/*/parcours.md` ni `references/nations/*/justification.md`
+- `references/corpus_recapitulatif.md` (tableau aligné des saillants par nation — accès = ancrage par analogie immédiat)
+
+C'est l'interdiction critique : c'est là que se loge l'**ancrage par analogie de surface** (« cette tranche russe ressemble à la France de Louis XIV »).
 
 **Comparaisons interdites** : ne compare jamais la nation à une autre nation du corpus dans tes justifications. Évalue les marqueurs sur les faits de la tranche, pas par analogie. Si tu te surprends à écrire « comme X », « analogue à Y », « moins fort que Z », **retire la référence et reformule sur les faits seuls**.
 
@@ -51,7 +55,7 @@ Tu peux et dois utiliser la recherche web pour vérifier des points de marqueurs
 - **Préséance institutionnelle** : « Did central administration of [nation] have effective primacy over provincial administrations in [period] ? Look for governors' actual autonomy, capacity to override central directives, fiscal independence. »
 - **Frein juridique effectif des oligarques** : « Could the executive of [nation] in [period] act without effective juridical constraint from the great families ? »
 - **Codification réelle vs nominale** : « Was [law/charter] of [date] actually enforced or did it remain nominal ? »
-- **Marqueurs d'AR** : « Was there elite oversupply, fiscal pressure, blocked social mobility in [nation] during [period] ? »
+- **Marqueurs d'Ancien Régime (AR)** : « Was there elite oversupply, fiscal pressure, blocked social mobility in [nation] during [period] ? »
 
 **Ne pas utiliser la recherche pour** :
 - Confirmer une intuition phasique (« was [nation] absolutist in [period] ? »)
@@ -74,7 +78,7 @@ Tu peux et dois utiliser la recherche web pour vérifier des points de marqueurs
 
 ### Ordre de scoring : non-chronologique
 
-Scorer les tranches dans un ordre **non-chronologique** (par taille décroissante, ou aléatoire). Scorer chronologiquement induit un effet de cadrage progressif (« j'ai scoré la tranche 1 comme féodale, donc la tranche 2 doit être féodale aussi »). Sortir de l'ordre temporel casse cet effet.
+Scorer les tranches dans un ordre **non-chronologique** (par durée décroissante de la tranche, ou aléatoire). Scorer chronologiquement induit un effet de cadrage progressif (« j'ai scoré la tranche 1 comme féodale, donc la tranche 2 doit être féodale aussi »). Sortir de l'ordre temporel casse cet effet.
 
 ### Pour chaque tranche × phase
 
@@ -91,6 +95,18 @@ Scorer les tranches dans un ordre **non-chronologique** (par taille décroissant
 - **Justification marker par marker** : pour chaque marqueur de la phase (cf. `phase_*.md`), indiquer s'il est présent (avec faits du dossier ou recherche complémentaire) ou absent (avec justification structurelle de l'absence).
 
 - **Faits supplémentaires découverts** : si une recherche web a apporté des éléments non présents dans le dossier d'Agent 1, les documenter explicitement (avec sources).
+
+### Méfie-toi des noms historiographiques usuels
+
+Le vocabulaire descriptif ordinaire utilisé par le Collecteur (révolution, guerre civile, parlement, monarchie, république, constitution) ne préjuge en rien de la classification phasique :
+
+- Un « parlement » n'implique pas la phase parlementaire (les Cortes médiévaux fonctionnent en phase féodale ou oligarchique)
+- Une « révolution » n'implique pas la RN (la Glorieuse Révolution anglaise de 1688 est un saillant *à l'intérieur* d'une RN, pas la RN entière ; le mot « révolution » désigne souvent un événement saillant, pas un cycle phasique)
+- Un « monarque » n'implique pas l'absolutisme (les Tudor sont des monarques en phase oligarchique tardive)
+- Une « guerre civile » n'implique pas la guerre sociale (la guerre civile anglaise 1642-1651 est une RN aiguë, pas une guerre sociale au sens historionomique)
+- Une « république » n'implique pas la phase parlementaire (les républiques marchandes médiévales sont en phase oligarchique)
+
+Va systématiquement aux **marqueurs structurels** des `phase_*.md` — qui détient effectivement le pouvoir, comment il l'exerce, contre quels freins. Les noms propres et étiquettes ordinaires sont des indicateurs faibles, pas des preuves.
 
 ### Marqueurs piège (à ne pas surinterpréter)
 
@@ -142,5 +158,5 @@ Pour **chaque case avec score ≥ 2** :
 1. **Lecture dominante par tranche** : phase au score le plus haut, ou ambiguïtés (deux phases ex æquo)
 2. **Tranches ambiguës** : où plusieurs phases ont des scores élevés (signaux de transition ou configuration atypique)
 3. **Marqueurs systématiquement absents ou présents** : signal sur la nature de la nation
-4. **Faits supplémentaires découverts** : récap des apports de la recherche complémentaire
+4. **Récap des faits supplémentaires découverts** par recherche complémentaire (déjà mentionnés dans les justifications par tranche, regroupés ici pour le parent)
 5. **Configurations atypiques signalées** : ce qui n'entre dans aucune phase de manière satisfaisante — à remonter pour le parent comme éléments théoriques nouveaux possibles
