@@ -24,12 +24,6 @@ Un jour, un chemin continu se forme : un chef émerge qui est assez fort pour **
 
 La pré-féodale est par nature difficile à documenter : pas de structure centralisée, peu de traces écrites, chronologie floue. La borne de début est souvent conventionnelle. La borne de fin (l'éveil féodal) est mieux identifiable car elle marque un changement qualitatif — l'apparition d'un centre.
 
-### Exemples
+### Vue corpus
 
-| Parcours | Début | Fin (éveil féodal) | Durée |
-|---|---|---|---|
-| France | 987 (Hugues Capet nominal) | 1108 (Louis VI le Gros) | ~121 ans |
-| Angleterre | ~600 (Heptarchie) | ~829 (Ecgberht) | ~229 ans |
-| Israël antique | ~-1200 (Juges) | ~-1080 (Saül) | ~120 ans |
-| Milan | 888 (fragmentation carolingienne) | 979 (Landolfo II) | ~91 ans |
-| Castille | ~930 (Fernán González) | ~1035 (Ferdinand Ier) | ~105 ans |
+Le tableau aligné par nation (durées et bornes des percolations élitaires) est dans `corpus_recapitulatif.md` — accessible au parent uniquement.

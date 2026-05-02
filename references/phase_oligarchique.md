@@ -204,20 +204,6 @@ On désigne par « guerre sociale » le conflit entre deux factions élitaires �
 | Angleterre | ~1455-1485 | Guerre des Deux-Roses. Ni les York ni les Lancaster ne gagnent : Henri VII crée une nouvelle dynastie (les Tudor) |
 | Venise | ~1628-1669 | Tensions institutionnelles. Après l'échec de la réforme Zeno (1628), l'exécutif (Inquisiteurs d'État) consolide son pouvoir sans opposition. La guerre de Candie (1645-1669) sert de véhicule à la concentration exécutive (délégation d'autorité en urgence permanente). La perte de la Crète (1669) force l'homogénéisation territoriale. Le « tiers » vénitien est institutionnel : les Inquisiteurs d'État, servis par la classe administrative des cittadini (analogue de la noblesse de robe). Ni les giovani ni les vecchi ne l'emportent : c'est l'appareil d'État |
 
-## Tableau récapitulatif
+## Vue corpus
 
-Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus).
-
-| Parcours | 1er monarque oligarchique | Acmé oligarchique | Guerre sociale | 1er monarque absolu |
-|---|---|---|---|---|
-| Israël antique | Omri (-885) | Jéroboam II (~-770) | -700 à -641 | Josias (-640) |
-| Israël (prolongement) | — | — | -175 à -140 | Simon Thassi (-140) |
-| Venise | Contarini (~1043) / système | Foscari (~1440) | ~1628-1669 | Inquisiteurs d'État (~1669) |
-| Milan | Système communal (1097) | Paix de Constance (1183) | Torriani vs Visconti (1240-1277) | Ottone Visconti (1277) |
-| Angleterre | Édouard III (1327) | Édouard III (~1350) | Guerre des Deux-Roses (~1455-1485) | Henri VII (1485) |
-| France | Philippe VI (1328) | François Ier (~1515) | Guerres de Religion (~1562-1598) | Henri IV (1598) |
-| Espagne | Henri II Trastámara (1369) | Rois Catholiques (~1492) | Succession d'Espagne (1700-1714) | Philippe V (1714) |
-| Piémont | Amédée VIII (1430) | Charles Emmanuel Ier (~1600) | Madamisti vs Principisti (1637-1696) | Victor Amédée II (1696) |
-| Suisse | Tagsatzung (~1501) | Occupation de Milan (~1512) | Paysans / Villmergen (1653-1712) | Patriciat trans-confessionnel (1712) |
-| Bavière | Guillaume IV (1508) | Albert V (~1555) | ~1564-1597 | Maximilien Ier (1597) |
-| Autriche | Maximilien Ier (1518) | Léopold Ier (~1683) | Succession d'Autriche (1740-1748) | Marie-Thérèse (1749) |
+Le tableau récapitulatif aligné par nation (saillants oligarchiques) est dans `corpus_recapitulatif.md` — accessible au parent uniquement.

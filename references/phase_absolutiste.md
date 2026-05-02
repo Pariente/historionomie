@@ -249,21 +249,6 @@ Cette recomposition est une condition nécessaire à l'éclatement de la Révolu
 - Accroissement de l'alphabétisation
 - Construction d'infrastructures commerciales
 
-## Tableau récapitulatif
+## Vue corpus
 
-Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus).
-
-| Parcours | 1er monarque absolu | Acmé absolutiste | Ancien Régime | Début de la RN |
-|---|---|---|---|---|
-| Israël antique | Josias (-640) | — (interrompu en -609) | — (interrompu) | — |
-| Israël (prolongement) | Simon Thassi (-140) | Hérode (~-20) | -4 à 66 | Grande Révolte (66) |
-| Milan | Ottone Visconti (1277) | Gian Galeazzo Visconti (~1395) | ~1447-1499 | — (absorbée) |
-| Angleterre | Henri VII (1485) | Élisabeth Ière (~1580) | ~1603-1642 | Guerre civile (1642) |
-| Bavière | Maximilien Ier (1597) | Max. III Joseph (~1756) | ~1848-1918 | Eisner (1918) |
-| France | Henri IV (1598) | Louis XIV (~1682) | ~1715-1789 | 1789 |
-| Venise | Inquisiteurs d'État (~1669) | Morosini (~1688) | ~1718-1848 | République de Manin (1848) |
-| Piémont | Victor Amédée II (~1696) | Ch. Emmanuel III (~1748) | ~1748-1861 | — (absorbée) |
-| Allemagne (Prusse) | Frédéric-Guillaume Ier (1713) | Frédéric le Grand (~1760) | ~1890-1918 | Révolution de Novembre (1918) |
-| Espagne | Philippe V (1714) | Charles III (~1770) | ~1788-1808 | Dos de Mayo (1808) |
-| Suisse | Patriciat trans-confessionnel (1712) | — | ~1780-1798 | République helvétique (1798) |
-| Autriche | Marie-Thérèse (1749) | Joseph II (~1780) | ~1815-1918 | Révolution (1918) |
+Le tableau récapitulatif aligné par nation (saillants absolutistes) est dans `corpus_recapitulatif.md` — accessible au parent uniquement.

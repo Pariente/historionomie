@@ -180,22 +180,6 @@ Vérification empirique sur le corpus : 10 parcours canoniques sur 11 présenten
 - Les oligarques s'organisent en une classe structurée avec des intérêts communs
 - Rébellions des grands féodaux imposant des contraintes à l'exécutif
 
-## Tableau récapitulatif
+## Vue corpus
 
-Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus).
-
-| Parcours | Éveil féodal | Pics féodaux | Pacte oligarchique | Durée |
-|---|---|---|---|---|
-| Israël antique | Saül (~-1080) | David (~-1003), Salomon (~-960) | Probable sous Omri (-885), non textuellement attesté | ~195 ans |
-| Venise | Orso Ipato (~726) | Galbaio (~764), Partecipazio (~811), Candiano (~959), Orseolo (~991) | Abolition co-régence (1032) | ~306 ans |
-| Angleterre [1] (avortée) | Ecgberht (~829) | Æthelstan (~930), Edgar (~965), Cnut (~1025) | — (avortée, reboot normand) | ~237 ans |
-| Milan | Landolfo II (979) | Ariberto (~1018) | Commune (1097) | ~118 ans |
-| Espagne | Ferdinand Ier (~1035) | Alphonse VI (~1085), Ferdinand III (1230), Alphonse X (~1265), Alphonse XI (1340) | Trastámara (1369) | ~334 ans |
-| Angleterre [2] | Guillaume (1066) | Henri Ier (~1120), Henri II (~1170), Édouard Ier (~1295) | Ordonnances (1311) | ~261 ans |
-| France | Louis VI (~1108) | Philippe Auguste (~1214), Philippe le Bel (~1295) | Loi salique (1317) | ~220 ans |
-| Autriche [1] (avortée) | Léopold VI (~1198) | — | — (avortée, extinction Babenberg 1246) | ~48 ans |
-| Bavière | Louis Ier (~1204) | Louis IV (~1328), Ludwig IX (~1450) | Primogéniture (1506) | ~326 ans |
-| Piémont | Thomas II (1233) | Philippe Ier d'Achaïe (~1295), Amédée d'Achaïe (~1380) | Statuta Sabaudiae (1430) | ~197 ans |
-| Suisse | Bundesbrief (1291) | Sempach (1386), Guerres de Bourgogne (~1474) | Stanser Verkommnis (1481) | ~190 ans |
-| Autriche [2] | Rudolf IV (1358) | — | Innsbrucker Libell (1518) | ~160 ans |
-| USA | ~1776 | Lincoln/Grant (~1865), McKinley/T. Roosevelt (~1905) | Fed + IRS (1913) | ~137 ans |
+Le tableau récapitulatif aligné par nation (saillants féodaux, durées) est dans `corpus_recapitulatif.md` — accessible au parent uniquement.

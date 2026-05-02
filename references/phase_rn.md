@@ -218,16 +218,6 @@ Comment distinguer une RN avortée (comme Israël en 66 ou Venise en 1848) d'une
 
 Le marqueur le plus discriminant est la nature du leadership : **autorité héritée/charismatique** (révolte absolutiste) vs **autorité construite par l'élection** (RN).
 
-## Tableau récapitulatif
+## Vue corpus
 
-| Sous-phase / Saillant | France | Angleterre | Israël (avortée) | Venise (avortée) |
-|---|---|---|---|---|
-| **Révolution initiale** | 1789-1799 | 1640-1653 | 66-70 | 1848-1849 |
-| → Éclatement de l'AR | 1789 | 1642 | 66 | mars 1848 |
-| → Expérience parlementaire | 1789-1791 | 1640-1648 | 66-67 | mars 1848 - août 1849 |
-| → Phase aiguë | 1792-1794 | 1649 | 67-70 | Amorce : mars 1849 (pouvoirs illimités) |
-| → Moment thermidorien | 1794-1799 | 1649-1653 | — (écrasée) | — (écrasée) |
-| **Impérialiste Revanchard** | 1799-1815 | 1653-1658 | — | — |
-| → Émergence de l'IR | Bonaparte (1799) | Cromwell (1653) | — | — |
-| **Restauration** | 1815-1830 | 1660-1688 | — | — |
-| → Glorieuse Révolution | 1830 | 1688 | — | — |
+Le tableau récapitulatif aligné par nation (saillants RN) est dans `corpus_recapitulatif.md` — accessible au parent uniquement.
