@@ -26,7 +26,7 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
-| `references/methode_cartographie.md` | Manuel d'orchestration de la cartographie multi-agent (10 étapes : collecteur Agent 1 → évaluateur Agent 2 → synthèse parent → vérifications → corpus → fichiers de sortie). Contient les prompts de spawn des sous-agents et les Étapes 4-10 (synthèse). | La tâche est de **cartographier un Parcours complet** d'une nation |
+| `references/methode_cartographie.md` | Manuel d'orchestration de la cartographie multi-agent (11 étapes : collecteur Agent 1 → évaluateur Agent 2 → synthèse parent → vérifications → corpus → fichiers de sortie → images). Contient les prompts de spawn des sous-agents et les Étapes 4-11 (synthèse, sortie, images). | La tâche est de **cartographier un Parcours complet** d'une nation |
 | `references/methode_collecte.md` | Procédure du **Collecteur** (Agent 1) — collecte historique pure, découpage en tranches, sans cadre phasique. Lue par Agent 1 uniquement. | Référencé depuis `methode_cartographie.md` lors du spawn d'Agent 1 |
 | `references/methode_scoring.md` | Procédure de l'**Évaluateur** (Agent 2) — scoring tranche × phase + recherche complémentaire. Lue par Agent 2 uniquement. | Référencé depuis `methode_cartographie.md` lors du spawn d'Agent 2 |
 | `references/phase_pre_feodale.md` | Phase pré-féodale : percolation élitaire (Deblonde), marqueurs, exemples | La question porte sur la percolation ou la pré-féodale |

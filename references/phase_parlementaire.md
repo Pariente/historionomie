@@ -113,20 +113,9 @@ Un régime peut avoir un parlement formel mais sans pouvoir réel — parlement 
 
 **Test** : appliquer les marqueurs nécessaires opérationnels. Si plusieurs des contre-signes sont présents (parlement consultatif, opposition réprimée, pas d'alternance), ce n'est pas une ENP.
 
-#### c) ENP contrariée figée
+#### c) ENP contrariée figée — hypothèse en cours d'évaluation
 
-Une variante structurellement distincte : les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais le corps civique reste fermé et stable sans dynamique endogène d'élargissement vers la population. Caractéristique des configurations où le compromis institutionnel post-RN a produit un cercle représenté strictement intra-aristocratique. C'est une variante de l'ENP, pas une dégénérescence.
-
-**Test discriminant ENP contrarié figé vs absolutisme collectif forme 2** : voir `phase_rn.md` §Configurations particulières (3 questions sur exécutif/classe administrative/élargissement).
-
-### Configurations particulières
-
-#### ENP active vs contrariée figée
-
-Quand une RN aboutit, la phase parlementaire qui s'ouvre peut prendre deux formes selon la dynamique d'élargissement du corps civique :
-
-- **ENP active** : le mouvement sinistrogyre canonique fonctionne. Le corps civique s'étend progressivement vers l'ensemble de la population. C'est la phase parlementaire standard.
-- **ENP contrariée figée** : le corps civique reste fermé et stable sans dynamique endogène d'élargissement. Voir détail et test discriminant dans `phase_rn.md`.
+Lecture proposée pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé sans dynamique endogène d'élargissement. Hypothèse alternative à une lecture absolutiste à organe collégial autonome ; le test discriminant est dans `phase_rn.md` (3 questions sur exécutif / classe administrative / élargissement). Seul cas-type actuel dans le corpus : Gênes 1528-1797 (sous la lecture Philippe). À ne pas mobiliser comme cadre établi tant que d'autres cas n'auront pas été testés.
 
 ---
 

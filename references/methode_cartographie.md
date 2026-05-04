@@ -94,9 +94,9 @@ Repérer dans le dossier + scoring les **deux éléments interprétatifs les plu
 
 - Le scoring d'Agent 2 montre des scores élevés pour **plusieurs phases sur la même tranche** (ex. tranche scorée 4 en oligarchique et 4 en absolutiste)
 - Un événement majeur peut raisonnablement être lu comme **deux saillants différents** (ex. pic féodal vs 1er monarque oligarchique pour la même figure)
-- La **datation d'un saillant** n'est pas évidente (ex. PO via chemin A en année X ou chemin B en année X+50)
+- La **datation d'un saillant** n'est pas évidente (ex. PO daté à la première codification de transmission en année X ou à la maturation institutionnelle qui encadre l'exercice en année X+50)
 - Une **transition** peut être un reboot par choc ou un prolongement endogène
-- Une **figure ou un acte** peut résoudre la guerre sociale dans deux patterns différents (tiers populiste vs faction-gagnante)
+- Une **figure ou un acte** peut résoudre la guerre sociale par tiers neutre ou par chef de faction qui crée un cadre transcendant son propre camp
 
 ### 4b : Expliciter les lectures plausibles de chaque fourche
 
@@ -136,20 +136,20 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 **Saillants attendus** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale.
 **Vérifications** :
 - Qui est le premier souverain disposant d'un État central (impôt + armée + administration) ?
-- Y a-t-il un acte collectif garantissant la stabilité aux successions — **chemin A** (codification de la succession) OU **chemin B** (codification de l'exercice du pouvoir) ? Une nation peut combiner les deux successivement (cf. `phase_feodale.md`).
+- Y a-t-il un acte collectif garantissant la stabilité aux successions — soit en codifiant la transmission, soit en encadrant l'exercice du pouvoir ? Une nation peut combiner les deux successivement (cf. `phase_feodale.md`).
 - Trois éléments structurels du PO à vérifier : codification (acte formel daté), caractère collectif (assemblée — diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers), moment de faiblesse (conditions de Deblonde : homogénéité + faiblesse du suzerain).
 - **Cas textuellement invisible** : si le test discriminant est passé (succession stable, dynastie reconnue, fisc et armée permanents) sans acte attesté, considérer un PO **structurellement probable mais textuellement invisible** (précédent : Israël antique sous Omri).
 - Quelles sont les deux factions en conflit (prébendière vs patrimoniale) ?
 - Y a-t-il une guerre sociale identifiable, et à l'échelle nationale (pas seulement régionale) ?
 
 #### Phase absolutiste
-**Saillants attendus** : 1er monarque absolu (cf. `phase_absolutiste.md` pour les 5 formes admises — à épuiser avant de conclure à l'absence), Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance.
+**Saillants attendus** : 1er monarque absolu (cf. `phase_absolutiste.md` §Configurations rencontrées — l'image mentale par défaut du monarque personnel-titré masque des configurations canoniques), Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance.
 **Vérifications** :
-- Qui résout la guerre sociale et concentre le pouvoir ? Tester les deux patterns : tiers populiste neutre ET faction-gagnante qui crée un nouveau cadre.
+- Qui résout la guerre sociale et centralise l'appareil ? La figure résolvante peut être un tiers neutre (cas le plus fréquent) ou un chef de faction qui crée un cadre transcendant son propre camp ; ne pas s'arrêter au premier cas.
 - L'administration centrale a-t-elle préséance sur les administrations locales — sur **TOUTES** dans le cas des monarchies composites ?
 - Y a-t-il un pic d'impérialisme et de prestige ? (acmé absolutiste)
 - Y a-t-il sédimentation des élites, sclérose, bloc contestataire ? (Ancien Régime)
-- Pour les cités-États : tester activement la **forme 4** (consortium institutionnalisé de créanciers-actionnaires oligarques qui capture progressivement les fonctions d'État).
+- Pour les cités-États : la centralisation peut prendre des formes inhabituelles — appareil familial-bancaire (Florence sous Laurent), consortium oligarchique institutionnalisé (Venise, Gênes). Garder en tête que le critère est la centralisation effective de l'appareil, pas sa forme bureaucratique.
 
 #### Révolution Nationale
 **Saillants attendus** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution.
@@ -164,6 +164,9 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - **Échelle** : test discriminant absolutiste à l'échelle de TOUS les territoires de la nation ; guerre sociale à l'échelle nationale.
 - **Expansion** : attribuée à la phase qui était en cours quand elle a commencé (l'expansion prolonge la phase active).
 - **Saillant manquant** : signal d'alarme. Soit l'histoire a été mal lue (recherche complémentaire), soit le cas est structurellement atypique (justifier alors structurellement). **Ne jamais se contenter de « absent, résolution diffuse »** sans justification solide.
+- **Perturbations ponctuelles vs étendues** : par défaut, toute perturbation est **ponctuelle** et codée comme `type: saillant` + `perturbation: true` + `mechanism` + `effect`. Les perturbations étendues (`type: perturbation` avec bandeau hachuré sur la frise) sont **réservées aux périodes où le Parcours est structurellement mis en pause** (cas-types : exil babylonien, effondrement valois 1392-1420, guerres d'Italie à Milan 1499-1535). Avant de coder une perturbation comme étendue, se demander explicitement : « le Parcours est-il réellement en pause structurellement, ou s'agit-il d'un événement ponctuel dont les effets se déploient ensuite ? ». Cf. `perturbations.md` §3.
+- **Synchronicité phase / sous-phases** : la fin d'une phase coïncide exactement avec la fin de sa dernière sous-phase ; le début d'une phase coïncide exactement avec le début de sa première sous-phase. Aucun chevauchement ni trou.
+- **Borne de début du Parcours** : le Parcours commence au premier cadre où une percolation élitaire endogène est plausible, pas à la première trace de peuplement. Avant ce cadre, la nation n'est pas un sujet historionomique distinct — elle est dans des structures supra-régionales appartenant à d'autres ensembles. Cf. `parcours.md` §Conséquences pour le périmètre temporel.
 
 ### 5b : Test événement par événement
 
@@ -217,6 +220,7 @@ Le scénario avec le meilleur scoring gagne. Les scénarios écartés sont docum
 ## Étape 8 : Produire le fichier `parcours.md`
 
 Créer `references/nations/<nation>/parcours.md` avec :
+- Metadata du fichier : `nation`, `territory`, `flag`, `start`, `end`, `subtitle`, **highlights** (cf. ci-dessous), `status`, `confidence`
 - Section `## Superficie de référence` (noyau + marges, format dans `references/parcours.md`)
 - Phases, sous-phases, saillants, perturbations identifiés
 - Perturbations territoriales codées avec le bon mécanisme (`choc_heterogeneite` pour expansion, `correction_echelle` pour contraction) et un titre spécifique (nom de l'événement, pas le label du mécanisme)
@@ -226,6 +230,22 @@ Créer `references/nations/<nation>/parcours.md` avec :
 
 Ce fichier est le **résultat final** : il ne contient que l'hypothèse retenue, pas les débats.
 
+### Choix des faits marquants (highlights)
+
+Les `highlight_1`, `highlight_2`, etc. de la metadata sont les éléments les plus visibles du fichier — c'est par eux que se joue la lisibilité du parcours. Ils doivent répondre à la question : **« qu'est-ce qui, dans ce parcours précis, est intéressant par rapport à ce qu'on sait de l'historionomie ? »**.
+
+Critères de sélection :
+- **Atypicité structurelle** lisible historionomiquement — phase exceptionnellement longue ou courte avec cause identifiée (« phase absolutiste bavaroise prolongée par X »), reboot caractérisé (« reboot oligarchique français après Azincourt-Troyes »), RN avortée par mécanisme spécifique, configuration rare (consortium oligarchique, appareil familial-bancaire, etc.).
+- **Lecture nouvelle d'une période classique** — événement bien connu lu sous un angle historionomique non trivial (« 1848 = RN vénitienne avortée », « Pinochet = 1er MA chilien après vraie guerre sociale 1970-1973 », « Ferdinand III à Florence en 1799 = avortement par choc exogène, pas Restauration »).
+- **Test ou confirmation d'un point théorique** — cas qui valide ou tend une règle générale (« AR de Florence sans ruine financière endogène — confirme le critère discrédit + ruine simultanés »).
+
+Critères d'exclusion :
+- Fait notable historiographiquement mais sans valeur historionomique singulière (ex. « première traduction de Dante » — anecdote culturelle).
+- Description narrative ordinaire de la nation (« cité prospère du commerce méditerranéen ») — sans angle historionomique.
+- Reprise d'éléments standards déjà couverts ailleurs dans le parcours (saillants canoniques sans atypicité particulière).
+
+Il faut typiquement 3-5 faits marquants par nation. Chacun pointe un saillant ou une période identifiable, avec une formulation courte (titre + 2-3 phrases) qui rend explicite l'intérêt historionomique.
+
 ---
 
 ## Étape 9 : Produire le fichier `justification.md`
@@ -234,7 +254,7 @@ Créer `references/nations/<nation>/justification.md` qui documente :
 
 1. **Hésitations** — pour chaque saillant à confiance non-high, expliquer les alternatives envisagées et la raison du choix
 2. **Hypothèses écartées** — scénarios alternatifs avec arguments pour/contre (machlokot)
-3. **Questions ouvertes** — ce qui reste à confirmer
+3. **Questions ouvertes** — les **incertitudes finales** que l'analyse n'a pas pu trancher : interprétations qui restent défendables sans pouvoir être préférées, datations imprécises faute de sources, points où le cadre théorique ne tranche pas, lectures qui demanderaient confirmation par d'autres cas. *Pas* une liste de questions techniques arbitraires ou de TODO méthodologiques — uniquement ce qui reste structurellement ouvert à l'issue du travail. S'il n'y a pas d'incertitude résiduelle, le dire (« aucune question ouverte significative »), pas en inventer pour remplir.
 4. **Comparaisons** — parallèles avec parcours connus qui éclairent ou nuancent
 5. **Apports d'Agent 2** — faits supplémentaires découverts par recherche complémentaire qui ont conduit à des choix particuliers
 
@@ -242,6 +262,26 @@ Le fichier de justification est **séparé** du parcours : le parcours est le r�
 
 ---
 
-## Étape 10 : Discuter et itérer
+## Étape 10 : Télécharger et intégrer les images
+
+**Étape obligatoire** avant de présenter le résultat. Le rendu HTML s'appuie sur des images qui doivent exister localement ou être accessibles via les URLs codées dans le parcours.
+
+Images à fournir :
+- **Drapeau** (`images/<slug>/flag.png`) — drapeau de la nation, référencé dans la metadata `flag` du parcours.
+- **Nation-card** — image qui représente la nation dans la liste des parcours (cf. `docs/index.html`). Choisir une image emblématique du pays/de la cité.
+- **Illustrations des faits marquants** — chaque `highlight_N` du parcours a un champ image. Source courante : Wikimedia Commons via URL de la forme `https://commons.wikimedia.org/wiki/Special:FilePath/<filename>?width=120`. Choisir des images représentatives du fait marquant (portrait du personnage, peinture de l'événement, vue de la ville à l'époque).
+- **Portraits des personnages-clefs** — chaque saillant porteur d'un champ `figure` peut avoir une image associée. Mêmes sources.
+
+Procédure :
+1. Identifier les images nécessaires (drapeau + nation-card + N highlights + figures principales).
+2. Pour chaque image Wikimedia Commons : vérifier que l'URL est correcte (ouvrir dans un navigateur ou utiliser `curl`). Privilégier les images en domaine public ou Creative Commons.
+3. Pour le drapeau et la nation-card : télécharger localement dans `images/<slug>/`.
+4. Régénérer le HTML avec `python3 generate_timeline.py references/nations/<slug>/parcours.md` et déplacer dans `docs/<slug>.html`.
+5. Mettre à jour `docs/index.html` pour ajouter la nation à la liste (carte + lien).
+6. Vérifier visuellement que toutes les images apparaissent correctement.
+
+---
+
+## Étape 11 : Discuter et itérer
 
 L'historionomie est une discipline en cours de construction. L'utilisateur peut contester une identification, proposer un saillant alternatif, ou demander d'explorer une hypothèse. Être prêt à réviser l'analyse sur la base d'arguments solides, et à mettre à jour le parcours ET la justification.

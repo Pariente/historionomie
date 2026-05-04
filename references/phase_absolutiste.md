@@ -8,6 +8,16 @@ La phase absolutiste commence à la résolution de la guerre sociale (saillant *
 
 ---
 
+## Lecture abstraite : centralisation de l'appareil
+
+La phase absolutiste est structurellement la **centralisation** de l'appareil d'extraction et de coercition initialement démembré entre les oligarques en phase oligarchique (cf. `phase_oligarchique.md` §Lecture abstraite). C'est cette recentralisation qui produit la préséance de facto et de jure de l'administration centrale sur les administrations locales (test discriminant).
+
+Le 1er monarque absolu peut prendre des formes très diverses — figure dynastique avec noblesse de robe, organe collégial autonome avec classe administrative, puissance étrangère imposant un cadre, consortium institutionnalisé de créanciers-actionnaires détenant collectivement l'appareil. Ce qui les unifie est le résultat structurel : un appareil central qui peut agir sans frein juridique des oligarques anciens.
+
+Cette lecture abstraite permet d'identifier des cas atypiques où la centralisation s'opère par un appareil **formellement privé** — typiquement, dans une cité-État où la distinction public/privé est faible, un appareil familial-bancaire (Banque Médicis sous Laurent le Magnifique) ou un consortium de créanciers institutionnalisé (Banco di San Giorgio à Gênes) qui exerce les fonctions d'extraction, de coercition et de coordination satisfait fonctionnellement la centralisation. Ce qui compte est l'existence d'un appareil unifié dont les fonctions ne sont plus démembrées entre oligarques, pas son statut juridique. Voir `parcours.md` §Nature de l'appareil étatique pour le principe général.
+
+---
+
 ## Comment identifier cette phase
 
 ### Test discriminant (absolutiste vs oligarchique tardive ; absolutiste vs RN)
@@ -125,76 +135,29 @@ Les structures institutionnelles de la phase oligarchique ne disparaissent pas, 
 
 ### Saillant : 1er monarque absolu (tout début de la sous-phase)
 
-**Définition** : la figure (ou institution, ou consortium) qui résout la guerre sociale et inaugure la concentration du pouvoir central. Saillant principal de l'entrée en phase absolutiste.
+**Définition** : la figure, l'institution ou le consortium qui résout la guerre sociale et inaugure la **centralisation de l'appareil** (cf. §Lecture abstraite ci-dessus). Saillant principal de l'entrée en phase absolutiste.
 
-**Critères de résolution** (cf. `phase_oligarchique.md` §Guerre sociale pour le détail) :
-1. La structure du conflit était élitaire (deux factions, enjeu = contrôle de l'État central)
-2. La résolution conduit à un nouveau cadre central qui subordonne les anciennes élites
+**Critère structurel invariant** (cf. `phase_oligarchique.md` §Guerre sociale) : la résolution conduit à un **nouveau cadre central qui subordonne les anciennes élites** — l'appareil cesse d'être démembré entre oligarques. La figure résolvante peut être un tiers neutre s'appuyant sur les clientèles délaissées (cas le plus fréquent) ou un chef de faction qui crée un cadre transcendant son propre camp ; ce qui compte est le résultat structurel, pas le statut de la figure.
 
-**Pattern majoritaire vs pattern minoritaire** : le critère structurel invariant est l'émergence d'un nouveau cadre central. La figure résolvante peut être un tiers populiste neutre (pattern le plus fréquent) ou un chef de faction qui crée un nouveau cadre transcendant son propre camp (pattern moins fréquent mais canonique). Cf. `phase_oligarchique.md` §La figure résolvante.
+#### Configurations rencontrées dans le corpus
 
-#### Formes admises — à épuiser avant de conclure à l'absence
+L'appareil unifié peut se matérialiser de manières très diverses. L'image mentale par défaut — monarque personnel, stable, titré, à la française — est un biais qui masque les configurations atypiques mais structurellement équivalentes. Avant de conclure à l'absence d'un 1er monarque absolu, garder ces configurations en tête sans les traiter comme une grille fermée :
 
-La figure du 1er monarque absolu prend des formes très diverses. **Avant de conclure qu'une nation « n'a pas de 1er monarque absolu »**, vérifier qu'aucune des quatre formes suivantes n'est applicable. L'image mentale par défaut (monarque personnel, stable, titré) est un biais qui masque les formes atypiques mais canoniques.
+- **Figure dynastique avec administration distincte.** Souverain individuel régnant pendant ou après la guerre sociale, qui émet l'acte fondateur (édit de pacification, ordonnance d'unification, codification) et s'appuie sur une classe administrative distincte (noblesse de robe, fonctionnariat) recrutée hors de l'ancienne aristocratie. La continuité dynastique ensuite est un indice fort : le successeur hérite d'un cadre déjà établi.
+- **Appareil familial-bancaire dans cité-État.** Dans une cité-État où la distinction public/privé est faible, la centralisation peut s'opérer par un réseau privé (typiquement bancaire) plutôt qu'une bureaucratie publique formelle : la famille dirigeante exerce les fonctions de l'appareil central (extraction fiscale, financement des charges, coordination diplomatique, récompense-sanction des élites) via un appareil parallèle qui satisfait fonctionnellement la centralisation. Cas-type : Laurent le Magnifique à Florence (Conseil des Settanta supplantant la Signoria à mandats courts + Banque Médicis comme appareil de pouvoir parallèle, succursales internationales tenant lieu de réseau d'agents). Typiquement fragile face aux chocs exogènes — voir `parcours.md` §Taille sur les ingérences étrangères dans les petites nations.
+- **Organe collégial autonome.** Magistrature, commission ou conseil exécutif identifiable comme l'organe résolvant la guerre sociale, qui émerge **au-dessus** du patriciat et peut agir contre lui, durable et survivant aux changements de personnel. S'appuie également sur une classe administrative distincte des oligarques.
+- **Puissance étrangère.** Tiers exogène qui balaie les anciennes factions oligarchiques et installe un nouveau cadre administratif (préfets, codifications imposées, nouvelle aristocratie de service) quand la dynamique endogène n'y parvient pas. Le cadre reste structurellement absolutiste dès lors que le test discriminant est satisfait après l'imposition.
+- **Consortium oligarchique institutionnalisé.** Configuration spécifique aux cités-États où l'homogénéisation des élites achève la fusion en bloc unifié *avant* que la construction de l'État central ne produise un appareil autonome. L'appareil (fiscalité, administration territoriale, armée, coercition) se construit comme **propriété collective institutionnalisée** des oligarques, typiquement sous forme d'un consortium de créanciers-actionnaires qui absorbe progressivement les fonctions d'État par transfert depuis un commune faible. Trait empirique décisif : quand une faction capture l'exécutif politique (dogat, magistrature suprême), elle n'accède pas au contrôle du consortium, qui reste gouverné collectivement par les oligarques-créanciers incluant ceux de la faction perdante. Le consortium exerce toutes les fonctions absolutistes sur la population et sur les territoires soumis, mais reste par construction incapable d'agir contre ses propriétaires-créanciers.
 
-##### Forme 1 : figure personnelle stable
+Ces configurations ne forment pas une typologie close : ce sont des combinaisons empiriquement rencontrées dans le corpus actuel. La question à garder en tête reste toujours la même — **l'appareil d'extraction et de coercition est-il devenu unifié et préséant sur les administrations locales ?** Si oui, il y a 1er monarque absolu, quelle que soit la forme matérielle qu'il prend. L'absence véritable est rare et doit être justifiée structurellement (phase absolutiste jamais atteinte parce que le cycle RN a été déclenché avant par choc exogène, ou parce que la nation a été absorbée).
 
-Règne individuel long qui résout la guerre sociale et institue un nouveau cadre central. Forme la plus reconnaissable.
+#### Distinction analytique : appareil au-dessus des oligarques vs appareil-propriété des oligarques
 
-**Signes observables** :
-- Un souverain individuel identifiable régnant pendant ou immédiatement après la guerre sociale
-- Émission de l'acte fondateur de l'absolutisation (édit de pacification, ordonnance d'unification, codification du nouveau cadre)
-- Mise au pas effective des anciennes factions par intégration ou exclusion
-- Continuité dynastique ensuite (le successeur hérite d'un cadre déjà établi)
+Une distinction structurelle traverse les configurations ci-dessus et éclaire la trajectoire ultérieure. Quand la centralisation s'opère par un appareil émergeant **au-dessus** du patriciat (figure dynastique, organe collégial autonome, puissance étrangère), une classe administrative distincte des oligarques sert l'exécutif et peut être instrumentée contre les anciennes élites. Quand elle s'opère par fusion oligarchique préalable (consortium), pas de telle classe distincte — les opérateurs de l'appareil sont les oligarques eux-mêmes, et l'appareil ne peut pas se retourner contre eux.
 
-##### Forme 2 : institution collective stable
+Cette distinction éclaire la trajectoire post-absolutiste. Le second cas (fusion oligarchique) peut déboucher soit sur une **RN aboutie** (même en présence d'intervention étrangère pendant la séquence — l'occupation ne modifie pas l'aboutissement) suivie d'une **phase parlementaire figée** (corps civique élargi qui reste strictement intra-patricien, sans extension vers les populations exclues, faute des factions élitaires permanentes qui constituent le moteur sinistrogyre de l'élargissement) ; soit directement sur un AR prolongé sans RN qui finit par être absorbé. L'issue finale des deux trajectoires se fait typiquement par choc exogène et absorption par un État de taille standard.
 
-Organe qui concentre le pouvoir exécutif sans figure personnelle. Le « monarque » est une magistrature institutionnelle.
-
-**Signes observables** :
-- Une magistrature, une commission ou un conseil exécutif identifiable comme l'organe résolvant la guerre sociale
-- Cette institution émerge **au-dessus** du patriciat ou des oligarques et peut agir contre eux
-- Présence d'une **classe administrative distincte** des oligarques (équivalent de la noblesse de robe), servant l'institution exécutive
-- L'institution est durable et survit aux changements de personnel
-
-##### Forme 3 : tiers exogène imposé
-
-Puissance extérieure qui joue le rôle de tiers et installe un nouveau cadre central, quand la dynamique endogène n'y parvient pas. Le cadre reste structurellement absolutiste si le test discriminant est satisfait.
-
-**Signes observables** :
-- Conquête ou intervention étrangère qui balaie les anciennes factions oligarchiques
-- Installation d'un nouveau cadre administratif (préfets, codifications imposées, nouvelle aristocratie de service)
-- Le test discriminant absolutiste est satisfait après l'imposition, même si la dynamique endogène ne le produisait pas
-
-##### Forme 4 : absolutisme collectif par consortium oligarchique
-
-**Forme à tester en priorité pour toute cité-État dans un environnement d'États territoriaux.**
-
-L'appareil central (fiscalité, administration territoriale, armée, coercition) se construit comme **propriété collective institutionnalisée des élites oligarchiques**, sous forme de consortium de créanciers-actionnaires qui absorbe progressivement les fonctions d'État par transfert depuis un commune faible. L'appareil est durable, centralisateur, et exerce toutes les fonctions absolutistes **sur la population et sur les territoires soumis** — mais reste structurellement incapable d'agir contre ses propriétaires-créanciers.
-
-**Cette forme se distingue de la forme 2** : dans la forme 2, l'institution émerge **au-dessus** du patriciat et peut agir contre lui (avec une classe administrative distincte) ; dans la forme 4, l'institution émerge **comme propriété collective** du patriciat et ne peut, par construction, s'en détacher (pas de classe administrative distincte des oligarques-propriétaires).
-
-**Signes observables** :
-- Consortium institutionnalisé avec actionnariat aux oligarques-créanciers, gouvernance par conseil élu parmi les créanciers
-- Transferts documentés de fonctions étatiques (fiscalité, justice, territoires) du commune vers le consortium — signal de *debt capture*
-- Administration directe de territoires et monopoles fiscaux par le consortium, pas par le commune
-- L'exécutif politique doit respecter les droits du consortium : toute atteinte entraîne rébellion ou refus de crédit
-- Absence de classe administrative distincte (pas de noblesse de robe, pas de fonctionnariat professionnel au-dessus des actionnaires)
-- Isolation effective de l'économie par rapport à la politique : la politique reste instable, le consortium reste stable
-
-**Signature empirique décisive** : quand une faction capture l'exécutif politique (dogat, magistrature suprême), elle n'accède *pas* au contrôle du consortium — qui reste gouverné collectivement par les oligarques-créanciers incluant ceux de la faction perdante. Le cadre central est stable et ne change pas de propriétaire au gré des alternances politiques.
-
-**Trajectoire canonique attendue** : la phase absolutiste sous forme 4 peut déboucher soit (a) sur une **RN aboutie** (même en présence d'intervention étrangère pendant la séquence — l'occupation ne modifie pas l'aboutissement) qui produit ensuite une **phase parlementaire contrariée figée** (corps civique fermé au patriciat élargi, sans dynamique d'élargissement endogène ultérieure vers la population) ; soit (b) directement sur un AR prolongé sans RN qui finit par être absorbé. L'issue finale des deux trajectoires se fait typiquement par choc exogène et absorption par un État de taille standard.
-
-**Spécificité de la phase parlementaire qui suit** : quand la forme 4 débouche sur une RN aboutie puis une phase parlementaire, celle-ci est figée — le corps civique élargi reste strictement intra-patricien (les familles inscrites au registre = la nation politique), sans extension vers les populations exclues. Le mouvement sinistrogyre canonique d'élargissement ne s'active pas, probablement parce que la fusion oligarchique produite par la forme 4 a dissous les factions élitaires permanentes qui constituent le moteur de l'élargissement dans les ENP actifs.
-
-**Condition d'émergence structurelle (hypothèse)** : la forme 4 émerge quand l'homogénéisation des élites (Moteur 2) achève la fusion en bloc unifié *avant* que la construction de l'État central (Moteur 1) ne produise un appareil autonome des élites. Les oligarques, déjà coordonnés en classe, peuvent alors institutionnaliser l'appareil central comme leur propriété collective plutôt que de laisser émerger un exécutif au-dessus d'eux. Favorisé par : petite taille du territoire, structure économique homogène des élites (pas de clivage foncier/marchand radical), tradition de pacte communal initial.
-
-**Références théoriques** : Greif (*Institutions and the Path to the Modern Economy*), Winter (*Polity* 2022, « A Government of Creditors »), Taviani (« A Privatized State »).
-
-##### Règle d'épuisement des formes
-
-Ne déclarer « pas de 1er monarque absolu » qu'après avoir testé les **quatre formes** ci-dessus et expliqué pourquoi aucune ne s'applique. L'absence véritable est rare et doit être justifiée structurellement (typiquement : phase absolutiste jamais atteinte parce que le cycle RN a été déclenché avant par choc exogène, ou parce que la nation a été absorbée).
+**Références théoriques sur le cas du consortium oligarchique** : Greif (*Institutions and the Path to the Modern Economy*), Winter (*Polity* 2022, « A Government of Creditors »), Taviani (« A Privatized State »).
 
 ### Mise sous contrôle du pouvoir judiciaire
 
@@ -315,6 +278,7 @@ L'ancien régime, contrairement aux autres phases, ne s'achève pas par une tran
 - Croissance économique soutenue, alphabétisation de masse, expansion de la langue nationale, infrastructures commerciales
 - Tensions fiscales croissantes (l'État s'endette pour la cour et les engagements militaires antérieurs)
 - Apparition d'une littérature critique du régime tolérée puis combattue
+- **Tentatives de réforme par le souverain qui échouent systémiquement** — le souverain (souvent par influence des Lumières ou autre courant réformateur) tente massivement de réformer mais bute sur l'incapacité systémique de la nation à se réformer en AR. Cas-types : Louis XVI (Turgot, Necker, Calonne, Brienne), Joseph II (révolte des Pays-Bas, retour partiel), Pierre-Léopold de Toscane (constitution Gianni 1779-1782 abandonnée, émeute Prato 1787 contre les réformes religieuses), Charles III d'Espagne. Le terme « despotisme éclairé » est ambigu (Louis XIV en était également) ; le marqueur structurel est l'**échec systémique des tentatives**, pas leur radicalité.
 
 ### Le clivage gauche-droite se reconfigure
 
@@ -330,6 +294,17 @@ Cette recomposition est une **condition nécessaire à l'éclatement de la Révo
 - Une opposition diverse mais convergente (anciennes factions oligarchiques nostalgiques + nouveaux entrants radicaux exclus du système) commence à se reconnaître mutuellement contre le bloc dominant
 - Le débat politique central oppose défense du système et contestation radicale, plutôt que centre-droit et centre-gauche
 - Les anciens clivages factionnels deviennent secondaires ou folklorisés
+
+### Conditions d'éclatement endogène (vers RN)
+
+L'AR ne s'achève pas par une transition ordonnée. Pour qu'il **éclate de façon endogène** vers la RN, deux conditions doivent être réunies **simultanément** :
+
+1. **Discrédit du régime** — scandales, défaites militaires, incurie généralisée, perte de légitimité morale. Sans discrédit, il n'y a pas de masse critique pour souhaiter le renversement.
+2. **Ruine financière** — l'État ne peut plus payer les élites sur qui tient le régime. Sans ruine financière, le régime peut continuer à acheter ses soutiens et tient.
+
+Tant que l'un des deux critères manque, l'AR perdure. Si un choc exogène arrive avant que la maturité endogène ne soit atteinte, l'AR éclate quand même mais **prématurément** — la RN qui suit peut malgré tout aboutir si elle n'est pas écrasée par puissance extérieure (cf. `phase_rn.md` §Conditions de sortie).
+
+Ce critère explique pourquoi certains AR durent au-delà de la norme. Cas-types : Florence (1670-1796, 126 ans — discrédit oui, ruine financière non car les réformes léopoldines assainissent), Venise (1718-1848, 130 ans), Piémont (1748-1861, 113 ans).
 
 ---
 

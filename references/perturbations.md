@@ -41,10 +41,21 @@ Le **choc exogène** est le seul mécanisme polyvalent — son effet dépend de 
 
 Les perturbations sont affichées comme des **losanges** (◆) pour les distinguer des saillants normaux (●). La **couleur** encode l'effet, l'**icône** encode le mécanisme.
 
-- **Perturbation ponctuelle** : losange à la date de l'événement.
-- **Perturbation étendue** : losange pour le déclencheur + bande hachurée pour la durée.
+- **Perturbation ponctuelle** (cas par défaut) : losange à la date de l'événement, codé `type: saillant` + `perturbation: true` + `mechanism` + `effect`.
+- **Perturbation étendue** (cas rare) : losange pour le déclencheur + bande hachurée pour la durée, codé `type: perturbation` + `start` + `end` + `mechanism` + `effect`.
 - **Exutoire** : pas de marqueur (mentionné dans la description de la durée de la phase).
 - **Fin de l'exutoire** : saillant canonique « fin de l'expansion » (●, couleur de la phase — pas un losange de perturbation).
+
+#### Règle par défaut : perturbation ponctuelle
+
+**Par défaut, toute perturbation est ponctuelle**. La forme étendue (bande hachurée sur la frise) est **réservée aux périodes où le Parcours est structurellement mis en pause ou prolongé sur une durée significative** — pas à un événement ponctuel dont les conséquences se déploient ensuite. Avant de coder une perturbation comme étendue, se demander explicitement : *« le Parcours est-il réellement en pause structurellement sur cette période, ou s'agit-il d'un événement ponctuel dont je suis tenté d'étirer la représentation ? »*.
+
+Cas véritablement étendus dans le corpus actuel :
+- **Exil babylonien** (Israël antique, 587-538 av. J.-C.) — Parcours mis en pause par déportation collective.
+- **Effondrement valois** (France, 1392-1420) — institutions effondrées, Parcours en pause jusqu'à reconstitution sous Charles VII.
+- **Guerres d'Italie** (Milan, 1499-1535) — reboot prolongé de l'absolutisme milanais en phase oligarchique.
+
+Ces cas partagent la propriété : *la dynamique phasique est structurellement interrompue pendant la durée de la perturbation*. Un retour de souverain, un écrasement de révolution, une transition dynastique sont des événements ponctuels (même si leurs effets durent ensuite) — ils se codent comme saillants ponctuels avec flag `perturbation: true`, pas comme bandes étendues.
 
 ---
 
@@ -66,7 +77,7 @@ Si l'un des trois fait défaut, l'événement n'est pas une perturbation au sens
 
 **Anecdote de parcours** — événement réel mais sans impact identifiable sur la trajectoire (la phase aurait fait la même chose sans lui). Ne pas le marquer dans le parcours structuré.
 
-**Boucle en phase féodale** — la phase féodale est ponctuée de pics féodaux suivis de crises féodales. Si l'homogénéité des élites reste insuffisante pour produire un Pacte Oligarchique, le Parcours **boucle** : un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes. Ce n'est pas une perturbation au sens strict — c'est le mécanisme structurel intra-phase de la phase féodale, qui prolonge endogènement sa durée au-delà de la norme de ~200 ans.
+**Boucle en phase féodale** — la phase féodale est ponctuée de pics féodaux suivis de crises féodales. Si l'homogénéité des élites reste insuffisante pour produire un Pacte Oligarchique, le Parcours **boucle** : un nouveau pic émerge, la crise se répète, et ainsi de suite jusqu'à ce que les conditions soient atteintes. Ce n'est pas une perturbation au sens strict — c'est le mécanisme structurel intra-phase de la phase féodale. La durée totale dépend du nombre de cycles avant convergence des conditions de Deblonde ; ce n'est pas la boucle qui prolonge la phase, c'est la non-convergence qui produit la boucle.
 
 > *Distinction* : une perturbation fait *trébucher* le Parcours ; une boucle le fait *tourner en rond* sans avancer. Chaque crise féodale individuelle dans une boucle est cependant à la fois un saillant canonique « Crise féodale » et une perturbation insuffisance interne / avortement (cf. §4.4).
 
@@ -180,7 +191,7 @@ Cas typique de la fin d'exutoire militaire : perte d'une possession continentale
 
 **Définition** : blocage interne du Parcours qui empêche une transition phasique. Mécanisme exclusivement avortant : la phase en cours ne peut pas accoucher de la suivante parce que ses conditions structurelles ne sont pas réunies.
 
-**Cas-type 1 : crise féodale sans Pacte Oligarchique**. Un pic féodal s'effondre en crise, mais l'homogénéité des élites est insuffisante pour produire un Pacte Oligarchique. La transition vers la phase oligarchique est avortée ; la phase féodale recommence un cycle pic → crise. Chaque crise individuelle est à la fois saillant canonique « Crise féodale » ET perturbation insuffisance interne / avortement. La répétition de ces cycles est la **boucle féodale** (cf. §2 « Ce qui n'est PAS une perturbation »), qui prolonge endogènement la phase féodale au-delà de la norme de ~200 ans.
+**Cas-type 1 : crise féodale sans Pacte Oligarchique**. Un pic féodal s'effondre en crise, mais l'homogénéité des élites est insuffisante pour produire un Pacte Oligarchique. La transition vers la phase oligarchique est avortée ; la phase féodale recommence un cycle pic → crise. Chaque crise individuelle est à la fois saillant canonique « Crise féodale » ET perturbation insuffisance interne / avortement — c'est une **occasion prématurée** où le pacte ne peut se faire. La répétition de ces cycles est la **boucle féodale** (cf. §2 « Ce qui n'est PAS une perturbation ») : la phase féodale dure tant que les conditions de Deblonde n'ont pas convergé. Ce n'est pas la boucle qui prolonge la phase, c'est la non-convergence qui produit la boucle.
 
 **Cas-type 2 : absolutisation avortée**. Une figure tente de résoudre la guerre sociale et imposer un cadre absolutiste, mais échoue par défaut de soutien (ni les clientèles délaissées, ni la classe moyenne administrative ne convergent suffisamment). Aucun nouveau cadre n'émerge ; la phase oligarchique se poursuit jusqu'à une nouvelle tentative de résolution — qui pourra venir d'un autre tiers, d'une dynastie issue d'une faction, ou d'une intervention exogène.
 

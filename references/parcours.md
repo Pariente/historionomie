@@ -13,6 +13,12 @@ Ces deux processus sont à la fois les *moteurs* et les *indicateurs* du Parcour
 
 Les deux moteurs doivent progresser **ensemble**. Un État central avancé sans homogénéité culturelle suffisante = Parcours qui **boucle** : la phase féodale recommence en cycles (pic suivi de crise) sans produire le pacte oligarchique, faute d'homogénéité des grands. Une homogénéité culturelle forte sans construction étatique = Parcours qui **stagne** : l'identité de la nation existe mais l'appareil reste informel, l'éveil féodal lui-même est compromis. Le Parcours avance le plus vite quand les deux moteurs sont **alignés**.
 
+### Nature de l'appareil étatique : critère fonctionnel, pas juridique
+
+L'appareil de l'État central — fisc, armée, justice, coordination — est défini par les **fonctions qu'il exerce**, pas par son statut juridique formel. Quand une structure formellement privée (banque familiale, consortium de créanciers institutionnalisé, ordre religieux militaire, compagnie à charte) exerce effectivement les fonctions de l'appareil central — extraction fiscale, coercition, coordination diplomatique, récompense-sanction des élites, administration de territoires soumis — elle constitue cet appareil au sens historionomique, indépendamment de son statut formel. La distinction public/privé est une catégorie juridique tardive et contingente ; le critère structurel est fonctionnel.
+
+Cas-types : Banque Médicis sous Laurent à Florence (financement, diplomatie, réseau d'agents internationaux), Banco di San Giorgio à Gênes (fiscalité, administration coloniale, monopoles), plus largement toute configuration de cité-État où la distinction public/privé est faible. Cette possibilité doit être tenue en tête lors de l'identification d'une phase oligarchique ou absolutiste : l'absence d'une bureaucratie formellement publique ne signifie pas l'absence d'appareil central, et les tests discriminants des phases s'appliquent à l'appareil fonctionnel quel que soit son habillage juridique.
+
 ### La question fondamentale du Parcours
 
 Tout au long du Parcours, la même question se pose : **« entre égaux, quelles règles nous donnons-nous ? »**. Ce qui change, ce n'est pas la question — c'est le **cercle des « égaux »** autour de la table, qui s'élargit à mesure que l'homogénéité culturelle progresse.
@@ -61,16 +67,16 @@ Les **sous-phases** découpent chaque phase en étapes successives pour comprend
 |---|---|---|---|
 | Percolation élitaire | Fragmentation / identité émergente | **Éveil féodal** | ~90-120 ans |
 | Coagulation des élites | **Éveil féodal** | **Crise féodale terminale** OU **Pacte oligarchique** direct | ~100-250 ans |
-| Bascule oligarchique | **Crise féodale terminale** | **Pacte oligarchique** + 1er monarque olig | ~10-20 ans |
-| Essor oligarchique | **1er monarque oligarchique** | ⚠️ Basculement (projection extérieure → tension interfactions) | ~70-100 ans |
+| Bascule oligarchique | **Crise féodale terminale** | **Pacte oligarchique** | ~10-20 ans |
+| Essor oligarchique | **Pacte oligarchique** | ⚠️ Basculement (projection extérieure → tension interfactions) | ~70-100 ans |
 | Polarisation des élites | ⚠️ Basculement | **Début de la guerre sociale** | ~10-40 ans |
 | Guerre sociale | Premier épisode ouvert du conflit | **1er monarque absolu** | ~15-60 ans |
 | Absolutisation | **1er monarque absolu** | **Fin de la DGRO** (consensus absolutiste) | ~30-70 ans |
 | Impérialisme absolutiste | **Fin de la DGRO** | **Remontrance** | ~45-100 ans |
 | Ancien régime | **Remontrance** | **Éclatement de l'AR** | ~35-100 ans |
 | Révolution initiale | **Éclatement de l'AR** | **Émergence de l'IR** | ~10-15 ans |
-| Impérialisme revanchard | Prise de pouvoir de l'IR | **Chute de l'IR** | ~10-16 ans |
-| Restauration | **Chute de l'IR** | **Glorieuse Révolution** | ~3-40 ans |
+| Impérialisme revanchard | **Émergence de l'IR** | **Restauration** | ~10-16 ans |
+| Restauration | **Restauration** | **Glorieuse Révolution** | ~3-40 ans |
 
 **Règles d'identification des bornes** :
 
@@ -79,7 +85,7 @@ Les **sous-phases** découpent chaque phase en étapes successives pour comprend
 3. Les bornes ne doivent pas être forcées pour obtenir des durées typiques.
 4. Quand une sous-phase optionnelle est absente (bascule oligarchique, IR), justifier structurellement.
 
-**Saillants positionnés à l'intérieur d'une sous-phase** (pas en borne) : Acmé oligarchique (interne à l'essor) ; Fin de l'expansion oligarchique (peut coïncider avec le basculement essor → polarisation) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Fin de l'expansion absolutiste (interne à l'impérialisme absolutiste).
+**Saillants positionnés à l'intérieur d'une sous-phase** (pas en borne) : 1er monarque oligarchique (interne à l'essor, premier souverain post-PO, typiquement quelques années après le PO) ; Acmé oligarchique (interne à l'essor) ; Fin de l'expansion oligarchique (peut coïncider avec le basculement essor → polarisation) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Fin de l'expansion absolutiste (interne à l'impérialisme absolutiste) ; Expérience parlementaire, Phase aiguë, Moment thermidorien (internes à la révolution initiale, qui s'étend de l'Éclatement de l'AR à l'Émergence de l'IR).
 
 ---
 
@@ -91,7 +97,7 @@ Les **saillants** sont des éléments ponctuels facilement identifiables dans l'
 - *Éveil féodal* : émergence du premier chef supra-régional, dont l'autorité force les autres à se positionner (premier souverain dont le pouvoir personnel est au moins l'égal de ses vassaux, les grands féodaux)
 - *Pic féodal* : règne d'un roi fort qui consolide temporairement l'édifice féodal
 - *Crise féodale* : si une succession est défaillante (roi faible, crise dynastique, héritier disputé), l'édifice bâti lors d'un pic féodal se fragmente
-- *Pacte oligarchique* : acte collectif par lequel les oligarques garantissent la stabilité du régime aux successions (chemin A — codification de la succession ; chemin B — codification de l'exercice du pouvoir ; ou A+B successifs)
+- *Pacte oligarchique* : acte collectif par lequel les oligarques garantissent la stabilité du régime aux successions, soit en codifiant la transmission, soit en encadrant l'exercice du pouvoir (les deux mécanismes peuvent se succéder dans une même nation)
 
 **Oligarchique** :
 - *1er monarque oligarchique* : premier souverain qui gouverne dans le cadre ouvert par le PO, dont la légitimité repose sur les règles codifiées et non plus sur la stature personnelle
@@ -170,7 +176,7 @@ Tableau de synthèse — pour le détail (formes admises, marqueurs, cas particu
 | Transition | Test discriminant principal |
 |---|---|
 | Pré-féodale → Féodale | Émergence d'un chef supra-régional dont l'autorité oblige les autres à se positionner par vassalité d'homme à homme (Éveil féodal) |
-| Féodale → Oligarchique | Le pouvoir survit-il aux successions par garantie collective des oligarques ? Pacte oligarchique en chemin A (codification de la succession), B (codification de l'exercice du pouvoir), ou A+B successifs — cf. `phase_feodale.md` |
+| Féodale → Oligarchique | Le pouvoir survit-il aux successions par garantie collective des oligarques ? Pacte oligarchique par codification de la transmission, par encadrement de l'exercice du pouvoir, ou par les deux successivement — cf. `phase_feodale.md` |
 | Oligarchique → Absolutiste | L'administration centrale a-t-elle préséance sur les administrations locales ? L'exécutif peut-il agir sans frein juridique effectif des oligarques ? Test à appliquer à toutes les administrations du territoire national pour les monarchies composites — cf. `phase_absolutiste.md` |
 | Absolutiste → RN | L'ordre ancien a-t-il éclaté avec un AR préalable avéré (sédimentation des élites, pression fiscale, convergence ED/EG contre le bloc élitaire) ? Sans AR préalable, pas de RN — cf. `phase_rn.md` |
 | RN → Parlementaire | La représentation nationale est-elle ancrée par une Glorieuse Révolution durable ? La chambre basse est-elle devenue source ultime du pouvoir ? — cf. `phase_rn.md` et `phase_parlementaire.md` |
@@ -189,7 +195,7 @@ Le Parcours ne nécessite pas que la nation soit formellement unifiée ou souver
 
 La cartographie d'un Parcours national ne doit **jamais être bornée par les dates de souveraineté politique**. Deux règles opérationnelles :
 
-- **Borne de début** : remonter aux **origines plausibles** de la nation comme entité culturelle distincte, pas seulement aux premières institutions politiques visibles. La phase pré-féodale (percolation élitaire) précède toujours toute structuration politique repérable, et peut elle-même être précédée d'un contexte (effondrement d'un ordre antérieur, migration fondatrice, romanisation puis ré-émergence post-romaine). Une cartographie qui démarre à la première institution médiévale visible manque souvent la phase pré-féodale entière.
+- **Borne de début** : la cartographie commence au **premier cadre dans lequel une percolation élitaire endogène est plausible** — c'est-à-dire le moment où la nation devient un sujet historionomique distinct, où l'on peut identifier l'émergence d'élites qui se reconnaissent comme telles. Ce cadre précède toujours toute structuration politique formelle, mais ne remonte pas indéfiniment dans le temps. Avant ce cadre, la nation n'est pas encore un sujet : elle est inscrite dans des structures supra-régionales (empire, marquisat carolingien, duché impérial) qui appartiennent à d'autres Parcours et où aucune percolation élitaire propre n'est repérable. **Erreur symétrique à éviter** : remonter à la première trace de peuplement ou à la cité épiscopale post-romaine, alors que la percolation élitaire endogène n'apparaît que beaucoup plus tard. Cas-type : Florence — pas remonter à Florentia post-romaine ou aux marquisats carolingiens, mais commencer à la Marche canossienne (1014) qui ouvre la fenêtre où une percolation toscane endogène devient lisible.
 - **Borne de fin** : poursuivre le Parcours **au-delà des pertes d'indépendance**, tant que la nation existe comme entité culturellement distincte. Une nation conquise, partitionnée, ou intégrée à un empire continue d'avancer dans son Parcours sous tutelle. Le Parcours ne s'arrête que quand la nation cesse d'être un sujet historionomique distinct — typiquement par **fusion dans le Parcours d'une autre nation** (assimilation culturelle complète, intégration dans un État-nation plus large dont le Parcours absorbe le sien). Et même là, la frontière est à argumenter : une nation peut conserver un Parcours endogène partiel à l'intérieur d'un ensemble plus vaste (cas des nations périphériques d'empires).
 
 **Erreur typique à éviter** : assimiler « fin de l'État souverain » à « fin du Parcours ». Une cité-État absorbée par un Grand-Duché continue son Parcours dans le cadre de ce Grand-Duché ; un royaume conquis par un empire continue son Parcours sous l'empire ; une nation partitionnée continue son Parcours en plusieurs morceaux. Le critère d'arrêt est **culturel et historionomique**, pas politique.
@@ -202,7 +208,9 @@ Ce qui détermine la phase d'une nation, c'est le **fonctionnement réel** de se
 
 À chaque époque, il existe une **taille standard d'État** qui concentre l'essentiel de la puissance géopolitique : administrations palatiales à l'âge du Bronze, cités-États dans l'Antiquité, États territoriaux à l'époque moderne, super-États dans la séquence suivante. Une nation dont la taille correspond au standard déroule son Parcours endogènement. Une nation **trop petite** ou **trop grande** voit sa dynamique contrariée.
 
-**Nation trop petite** (cité-État à l'époque des États territoriaux) : absolutisme instable (forme factionnelle plutôt que consolidée), guerre sociale arbitrée par les voisins, RN contrariée (souvent compressée sous arbitrage extérieur, parfois absorbée plutôt que résolue). Pattern typologique attendu pour une cité-État trop petite : phase féodale courte → phase oligarchique éventuellement prolongée → phase absolutiste **forme 4** (consortium oligarchique, cf. `phase_absolutiste.md`) → ancien régime figé → sortie par choc exogène. Hypothèse de travail par défaut quand on analyse une cité-État du corpus.
+**Nation trop petite** (cité-État à l'époque des États territoriaux) : absolutisme fragile face aux chocs exogènes (la centralisation peut être réelle mais portée par un appareil sans profondeur — figure dynastique sans relais bureaucratique propre, ou appareil-propriété des oligarques sans classe administrative distincte), guerre sociale parfois arbitrée par les voisins, RN contrariée (souvent compressée sous arbitrage extérieur, parfois absorbée plutôt que résolue). Trajectoire fréquente pour une cité-État trop petite : phase féodale courte → phase oligarchique éventuellement prolongée → phase absolutiste sous configuration patricienne (consortium oligarchique institutionnalisé, ou appareil familial-bancaire d'une famille dominante) → ancien régime figé → sortie par choc exogène et absorption. Hypothèse de travail par défaut quand on analyse une cité-État du corpus, à confirmer ou infirmer cas par cas.
+
+Plus généralement, **une nation petite par rapport au standard de son époque risque d'être perturbée par des ingérences étrangères** — chaque faction interne en déclin peut faire appel à une puissance voisine pour se relever, ce qui produit des boucles d'instabilité que l'on peut prendre à tort pour des défauts intrinsèques de la trajectoire endogène. Cas-types : Florence 1494-1537 (Charles VIII / Jules II / Sac de Rome / Charles Quint), Gênes XVe siècle (France / Monferrato / Visconti / Sforza). Ces ingérences sont des perturbations exogènes qui relèvent de `perturbations.md` §4.2 (choc exogène), pas une signature inhérente à la phase en cours.
 
 **Nation trop grande** (empire continental à l'époque des cités-États, ou super-État avant l'âge des super-États) : l'hétérogénéité culturelle excède la capacité d'homogénéisation que permettent les technologies de communication et d'administration de l'époque. Les deux moteurs se désalignent ; le Parcours stagne ou se fragmente par correction d'échelle — typiquement par partition (au décès du fondateur, par accord dynastique, ou par révolte des marges).
 

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Florence</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:685px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/florence/flag.png' alt='drapeau'>
+        <h1>Florence</h1>
+        <span class='header-badge badge-status wip'>à valider</span>
+    </div>
+    <div class="header-subtitle">Cité-État, appareil familial-bancaire, AR sans ruine financière, RN avortée par choc exogène</div>
+</div>
+
+<div class="briefing briefing-full"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="images/florence/florin.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;margin-top:3px;"></span>Acmé oligarchique précoce par exutoire bancaire (1325-1339)</span><span class="insight-desc">L&#39;acmé florentine se positionne à ~32% de la phase oligarchique — précoce par rapport à Venise (~64%) ou Gênes (~93%). Florence n&#39;a pas d&#39;empire territorial à digérer, seulement un réseau bancaire international (Bardi, Peruzzi, Acciaiuoli) qui sature en ~60 ans. Confirme la corrélation acmé/saturation de l&#39;exutoire — la position est dynamique, fonction de la nature de la projection oligarchique.</span></div></div><div class="insight-item"><img class="insight-img" src="images/florence/laurent-de-medici.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;margin-top:3px;"></span>1er monarque absolu par appareil familial-bancaire (Laurent le Magnifique, 1480)</span><span class="insight-desc">Le Conseil des Settanta (institution exécutive à vie supra-Signoria) couplé à la Banque Médicis comme appareil de pouvoir parallèle satisfait fonctionnellement le test discriminant absolutiste — alors même que cet appareil est juridiquement privé. Cas paradigmatique du critère fonctionnel vs juridique : l&#39;appareil de l&#39;État central peut être formellement privé (banque dynastique-familiale) tout en exerçant les fonctions d&#39;État.</span></div></div><div class="insight-item"><img class="insight-img" src="images/florence/pietro-leopoldo.png" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px;"></span>AR sans ruine financière → RN avortée par choc exogène (1796-1799)</span><span class="insight-desc">L&#39;AR léopoldin satisfait le discrédit mais pas la ruine financière (Pierre-Léopold a activement assaini). Sortie obligatoirement par choc exogène (Napoléon 1796) ; la RN ne peut alors qu&#39;avorter — révolution initiale tronquée (Éclatement, Expérience parlementaire et Phase aiguë comprimés en 1799), retour de Ferdinand III sous protection autrichienne en lieu et place du moment thermidorien. Test du critère « discrédit ET ruine financière simultanés » comme condition d&#39;éclatement endogène.</span></div></div><div class="insight-item"><img class="insight-img" src="images/florence/curtatone.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px;"></span>Re-tentative de RN à l&#39;intérieur d&#39;un AR exogène (1848-1849)</span><span class="insight-desc">Cas atypique : la GR canonique (Statuto fondamentale octroyé par Léopold II le 17 février 1848) ouvre une nouvelle phase RN à l&#39;intérieur de l&#39;AR exogène long, immédiatement avortée par l&#39;écrasement autrichien (avril 1849) — la phase parlementaire qui aurait dû s&#39;ouvrir n&#39;existe pas. Pattern « petite nation italienne écrasée par puissance étrangère absolutiste à son acmé » (parallèle Venise, Milan).</span></div></div></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:10.9049%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1100</div>
+        </div>
+        <div class="tick" style="left:22.5058%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:34.1067%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1300</div>
+        </div>
+        <div class="tick" style="left:45.7077%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:57.3086%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1500</div>
+        </div>
+        <div class="tick" style="left:68.9095%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:80.5104%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1700</div>
+        </div>
+        <div class="tick" style="left:92.1114%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        
+        <div class="phase-band" style="left:0.9281%;width:11.7169%;
+            background:#e7e7e7;border-top:3px solid #A0A0A0;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Pré-féodale&lt;/strong&gt; (1014 — 1115)&#10;Phase pré-féodale de durée standard (~101 ans), correspondant à la Marche canossienne. Pendant cette période, la Toscane est subordonnée à un pouvoir territorial dont les intérêts dépassent largement la région (Mantoue, Reggio, Modène), mais une percolation élitaire toscane endogène se développe — évêchés, arts naissants, premiers consules civitatis dans les cités épiscopales."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#A0A0A0;">Pré-féodale</div>
+            <div class="phase-band-dates">1014 — 1115</div>
+        </div>
+        <div class="phase-band" style="left:12.6450%;width:20.6497%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale&lt;/strong&gt; (1115 — 1293)&#10;Phase féodale courte (~178 ans), typique d&#39;une cité-État dense. Pas de figure individuelle dominante : l&#39;éveil féodal est collectif (cas limite institutionnel autorisé pour cité-État), porté par les communes consulaires émergentes après la vacance canossienne. Pic féodal structurellement absent — la concentration urbaine et l&#39;identité toscane pré-existante compriment la phase. Crise féodale terminale par échec du système consulaire-podestariat à contenir le factionnalisme magnatial (1270-1282), résolue par bascule oligarchique 1282-1293."
+            onclick="showDetail(2)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">1115 — 1293</div>
+        </div>
+        <div class="phase-band" style="left:33.2947%;width:21.6937%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (1293 — 1480)&#10;Phase oligarchique de durée standard (~187 ans). Acmé bancaire précoce (Bardi/Peruzzi/Acciaiuoli, 1325-1339) — exutoire commercial-bancaire intense mais bref. Polarisation longue (1339-1433) sous régime Albizzi. Guerre sociale Albizzi vs Médicis (1433-1480) résolue par consolidation médicéenne progressive culminant dans la création des Settanta (1480)."
+            onclick="showDetail(9)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">1293 — 1480</div>
+        </div>
+        <div class="phase-band" style="left:54.9884%;width:36.6589%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (1480 — 1796)&#10;Phase absolutiste longue (~316 ans), structurée en deux moments par la nature du pouvoir : **appareil familial-bancaire fragile** sous Médicis pré-ducaux (1480-1532, avec boucle d&#39;instabilité par chocs exogènes 1494-1530) puis **figure dynastique stable** sous duché-Grand-Duché (1532-1796). 1er MA Laurent le Magnifique (1480, Settanta + Banque Médicis comme appareil de pouvoir parallèle). DGRO Montemurlo (1537, après consolidation Sforza-like par Cosme Ier post-Charles Quint). Acmé Ferdinand Ier 1591 (Lois Livornine). AR 1670-1796, sans ruine financière endogène, sortie par Napoléon."
+            onclick="showDetail(17)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1480 — 1796</div>
+        </div>
+        <div class="narrow-indicator" style="left:91.8213%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (avortée)&lt;/strong&gt; (1796 — 1799)&#10;RN ultra-compressée et avortée. Sous-phase unique : révolution initiale (1796-1799). Trois saillants canoniques compressés en quelques mois en 1799 (Éclatement de l&#39;AR 1796, Expérience parlementaire 1799, Phase aiguë 1799), puis avortement par perturbation exogène (Restauration imposée par les puissances étrangères, 1799) — pas de moment thermidorien canonique, pas d&#39;IR, pas de sous-phase de Restauration. La phase RN bascule directement en AR exogène long."
+            onclick="showDetail(24)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:91.6473%;width:0.3480%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (avortée)&lt;/strong&gt; (1796 — 1799)&#10;RN ultra-compressée et avortée. Sous-phase unique : révolution initiale (1796-1799). Trois saillants canoniques compressés en quelques mois en 1799 (Éclatement de l&#39;AR 1796, Expérience parlementaire 1799, Phase aiguë 1799), puis avortement par perturbation exogène (Restauration imposée par les puissances étrangères, 1799) — pas de moment thermidorien canonique, pas d&#39;IR, pas de sous-phase de Restauration. La phase RN bascule directement en AR exogène long."
+            onclick="showDetail(24)">
+            
+            
+        </div>
+        <div class="phase-band" style="left:91.9954%;width:5.6845%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste — Ancien Régime exogène (1er bloc)&lt;/strong&gt; (1799 — 1848)&#10;AR exogène long (~49 ans) ouvert dès l&#39;avortement de la RN en 1799 et qui dure jusqu&#39;à la GR de 1848. Régime sans légitimité endogène, sous tutelles étrangères successives — Ferdinand III restauré 1799-1801, Royaume d&#39;Étrurie sous Bourbons-Parme 1801-1807, annexion à l&#39;Empire français sous Élisa Bonaparte 1807-1814, Restauration habsbourgeoise-lorraine de Ferdinand III puis Léopold II 1814-1848. Sortie par GR en 1848."
+            onclick="showDetail(30)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1799 — 1848</div>
+        </div>
+        <div class="narrow-indicator" style="left:97.7378%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (re-tentative)&lt;/strong&gt; (1848 — 1849)&#10;RN ultra-comprimée et avortée. La GR (Statuto fondamentale, 17 février 1848) ouvre une nouvelle phase RN à l&#39;intérieur de l&#39;AR exogène long. Mais la phase est immédiatement avortée par l&#39;écrasement autrichien d&#39;avril 1849 — la phase parlementaire qui aurait dû s&#39;ouvrir n&#39;existe pas. Florence retombe en AR exogène (cf. phase suivante). Cas atypique : RN comprimée à un saillant GR + saillant Écrasement, sans sous-phases canoniques."
+            onclick="showDetail(32)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:97.6798%;width:0.1160%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale (re-tentative)&lt;/strong&gt; (1848 — 1849)&#10;RN ultra-comprimée et avortée. La GR (Statuto fondamentale, 17 février 1848) ouvre une nouvelle phase RN à l&#39;intérieur de l&#39;AR exogène long. Mais la phase est immédiatement avortée par l&#39;écrasement autrichien d&#39;avril 1849 — la phase parlementaire qui aurait dû s&#39;ouvrir n&#39;existe pas. Florence retombe en AR exogène (cf. phase suivante). Cas atypique : RN comprimée à un saillant GR + saillant Écrasement, sans sous-phases canoniques."
+            onclick="showDetail(32)">
+            
+            
+        </div>
+        <div class="narrow-indicator" style="left:98.3759%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste — Ancien Régime exogène (2e bloc)&lt;/strong&gt; (1849 — 1859)&#10;AR exogène court (~10 ans) imposé par les Autrichiens après l&#39;écrasement de la RN de 1848-1849 : Léopold II ramené à Florence, révocation du Statuto (1852), occupation autrichienne (jusqu&#39;en 1855). Régime sans légitimité endogène, simple prolongement sous tutelle viennoise. Sortie par fusion italienne (cf. fin du Parcours)."
+            onclick="showDetail(35)">
+            <div class="narrow-indicator-pin" style="background:#6A0DAD;">
+                <span class="material-icons">crown</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:97.7958%;width:1.1601%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste — Ancien Régime exogène (2e bloc)&lt;/strong&gt; (1849 — 1859)&#10;AR exogène court (~10 ans) imposé par les Autrichiens après l&#39;écrasement de la RN de 1848-1849 : Léopold II ramené à Florence, révocation du Statuto (1852), occupation autrichienne (jusqu&#39;en 1855). Régime sans légitimité endogène, simple prolongement sous tutelle viennoise. Sortie par fusion italienne (cf. fin du Parcours)."
+            onclick="showDetail(35)">
+            
+            
+        </div>
+        
+        <div class="subphase-band" style="left:0.9281%;width:11.7169%;
+            background:#d4d4d4;border-bottom:2px solid #A0A0A0;"
+            data-tooltip="&lt;strong&gt;Marche canossienne&lt;/strong&gt; (1014 — 1115)&#10;Marche canossienne sous Tedaldo, Bonifacio III, Béatrice et Mathilde de Toscane. Pouvoir territorial important mais centré sur l&#39;Émilie autant que sur la Toscane — pas un éveil féodal toscan endogène, mais cadre dans lequel la percolation élitaire toscane s&#39;opère. Querelle des Investitures, Canossa 1077, mouvement patarin à Florence (1068). Émergence des premiers consules civitatis dans les cités toscanes vers la fin de la sous-phase."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Marche canossienne</span>
+        </div>
+        <div class="subphase-band" style="left:12.6450%;width:19.3735%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (1115 — 1282)&#10;Émergence des communes consulaires toscanes après la vacance canossienne. Florence prend Fiesole (1125) et organise son contado. Régime consulaire (consules civitatis), passage au podestariat (~1207). Ligue toscane de San Genesio (1197) — coalition collective des cités toscanes. Boucle féodale par factionnalisme magnatial guelfe/gibelin après le meurtre de Buondelmonti (1215), guerres entre factions (Montaperti 1260, Bénévent 1266), élimination des Hohenstaufen (Conradin 1268). Tentative de réconciliation par la Paix du cardinal Latino (1280) qui échoue — crise féodale terminale 1280-1282 ouvrant la bascule."
+            onclick="showDetail(3)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:32.0186%;width:1.2761%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Bascule oligarchique&lt;/strong&gt; (1282 — 1293)&#10;Après l&#39;élimination des Hohenstaufen (Conradin 1268), tentative de réconciliation (Paix du cardinal Latino, 1280) qui échoue. **Crise féodale terminale** : le système consulaire-podestariat ne peut plus contenir le factionnalisme magnatial. **Bascule oligarchique resserrée** : Secondo Popolo (juin 1282) instituant les Priori delle Arti, Ordinamenti di Giustizia (1293) codifiant l&#39;exclusion des magnats — ~11 ans, dans la norme."
+            onclick="showDetail(7)">
+            <span class="subphase-label">Bascule oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:33.2947%;width:5.3364%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (1293 — 1339)&#10;Construction institutionnelle dense (Esecutore degli Ordinamenti 1306, magistratures, Parte Guelfa). Projection bancaire internationale (Bardi, Peruzzi, Acciaiuoli financent papes et rois), extension du contado (Pistoia 1331). L&#39;exutoire bancaire absorbe l&#39;énergie élitaire et retarde la polarisation interne."
+            onclick="showDetail(10)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:38.6311%;width:10.9049%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (1339 — 1433)&#10;Polarisation longue (~94 ans) sous régime oligarchique restreint. Tentatives avortées de réorganisation (Duc d&#39;Athènes 1342-1343, Tumulte des Ciompi 1378) puis restauration des Albizzi (1382). ~70 familles dominantes contrôlent squittini, Balìe, Parte Guelfa. Émergence des nouvelles élites bancaires médicéennes (Giovanni di Bicci, Cosme l&#39;Ancien) en concurrence montante avec les Albizzi."
+            onclick="showDetail(14)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:49.5360%;width:5.4524%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1433 — 1480)&#10;Guerre sociale Albizzi vs Médicis (~47 ans, dans la norme). Déclencheur : exil de Cosme l&#39;Ancien par les Albizzi (septembre 1433), retour triomphal et exil des Albizzi (octobre 1434). Consolidation médicéenne progressive (Cento 1458, conjuration Pitti 1466 écrasée, conjuration des Pazzi 1478 écrasée sanglantement). Résolution par Laurent le Magnifique avec création du Conseil des Settanta (1480), magistrature à vie qui supplante la Signoria et institue un cadre absolutisant supra-oligarchique."
+            onclick="showDetail(15)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:54.9884%;width:6.6125%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1480 — 1537)&#10;Absolutisation fragile en deux temps. Première construction médicéenne (1480-1494) : Laurent crée les Settanta, la Banque Médicis joue le rôle d&#39;appareil d&#39;État parallèle, contrôle informel de la cité par squittini et clientèle. Boucle d&#39;instabilité par chocs exogènes successifs (1494-1530). Reconstitution par consolidation Sforza-like sous Cosme Ier (1537) après écrasement de la DGRO Montemurlo."
+            onclick="showDetail(18)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band" style="left:61.6009%;width:15.4292%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (1537 — 1670)&#10;Cosme Ier consolide le cadre absolutiste stable post-DGRO : construction de l&#39;appareil ducal (Auditori, Pratica Segreta, Magistrato dei Nove Conservatori 1560), recrutement de secrétaires hors patriciat (noblesse de robe ducale embryonnaire), conquête de Sienne avec aide espagnole (1554-1555), élévation au Grand-duché (1569). Sous François Ier, Ferdinand Ier puis Cosme II/Ferdinand II, apogée commerciale de Livourne (Lois Livornine 1591-1593), mariages dynastiques européens, flotte de Saint-Étienne anti-corsaire. Pas d&#39;expansion territoriale notable post-Sienne."
+            onclick="showDetail(21)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band" style="left:77.0302%;width:14.6172%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime&lt;/strong&gt; (1670 — 1796)&#10;AR long (~126 ans), aligné avec Venise (130 ans) et Piémont (113 ans). Pattern « petite nation italienne » : satisfait le critère de discrédit (sédimentation, Cosme III bigot, échecs léopoldins) mais pas celui de ruine financière (cité-État de taille modeste, AR léopoldin assainit), d&#39;où impossibilité d&#39;éclatement endogène et sortie obligatoire par choc exogène (Napoléon 1796). Structuré en deux moments par la nature de la dynastie : AR décliniste médicéen (1670-1737) puis AR aux tentatives réformatrices vouées à l&#39;échec sous secundogéniture habsbourgeoise (1737-1796). Remontrance structurellement absente."
+            onclick="showDetail(23)">
+            <span class="subphase-label">Ancien Régime</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:91.6473%;width:0.3480%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1796 — 1799)&#10;Sous-phase ultra-compressée. Trois saillants canoniques en quelques mois en 1799 : Éclatement de l&#39;AR (invasion française 1796), Expérience parlementaire (République toscane jacobine 1799), Phase aiguë (insurrection Viva Maria 1799, contre-révolutionnaire). Pas de moment thermidorien canonique : le retour de Ferdinand III sous protection autrichienne est traité comme perturbation Avortement de la RN (Restauration imposée par puissances étrangères), qui clôt la phase RN par bascule directe en AR exogène."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band" style="left:91.9954%;width:5.6845%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime exogène&lt;/strong&gt; (1799 — 1848)&#10;Sous-phase unique. Tutelles étrangères successives sans légitimité endogène : Ferdinand III restauré 1799-1801, Royaume d&#39;Étrurie sous Bourbons-Parme 1801-1807, annexion française 1807-1814, Restauration habsbourgeoise-lorraine 1814-1848. Pas de saillant absolutiste canonique propre — la sous-phase entière est une parenthèse exogène. Sortie par GR en 1848."
+            onclick="showDetail(31)">
+            <span class="subphase-label">Ancien Régime exogène</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:97.7958%;width:1.1601%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime exogène&lt;/strong&gt; (1849 — 1859)&#10;Sous-phase unique post-écrasement. Léopold II ramené par les Autrichiens, révocation du Statuto (1852), occupation autrichienne jusqu&#39;en 1855. Pas de saillant absolutiste canonique propre — parenthèse exogène avant absorption italienne."
+            onclick="showDetail(36)">
+            <span class="subphase-label">Ancien Régime exogène</span>
+        </div>
+        
+        
+    <div class="area-chart" style="top:185px;">
+        
+        <div class="area-chart-label" style="left:0.9281%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:0.9281%;width:9.9768%;height:0.0px;"><div class="area-noyau" style="height:0.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~0 km²"></div></div>
+        <div class="area-step-group" style="left:10.9049%;width:1.7401%;height:0.0px;"><div class="area-noyau" style="height:0.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~0 km²"></div></div>
+        <div class="area-step-group" style="left:12.6450%;width:1.1601%;height:0.0px;"><div class="area-noyau" style="height:0.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~0 km²"></div></div>
+        <div class="area-step-group" style="left:13.8051%;width:20.3016%;height:0.0px;"><div class="area-noyau" style="height:0.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~0 km²"></div></div>
+        <div class="area-step-group" style="left:34.1067%;width:5.9165%;height:2.7px;"><div class="area-noyau" style="height:2.7px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~1 000 km²"></div></div>
+        <div class="area-step-group" style="left:40.0232%;width:1.1601%;height:8.1px;"><div class="area-noyau" style="height:8.1px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~3 000 km² — + Pistoia (1331, achat), Prato (1351, achat)"></div></div>
+        <div class="area-step-group" style="left:41.1833%;width:2.6682%;height:10.8px;"><div class="area-noyau" style="height:10.8px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~4 000 km² — + Volterra"></div></div>
+        <div class="area-step-group" style="left:43.8515%;width:2.5522%;height:13.5px;"><div class="area-noyau" style="height:13.5px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~5 000 km² — + Arezzo"></div></div>
+        <div class="area-step-group has-marges" style="left:46.4037%;width:1.7401%;height:18.9px;"><div class="area-noyau" style="height:16.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~6 000 km²"></div><div class="area-marges" style="bottom:16.2px;height:2.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~1 000 km² — + Pise (marge initiale, durablement hostile)"></div></div>
+        <div class="area-step-group has-marges" style="left:48.1439%;width:9.1647%;height:18.9px;"><div class="area-noyau" style="height:16.2px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~6 000 km²"></div><div class="area-marges" style="bottom:16.2px;height:2.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~1 000 km² — + Livourne (port franc, statut spécial), Cortone (1411)"></div></div>
+        <div class="area-step-group" style="left:57.3086%;width:6.3805%;height:18.9px;"><div class="area-noyau" style="height:18.9px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~7 000 km²"></div></div>
+        <div class="area-step-group has-marges" style="left:63.6891%;width:21.1137%;height:59.3px;"><div class="area-noyau" style="height:27.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~10 000 km²"></div><div class="area-marges" style="bottom:27.0px;height:32.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~12 000 km² — + Sienne et son État (« Stato Nuovo », distinct administrativement et identitairement)"></div></div>
+        <div class="area-step-group has-marges" style="left:84.8028%;width:5.6845%;height:59.3px;"><div class="area-noyau" style="height:35.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~13 000 km²"></div><div class="area-marges" style="bottom:35.0px;height:24.3px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~9 000 km² — Intégration progressive Pise/Sienne au noyau, Garfagnana et Massa-Carrara en marges"></div></div>
+        <div class="area-step-group" style="left:90.4872%;width:3.3643%;height:59.3px;"><div class="area-noyau" style="height:59.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~22 000 km² — Réformes léopoldines achèvent l&#39;unification administrative"></div></div>
+        <div class="area-step-group has-marges" style="left:93.8515%;width:3.7123%;height:62.0px;"><div class="area-noyau" style="height:59.3px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~22 000 km²"></div><div class="area-marges" style="bottom:59.3px;height:2.7px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~1 000 km² — + Stato dei Presidi (anciens Presidios espagnols), Piombino, Élbe"></div></div>
+        <div class="area-step-group" style="left:97.5638%;width:1.5081%;height:62.0px;"><div class="area-noyau" style="height:62.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~23 000 km²"></div></div>
+        <div class="area-step-group" style="left:99.0719%;width:0.9281%;height:62.0px;"><div class="area-noyau" style="height:62.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~23 000 km²"></div></div>
+        
+        <div class="area-edge" style="left:10.9049%;height:0.0px;"></div>
+        <div class="area-edge" style="left:12.6450%;height:0.0px;"></div>
+        <div class="area-edge" style="left:13.8051%;height:0.0px;"></div>
+        <div class="area-edge" style="left:34.1067%;height:2.7px;"></div>
+        <div class="area-edge" style="left:40.0232%;height:8.1px;"></div>
+        <div class="area-edge" style="left:41.1833%;height:10.8px;"></div>
+        <div class="area-edge" style="left:43.8515%;height:13.5px;"></div>
+        <div class="area-edge" style="left:46.4037%;height:18.9px;"></div>
+        <div class="area-edge" style="left:48.1439%;height:18.9px;"></div>
+        <div class="area-edge" style="left:57.3086%;height:18.9px;"></div>
+        <div class="area-edge" style="left:63.6891%;height:59.3px;"></div>
+        <div class="area-edge" style="left:84.8028%;height:59.3px;"></div>
+        <div class="area-edge" style="left:90.4872%;height:59.3px;"></div>
+        <div class="area-edge" style="left:93.8515%;height:62.0px;"></div>
+        <div class="area-edge" style="left:97.5638%;height:62.0px;"></div>
+        <div class="area-edge" style="left:99.0719%;height:62.0px;"></div>
+    </div>
+        
+        
+        <div class="saillant-group" style="left:12.6450%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Communes consulaires (~1115)&#10;Éveil féodal collectif porté par les communes consulaires émergentes après la vacance post-Mathilde. Pas de chef individuel — la concentration urbaine, l&#39;identité toscane et la pluralité de cités produisent une coagulation par coordination horizontale (ligue toscane de San Genesio 1197) plutôt que par soumission à un suzerain unique."
+                onclick="showDetail(4)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Communes consulaires</span><span class="saillant-date">~1115</span></div>
+        </div>
+        <div class="saillant-group" style="left:24.2459%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Guelfes contre gibelins (1215)&#10;Le meurtre de Buondelmonte (1215) cristallise le clivage guelfe/gibelin. Sociétés des tours, fidélités lignagères, guerres entre factions (Montaperti 1260, Bénévent 1266) — boucle féodale qui prolonge la phase sans la résoudre. La crise terminale n&#39;arrive qu&#39;avec l&#39;échec de la coexistence magnats-popolo dans les années 1270-1282."
+                onclick="showDetail(5)">
+                <span class="material-symbols-outlined">swords</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Guelfes contre gibelins</span><span class="saillant-date">1215</span></div>
+        </div>
+        <div class="saillant-group" style="left:31.7865%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Échec de la Paix du cardinal Latino (1280)&#10;La Paix du cardinal Latino (1280), qui institue les Quatorze Buoni Uomini (8 guelfes + 6 gibelins) pour réconcilier les factions, échoue rapidement. Le système consulaire-podestariat ne peut plus contenir le factionnalisme magnatial. Crise féodale terminale qui ouvre la bascule oligarchique — les conditions de Deblonde (homogénéité + faiblesse) sont enfin réunies."
+                onclick="showDetail(6)">
+                <span class="material-symbols-outlined">swords</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Échec de la Paix du cardinal Latino</span><span class="saillant-date">1280</span></div>
+        </div>
+        <div class="saillant-group" style="left:33.2947%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Ordonnances de Justice (1293)&#10;Acte formel daté (18 janvier 1293), passé par les Conseils, qui satisfait les trois éléments structurels du PO : codification, caractère collectif, moment de faiblesse. Cas paradigmatique de **chemin B** en suzerain collectif — codification de l&#39;exercice du pouvoir (rotation des magistratures, mandat de 2 mois, tirage au sort sur listes d&#39;inscrits aux Arts) en l&#39;absence de souverain personnel à transmettre."
+                onclick="showDetail(8)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Ordonnances de Justice</span><span class="saillant-date">1293</span></div>
+        </div>
+        <div class="saillant-group" style="left:33.2947%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Signoria (1293)&#10;La Signoria post-1293 (Priori + Gonfalonier de Justice, mandat de 2 mois) fonctionne comme « monarque oligarchique » collectif : fisc permanent, administration institutionnalisée, milices civiques, justice par podestà étranger et Esecutore. Cas de suzerain collectif typique des cités-États italiennes."
+                onclick="showDetail(11)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Signoria</span><span class="saillant-date">1293</span></div>
+        </div>
+        <div class="saillant-group" style="left:37.0070%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Acmé oligarchique&lt;/strong&gt;&#10;Banque européenne (1325)&#10;Pic combinant projection bancaire européenne (financement papes + Edward III), florin d&#39;or comme référence monétaire continentale, prestige diplomatique, et premiers fruits de la Renaissance précoce (Dante, Giotto). L&#39;acmé est portée par un exutoire bancaire et non territorial — d&#39;où sa position précoce dans la phase et sa saturation rapide."
+                onclick="showDetail(12)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé oligarchique</span><span class="saillant-figure">Banque européenne</span><span class="saillant-date">1325</span></div>
+        </div>
+        <div class="saillant-group" style="left:38.6311%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Fin de l&#39;expansion&lt;/strong&gt;&#10;Défaut anglais et faillite bancaire (1339)&#10;Le défaut d&#39;Edward III (1339) entraîne la faillite des Bardi (1346) et Peruzzi (1343), qui clôt l&#39;exutoire bancaire international florentin. L&#39;énergie élitaire ne se projette plus à l&#39;extérieur ; la polarisation interne peut commencer. La Peste de 1348 (50-60% de mortalité) achève de redéfinir le terrain."
+                onclick="showDetail(13)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fin de l&#39;expansion</span><span class="saillant-figure">Défaut anglais et faillite bancaire</span><span class="saillant-date">1339</span></div>
+        </div>
+        <div class="saillant-group" style="left:49.5360%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Albizzi contre Médicis (1433)&#10;**Forme mixte** : palleschi (prébendiers liés à la banque et au commerce, alliés à clientèles populaires) contre Albizzi puis anti-médicéens (patrimoniaux oligarques traditionnels). Prébendes en jeu : Signoria, Cento, magistratures, contrats fiscaux, Banque Médicis comme appareil parallèle. Mode d&#39;expression non-armé : coups de palais, conjurations, répressions. Résolution par triomphe médicéen progressif culminant dans la création des Settanta (1480, Laurent)."
+                onclick="showDetail(16)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Albizzi contre Médicis</span><span class="saillant-date">1433</span></div>
+        </div>
+        <div class="saillant-group" style="left:54.9884%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Laurent le Magnifique (1480)&#10;Laurent satisfait fonctionnellement le test discriminant absolutiste par deux innovations : (1) le **Conseil des Settanta** (1480), magistrature à vie cooptée qui supplante la Signoria à mandats de 2 mois et institue un cadre exécutif supra-oligarchique ; (2) la **Banque Médicis** comme appareil de pouvoir parallèle (financement autonome, diplomatie privée, réseau d&#39;agents internationaux, récompenses-sanctions). Configuration appareil familial-bancaire dans une cité-État où la distinction public/privé est faible."
+                onclick="showDetail(19)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Laurent le Magnifique</span><span class="saillant-date">1480</span></div>
+        </div>
+        <div class="saillant-group" style="left:61.6009%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Dernière grande révolte oligarchique&lt;/strong&gt;&#10;Bataille de Montemurlo (1537)&#10;Le 1er août 1537, après 57 ans depuis le 1er MA Laurent (1480), les fuorusciti républicains menés par Filippo Strozzi affrontent les troupes de Cosme Ier près de Prato. Défaite militaire écrasante, exécution de Strozzi (1538), confiscations, désarmements définitifs. Critères satisfaits : caractère armé, assise territoriale (les Strozzi et fuorusciti gardaient biens et clientèles, alliances avec puissances rivales), caractère terminal (après Montemurlo, plus de force armée oligarchique organisée). Position canonique post-MA (analogue à Della Torre 1302-1311 à Milan, 25 ans après Ottone Visconti)."
+                onclick="showDetail(20)">
+                <span class="material-icons">whatshot</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Dernière grande révolte oligarchique</span><span class="saillant-figure">Bataille de Montemurlo</span><span class="saillant-date">1537</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.8654%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Acmé absolutiste&lt;/strong&gt;&#10;Ferdinand Ier (1591)&#10;Ferdinand Ier (1587-1609) incarne l&#39;acmé absolutiste florentine : Lois Livornine (1591, 1593) qui font de Livourne un port franc cosmopolite, mariages dynastiques européens (Christine de Lorraine, Marie de Médicis avec Henri IV 1600), flotte de Saint-Étienne active, prestige diplomatique. Domestication de l&#39;ancien patriciat à la cour. Position dans la phase ~0.35 — précoce, contrainte par la taille (pas de projection militaire à l&#39;échelle continentale)."
+                onclick="showDetail(22)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé absolutiste</span><span class="saillant-figure">Ferdinand Ier</span><span class="saillant-date">1591</span></div>
+        </div>
+        <div class="saillant-group" style="left:91.6473%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Éclatement de l&#39;AR&lt;/strong&gt;&#10;Invasion française (1796)&#10;L&#39;invasion française (1796) éclate l&#39;AR léopoldin par choc exogène sur cadre financièrement sain. Sortie obligatoirement par choc externe car l&#39;AR n&#39;avait pas atteint la maturité endogène (discrédit oui partiel, ruine financière non)."
+                onclick="showDetail(26)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éclatement de l&#39;AR</span><span class="saillant-figure">Invasion française</span><span class="saillant-date">1796</span></div>
+        </div>
+        <div class="saillant-group" style="left:91.9954%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;République toscane jacobine (1799)&#10;Après l&#39;expulsion de Ferdinand III (mars 1799), brève République toscane jacobine sous protection française. Comprimée à quelques semaines avant l&#39;insurrection contre-révolutionnaire."
+                onclick="showDetail(27)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">République toscane jacobine</span><span class="saillant-date">1799</span></div>
+        </div>
+        <div class="saillant-group" style="left:91.9954%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Insurrection populaire Viva Maria (1799)&#10;Insurrection populaire massive Viva Maria (printemps-été 1799) — soulèvement contre-révolutionnaire et anti-français qui balaye les Jacobins. Phase aiguë canonique mais d&#39;orientation contre-révolutionnaire, comprimée et exogéniquement orientée par l&#39;occupation française."
+                onclick="showDetail(28)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">Insurrection populaire Viva Maria</span><span class="saillant-date">1799</span></div>
+        </div>
+        <div class="saillant-group" style="left:91.9954%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Retour de Ferdinand III&lt;/strong&gt;&#10;Restauration imposée par les puissances étrangères (1799)&#10;Retour de Ferdinand III en juin 1799 sous protection autrichienne, qui ne stabilise pas un moment thermidorien canonique mais avorte la RN par intervention exogène. Suivent immédiatement de nouvelles tutelles étrangères (Royaume d&#39;Étrurie sous Bourbons-Parme 1801, annexion à l&#39;Empire français 1807, Restauration habsbourgeoise 1814). La RN florentine est avortée sans avoir parcouru ses sous-phases canoniques (pas d&#39;IR, pas de Restauration au sens canonique). Bascule directe en AR exogène long."
+                onclick="showDetail(29)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Retour de Ferdinand III</span><span class="saillant-figure">Restauration imposée par les puissances étrangères</span><span class="saillant-date">1799</span></div>
+        </div>
+        <div class="saillant-group" style="left:97.6798%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Statuto fondamentale (1848)&#10;Le 17 février 1848, Léopold II octroie le Statuto fondamentale — constitution bicamérale, suffrage censitaire, garanties civiques. Florence participe à la Première guerre d&#39;indépendance contre l&#39;Autriche. Cabinets Capponi puis Montanelli-Guerrazzi. Saillant canonique de Glorieuse Révolution qui ouvre une nouvelle phase RN à l&#39;intérieur de l&#39;AR exogène long."
+                onclick="showDetail(33)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Statuto fondamentale</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:97.7958%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Écrasement autrichien&lt;/strong&gt;&#10;République Guerrazzi écrasée par les Autrichiens (1849)&#10;Léopold II quitte Florence (Gaète, février 1849), République toscane proclamée (8 février-12 avril 1849, Guerrazzi-Montanelli-Mazzoni), restauration autrichienne en avril 1849. Comme à Venise et Milan, la phase parlementaire italienne naissante est écrasée par l&#39;Empire autrichien à son acmé absolutiste. Avortement effectif de la phase RN, retour en AR exogène (cf. phase suivante)."
+                onclick="showDetail(34)">
+                <span class="material-icons">bolt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Écrasement autrichien</span><span class="saillant-figure">République Guerrazzi écrasée par les Autrichiens</span><span class="saillant-date">1849</span></div>
+        </div>
+        <div class="saillant-group" style="left:98.9559%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Fusion italienne&lt;/strong&gt;&#10;Rivoluzione toscana et plébiscite (1859)&#10;Le 27 avril 1859, Léopold II quitte Florence sans effusion de sang. Gouvernement provisoire de Bettino Ricasoli, choix de l&#39;union avec le Piémont. Plébiscite du 15 mars 1860 (~95% pour l&#39;annexion au Royaume de Sardaigne), loi du 22 mars 1860 — fin du Grand-Duché. Florence capitale du Royaume d&#39;Italie 1865-1871, puis Rome. Le Parcours toscan endogène se dissout par fusion dans le Parcours italien."
+                onclick="showDetail(37)">
+                <span class="material-icons">diamond</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Fusion italienne</span><span class="saillant-figure">Rivoluzione toscana et plébiscite</span><span class="saillant-date">1859</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 04/05/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'prefeodale','title':'Pré-féodale','subtitle':'','summary':'Phase pré-féodale de durée standard (~101 ans), correspondant à la Marche canossienne. Pendant cette période, la Toscane est subordonnée à un pouvoir territorial dont les intérêts dépassent largement la région (Mantoue, Reggio, Modène), mais une percolation élitaire toscane endogène se développe — évêchés, arts naissants, premiers consules civitatis dans les cités épiscopales.','description':'La pré-féodale toscane démarre conventionnellement avec la Marche canossienne (1014) et s\'achève avec la mort de Mathilde (1115). Avant 1014, la Toscane n\'est pas un sujet historionomique distinct — elle est intégrée à des structures supra-régionales (duché lombard de Tuscia centré sur Lucques, marche carolingienne) qui appartiennent à d\'autres ensembles. La Marche canossienne, bien qu\'historiquement spectaculaire (Mathilde, Canossa 1077, soutien à la papauté grégorienne), est portée par une dynastie territoriale dont le centre dynastique est en Émilie ; elle ne constitue pas un éveil féodal toscan endogène, mais elle ouvre la fenêtre dans laquelle la percolation élitaire toscane peut s\'opérer — émergence des évêchés, des arts naissants, du droit lombard mâtiné de droit romain, et surtout des premiers consules civitatis dans les cités épiscopales (mouvement patarin à Florence 1068). La mort de Mathilde sans héritier en 1115 ouvre la fenêtre où les communes peuvent émerger comme suzerains collectifs.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-19 ans. Durée dans la norme.','typical_duration':'~90-120 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Mort de Mathilde de Toscane (1115) sans héritier — vacance de la marche canossienne, autonomisation des cités toscanes, émergence des communes consulaires.','resolution_conditions':'','avortement':'','start':1014,'end':1115,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'prefeodale','title':'Marche canossienne','subtitle':'','summary':'Marche canossienne sous Tedaldo, Bonifacio III, Béatrice et Mathilde de Toscane. Pouvoir territorial important mais centré sur l\'Émilie autant que sur la Toscane — pas un éveil féodal toscan endogène, mais cadre dans lequel la percolation élitaire toscane s\'opère. Querelle des Investitures, Canossa 1077, mouvement patarin à Florence (1068). Émergence des premiers consules civitatis dans les cités toscanes vers la fin de la sous-phase.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1014,'end':1115,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale','subtitle':'','summary':'Phase féodale courte (~178 ans), typique d\'une cité-État dense. Pas de figure individuelle dominante : l\'éveil féodal est collectif (cas limite institutionnel autorisé pour cité-État), porté par les communes consulaires émergentes après la vacance canossienne. Pic féodal structurellement absent — la concentration urbaine et l\'identité toscane pré-existante compriment la phase. Crise féodale terminale par échec du système consulaire-podestariat à contenir le factionnalisme magnatial (1270-1282), résolue par bascule oligarchique 1282-1293.','description':'La phase féodale florentine commence avec la vacance post-Mathilde (1115) et s\'achève avec les Ordinamenti (1293), via une bascule oligarchique resserrée (1282-1293, ~11 ans dans la norme). Elle est compressée par rapport à la durée typique de 200 ans parce que la concentration urbaine de Florence et l\'identité toscane pré-existante (langue vernaculaire en formation, droit lombard-romain, conscience civique épiscopale) accélèrent la coagulation des élites. Les marqueurs féodaux sont satisfaits — pas d\'administration centrale permanente, milices civiques par sesti puis quartieri, podestariat (1207) avec mandat annuel d\'un magistrat étranger, sociétés des tours fortifiées des grandes familles, liens de vassalité entre magnats et leurs clients armés, fiscalité ad hoc par estimo. Le factionnalisme magnatial 1215-1268 (clivage guelfe/gibelin après le meurtre de Buondelmonti) constitue une boucle féodale qui prolonge la phase, mais la crise féodale **terminale** se situe plus tardivement (années 1270-1282), avec l\'échec persistant de la coexistence magnats-popolo et la faillite de la Paix du cardinal Latino (1280). C\'est le Secondo Popolo de juin 1282 qui marque la bascule en créant les Priori delle Arti, les Ordinamenti (1293) achevant la codification.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-22 ans. Comprimée par concentration urbaine et identité toscane pré-existante, conformément au pattern des cités-États italiennes (cf. Milan ~118 ans, Gênes ~100 ans).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Bascule oligarchique resserrée — crise féodale terminale par tensions magnatiales 1270-1282 (échec de la Paix Latino 1280), Secondo Popolo (juin 1282) instituant les Priori delle Arti, Ordonnances de Justice (1293) codifiant l\'exclusion des magnats.','resolution_conditions':'','avortement':'','start':1115,'end':1293,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'Émergence des communes consulaires toscanes après la vacance canossienne. Florence prend Fiesole (1125) et organise son contado. Régime consulaire (consules civitatis), passage au podestariat (~1207). Ligue toscane de San Genesio (1197) — coalition collective des cités toscanes. Boucle féodale par factionnalisme magnatial guelfe/gibelin après le meurtre de Buondelmonti (1215), guerres entre factions (Montaperti 1260, Bénévent 1266), élimination des Hohenstaufen (Conradin 1268). Tentative de réconciliation par la Paix du cardinal Latino (1280) qui échoue — crise féodale terminale 1280-1282 ouvrant la bascule.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1115,'end':1282,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Communes consulaires','summary':'Éveil féodal collectif porté par les communes consulaires émergentes après la vacance post-Mathilde. Pas de chef individuel — la concentration urbaine, l\'identité toscane et la pluralité de cités produisent une coagulation par coordination horizontale (ligue toscane de San Genesio 1197) plutôt que par soumission à un suzerain unique.','description':'','figure':'','confidence':'medium','alternatives':'Date conventionnelle 1115 (mort de Mathilde et autonomisation). Cas limite institutionnel — éveil collectif sans figure individuelle dominante, autorisé par le cadre pour les cités-États. Mathilde de Toscane (1077-1115) écartée comme éveil féodal toscan parce que son pouvoir est porté par une dynastie territoriale extérieure couvrant Toscane + Émilie, sans constituer un cadre toscan endogène.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1115,'end':1207,'start_approx':true,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Guelfes contre gibelins','summary':'Le meurtre de Buondelmonte (1215) cristallise le clivage guelfe/gibelin. Sociétés des tours, fidélités lignagères, guerres entre factions (Montaperti 1260, Bénévent 1266) — boucle féodale qui prolonge la phase sans la résoudre. La crise terminale n\'arrive qu\'avec l\'échec de la coexistence magnats-popolo dans les années 1270-1282.','description':'','figure':'Buondelmonte de\' Buondelmonti','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1215,'end':1268,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Échec de la Paix du cardinal Latino','summary':'La Paix du cardinal Latino (1280), qui institue les Quatorze Buoni Uomini (8 guelfes + 6 gibelins) pour réconcilier les factions, échoue rapidement. Le système consulaire-podestariat ne peut plus contenir le factionnalisme magnatial. Crise féodale terminale qui ouvre la bascule oligarchique — les conditions de Deblonde (homogénéité + faiblesse) sont enfin réunies.','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1280,'end':1282,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Bascule oligarchique','subtitle':'','summary':'Après l\'élimination des Hohenstaufen (Conradin 1268), tentative de réconciliation (Paix du cardinal Latino, 1280) qui échoue. **Crise féodale terminale** : le système consulaire-podestariat ne peut plus contenir le factionnalisme magnatial. **Bascule oligarchique resserrée** : Secondo Popolo (juin 1282) instituant les Priori delle Arti, Ordinamenti di Giustizia (1293) codifiant l\'exclusion des magnats — ~11 ans, dans la norme.','description':'La crise féodale terminale florentine prend la forme d\'un échec institutionnel : la Paix du cardinal Latino (1280), qui institue les Quatorze Buoni Uomini (8 guelfes + 6 gibelins) pour réconcilier les factions, échoue rapidement. Le système consulaire-podestariat est incapable de garantir la stabilité face au factionnalisme magnatial. Le Secondo Popolo de juin 1282 marque la bascule en créant les **Priori delle Arti** — magistrature collégiale élue parmi les sept Arts majeurs avec mandat de deux mois — qui devient l\'embryon de la Signoria. Les Ordinamenti de Giano della Bella (18 janvier 1293) achèvent la bascule en codifiant l\'exclusion des magnats des magistratures, en instituant le Gonfalonier de Justice comme chef du popolo armé, et en formalisant la rotation des charges sur listes d\'inscrits aux Arts.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1282,'end':1293,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pacte oligarchique','subtitle':'Ordonnances de Justice','summary':'Acte formel daté (18 janvier 1293), passé par les Conseils, qui satisfait les trois éléments structurels du PO : codification, caractère collectif, moment de faiblesse. Cas paradigmatique de **chemin B** en suzerain collectif — codification de l\'exercice du pouvoir (rotation des magistratures, mandat de 2 mois, tirage au sort sur listes d\'inscrits aux Arts) en l\'absence de souverain personnel à transmettre.','description':'Les Ordonnances de Justice sont un cas paradigmatique de **chemin B** dans la configuration du suzerain collectif typique des cités-États. Ce qui est codifié n\'est pas une règle de succession (il n\'y a pas de souverain personnel à transmettre — le pouvoir est collégial dès l\'origine), mais les règles d\'exercice : exclusion des magnats des magistratures, obligation pour les non-magnats de s\'immatriculer dans un Art pour accéder aux charges, institution du Gonfalonier de Justice comme chef du popolo armé contre les magnats, rotation des Priori (mandat de 2 mois). Les trois éléments structurels du PO sont satisfaits : codification formelle, caractère collectif (validation par les Conseils), moment de faiblesse (échec de la Paix Latino, ascendance temporaire des Arts mineurs). Test empirique : après 1293, le cadre survit à de nombreuses crises politiques sans rupture institutionnelle formelle jusqu\'en 1532. Structurellement analogue aux pactes communaux italiens (Compagna Communis génoise 1097, commune milanaise 1097, abolition co-régence vénitienne 1032).','figure':'Giano della Bella','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1293,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'Phase oligarchique de durée standard (~187 ans). Acmé bancaire précoce (Bardi/Peruzzi/Acciaiuoli, 1325-1339) — exutoire commercial-bancaire intense mais bref. Polarisation longue (1339-1433) sous régime Albizzi. Guerre sociale Albizzi vs Médicis (1433-1480) résolue par consolidation médicéenne progressive culminant dans la création des Settanta (1480).','description':'La phase oligarchique florentine satisfait le test discriminant pendant 230 ans : fisc permanent (estimo, prestanze, Catasto 1427, Monte Comune 1345, Monte delle Doti 1425), administration centrale dense (Signoria, Conseils, magistratures spécialisées), milices civiques puis condotta. Mais le test discriminant absolutiste reste négatif tout au long : l\'exécutif ne peut agir sans validation des Conseils, le squittino (scrutin de bourses) reste le mécanisme de cooptation patricienne, le contrôle médicéen post-1434 est informel (squittini, accoppiatori, Banque Médicis) sans institution exécutive supra-oligarchique formelle. La phase est traversée par un exutoire bancaire intense mais bref (~1280-1339), qui sature avec la faillite des Bardi-Peruzzi (1339). Après 1339, la polarisation interne s\'enracine sous le régime Albizzi (1382-1433). La guerre sociale ouverte commence avec l\'exil-retour de Cosme l\'Ancien (1433-1434), qui marque le triomphe progressif de la faction médicéenne. Laurent le Magnifique parachève la résolution en 1480 par la création du Conseil des Settanta, magistrature à vie qui supplante la Signoria à mandats courts — c\'est l\'émergence d\'un nouveau cadre supra-oligarchique qui ouvre la phase absolutiste.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-13 ans. Durée dans la norme.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale Albizzi vs Médicis (1433-1480) résolue par triomphe médicéen — retour de Cosme l\'Ancien (1434) consolide informellement, Laurent le Magnifique crée le Conseil des Settanta (1480) qui supplante la Signoria et institue un cadre absolutisant à vie supra-oligarchique.','resolution_conditions':'','avortement':'','start':1293,'end':1480,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'Construction institutionnelle dense (Esecutore degli Ordinamenti 1306, magistratures, Parte Guelfa). Projection bancaire internationale (Bardi, Peruzzi, Acciaiuoli financent papes et rois), extension du contado (Pistoia 1331). L\'exutoire bancaire absorbe l\'énergie élitaire et retarde la polarisation interne.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1293,'end':1339,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Signoria','summary':'La Signoria post-1293 (Priori + Gonfalonier de Justice, mandat de 2 mois) fonctionne comme « monarque oligarchique » collectif : fisc permanent, administration institutionnalisée, milices civiques, justice par podestà étranger et Esecutore. Cas de suzerain collectif typique des cités-États italiennes.','description':'','figure':'','confidence':'medium','alternatives':'Cas de suzerain collectif typique des cités-États (cf. Venise, Gênes, Milan).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1293,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Acmé oligarchique','subtitle':'Banque européenne','summary':'Pic combinant projection bancaire européenne (financement papes + Edward III), florin d\'or comme référence monétaire continentale, prestige diplomatique, et premiers fruits de la Renaissance précoce (Dante, Giotto). L\'acmé est portée par un exutoire bancaire et non territorial — d\'où sa position précoce dans la phase et sa saturation rapide.','description':'L\'acmé oligarchique florentine est portée par les compagnies bancaires Bardi, Peruzzi, Acciaiuoli, qui dominent le crédit européen au début du XIVe siècle — financement de la curie pontificale d\'Avignon, prêts massifs à Edward III d\'Angleterre pour la guerre de Cent Ans, comptoirs commerciaux de Bruges à Constantinople. Le florin d\'or (frappe 1252, 3,536 g d\'or fin) devient la référence monétaire européenne. L\'acmé sature avec la double crise du défaut anglais d\'Edward III (1339) et la Peste noire (1348) qui suit. La position de l\'acmé dans la phase (~0.32) est précoce par rapport au corpus des cités-États italiennes, mais s\'explique par la nature de l\'exutoire : Florence n\'a pas d\'empire territorial à conquérir et à digérer, seulement un réseau bancaire international qui sature rapidement.','figure':'Compagnies Bardi, Peruzzi, Acciaiuoli','confidence':'medium','alternatives':'Position précoce dans la phase (~0.32), atypique par rapport à Venise (Foscari ~0.64), Gênes (Meloria ~0.93). S\'explique par le caractère bref de l\'exutoire (60 ans actif) — saturation rapide d\'une projection bancaire intense plutôt que d\'un empire territorial durable.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1325,'end':1339,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Fin de l\'expansion','subtitle':'Défaut anglais et faillite bancaire','summary':'Le défaut d\'Edward III (1339) entraîne la faillite des Bardi (1346) et Peruzzi (1343), qui clôt l\'exutoire bancaire international florentin. L\'énergie élitaire ne se projette plus à l\'extérieur ; la polarisation interne peut commencer. La Peste de 1348 (50-60% de mortalité) achève de redéfinir le terrain.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1339,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'Polarisation longue (~94 ans) sous régime oligarchique restreint. Tentatives avortées de réorganisation (Duc d\'Athènes 1342-1343, Tumulte des Ciompi 1378) puis restauration des Albizzi (1382). ~70 familles dominantes contrôlent squittini, Balìe, Parte Guelfa. Émergence des nouvelles élites bancaires médicéennes (Giovanni di Bicci, Cosme l\'Ancien) en concurrence montante avec les Albizzi.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1339,'end':1433,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'Guerre sociale Albizzi vs Médicis (~47 ans, dans la norme). Déclencheur : exil de Cosme l\'Ancien par les Albizzi (septembre 1433), retour triomphal et exil des Albizzi (octobre 1434). Consolidation médicéenne progressive (Cento 1458, conjuration Pitti 1466 écrasée, conjuration des Pazzi 1478 écrasée sanglantement). Résolution par Laurent le Magnifique avec création du Conseil des Settanta (1480), magistrature à vie qui supplante la Signoria et institue un cadre absolutisant supra-oligarchique.','description':'La guerre sociale florentine est de **forme mixte** — la faction médicéenne (palleschi) regroupe des prébendiers liés au commerce et à la banque internationale, alliés à des clientèles populaires délaissées par les Albizzi ; la faction Albizzi-puis-anti-médicéenne regroupe des patrimoniaux oligarques traditionnels et des familles patriciennes attachées aux Ordinamenti. L\'enjeu est le contrôle de l\'État central pour les prébendes (charges, contrats fiscaux, magistratures, accès à la Banque Médicis comme appareil parallèle). Mode d\'expression non-armé : la guerre prend la forme de coups de palais (exil-retour Cosme 1433-1434), conjurations (Pitti 1466, Pazzi 1478), répressions sanglantes (centaines d\'exécutions post-Pazzi, archevêque Salviati pendu en habits aux fenêtres du Palazzo della Signoria), exils et confiscations. La résolution culmine en 1480 avec la création du Conseil des Settanta — magistrature à vie cooptée par Laurent qui prend le contrôle des affaires d\'État, supplantant la Signoria à mandats de 2 mois. C\'est l\'émergence d\'un nouveau cadre central supra-oligarchique qui satisfait le critère structurel de résolution de la guerre sociale.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1433,'end':1480,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Albizzi contre Médicis','summary':'**Forme mixte** : palleschi (prébendiers liés à la banque et au commerce, alliés à clientèles populaires) contre Albizzi puis anti-médicéens (patrimoniaux oligarques traditionnels). Prébendes en jeu : Signoria, Cento, magistratures, contrats fiscaux, Banque Médicis comme appareil parallèle. Mode d\'expression non-armé : coups de palais, conjurations, répressions. Résolution par triomphe médicéen progressif culminant dans la création des Settanta (1480, Laurent).','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1433,'end':1480,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','subtitle':'','summary':'Phase absolutiste longue (~316 ans), structurée en deux moments par la nature du pouvoir : **appareil familial-bancaire fragile** sous Médicis pré-ducaux (1480-1532, avec boucle d\'instabilité par chocs exogènes 1494-1530) puis **figure dynastique stable** sous duché-Grand-Duché (1532-1796). 1er MA Laurent le Magnifique (1480, Settanta + Banque Médicis comme appareil de pouvoir parallèle). DGRO Montemurlo (1537, après consolidation Sforza-like par Cosme Ier post-Charles Quint). Acmé Ferdinand Ier 1591 (Lois Livornine). AR 1670-1796, sans ruine financière endogène, sortie par Napoléon.','description':'La phase absolutiste florentine s\'ouvre avec Laurent le Magnifique en 1480 : la création du **Conseil des Settanta** comme magistrature à vie qui supplante la Signoria à mandats courts, combinée au rôle d\'**appareil d\'État parallèle joué par la Banque Médicis** (lever des fonds sans dépendre du fisc public, récompenser les alliés et étrangler les opposants, conduire la diplomatie financière, maintenir un réseau d\'agents internationaux), satisfait fonctionnellement le test discriminant absolutiste — préséance de facto de l\'administration centrale (squittini contrôlés, Settanta, Banque), capacité de l\'exécutif à agir sans frein juridique des oligarques, classe administrative distincte (l\'appareil familial-bancaire). Mais cette configuration personnelle factionnelle est **fragile**, comme à Milan sous les Visconti : elle s\'effondre à l\'invasion de Charles VIII (1494), boucle pendant 36 ans (oscillations République/Médicis sous chocs exogènes successifs : Charles VIII 1494, Jules II 1512, Sac de Rome 1527, Charles Quint 1530-1532), puis se reconstitue par consolidation Sforza-like avec Cosme Ier (1537) après écrasement de la DGRO (Montemurlo 1537). À partir de 1537, la centralisation se stabilise en absolutisme dynastique avec construction d\'une noblesse de robe ducale embryonnaire (secrétaires hors patriciat : Marzi, Campana, Grifoni, Torelli) — classe administrative distincte qui dépasse le cadre purement familial-bancaire de Laurent. L\'acmé absolutiste se situe sous Ferdinand Ier (1591-1609, Lois Livornine, mariages européens, Livourne port franc). L\'AR commence sous Cosme III (1670). La phase se clôt par choc exogène (Napoléon 1796) — sans ruine financière endogène, l\'AR n\'a pas atteint la maturité requise pour éclater de l\'intérieur, d\'où sortie obligatoire par choc externe et entrée en RN par perturbation exogène.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+116 ans. Prolongée par : (a) boucle d\'instabilité 1494-1537 (chocs exogènes répétés sur appareil familial-bancaire fragile, pattern Milan-like), (b) absence d\'expansion absolutiste majeure post-1555, (c) AR sans ruine financière endogène (cité-État de taille modeste, budget contenu, AR léopoldin assainit), d\'où sortie obligatoire par choc exogène plus tardif.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Choc exogène — invasion française (1796) éclate l\'AR léopoldin et ouvre la phase RN. Sous-phase de révolution initiale tronquée par chocs exogènes successifs (Royaume d\'Étrurie 1801-1807, annexion napoléonienne 1807-1814).','resolution_conditions':'','avortement':'','start':1480,'end':1796,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'Absolutisation fragile en deux temps. Première construction médicéenne (1480-1494) : Laurent crée les Settanta, la Banque Médicis joue le rôle d\'appareil d\'État parallèle, contrôle informel de la cité par squittini et clientèle. Boucle d\'instabilité par chocs exogènes successifs (1494-1530). Reconstitution par consolidation Sforza-like sous Cosme Ier (1537) après écrasement de la DGRO Montemurlo.','description':'La sous-phase d\'absolutisation florentine est typique de la configuration appareil familial-bancaire dans une cité-État dans un environnement d\'États territoriaux, comme à Milan sous les Visconti puis Sforza. Laurent (1469-1492) installe le cadre par le Conseil des Settanta (1480) — magistrature à vie cooptée par lui, qui prend le contrôle des affaires d\'État supra-Signoria — et par l\'usage politique systématique de la Banque Médicis comme appareil parallèle. Mais le cadre dépend de la personne du Magnifique : Pierre II (son fils, 1492-1494) ne survit que 14 mois avant d\'être expulsé par Charles VIII et le soulèvement urbain. S\'ensuit une boucle d\'instabilité de 36 ans, où chaque bascule est causée par une **intervention extérieure** : Charles VIII (français, 1494) → République savonarolienne puis soderinienne (1494-1512) → Jules II avec troupes hispano-pontificales (1512) → Médicis restaurés sous papes Léon X et Clément VII → Sac de Rome (1527) qui libère Florence → Troisième République (1527-1530) → siège impérial-pontifical de Charles Quint (1529-1530) → bulles papale et impériale créant Alexandre duc héréditaire (1531-1532). C\'est exactement le pattern Gênes (« chaque faction en déclin appelle une puissance étrangère pour se relever »). L\'assassinat d\'Alexandre (1537) par son cousin Lorenzino n\'interrompt pas la dynastie : Cosme Ier (lignée cadette) est élu par le Sénat des Quarante-Huit, écrase la DGRO à Montemurlo (1er août 1537), exécute Filippo Strozzi (1538), rachète à Charles Quint les forteresses (1543), et ouvre la sous-phase d\'impérialisme absolutiste avec un cadre désormais stable.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1480,'end':1537,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Laurent le Magnifique','summary':'Laurent satisfait fonctionnellement le test discriminant absolutiste par deux innovations : (1) le **Conseil des Settanta** (1480), magistrature à vie cooptée qui supplante la Signoria à mandats de 2 mois et institue un cadre exécutif supra-oligarchique ; (2) la **Banque Médicis** comme appareil de pouvoir parallèle (financement autonome, diplomatie privée, réseau d\'agents internationaux, récompenses-sanctions). Configuration appareil familial-bancaire dans une cité-État où la distinction public/privé est faible.','description':'La lecture de Laurent comme 1er MA s\'appuie sur le critère fonctionnel du test discriminant absolutiste. Le Settanta (créé en 1480 après la guerre de la Conjuration des Pazzi) est une magistrature à vie cooptée parmi les alliés médicéens, qui prend le contrôle des affaires d\'État — c\'est une institution exécutive nouvelle qui transcende le clivage palleschi/anti-médicéens en subordonnant les anciennes factions au cadre laurentien. La Banque Médicis (succursales Rome, Genève/Lyon, Bruges, Londres, Avignon, Milan, Venise) joue le rôle d\'appareil d\'État parallèle dans une cité-État où la distinction public/privé est faible — Laurent lève des fonds sans dépendre du fisc public, récompense ses alliés par prêts à taux préférentiels, étrangle ses opposants par refus de crédit, conduit la diplomatie financière auprès des papes et des rois sans passer par les magistratures officielles. C\'est l\'équivalent fonctionnel d\'une noblesse de robe au service du pouvoir central, sous forme d\'appareil familial-bancaire. Mais cette configuration reste **fragile** : elle dépend de la personne du Magnifique et de la solidité de la Banque, et s\'effondre 14 mois après la succession à Pierre II (expulsion 1494). La consolidation définitive ne survient qu\'avec Cosme Ier en 1537, après écrasement de la DGRO et appui structural impérial.','figure':'Laurent de Médicis','confidence':'medium','alternatives':'Configuration consortium oligarchique écartée — le Monte Comune (1345) consolide la dette publique mais n\'absorbe pas les fonctions d\'État au sens vénitien/génois. Configuration figure dynastique stable écartée pour Laurent — le cadre s\'effondre 14 mois après son fils Pierre II (1494). Cosme Ier (1537) est le **consolidateur post-DGRO** dans la même phase absolutiste, pas un 1er MA distinct.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1480,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Dernière grande révolte oligarchique','subtitle':'Bataille de Montemurlo','summary':'Le 1er août 1537, après 57 ans depuis le 1er MA Laurent (1480), les fuorusciti républicains menés par Filippo Strozzi affrontent les troupes de Cosme Ier près de Prato. Défaite militaire écrasante, exécution de Strozzi (1538), confiscations, désarmements définitifs. Critères satisfaits : caractère armé, assise territoriale (les Strozzi et fuorusciti gardaient biens et clientèles, alliances avec puissances rivales), caractère terminal (après Montemurlo, plus de force armée oligarchique organisée). Position canonique post-MA (analogue à Della Torre 1302-1311 à Milan, 25 ans après Ottone Visconti).','description':'Montemurlo est la dernière révolte armée des oligarques après l\'éclipse de l\'absolutisme personnel laurentien (boucle 1494-1537) et sa consolidation Sforza-like par Cosme Ier sous appui impérial. Les fuorusciti républicains (familles Strozzi, Salviati, Soderini, Capponi, etc.) ont conservé pendant l\'instabilité une assise territoriale partielle (biens en Toscane et hors-Toscane, alliances avec puissances étrangères rivales de Charles Quint). Leur défaite militaire écrasante face à Cosme Ier (allié à Charles Quint), suivie de l\'exécution de Strozzi et de confiscations massives, marque la fin de la résistance armée organisée du patriciat ancien. Aucune révolte armée significative des grandes familles patriciennes n\'aura lieu après Montemurlo dans les deux siècles de duché-Grand-Duché.','figure':'Filippo Strozzi','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1537,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'Cosme Ier consolide le cadre absolutiste stable post-DGRO : construction de l\'appareil ducal (Auditori, Pratica Segreta, Magistrato dei Nove Conservatori 1560), recrutement de secrétaires hors patriciat (noblesse de robe ducale embryonnaire), conquête de Sienne avec aide espagnole (1554-1555), élévation au Grand-duché (1569). Sous François Ier, Ferdinand Ier puis Cosme II/Ferdinand II, apogée commerciale de Livourne (Lois Livornine 1591-1593), mariages dynastiques européens, flotte de Saint-Étienne anti-corsaire. Pas d\'expansion territoriale notable post-Sienne.','description':'La sous-phase d\'impérialisme absolutiste florentine est contrainte par la taille — Florence n\'a pas la capacité militaire pour mener une politique d\'expansion à l\'échelle des grandes monarchies européennes. Sa projection prend la forme commerciale (Livourne port franc, Lois Livornine 1591 et 1593 attirant marchands étrangers — juifs portugais et levantins, anglais, hollandais, arméniens), navale anti-corsaire (Ordre de Saint-Étienne fondé 1561), diplomatique (mariages européens : Christine de Lorraine à Ferdinand Ier 1589, Marie de Médicis à Henri IV 1600), et culturelle (protection de Galilée par Cosme II et Ferdinand II, Académie del Cimento 1657, Accademia della Crusca 1583). L\'acmé absolutiste se situe sous Ferdinand Ier (1587-1609). Le saillant **Fin de l\'expansion absolutiste** est structurellement absent — Florence n\'a pas de vraie projection territoriale absolutiste à terminer, contrairement aux grandes monarchies. Borne fin de la sous-phase par marqueur alternatif : entrée en déclin économique structurel sous Cosme III (1670-1723).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1537,'end':1670,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Acmé absolutiste','subtitle':'Ferdinand Ier','summary':'Ferdinand Ier (1587-1609) incarne l\'acmé absolutiste florentine : Lois Livornine (1591, 1593) qui font de Livourne un port franc cosmopolite, mariages dynastiques européens (Christine de Lorraine, Marie de Médicis avec Henri IV 1600), flotte de Saint-Étienne active, prestige diplomatique. Domestication de l\'ancien patriciat à la cour. Position dans la phase ~0.35 — précoce, contrainte par la taille (pas de projection militaire à l\'échelle continentale).','description':'','figure':'Ferdinand Ier de Médicis','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1591,'end':1609,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime','subtitle':'','summary':'AR long (~126 ans), aligné avec Venise (130 ans) et Piémont (113 ans). Pattern « petite nation italienne » : satisfait le critère de discrédit (sédimentation, Cosme III bigot, échecs léopoldins) mais pas celui de ruine financière (cité-État de taille modeste, AR léopoldin assainit), d\'où impossibilité d\'éclatement endogène et sortie obligatoire par choc exogène (Napoléon 1796). Structuré en deux moments par la nature de la dynastie : AR décliniste médicéen (1670-1737) puis AR aux tentatives réformatrices vouées à l\'échec sous secundogéniture habsbourgeoise (1737-1796). Remontrance structurellement absente.','description':'L\'AR florentin est l\'un des plus longs du corpus, mais sans devenir une singularité — il s\'aligne avec Venise (1718-1848, 130 ans) et Piémont (1748-1861, 113 ans avec éclipse). Pattern structurel commun : petites nations italiennes/périphériques traversant une RN compressée par chocs exogènes successifs avant absorption italienne. La cause structurelle de la longueur est l\'**absence de ruine financière endogène** : Florence est une cité-État de taille modeste avec budget contenu (pas d\'armée massive, pas de cour royale dispendieuse, pas de guerre coûteuse), Cosme III tend les finances mais ne les ruine pas, et Pierre-Léopold les assainit activement (abolition des fidéicommis 1788, suppression des couvents et ventes de biens ecclésiastiques, modernisation du Catasto). À l\'arrivée de Bonaparte (1796), le Grand-Duché léopoldin est financièrement sain. Le critère de discrédit, lui, est satisfait au moins partiellement (Cosme III bigot, surfiscalité, déclin économique, échecs léopoldins, émeute Prato 1787, émeutes Florence/Livourne 1790), mais cela ne suffit pas seul à produire un éclatement endogène. La **Remontrance est structurellement absente** : pas de contestation institutionnelle de classe administrative formée pendant l\'AR (la Toscane n\'a pas de parlement absolutiste comme la France ou de Commons comme l\'Angleterre). La sortie est par choc exogène, qui ouvre une RN compressée mais aboutissant tout de même à une Glorieuse Révolution canonique (Statuto 1848) — laquelle est ensuite avortée par puissance étrangère, faisant retomber Florence en AR exogène avant absorption italienne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1670,'end':1796,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale (avortée)','subtitle':'','summary':'RN ultra-compressée et avortée. Sous-phase unique : révolution initiale (1796-1799). Trois saillants canoniques compressés en quelques mois en 1799 (Éclatement de l\'AR 1796, Expérience parlementaire 1799, Phase aiguë 1799), puis avortement par perturbation exogène (Restauration imposée par les puissances étrangères, 1799) — pas de moment thermidorien canonique, pas d\'IR, pas de sous-phase de Restauration. La phase RN bascule directement en AR exogène long.','description':'La RN florentine s\'ouvre par l\'invasion française (1796) qui éclate l\'AR léopoldin par choc exogène sur cadre financièrement sain. Sa sous-phase unique de révolution initiale comprime trois saillants canoniques en quelques mois en 1799 : Éclatement de l\'AR (invasion française), Expérience parlementaire (République toscane jacobine de mars-juin 1799), Phase aiguë (insurrection populaire Viva Maria au printemps-été 1799, contre-révolutionnaire et anti-française). Le retour de Ferdinand III en juin 1799 sous protection autrichienne, qui aurait pu être un moment thermidorien canonique, est en réalité une Restauration imposée par les puissances étrangères — codée comme perturbation Avortement de la RN (choc exogène / avortement). La phase RN s\'avorte donc structurellement dès 1799 sans avoir parcouru ses sous-phases canoniques (pas d\'IR, pas de sous-phase Restauration), et bascule directement en AR exogène long sous tutelles successives.','figure':'','confidence':'','alternatives':'','step':'','deviation':'Durée ~3 ans. Sous-phase IR et sous-phase Restauration structurellement absentes ; pas de moment thermidorien canonique. La RN est avortée par chocs exogènes successifs, qui se prolongent en AR exogène long (cf. phase suivante).','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Moment thermidorien transformé en AR exogène — le retour de Ferdinand III en juin 1799 sous protection autrichienne ne stabilise pas une phase de Restauration canonique mais ouvre directement un AR exogène long sous tutelles étrangères successives.','resolution_conditions':'','avortement':'','start':1796,'end':1799,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Sous-phase ultra-compressée. Trois saillants canoniques en quelques mois en 1799 : Éclatement de l\'AR (invasion française 1796), Expérience parlementaire (République toscane jacobine 1799), Phase aiguë (insurrection Viva Maria 1799, contre-révolutionnaire). Pas de moment thermidorien canonique : le retour de Ferdinand III sous protection autrichienne est traité comme perturbation Avortement de la RN (Restauration imposée par puissances étrangères), qui clôt la phase RN par bascule directe en AR exogène.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1796,'end':1799,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Éclatement de l\'AR','subtitle':'Invasion française','summary':'L\'invasion française (1796) éclate l\'AR léopoldin par choc exogène sur cadre financièrement sain. Sortie obligatoirement par choc externe car l\'AR n\'avait pas atteint la maturité endogène (discrédit oui partiel, ruine financière non).','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1796,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'République toscane jacobine','summary':'Après l\'expulsion de Ferdinand III (mars 1799), brève République toscane jacobine sous protection française. Comprimée à quelques semaines avant l\'insurrection contre-révolutionnaire.','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1799,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'Insurrection populaire Viva Maria','summary':'Insurrection populaire massive Viva Maria (printemps-été 1799) — soulèvement contre-révolutionnaire et anti-français qui balaye les Jacobins. Phase aiguë canonique mais d\'orientation contre-révolutionnaire, comprimée et exogéniquement orientée par l\'occupation française.','description':'','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1799,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Retour de Ferdinand III','subtitle':'Restauration imposée par les puissances étrangères','summary':'Retour de Ferdinand III en juin 1799 sous protection autrichienne, qui ne stabilise pas un moment thermidorien canonique mais avorte la RN par intervention exogène. Suivent immédiatement de nouvelles tutelles étrangères (Royaume d\'Étrurie sous Bourbons-Parme 1801, annexion à l\'Empire français 1807, Restauration habsbourgeoise 1814). La RN florentine est avortée sans avoir parcouru ses sous-phases canoniques (pas d\'IR, pas de Restauration au sens canonique). Bascule directe en AR exogène long.','description':'','figure':'Ferdinand III','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1799,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste — Ancien Régime exogène (1er bloc)','subtitle':'','summary':'AR exogène long (~49 ans) ouvert dès l\'avortement de la RN en 1799 et qui dure jusqu\'à la GR de 1848. Régime sans légitimité endogène, sous tutelles étrangères successives — Ferdinand III restauré 1799-1801, Royaume d\'Étrurie sous Bourbons-Parme 1801-1807, annexion à l\'Empire français sous Élisa Bonaparte 1807-1814, Restauration habsbourgeoise-lorraine de Ferdinand III puis Léopold II 1814-1848. Sortie par GR en 1848.','description':'Suite à l\'avortement de la RN en 1799 (Restauration imposée par les puissances étrangères), Florence entre en AR exogène long sous tutelles successives. Phase de tutelles étrangères en quatre temps : (1) Ferdinand III restauré sous protection autrichienne 1799-1801 ; (2) Royaume d\'Étrurie sous Bourbons-Parme imposé par traités franco-espagnols 1801-1807, État fantoche sans armée ni politique extérieure propres ; (3) annexion directe à l\'Empire français avec Élisa Bonaparte grande-duchesse 1807-1814, Toscane = 3 départements (Arno, Méditerranée, Ombrone), Code napoléonien imposé ; (4) Restauration habsbourgeoise-lorraine 1814-1848 sous Ferdinand III puis Léopold II « Canapone » (1824), conservation partielle des codes napoléoniens (état civil, organisation judiciaire), Toscane refuge des modérés italiens (cabinet Vieusseux, *Antologia* 1821-1833 fermée par pression autrichienne), expansion territoriale (Stato dei Presidi et Piombino 1815, Lucques 1847). La phase se clôt par la Glorieuse Révolution de 1848 (Statuto), qui ouvre une nouvelle phase RN (avortée immédiatement, cf. phase suivante).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'variable (dérivation rare)','perturbation_type':'','affected_motor':'','note':'','resolution':'Octroi du Statuto fondamentale par Léopold II (17 février 1848) — Glorieuse Révolution qui ouvre une nouvelle phase RN (cf. phase suivante).','resolution_conditions':'','avortement':'','start':1799,'end':1848,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime exogène','subtitle':'','summary':'Sous-phase unique. Tutelles étrangères successives sans légitimité endogène : Ferdinand III restauré 1799-1801, Royaume d\'Étrurie sous Bourbons-Parme 1801-1807, annexion française 1807-1814, Restauration habsbourgeoise-lorraine 1814-1848. Pas de saillant absolutiste canonique propre — la sous-phase entière est une parenthèse exogène. Sortie par GR en 1848.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1799,'end':1848,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale (re-tentative)','subtitle':'','summary':'RN ultra-comprimée et avortée. La GR (Statuto fondamentale, 17 février 1848) ouvre une nouvelle phase RN à l\'intérieur de l\'AR exogène long. Mais la phase est immédiatement avortée par l\'écrasement autrichien d\'avril 1849 — la phase parlementaire qui aurait dû s\'ouvrir n\'existe pas. Florence retombe en AR exogène (cf. phase suivante). Cas atypique : RN comprimée à un saillant GR + saillant Écrasement, sans sous-phases canoniques.','description':'Le 17 février 1848, Léopold II octroie le Statuto fondamentale (constitution bicamérale, suffrage censitaire, garanties civiques) — Glorieuse Révolution canonique qui ouvre une nouvelle phase RN. Florence participe à la Première guerre d\'indépendance contre l\'Autriche, cabinets Capponi puis Montanelli-Guerrazzi. Léopold II quitte Florence (Gaète, février 1849), République toscane proclamée (8 février-12 avril 1849, Guerrazzi-Montanelli-Mazzoni). Restauration autrichienne en avril 1849 — comme à Venise et Milan, la phase parlementaire italienne naissante est écrasée par l\'Empire autrichien à son acmé absolutiste. La phase RN est avortée moins d\'un an après son ouverture, sans avoir parcouru aucune sous-phase canonique au-delà de la GR initiale.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Écrasement autrichien (avril 1849) — restauration imposée qui rebascule Florence en AR exogène (cf. phase suivante).','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','subtitle':'Statuto fondamentale','summary':'Le 17 février 1848, Léopold II octroie le Statuto fondamentale — constitution bicamérale, suffrage censitaire, garanties civiques. Florence participe à la Première guerre d\'indépendance contre l\'Autriche. Cabinets Capponi puis Montanelli-Guerrazzi. Saillant canonique de Glorieuse Révolution qui ouvre une nouvelle phase RN à l\'intérieur de l\'AR exogène long.','description':'','figure':'Léopold II','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Écrasement autrichien','subtitle':'République Guerrazzi écrasée par les Autrichiens','summary':'Léopold II quitte Florence (Gaète, février 1849), République toscane proclamée (8 février-12 avril 1849, Guerrazzi-Montanelli-Mazzoni), restauration autrichienne en avril 1849. Comme à Venise et Milan, la phase parlementaire italienne naissante est écrasée par l\'Empire autrichien à son acmé absolutiste. Avortement effectif de la phase RN, retour en AR exogène (cf. phase suivante).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1849,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste — Ancien Régime exogène (2e bloc)','subtitle':'','summary':'AR exogène court (~10 ans) imposé par les Autrichiens après l\'écrasement de la RN de 1848-1849 : Léopold II ramené à Florence, révocation du Statuto (1852), occupation autrichienne (jusqu\'en 1855). Régime sans légitimité endogène, simple prolongement sous tutelle viennoise. Sortie par fusion italienne (cf. fin du Parcours).','description':'Après l\'écrasement autrichien de 1849, Florence retombe en AR exogène. Léopold II revient à Florence sous protection autrichienne, le Statuto est révoqué en 1852, les troupes autrichiennes restent stationnées jusqu\'en 1855. Le régime ne dispose d\'aucune légitimité endogène. La sortie est elle aussi exogène — la Seconde guerre d\'indépendance italienne (1859) provoque le départ pacifique de Léopold II le 27 avril 1859, suivi de l\'absorption italienne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'variable (dérivation rare)','perturbation_type':'','affected_motor':'','note':'','resolution':'La « rivoluzione toscana » du 27 avril 1859 — Léopold II quitte Florence sans effusion de sang devant l\'avancée piémontaise pendant la Seconde guerre d\'indépendance. Gouvernement provisoire de Bettino Ricasoli, choix de l\'union avec le Piémont.','resolution_conditions':'','avortement':'','start':1849,'end':1859,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime exogène','subtitle':'','summary':'Sous-phase unique post-écrasement. Léopold II ramené par les Autrichiens, révocation du Statuto (1852), occupation autrichienne jusqu\'en 1855. Pas de saillant absolutiste canonique propre — parenthèse exogène avant absorption italienne.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1849,'end':1859,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Fusion italienne','subtitle':'Rivoluzione toscana et plébiscite','summary':'Le 27 avril 1859, Léopold II quitte Florence sans effusion de sang. Gouvernement provisoire de Bettino Ricasoli, choix de l\'union avec le Piémont. Plébiscite du 15 mars 1860 (~95% pour l\'annexion au Royaume de Sardaigne), loi du 22 mars 1860 — fin du Grand-Duché. Florence capitale du Royaume d\'Italie 1865-1871, puis Rome. Le Parcours toscan endogène se dissout par fusion dans le Parcours italien.','description':'','figure':'Bettino Ricasoli, Vittorio Emanuele II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1859,'end':1860,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 7;
+    const BASE_TOP = 270;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+        // Florence
+        'Giano della Bella': 'images/florence/giano-della-bella.jpg',
+        'Laurent de Médicis': 'images/florence/laurent-de-medici.jpg',
+        'Filippo Strozzi': 'images/florence/filippo-strozzi.jpg',
+        'Ferdinand Ier de Médicis': 'images/florence/ferdinand-ier.jpg',
+        'Ferdinand III': 'images/florence/ferdinand-iii.jpg',
+        'Léopold II': 'images/florence/leopold-ii.jpg',
+        'Bettino Ricasoli, Vittorio Emanuele II': 'images/florence/bettino-ricasoli.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Acmé oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Acmé absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description">${e.description}</div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

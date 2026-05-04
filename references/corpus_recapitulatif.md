@@ -12,25 +12,25 @@ Pour le détail par nation, voir `references/nations/*/parcours.md` et `referenc
 
 ## Tableau des saillants par nation
 
-| Saillant | Israël antique | Israël (prolongement) | France | Angleterre | Venise | Bavière | Piémont |
-|---|---|---|---|---|---|---|---|
-| Éveil féodal | Saül (~-1080) | — | Louis VI (1108) | Guillaume (1066, reboot) | Orso Ipato (~726) | Louis Ier (~1204) | Thomas II (~1233) |
-| Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Orseolo (~991) | Louis IV (~1328) | Philippe Ier d'Achaïe (~1295) |
-| Pacte oligarchique | Probable sous Omri (-885), non textuellement attesté | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) |
-| 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Contarini (~1043) / système | Guillaume IV (~1508) | Amédée VIII (~1430) / Emmanuel Philibert (1559) |
-| Acmé oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) |
-| Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | Agnadello (1509) | — | Mort Ch. Emmanuel Ier (1630) |
-| Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Tensions institutionnelles (~1628-1669) | ~1564-1597 | Madamisti/Principisti (~1637-1696) |
-| 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) |
-| Dernière grande révolte oligarchique (DGRO) | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — (pas d'assise) | — (pas d'assise) | Affaire Graneri (1722-1723) |
-| Acmé absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Morosini (~1688) | Max. III Joseph (~1756) / Louis Ier (~1835) | Ch. Emmanuel III (~1748) |
-| Fin de l'expansion (abs.) | — | Mort d'Hérode (-4) | Utrecht (1713) | — | Passarowitz (1718) | Blenheim (1704) | Aix-la-Chapelle (1748) |
-| Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) | Correzione (1761) | Landtag (1848) | Révolte de 1821 |
-| Éclatement de l'AR | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | République de Manin (1848) | Eisner (1918) | — (absorbée, 1861) |
-| Émergence de l'IR | — | — | Bonaparte (1799) | Cromwell (1653) | — (RN avortée) | — (absorbée) | — (absorbée) |
-| Glorieuse Révolution | — | — | 1830 | 1688 | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) |
+| Saillant | Israël antique | Israël (prolongement) | France | Angleterre | Venise | Bavière | Piémont | Florence |
+|---|---|---|---|---|---|---|---|---|
+| Éveil féodal | Saül (~-1080) | — | Louis VI (1108) | Guillaume (1066, reboot) | Orso Ipato (~726) | Louis Ier (~1204) | Thomas II (~1233) | Communes consulaires (~1115) |
+| Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Orseolo (~991) | Louis IV (~1328) | Philippe Ier d'Achaïe (~1295) | — |
+| Pacte oligarchique | Probable sous Omri (-885), non textuellement attesté | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) | Ordinamenti di Giustizia (1293) |
+| 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Contarini (~1043) / système | Guillaume IV (~1508) | Amédée VIII (~1430) / Emmanuel Philibert (1559) | Signoria post-1293 |
+| Acmé oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) | Bardi-Peruzzi (~1325-1339) |
+| Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | Agnadello (1509) | — | Mort Ch. Emmanuel Ier (1630) | Faillite Bardi-Peruzzi (1339) |
+| Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Tensions institutionnelles (~1628-1669) | ~1564-1597 | Madamisti/Principisti (~1637-1696) | Albizzi vs Médicis (1433-1480) |
+| 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) | Laurent le Magnifique (1480) |
+| Dernière grande révolte oligarchique (DGRO) | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — (pas d'assise) | — (pas d'assise) | Affaire Graneri (1722-1723) | Montemurlo (1537) |
+| Acmé absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Morosini (~1688) | Max. III Joseph (~1756) / Louis Ier (~1835) | Ch. Emmanuel III (~1748) | Ferdinand Ier (~1591-1609) |
+| Fin de l'expansion (abs.) | — | Mort d'Hérode (-4) | Utrecht (1713) | — | Passarowitz (1718) | Blenheim (1704) | Aix-la-Chapelle (1748) | — |
+| Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) | Correzione (1761) | Landtag (1848) | Révolte de 1821 | — |
+| Éclatement de l'AR | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | République de Manin (1848) | Eisner (1918) | — (absorbée, 1861) | Invasion française (1796) |
+| Émergence de l'IR | — | — | Bonaparte (1799) | Cromwell (1653) | — (RN avortée) | — (absorbée) | — (absorbée) | — (absorbée) |
+| Glorieuse Révolution | — | — | 1830 | 1688 | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) | — (absorbée, 1860) |
 
-Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1715-1789 ; Angleterre ~1603-1642 ; Venise ~1718-1848 ; Bavière ~1848-1918 ; Piémont ~1748-1861 (éclipse 1796-1814) ; Israël prolongement -4 à 66.
+Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1715-1789 ; Angleterre ~1603-1642 ; Venise ~1718-1848 ; Bavière ~1848-1918 ; Piémont ~1748-1861 (éclipse 1796-1814) ; Florence ~1670-1796 ; Israël prolongement -4 à 66.
 
 ---
 
@@ -90,6 +90,13 @@ Pour les définitions des mécanismes et effets, voir `references/perturbations.
 | Sadowa — exclusion de l'Allemagne (1866) | Autriche | Choc exogène (fin d'exutoire militaire) | Accélération 🔵 | Oui | ◆🔵 `bolt` |
 | **Suisse** |
 | Invasion française (1798) | Suisse | Choc exogène | Accélération 🔵 | Non | ◆🔵 `bolt` |
+| **Florence** |
+| Charles VIII (1494) | Florence | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| Jules II / sac de Prato (1512) | Florence | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| Sac de Rome / Charles Quint (1527-1530) | Florence | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| Transition Habsbourg-Lorraine (1737) | Florence | Choc exogène | Prolongement 🟠 | **Non** (dynastique) | ◆🟠 `bolt` |
+| Royaume d'Étrurie / annexion napoléonienne (1801-1814) | Florence | Choc exogène modernisateur | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
+| République toscane écrasée par les Autrichiens (1849) | Florence | Choc exogène | Avortement 🔴 | Oui | ◆🔴 `bolt` |
 
 ---
 
@@ -112,6 +119,7 @@ Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus
 | Suisse | Bundesbrief (1291) | Sempach (1386), Guerres de Bourgogne (~1474) | Stanser Verkommnis (1481) | ~190 ans |
 | Autriche [2] | Rudolf IV (1358) | — | Innsbrucker Libell (1518) | ~160 ans |
 | USA | ~1776 | Lincoln/Grant (~1865), McKinley/T. Roosevelt (~1905) | Fed + IRS (1913) | ~137 ans |
+| Florence | Communes consulaires (~1115) | — (cité-État dense) | Ordinamenti di Giustizia (1293) | ~178 ans |
 
 ---
 
@@ -132,6 +140,7 @@ Pour les définitions des saillants, voir `references/phase_oligarchique.md`.
 | Suisse | Tagsatzung (~1501) | Occupation de Milan (~1512) | Paysans / Villmergen (1653-1712) | Patriciat trans-confessionnel (1712) |
 | Bavière | Guillaume IV (1508) | Albert V (~1555) | ~1564-1597 | Maximilien Ier (1597) |
 | Autriche | Maximilien Ier (1518) | Léopold Ier (~1683) | Succession d'Autriche (1740-1748) | Marie-Thérèse (1749) |
+| Florence | Signoria post-1293 | Bardi-Peruzzi (~1325-1339) | Albizzi vs Médicis (1433-1480) | Laurent le Magnifique (1480) |
 
 ---
 
@@ -153,6 +162,7 @@ Pour les définitions des saillants, voir `references/phase_absolutiste.md`.
 | Espagne | Philippe V (1714) | Charles III (~1770) | ~1788-1808 | Dos de Mayo (1808) |
 | Suisse | Patriciat trans-confessionnel (1712) | — | ~1780-1798 | République helvétique (1798) |
 | Autriche | Marie-Thérèse (1749) | Joseph II (~1780) | ~1815-1918 | Révolution (1918) |
+| Florence | Laurent le Magnifique (1480) | Ferdinand Ier (~1591-1609) | ~1670-1796 | Invasion française (1796) |
 
 ---
 
@@ -160,17 +170,17 @@ Pour les définitions des saillants, voir `references/phase_absolutiste.md`.
 
 Pour les définitions des saillants et des sous-phases, voir `references/phase_rn.md`.
 
-| Sous-phase / Saillant | France | Angleterre | Israël (avortée) | Venise (avortée) |
-|---|---|---|---|---|
-| **Révolution initiale** | 1789-1799 | 1640-1653 | 66-70 | 1848-1849 |
-| → Éclatement de l'AR | 1789 | 1642 | 66 | mars 1848 |
-| → Expérience parlementaire | 1789-1791 | 1640-1648 | 66-67 | mars 1848 - août 1849 |
-| → Phase aiguë | 1792-1794 | 1649 | 67-70 | Amorce : mars 1849 (pouvoirs illimités) |
-| → Moment thermidorien | 1794-1799 | 1649-1653 | — (écrasée) | — (écrasée) |
-| **Impérialiste Revanchard** | 1799-1815 | 1653-1658 | — | — |
-| → Émergence de l'IR | Bonaparte (1799) | Cromwell (1653) | — | — |
-| **Restauration** | 1815-1830 | 1660-1688 | — | — |
-| → Glorieuse Révolution | 1830 | 1688 | — | — |
+| Sous-phase / Saillant | France | Angleterre | Israël (avortée) | Venise (avortée) | Florence (avortée) |
+|---|---|---|---|---|---|
+| **Révolution initiale** | 1789-1799 | 1640-1653 | 66-70 | 1848-1849 | 1796-1849 (compressée par chocs exogènes) |
+| → Éclatement de l'AR | 1789 | 1642 | 66 | mars 1848 | 1796 (invasion française) |
+| → Expérience parlementaire | 1789-1791 | 1640-1648 | 66-67 | mars 1848 - août 1849 | Statuto 1848 + République 1849 |
+| → Phase aiguë | 1792-1794 | 1649 | 67-70 | Amorce : mars 1849 (pouvoirs illimités) | République Guerrazzi (1849) |
+| → Moment thermidorien | 1794-1799 | 1649-1653 | — (écrasée) | — (écrasée) | — (écrasée par Autriche) |
+| **Impérialiste Revanchard** | 1799-1815 | 1653-1658 | — | — | — (cité-État trop petite) |
+| → Émergence de l'IR | Bonaparte (1799) | Cromwell (1653) | — | — | — |
+| **Restauration** | 1815-1830 | 1660-1688 | — | — | 1814-1848 puis 1849-1859 |
+| → Glorieuse Révolution | 1830 | 1688 | — | — | — (absorbée, plébiscite 1860) |
 
 ---
 

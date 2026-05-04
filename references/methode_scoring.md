@@ -93,7 +93,7 @@ Procédure structurée — chaque `phase_*.md` est désormais opérationnalisé 
 
 **Étape 3 — Différencier de configurations voisines non-Parcours**. Avant de scorer ≥ 3, applique systématiquement la section « Différencier de configurations voisines non-Parcours » de la phase. Si la configuration ressemble à une marge impériale, à une révolte absolutiste, à un coup d'État sans rupture, etc., **ne pas scorer la phase** — signaler la configuration voisine.
 
-**Étape 4 — Saillants présents dans la tranche**. Pour chaque saillant canonique de la phase, applique son test discriminant propre + signes observables. Pour la phase absolutiste : épuiser les 4 formes du 1er monarque absolu avant de conclure à l'absence (forme 2 institution collective, forme 3 tiers exogène imposé, forme 4 consortium oligarchique sont à tester explicitement, pas seulement la forme 1 personnelle).
+**Étape 4 — Saillants présents dans la tranche**. Pour chaque saillant canonique de la phase, applique son test discriminant propre + signes observables. Pour le 1er monarque absolu : ne pas s'arrêter à l'image mentale par défaut (souverain personnel, stable, titré). Vérifier si la centralisation de l'appareil ne s'opère pas sous une configuration moins immédiate — institution collective autonome au-dessus du patriciat, puissance étrangère imposant un cadre, consortium oligarchique institutionnalisé (typique des cités-États), appareil familial-bancaire dans une cité-État. Cf. `phase_absolutiste.md` §Configurations rencontrées.
 
 **Étape 5 — Score 0-5** :
 - 0 : aucun marqueur de cette phase présent (ou test discriminant échoue)
@@ -124,7 +124,8 @@ Les principaux pièges sont documentés dans les phase_*.md correspondants. Quel
 - **Codification écrite** n'est PAS un test discriminant absolutiste à elle seule (cf. `phase_absolutiste.md` §Piège : la codification écrite). Le vrai test discriminant est la préséance effective de l'administration centrale + capacité de l'exécutif à agir sans frein juridique.
 - **Fisc régulier sur les non-exempts** n'implique pas l'absolutisme — un fisc central peut coexister avec des fiscs locaux autonomes en phase oligarchique.
 - **Transition dynastique** ne signe pas un 1er monarque absolu sans guerre sociale préalable entre factions (cf. `phase_oligarchique.md` §Guerre sociale et `phase_absolutiste.md` §1er monarque absolu).
-- **Stabilité institutionnelle de longue durée** (200+ ans) ne tranche pas entre absolutisme forme 2/4 et ENP contrarié figé (cf. `phase_rn.md` §Test discriminant ENP contrarié figé vs forme 2).
+- **Stabilité institutionnelle de longue durée** (200+ ans) ne tranche pas, à elle seule, entre une phase absolutiste à appareil collectif (institution autonome ou consortium oligarchique) et une phase parlementaire contrariée figée (cf. `phase_rn.md` §Test discriminant entre ces deux configurations).
+- **Perturbation par défaut ponctuelle** : un événement perturbateur (retour de souverain, écrasement de révolution, transition dynastique, intervention étrangère ponctuelle) se code comme **saillant** avec flag `perturbation: true` + `mechanism` + `effect`, pas comme `type: perturbation` étendu. La forme étendue (bande hachurée) est réservée aux périodes où le Parcours est structurellement mis en pause (exil babylonien, effondrement valois 1392-1420, guerres d'Italie à Milan 1499-1535). Cf. `perturbations.md` §3.
 
 ### Cas particuliers à signaler
 

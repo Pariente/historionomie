@@ -17,6 +17,16 @@ La phase oligarchique commence au **pacte oligarchique** (cf. `phase_feodale.md`
 
 ---
 
+## Lecture abstraite : démembrement de l'appareil central
+
+Au moment de l'entrée en phase oligarchique (pacte oligarchique), l'appareil d'extraction (fisc) et de coercition (armée, justice) de l'État central naît sans superstructure bureaucratique propre. Il est donc nécessairement **démembré** entre les premiers fondateurs du compromis — les oligarques. Chaque oligarque détient une fraction des fonctions étatiques (fiscs locaux, justices seigneuriales, milices privées, contrats publics) ; le centre coordonne mais n'a pas la préséance.
+
+La phase oligarchique est ainsi caractérisée structurellement par ce **démembrement de l'appareil central entre oligarques**, qui sera progressivement reconcentré pendant la phase absolutiste (cf. `phase_absolutiste.md` §Lecture abstraite). Cette lecture abstraite éclaire le test discriminant ci-dessous : la « préséance de l'administration centrale » est précisément la mesure de la recentralisation de l'appareil.
+
+Cet appareil démembré est défini par ses **fonctions** (extraction, coercition, coordination), pas par son statut juridique. Les fonctions étatiques peuvent être démembrées entre oligarques sous des formes formellement publiques (justices seigneuriales, milices privées, fiscs locaux) ou formellement privées (concessions, fermes, contrats publics, premières institutions bancaires-étatiques) — voir `parcours.md` §Nature de l'appareil étatique.
+
+---
+
 ## Comment identifier cette phase
 
 ### Test discriminant (oligarchique vs absolutiste)
@@ -128,7 +138,7 @@ Après le pacte oligarchique, la nation se dote de nouveaux outils — fisc perm
 **Test discriminant** : il s'agit d'identifier le premier souverain dont l'accession ou l'exercice du pouvoir s'inscrit dans le cadre de codification produit par le PO. Pas nécessairement un règne brillant — peut être un règne modeste qui démontre simplement que le cadre tient à la première succession. Le test critique : *est-ce le premier souverain dont la légitimité passe par les règles du PO et non plus par la stature personnelle* ?
 
 **Signes observables** :
-- Le souverain accède au trône via les procédures fixées par le PO (chemin A) ou voit son exercice contraint par les institutions issues du PO (chemin B)
+- Le souverain accède au trône via les procédures de transmission fixées par le PO, ou voit son exercice contraint par les institutions issues du PO
 - Pas d'effondrement à la transition (preuve que le cadre tient)
 - Premier déploiement effectif des outils oligarchiques nouveaux (fisc régulier, troupes soldées, administration centralisée embryonnaire)
 
@@ -245,13 +255,13 @@ La religion, la région, la dynastie, la langue sont des **modes d'expression du
 
 **2. La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme — le tiers qui gagne, c'est le parti des prébendes en soi, l'État central comme distributeur souverain.
 
-### La figure résolvante — deux patterns canoniques
+### La figure résolvante
 
-**Pattern 1 (le plus courant) : tiers populiste neutre.** La figure qui résout la guerre sociale est souvent un tiers non affilié aux deux factions — figure populiste s'appuyant sur les clientèles délaissées par les deux camps et sur la classe moyenne administrative pour forcer les puissants à plier devant le pouvoir central. Elle offre des concessions et un compromis légal qui en réalité renforcent le pouvoir central. L'abandon progressif des clientèles par les élites rend ces populations disponibles pour de telles figures. C'est le pattern majoritaire dans le corpus et celui qu'on teste en premier.
+Ce qui compte structurellement n'est pas la provenance de la figure mais l'**émergence d'un nouveau cadre central** qui renforce le pouvoir central et subordonne les anciennes élites oligarchiques.
 
-**Pattern 2 (canonique mais moins fréquent) : faction-gagnante qui crée un nouveau cadre.** Une des deux factions en conflit l'emporte militairement ou politiquement, mais au lieu de simplement marginaliser l'autre faction, elle **crée un nouveau cadre central** qui subordonne les anciennes élites (y compris celles de son propre camp). Dans ce pattern, la figure résolvante n'est pas un tiers — c'est un chef de faction — mais le critère structurel reste satisfait : le cadre qui s'installe ensuite n'est pas la reconduction du conflit factionnel, c'est un ordre nouveau qui transcende le clivage précédent. Ce pattern est particulièrement fréquent quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive.
+Empiriquement, deux trajectoires reviennent dans le corpus. La plus fréquente : la figure résolvante est un **tiers** non affilié aux deux factions — typiquement une figure populiste s'appuyant sur les clientèles délaissées par les deux camps et sur la classe moyenne administrative pour forcer les puissants à plier devant le pouvoir central. Elle offre des concessions et un compromis légal qui en réalité renforcent le pouvoir central ; l'abandon progressif des clientèles par les élites rend ces populations disponibles pour de telles figures. La trajectoire moins fréquente mais tout aussi canonique : un **chef de faction** l'emporte militairement ou politiquement et, au lieu de simplement marginaliser le camp adverse, crée un nouveau cadre central qui subordonne *toutes* les anciennes élites, y compris celles de son propre camp. C'est notamment fréquent quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive.
 
-**Critère structurel invariant.** Ce qui compte, ce n'est pas la provenance de la figure (tiers vs chef de faction) — c'est l'**émergence d'un nouveau cadre central** qui renforce le pouvoir central et subordonne les anciennes élites oligarchiques. Le tiers neutre est une observation empirique fréquente, pas un critère structurel. La résolution se fait par le 1er monarque absolu (cf. `phase_absolutiste.md`).
+Le tiers neutre est une observation empirique fréquente, pas un critère structurel : ne pas confondre l'absence de tiers avec l'absence de résolution. La résolution se fait par le 1er monarque absolu (cf. `phase_absolutiste.md`).
 
 ### Non-résolution
 

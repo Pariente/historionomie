@@ -9,9 +9,10 @@ Charge `references/methode_cartographie.md` et exécute la procédure complète 
 5. **Étape 5** — Vérification de cohérence interne (saillants + marqueurs + test événement par événement).
 6. **Étape 6** — Comparaison tardive avec le corpus.
 7. **Étape 7** — Scoring final et scénario retenu.
-8. **Étape 8** — Produire `references/nations/<slug>/parcours.md` (avec `<slug>` dérivé du nom de la nation : minuscules, sans accents, sans espaces).
-9. **Étape 9** — Produire `references/nations/<slug>/justification.md`.
-10. **Étape 10** — Itérer en dialogue avec moi.
+8. **Étape 8** — Produire `references/nations/<slug>/parcours.md` (avec `<slug>` dérivé du nom de la nation : minuscules, sans accents, sans espaces). Sélectionner soigneusement les faits marquants (highlights) selon le critère « qu'est-ce qui, dans ce parcours précis, est intéressant historionomiquement ? ».
+9. **Étape 9** — Produire `references/nations/<slug>/justification.md`. Section « Questions ouvertes » réservée aux incertitudes finales réelles, pas une liste à remplir.
+10. **Étape 10** — Télécharger et intégrer les images (drapeau, nation-card, illustrations des highlights, portraits des figures-clefs). Régénérer le HTML, mettre à jour `docs/index.html`.
+11. **Étape 11** — Itérer en dialogue avec moi.
 
 Avant de commencer, confirme :
 - Ta compréhension du nom de la nation et du slug que tu vas utiliser pour les fichiers

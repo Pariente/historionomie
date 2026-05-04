@@ -8,7 +8,7 @@ Des institutions peuvent apparaître pendant la phase féodale (parlements, cour
 
 **Les « égaux » de cette phase** sont les grands seigneurs féodaux. La question « entre égaux, quelles règles nous donnons-nous ? » se pose pour la première fois. **Résolution** : le **pacte oligarchique** — les seigneurs codifient collectivement les règles du jeu. C'est un compromis : chacun accepte de perdre un peu de liberté en échange de la garantie de ses droits, de son rôle, et de la stabilité du royaume. Cette stabilité permettra ensuite au souverain de développer une administration centrale et de faire monter une nouvelle classe — les grands serviteurs de l'État — face aux anciens féodaux. Les graines du conflit oligarchique sont plantées.
 
-La phase féodale commence à l'**éveil féodal** (sortie de la pré-féodale, cf. `phase_pre_feodale.md`) et s'achève au **pacte oligarchique**. Durée typique endogène : ~200 ans. Peut être beaucoup plus longue si la phase **boucle** (cf. mécanisme des boucles féodales dans `perturbations.md` §2).
+La phase féodale commence à l'**éveil féodal** (sortie de la pré-féodale, cf. `phase_pre_feodale.md`) et s'achève au **pacte oligarchique**. Durée typique endogène : ~200 ans. Peut durer plus longtemps si les conditions de Deblonde (homogénéité + faiblesse) ne convergent pas au premier cycle pic-crise — la phase féodale **boucle** alors par succession de tentatives de pacte avortées. Chaque cycle est une **occasion prématurée** où le pacte ne peut se faire faute d'homogénéité suffisante, pas un mécanisme structurel de prolongement (cf. `perturbations.md` §2 et §4.4).
 
 ---
 
@@ -103,6 +103,8 @@ La coagulation est ponctuée de **pics féodaux** (rois forts dont le pouvoir pe
 
 **L'alignement des deux moteurs détermine si la coagulation boucle.** Un démarrage précoce du moteur étatique n'est pas un avantage si le moteur culturel est en retard : ce qui compte, c'est que les deux moteurs (État central + homogénéité culturelle) progressent ensemble. Une nation où le moteur étatique démarre tôt mais où l'homogénéité culturelle reste bloquée (population multi-ethnique non encore intégrée) verra sa phase féodale boucler — succession de pics et de crises sans pacte possible. Inversement, une nation où l'homogénéité culturelle progresse en parallèle de l'État (langue qui se stabilise, identité qui se constitue) atteindra le pacte sans blocage structurel.
 
+Chaque crise dans une boucle est une **occasion de pacte qui avorte** parce que l'homogénéité n'est pas encore suffisante ; ce n'est pas la boucle qui cause le retard, c'est la non-convergence des conditions qui produit la boucle. La durée totale de la phase féodale dépend du nombre de cycles avant convergence.
+
 ### Saillant : Éveil féodal
 
 **Définition** : premier chef supra-régional dont l'autorité est effective, qui force les autres élites à se positionner par rapport à lui (alliance ou opposition). C'est le **tout premier saillant du Parcours** — le point de départ de la construction nationale. À partir de là, il y a un centre, et les terroirs s'agrègent autour de lui ou en opposition à lui.
@@ -155,6 +157,15 @@ Un règne tranquille sans projection ni cristallisation d'opposition n'est pas u
 - Régence troublée, souverain incompétent ou empêché, vacance du pouvoir
 - Émergence de demandes de codification de la part des élites (qu'elles aboutissent ou pas)
 
+#### Distinction : crise terminale vs crise de boucle
+
+Toutes les crises féodales d'une phase qui boucle ne sont pas équivalentes pour la datation des saillants :
+
+- **Crise de boucle** : crise qui avorte parce que l'homogénéité est encore insuffisante. Le cycle redémarre par un nouveau pic féodal. Saillant canonique « Crise féodale » individuel + perturbation `insuffisance_interne / avortement`.
+- **Crise terminale** : la dernière crise du cycle, celle qui ouvre effectivement la fenêtre de bascule oligarchique parce que les deux conditions de Deblonde sont enfin réunies. Saillant canonique « Crise féodale » sans perturbation associée (le pacte suit). C'est cette crise qui doit être identifiée pour resserrer la **bascule oligarchique** (typiquement 10-20 ans entre crise terminale et PO).
+
+Note opérationnelle : la bascule oligarchique se mesure à partir de la **crise terminale**, pas de la première crise du cycle. Si une nation a connu plusieurs cycles pic-crise, identifier la crise *terminale* (celle juste avant la convergence des conditions) et resserrer la bascule à partir de là. Cas-type : Florence (boucle guelfe/gibeline 1215-1268, puis crise terminale 1280-1282 avec échec de la Paix Latino, puis bascule 1282-1293 — 11 ans dans la norme).
+
 ---
 
 ## Sous-phase 2 : Bascule oligarchique
@@ -197,15 +208,15 @@ Trois éléments structurels caractérisent l'acte :
 2. **Caractère collectif** — issu d'une assemblée des oligarques (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers, etc.), non d'une décision unilatérale du souverain.
 3. **Moment de faiblesse** — opéré quand les deux conditions (homogénéité + faiblesse) convergent.
 
-#### Deux chemins admis pour produire la stabilité aux successions
+#### Deux mécanismes pour produire la stabilité aux successions
 
-Empiriquement, le corpus présente deux chemins distincts qui produisent le même résultat structurel. Le critère universel est ce qui est atteint, pas le contenu spécifique de la codification.
+Le critère universel est le résultat — la stabilité aux successions est désormais garantie collectivement — pas le contenu spécifique de la codification. Empiriquement, le corpus présente deux mécanismes distincts qui produisent ce même résultat, parfois successivement dans la même nation.
 
-**Chemin A — codification de la succession.** L'acte fixe explicitement qui hérite ou comment l'élection se fait. Le pouvoir survit aux successions parce que la transmission est verrouillée.
+Premier mécanisme : **codification de la transmission**. L'acte fixe explicitement qui hérite ou comment l'élection se fait. Le pouvoir survit aux successions parce que la transmission est verrouillée.
 
-**Chemin B — codification de l'exercice du pouvoir.** L'acte ne traite pas de la succession mais encadre l'exercice du pouvoir (consentement aux nominations, contrôle des finances, des campagnes militaires) au point que le pouvoir cesse d'être le patrimoine personnel du suzerain. Le pouvoir survit aux successions parce que le souverain est devenu accessoire à un appareil institutionnel collégial. Le test empirique du chemin B : un souverain peut être déposé, écarté ou remplacé sans que l'État ne vacille.
+Second mécanisme : **codification de l'exercice du pouvoir**. L'acte ne traite pas de la succession mais encadre l'exercice du pouvoir (consentement aux nominations, contrôle des finances, des campagnes militaires) au point que le pouvoir cesse d'être le patrimoine personnel du suzerain. Le pouvoir survit aux successions parce que le souverain est devenu accessoire à un appareil institutionnel collégial. Test empirique : un souverain peut être déposé, écarté ou remplacé sans que l'État ne vacille.
 
-Les deux chemins sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux successivement (chemin A à un moment, complété par maturation institutionnelle en chemin B), mais c'est la première codification produisant la stabilité aux successions qui ouvre la phase oligarchique.
+Les deux mécanismes sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux successivement (verrouillage de la transmission d'abord, complété ensuite par la maturation institutionnelle qui encadre l'exercice), mais c'est la première codification produisant la stabilité aux successions qui ouvre la phase oligarchique.
 
 #### Distinction avec les créations institutionnelles unilatérales
 

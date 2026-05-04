@@ -1215,6 +1215,14 @@ function showDetail(idx) {{
         'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
         'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
         'Daniele Manin': 'images/venise/daniele-manin.jpg',
+        // Florence
+        'Giano della Bella': 'images/florence/giano-della-bella.jpg',
+        'Laurent de Médicis': 'images/florence/laurent-de-medici.jpg',
+        'Filippo Strozzi': 'images/florence/filippo-strozzi.jpg',
+        'Ferdinand Ier de Médicis': 'images/florence/ferdinand-ier.jpg',
+        'Ferdinand III': 'images/florence/ferdinand-iii.jpg',
+        'Léopold II': 'images/florence/leopold-ii.jpg',
+        'Bettino Ricasoli, Vittorio Emanuele II': 'images/florence/bettino-ricasoli.jpg',
     }};
 
     // Concept descriptions for subtitles

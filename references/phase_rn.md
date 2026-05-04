@@ -199,22 +199,22 @@ Figure autoritaire qui renoue avec la verticalité du pouvoir. Sa coalition gagn
 - Pour les grandes nations : projection extérieure agressive (campagnes militaires, expansion territoriale, ambitions hégémoniques)
 - Construction d'un récit de redressement national contre les humiliations de l'AR ou de l'instabilité révolutionnaire
 
-### Cas particulier : IR partagé entre deux Parcours (hypothèse théorique)
+### Cas particulier : IR porté par une puissance étrangère
 
-Dans certains cas, une même figure historique peut jouer le rôle d'Impérialiste Revanchard pour **deux Parcours nationaux simultanément**. C'est une hypothèse structurelle, identifiée à l'occasion d'un cas où une figure native d'une nation A devient le chef effectif d'une nation B et porte un projet impérialiste qui réalise simultanément l'IR des deux Parcours.
+L'IR peut être porté **non par une figure endogène mais par une puissance étrangère** qui intègre la nation dans son propre projet impérialiste. La figure étrangère est alors l'IR de la nation considérée — qu'elle soit ou non simultanément l'IR de sa propre nation.
 
-**Conditions structurelles d'apparition (hypothèse à valider sur d'autres cas)** :
-- **Proximité culturelle et linguistique fondamentale** entre les deux nations (partage d'une tradition politique, d'une langue, d'une mémoire historique commune)
-- **RN synchrone ou contemporaine** dans les deux Parcours
-- **Figure biographique ambiguë** appartenant structurellement aux deux nations (naissance dans l'une, carrière politique dans l'autre, ou identification idéologique aux deux)
-- **Projet impérialiste qui réalise une idée portée historiquement par les deux nations** (par exemple union pan-nationale recherchée des deux côtés)
+**Critère structurel** : la nation considérée doit être **cadre actif** du projet impérialiste sous direction étrangère — c'est-à-dire que la dynamique IR (projection extérieure, ventilation des élites, verticalité autoritaire, coalition intermédiaire) opère effectivement *pour cette nation*, pas seulement pour la puissance occupante. Cas-types :
+- **Hitler comme IR de l'Autriche** (en plus d'être IR de l'Allemagne) — l'Anschluss intègre activement l'Autriche dans le projet pangermaniste, qui est aussi un projet autrichien historique.
+- **Bonaparte comme IR de Gênes** (selon hypothèse alternative) — la République ligurienne (1797-1805) est cadre actif du projet militaire napoléonien.
 
-**Critères de validation** :
-1. Les fonctions canoniques de l'IR (projection impérialiste extérieure, ventilation des élites, verticalité autoritaire, coalition intermédiaire) sont remplies pour les deux Parcours
-2. La séquence canonique de la RN (révolution initiale → IR → restauration → GR) est préservée pour chaque Parcours
-3. Cette lecture éclaire un élément biographique ou politique qui resterait inexpliqué autrement
+**Contre-exemple** : si la nation est juste **annexée comme marge passive** ou subordonnée à un État fantoche (sans dynamique nationale propre dans le projet), la figure étrangère **n'est pas IR** de cette nation — c'est un avortement de la RN par choc exogène. Cas-type : Bonaparte n'est *pas* l'IR de Florence (Royaume d'Étrurie sous Bourbons-Parme = État fantoche, puis annexion comme simples départements de l'Empire — pas de projet IR toscan).
 
-**Question théorique ouverte** : sous quelles conditions un IR peut-il être partagé entre deux Parcours ? Existe-t-il d'autres cas (IR partagé entre une nation et une diaspora, entre deux nations culturellement proches, entre un empire et son noyau ethnique) ? Hypothèse à conserver et à tester sur d'autres cas du corpus.
+**Conditions à vérifier** :
+1. Les fonctions canoniques de l'IR sont remplies *pour cette nation* (pas seulement pour la puissance occupante).
+2. La séquence canonique de la RN (révolution initiale → IR → restauration → GR) reste lisible pour cette nation.
+3. La nation a une dynamique propre dans le projet — armée nationale, administration nationale, projet politique national, pas simple intégration administrative passive.
+
+**Question théorique ouverte** : sous quelles conditions exactes un IR exogène est-il admissible ? Hypothèse à tester systématiquement sur les cas d'occupation étrangère pendant ce qui ressemble à une RN.
 
 ---
 
@@ -237,6 +237,14 @@ L'IR finit par tomber, de manière exogène (défaite militaire) ou endogène (t
 - Adoption d'une charte ou constitution octroyée qui reconnaît certains acquis révolutionnaires
 - Coexistence tendue entre symboles anciens et institutions nouvelles
 - Tensions politiques récurrentes entre conservateurs (désirant le retour pur à l'AR) et libéraux (désirant l'achèvement parlementaire)
+
+#### Distinction critique : Restauration canonique vs avortement par choc exogène
+
+Une Restauration canonique vient *après* un IR identifiable et clôt une RN qui a parcouru ses sous-phases. Le retour d'un souverain par puissance étrangère **sans** IR préalable n'est **pas** une Restauration canonique : c'est un **avortement par choc exogène**, codé comme perturbation ponctuelle (`type: saillant` + `perturbation: true` + `mechanism: choc_exogene` + `effect: avortement`), pas comme saillant Restauration.
+
+Le critère opérationnel : **y a-t-il eu un IR (endogène ou exogène substantiel) avant ?** Si oui, Restauration canonique possible. Si non, c'est un avortement — la nation retombe en AR (exogène si imposé, endogène sinon), pas en sous-phase Restauration.
+
+Cas-type d'avortement à ne pas confondre avec Restauration : retour de Ferdinand III à Florence (juin 1799) sous protection autrichienne, sans IR préalable — codé comme saillant ponctuel d'avortement, qui rebascule Florence en AR exogène.
 
 ### Saillant : Glorieuse Révolution
 
@@ -295,35 +303,19 @@ Deux configurations :
 
 2. **Les institutions locales sont totalement subordonnées à l'occupant** — le Parcours local est en AR exogène (cf. `phase_absolutiste.md` §AR exogène). Les conditions d'AR (pression fiscale, mobilité bloquée, sédimentation) sont imposées par l'occupant, mais la réaction du peuple est endogène. La RN éclate contre l'occupant directement.
 
-### Phase parlementaire qui suit — active vs contrariée figée
+### Phase parlementaire qui suit — active ou contrariée figée (hypothèse)
 
-Quand une RN aboutit, la phase parlementaire qui s'ouvre peut prendre deux formes selon la dynamique d'élargissement du corps civique :
+Quand une RN aboutit, la phase parlementaire qui s'ouvre est typiquement **active** : le mouvement sinistrogyre canonique fonctionne, le corps civique s'étend progressivement vers l'ensemble de la population au rythme de l'homogénéisation culturelle.
 
-- **Phase parlementaire active** : le mouvement sinistrogyre canonique fonctionne. Le corps civique s'étend progressivement vers l'ensemble de la population au rythme de l'homogénéisation culturelle. C'est la phase parlementaire standard des ENP classiques.
+Une **phase parlementaire contrariée figée** a été proposée comme lecture alternative pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé et stable sans dynamique endogène d'élargissement. Hypothèse en cours d'évaluation, attestée pour Gênes 1528-1797 sous la lecture Philippe — la lecture concurrente est une phase absolutiste à organe collégial autonome (consortium oligarchique). À ne pas mobiliser comme cadre établi tant que d'autres cas n'auront pas été testés.
 
-- **Phase parlementaire contrariée figée** : les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais le corps civique reste fermé et stable sans dynamique endogène d'élargissement vers la population. Caractéristique des configurations où le compromis institutionnel post-RN a produit un cercle représenté strictement intra-aristocratique. La stabilité de ce régime est paradoxalement élevée parce que la fusion élitaire a dissous les factions permanentes qui, dans les ENP actifs, constituent le moteur de l'élargissement.
+Test discriminant entre les deux lectures (à appliquer aux régimes stables et institutionnalisés sur 200+ ans dans une cité-État avec organes collégiaux apparents) :
 
-Ce n'est pas une variante inférieure du parlementarisme — c'est une configuration structurelle distincte, où l'aboutissement de la RN est réel mais prend une forme sans dynamique d'élargissement endogène.
+1. **L'organe exécutif central peut-il agir contre l'intérêt d'une majorité du corps élitaire inscrit ?** Oui → phase absolutiste (institution autonome, type organe de surveillance secret doté de pouvoirs de police/justice sur le patriciat). Non → ENP contrariée (exécutif mandataire du corps, contrôlé, enquêté, limité en durée).
+2. **Existe-t-il une classe administrative distincte du corps élitaire dominant ?** Oui → phase absolutiste (noblesse de robe, fonctionnaires permanents). Non → ENP contrariée (administration auto-recrutée au sein du corps inscrit).
+3. **Le corps inscrit est-il élargi par rapport à la phase oligarchique antérieure ?** Non, même cercle → plutôt phase absolutiste. Oui, élargissement significatif (quelques dizaines → plusieurs centaines de familles, admission régulière) → plutôt ENP contrariée.
 
-### Test discriminant : ENP contrarié figé vs absolutisme collectif forme 2
-
-Les deux patterns produisent des régimes **stables** et **institutionnalisés** sur 200+ ans dans une cité-État, avec des organes collégiaux apparents. Il est facile de les confondre. Le test suivant tranche :
-
-**Question 1 — Le régime a-t-il un organe exécutif central capable d'agir CONTRE l'intérêt d'une majorité du corps élitaire inscrit ?**
-- Oui → forme 2 (institution centrale autonome, type organe de surveillance secret doté de pouvoirs de police/justice sur les membres du patriciat eux-mêmes)
-- Non → ENP contrarié (l'exécutif est structurellement un simple mandataire du corps élitaire, contrôlé, enquêté, limité en durée)
-
-**Question 2 — Existe-t-il une classe administrative distincte du corps élitaire dominant, qui sert d'ossature à l'État central ?**
-- Oui → forme 2 (noblesse de robe, fonctionnaires permanents qui instrumentent la magistrature centrale au service d'un pouvoir au-dessus du patriciat)
-- Non → ENP contrarié (l'administration est auto-recrutée au sein du corps élitaire inscrit, sans classe intermédiaire ; les membres des conseils ET les magistrats exécutifs sortent du même vivier)
-
-**Question 3 — Le corps élitaire inscrit est-il élargi par rapport à la phase oligarchique antérieure ?**
-- Non, même cercle → probablement forme 2 (consolidation absolutiste de l'oligarchie préexistante)
-- Oui, élargissement significatif même s'il reste aristocratique (de quelques dizaines de grandes familles à plusieurs centaines, avec admission régulière de nouveaux inscrits) → probablement ENP contrarié (la RN a produit un élargissement réel même s'il reste intra-aristocratique)
-
-**Règle de décision** : deux OUI aux questions 1-2 → forme 2 absolutiste. Deux NON aux questions 1-2 + OUI à la question 3 → ENP contrarié. Autres combinaisons → cas ambigu, à documenter comme question ouverte.
-
-**Piège typique** : confondre la stabilité de 200+ ans avec une « phase absolutiste longue ». La stabilité, en soi, ne tranche rien — elle caractérise les deux patterns. Le critère décisif est la **position de l'exécutif par rapport aux élites inscrites** (mandataire contrôlé vs autonome au-dessus).
+Deux OUI aux questions 1-2 → phase absolutiste à organe collégial autonome. Deux NON aux questions 1-2 + OUI à la 3 → ENP contrariée. Autres combinaisons → cas ambigu. La stabilité de 200+ ans en soi ne tranche rien : elle caractérise les deux lectures.
 
 ---
 
