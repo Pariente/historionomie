@@ -95,7 +95,37 @@ L'historionomie est une discipline en construction. Si en lisant tu te dis « ti
 
 ---
 
-## 5. Sauvegarder ton travail avec `/ship`
+## 5. Te synchroniser avec `/sync` (à faire au début de chaque session)
+
+Avant de commencer à travailler, il faut **récupérer les dernières modifications** du projet — celles que Thomas (ou toi-même depuis un autre ordinateur) a pu faire entre-temps. Sans ça, tu risques de travailler sur une version périmée.
+
+C'est ce que fait la commande **`/sync`**.
+
+### Ce que `/sync` fait pour toi
+
+1. Vérifie que tu n'as pas de travail non sauvegardé (sinon il s'arrête et te dit de faire `/ship` d'abord).
+2. Te remet sur la branche principale (`master`) — celle qui contient la version officielle du projet.
+3. Télécharge les dernières modifications depuis le serveur (GitHub).
+4. Te dit où tu en es (combien de nouveautés ont été récupérées).
+
+### Comment l'utiliser
+
+Tape simplement, **au tout début de chaque session** :
+```
+/sync
+```
+
+Si tout va bien, tu verras un message du genre « Tu es sur master, à jour. » ou « 3 nouveaux commits récupérés. » Tu peux ensuite travailler normalement.
+
+### À quel moment l'utiliser ?
+
+- **Au début de chaque session de travail.** C'est le réflexe à prendre.
+- **Si Thomas te dit « j'ai mergé ta PR »** ou « j'ai poussé des changements ». Tu lances `/sync` pour récupérer la nouvelle version officielle.
+- **En cas de doute, lance-le.** Il ne fait jamais rien de risqué — au pire, il te dit qu'il y a un problème et s'arrête.
+
+---
+
+## 6. Sauvegarder ton travail avec `/ship`
 
 Quand tu as fini une session de travail (cartographié une nation, fait des corrections, etc.), il faut **sauvegarder** les changements. Sinon, ils restent uniquement sur ton ordinateur et personne d'autre ne peut les voir.
 
@@ -127,7 +157,7 @@ Claude fait tout le reste. Il te montrera ce qu'il s'apprête à faire avant de 
 
 ---
 
-## 6. En cas de problème
+## 7. En cas de problème
 
 - **Claude se trompe ou hallucine** → dis-lui *« non, ce n'est pas ça, vérifie dans le fichier X »*. Il corrigera.
 - **Tu as fait une bêtise** → demande *« annule la dernière modification »* ou *« remets le fichier comme il était »*. Tant que tu n'as pas fait `/ship`, rien n'est définitif.
@@ -136,7 +166,7 @@ Claude fait tout le reste. Il te montrera ce qu'il s'apprête à faire avant de 
 
 ---
 
-## 7. Quelques règles d'or du projet
+## 8. Quelques règles d'or du projet
 
 Thomas tient beaucoup à ces principes (ils sont aussi écrits dans `CLAUDE.md`, que Claude lit automatiquement) :
 
@@ -149,7 +179,7 @@ Tu n'as pas à les retenir : Claude les applique pour toi. Mais c'est utile de s
 
 ---
 
-## 8. Pour aller plus loin
+## 9. Pour aller plus loin
 
 - `CLAUDE.md` — les instructions complètes du projet (Claude les lit automatiquement, mais tu peux y jeter un œil).
 - `references/parcours.md` — le cadre théorique général. **Bonne première lecture.**
