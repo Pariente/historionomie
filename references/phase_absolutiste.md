@@ -14,7 +14,7 @@ La phase absolutiste est structurellement la **centralisation** de l'appareil d'
 
 Le 1er monarque absolu peut prendre des formes très diverses — figure dynastique avec noblesse de robe, organe collégial autonome avec classe administrative, puissance étrangère imposant un cadre, consortium institutionnalisé de créanciers-actionnaires détenant collectivement l'appareil. Ce qui les unifie est le résultat structurel : un appareil central qui peut agir sans frein juridique des oligarques anciens.
 
-Cette lecture abstraite permet d'identifier des cas atypiques où la centralisation s'opère par un appareil **formellement privé** — typiquement, dans une cité-État où la distinction public/privé est faible, un appareil familial-bancaire (Banque Médicis sous Laurent le Magnifique) ou un consortium de créanciers institutionnalisé (Banco di San Giorgio à Gênes) qui exerce les fonctions d'extraction, de coercition et de coordination satisfait fonctionnellement la centralisation. Ce qui compte est l'existence d'un appareil unifié dont les fonctions ne sont plus démembrées entre oligarques, pas son statut juridique. Voir `parcours.md` §Nature de l'appareil étatique pour le principe général.
+Cette lecture abstraite permet d'identifier des cas atypiques où la centralisation s'opère par un appareil **formellement privé** — typiquement, dans une cité-État où la distinction public/privé est faible, un appareil familial-bancaire ou un consortium de créanciers institutionnalisé qui exerce les fonctions d'extraction, de coercition et de coordination satisfait fonctionnellement la centralisation. Ce qui compte est l'existence d'un appareil unifié dont les fonctions ne sont plus démembrées entre oligarques, pas son statut juridique. Voir `parcours.md` §Nature de l'appareil étatique pour le principe général.
 
 ---
 
@@ -144,7 +144,7 @@ Les structures institutionnelles de la phase oligarchique ne disparaissent pas, 
 L'appareil unifié peut se matérialiser de manières très diverses. L'image mentale par défaut — monarque personnel, stable, titré, à la française — est un biais qui masque les configurations atypiques mais structurellement équivalentes. Avant de conclure à l'absence d'un 1er monarque absolu, garder ces configurations en tête sans les traiter comme une grille fermée :
 
 - **Figure dynastique avec administration distincte.** Souverain individuel régnant pendant ou après la guerre sociale, qui émet l'acte fondateur (édit de pacification, ordonnance d'unification, codification) et s'appuie sur une classe administrative distincte (noblesse de robe, fonctionnariat) recrutée hors de l'ancienne aristocratie. La continuité dynastique ensuite est un indice fort : le successeur hérite d'un cadre déjà établi.
-- **Appareil familial-bancaire dans cité-État.** Dans une cité-État où la distinction public/privé est faible, la centralisation peut s'opérer par un réseau privé (typiquement bancaire) plutôt qu'une bureaucratie publique formelle : la famille dirigeante exerce les fonctions de l'appareil central (extraction fiscale, financement des charges, coordination diplomatique, récompense-sanction des élites) via un appareil parallèle qui satisfait fonctionnellement la centralisation. Cas-type : Laurent le Magnifique à Florence (Conseil des Settanta supplantant la Signoria à mandats courts + Banque Médicis comme appareil de pouvoir parallèle, succursales internationales tenant lieu de réseau d'agents). Typiquement fragile face aux chocs exogènes — voir `parcours.md` §Taille sur les ingérences étrangères dans les petites nations.
+- **Appareil familial-bancaire dans cité-État.** Dans une cité-État où la distinction public/privé est faible, la centralisation peut s'opérer par un réseau privé (typiquement bancaire) plutôt qu'une bureaucratie publique formelle : la famille dirigeante exerce les fonctions de l'appareil central (extraction fiscale, financement des charges, coordination diplomatique, récompense-sanction des élites) via un appareil parallèle qui satisfait fonctionnellement la centralisation. La forme typique combine une magistrature exécutive cooptée à mandat long (supplantant les magistratures à mandats courts du régime communal antérieur) et une banque dynastique-familiale dont les succursales internationales tiennent lieu de réseau d'agents diplomatiques et de canaux de financement non-publics. Typiquement fragile face aux chocs exogènes — voir `parcours.md` §Taille sur les ingérences étrangères dans les petites nations.
 - **Organe collégial autonome.** Magistrature, commission ou conseil exécutif identifiable comme l'organe résolvant la guerre sociale, qui émerge **au-dessus** du patriciat et peut agir contre lui, durable et survivant aux changements de personnel. S'appuie également sur une classe administrative distincte des oligarques.
 - **Puissance étrangère.** Tiers exogène qui balaie les anciennes factions oligarchiques et installe un nouveau cadre administratif (préfets, codifications imposées, nouvelle aristocratie de service) quand la dynamique endogène n'y parvient pas. Le cadre reste structurellement absolutiste dès lors que le test discriminant est satisfait après l'imposition.
 - **Consortium oligarchique institutionnalisé.** Configuration spécifique aux cités-États où l'homogénéisation des élites achève la fusion en bloc unifié *avant* que la construction de l'État central ne produise un appareil autonome. L'appareil (fiscalité, administration territoriale, armée, coercition) se construit comme **propriété collective institutionnalisée** des oligarques, typiquement sous forme d'un consortium de créanciers-actionnaires qui absorbe progressivement les fonctions d'État par transfert depuis un commune faible. Trait empirique décisif : quand une faction capture l'exécutif politique (dogat, magistrature suprême), elle n'accède pas au contrôle du consortium, qui reste gouverné collectivement par les oligarques-créanciers incluant ceux de la faction perdante. Le consortium exerce toutes les fonctions absolutistes sur la population et sur les territoires soumis, mais reste par construction incapable d'agir contre ses propriétaires-créanciers.
@@ -239,17 +239,31 @@ Marqueurs récurrents : multiplication des guerres d'agression, début ou intens
 - Recul commercial structurel (perte de marchés externes, contraction des routes commerciales contrôlées)
 - Recentrage économique sur le territoire propre (investissements infrastructurels internes, productivité agricole et industrielle plutôt que butin extérieur)
 
+### Le cycle de la classe administrative intermédiaire (Pariente)
+
+Les saillants **Remontrance** (fin d'impérialisme) et **Réformes échouées** (fin d'AR) sont **deux moments d'un même mécanisme** (Pariente) : le cycle de vie de la classe administrative intermédiaire créée par l'absolutisation.
+
+**Le mécanisme** : pour court-circuiter les anciennes oligarchies pendant l'absolutisation, l'exécutif s'appuie sur une classe administrative qu'il crée (noblesse de robe, intendants, fonctionnaires de cour, parlementaires nommés, patriciat administratif). Cette classe est l'instrument de la centralisation pendant l'impérialisme. À mesure qu'elle s'enracine, elle développe sa propre conscience corporative et parle deux fois :
+
+- **En fin d'impérialisme** : *« reconnaissez-nous »* — la classe revendique la collégialité de l'exercice du pouvoir, demande la responsabilité ministérielle, le contrôle fiscal, la consultation obligatoire. C'est la **Remontrance**, qui échoue parce que l'exécutif ne veut pas céder et est encore assez fort. L'échec ferme la dernière voie de réforme institutionnelle pacifique et ouvre l'AR.
+- **En fin d'AR** : *« nous ne céderons rien »* — la classe, désormais sédimentée, héréditarisée, occupant tous les postes, bloque chaque tentative du souverain de réformer le cadre. Ce sont les **Réformes échouées**, dont la récurrence + l'épuisement + la dette accumulée forcent la convocation d'une institution représentative qui déclenche l'éclatement.
+
+**Deux conditions d'activation** :
+
+1. **Existence d'une classe administrative créée par l'absolutisation et distincte du bloc oligarchique**. Sans elle, ni Remontrance ni Réformes échouées. Cas typique d'absence : configuration où le patriciat *est* l'appareil — consortium oligarchique institutionnalisé (Gênes), patriciat républicain (Suisse, qui a une Remontrance en mode intellectuel mais pas de Réformes échouées). Dans ces configurations, la classe qui devrait remontrer ou bloquer ne peut se distinguer de l'appareil.
+2. **L'AR doit mûrir assez pour que la sédimentation soit terminale**. La Remontrance survient à la transition impérialisme → AR ; les Réformes échouées sont un phénomène d'AR mature. Si l'AR est interrompu prématurément (cités-États italiennes face à Bonaparte), gelé exogènement (Bavière sous suzeraineté prussienne), ou exogène dès le départ (AR sous tutelle étrangère), la Remontrance peut être survenue mais les Réformes échouées n'ont pas le temps d'apparaître.
+
+**Cas singulier : classe admin sans corps charté** (Florence). La classe admin existe sociologiquement (clergé urbain, patriciat sédimenté, fidéicommissaires) sans être chartée en corps représentatif distinct (pas de Maggior Consiglio, pas de Cortès, pas de parlement) — le bloc bloqueur opère sans véhicule pour formuler une Remontrance. Réformes échouées présentes (Pierre-Léopold), Remontrance absente. Cas intermédiaire entre activation pleine et absence.
+
 ### Saillant : Remontrance (tournant impérialisme → ancien régime)
 
-**Définition** : la dernière tentative de la classe administrative, parlementaire ou aristocratique de reprendre des prérogatives au pouvoir absolu **par les voies institutionnelles**. Elle échoue systématiquement — et son échec marque l'entrée en ancien régime, en fermant la dernière voie de réforme.
+**Définition** : moment où la classe administrative intermédiaire revendique la collégialité de l'exercice du pouvoir par les voies institutionnelles. Elle échoue systématiquement — et son échec marque l'entrée en ancien régime, en fermant la dernière voie de réforme.
 
-Le mécanisme est constant : les élites qui ont été intégrées à l'appareil absolutiste (noblesse de robe, parlementaires, patriciat administratif) tentent de redistribuer le pouvoir en leur faveur. Elles n'ont pas la force de renverser l'exécutif (ce n'est pas une DGRO — elles n'ont pas d'assise territoriale armée), mais elles ont assez de poids institutionnel pour formuler une exigence formelle. L'exécutif écoute, puis ignore ou écrase la tentative.
+**Test discriminant** :
 
-**Test discriminant** : qu'est-ce qui distingue la remontrance d'une autre contestation ?
-
-1. **Acteurs intégrés à l'appareil absolutiste** — la remontrance vient de la classe administrative ou parlementaire intégrée, pas des oligarques traditionnels (qui n'ont plus de force depuis la DGRO ou l'absorption)
+1. **Acteurs intégrés à l'appareil absolutiste** — la Remontrance vient de la classe administrative, parlementaire ou patricienne intégrée, pas des oligarques traditionnels (qui n'ont plus de force depuis la DGRO ou l'absorption)
 2. **Voie institutionnelle, pas armée** — pétition formelle, déclaration collective d'un corps institutionnel, projet de réforme ; pas une révolte
-3. **Échec systématique** — l'exécutif rejette ou vide la remontrance de sa substance ; elle ne produit aucune redistribution durable du pouvoir
+3. **Échec systématique** — l'exécutif rejette ou vide la Remontrance de sa substance ; elle ne produit aucune redistribution durable du pouvoir
 
 **Signes observables** :
 - Pétition formelle ou déclaration collective d'un corps institutionnel intégré à l'appareil absolutiste (parlement de cour, assemblée parlementaire, conseil du patriciat, équivalents)
@@ -257,7 +271,7 @@ Le mécanisme est constant : les élites qui ont été intégrées à l'appareil
 - Réponse de l'exécutif : rejet pur, ignorance, ou octroi de réformes vidées de leur substance ensuite
 - Pas de répression armée massive (les remontrants ne sont pas des rebelles ; ils sont des élites intégrées qui ont simplement échoué à obtenir gain de cause)
 
-**Distinction avec la DGRO** : la DGRO est une révolte armée des oligarques à base territoriale, en sous-phase d'absolutisation. La remontrance est une contestation institutionnelle d'élites intégrées, en fin de sous-phase d'impérialisme. Une nation peut avoir l'une, l'autre, les deux, ou aucune.
+**Distinction avec la DGRO** : la DGRO est une révolte armée des oligarques à base territoriale, en sous-phase d'absolutisation. La Remontrance est une contestation institutionnelle d'élites intégrées, en fin de sous-phase d'impérialisme. Une nation peut avoir l'une, l'autre, les deux, ou aucune.
 
 ---
 
@@ -278,7 +292,28 @@ L'ancien régime, contrairement aux autres phases, ne s'achève pas par une tran
 - Croissance économique soutenue, alphabétisation de masse, expansion de la langue nationale, infrastructures commerciales
 - Tensions fiscales croissantes (l'État s'endette pour la cour et les engagements militaires antérieurs)
 - Apparition d'une littérature critique du régime tolérée puis combattue
-- **Tentatives de réforme par le souverain qui échouent systémiquement** — le souverain (souvent par influence des Lumières ou autre courant réformateur) tente massivement de réformer mais bute sur l'incapacité systémique de la nation à se réformer en AR. Cas-types : Louis XVI (Turgot, Necker, Calonne, Brienne), Joseph II (révolte des Pays-Bas, retour partiel), Pierre-Léopold de Toscane (constitution Gianni 1779-1782 abandonnée, émeute Prato 1787 contre les réformes religieuses), Charles III d'Espagne. Le terme « despotisme éclairé » est ambigu (Louis XIV en était également) ; le marqueur structurel est l'**échec systémique des tentatives**, pas leur radicalité.
+- **Tentatives de réforme par le souverain qui échouent systémiquement** — élevé au rang de saillant canonique « Réformes échouées » (cf. infra).
+
+### Saillant : Réformes échouées
+
+**Définition** : séquence de tentatives de réforme structurelle par le souverain ou ses ministres, systématiquement bloquées par la classe administrative intermédiaire désormais sédimentée. C'est le second moment du cycle de cette classe (cf. supra « Le cycle de la classe administrative intermédiaire »).
+
+**Test discriminant** :
+
+1. **Réformes structurelles, pas correctifs** — les tentatives portent sur le cadre (suppression de privilèges, fiscalité universelle, codification du droit, libération du commerce, suppression d'ordres). Pas une simple mesure d'opportunité.
+2. **Initiative par le sommet** — la réforme est portée par le souverain ou un ministre qu'il soutient, pas par un corps institutionnel exigeant (qui serait une Remontrance).
+3. **Blocage par la classe sédimentée** — la réforme est défaite par les bénéficiaires structurels du système (cour, parlements, noblesse, clergé, fidéicommissaires), pas par une révolution populaire.
+4. **Récurrence (Deblonde)** — c'est le marqueur central : plusieurs tentatives successives avec ministres différents et programmes différents, toutes défaites par le même bloc. La récurrence révèle que le souverain comprend le besoin de réformer mais qu'aucune voie ne converge — c'est l'incapacité structurelle qui se manifeste, pas un échec ponctuel. L'observation est due à Antoine Deblonde : l'intéressant n'est pas que les tentatives échouent (elles pourraient échouer pour mille raisons contingentes), mais qu'elles s'enchaînent en séquence, ce qui ne s'explique que structurellement.
+
+**Signes observables** :
+- Plusieurs ministres-réformateurs séquentiels, chacun renvoyé après échec d'un programme cohérent (cas-type : Maupeou, Turgot, Necker, Calonne, Brienne en France ; Pierre-Léopold à Florence ; Cecil, Wentworth, Strafford-Laud en Angleterre)
+- Édits royaux, projets de constitution, programmes de modernisation administrative formellement annoncés puis abandonnés ou vidés de substance
+- Émeutes, refus institutionnels, opposition parlementaire ou nobiliaire concentrée à chaque tentative
+- L'État finit par convoquer une institution représentative (États généraux, Diète, équivalent) en désespoir de cause — ce qui ouvre la fenêtre de l'éclatement
+
+**Style des tentatives selon les bloqueurs** : le style varie selon que les bloqueurs sont eux-mêmes Crown-créés (parlements de robe sédimentés en France, magnats aulici en Hongrie) ou autonomes pré-existants (Common Law + Parlement en Angleterre). Dans le premier cas, les tentatives s'enchaînent par voie négociée puis échec interne (Maupeou-Brienne). Dans le second, le souverain peut basculer vers le contournement-durcissement après que les voies négociées ont échoué (Cecil 1610 négocié → Strafford-Laud 1629-1640 par contournement parlementaire). Le mécanisme structurel est le même : sédimentation qui bloque ; la forme prise par les tentatives s'adapte aux blocages rencontrés.
+
+**Distinction avec la Remontrance** : la Remontrance est l'initiative *du corps institutionnel* contre l'exécutif, en fin d'impérialisme. Les Réformes échouées sont à l'inverse l'initiative *de l'exécutif* contre le bloc élitaire devenu sédimenté, en AR mature. Mais c'est la même classe qui parle deux fois : d'abord pour exiger la collégialité, ensuite pour refuser toute redistribution. Cf. supra « Le cycle de la classe administrative intermédiaire » pour les conditions d'activation et les cas d'absence.
 
 ### Le clivage gauche-droite se reconfigure
 
@@ -304,7 +339,7 @@ L'AR ne s'achève pas par une transition ordonnée. Pour qu'il **éclate de faç
 
 Tant que l'un des deux critères manque, l'AR perdure. Si un choc exogène arrive avant que la maturité endogène ne soit atteinte, l'AR éclate quand même mais **prématurément** — la RN qui suit peut malgré tout aboutir si elle n'est pas écrasée par puissance extérieure (cf. `phase_rn.md` §Conditions de sortie).
 
-Ce critère explique pourquoi certains AR durent au-delà de la norme. Cas-types : Florence (1670-1796, 126 ans — discrédit oui, ruine financière non car les réformes léopoldines assainissent), Venise (1718-1848, 130 ans), Piémont (1748-1861, 113 ans).
+Ce critère explique pourquoi certains AR durent au-delà de la norme — typiquement quand le discrédit est avéré mais qu'un souverain réformateur ou une situation budgétaire contenue empêche la convergence avec une ruine financière effective.
 
 ---
 

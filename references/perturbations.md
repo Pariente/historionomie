@@ -37,6 +37,21 @@ Le Parcours de construction nationale peut être perturbé par des événements 
 
 Le **choc exogène** est le seul mécanisme polyvalent — son effet dépend de ce que le choc fait. Les autres mécanismes sont chacun couplés à un effet dominant.
 
+### Principe structurel : prolongement/accélération encodent une variation d'homogénéité
+
+Au-delà du tableau de couplage, les effets `prolongement` et `accélération` répondent à une logique structurelle universelle : **ils encodent une variation de l'homogénéité effective du corps politique de la nation**.
+
+- **Prolongement** : l'hétérogénéité augmente — par intégration effective d'une marge culturellement distincte (choc d'hétérogénéité), ou par détournement continu de l'énergie élitaire vers l'extérieur (exutoire) qui ralentit le moteur d'homogénéisation. La phase en cours dure plus longtemps.
+- **Accélération** : l'homogénéité augmente — par perte d'un territoire effectivement digéré qui ramène le noyau à son échelle naturelle (correction d'échelle), par modernisation administrative imposée qui homogénéise par contrainte (choc exogène modernisateur), ou par suppression d'un exutoire qui force le recentrage interne (choc exogène fin d'exutoire militaire). La phase en cours se résout plus vite.
+
+**Le canal territorial est le plus fréquent, pas l'automatique**. La conquête ou la perte est le canal habituel, mais le critère décisif n'est jamais le changement nominal de souveraineté — c'est la **digestion effective** : administration directe par du personnel issu du noyau, droit imposé depuis le noyau, mobilisation durable des élites centrales. Trois cas-type pour ancrer l'intuition :
+
+- *Doublement bavarois sous Napoléon (1806)* : intégration directe par administration Montgelas → choc d'hétérogénéité / prolongement.
+- *Possessions européennes des Habsbourg avant 1714* : laissées en union personnelle, jamais digérées par le noyau castillan → **pas de perturbation structurelle**, malgré l'ampleur territoriale.
+- *Stato da Mar vénitien* : administré par provveditori issus du patriciat → choc d'hétérogénéité / prolongement, exutoire principal de la phase oligarchique.
+
+Le canal non territorial existe aussi : modernisation administrative imposée par une puissance occupante, conquête culturelle qui hétérogénéise par voie linguistique ou élitaire sans changer la superficie (codée `territorial: false`). Cf. §3 pour la dimension territoriale détaillée.
+
 ### Affichage sur la frise
 
 Les perturbations sont affichées comme des **losanges** (◆) pour les distinguer des saillants normaux (●). La **couleur** encode l'effet, l'**icône** encode le mécanisme.

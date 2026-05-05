@@ -189,32 +189,30 @@ C'est le déclencheur de la polarisation : les deux classes d'élites, prébendi
 
 Le progrès technique et l'homogénéisation socioculturelle font que l'administration parallèle finit par doubler toutes les administrations oligarchiques. Les activités de la classe patrimoniale deviennent elles aussi de plus en plus faciles à contrôler par l'exécutif central. Les élites patrimoniales se rallient donc progressivement à l'administration, abandonnant leurs clientèles rurales.
 
-### L'expansion retarde la polarisation
+### L'exutoire retarde la polarisation, l'État central grossissant la rend inéluctable
 
-L'expansion extérieure peut considérablement retarder la polarisation. Tant que les élites disposent de débouchés extérieurs (conquêtes, commerce, colonies), la lutte pour le contrôle de l'État central ne devient pas la question vitale — les tensions sont absorbées par l'exutoire. C'est un mécanisme structurel : la phase ne transitionne pas tant qu'une condition essentielle (saturation de l'exutoire) n'est pas remplie.
+Le mécanisme central de la phase oligarchique est l'arbitrage des élites entre **enrichissement extérieur** et **contrôle de l'État central**. Tant que les élites disposent de moyens d'enrichissement et d'aventures *extérieurs* — conquêtes territoriales, commerce dominant, débouchés coloniaux, mercenariat —, l'essor oligarchique continue : leur énergie compétitive est absorbée par l'extérieur, et la lutte interne pour le contrôle de l'appareil central est différée. C'est l'exutoire.
+
+Quand l'exutoire se ferme — par saturation, défaite, ou fermeture structurelle des débouchés —, l'arbitrage bascule. Il devient évident pour toutes les élites que l'**enjeu principal du pouvoir est désormais le contrôle de l'État central** pour bénéficier de ses prébendes (charges, contrats, faveurs fiscales, monopoles, justice). Cette bascule est amplifiée par un mécanisme cumulatif : tout au long de la phase oligarchique, l'État central **grossit** continuellement (fisc qui s'étend, administration qui se densifie, justice qui s'unifie, armée permanente qui s'étoffe), accroissant au fur et à mesure la **criticalité** d'en avoir le contrôle. Plus la phase avance, plus le contrôle de l'État représente un gain élevé — et donc plus la polarisation factionnelle qui suit la fin de l'exutoire est intense.
+
+Le corollaire est immédiat : sans exutoire, la phase oligarchique est plutôt courte (la polarisation s'enclenche tôt) ; avec un exutoire actif et durable, la phase peut être considérablement prolongée. C'est un mécanisme structurel : la phase ne transitionne pas tant qu'une condition essentielle (saturation de l'exutoire) n'est pas remplie.
 
 **Condition essentielle : les territoires acquis doivent être directement administrés par la nation.** L'exutoire ne fonctionne que si les élites ont quelque chose à *prendre* de l'expansion — des charges, des terres, des revenus accessibles via l'administration centrale. Si les administrations locales des territoires acquis restent intactes (union personnelle, lien de suzeraineté, administration déléguée à des structures privées), les élites de la nation conquérante n'y ont pas accès et l'expansion ne sert pas d'exutoire.
 
 ### Test formel d'exutoire (trois questions binaires)
 
-**Avant d'invoquer un exutoire colonial pour expliquer une phase oligarchique longue, appliquer systématiquement les trois questions suivantes. Il faut répondre OUI aux trois pour qu'il y ait vrai exutoire.**
+**Avant d'invoquer un exutoire colonial pour expliquer une phase oligarchique très longue (au-delà de ~250 ans), appliquer systématiquement les trois questions suivantes. Il faut répondre OUI aux trois pour qu'il y ait *vrai exutoire étatique*.**
 
 1. **Administration directe ?** Les territoires acquis sont-ils administrés par des fonctionnaires **issus du noyau national** et **nommés par l'État central** (vice-rois, intendants, gouverneurs, audiencias) — ou bien par des structures locales, des sociétés privées, des banques semi-autonomes, ou des seigneurs-administrateurs locaux ?
 2. **Revenus fiscaux centraux ?** Les revenus extraits des territoires arrivent-ils dans les caisses de l'État central du noyau — ou bien dans des structures intermédiaires (banques, compagnies privées, confréries marchandes) qui les redistribuent à leurs seuls investisseurs ?
 3. **Accès élitaire central ?** Les élites de la nation conquérante peuvent-elles *prendre* des charges coloniales **via l'administration centrale** (mobilité organisée par l'État) — ou bien l'accès passe-t-il par des réseaux privés, des parts de société, des liens familiaux hors du cadre étatique ?
 
-**Trois OUI** → vrai exutoire, prolonge la phase en cours.
-**Un NON ou plus** → exutoire faible ou inexistant, ne pas l'invoquer pour expliquer une phase longue. La longueur doit s'expliquer autrement (perturbations exogènes répétées, blocage d'un moteur, non-résolution d'une guerre sociale).
+**Trois OUI** → vrai exutoire étatique, prolonge la phase en cours de manière maximale (jusqu'à plusieurs siècles).
+**Un NON ou plus** → exutoire étatique faible ou inexistant. La nation peut néanmoins disposer d'un **quasi-exutoire** : toute dynamique extérieure qui enrichit les élites individuellement et canalise leur énergie vers l'extérieur sans passer par l'appareil d'État central. Un quasi-exutoire retarde la polarisation tant qu'il fonctionne, mais ne prolonge pas la phase aussi durablement qu'un vrai exutoire étatique : il dépend de conditions extérieures qui peuvent l'effondrer brutalement.
 
-### Structures qui NE comptent pas comme exutoire
+### Structures qui NE comptent pas comme vrai exutoire étatique
 
-Le test formel disqualifie typiquement les configurations suivantes (à reconnaître pour ne pas les confondre avec un vrai empire intégré) :
-
-- **Sociétés commerciales privées** (mahonas, compagnies à charte, factoreries) : géraient des colonies pour leurs investisseurs, pas pour la nation. Quasi-absence de l'État central dans l'administration coloniale.
-- **Banques semi-autonomes** ou caisses publiques institutionnellement détachées de la couronne : peuvent administrer des territoires mais le font pour leurs créanciers, pas pour la nation.
-- **Comptoirs marchands privés** (factoreries, entrepôts) : accessibles via réseaux familiaux, pas via mobilité administrative centrale.
-- **Seigneurs-administrateurs locaux** avec autonomie large (gouverneurs héréditaires, podestà locaux auto-recrutés).
-- **Banques privées de cour** finançant directement une couronne étrangère via contrats privés (asientos, prêts garantis sur les revenus coloniaux d'un autre État) : l'État central du noyau ne tire pas de revenus de ces opérations — ce sont des contrats privés. Pas un exutoire étatique.
+Le test formel disqualifie les configurations où l'administration des territoires acquis échappe à l'État central et où ses élites n'y accèdent pas par mobilité administrative organisée par l'État. Le critère structurel commun de toutes ces configurations est le **découplage entre la projection extérieure et l'appareil central** : les élites peuvent y trouver un enrichissement extérieur (donc un quasi-exutoire), mais l'État central n'en tire ni revenus stables ni travail d'intégration des marges, et le grossissement de l'appareil n'est donc pas alimenté par cette projection.
 
 ### Saillant terminal de la sous-phase
 

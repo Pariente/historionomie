@@ -62,7 +62,8 @@ h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#
 h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
 h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
 .h3-icon { font-size:1.1rem; flex-shrink:0; }
-h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h4 { font-size:1rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
 .anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
 h2:hover .anchor, h3:hover .anchor { opacity:1; }
 
@@ -186,76 +187,167 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 </div>
 <div class="toc-grid">
 <nav class="toc"><h2>Sommaire</h2><ul>
-<li><a href="#phase-parlementaire-l-état-nation-parlementaire-enp">Phase parlementaire — l&#x27;État-nation parlementaire (ENP)</a></li>
+<li><a href="#l-état-nation-parlementaire-enp-état-canonique">L&#x27;État-nation parlementaire (ENP) — état canonique</a></li>
 <ul>
 <li><a href="#la-citoyenneté-est-un-processus">La citoyenneté est un processus</a></li>
 <li><a href="#mécanique-intégration-progressive-des-exclus">Mécanique : intégration progressive des exclus</a></li>
 <li><a href="#le-choix-de-bastiat-et-la-pente-vers-la-social-démocratie">Le choix de Bastiat et la pente vers la social-démocratie</a></li>
-<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
-<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
+<li><a href="#condition-d-homogénéité">Condition d&#x27;homogénéité</a></li>
+</ul>
+<li><a href="#comment-identifier-la-phase-parlementaire">Comment identifier la phase parlementaire</a></li>
+<ul>
+<li><a href="#test-discriminant-parlementaire-vs-rn-tardive">Test discriminant (parlementaire vs RN tardive)</a></li>
+<li><a href="#test-discriminant-parlementaire-vs-technocratique">Test discriminant (parlementaire vs technocratique)</a></li>
+<li><a href="#marqueurs-nécessaires-de-l-enp">Marqueurs nécessaires de l&#x27;ENP</a></li>
+<li><a href="#marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)</a></li>
+<li><a href="#différencier-de-configurations-voisines-non-parcours">Différencier de configurations voisines non-Parcours</a></li>
 </ul>
 <li><a href="#phase-technocratique-dégénérescence-de-l-enp">Phase technocratique — dégénérescence de l&#x27;ENP</a></li>
 <ul>
-<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
+<li><a href="#test-discriminant-technocratique-vs-dominat">Test discriminant (technocratique vs dominat)</a></li>
+<li><a href="#signes-observables">Signes observables</a></li>
 </ul>
 <li><a href="#dominat">Dominat</a></li>
 <ul>
-<li><a href="#marqueurs-forts">Marqueurs forts</a></li>
-<li><a href="#parallèle-avec-l-ancien-régime-absolutiste">Parallèle avec l&#x27;Ancien Régime absolutiste</a></li>
+<li><a href="#signes-observables">Signes observables</a></li>
+<li><a href="#parallèle-avec-l-ancien-régime-absolutiste">Parallèle avec l&#x27;ancien régime absolutiste</a></li>
+<li><a href="#question-théorique-ouverte-sortie-du-dominat">Question théorique ouverte : sortie du dominat</a></li>
 </ul>
+<li><a href="#vue-corpus">Vue corpus</a></li>
 </ul></nav>
 <article>
-<h2 id="phase-parlementaire-l-état-nation-parlementaire-enp">Phase parlementaire &mdash; l'État-nation parlementaire (ENP)<a class="anchor" href="#phase-parlementaire-l-état-nation-parlementaire-enp">#</a></h2>
-<p>Aboutissement du Parcours de construction nationale. L'appareil de l'État central est <strong>subordonné à la représentation nationale</strong> à travers un parlement. La chambre basse est la source ultime du pouvoir. La phase parlementaire est très stable et peut durer très longtemps.</p>
+<p>La phase parlementaire est l'<strong>aboutissement</strong> du Parcours de construction nationale. L'appareil de l'État central est subordonné à la représentation nationale à travers un parlement. La chambre basse est la source ultime du pouvoir. La phase parlementaire est très stable et peut durer très longtemps.</p>
+<p>Elle peut cependant <strong>dégénérer</strong> : la croissance de l'État administratif peut amener une <strong>phase technocratique</strong> (l'administration concurrence la représentation), puis un <strong>dominat</strong> (l'administration <em>est</em> le pouvoir effectif). Ces dégénérescences ne sont pas des phases distinctes au sens canonique &mdash; elles sont des états successifs au sein de la phase parlementaire, qui se referme structurellement en reboot d'ancien régime quand le dominat est atteint.</p>
+<p>La phase parlementaire commence à la <strong>Glorieuse Révolution</strong> (cf. <code>phase_rn.md</code>). Sa durée n'est pas bornée par avance &mdash; c'est la phase « ouverte » du Parcours.</p>
+<hr>
+<h2 id="l-état-nation-parlementaire-enp-état-canonique">L'État-nation parlementaire (ENP) &mdash; état canonique<a class="anchor" href="#l-état-nation-parlementaire-enp-état-canonique">#</a></h2>
 <h3 id="la-citoyenneté-est-un-processus">La citoyenneté est un processus<a class="anchor" href="#la-citoyenneté-est-un-processus">#</a></h3>
-<p>La définition de « citoyen » peut être conditionnelle et s'élargir progressivement. L'Angleterre est un ENP dès la Glorieuse Révolution de 1688, bien avant le suffrage universel &mdash; c'est un processus. De même, Athènes ou Corinthe excluaient les femmes, les étrangers et les esclaves : cela n'enlève rien au caractère parlementaire de ces cités, car dans le référentiel civilisationnel de la Grèce du IVe siècle, ces catégories étaient considérées comme des biens, pas comme des citoyens potentiels.</p>
-<p>Le marqueur structurel n'est pas « tous les habitants votent », mais « l'appareil d'État est subordonné à la représentation nationale ».</p>
+<p>La définition de « citoyen » peut être conditionnelle et s'élargir progressivement. Une nation peut être en ENP bien avant d'avoir atteint le suffrage universel &mdash; c'est un processus d'élargissement progressif du corps civique. De même, une cité ancienne pouvait exclure structurellement certaines catégories (femmes, étrangers, esclaves) : cela n'enlève rien au caractère parlementaire de cette cité dès lors que son corps civique se gouvernait par représentation.</p>
+<p>Le marqueur structurel n'est pas « tous les habitants votent », mais « <strong>l'appareil d'État est subordonné à la représentation nationale</strong> » (le corps civique inscrit, quelle qu'en soit l'extension à un moment donné).</p>
 <h3 id="mécanique-intégration-progressive-des-exclus">Mécanique : intégration progressive des exclus<a class="anchor" href="#mécanique-intégration-progressive-des-exclus">#</a></h3>
 <p>La phase parlementaire résout les tensions sociales <strong>pacifiquement</strong>. Tout au long de la phase, l'extrême-gauche (le camp des exclus &mdash; ceux qui n'ont pas de siège à la table des négociations) fait intégrer, petit à petit, les exclus dans le système.</p>
-<p>En France : suffrage censitaire, puis élargi, puis universel masculin. Mais pas seulement le vote &mdash; aussi les règles du jeu, rendues progressivement plus équitables : droit du travail, protections sociales, congés payés, sécurité de l'emploi. Les ouvriers ont progressivement tout obtenu et ont cessé de voter à gauche dès les années 1970-1980. Un ouvrier français propriétaire de son lotissement, avec une voiture, les 37 heures, les congés payés et la sécurité de l'emploi est suffisamment embourgeoisé pour ne plus être révolutionnaire.</p>
-<p>C'est la raison pour laquelle l'EG se déplace : quand un groupe d'exclus est intégré, l'EG représente les <em>nouveaux</em> exclus. En France aujourd'hui, l'EG représente presque exclusivement les intérêts de la classe des nouveaux exclus (les immigrés afro-arabo-musulmans).</p>
+<p>L'élargissement ne se réduit pas au droit de vote : il s'étend aux règles du jeu (droit du travail, protections sociales, couverture santé, droit civil) qui rendent progressivement le système plus inclusif pour les groupes intégrés. Quand un groupe d'exclus est intégré, il cesse de soutenir l'EG et se déplace vers le centre. <strong>L'EG se déplace alors vers les nouveaux exclus</strong> &mdash; c'est-à-dire les groupes qui apparaissent comme structurellement extérieurs au corps civique au moment considéré (nouveaux entrants culturellement distants, populations à statut précaire, etc., selon le contexte).</p>
+<p>Cette dynamique est le <strong>mouvement sinistrogyre</strong> appliqué au corps civique : nouveaux entrants à gauche, dérive vers le centre en s'installant, conservatisme à droite (cf. <code>elites.md</code>).</p>
 <h3 id="le-choix-de-bastiat-et-la-pente-vers-la-social-démocratie">Le choix de Bastiat et la pente vers la social-démocratie<a class="anchor" href="#le-choix-de-bastiat-et-la-pente-vers-la-social-démocratie">#</a></h3>
-<p>Quand un groupe obtient un siège à la table des négociations, il peut soit utiliser le pouvoir politique pour <strong>mettre fin à la spoliation légale</strong> (l'utilisation de l'impôt pour financer des activités dont on bénéficie soi-même), soit pour <strong>y prendre part</strong>. La pente naturelle est d'y prendre part &mdash; et c'est toujours ce qui se passe.</p>
-<p>Conséquence : la taille de l'État central croît, et croît plus qu'elle ne l'a jamais fait dans aucune autre phase du Parcours. Progressivement s'installe un régime très socialiste et néanmoins démocratique : la <strong>social-démocratie</strong>. La nation couvre l'ensemble de ses membres par la sécurité sociale, la solidarité nationale, la redistribution.</p>
-<p><strong>Ce régime n'est possible que si la nation est très fortement homogène.</strong> La social-démocratie revient à couvrir par la solidarité nationale l'ensemble de la population : pour que cela soit acceptable, il faut que les gens considèrent que n'importe quel autre membre de la nation est comme un cousin éloigné. Une forte hétérogénéité culturelle rend la solidarité nationale insoutenable &mdash; les gens refusent de payer pour des « étrangers ».</p>
-<h3 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h3>
-<p><strong>Test discriminant (parlementaire vs RN tardive) :</strong> La <strong>chambre basse</strong> est-elle la <strong>source ultime du pouvoir</strong> de façon pérenne et incontestée ? Le pouvoir administratif est-il <strong>subordonné</strong> à la représentation nationale ?</p>
+<p>Quand un groupe obtient un siège à la table des négociations, il peut soit utiliser le pouvoir politique pour <strong>mettre fin à la spoliation légale</strong> (l'utilisation de l'impôt pour financer des activités dont on bénéficie soi-même), soit pour <strong>y prendre part</strong>. La pente naturelle est d'y prendre part &mdash; et c'est toujours ce qui se passe dans les ENP actifs.</p>
+<p>Conséquence : la taille de l'État central croît, et croît plus qu'elle ne l'a jamais fait dans aucune autre phase du Parcours. Progressivement s'installe un régime à la fois socialiste et démocratique : la <strong>social-démocratie</strong>. La nation couvre l'ensemble de ses membres par la sécurité sociale, la solidarité nationale, la redistribution.</p>
+<h3 id="condition-d-homogénéité">Condition d'homogénéité<a class="anchor" href="#condition-d-homogénéité">#</a></h3>
+<p>La social-démocratie n'est soutenable que si la nation est <strong>très fortement homogène</strong>. Couvrir par la solidarité nationale l'ensemble de la population suppose que les gens considèrent que n'importe quel autre membre de la nation est comme un cousin éloigné. Une forte hétérogénéité culturelle rend la solidarité nationale insoutenable : les gens refusent de payer pour des « étrangers ». Cette condition d'homogénéité est ce qui détermine la trajectoire ultérieure (ENP soutenable vs basculement en technocratique puis dominat) lorsque les conditions changent (vague d'hétérogénéisation par immigration, par exemple).</p>
+<hr>
+<h2 id="comment-identifier-la-phase-parlementaire">Comment identifier la phase parlementaire<a class="anchor" href="#comment-identifier-la-phase-parlementaire">#</a></h2>
+<h3 id="test-discriminant-parlementaire-vs-rn-tardive">Test discriminant (parlementaire vs RN tardive)<a class="anchor" href="#test-discriminant-parlementaire-vs-rn-tardive">#</a></h3>
+<p><strong>La chambre basse est-elle la source ultime du pouvoir de façon pérenne et incontestée ?</strong> Le pouvoir administratif est-il subordonné à la représentation nationale ?</p>
 <ul>
-  <li><strong>Non</strong> → encore en RN (Restauration, régime transitoire).</li>
+  <li><strong>Non</strong> → encore en RN (Restauration, régime transitoire ; cf. <code>phase_rn.md</code>).</li>
   <li><strong>Oui</strong> → phase parlementaire.</li>
 </ul>
-<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<h3 id="test-discriminant-parlementaire-vs-technocratique">Test discriminant (parlementaire vs technocratique)<a class="anchor" href="#test-discriminant-parlementaire-vs-technocratique">#</a></h3>
+<p><strong>L'administration peut-elle renverser ou contourner durablement les décisions de la chambre basse ?</strong></p>
 <ul>
-  <li>Chambre basse source ultime du pouvoir</li>
-  <li>Système électoral représentatif (même à franchise restreinte)</li>
-  <li>Le pouvoir administratif est subordonné à la représentation nationale</li>
-  <li>Résolution pacifique des tensions sociales par intégration progressive des exclus</li>
+  <li><strong>Non</strong> → ENP active. La représentation nationale détient effectivement le pouvoir.</li>
+  <li><strong>Oui</strong> → phase technocratique. La représentation est formelle mais l'administration domine.</li>
 </ul>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1688</span></div><span class="card-desc">Depuis la Glorieuse Révolution</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1830</span></div><span class="card-desc">Depuis 1830 (avec des interruptions)</span></div></div>
-</div>
+<h3 id="marqueurs-nécessaires-de-l-enp">Marqueurs nécessaires de l'ENP<a class="anchor" href="#marqueurs-nécessaires-de-l-enp">#</a></h3>
+<h4 id="1-subordination-de-l-exécutif-à-la-représentation-nationale">1. Subordination de l'exécutif à la représentation nationale<a class="anchor" href="#1-subordination-de-l-exécutif-à-la-représentation-nationale">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>La chambre basse vote les lois et le budget, l'exécutif applique</li>
+  <li>Les nominations administratives clés requièrent l'approbation parlementaire ou peuvent être contestées par elle</li>
+  <li>Le parlement peut renverser l'exécutif (motion de censure, équivalents) ou le contraindre à de nouvelles élections</li>
+  <li>Les juges et fonctionnaires reconnaissent la primauté de la loi adoptée par le parlement</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>L'exécutif gouverne par décret au-delà des cas d'urgence reconnus</li>
+  <li>L'administration peut durablement ignorer ou neutraliser les votes parlementaires</li>
+  <li>Le parlement n'a qu'un rôle consultatif ou symbolique</li>
+</ul>
+<h4 id="2-système-électoral-représentatif-même-à-franchise-restreinte">2. Système électoral représentatif (même à franchise restreinte)<a class="anchor" href="#2-système-électoral-représentatif-même-à-franchise-restreinte">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Élections régulières dont l'issue n'est pas verrouillée à l'avance</li>
+  <li>Alternance possible (et observée au moins une fois) entre factions ou partis</li>
+  <li>Liberté d'expression politique pour les citoyens inscrits, presse politique multiple</li>
+  <li>Transferts pacifiques de pouvoir entre coalitions élues</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Pas d'élections ; élections truquées sans alternance possible</li>
+  <li>Opposition politique interdite, marginalisée par la loi, ou systématiquement réprimée</li>
+  <li>Parti unique de fait ou de droit</li>
+</ul>
+<h4 id="3-résolution-pacifique-des-tensions-sociales">3. Résolution pacifique des tensions sociales<a class="anchor" href="#3-résolution-pacifique-des-tensions-sociales">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Intégration progressive de groupes exclus par la voie législative (élargissement du suffrage, droits sociaux, protections nouvelles)</li>
+  <li>Réformes incrémentales acquises par négociation politique, pas par révolte</li>
+  <li>Absence de violences politiques structurelles ou de répression armée systématique</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Recours systématique à la répression armée pour contenir la contestation politique</li>
+  <li>Régression durable des droits des groupes intégrés</li>
+  <li>Contestations politiques violentes structurellement non absorbées par le système</li>
+</ul>
+<h3 id="marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires">#</a></h3>
+<ul>
+  <li>Croissance importante de l'État central (sécurité sociale, redistribution, services publics)</li>
+  <li>Élargissement progressif du suffrage et des droits civiques</li>
+  <li>Production législative abondante</li>
+  <li>Multipartisme structuré sur le clivage gauche-droite</li>
+</ul>
+<h3 id="différencier-de-configurations-voisines-non-parcours">Différencier de configurations voisines non-Parcours<a class="anchor" href="#différencier-de-configurations-voisines-non-parcours">#</a></h3>
+<h4 id="a-rn-en-cours-dans-sa-sous-phase-de-restauration">a) RN en cours dans sa sous-phase de Restauration<a class="anchor" href="#a-rn-en-cours-dans-sa-sous-phase-de-restauration">#</a></h4>
+<p>Une Restauration peut avoir des institutions parlementaires formelles (charte octroyée, parlement bicaméral, etc.) sans que la subordination de l'exécutif soit pérenne. Tant que la subordination est contestée ou révocable, on est encore en RN.</p>
+<p><strong>Test</strong> : la subordination du pouvoir administratif à la représentation nationale est-elle pérenne et incontestée ? Si elle dépend de l'attitude personnelle du souverain ou peut être révoquée par lui, on est en Restauration, pas en ENP.</p>
+<h4 id="b-régime-autoritaire-à-apparence-parlementaire">b) Régime autoritaire à apparence parlementaire<a class="anchor" href="#b-régime-autoritaire-à-apparence-parlementaire">#</a></h4>
+<p>Un régime peut avoir un parlement formel mais sans pouvoir réel &mdash; parlement consultatif, élections truquées, opposition réprimée. Ce n'est pas une phase parlementaire mais un régime absolutiste ou autoritaire qui mime les formes parlementaires.</p>
+<p><strong>Test</strong> : appliquer les marqueurs nécessaires opérationnels. Si plusieurs des contre-signes sont présents (parlement consultatif, opposition réprimée, pas d'alternance), ce n'est pas une ENP.</p>
+<h4 id="c-enp-contrariée-figée-hypothèse-en-cours-d-évaluation">c) ENP contrariée figée &mdash; hypothèse en cours d'évaluation<a class="anchor" href="#c-enp-contrariée-figée-hypothèse-en-cours-d-évaluation">#</a></h4>
+<p>Lecture proposée pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé sans dynamique endogène d'élargissement. Hypothèse alternative à une lecture absolutiste à organe collégial autonome ; le test discriminant est dans <code>phase_rn.md</code> (3 questions sur exécutif / classe administrative / élargissement). Hypothèse à tester systématiquement sur les cas d'organe collégial stable dans une cité-État ; à ne pas mobiliser comme cadre établi tant que des cas n'auront pas été clairement validés.</p>
+<hr>
 <h2 id="phase-technocratique-dégénérescence-de-l-enp">Phase technocratique &mdash; dégénérescence de l'ENP<a class="anchor" href="#phase-technocratique-dégénérescence-de-l-enp">#</a></h2>
 <p>La social-démocratie peut se retourner contre le peuple. À mesure que l'État grossit &mdash; et surtout si les conditions amènent une nouvelle forme d'hétérogénéité alors que l'État est déjà très gros &mdash; la classe des administrateurs et des élites prébendières accapare le pouvoir <strong>contre</strong> la représentation nationale.</p>
-<p>L'État tire sa légitimité de lui-même. Le Léviathan administratif est devenu si puissant qu'il peut renverser ou contourner les décisions de la chambre basse. Les élus découvrent que leurs décisions sont inapplicables sans la coopération de l'administration &mdash; et l'administration ne coopère que si ça l'arrange.</p>
-<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<p>L'État tire alors sa légitimité de lui-même. Le Léviathan administratif est devenu si puissant qu'il peut renverser ou contourner les décisions de la chambre basse. Les élus découvrent que leurs décisions sont inapplicables sans la coopération de l'administration &mdash; et l'administration ne coopère que si ça l'arrange.</p>
+<h3 id="test-discriminant-technocratique-vs-dominat">Test discriminant (technocratique vs dominat)<a class="anchor" href="#test-discriminant-technocratique-vs-dominat">#</a></h3>
+<p><strong>Les élus jouent-ils encore un rôle effectif dans les décisions structurantes ?</strong> Le système préserve-t-il une voie politique de réforme, même contrariée ?</p>
 <ul>
-  <li>L'administration peut renverser ou contourner les décisions de la chambre basse</li>
-  <li>La taille de l'État et le périmètre de son action augmentent sans cesse</li>
-  <li>Croissance continue du nombre de fonctionnaires</li>
-  <li>Les élites administratives se sédimentent et deviennent une classe à part</li>
+  <li><strong>Oui</strong> → encore en phase technocratique. La représentation est affaiblie mais pas absente.</li>
+  <li><strong>Non</strong> → entrée en dominat.</li>
 </ul>
+<h3 id="signes-observables">Signes observables<a class="anchor" href="#signes-observables">#</a></h3>
+<ul>
+  <li>L'administration peut renverser ou contourner les décisions de la chambre basse (décrets contournant des lois votées, obstacles bureaucratiques systématiques aux réformes)</li>
+  <li>La taille de l'État et le périmètre de son action augmentent sans contrôle démocratique effectif</li>
+  <li>Croissance continue du nombre de fonctionnaires et autonomisation des corps administratifs</li>
+  <li>Les élites administratives se sédimentent et deviennent une classe à part, distincte des élus</li>
+  <li>Les programmes politiques perdent leur capacité de transformation effective : les élections changent les figures, pas les politiques</li>
+</ul>
+<hr>
 <h2 id="dominat">Dominat<a class="anchor" href="#dominat">#</a></h2>
-<p>L'administration est devenue si puissante qu'elle <em>est</em> le gouvernement de facto. Les lois ne sont plus réellement votées mais décidées par des comités administratifs. C'est structurellement un <strong>reboot en Ancien Régime</strong> &mdash; une élite sédimentée (la bureaucratie) monopolise le pouvoir et les rentes, la mobilité sociale se fige, et le système devient incapable de se réformer. La différence avec l'AR absolutiste est que cette élite n'est plus une aristocratie militaire ou de cour, mais une bureaucratie.</p>
-<h3 id="marqueurs-forts">Marqueurs forts<a class="anchor" href="#marqueurs-forts">#</a></h3>
+<p>L'administration est devenue si puissante qu'elle <em>est</em> le gouvernement de facto. Les lois ne sont plus réellement votées mais décidées par des comités administratifs. C'est structurellement un <strong>reboot en ancien régime</strong> &mdash; une élite sédimentée (la bureaucratie) monopolise le pouvoir et les rentes, la mobilité sociale se fige, et le système devient incapable de se réformer. La différence avec l'AR absolutiste est que cette élite n'est plus une aristocratie militaire ou de cour, mais une bureaucratie civile.</p>
+<h3 id="signes-observables">Signes observables<a class="anchor" href="#signes-observables">#</a></h3>
 <ul>
-  <li>Administration = coalition gagnante de jure</li>
-  <li>Les décisions sont prises par des comités administratifs, non par les élus</li>
-  <li>Sédimentation des élites administratives</li>
-  <li>Le système se maintient par inertie, pas par légitimité</li>
+  <li>Administration = coalition gagnante de jure ou de facto</li>
+  <li>Décisions structurantes prises par des comités administratifs, non par les élus</li>
+  <li>Sédimentation complète des élites administratives (mobilité sociale figée vers les positions de pouvoir)</li>
+  <li>Le système se maintient par inertie, pas par légitimité acquise par élection</li>
+  <li>Les élections sont rituelles ou contestées dans leur capacité à changer le cours du système</li>
 </ul>
-<h3 id="parallèle-avec-l-ancien-régime-absolutiste">Parallèle avec l'Ancien Régime absolutiste<a class="anchor" href="#parallèle-avec-l-ancien-régime-absolutiste">#</a></h3>
-<p>Le Dominat reproduit la structure de l'Ancien Régime : une élite sédimentée monopolise le pouvoir et les rentes, la mobilité sociale se fige, et le système devient incapable de se réformer. Comme dans l'AR absolutiste, un bloc contestataire finit par se former &mdash; mais les formes que prend cette contestation dans un dominat post-parlementaire restent une question théorique ouverte.</p>
+<h3 id="parallèle-avec-l-ancien-régime-absolutiste">Parallèle avec l'ancien régime absolutiste<a class="anchor" href="#parallèle-avec-l-ancien-régime-absolutiste">#</a></h3>
+<p>Le dominat reproduit la structure de l'ancien régime : élite sédimentée, monopole du pouvoir et des rentes, mobilité sociale figée, incapacité à se réformer. Comme dans l'AR absolutiste, un <strong>bloc contestataire</strong> finit par se former (clivage GD se reconfigure : centre fusionné contre extrêmes convergentes).</p>
+<h3 id="question-théorique-ouverte-sortie-du-dominat">Question théorique ouverte : sortie du dominat<a class="anchor" href="#question-théorique-ouverte-sortie-du-dominat">#</a></h3>
+<p>Les formes que prend la contestation dans un dominat post-parlementaire restent une question théorique ouverte. Hypothèses à tester :</p>
+<ul>
+  <li>Une RN-bis qui rebaserait la souveraineté au-delà du seul parlementarisme antérieur</li>
+  <li>Une dissolution du dominat par fragmentation de l'État sous-jacent</li>
+  <li>Un cycle d'absolutisation puis nouvelle RN</li>
+  <li>Une issue par choc exogène et absorption ou refondation</li>
+</ul>
+<p>Cette question est ouverte parce qu'aucun cas historique n'a encore complété ce cycle.</p>
+<hr>
+<h2 id="vue-corpus">Vue corpus<a class="anchor" href="#vue-corpus">#</a></h2>
+<p>Le tableau aligné par nation (dates d'entrée en ENP) est dans <code>corpus_recapitulatif.md</code> &mdash; accessible au parent uniquement.</p>
 
 </article>
 </div>

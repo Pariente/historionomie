@@ -277,6 +277,7 @@ SAILLANT_ICONS = {
     "Réduction d'échelle": "compress",
     "Magna Carta": "description",
     "Remontrance": "record_voice_over",
+    "Réformes échouées": "alt_route",
     "Crise féodale": "swords",
     "Choc d'hétérogénéité": "group_add",
     "Accélérateur": "fast_forward",
@@ -431,7 +432,7 @@ def generate_html(data: dict) -> str:
             if len(parts) >= 3 and (parts[-1].startswith("http") or parts[-1].startswith("images/")):
                 img_url = parts[-1]
                 parts = parts[:-1]
-            dot_html = f'<span style="width:10px;height:10px;border-radius:50%;background:{phase_color};flex-shrink:0;margin-top:3px;"></span>' if phase_color else ""
+            dot_html = f'<span style="width:10px;height:10px;border-radius:50%;background:{phase_color};flex-shrink:0;"></span>' if phase_color else ""
             if len(parts) >= 2:
                 h_html = f'<span class="insight-title">{dot_html}{escape_html(parts[0])}</span><span class="insight-desc">{escape_html(parts[1])}</span>'
             else:
@@ -797,7 +798,8 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 .insight-item {{ display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
     line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
     border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }}
-.insight-item .insight-title {{ display:flex; align-items:center; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }}
+.insight-item .insight-title {{ display:flex; align-items:flex-start; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }}
+.insight-item .insight-title span {{ margin-top:5px; }}
 .insight-item .insight-desc {{ display:block; color:#666; font-size:0.73rem; }}
 .insight-item .material-icons {{ font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }}
 .insight-item .insight-img {{ width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }}

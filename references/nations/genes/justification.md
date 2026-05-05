@@ -1,151 +1,184 @@
-# Justification du Parcours de Gênes (Ligurie)
+# Justification — Parcours de Gênes
 
-## 1. Scénario retenu (C')
+## 1. Hésitations sur saillants à confiance non-high
 
-L'analyse aboutit au scénario suivant — synthèse entre la lecture canonique de Philippe Fabry (phase absolutiste 1339-1506 + RN 1506-1528 + phase parlementaire contrariée 1528-1797) et la reconnaissance de la forme spécifique de l'absolutisme génois (forme 4 : consortium oligarchique collectif plutôt que figure personnelle stable ou institution collective autonome au-dessus du patriciat).
+### Pacte oligarchique : 1099 ou 1191 ?
 
-- **Phase féodale** ~Xe-1097 (~100 ans, compressée)
-- **Phase oligarchique** 1097-1339 (~242 ans, dans la norme)
-- **Phase absolutiste forme 4** (consortium oligarchique) 1339-1506 (~167 ans, dans la norme)
-- **Révolution Nationale (aboutie)** 1506-1528 (~22 ans)
-- **Phase parlementaire contrariée figée** 1528-1797 (~269 ans)
-- **Fin exogène** 1797-1815 — absorption par le Piémont-Sardaigne
+Confiance medium. Deux candidats sérieux pour le PO génois :
 
-Ce scénario correspond ligne par ligne aux saillants canoniques du Parcours, tout en reconnaissant la spécificité structurelle du cas cité-État trop petite à l'époque des États territoriaux.
+**Candidat A — Compagna Communis (1099).** Acte de codification collective inaugural, satisfait formellement le critère universel (codification, caractère collectif). Mais coïncide avec l'éveil féodal collectif et précède toute séquence pic-crise féodale typique. Atypique : il y aurait alors PO sans bascule oligarchique distincte, et le 1er monarque oligarchique serait simultané au PO.
 
-## 2. Le 1er monarque absolu est la forme 4 — dogat à vie + consortium oligarchique (1339)
+**Candidat B — Passage au podestat (1191).** Codification de l'exercice du pouvoir par importation d'un magistrat étranger neutre à mandat court. Test empirique satisfait : à partir de 1191, le pouvoir survit aux changements annuels de podestat sans que l'État ne vacille. Décalage par rapport à la Compagna Communis (~92 ans) qui correspond à la phase féodale courte. Comparable à la commune milanaise (1097) et préfigurant les Ordinamenti florentins (1293).
 
-### Diagnostic différentiel des formes du 1er MA
+**Choix retenu : B (1191).** Le passage au podestat satisfait mieux le critère universel parce qu'il opère après que la Compagna ait éprouvé son fonctionnement face au factionnalisme clanique croissant — c'est un acte *de réforme institutionnelle* en réponse à une fragilité avérée, pas un acte fondateur. La Compagna Communis 1099 reste l'éveil féodal collectif (cas-limite cité-État). Cette lecture donne une phase féodale courte (~92 ans) et une phase oligarchique prolongée (~337 ans), ce qui est cohérent avec la signature des cités-États italiennes denses (Florence ~178 ans féodale ; Milan ~118 ans féodale).
 
-**Forme 1a (tiers populiste neutre)** : écartée. Simone Boccanegra n'est pas un tiers neutre — il est le chef de la faction populare victorieuse, issu de la famille Boccanegra (lignée marchande, descendant de Guglielmo Boccanegra premier capitaine du peuple en 1257). Il ne correspond pas au pattern canonique (Henri IV, Henri VII, Victor Amédée II).
+### 1er monarque oligarchique : système podestaril ou Guglielmo Boccanegra (1257) ?
 
-**Forme 1b (faction gagnante créant un nouveau cadre central)** : partiellement vraie mais incomplète. Les populares/marchands l'emportent bien sur l'aristocratie traditionnelle en 1339, et installent un nouveau cadre (dogat à vie). Mais ce cadre n'est pas un exécutif central autonome au-dessus des élites — il est immédiatement capturé collectivement par les lignages marchands (Fregoso, Adorno). Le pattern canonique de la forme 1b (Omri, Simon Thassi) exige la création d'un appareil d'État central autonome avec administration, fisc et armée propres — ce qui n'arrive pas à Gênes.
+Confiance medium. Boccanegra (Capitano del Popolo 1257) est une figure plus visible que le système podestaril anonyme, mais elle appartient à l'institutionnalisation populaire intra-essor — pas à l'inauguration du cadre PO. Le 1er MO doit être proche du PO (typiquement quelques années) et incarne la première légitimation post-PO.
 
-**Forme 2 (institution collective stable au-dessus du patriciat, type Inquisiteurs vénitiens)** : écartée. Les organes collégiaux génois (Anziani, conseil des Quarante, Trecentoventi, puis Serenissimi Collegi post-1576) sont des émanations du patriciat — pas des institutions au-dessus de lui avec classe administrative distincte. Pas de noblesse de robe équivalente aux *cittadini originari* vénitiens.
+**Choix retenu : système podestaril dès 1191.** Cas de suzerain collectif typique des cités-États (cf. Florence Signoria post-1293, Venise Contarini/système ~1043). Pas de figure individuelle dont la légitimité repose sur les règles du PO ; l'institution podestariale elle-même incarne le cadre. Boccanegra 1257 est une transformation interne intra-essor (institutionnalisation populaire du dogat dans le cadre podestaril élargi).
 
-**Forme 3 (tiers exogène imposé)** : écartée pour 1339. Aucune puissance étrangère n'impose le dogat à vie — c'est une révolution populaire endogène. (Pour 1528, la réforme Doria est arbitrée par Charles Quint mais pas imposée par lui au sens strict — elle est rédigée par des réformateurs génois ; c'est un arbitrage, pas une imposition. Et 1528 n'est pas le 1er MA mais la Glorieuse Révolution.)
+### Acmé oligarchique : Méloria 1284 — position précoce dans la phase
 
-**Forme 4 (absolutisme collectif par consortium oligarchique)** : **retenue**. Le 1er MA génois est la combinaison institutionnelle du dogat à vie (1339, Boccanegra) et du consortium oligarchique qui le capture collectivement, formalisé avec la fondation du Banco di San Giorgio (1407). L'appareil central absorbe progressivement les fonctions d'État (fiscalité, administration territoriale, coercition) mais reste propriété collective institutionnalisée du patriciat. Les Fregoso et Adorno se succèdent au dogat par violence et appel étranger, mais le cadre central (dogat + Banco) survit aux personnes — c'est la signature canonique de la forme 4.
+Confiance high. Position dans la phase ~0.276 — précoce. Justification : caractère du quasi-exutoire (commercial-naval, qui culmine avec l'élimination du rival pisan plutôt qu'avec une expansion territoriale durable) et longueur ultérieure de la phase prolongée par ingérences étrangères (1396-1528) qui décale la fin sans déplacer le pic. Curzola (1298, victoire navale sur Venise) écartée comme acmé alternative — Méloria est plus structurelle (élimine définitivement Pise comme rival tyrrhénien).
 
-### Validation empirique par les sources académiques
+### Acmé absolutiste : âge des Génois (1607-1627) — acmé fonctionnelle sans territoire
 
-**Avner Greif** (*Institutions and the Path to the Modern Economy*, chapitre VIII) :
-- *« Unable to pay its debt after the defeat [1381], Genoa ceded control over various tax-bearing sources to its local creditors. These creditors organized themselves in a self-governed entity, the Bank of San Giorgio, which over time came to administer most of the towns and cities in the Genoese dominion. »*
-- *« The Bank of San Giorgio was part of an institution that isolated the economy from the polity. »*
-- Caractérise le régime post-1528 comme *« aristocratic republic similar to that of Venice »*
+Confiance medium. Position dans la phase ~0.29 — précoce. Pas d'expansion absolutiste classique parce que cité-État de taille insuffisante pour les ambitions territoriales d'un Louis XIV ou d'un Charles Quint. La période plus large 1557-1627 est l'« âge des Génois » au sens de Braudel ; le pic des asientos et de la diplomatie financière européenne est typiquement situé entre 1607 et 1627. Acmé fonctionnelle (puissance financière) plutôt que territoriale-militaire — cas paradigmatique d'acmé portée par capture financière d'un empire extérieur.
 
-**Yves Winter** (*Polity* 2022, « A Government of Creditors ») :
-- Régime qualifié de *« government of creditors »* / *« financial oligarchy »*
-- Cite Machiavelli (1532) : le Banco *« limite la capacité des doges à se transformer en signori »* — description explicite du mécanisme de verrouillage par le consortium oligarchique
-- 38+ révoltes et changements de gouvernement entre 1407 et 1526 (instabilité politique) contrastant avec la stabilité du Banco
+### Fin de l'expansion absolutiste : 1684 plutôt que 1627
 
-**Taviani** (*« A Privatized State »*) : le Banco est un *« state within a state »* / *« privatized state »* qui capture progressivement les fonctions souveraines.
+Confiance medium. Datation alternative 1627 (grande faillite espagnole) écartée — 1627 marque la saturation du quasi-exutoire financier mais la projection extérieure continue (Gênes reste alliée hispano-impériale, mercenariat, banques familiales projetées). Le bombardement Duquesne (18-28 mai 1684) et l'humiliation du doge à Versailles (15 mai 1685) consomment vraiment l'incapacité militaire et diplomatique externe. C'est cette humiliation qui force le recentrage interne définitif et marque l'entrée en sous-phase d'AR.
 
-Ces sources convergent sur une lecture compatible avec la forme 4 canonique.
+### Expérience parlementaire 1797-1802 — saillant compressé sous tutelle
 
-## 3. La Révolution Nationale aboutie (1506-1528)
+Confiance medium. La séquence Constitution 1797 / déposition Directoire 1799 / Constitution hybride 1802 fait formellement office d'expérience parlementaire, mais l'encadrement français dans le contexte du Directoire puis du Consulat puis de l'Empire napoléonien limite fortement la dynamique endogène — pas de factions véritablement concurrentes opposant des projets nationaux distincts. À considérer comme expérience parlementaire compressée et exogéniquement encadrée plutôt que pleinement endogène.
 
-### Séquence canonique
+---
 
-- **Éclatement de l'AR (1506)** : révolte des cappette. Classe populaire (artisans et petits commerçants) se soulève contre la caste dirigeante marchande (Fregoso/Adorno) et leur allié français. Nobles chassés ou massacrés, tribuns plébéiens élus à Santa Maria di Castello. Test discriminant satisfait : bloc contestataire renverse bloc élitaire.
+## 2. Hypothèses écartées (machlokot)
 
-- **Expérience parlementaire (1506-1507)** : magistrature de neuf tribuns plébéiens (Paolo da Novi, Marco da Terrile, Nicola Pittaluga). Le 10 avril 1507, Paolo da Novi (teinturier roturier) nommé doge, monnaies *Libertas populi Januensis*, revendication 2/3 des charges pour les roturiers. Dogat de 18 jours.
+### 1er monarque absolu = Casa di San Giorgio (1407/1453)
 
-- **Phase aiguë tronquée (1507)** : Louis XII entre dans Gênes le 28 avril, écrase la République populaire. Paolo da Novi exécuté le 15 juin. La phase aiguë n'a pas le temps de se radicaliser endogènement.
+**Pour.** La Casa di San Giorgio (fondée 23 avril 1407 ; transferts territoriaux à partir de 1446 et surtout 1453 — Corse, Caffa, Famagouste, Lunigiana) exerce *de jure* fonctions souveraines sur les territoires soumis : extraction fiscale, justice, administration territoriale. Gouvernance par les *partecipanti* (créanciers-actionnaires) collectivement, indépendante des doges en exercice. C'est précisément la signature du « consortium oligarchique institutionnalisé » au sens de phase_absolutiste.md §Configurations rencontrées. Sources : Heers, Felloni, Fratianni, Taviani, Winter.
 
-- **Restauration sous forme exogène (1507-1527)** : vingt ans de dominations françaises quasi continues. Restauration partielle des anciennes aristocraties sous tutelle française — empêche toute consolidation endogène jusqu'au renversement par Doria en 1528. Parallèle structurel avec la France de 1815-1818 (occupation par les coalisés pendant la sous-phase de Restauration) : l'occupation étrangère pendant une sous-phase de la RN ne modifie pas son aboutissement.
+**Contre.** Le test discriminant absolutiste s'applique à l'**échelle nationale** (noyau ligure), pas seulement aux marges (Corse, Caffa). Sur le noyau ligure entre 1407 et 1528, la guerre sociale n'est pas résolue : les doges sont renversés en chaîne, les tutelles étrangères se succèdent, les factions populari et nobili continuent de s'affronter pour le contrôle de l'exécutif communal. La Casa de San Giorgio assure une continuité institutionnelle sur les marges mais ne résout pas la guerre sociale dans la cité-mère elle-même. Le 1er MA national n'est pas la Casa de San Giorgio comme institution autonome (1407/1453), mais le **moment où le cadre dorien-Leges Novae intègre San Giorgio comme appareil-consortium dans la résolution de la guerre sociale du noyau** (1528-1576).
 
-- **Glorieuse Révolution compressée (1528)** : réforme Doria sous arbitrage impérial de Charles Quint. Dissolution des Fregoso et Adorno, fusion des anciennes et nouvelles familles en patriciat unifié ~800 familles, bicamérisme (Maggior + Minor Consiglio), tirage au sort, doge biennal faible, Syndicato post-mandat. Élargissement intra-aristocratique réel (~50 familles dominantes → ~800 familles inscrites).
+**Choix retenu : 1er MA = Doria 1528.** La Casa de San Giorgio est lue comme **appareil bureaucratique préexistant** que le cadre dorien intègre en 1528 — elle joue alors pleinement son rôle de consortium institutionnalisé sur le noyau. Avant 1528, San Giorgio est un appareil absolutiste **partiel** (sur les marges), pas national.
 
-### Pourquoi « aboutie » et pas « avortée »
+### 1er monarque absolu = Leges Novae (1576)
 
-Le test est binaire (cf. `phase_rn.md`) : une RN aboutit si un nouveau cadre institutionnel stable émerge, avec rupture durable par rapport à l'AR antérieur ; elle avorte si l'ordre ancien est restauré à l'identique. La RN génoise aboutit clairement :
+**Pour.** Les Leges Novae du 10 mars 1576 abolissent les Alberghi, unifient le patriciat dans un *Liber aureus* unique, mettent fin à la guerre civile vecchi/nuovi de 1575-1576 — pacification interne durable. Argumentable comme parachèvement du 1er MA initialement esquissé en 1528 (qui n'avait pas encore éliminé les tensions vecchi/nuovi). Doria 1528 = première moitié, Leges Novae 1576 = seconde moitié.
 
-- Les factions Fregoso et Adorno sont dissoutes formellement (obligées de changer de nom)
-- L'ancienne aristocratie et les familles marchandes fusionnent en patriciat unifié
-- Le cadre bicaméral à rotation et tirage au sort est durablement institutionnalisé (269 ans sans rupture constitutionnelle jusqu'en 1797)
-- Les institutions pré-1506 (dogat à vie capturé factionnellement, alberghi factionnels Fregoso/Adorno, consortium Banco sans contrepoids politique unifié) ne sont **pas** restaurées
+**Contre.** La *Forma reipublicae* de 1528 institue déjà le cadre absolutiste : doge biennal, Sénat, Procuratori, Liber Nobilitatis, fusion (formelle) vecchi/nuovi par 28 Alberghi, intégration de San Giorgio. Les tensions résiduelles vecchi/nuovi entre 1528 et 1576 ne sont pas une absence du cadre absolutiste mais une stabilisation interne du cadre déjà en place (analogue à la consolidation Cosme Ier 1537 à Florence après Laurent 1480, ou à Henri IV en France après les guerres de Religion). Leges Novae 1576 est lue comme **consolidation intra-impérialisme**, pas comme 1er MA initial.
 
-### Saillants canoniques absents ou compressés
+**Choix retenu : 1er MA = Doria 1528.** Position canonique post-guerre sociale ; la séquence d'absolutisation 1528-1547 culmine dans la DGRO (conjuration Fieschi 1547), parfaitement positionnée 19 ans après le 1er MA. Si Leges Novae 1576 était le 1er MA, la conjuration Fieschi serait pré-1er MA et ne serait pas une DGRO au sens canonique — incohérent.
 
-Plusieurs saillants canoniques de la RN ne sont pas présents dans leur forme endogène classique :
-- **Moment thermidorien** : absent. L'écrasement vient de Louis XII, pas d'une reprise en main par le centre endogène.
-- **IR endogène** : absent. La cité-État est structurellement trop petite pour produire une figure d'Impérialiste Revanchard autonome (pas d'armée permanente mobilisable, pas de base territoriale pour la projection militaire).
-- **Restauration endogène** : la sous-phase de Restauration prend la forme exogène des dominations françaises (1507-1527).
-- **Glorieuse Révolution compressée** : la réforme Doria 1528 combine le compromis final et l'établissement du nouveau cadre, sans séparation temporelle nette.
+### Phase parlementaire contrariée figée 1576-1797
 
-Ces absences ne disqualifient pas l'aboutissement (la RN est binaire, pas évaluée sur la complétude formelle des saillants) — elles reflètent la spécificité structurelle de la cité-État trop petite pour soutenir tous les saillants endogènes.
+**Pour.** Marqueurs ENP apparents : organe collégial stable, rotation des charges (doge biennal, Sénat tournant), bicaméralisme apparent (Grand + Petit Conseil), égalité juridique au sein du corps inscrit (patriciat unifié post-Leges Novae). Configuration qui ressemble formellement à une phase parlementaire à corps civique fermé.
 
-### Exclusion des popolari dans le compromis final
+**Contre.** Test discriminant phase_rn.md §Phase parlementaire contrariée figée :
+1. L'organe exécutif (doge biennal + Sénat) peut-il agir contre l'intérêt d'une majorité du corps inscrit ? Non — il est mandataire du corps. **Réponse NON → ENP contrariée.**
+2. Existe-t-il une classe administrative distincte du corps élitaire ? Non — l'administration est intégrée au patriciat. **Réponse NON → ENP contrariée.**
+3. Le corps inscrit est-il élargi par rapport à la phase oligarchique antérieure ? **NON — c'est exactement le même cercle patricien, juste formalisé dans un Liber aureus unique.**
 
-La réforme Doria exclut formellement les plébéiens du pouvoir politique (les cappette n'obtiennent pas le partage 2/3 qu'elles exigeaient en 1506). Le Libro d'Oro est fermé en 1528, rouvert avec conditions strictes en 1576, et reste à ~800 familles. C'est le prix de l'arbitrage impérial et de la petitesse de la cité : l'élargissement est réel **intra-aristocratique** mais ne s'étend pas à la population. Cette caractéristique structurelle oriente la phase parlementaire qui suit vers une version **figée** plutôt qu'active.
+Réponse mixte : 2 NON sur Q1-Q2 (qui pencheraient ENP contrariée) **mais NON sur Q3** (pas d'élargissement). Cas ambigu non validé. La lecture concurrente — phase absolutiste à configuration consortium oligarchique institutionnalisé — reste préférable parce qu'elle satisfait le test discriminant absolutiste (préséance, capacité d'action sans frein des oligarques au sens où *les oligarques contrôlent collectivement l'appareil*, perte d'autonomie fiscale des entités décentralisées, résolution de la guerre sociale par le nouveau cadre).
 
-## 4. La phase parlementaire contrariée figée (1528-1797)
+**Choix retenu : phase absolutiste configuration consortium oligarchique institutionnalisé.** L'hypothèse ENP contrariée reste à mentionner comme tension théorique mais n'est pas mobilisée comme cadre établi.
 
-### Marqueurs parlementaires présents
+### Bonaparte comme IR de Gênes
 
-- **Subordination de l'exécutif** : doge biennal faible, plus de 50 ans, pas de réélection avant 12 ans, pas de sortie de la cité pendant le mandat, assignation à résidence post-mandat avec enquête par le Syndicato
-- **Rotation des charges** : rotation biennale, tirage au sort
-- **Bicaméralisme** : Maggior Consiglio (400) + Minor Consiglio (200)
-- **Égalité juridique** au sein du corps civique patricien
-- **Corps civique élargi** par rapport à la phase absolutiste précédente (de ~50 familles dominantes à ~800 familles inscrites)
-- **Stabilité paradoxalement élevée** : 269 ans sans rupture constitutionnelle, garantie par la protection extérieure impériale
+**Pour.** Bonaparte impose la République ligurienne (1797), la Constitution de 1802, puis l'annexion à l'Empire (1805). Période de réformes administratives modernisatrices (préfectures, Code civil, conscription, fisc moderne). Verticalité autoritaire après l'instabilité du Directoire ligurien.
 
-### Caractère « figé » — absence du mouvement sinistrogyre
+**Contre.** Application du test phase_rn.md §Cas particulier IR exogène :
+1. Les fonctions canoniques de l'IR sont-elles remplies *pour la nation génoise* ? **Non.** Pas de projection extérieure génoise (la projection extérieure est française) ; pas de ventilation des élites génoises spécifique (recrutement préfectoral français standard) ; pas de coalition gagnante intermédiaire propre.
+2. La séquence canonique de la RN reste-t-elle lisible pour Gênes ? **Non.** Pas d'IR endogène, pas de Restauration canonique, pas de Glorieuse Révolution propre.
+3. La nation a-t-elle une dynamique propre dans le projet ? **Non.** Pas d'armée nationale génoise, pas d'administration nationale propre dans le projet impérial — annexion comme trois départements (Apennins, Gênes, Montenotte) sous préfets français.
 
-La phase parlementaire contrariée génoise est **figée** au sens défini dans `phase_absolutiste.md` : le corps civique reste strictement fermé aux non-oligarques, sans dynamique d'élargissement endogène vers la population, pendant 269 ans. Le Libro d'Oro reste à ~800 familles (5 % des foyers) de 1528 à 1797, sans extension significative.
+**Choix retenu : Bonaparte n'est pas IR de Gênes — annexion comme marge passive.** Avortement de la RN par choc exogène. Cas-type symétrique à Florence (Bonaparte n'est pas IR de Florence non plus — Royaume d'Étrurie sous Bourbons-Parme = État fantoche, puis annexion comme départements).
 
-Le mouvement sinistrogyre canonique (fractions élitaires s'alliant aux exclus pour élargir le cercle représenté, comme les Whigs au Parlement britannique ou les libéraux français) ne s'active pas. La question des causes reste ouverte (cf. §8, questions ouvertes), mais le constat empirique est clair : aucune dynamique endogène d'élargissement sur 269 ans.
+### Structure formelle de la séquence post-1797 — deux phases RN avortées séparées par AR exogènes
 
-### Distinction active / figée
+**Pour la lecture en RN unique étendue 1797-1849 (écartée).** La séquence pourrait être lue comme une seule RN compressée mais étendue qui s'achève par avortement final 1849. Apparente continuité de la dynamique contestataire et de l'absence de Parcours endogène autonome.
 
-La phase parlementaire canonique des ENP (Angleterre post-1688, France post-1830, etc.) est **active** : elle connaît une extension progressive du corps civique (Reform Acts 1832, 1867, 1884 ; lois électorales françaises 1830, 1848, 1875, 1944). La phase parlementaire contrariée figée — telle qu'on la trouve à Gênes — présente les marqueurs formels (rotation, collégialité, bicaméralisme, égalité intra-civique) mais sans la dynamique d'extension qui caractérise la phase active.
+**Contre.** L'avortement de la RN par annexion comme marge passive (1805) bascule structurellement le Parcours en sous-phase d'AR exogène, conformément à phase_absolutiste.md §AR exogène et à phase_rn.md §Avortement (« l'ordre ancien est restauré à l'identique, le Parcours est refoulé et les tensions se rejouent ultérieurement »). La nouvelle phase RN (1848-1849) ne prolonge pas la précédente — elle est ouverte par un nouveau saillant Glorieuse Révolution (Statut Albertin) qui survient à l'intérieur de l'AR exogène long, pattern documenté à Florence (Statuto fondamentale 1848 → République Guerrazzi 1849 → écrasement autrichien) et Venise (République de Manin 1848-1849). La cohérence formelle exige donc deux phases RN distinctes séparées par deux blocs d'AR exogène.
 
-### Perturbations intra-phase sans impact structurel
+**Choix retenu** : la séquence post-1797 se décompose en quatre phases successives :
+- **RN (1) avortée 1797-1805** (Éclatement de l'AR + Expérience parlementaire + Annexion comme marge passive)
+- **AR exogène (1er bloc) 1805-1848** sous Empire français puis Royaume de Sardaigne (43 ans)
+- **RN (2) re-tentative avortée 1848-1849** (GR Statut Albertin + Phase aiguë révolte de Gênes + Écrasement par La Marmora)
+- **AR exogène (2e bloc) 1849-1861** sous Royaume de Sardaigne (12 ans)
+- **Fusion italienne 1861**
 
-- **Tension vecchi/nuovi (1573-1575) + Leges Novae (1576)** : ajustement intra-patriciat, fusion progressive des composantes bancaire et commerçante.
-- **Siècle des Génois (1557-1627)** : exutoire financier privé via asientos espagnols. Enrichit la classe patricienne sans grossir l'État génois — renforce le verrouillage consensuel sans le transformer.
-- **Peste de 1656-1657** : choc démographique (~50 % mortalité) sans effet structurel sur les institutions.
-- **Bombardement français (1684)** : humiliation, bascule vers neutralité prudente, mais cadre institutionnel intact.
-- **Perte de la Corse (1768)** : correction d'échelle territoriale, marge perdue, mais structure du régime inchangée.
+Cette structure aligne Gênes avec les patterns Florence (RN avortée 1796-1799 → AR exogène 1799-1848 → RN re-tentative 1848-1849 → AR exogène 1849-1859 → fusion 1860) et Venise (RN avortée 1848-1849 → AR exogène austro-hongrois → fusion 1866). Pendant les deux blocs d'AR exogène, les élites génoises (Mazzini fonde la Giovine Italia à Marseille en 1831, Mameli compose l'hymne italien en 1847) deviennent moteurs de la RN italienne globale dont Gênes sera l'un des foyers — sans relancer un Parcours génois propre.
 
-## 5. La fin exogène (1797-1815)
+**Note sur le Statut Albertin 1848 comme GR génoise.** Le Statut Albertin est octroyé par Carlo Alberto, souverain sarde — pas génois propre. Mais Gênes est intégrée au Royaume de Sardaigne depuis 1815 : le territoire génois hérite de la GR de la nation qui l'a absorbée. C'est cohérent avec le pattern de fusion progressive dans le Parcours italien — Gênes ne produit plus de Parcours endogène propre depuis 1815, elle reçoit les saillants de la nation absorbante. Différence avec Florence où le Statuto 1848 est octroyé par Léopold II (souverain de Toscane, donc propre) : à Gênes la GR est à la fois génoise par territoire et sarde par auteur.
 
-Le régime parlementaire contrarié figé ne produit pas de RN endogène — son corps civique fermé et son absence de mouvement sinistrogyre l'empêchent. La sortie vient exclusivement du choc exogène révolutionnaire français :
+---
 
-- **Mai 1797** : chute du doge Brignole, la République Ligurienne est proclamée le 14 juin 1797 sous influence française.
-- **1797-1805** : constitutions successives imposées (directoriale 1797, consulaire 1802).
-- **1805-1814** : annexion à l'Empire français (départements de Gênes, Montenotte, Apennins).
-- **1814-1815** : brève restauration républicaine, puis Congrès de Vienne attribue Gênes au Piémont-Sardaigne (9 juin 1815) pour consolider l'anti-France en Italie du Nord.
+## 3. Questions ouvertes
 
-Le Parcours endogène génois s'achève ici, avant d'avoir pu développer une phase parlementaire active (hors intervention extérieure). La trajectoire qui s'ensuit se joue dans le cadre piémontais puis italien.
+### Absence de Remontrance — analyse à deux pôles (et non signature exclusive du consortium)
 
-## 6. Pourquoi la phase oligarchique n'a pas une durée atypique
+**Observation.** L'AR génois (1684-1797, 113 ans) ne présente pas de Remontrance institutionnelle au sens canonique. Symétriquement, pas de souverain réformateur de type Pierre-Léopold ou Joseph II. La sortie est obligatoirement par choc exogène (Bonaparte 1797).
 
-Dans la lecture retenue (C'), la phase oligarchique dure 242 ans (1097-1339), ce qui est dans la marge typique (~200 ans ± 50). La transition vers la phase absolutiste en 1339 se fait par révolution populaire qui installe le dogat à vie — résolution canonique de la guerre sociale, sous une forme qui donnera lieu à la forme 4 (consortium collectif). Pas besoin d'invoquer des exutoires coloniaux pour prolonger anormalement la phase.
+**Recensement du corpus** (14 nations). Onze présentent une Remontrance attestée : France (Polysynodie 1715), Angleterre (Apology of the Commons 1604), Venise (Correzione 1761), Bavière (Landtag 1848), Piémont (Révolte 1821), Espagne (La Gloriosa 1868), Milan (République Ambrosienne 1447), Hongrie (dissolution diète 1811), Suisse (Société Helvétique 1761), Autriche (1848), Israël prolongement (Ambassade à Auguste -4). Trois en sont privées : Israël antique (phase interrompue par Josias en -609 avant maturité), Florence, Gênes.
 
-## 7. Histoire du débat — hypothèses testées
+**Mécanisme à deux pôles.** La Remontrance suppose la coexistence de deux pôles : (1) un *corps institutionnel intégré* qui peut formuler la pétition (parlement, états, diète, Maggior Consiglio, Cortès, Commons, etc.), et (2) un *sommet exécutif stable* contre lequel la formuler (figure dynastique ou organe collégial autonome distinct du corps). Quand l'un des deux pôles manque, la Remontrance ne peut pas s'enclencher.
 
-Cette version finale (C') résulte de plusieurs itérations :
+- **Florence** manque du pôle corps : le patriciat ancien éliminé à Montemurlo (1537), Grand-Duché sans parlement, noblesse de robe ducale embryonnaire (Marzi, Campana, Grifoni, Torelli — secrétaires personnels sans organe collégial formel).
+- **Gênes** manque du pôle sommet : le corps existe et est dense (Liber aureus, Grand et Petit Conseil, Sénat, Procuratori) mais le doge biennal tournant n'est pas une figure pérenne à contester, et le patriciat est *lui-même collectivement souverain* via le consortium oligarchique institutionnalisé. Pas d'asymétrie interne au corps inscrit, pas de figure exécutive stable distincte du patriciat.
 
-- **Hypothèse A (écartée)** : 1er MA = Serenissimi Collegi comme forme 2 institutionnelle (1576). Écartée parce que les Collegi sont une émanation du patriciat, pas une institution au-dessus avec classe administrative distincte.
+**Contre-exemple décisif** : Venise, autre cité-État à patriciat dense (Libro d'Oro), qui *a* sa Remontrance (Correzione 1761) parce qu'elle a le sommet à contester (Inquisiteurs d'État, organe collégial autonome au-dessus du patriciat ordinaire). La présence des Inquisiteurs vénitiens vs leur absence à Gênes est précisément ce qui rend la Remontrance possible à Venise et impossible à Gênes.
 
-- **Hypothèse B (écartée)** : pas d'absolutisme endogène, phase oligarchique continue 1097-1815. Écartée parce qu'elle ne reconnaissait pas le dogat 1339 comme transition de phase et ne rendait pas compte de la transformation structurelle via le Banco.
+**Conséquence pour la lecture de Gênes.** L'absence de Remontrance n'est pas une signature exclusive de la configuration consortium oligarchique institutionnalisé — c'est une conséquence de l'absence du pôle sommet, qui dans le cas de Gênes découle de cette configuration. Florence atteint la même absence par le chemin opposé (manque le pôle corps, configuration appareil familial-bancaire / figure dynastique sans parlement). Les deux cas se complètent et éclairent ensemble le mécanisme général.
 
-- **Hypothèse C (lecture Philippe initiale)** : phase absolutiste forme 3 (absolutisme informel factionnel) 1339-1506, RN 1506-1528, phase parlementaire contrariée 1528-1797. Partiellement retenue — les phases et leur chronologie sont correctes, mais la forme exacte du 1er MA était mal spécifiée (la forme 3, depuis supprimée du cadre, ne rendait pas compte du rôle structurel du Banco).
+**Implication pour la sortie de l'AR.** Quand un des deux pôles manque, la sortie de l'AR est obligatoirement par choc exogène — aucun mécanisme endogène ne peut s'enclencher pour produire l'éclatement. C'est ce qu'on observe pour Florence (Bonaparte 1796) et Gênes (Bonaparte 1797), et c'est cohérent avec le pattern « petite cité-État italienne sortie de l'AR par choc exogène ».
 
-- **Hypothèse D (écartée)** : phase oligarchique verrouillée 1097-1815 sans absolutisation. Écartée parce qu'elle ne reconnaissait pas que le Banco constitue effectivement un appareil central forme 4, et rejetait la RN 1506-1528 à tort.
+### Datation précise de l'éveil féodal collectif génois
 
-- **Hypothèse C' (retenue)** : synthèse — phases de Philippe (absolutiste 1339-1506 + RN 1506-1528 + parlementaire contrariée 1528-1797) avec précision de la forme du 1er MA (forme 4 canonique, consortium oligarchique via dogat + Banco) et caractérisation de la phase parlementaire comme **figée** (sans mouvement sinistrogyre).
+La date conventionnelle 1099 est associée à la Première Croisade (siège d'Antioche), à la constitution juridique de la Compagna Communis, et à l'arrivée des cendres de saint Jean-Baptiste (1098). Mais des proto-consulats et des serments de compagna sont attestés dès la fin du XIe siècle, et le mouvement d'autonomisation civique s'étend probablement sur 1080-1110. La date précise 1099 n'est pas tranchée par les sources ; elle est conventionnelle. L'éveil féodal collectif est plutôt un processus que un événement ponctuel — comme à Florence (Communes consulaires ~1115).
 
-## 8. Questions ouvertes
+### Statut historionomique de la révolution populaire de 1339
 
-1. **Pourquoi le mouvement sinistrogyre ne s'active-t-il pas à Gênes 1528-1797 ?** Question théorique importante restée ouverte. Plusieurs hypothèses envisagées, aucune consensuelle. Reste à approfondir.
+La révolution populaire du 23 décembre 1339 (institutionnalisation du dogat à vie sous Simone Boccanegra, sans violence majeure) est lue ici comme déclenchement de la guerre sociale (premier épisode ouvert du clivage populari/nobili dominant la politique nationale). Mais elle pourrait aussi être lue comme **tentative de résolution avortée** (Boccanegra agit comme tiers populaire au-dessus des factions nobili, mais sa déposition rapide en 1344 et son empoisonnement final en 1363 disqualifient sa figure résolvante) — auquel cas la guerre sociale aurait commencé avant 1339 (polarisation déjà active dans la sous-phase essor). Les deux lectures aboutissent à la même structure d'ensemble (guerre sociale endogène non résolue jusqu'en 1528) mais diffèrent sur l'attribution de la borne. La borne 1339 est retenue parce qu'elle marque le moment où le clivage devient *l'enjeu structurant dominant* de la politique nationale.
 
-2. **Validation du pattern forme 4 sur d'autres cas**. Le cas Gênes est le cas canonique. Candidats à tester : Florence (Monte Comune + domination Médicis pré-ducat — Philippe suggère le parallèle direct), Provinces-Unies (VOC + structure confédérale), Lucques, Raguse.
+---
 
-3. **Statut de la « phase parlementaire contrariée figée »** comme concept théorique. La distinction active/figée devrait-elle être formalisée dans `phase_parlementaire.md` comme variante structurelle de la phase parlementaire contrariée ?
+## 4. Comparaisons avec parcours connus
 
-4. **Précision de l'acmé absolutiste**. La fourchette 1407-1453 (apogée coloniale + Banco consolidé) est large. Une analyse plus fine pourrait identifier un point haut plus précis.
+### Cités-États italiennes — typologie des configurations absolutistes
 
-5. **Classification de Doria 1528**. Retenu comme « Glorieuse Révolution compressée » dans C'. À tester contre des lectures alternatives (par exemple : refondation du pacte oligarchique post-forme 4 sans étape parlementaire canonique).
+Le corpus permet une comparaison saillant par saillant avec trois autres cités-États italiennes :
+
+| Saillant | Florence | Venise | Milan | Gênes |
+|---|---|---|---|---|
+| Éveil féodal | Communes consulaires (~1115, collectif) | Orso Ipato (~726) | Landolfo II (979) | **Compagna Communis (1099, collectif)** |
+| PO | Ordinamenti di Giustizia (1293, chemin B) | Abolition co-régence (1032, chemin A) | Commune (1097, chemin B) | **Passage au podestat (1191, chemin B)** |
+| Acmé oligarchique | Bardi-Peruzzi (1325-1339, ~0.32) | Foscari (~1440, ~0.64) | Paix de Constance (1183) | **Méloria (1284, ~0.28)** |
+| Guerre sociale | Albizzi vs Médicis (1433-1480, 47 ans) | Tensions institutionnelles (~1628-1669) | Torriani vs Visconti (1240-1277) | **Populari vs nobili (1339-1528, 189 ans)** |
+| 1er MA | Laurent le Magnifique (1480) — appareil familial-bancaire | Inquisiteurs d'État (~1669) — organe collégial autonome | Ottone Visconti (1277) — figure dynastique | **Andrea Doria (1528) — consortium oligarchique institutionnalisé** |
+| DGRO | Montemurlo (1537, +57 ans après MA) | — (pas d'assise) | Della Torre (~1311, +34 ans) | **Conjuration Fieschi (1547, +19 ans après MA)** |
+| Acmé absolutiste | Ferdinand Ier (~1591-1609) | Morosini (~1688) | Gian Galeazzo Visconti (~1395) | **Âge des Génois (1607-1627)** |
+| Fin de RN | Compressée par chocs exogènes 1796-1849 | RN avortée 1848-1849 | Absorbée 1859 | **RN avortée 1797-1815, fusion 1815-1861** |
+
+**Observations** :
+- Les quatre cités-États italiennes présentent un éveil féodal collectif (Compagna Communis 1099, Communes consulaires 1115) ou semi-collectif (Venise Orso Ipato — premier doge élu collectivement). Phase féodale courte (~92-178 ans). Pic-crise classique structurellement absent ou réduit.
+- Le PO suit le chemin B (codification de l'exercice du pouvoir) sauf Venise qui opère par chemin A (codification de la transmission, abolition co-régence 1032).
+- L'acmé oligarchique génoise (~0.28) est précoce comme l'acmé florentine (~0.32), tardive comme l'acmé vénitienne (~0.64) — corrélation à la nature de l'exutoire (commercial-naval bref pour Gênes et Florence ; territorial-Stato da Màr durable pour Venise).
+- La guerre sociale génoise est de très loin la plus longue (189 ans vs 47 ans à Florence, ~41 ans à Venise) — signature des ingérences étrangères chroniques (1396-1528).
+- Les quatre 1er MA présentent quatre configurations distinctes de phase_absolutiste.md §Configurations rencontrées : Florence familial-bancaire (Médicis), Venise organe collégial autonome (Inquisiteurs d'État), Milan figure dynastique (Visconti), **Gênes consortium oligarchique institutionnalisé (Doria + alberghi + Banco San Giorgio)**. Le corpus des cités-États italiennes recouvre ainsi quatre des cinq configurations connues, ce qui valide la typologie comme grille empirique solide.
+- L'acmé absolutiste génoise (1607-1627) est financière, pas territoriale — singularité partielle, mais déjà attestée par l'« âge des Génois » de Braudel ; pas une singularité-erreur (cf. Florence Lois Livornine 1591 = acmé commerciale plutôt que territoriale).
+- La fin de la RN suit le pattern « petite cité-État italienne écrasée par chocs exogènes » : Florence avortée par Napoléon puis Autriche, Venise avortée par Autriche, **Gênes avortée par Napoléon puis Vienne, fusion italienne**. Pattern structurellement homogène.
+
+### Pas de singularités multiples → cadrage solide
+
+Ce parcours cumule trois traits atypiques mais chacun est documenté ou s'explique par le cadre :
+- **Phase oligarchique très longue (337 ans)** — prolongée par quasi-exutoire commercial puis ingérences étrangères chroniques, pattern documenté dans parcours.md §Taille (petite nation perturbée par voisins).
+- **Configuration consortium oligarchique institutionnalisé** — configuration documentée dans phase_absolutiste.md §Configurations rencontrées ; trait empirique décisif (faction perdante reste créancière du consortium) confirmé par recherche complémentaire (Heers, Felloni, Fratianni, Taviani, Winter).
+- **Acmé absolutiste financière sans territoire** — prolongement de la signature « capture financière » de l'« âge des Génois » documenté par Braudel.
+
+Aucune de ces atypicités ne nécessite d'invoquer une exception théorique nouvelle. La cohérence d'ensemble est solide, ce qui valide le cadrage.
+
+---
+
+## 5. Apports d'Agent 2
+
+Recherche complémentaire d'Agent 2 a précisé plusieurs points décisifs :
+
+1. **Compagna Communis 1099 — composition mixte** : la Compagna inclut explicitement *les seigneurs des vallées et côtes* + les compagnies de quartier de la cité. Acte de naissance institutionnel d'une cité-État qui agrège l'urbain et le seigneurial ligure dans un cadre commun. Ce trait renforce la lecture **éveil féodal collectif** (cas-limite cité-État) plutôt que simple acte fondateur urbain.
+
+2. **Casa di San Giorgio comme appareil étatique fonctionnel** : confirmation forte qu'à partir de 1453, la Casa exerce *de jure* fonctions souveraines sur Corse, Caffa, Famagouste, Lunigiana — extraction fiscale, justice, administration. Trait empirique décisif (Winter 2022 « A Government of Creditors », Taviani « A Privatized State ») : gouvernance par les *partecipanti* (créanciers-actionnaires) collectivement, indépendante des doges. Cette analyse a permis d'identifier la configuration **consortium oligarchique institutionnalisé** comme lecture solide pour Gênes 1528+.
+
+3. **Constitution dorienne 1528 — distinction analytique précise** : Doria refuse la seigneurie, accepte seulement « Père de la patrie », censeur perpétuel. La constitution opère par fusion vecchi/nuovi (28 Alberghi) — verdict : *appareil-propriété des oligarques* (pas *au-dessus*), pas de classe administrative distincte. Cette distinction analytique éclaire à la fois la signature absolutiste de 1528 et la prédiction théorique de l'absence de Remontrance dans l'AR.
+
+4. **Leges Novae 1576 comme consolidation intra-impérialisme** : « termine une époque de factions et de guerres civiles » (Bitossi, Costantini). Met fin à la dichotomie vecchi/nuovi institutionnalisée, unifie le patriciat dans un *Liber aureus* unique. Lecture comme parachèvement intra-impérialisme, pas 1er MA initial.
+
+5. **« Âge des Génois » Braudel 1557-1627** : test formel d'exutoire appliqué — NON sur les trois questions (administration directe, revenus fiscaux centraux, accès élitaire central). Quasi-exutoire financier qui prolonge la phase mais ne passe pas le test de vrai exutoire étatique. Saturation par la grande faillite de Philippe IV (1627).
+
+6. **Pattern « petite cité-État perturbée »** : les chocs xviie-xviiie (1684 Duquesne, 1729+ révoltes corses, 1742 Tabarka, 1746 Balilla, 1768 cession Corse, 1797 République ligurienne) et les ingérences xive-xvie (1396 France, 1421 Visconti, 1458 France, 1499 France, 1522 Espagne) suivent rigoureusement le pattern parcours.md §Taille — perturbations exogènes par ingérences étrangères, pas signature inhérente d'une phase.
+
+7. **Bonaparte 1797-1815 — pas IR endogène** : l'application du test phase_rn.md §Cas particulier IR exogène montre que Gênes ne satisfait aucune des trois conditions (pas de fonctions canoniques pour la nation génoise, pas de séquence canonique lisible, pas de dynamique propre dans le projet). Configuration `avortement par choc exogène + annexion comme marge passive`, en parallèle avec Florence.
+
+8. **Mazzini, Mameli, Giovine Italia** : élites génoises moteurs de la RN italienne. La conscience nationale bascule de génoise à italienne dans les classes éduquées à partir des années 1820s. Le Parcours génois propre se prolonge en se fusionnant dans le Parcours italien — cas paradigmatique de fusion de Parcours de cité-État dans un Parcours de taille standard, conformément à parcours.md §Borne de fin.
