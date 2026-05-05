@@ -62,7 +62,8 @@ h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#
 h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
 h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
 .h3-icon { font-size:1.1rem; flex-shrink:0; }
-h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h4 { font-size:1rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
 .anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
 h2:hover .anchor, h3:hover .anchor { opacity:1; }
 
@@ -189,40 +190,42 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <li><a href="#cadre-théorique">Cadre théorique</a></li>
 <ul>
 <li><a href="#les-deux-moteurs-du-parcours">Les deux moteurs du Parcours</a></li>
+<li><a href="#nature-de-l-appareil-étatique-critère-fonctionnel-pas-juridique">Nature de l&#x27;appareil étatique : critère fonctionnel, pas juridique</a></li>
 <li><a href="#la-question-fondamentale-du-parcours">La question fondamentale du Parcours</a></li>
-<li><a href="#le-parcours-est-porté-par-un-peuple-pas-par-un-état">Le Parcours est porté par un peuple, pas par un État</a></li>
-<li><a href="#les-noms-ne-sont-pas-la-réalité">Les noms ne sont pas la réalité</a></li>
-<li><a href="#comment-mapper-un-nouveau-parcours">Comment mapper un nouveau Parcours</a></li>
-<li><a href="#superficie-de-référence-noyau-marges">Superficie de référence (noyau + marges)</a></li>
-<li><a href="#durées-typiques-endogènes">Durées typiques endogènes</a></li>
-<li><a href="#le-clivage-gauche-droite-fabry-portal">Le clivage gauche-droite (Fabry &amp; Portal)</a></li>
-<li><a href="#sous-phases-et-saillants">Sous-phases et saillants</a></li>
 </ul>
 <li><a href="#vue-d-ensemble-des-phases">Vue d&#x27;ensemble des phases</a></li>
-<li><a href="#dynamique-des-élites">Dynamique des élites</a></li>
-<li><a href="#perturbations">Perturbations</a></li>
+<li><a href="#sous-phases-et-bornes">Sous-phases et bornes</a></li>
+<li><a href="#saillants-canoniques">Saillants canoniques</a></li>
+<li><a href="#durées-typiques-endogènes">Durées typiques endogènes</a></li>
+<li><a href="#test-discriminant-et-cohérence-d-ensemble">Test discriminant et cohérence d&#x27;ensemble</a></li>
+<ul>
+<li><a href="#tests-discriminants-principaux-par-transition">Tests discriminants principaux par transition</a></li>
+</ul>
+<li><a href="#le-parcours-est-porté-par-un-peuple-pas-par-un-état">Le Parcours est porté par un peuple, pas par un État</a></li>
+<ul>
+<li><a href="#conséquences-pour-le-périmètre-temporel-d-analyse">Conséquences pour le périmètre temporel d&#x27;analyse</a></li>
+</ul>
+<li><a href="#les-noms-ne-sont-pas-la-réalité">Les noms ne sont pas la réalité</a></li>
+<li><a href="#taille-de-la-nation-et-standard-géopolitique">Taille de la nation et standard géopolitique</a></li>
+<li><a href="#superficie-de-référence-noyau-marges">Superficie de référence (noyau + marges)</a></li>
+<li><a href="#le-clivage-gauche-droite-fabry-portal">Le clivage gauche-droite (Fabry &amp; Portal)</a></li>
+<li><a href="#renvois">Renvois</a></li>
 </ul></nav>
 <article>
 <h2 id="cadre-théorique">Cadre théorique<a class="anchor" href="#cadre-théorique">#</a></h2>
-<p>Le modèle historionomique de Philippe Fabry pose qu'une nation se construit en traversant une succession de phases obligées. Deux moteurs alimentent cette progression : la construction de l'État central et l'homogénéisation culturelle de la nation. Plus la nation avance dans son Parcours, plus son État se consolide et plus sa culture s'unifie &mdash; les deux phénomènes s'alimentant mutuellement. Inversement, une hétérogénéisation brutale (par conquête, occupation, déportation) peut faire régresser le Parcours à une phase antérieure.</p>
+<p>Le modèle historionomique de Philippe Fabry pose qu'une nation se construit en traversant une succession de phases obligées, alimentée par deux moteurs : la construction de l'État central et l'homogénéisation culturelle. Plus la nation avance, plus son État se consolide et plus sa culture s'unifie &mdash; les deux phénomènes s'alimentant mutuellement. Une hétérogénéisation brutale (conquête, occupation, déportation) peut faire régresser le Parcours à une phase antérieure : c'est le mécanisme du <strong>reboot</strong> (cf. <code>perturbations.md</code>).</p>
 <h3 id="les-deux-moteurs-du-parcours">Les deux moteurs du Parcours<a class="anchor" href="#les-deux-moteurs-du-parcours">#</a></h3>
-<p>La progression dans le Parcours est portée par deux processus qui se renforcent mutuellement :</p>
 <ul>
-  <li><strong>La construction de l'État central</strong> : émergence puis renforcement d'un appareil administratif, fiscal et militaire central, qui s'impose progressivement face aux pouvoirs locaux.</li>
-  <li><strong>L'homogénéisation culturelle</strong> : unification progressive de la langue, de la religion, du droit, des mœurs et de la conscience nationale sur le territoire.</li>
+  <li><strong>Construction de l'État central</strong> : émergence puis renforcement d'un appareil administratif, fiscal et militaire central, qui s'impose progressivement face aux pouvoirs locaux.</li>
+  <li><strong>Homogénéisation culturelle</strong> : unification progressive de la langue, de la religion, du droit, des mœurs et de la conscience nationale sur le territoire.</li>
 </ul>
-<p>Ces deux processus sont à la fois les <em>moteurs</em> et les <em>indicateurs</em> du Parcours. Pour situer une nation dans son Parcours, on observe le degré de centralisation de l'État et le degré d'homogénéité culturelle. Pour comprendre un ralentissement ou une accélération, on cherche ce qui a perturbé l'un ou l'autre.</p>
-<p>Tout ce qui <strong>renforce</strong> l'un des deux moteurs (stabilité politique, croissance économique, progrès des communications) fait avancer le Parcours. Tout ce qui <strong>affaiblit</strong> l'un des deux (conquête étrangère, déportation, guerre civile sur le sol national) le ralentit ou le fait régresser.</p>
-<p>Les deux moteurs doivent progresser <strong>ensemble</strong> pour que le Parcours transite d'une phase à la suivante. Un État central avancé ne suffit pas si l'homogénéité culturelle est bloquée &mdash; le Parcours boucle (l'Angleterre anglo-saxonne avait un appareil étatique très sophistiqué &mdash; Danegeld, shires, monnaie centralisée &mdash; mais la cohabitation Anglo-Saxons/Scandinaves bloquait le moteur culturel, empêchant la transition vers la phase oligarchique pendant ~500 ans). Inversement, une homogénéité culturelle forte ne suffit pas sans construction étatique &mdash; le Parcours stagne (la France capétienne avait une identité culturelle en formation autour de la langue d'oïl, mais l'État était quasi inexistant sous les premiers Capétiens). Le Parcours avance le plus vite quand les deux moteurs sont <strong>alignés</strong>.</p>
+<p>Ces deux processus sont à la fois les <em>moteurs</em> et les <em>indicateurs</em> du Parcours. Pour situer une nation, on observe le degré de centralisation de l'État et le degré d'homogénéité culturelle. Pour comprendre un ralentissement ou une accélération, on cherche ce qui a perturbé l'un ou l'autre.</p>
+<p>Les deux moteurs doivent progresser <strong>ensemble</strong>. Un État central avancé sans homogénéité culturelle suffisante = Parcours qui <strong>boucle</strong> : la phase féodale recommence en cycles (pic suivi de crise) sans produire le pacte oligarchique, faute d'homogénéité des grands. Une homogénéité culturelle forte sans construction étatique = Parcours qui <strong>stagne</strong> : l'identité de la nation existe mais l'appareil reste informel, l'éveil féodal lui-même est compromis. Le Parcours avance le plus vite quand les deux moteurs sont <strong>alignés</strong>.</p>
+<h3 id="nature-de-l-appareil-étatique-critère-fonctionnel-pas-juridique">Nature de l'appareil étatique : critère fonctionnel, pas juridique<a class="anchor" href="#nature-de-l-appareil-étatique-critère-fonctionnel-pas-juridique">#</a></h3>
+<p>L'appareil de l'État central &mdash; fisc, armée, justice, coordination &mdash; est défini par les <strong>fonctions qu'il exerce</strong>, pas par son statut juridique formel. Quand une structure formellement privée (banque familiale, consortium de créanciers institutionnalisé, ordre religieux militaire, compagnie à charte) exerce effectivement les fonctions de l'appareil central &mdash; extraction fiscale, coercition, coordination diplomatique, récompense-sanction des élites, administration de territoires soumis &mdash; elle constitue cet appareil au sens historionomique, indépendamment de son statut formel. La distinction public/privé est une catégorie juridique tardive et contingente ; le critère structurel est fonctionnel.</p>
+<p>Configurations possibles : tout dispositif formellement privé (banque dynastique-familiale, consortium de créanciers institutionnalisé, ordre religieux militaire, compagnie à charte) qui exerce les fonctions étatiques (fiscalité, coercition, administration territoriale, coordination diplomatique, récompense-sanction des élites) constitue l'appareil central au sens historionomique. Cette possibilité doit être tenue en tête lors de l'identification d'une phase oligarchique ou absolutiste : l'absence d'une bureaucratie formellement publique ne signifie pas l'absence d'appareil central, et les tests discriminants des phases s'appliquent à l'appareil fonctionnel quel que soit son habillage juridique.</p>
 <h3 id="la-question-fondamentale-du-parcours">La question fondamentale du Parcours<a class="anchor" href="#la-question-fondamentale-du-parcours">#</a></h3>
-<p>Tout au long du Parcours, la même question se pose : <strong>« entre égaux, quelles règles nous donnons-nous ? »</strong>. Ce qui change d'une phase à l'autre, ce n'est pas la question &mdash; c'est le <strong>cercle des « égaux »</strong> autour de la table, qui s'élargit à mesure que l'homogénéité culturelle progresse.</p>
-<ul>
-  <li>En <strong>phase féodale</strong>, les « égaux » sont les grands seigneurs féodaux. Ils doivent développer une conscience de classe et se donner des règles → le <strong>pacte oligarchique</strong>.</li>
-  <li>En <strong>phase oligarchique</strong>, l'homogénéisation avance, de nouvelles élites émergent (bourgeoisie, administration). Le pacte oligarchique ne peut plus tenir &mdash; il y a « trop de monde autour de la table ». → Résolution : <strong>subordination des anciens réseaux lignagers au pouvoir administratif central</strong>, avec la possibilité de monter socialement en rejoignant l'administration.</li>
-  <li>En <strong>phase absolutiste</strong>, la conscience de classe / conscience nationale s'étend à encore plus de monde. L'administration centrale ne peut plus intégrer tout le monde, les élites se sédimentent, le système se fige. → Résolution : <strong>éclatement de la sédimentation</strong> (Révolution Nationale).</li>
-  <li>En <strong>Révolution Nationale</strong>, la question est résolue définitivement (pour un temps) par la <strong>subordination du pouvoir administratif à la représentation nationale</strong> &mdash; le vote et les élus offrent un siège à tous les citoyens à la table des négociations.</li>
-</ul>
-<p>La construction de l'État central est le <strong>moyen</strong> de répondre à cette question. L'homogénéisation culturelle est ce qui <strong>élargit</strong> le cercle de ceux qui ont le droit de la poser.</p>
+<p>Tout au long du Parcours, la même question se pose : <strong>« entre égaux, quelles règles nous donnons-nous ? »</strong>. Ce qui change, ce n'est pas la question &mdash; c'est le <strong>cercle des « égaux »</strong> autour de la table, qui s'élargit à mesure que l'homogénéité culturelle progresse.</p>
 <div class="table-wrapper"><table>
 <thead>
   <tr>
@@ -239,82 +242,189 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
   </tr>
   <tr>
     <td>Oligarchique</td>
-    <td>Les oligarques + les nouvelles élites</td>
-    <td>Subordination des réseaux lignagers au pouvoir administratif</td>
+    <td>Les oligarques + les nouvelles élites (bourgeoisie, administration)</td>
+    <td>Subordination des réseaux lignagers au pouvoir administratif central</td>
   </tr>
   <tr>
     <td>Absolutiste</td>
-    <td>La nation entière (en théorie)</td>
+    <td>La nation entière (en théorie) &mdash; sédimentation des élites</td>
     <td>Éclatement de la sédimentation (RN)</td>
   </tr>
   <tr>
     <td>RN</td>
-    <td>Tous les citoyens</td>
-    <td>Subordination du pouvoir administratif à la représentation nationale</td>
+    <td>Une représentation nationale élargie (selon les standards de l'époque)</td>
+    <td>Subordination du pouvoir administratif à cette représentation</td>
   </tr>
 </tbody>
 </table></div>
-<h3 id="le-parcours-est-porté-par-un-peuple-pas-par-un-état">Le Parcours est porté par un peuple, pas par un État<a class="anchor" href="#le-parcours-est-porté-par-un-peuple-pas-par-un-état">#</a></h3>
-<p>Le Parcours ne nécessite pas que la nation soit formellement unifiée ou souveraine :</p>
+<p>La construction de l'État central est le <strong>moyen</strong> de répondre à cette question. L'homogénéisation culturelle est ce qui <strong>élargit</strong> le cercle de ceux qui ont le droit de la poser.</p>
+<hr>
+<h2 id="vue-d-ensemble-des-phases">Vue d'ensemble des phases<a class="anchor" href="#vue-d-ensemble-des-phases">#</a></h2>
+<p><strong>Phase pré-féodale (~90-120 ans).</strong> Percolation élitaire (Deblonde) : émergence d'une aristocratie qui se reconnaît comme telle, sans encore de chef supra-régional. Préparation de la phase féodale. Cf. <code>phase_pre_feodale.md</code>.</p>
+<p><strong>Phase féodale (~200 ans, peut boucler).</strong> Interconnexion des réseaux claniques et lignagers. Un chef des chefs émerge, dont l'autorité repose sur des liens de vassalité d'homme à homme. Pas d'administration centrale permanente. L'édifice est fragile et dépend de la personne du suzerain. Des <strong>pics féodaux</strong> (rois forts) alternent avec des <strong>crises féodales</strong> (fragmentation post-pic). Le <strong>pacte oligarchique</strong> ne survient que quand <strong>deux conditions</strong> sont réunies simultanément : homogénéité des oligarques + faiblesse du suzerain (Deblonde). Si la phase boucle (crises sans pacte par homogénéité insuffisante), elle peut durer plusieurs fois la durée typique &mdash; chaque cycle pic/crise rejoue la fragilité féodale. Cf. <code>phase_feodale.md</code>.</p>
 <ul>
-  <li><strong>Sous domination étrangère</strong>, le Parcours continue d'avancer tant que les deux moteurs ne sont pas détruits. Israël progresse sous domination assyrienne, babylonienne, perse, grecque et romaine &mdash; seules les destructions institutionnelles majeures provoquent des reboots.</li>
-  <li><strong>Sans unification formelle</strong>, une nation peut avoir un Parcours propre. L'Allemagne et l'Italie avancent dans leur Parcours bien avant leur unification politique au XIXe siècle.</li>
-  <li><strong>Dans un empire multi-national</strong>, le Parcours est porté par l'ethnie du cœur de l'empire &mdash; les Turcs de Roumélie pour l'Empire ottoman, les Autrichiens germanophones pour l'Empire habsbourgeois.</li>
+  <li>Sous-phases : coagulation des élites → [bascule oligarchique]</li>
 </ul>
-<h3 id="les-noms-ne-sont-pas-la-réalité">Les noms ne sont pas la réalité<a class="anchor" href="#les-noms-ne-sont-pas-la-réalité">#</a></h3>
-<p>Ce qui détermine la phase d'une nation, c'est le <strong>fonctionnement réel</strong> de ses institutions et de sa société, pas leur étiquette formelle. Les institutions portent souvent des noms qui ne correspondent pas à leur rôle structurel :</p>
+<p><strong>Phase oligarchique (~200 ans).</strong> Émergence de l'État central &mdash; impôt permanent, armée permanente, administration centrale. L'État central se renforce face aux pouvoirs locaux. Polarisation progressive entre faction prébendière et patrimoniale, jusqu'à la <strong>guerre sociale</strong>, résolue par un <strong>1er monarque absolu</strong>. Cf. <code>phase_oligarchique.md</code>.</p>
 <ul>
-  <li>La France a des « parlements » (cours de justice) bien avant d'être un État-nation parlementaire. Le mot « parlement » ne signifie pas la même chose structurellement.</li>
-  <li>Israël moderne a un régime formellement parlementaire, mais le fonctionnement réel de ses institutions et de sa société est oligarchique (au moins jusqu'à Netanyahou).</li>
-  <li>Les États-Unis ont une « Constitution » et un « Congrès » dès 1787, mais le fonctionnement réel est féodal (pouvoir reposant sur des réseaux interpersonnels entre grands acteurs, pas d'État central permanent au sens fiscal et monétaire) jusqu'à la création de la Fed (1913).</li>
+  <li>Sous-phases : essor oligarchique → polarisation des élites → guerre sociale</li>
 </ul>
-<p>Face à une institution, la question n'est jamais « comment s'appelle-t-elle ? » mais « comment fonctionne-t-elle réellement ? ». Un « parlement » peut être un outil absolutiste, une « monarchie » peut être structurellement oligarchique, une « démocratie » peut être structurellement féodale.</p>
-<h3 id="comment-mapper-un-nouveau-parcours">Comment mapper un nouveau Parcours<a class="anchor" href="#comment-mapper-un-nouveau-parcours">#</a></h3>
-<p>La méthode la plus efficace pour mapper le Parcours d'une nation non encore analysée est de <strong>commencer par les saillants</strong>, pas par les phases. Les saillants sont des événements ponctuels, identifiables dans les sources historiques. Les phases se déduisent ensuite.</p>
-<p><strong>Ordre de recherche recommandé :</strong></p>
-<p>0. <strong>Établir la superficie de référence</strong> &mdash; identifier les changements territoriaux majeurs (conquêtes, pertes, unions dynastiques) et les coder en noyau + marges (voir ci-dessous). Cela permet d'identifier les perturbations territoriales avant même d'analyser les phases.</p>
-<p>1. <strong>Identifier le 1er monarque oligarchique</strong> &mdash; c'est le saillant le mieux documenté (premier souverain disposant d'un fisc permanent + armée permanente + administration). Les sources historiques et archéologiques permettent généralement de l'identifier avec confiance.</p>
-<p>2. <strong>Remonter ~200 ans</strong> pour chercher l'éveil féodal (premier chef supra-régional). Cette phase étant pauvre en traces, on la reconstruit souvent a posteriori à partir de la date du 1er monarque oligarchique.</p>
-<p>3. <strong>Identifier la guerre sociale</strong> &mdash; conflit entre deux factions d'élites, résolu par l'émergence d'un tiers. La guerre sociale est souvent très visible dans les sources.</p>
-<p>4. <strong>Identifier le 1er monarque absolu</strong> &mdash; la figure qui résout la guerre sociale.</p>
-<p>5. <strong>Chercher le acmé absolutiste</strong> (~100-150 ans après le 1er monarque absolu) et l'Ancien Régime qui suit.</p>
-<p>6. <strong>Chercher la RN</strong> &mdash; si elle a eu lieu.</p>
-<p>7. <strong>Vérifier les durées</strong> &mdash; tout écart significatif par rapport aux ~200 ans typiques signale une perturbation à identifier.</p>
-<h3 id="superficie-de-référence-noyau-marges">Superficie de référence (noyau + marges)<a class="anchor" href="#superficie-de-référence-noyau-marges">#</a></h3>
-<p>Pour chaque nation, on établit la <strong>superficie de référence</strong> au fil du temps : la taille du territoire que le souverain doit effectivement gouverner. Cette superficie se décompose en :</p>
+<p><strong>Phase absolutiste (~200 ans).</strong> L'administration centrale acquiert une supériorité incontestée sur les administrations locales. Achèvement de l'élimination des réseaux féodaux et oligarchiques. Se conclut par l'<strong>ancien régime</strong> : système à maturité, élites sédimentées, mobilité sociale figée, rentes insupportables. Cf. <code>phase_absolutiste.md</code>.</p>
 <ul>
-  <li><strong>Noyau territorial</strong> : le territoire culturellement homogène avec le cœur de la nation (même langue, même droit). C'est le territoire qui <em>est</em> la nation.</li>
-  <li><strong>Marges</strong> : les territoires hétérogènes sous contrôle de la même couronne (langue différente, droit différent). C'est le territoire que la nation <em>possède</em> sans l'avoir assimilé.</li>
+  <li>Sous-phases : absolutisation (~30-70 ans) → impérialisme absolutiste (~45-100 ans) → ancien régime (~35-100 ans)</li>
 </ul>
-<p><strong>Comment identifier le noyau et les marges :</strong></p>
+<p><strong>Révolution Nationale (~25-80 ans).</strong> Phase troublée qui renverse l'ordre absolutiste. Le clivage gauche-droite saute : centre-droit et centre-gauche fusionnent en bloc élitaire qui profite du système, ED et EG convergent en bloc contestataire. Cf. <code>phase_rn.md</code>.</p>
 <ul>
-  <li>Le noyau est défini par l'homogénéité culturelle, pas par le contrôle politique. L'Angleterre d'oïl est le noyau français, même avant que le roi n'en contrôle la majorité.</li>
-  <li>Les marges sont les territoires où l'homogénéisation culturelle n'est pas accomplie : langue différente (Occitanie pour la France, Aragon pour l'Espagne), religion différente, institutions propres.</li>
-  <li>Un territoire peut transiter de marge à noyau quand l'homogénéisation y est accomplie. Approximer par une date ponctuelle (ex. : Galles → noyau en 1536 avec les Laws in Wales Acts).</li>
+  <li>Sous-phases : révolution initiale (Éclatement de l'AR → Expérience parlementaire → Phase aiguë → Moment thermidorien) → impérialisme revanchard → restauration</li>
+  <li>Saillants : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution</li>
 </ul>
-<p><strong>Pourquoi c'est utile :</strong></p>
+<p><strong>Phase parlementaire &mdash; État-nation parlementaire (ENP).</strong> Aboutissement du Parcours. Le pouvoir administratif est subordonné à la représentation nationale ; la chambre basse est la source ultime du pouvoir. Très stable. Cf. <code>phase_parlementaire.md</code>.</p>
+<p><strong>Phase technocratique.</strong> Dégénérescence de l'ENP. Le peuple utilise son pouvoir politique pour participer à la redistribution plutôt que pour y mettre fin (choix de Bastiat). L'administration grossit jusqu'à devenir un Léviathan capable de renverser la chambre basse.</p>
+<p><strong>Dominat.</strong> L'administration <em>est</em> le gouvernement de facto. Les lois sont décidées par des comités administratifs. Reboot en ancien régime sans nécessairement de figure de monarque absolu.</p>
+<hr>
+<h2 id="sous-phases-et-bornes">Sous-phases et bornes<a class="anchor" href="#sous-phases-et-bornes">#</a></h2>
+<p>Les <strong>sous-phases</strong> découpent chaque phase en étapes successives pour comprendre la mécanique. Les bornes marquées ⚠️ sont <strong>dynamiques</strong> (basculement de logique, pas un saillant-pivot) ; les autres sont des <strong>saillants canoniques</strong>.</p>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Sous-phase</th>
+    <th>Marqueur de début</th>
+    <th>Marqueur de fin</th>
+    <th>Durée typique</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Percolation élitaire</td>
+    <td>Fragmentation / identité émergente</td>
+    <td><strong>Éveil féodal</strong></td>
+    <td>~90-120 ans</td>
+  </tr>
+  <tr>
+    <td>Coagulation des élites</td>
+    <td><strong>Éveil féodal</strong></td>
+    <td><strong>Crise féodale terminale</strong> OU <strong>Pacte oligarchique</strong> direct</td>
+    <td>~100-250 ans</td>
+  </tr>
+  <tr>
+    <td>Bascule oligarchique</td>
+    <td><strong>Crise féodale terminale</strong></td>
+    <td><strong>Pacte oligarchique</strong></td>
+    <td>~10-20 ans</td>
+  </tr>
+  <tr>
+    <td>Essor oligarchique</td>
+    <td><strong>Pacte oligarchique</strong></td>
+    <td>⚠️ Basculement (projection extérieure → tension interfactions)</td>
+    <td>~70-100 ans</td>
+  </tr>
+  <tr>
+    <td>Polarisation des élites</td>
+    <td>⚠️ Basculement</td>
+    <td><strong>Début de la guerre sociale</strong></td>
+    <td>~10-40 ans</td>
+  </tr>
+  <tr>
+    <td>Guerre sociale</td>
+    <td>Premier épisode ouvert du conflit</td>
+    <td><strong>1er monarque absolu</strong></td>
+    <td>~15-60 ans</td>
+  </tr>
+  <tr>
+    <td>Absolutisation</td>
+    <td><strong>1er monarque absolu</strong></td>
+    <td><strong>Fin de la DGRO</strong> (consensus absolutiste)</td>
+    <td>~30-70 ans</td>
+  </tr>
+  <tr>
+    <td>Impérialisme absolutiste</td>
+    <td><strong>Fin de la DGRO</strong></td>
+    <td><strong>Remontrance</strong></td>
+    <td>~45-100 ans</td>
+  </tr>
+  <tr>
+    <td>Ancien régime</td>
+    <td><strong>Remontrance</strong></td>
+    <td><strong>Éclatement de l'AR</strong></td>
+    <td>~35-100 ans</td>
+  </tr>
+  <tr>
+    <td>Révolution initiale</td>
+    <td><strong>Éclatement de l'AR</strong></td>
+    <td><strong>Émergence de l'IR</strong></td>
+    <td>~10-15 ans</td>
+  </tr>
+  <tr>
+    <td>Impérialisme revanchard</td>
+    <td><strong>Émergence de l'IR</strong></td>
+    <td><strong>Restauration</strong></td>
+    <td>~10-16 ans</td>
+  </tr>
+  <tr>
+    <td>Restauration</td>
+    <td><strong>Restauration</strong></td>
+    <td><strong>Glorieuse Révolution</strong></td>
+    <td>~3-40 ans</td>
+  </tr>
+</tbody>
+</table></div>
+<p><strong>Règles d'identification des bornes</strong> :</p>
+<p>1. Une borne est généralement un saillant ou un événement identifiable, jamais une date arrondie. Deux exceptions : essor → polarisation et polarisation → guerre sociale sont des <strong>basculements de dynamique</strong>.</p>
+<p>2. La fin d'une sous-phase et le début de la suivante coïncident (ou se chevauchent de ~1-2 ans).</p>
+<p>3. Les bornes ne doivent pas être forcées pour obtenir des durées typiques.</p>
+<p>4. Quand une sous-phase optionnelle est absente (bascule oligarchique, IR), justifier structurellement.</p>
+<p><strong>Saillants positionnés à l'intérieur d'une sous-phase</strong> (pas en borne) : 1er monarque oligarchique (interne à l'essor, premier souverain post-PO, typiquement quelques années après le PO) ; Acmé oligarchique (interne à l'essor) ; Fin de l'expansion oligarchique (peut coïncider avec le basculement essor → polarisation) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Fin de l'expansion absolutiste (interne à l'impérialisme absolutiste) ; Expérience parlementaire, Phase aiguë, Moment thermidorien (internes à la révolution initiale, qui s'étend de l'Éclatement de l'AR à l'Émergence de l'IR).</p>
+<hr>
+<h2 id="saillants-canoniques">Saillants canoniques<a class="anchor" href="#saillants-canoniques">#</a></h2>
+<p>Les <strong>saillants</strong> sont des éléments ponctuels facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison. Ils forment une <strong>liste fermée</strong> (cf. CLAUDE.md pour le naming canonique). Définitions courtes ci-dessous ; pour les tests discriminants, formes admises et marqueurs détaillés, cf. les <code>phase_*.md</code>.</p>
+<p><strong>Féodale</strong> :</p>
 <ul>
-  <li>Les expansions territoriales (chocs d'hétérogénéité) sont directement visibles sur le graphique de superficie → prolongent la phase en cours.</li>
-  <li>Les contractions territoriales (corrections d'échelle) sont aussi visibles → accélèrent la phase en cours.</li>
-  <li>Le ratio marges/noyau indique la charge d'hétérogénéité qui pèse sur le Parcours.</li>
+  <li><em>Éveil féodal</em> : émergence du premier chef supra-régional, dont l'autorité force les autres à se positionner (premier souverain dont le pouvoir personnel est au moins l'égal de ses vassaux, les grands féodaux)</li>
+  <li><em>Pic féodal</em> : règne d'un roi fort qui consolide temporairement l'édifice féodal</li>
+  <li><em>Crise féodale</em> : si une succession est défaillante (roi faible, crise dynastique, héritier disputé), l'édifice bâti lors d'un pic féodal se fragmente</li>
+  <li><em>Pacte oligarchique</em> : acte collectif par lequel les oligarques garantissent la stabilité du régime aux successions, soit en codifiant la transmission, soit en encadrant l'exercice du pouvoir (les deux mécanismes peuvent se succéder dans une même nation)</li>
 </ul>
-<p><strong>Données dans le fichier parcours.md :</strong></p>
-<p>La superficie est codée dans une section <code>## Superficie de référence</code> avec le format <code>année: noyau+marges | label</code>. Le label décrit les marges (pas le total). Quand il n'y a pas de marges, pas de <code>+</code>. Les valeurs sont en milliers de km².</p>
-<pre><code>
-## Superficie de référence
-- unit: milliers de km²
-- 1066: 130+30 | Normandie
-- 1204: 130+25 | Gascogne (perte de la Normandie)
-- 1536: 151+1 | Calais (Galles rejoint le noyau)
-</code></pre>
-<p><strong>Première approximation (recommandation Alyocha) :</strong> utiliser la superficie seule, sans pondérer par la population &mdash; les données de population historique sont trop incertaines.</p>
-<p><strong>Règle d'or : le test discriminant prime sur les durées.</strong> Ne pas ajuster l'identification des saillants pour obtenir des durées typiques. Appliquer d'abord le test discriminant de chaque transition de phase, puis expliquer les écarts de durée par des perturbations. Les durées atypiques sont toujours le signal d'une perturbation &mdash; pas d'une erreur d'identification. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme : revérifier le test discriminant.</p>
-<p><strong>Vérifications de cohérence (à appliquer avant de finaliser) :</strong></p>
-<p>1. <strong>Le test discriminant a-t-il été appliqué à la bonne échelle ?</strong> Si la nation est ou a été une monarchie composite (ex. : Espagne habsbourgeoise, Saint-Empire), l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national &mdash; pas seulement celles du noyau.</p>
-<p>2. <strong>L'expansion a-t-elle été attribuée à la bonne phase ?</strong> L'expansion prolonge la phase EN COURS au moment où elle commence (cf. Venise). Vérifier via le test discriminant que la phase identifiée est bien celle qui est en cours.</p>
-<p>3. <strong>La guerre sociale se joue-t-elle à l'échelle pertinente ?</strong> Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale, pas seulement régionale.</p>
-<h3 id="durées-typiques-endogènes">Durées typiques endogènes<a class="anchor" href="#durées-typiques-endogènes">#</a></h3>
-<p>En l'absence de perturbation externe, les phases ont des durées caractéristiques :</p>
+<p><strong>Oligarchique</strong> :</p>
+<ul>
+  <li><em>1er monarque oligarchique</em> : premier souverain qui gouverne dans le cadre ouvert par le PO, dont la légitimité repose sur les règles codifiées et non plus sur la stature personnelle</li>
+  <li><em>Acmé oligarchique</em> : pic de projection de puissance combinée souverain + nation, lié à la saturation de l'exutoire externe</li>
+  <li><em>Fin de l'expansion</em> : moment où la projection extérieure cesse, l'énergie compétitive se retourne vers l'intérieur</li>
+  <li><em>Guerre sociale</em> : conflit ouvert entre deux factions oligarchiques pour le contrôle de l'État central (généralement entre une faction prébendière et une faction patrimoniale), résolu par l'émergence d'un nouveau cadre central qui subordonne les anciennes élites</li>
+</ul>
+<p><strong>Absolutiste</strong> :</p>
+<ul>
+  <li><em>1er monarque absolu</em> : figure (ou institution, ou dynastie, ou puissance étrangère arbitrante) qui résout la guerre sociale en créant un nouveau cadre central qui subordonne toutes les anciennes élites &mdash; 5 formes admises (cf. <code>phase_absolutiste.md</code>)</li>
+  <li><em>DGRO (Dernière Grande Révolte Oligarchique)</em> : dernier sursaut armé des oligarques avant l'ancrage absolutiste &mdash; son écrasement marque la fin de l'absolutisation</li>
+  <li><em>Acmé absolutiste</em> : pic d'impérialisme et de prestige, apogée du règne absolutiste</li>
+  <li><em>Fin de l'expansion</em> : moment où la projection extérieure absolutiste cesse, retour vers l'intérieur</li>
+  <li><em>Remontrance</em> : contestation institutionnelle (sans force armée) des élites intégrées à l'appareil absolutiste &mdash; marque l'entrée en ancien régime. Premier moment du cycle de la classe administrative intermédiaire (Pariente)</li>
+  <li><em>Réformes échouées</em> : séquence de tentatives de réforme structurelle par le souverain ou ses ministres, systématiquement bloquées par la classe administrative désormais sédimentée. La récurrence est le marqueur central (Deblonde) &mdash; pas qu'elles échouent, mais qu'elles s'enchaînent. Second moment du cycle de la classe administrative intermédiaire</li>
+</ul>
+<p><strong>RN</strong> :</p>
+<ul>
+  <li><em>Éclatement de l'AR</em> : moment d'effondrement de l'ordre ancien, ouverture de la révolution</li>
+  <li><em>Expérience parlementaire</em> : tentative initiale de restructurer le pouvoir sur base représentative</li>
+  <li><em>Phase aiguë</em> : période la plus violente de la RN, où s'exécutent les radicaux et où s'effondre le compromis initial</li>
+  <li><em>Moment thermidorien</em> : retour des modérés après la phase aiguë, restabilisation</li>
+  <li><em>Émergence de l'IR</em> : avènement d'une figure d'Impérialiste Revanchard qui rétablit l'ordre et porte la nation par projection extérieure</li>
+  <li><em>Restauration</em> : retour de l'ordre ancien après la chute de l'IR (à la fois saillant &mdash; le moment &mdash; et sous-phase &mdash; la durée)</li>
+  <li><em>Glorieuse Révolution</em> : événement qui clôt la RN en ancrant définitivement le parlementarisme</li>
+</ul>
+<p><strong>Distinction sous-phase / saillant</strong> :</p>
+<ul>
+  <li>La <strong>guerre sociale</strong> et la <strong>restauration</strong> sont à la fois sous-phase (durée) et saillant (moment).</li>
+  <li>L'<strong>ancien régime</strong> est une sous-phase <strong>seulement</strong> &mdash; l'entrée est marquée par le saillant <em>Remontrance</em>, la sortie par le saillant <em>Éclatement de l'AR</em>. Pas de saillant nommé « Ancien Régime ».</li>
+  <li>L'<strong>émergence de l'IR</strong> est un saillant (le moment) ; l'<strong>impérialisme revanchard</strong> est la sous-phase (la durée).</li>
+</ul>
+<p><strong>Les saillants sont des marqueurs, pas des conditions.</strong> Une nation peut être factuellement à une phase donnée par le niveau combiné de ses deux moteurs <strong>sans en présenter tous les saillants typiques</strong>. Trois configurations rendent les saillants politiques (monarques) absents alors que la phase est bien celle que les moteurs indiquent :</p>
+<ul>
+  <li><strong>Nation politiquement fragmentée mais culturellement homogène</strong> : la phase progresse par les deux moteurs sans que la centralisation politique unifie un saillant identifiable. Les saillants peuvent exister régionalement sans figure unifiée à l'échelle nationale.</li>
+  <li><strong>Nation sous tutelle étrangère mais Parcours endogène</strong> : les saillants politiques de la nation hôte ne signalent pas le Parcours endogène ; les figures qui le portent peuvent être religieuses, juridiques, institutionnelles plutôt que monarchiques.</li>
+  <li><strong>Saillant institutionnel plutôt que personnel</strong> : un organe collégial peut concentrer le pouvoir sans qu'il y ait de monarque individuel &mdash; le saillant existe mais est porté par une institution.</li>
+</ul>
+<p>Pour identifier la phase d'une nation fragmentée, on ne peut pas se fier uniquement aux saillants politiques &mdash; il faut aussi évaluer le degré d'homogénéité culturelle.</p>
+<hr>
+<h2 id="durées-typiques-endogènes">Durées typiques endogènes<a class="anchor" href="#durées-typiques-endogènes">#</a></h2>
 <div class="table-wrapper"><table>
 <thead>
   <tr>
@@ -341,59 +451,109 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
   </tr>
   <tr>
     <td>Phase parlementaire</td>
-    <td>Très longue (très stable)</td>
+    <td>Très longue</td>
   </tr>
 </tbody>
 </table></div>
-<p>Les écarts à ces durées sont significatifs et s'expliquent toujours par une perturbation d'un des deux moteurs. Par exemple :</p>
+<p>Les écarts à ces durées sont toujours significatifs et s'expliquent par une perturbation d'un des deux moteurs (cf. <code>perturbations.md</code>) :</p>
 <ul>
-  <li><strong>Israël antique</strong> : la phase oligarchique dure ~245 ans au lieu de ~200, à cause du choc assyrien (-722) qui détruit le royaume d'Israël et retarde la construction de l'État central en Judée.</li>
-  <li><strong>France</strong> : la phase oligarchique dure ~270 ans (1328-1598), à cause de deux reflux liés à la Guerre de Cent Ans (Crécy-Poitiers ~1346-1364, Charles VI ~1392-1429) qui ralentissent l'essor oligarchique d'environ 55 ans.</li>
-  <li><strong>Angleterre</strong> : la phase oligarchique dure ~213 ans (1272-1485), durée proche de la norme.</li>
-  <li><strong>Venise</strong> : la phase oligarchique dure ~637 ans (1032-~1669), à cause de l'expansion permanente (Stato da Màr, Terraferma) qui retarde la polarisation en fournissant des exutoires extérieurs aux élites. Les pertes territoriales progressives (Chypre 1573, Crète 1669) forcent l'homogénéisation.</li>
-  <li><strong>Piémont</strong> : la phase féodale dure ~197 ans (~1233-~1430) &mdash; dans la norme, le Parcours commence par une correction d'échelle (partition de 1233 qui détache le Piémont du comté de Savoie trans-alpin). La phase oligarchique dure ~266 ans (~1430-~1696), allongée par le prolongement de l'occupation française (1536-1559).</li>
+  <li><strong>Choc d'hétérogénéité</strong> (expansion territoriale, conquête imposant intégration) → prolongement de la phase en cours</li>
+  <li><strong>Choc exogène</strong> (invasion, occupation) → reboot, avortement, ou prolongement selon l'effet sur les institutions</li>
+  <li><strong>Insuffisance interne</strong> (conflit lignager, blocage culturel) → prolongement par bouclage</li>
+  <li><strong>Correction d'échelle</strong> (perte territoriale) → accélération</li>
+  <li><strong>Exutoire</strong> (projection extérieure prolongée &mdash; empire, colonies, mercenariat) → prolongement de la phase en cours tant que l'exutoire fonctionne</li>
 </ul>
-<h3 id="le-clivage-gauche-droite-fabry-portal">Le clivage gauche-droite (Fabry & Portal)<a class="anchor" href="#le-clivage-gauche-droite-fabry-portal">#</a></h3>
-<p>Le clivage gauche-droite est défini structurellement, indépendamment de toute époque ou de tout lieu :</p>
+<p>Une phase qui dure significativement plus longtemps que la norme est portée par un exutoire actif ou par une insuffisance interne ; une phase plus courte que la norme a subi un choc qui l'a accélérée.</p>
+<hr>
+<h2 id="test-discriminant-et-cohérence-d-ensemble">Test discriminant et cohérence d'ensemble<a class="anchor" href="#test-discriminant-et-cohérence-d-ensemble">#</a></h2>
+<p><strong>Règle d'or : le test discriminant prime sur les durées.</strong> Ne pas ajuster l'identification des saillants pour obtenir des durées typiques. Appliquer d'abord le test discriminant de chaque transition de phase, puis expliquer les écarts par des perturbations identifiées. Les durées atypiques sont toujours le signal d'une perturbation, pas d'une erreur d'identification. Si une identification a été choisie « parce que les durées collent mieux », c'est un signal d'alarme.</p>
+<p>La <strong>cohérence du parcours d'ensemble</strong> (cf. CLAUDE.md, <em>Critère essentiel</em>) est le garde-fou : elle garantit que les saillants identifiés s'enchaînent dans l'ordre canonique, que tous les événements importants sont expliqués, et qu'aucune singularité n'est créée pour faire tenir le récit. Les deux travaillent ensemble &mdash; l'un priorise les marqueurs structurels sur les durées, l'autre vérifie que l'ensemble tient.</p>
+<p><strong>Trois vérifications transversales</strong> :</p>
+<p>1. Le test discriminant a-t-il été appliqué à la <strong>bonne échelle</strong> ? Pour les monarchies composites, l'absolutisme n'est atteint que quand l'administration centrale a préséance sur TOUTES les administrations locales du territoire national.</p>
+<p>2. L'expansion a-t-elle été attribuée à la bonne phase ? L'expansion prolonge la phase <strong>EN COURS</strong> au moment où elle commence.</p>
+<p>3. La guerre sociale se joue-t-elle à l'<strong>échelle pertinente</strong> ? Si le Parcours est national, la guerre sociale doit opposer des factions à l'échelle nationale.</p>
+<h3 id="tests-discriminants-principaux-par-transition">Tests discriminants principaux par transition<a class="anchor" href="#tests-discriminants-principaux-par-transition">#</a></h3>
+<p>Tableau de synthèse &mdash; pour le détail (formes admises, marqueurs, cas particuliers, exceptions documentées), cf. les <code>phase_*.md</code>.</p>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Transition</th>
+    <th>Test discriminant principal</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Pré-féodale → Féodale</td>
+    <td>Émergence d'un chef supra-régional dont l'autorité oblige les autres à se positionner par vassalité d'homme à homme (Éveil féodal)</td>
+  </tr>
+  <tr>
+    <td>Féodale → Oligarchique</td>
+    <td>Le pouvoir survit-il aux successions par garantie collective des oligarques ? Pacte oligarchique par codification de la transmission, par encadrement de l'exercice du pouvoir, ou par les deux successivement &mdash; cf. <code>phase_feodale.md</code></td>
+  </tr>
+  <tr>
+    <td>Oligarchique → Absolutiste</td>
+    <td>L'administration centrale a-t-elle préséance sur les administrations locales ? L'exécutif peut-il agir sans frein juridique effectif des oligarques ? Test à appliquer à toutes les administrations du territoire national pour les monarchies composites &mdash; cf. <code>phase_absolutiste.md</code></td>
+  </tr>
+  <tr>
+    <td>Absolutiste → RN</td>
+    <td>L'ordre ancien a-t-il éclaté avec un AR préalable avéré (sédimentation des élites, pression fiscale, convergence ED/EG contre le bloc élitaire) ? Sans AR préalable, pas de RN &mdash; cf. <code>phase_rn.md</code></td>
+  </tr>
+  <tr>
+    <td>RN → Parlementaire</td>
+    <td>La représentation nationale est-elle ancrée par une Glorieuse Révolution durable ? La chambre basse est-elle devenue source ultime du pouvoir ? &mdash; cf. <code>phase_rn.md</code> et <code>phase_parlementaire.md</code></td>
+  </tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="le-parcours-est-porté-par-un-peuple-pas-par-un-état">Le Parcours est porté par un peuple, pas par un État<a class="anchor" href="#le-parcours-est-porté-par-un-peuple-pas-par-un-état">#</a></h2>
+<p>Le Parcours ne nécessite pas que la nation soit formellement unifiée ou souveraine :</p>
 <ul>
-  <li><strong>Extrême-droite (ED)</strong> : réactionnaires, nostalgiques de l'ancien ordre, grands perdants de la nouvelle donne.</li>
-  <li><strong>Droite</strong> : conservateurs, cherchent à préserver la stabilité en ralentissant les changements.</li>
-  <li><strong>Gauche</strong> : réformateurs, pensent que réformer pour contenter l'EG permet de maintenir la stabilité.</li>
-  <li><strong>Extrême-gauche (EG)</strong> : révolutionnaires, encore exclus de la nouvelle donne, prêts à renverser la table pour s'y faire une place.</li>
+  <li><strong>Sous domination étrangère</strong> : le Parcours continue d'avancer tant que les deux moteurs ne sont pas détruits. Seules les destructions institutionnelles majeures (effondrement de l'appareil étatique central, déportations massives, intégration forcée) provoquent des reboots.</li>
+  <li><strong>Sans unification politique formelle</strong> : une nation peut avoir un Parcours propre porté par l'homogénéité culturelle, même quand elle est constituée de multiples entités politiques distinctes.</li>
+  <li><strong>Dans un empire multi-national</strong> : le Parcours est porté par l'ethnie du cœur (celle qui contrôle l'appareil central et dont la culture s'impose). Les ethnies périphériques peuvent avoir leur propre Parcours endogène, en partie indépendant.</li>
 </ul>
-<p>Cette grille est essentielle pour lire la Révolution Nationale.</p>
-<h3 id="sous-phases-et-saillants">Sous-phases et saillants<a class="anchor" href="#sous-phases-et-saillants">#</a></h3>
-<p>Le Parcours utilise deux types d'outils d'analyse :</p>
+<h3 id="conséquences-pour-le-périmètre-temporel-d-analyse">Conséquences pour le périmètre temporel d'analyse<a class="anchor" href="#conséquences-pour-le-périmètre-temporel-d-analyse">#</a></h3>
+<p>La cartographie d'un Parcours national ne doit <strong>jamais être bornée par les dates de souveraineté politique</strong>. Deux règles opérationnelles :</p>
 <ul>
-  <li>Les <strong>sous-phases</strong> découpent chaque phase en étapes successives, pour en comprendre la mécanique. Exemple : la phase absolutiste se découpe en absolutisation → impérialisme absolutiste → Ancien Régime.</li>
-  <li>Les <strong>saillants</strong> sont des éléments facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison entre parcours nationaux. Ce sont généralement des éléments ponctuels (le règne d'un monarque, un événement clé). Exemples : l'éveil féodal, le premier monarque oligarchique, le acmé absolutiste.</li>
+  <li><strong>Borne de début</strong> : la cartographie commence au <strong>premier cadre dans lequel une percolation élitaire endogène est plausible</strong> &mdash; c'est-à-dire le moment où la nation devient un sujet historionomique distinct, où l'on peut identifier l'émergence d'élites qui se reconnaissent comme telles. Ce cadre précède toujours toute structuration politique formelle, mais ne remonte pas indéfiniment dans le temps. Avant ce cadre, la nation n'est pas encore un sujet : elle est inscrite dans des structures supra-régionales (empire, marquisat carolingien, duché impérial) qui appartiennent à d'autres Parcours et où aucune percolation élitaire propre n'est repérable. <strong>Erreur symétrique à éviter</strong> : remonter à la première trace de peuplement ou à la cité épiscopale post-romaine, alors que la percolation élitaire endogène n'apparaît que beaucoup plus tard. Cas-type : Florence &mdash; pas remonter à Florentia post-romaine ou aux marquisats carolingiens, mais commencer à la Marche canossienne (1014) qui ouvre la fenêtre où une percolation toscane endogène devient lisible.</li>
+  <li><strong>Borne de fin</strong> : poursuivre le Parcours <strong>au-delà des pertes d'indépendance</strong>, tant que la nation existe comme entité culturellement distincte. Une nation conquise, partitionnée, ou intégrée à un empire continue d'avancer dans son Parcours sous tutelle. Le Parcours ne s'arrête que quand la nation cesse d'être un sujet historionomique distinct &mdash; typiquement par <strong>fusion dans le Parcours d'une autre nation</strong> (assimilation culturelle complète, intégration dans un État-nation plus large dont le Parcours absorbe le sien). Et même là, la frontière est à argumenter : une nation peut conserver un Parcours endogène partiel à l'intérieur d'un ensemble plus vaste (cas des nations périphériques d'empires).</li>
 </ul>
-<p>Certains éléments sont les deux à la fois : la guerre sociale et l'Ancien Régime sont des sous-phases (on peut décrire leur mécanique) et des saillants (facilement identifiables dans n'importe quel parcours).</p>
-<h2 id="vue-d-ensemble-des-phases">Vue d'ensemble des phases<a class="anchor" href="#vue-d-ensemble-des-phases">#</a></h2>
-<p><strong>Phase féodale (~200 ans, peut boucler).</strong> Interconnexion des réseaux claniques et lignagers. Un chef des chefs émerge, dont l'autorité repose sur des liens de vassalité d'homme à homme. Pas d'administration centrale permanente. L'édifice est fragile et dépend de la personne du suzerain. Des <strong>pics féodaux</strong> (rois forts) alternent avec des <strong>crises féodales</strong> (fragmentation post-pic). Le pacte oligarchique ne survient que quand <strong>deux conditions</strong> sont réunies simultanément : homogénéité des oligarques à l'échelle du royaume + faiblesse du suzerain (Deblonde). Si la phase boucle (crises sans pacte), elle peut durer bien plus de 200 ans (cf. Angleterre : ~500 ans, 5 boucles). Cf. <code>phase_feodale.md</code>.</p>
+<p><strong>Erreur typique à éviter</strong> : assimiler « fin de l'État souverain » à « fin du Parcours ». Une cité-État absorbée par un Grand-Duché continue son Parcours dans le cadre de ce Grand-Duché ; un royaume conquis par un empire continue son Parcours sous l'empire ; une nation partitionnée continue son Parcours en plusieurs morceaux. Le critère d'arrêt est <strong>culturel et historionomique</strong>, pas politique.</p>
+<h2 id="les-noms-ne-sont-pas-la-réalité">Les noms ne sont pas la réalité<a class="anchor" href="#les-noms-ne-sont-pas-la-réalité">#</a></h2>
+<p>Ce qui détermine la phase d'une nation, c'est le <strong>fonctionnement réel</strong> de ses institutions, pas leur étiquette formelle. Les noms portés par les institutions varient selon les contextes culturels et historiques, et peuvent désigner des fonctions structurellement très différentes : un « parlement » peut être une cour de justice, une chambre représentative, ou une assemblée d'oligarques selon l'époque ; une « monarchie » peut être structurellement absolutiste, oligarchique, ou féodale ; une « république » peut fonctionner en oligarchie de fait. Face à une institution, la question n'est jamais « comment s'appelle-t-elle ? » mais « comment fonctionne-t-elle réellement ? ».</p>
+<h2 id="taille-de-la-nation-et-standard-géopolitique">Taille de la nation et standard géopolitique<a class="anchor" href="#taille-de-la-nation-et-standard-géopolitique">#</a></h2>
+<p>À chaque époque, il existe une <strong>taille standard d'État</strong> qui concentre l'essentiel de la puissance géopolitique : administrations palatiales à l'âge du Bronze, cités-États dans l'Antiquité, États territoriaux à l'époque moderne, super-États dans la séquence suivante. Une nation dont la taille correspond au standard déroule son Parcours endogènement. Une nation <strong>trop petite</strong> ou <strong>trop grande</strong> voit sa dynamique contrariée.</p>
+<p><strong>Nation trop petite</strong> (cité-État à l'époque des États territoriaux) : absolutisme fragile face aux chocs exogènes (la centralisation peut être réelle mais portée par un appareil sans profondeur &mdash; figure dynastique sans relais bureaucratique propre, ou appareil-propriété des oligarques sans classe administrative distincte), guerre sociale parfois arbitrée par les voisins, RN contrariée (souvent compressée sous arbitrage extérieur, parfois absorbée plutôt que résolue). Trajectoire fréquente pour une cité-État trop petite : phase féodale courte → phase oligarchique éventuellement prolongée → phase absolutiste sous configuration patricienne (consortium oligarchique institutionnalisé, ou appareil familial-bancaire d'une famille dominante) → ancien régime figé → sortie par choc exogène et absorption. Hypothèse de travail par défaut quand on analyse une cité-État du corpus, à confirmer ou infirmer cas par cas.</p>
+<p>Plus généralement, <strong>une nation petite par rapport au standard de son époque risque d'être perturbée par des ingérences étrangères</strong> &mdash; chaque faction interne en déclin peut faire appel à une puissance voisine pour se relever, ce qui produit des boucles d'instabilité que l'on peut prendre à tort pour des défauts intrinsèques de la trajectoire endogène. Ces ingérences sont des perturbations exogènes qui relèvent de <code>perturbations.md</code> §4.2 (choc exogène), pas une signature inhérente à la phase en cours.</p>
+<p><strong>Nation trop grande</strong> (empire continental à l'époque des cités-États, ou super-État avant l'âge des super-États) : l'hétérogénéité culturelle excède la capacité d'homogénéisation que permettent les technologies de communication et d'administration de l'époque. Les deux moteurs se désalignent ; le Parcours stagne ou se fragmente par correction d'échelle &mdash; typiquement par partition (au décès du fondateur, par accord dynastique, ou par révolte des marges).</p>
+<p>Ce principe n'est pas un paramètre libre à ajuster pour faire coller une nation atypique &mdash; c'est une dimension structurelle à évaluer en comparant la superficie et la population au standard contemporain.</p>
+<h2 id="superficie-de-référence-noyau-marges">Superficie de référence (noyau + marges)<a class="anchor" href="#superficie-de-référence-noyau-marges">#</a></h2>
+<p>Pour chaque nation, la <strong>superficie de référence</strong> se décompose en :</p>
 <ul>
-  <li>Sous-phases : coagulation des élites → [bascule oligarchique] (avec boucles possibles)</li>
+  <li><strong>Noyau territorial</strong> : territoire culturellement homogène avec le cœur de la nation (même langue, même droit). C'est le territoire qui <em>est</em> la nation.</li>
+  <li><strong>Marges</strong> : territoires hétérogènes sous contrôle de la même couronne. C'est le territoire que la nation <em>possède</em> sans l'avoir assimilé.</li>
 </ul>
-<p><strong>Phase oligarchique (~200 ans).</strong> Émergence de l'État central &mdash; impôt permanent, armée permanente, administration centrale. L'État central se renforce progressivement face aux pouvoirs locaux. Cf. <code>phase_oligarchique.md</code>.</p>
+<p>Le noyau est défini par l'homogénéité culturelle, pas par le contrôle politique. Un territoire peut transiter de marge à noyau quand l'homogénéisation y est accomplie &mdash; moment souvent marqué par un acte juridique d'intégration (codification linguistique, abolition de spécificités juridiques, fusion administrative).</p>
+<p>Les expansions territoriales (chocs d'hétérogénéité) prolongent la phase en cours ; les contractions (corrections d'échelle) l'accélèrent. Le ratio marges/noyau indique la charge d'hétérogénéité qui pèse sur le Parcours. Pour le format de codage dans les fichiers de nations, voir <code>methode_collecte.md</code>.</p>
+<hr>
+<h2 id="le-clivage-gauche-droite-fabry-portal">Le clivage gauche-droite (Fabry & Portal)<a class="anchor" href="#le-clivage-gauche-droite-fabry-portal">#</a></h2>
+<p>Le clivage gauche-droite est défini structurellement, indépendamment de toute époque ou de tout lieu. Il vaut pour la guerre sociale, l'AR absolutiste, la RN, et la phase parlementaire. Quatre positions selon le rapport à la « nouvelle donne » (la distribution actuelle des places au centre du pouvoir) :</p>
 <ul>
-  <li>Sous-phases : essor oligarchique → polarisation des élites → guerre sociale</li>
+  <li><strong>Extrême-droite (ED)</strong> : réactionnaires, grands perdants nostalgiques de l'ancien ordre. Radicaux parce qu'ils « font la queue sans places ».</li>
+  <li><strong>Droite</strong> : conservateurs, préservent la stabilité en ralentissant les changements. Habitués à négocier les places.</li>
+  <li><strong>Gauche</strong> : réformateurs, pensent que réformer pour contenter l'EG maintient la stabilité. Nouveaux entrants demandant leur quota.</li>
+  <li><strong>Extrême-gauche (EG)</strong> : révolutionnaires, encore exclus, prêts à renverser la table.</li>
 </ul>
-<p><strong>Phase absolutiste (~200 ans).</strong> L'administration centrale acquiert une supériorité incontestée sur les administrations locales. Le pouvoir central achève l'élimination des réseaux féodaux et oligarchiques. Se conclut par l'Ancien Régime : le système absolutiste à maturité, où les élites se sédimentent, la mobilité sociale se fige, et les rentes deviennent insupportables. Cf. <code>phase_absolutiste.md</code>.</p>
+<p><strong>Fondement structurel (Fabry)</strong> : le clivage est une expression de l'<strong>homogénéisation divergente</strong>. Le corps civique se structure selon deux axes &mdash; social (élites / classes populaires) et spatial (cœur / marges). La gauche se forme des élites des marges ; la droite des classes populaires du cœur. Le mouvement temporel d'intégration est <strong>sinistrogyre</strong> (nouveaux entrants à gauche, dérive vers le centre puis vers la droite).</p>
+<p>En <strong>RN, le clivage se replie</strong> : centre-droit et centre-gauche fusionnent en bloc élitaire ; ED et EG convergent en bloc contestataire. Cf. <code>phase_rn.md</code>.</p>
+<hr>
+<h2 id="renvois">Renvois<a class="anchor" href="#renvois">#</a></h2>
 <ul>
-  <li>Sous-phases : absolutisation (~50-100 ans) → impérialisme absolutiste (durée variable) → Ancien Régime (~35-100 ans)</li>
+  <li><strong>Cartographie d'un nouveau Parcours</strong> &mdash; procédure multi-agent : <code>methode_cartographie.md</code></li>
+  <li><strong>Dynamique des élites</strong> &mdash; concept transversal : <code>elites.md</code></li>
+  <li><strong>Perturbations</strong> (mécanismes × effets, exutoire) : <code>perturbations.md</code></li>
 </ul>
-<p><strong>Révolution Nationale (~25-80 ans).</strong> Phase troublée qui renverse l'ordre absolutiste. Le clivage gauche-droite saute : le centre-droit et le centre-gauche fusionnent en un bloc élitaire qui profite du système, tandis que l'ED et l'EG convergent en un bloc contestataire. Cf. <code>phase_rn.md</code>.</p>
-<ul>
-  <li>Sous-phases : révolution initiale (explosion de l'AR → expérience parlementaire → phase aiguë → moment thermidorien) → impérialiste revanchard → restauration</li>
-  <li>Saillants clés : explosion de l'AR, expérience parlementaire, phase aiguë, moment thermidorien, émergence de l'IR, glorieuse révolution</li>
-</ul>
-<p><strong>Phase parlementaire &mdash; l'État-nation parlementaire (ENP).</strong> Aboutissement du Parcours de construction nationale. Le pouvoir administratif est subordonné à la représentation nationale. La chambre basse est la source ultime du pouvoir. Cf. <code>phase_parlementaire.md</code>.</p>
-<p><strong>Phase technocratique.</strong> Dégénérescence de l'ENP. Le peuple, disposant du pouvoir politique, l'utilise pour participer à la redistribution plutôt que pour y mettre fin (le choix de Bastiat). La taille de l'État et le périmètre de son action augmentent sans cesse. L'administration grossit jusqu'à devenir un Léviathan capable de renverser les décisions de la chambre basse.</p>
-<p><strong>Dominat.</strong> L'administration est devenue si puissante qu'elle <em>est</em> le gouvernement de facto. Les lois ne sont plus réellement votées mais décidées par des comités administratifs. C'est structurellement un reboot en Ancien Régime &mdash; mais sans nécessairement la figure du monarque absolu.</p>
-<h2 id="dynamique-des-élites">Dynamique des élites<a class="anchor" href="#dynamique-des-élites">#</a></h2>
-<p>La dynamique des élites est un concept transversal qui irrigue toutes les phases du Parcours. Elle est décrite dans <code>elites.md</code>.</p>
-<h2 id="perturbations">Perturbations<a class="anchor" href="#perturbations">#</a></h2>
-<p>Le Parcours peut être perturbé par des événements qui modifient sa vitesse de progression. Une perturbation se décompose en un <strong>mécanisme</strong> (ce qui la cause : choc d'hétérogénéité, choc exogène, insuffisance interne) et un <strong>effet</strong> (ce qui arrive au Parcours : prolongement, accélération, avortement, reboot). L'<strong>exutoire</strong> (projection de puissance continue &mdash; empire, colonies, mercenariat) est un état continu qui prolonge la phase en cours. Le détail est décrit dans <code>perturbations.md</code>.</p>
+<p><!-- Le tableau récapitulatif des saillants par nation est dans <code>corpus_recapitulatif.md</code> (lu par le parent uniquement, interdit à Agent 2 pour empêcher l'ancrage par analogie). Pour le détail par nation, voir <code>references/nations/*/parcours.md</code> et <code>references/nations/*/justification.md</code>. --></p>
 
 </article>
 </div>

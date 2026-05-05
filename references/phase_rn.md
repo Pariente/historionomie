@@ -203,9 +203,7 @@ Figure autoritaire qui renoue avec la verticalité du pouvoir. Sa coalition gagn
 
 L'IR peut être porté **non par une figure endogène mais par une puissance étrangère** qui intègre la nation dans son propre projet impérialiste. La figure étrangère est alors l'IR de la nation considérée — qu'elle soit ou non simultanément l'IR de sa propre nation.
 
-**Critère structurel** : la nation considérée doit être **cadre actif** du projet impérialiste sous direction étrangère — c'est-à-dire que la dynamique IR (projection extérieure, ventilation des élites, verticalité autoritaire, coalition intermédiaire) opère effectivement *pour cette nation*, pas seulement pour la puissance occupante. Cas-types :
-- **Hitler comme IR de l'Autriche** (en plus d'être IR de l'Allemagne) — l'Anschluss intègre activement l'Autriche dans le projet pangermaniste, qui est aussi un projet autrichien historique.
-- **Bonaparte comme IR de Gênes** (selon hypothèse alternative) — la République ligurienne (1797-1805) est cadre actif du projet militaire napoléonien.
+**Critère structurel** : la nation considérée doit être **cadre actif** du projet impérialiste sous direction étrangère — c'est-à-dire que la dynamique IR (projection extérieure, ventilation des élites, verticalité autoritaire, coalition intermédiaire) opère effectivement *pour cette nation*, pas seulement pour la puissance occupante. Cas-type principal : **Hitler comme IR de l'Autriche** (en plus d'être IR de l'Allemagne) — l'Anschluss intègre activement l'Autriche dans le projet pangermaniste, qui est aussi un projet autrichien historique.
 
 **Contre-exemple** : si la nation est juste **annexée comme marge passive** ou subordonnée à un État fantoche (sans dynamique nationale propre dans le projet), la figure étrangère **n'est pas IR** de cette nation — c'est un avortement de la RN par choc exogène. Cas-type : Bonaparte n'est *pas* l'IR de Florence (Royaume d'Étrurie sous Bourbons-Parme = État fantoche, puis annexion comme simples départements de l'Empire — pas de projet IR toscan).
 
@@ -307,7 +305,7 @@ Deux configurations :
 
 Quand une RN aboutit, la phase parlementaire qui s'ouvre est typiquement **active** : le mouvement sinistrogyre canonique fonctionne, le corps civique s'étend progressivement vers l'ensemble de la population au rythme de l'homogénéisation culturelle.
 
-Une **phase parlementaire contrariée figée** a été proposée comme lecture alternative pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé et stable sans dynamique endogène d'élargissement. Hypothèse en cours d'évaluation, attestée pour Gênes 1528-1797 sous la lecture Philippe — la lecture concurrente est une phase absolutiste à organe collégial autonome (consortium oligarchique). À ne pas mobiliser comme cadre établi tant que d'autres cas n'auront pas été testés.
+Une **phase parlementaire contrariée figée** a été proposée comme lecture alternative pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé et stable sans dynamique endogène d'élargissement. Hypothèse en cours d'évaluation, à tester systématiquement sur les cas d'organe collégial stable dans une cité-État ; la lecture concurrente est une phase absolutiste à organe collégial autonome (consortium oligarchique). À ne pas mobiliser comme cadre établi tant que des cas n'auront pas été clairement validés.
 
 Test discriminant entre les deux lectures (à appliquer aux régimes stables et institutionnalisés sur 200+ ans dans une cité-État avec organes collégiaux apparents) :
 

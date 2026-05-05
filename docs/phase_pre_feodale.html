@@ -62,7 +62,8 @@ h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#
 h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
 h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
 .h3-icon { font-size:1.1rem; flex-shrink:0; }
-h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h4 { font-size:1rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
 .anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
 h2:hover .anchor, h3:hover .anchor { opacity:1; }
 
@@ -186,70 +187,112 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 </div>
 <div class="toc-grid">
 <nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
+<ul>
+<li><a href="#test-discriminant-pré-féodale-vs-féodale">Test discriminant (pré-féodale vs féodale)</a></li>
+<li><a href="#marqueurs-nécessaires">Marqueurs nécessaires</a></li>
+<li><a href="#marqueurs-fréquents-non-nécessaires-dépendants-du-contexte">Marqueurs fréquents (non nécessaires, dépendants du contexte)</a></li>
+<li><a href="#marqueur-de-début">Marqueur de début</a></li>
+<li><a href="#différencier-de-configurations-voisines-non-parcours">Différencier de configurations voisines non-Parcours</a></li>
+</ul>
 <li><a href="#sous-phase-unique-percolation-élitaire">Sous-phase unique : percolation élitaire</a></li>
 <ul>
-<li><a href="#marqueur-de-début">Marqueur de début</a></li>
-<li><a href="#marqueur-de-fin">Marqueur de fin</a></li>
-<li><a href="#nature-de-la-phase">Nature de la phase</a></li>
-<li><a href="#exemples">Exemples</a></li>
+<li><a href="#saillant-terminal-éveil-féodal">Saillant terminal : Éveil féodal</a></li>
 </ul>
+<li><a href="#vue-corpus">Vue corpus</a></li>
 </ul></nav>
 <article>
-<p>La phase pré-féodale est la période qui précède l'émergence d'un pouvoir supra-régional effectif. Le pouvoir est distribué entre micro-pouvoirs locaux sans centre. Une identité ethnoculturelle et une structure sociale proto-aristocratique peuvent exister, mais aucun chef n'exerce d'autorité supra-régionale effective.</p>
-<p>La phase pré-féodale n'est pas toujours comptée dans le Parcours. Si l'éveil féodal coïncide avec le début du Parcours (Babenberg 976, Wittelsbach 1180), la pré-féodale n'apparaît pas. Si en revanche un titre royal ou une entité politique existe pendant ~100 ans sans pouvoir effectif, c'est une percolation élitaire à documenter.</p>
+<p>La phase pré-féodale est la période qui précède l'émergence d'un pouvoir supra-régional effectif. Le pouvoir est <strong>distribué</strong> entre micro-pouvoirs locaux sans centre. Une identité ethnoculturelle et une structure sociale proto-aristocratique peuvent exister, mais aucun chef n'exerce d'autorité supra-régionale effective.</p>
+<p>La phase pré-féodale n'est <strong>pas toujours comptée</strong> dans le Parcours. Si l'éveil féodal est concomitant ou très proche de l'origine documentée de la nation candidate, la pré-féodale est trop courte pour être identifiable et n'apparaît pas. Elle apparaît quand il existe une période significative (typiquement ~100 ans ou plus) où une entité politique distincte existe sans pouvoir central effectif.</p>
+<hr>
+<h2 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h2>
+<h3 id="test-discriminant-pré-féodale-vs-féodale">Test discriminant (pré-féodale vs féodale)<a class="anchor" href="#test-discriminant-pré-féodale-vs-féodale">#</a></h3>
+<p>*<em>Existe-t-il un chef supra-régional dont l'autorité est </em>effective<em> &mdash; c'est-à-dire qui force les autres élites à se positionner par rapport à lui (par alliance ou par opposition explicite) ?</em>*</p>
+<ul>
+  <li><strong>Non</strong> → pré-féodale.</li>
+  <li><strong>Oui</strong> → phase féodale (cf. <code>phase_feodale.md</code>).</li>
+</ul>
+<blockquote>
+<p><em>Précision</em> : un titre nominal (royal, ducal, impérial) sans effet sur le jeu politique réel <strong>ne compte pas</strong>. Le test est fonctionnel, pas formel : ce qui compte est le pouvoir effectif, pas l'étiquette portée. Si les autres élites peuvent ignorer le « roi » sans conséquence, on est encore en pré-féodale.</p>
+</blockquote>
+<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<h4 id="1-pouvoir-distribué-entre-micro-pouvoirs-locaux">1. Pouvoir distribué entre micro-pouvoirs locaux<a class="anchor" href="#1-pouvoir-distribué-entre-micro-pouvoirs-locaux">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Multiplicité de seigneurs, chefs, comtes ou équivalents agissant de façon semi-indépendante</li>
+  <li>Pas de flux régulier de tribut, d'impôt ou de contribution militaire vers un centre unique</li>
+  <li>Justice rendue localement par des coutumes locales, sans recours possible à une instance supérieure</li>
+  <li>Frappe monétaire locale (ou absence de monnaie unifiée)</li>
+  <li>Forces militaires convocables uniquement par alliance ou serment personnel, pas par ordre administratif</li>
+  <li>Fortifications dispersées (chaque pôle local se défend lui-même), pas concentrées autour d'un centre</li>
+</ul>
+<p><strong>Contre-signes</strong> (réfutent le marqueur) :</p>
+<ul>
+  <li>Existence d'une administration centrale active sur tout le territoire</li>
+  <li>Fiscalité régulière prélevée par un appareil central</li>
+  <li>Armée permanente ou levée centralisée effective</li>
+  <li>Justice royale ou impériale s'imposant aux justices locales</li>
+</ul>
+<h4 id="2-absence-d-autorité-supra-régionale-effective">2. Absence d'autorité supra-régionale effective<a class="anchor" href="#2-absence-d-autorité-supra-régionale-effective">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Aucun titre porté n'engage l'obéissance hors du patrimoine personnel direct du titulaire</li>
+  <li>Les ordres ou décisions d'un titulaire central restent lettre morte hors de sa zone d'influence directe</li>
+  <li>Les élites régionales ne se déplacent pas à une cour, n'envoient pas de tribut, ne sollicitent pas l'arbitrage du titulaire central</li>
+  <li>Le titulaire central, s'il existe, doit négocier ou marchander pour obtenir le concours militaire des autres élites</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Présence d'une cour fréquentée par des élites venues de loin</li>
+  <li>Capacité du titulaire central à imposer une succession, une réforme, une décision contestée</li>
+  <li>Capacité à lever une armée incluant des contingents fournis par obligation, pas par négociation</li>
+</ul>
+<h4 id="3-identité-ethnoculturelle-commune-émergente">3. Identité ethnoculturelle commune émergente<a class="anchor" href="#3-identité-ethnoculturelle-commune-émergente">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Langue ou famille de dialectes apparentés sur le territoire candidat</li>
+  <li>Pratiques religieuses, panthéon, ou rites partagés</li>
+  <li>Mythes d'origine ou récits épiques communs</li>
+  <li>Auto-désignation collective (ethnonyme) reconnaissable</li>
+  <li>Mémoire d'une expérience politique antérieure commune (ancêtres, royaume mythique)</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Population purement hétérogène sans recoupement linguistique ou culturel</li>
+  <li>Absence d'auto-désignation collective</li>
+  <li>Domination étrangère revendiquée comme identité dominante (cf. configurations voisines non-Parcours ci-dessous)</li>
+</ul>
+<h3 id="marqueurs-fréquents-non-nécessaires-dépendants-du-contexte">Marqueurs fréquents (non nécessaires, dépendants du contexte)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires-dépendants-du-contexte">#</a></h3>
+<ul>
+  <li>Fragmentation post-impériale (effondrement d'une supra-entité antérieure laissant un espace politique vacant)</li>
+  <li>Existence d'un titre royal, ducal ou équivalent sans pouvoir effectif</li>
+  <li>Documentation lacunaire (la phase pré-féodale produit peu d'archives centrales puisqu'il n'y a pas de centre)</li>
+  <li>Structures de pouvoir de type clanique, tribal, ou seigneurial micro-local</li>
+  <li>Liens politiques fluides (alliances qui se nouent et se défont sans former de réseau stable)</li>
+</ul>
+<h3 id="marqueur-de-début">Marqueur de début<a class="anchor" href="#marqueur-de-début">#</a></h3>
+<p><strong>Apparition d'une entité politique distincte sans pouvoir centralisé.</strong> Ce n'est généralement pas un saillant nommé mais un point de départ conventionnel &mdash; typiquement le moment où la fragmentation d'une supra-entité antérieure laisse un espace politique vacant pour la nation candidate, ou le moment où une identité ethnoculturelle commune devient documentable. La borne de début est par nature floue.</p>
+<h3 id="différencier-de-configurations-voisines-non-parcours">Différencier de configurations voisines non-Parcours<a class="anchor" href="#différencier-de-configurations-voisines-non-parcours">#</a></h3>
+<p>Toutes les sociétés fragmentées ne sont pas en phase pré-féodale. Trois configurations voisines à exclure :</p>
+<h4 id="a-périphérie-subordonnée-d-un-empire-en-activité">a) Périphérie subordonnée d'un empire en activité<a class="anchor" href="#a-périphérie-subordonnée-d-un-empire-en-activité">#</a></h4>
+<p>La fragmentation locale n'est pas une pré-féodale si elle résulte de la subordination à un Parcours impérial actif. Le territoire candidat n'est pas en gestation propre &mdash; il est administré, taxé ou militairement contrôlé par une supra-entité externe.</p>
+<p><strong>Test</strong> : la fragmentation est-elle endogène (espace vacant à l'effondrement d'une supra-entité antérieure, ou émergence à partir de structures locales) ou exogène (subordination active à un empire qui détient le monopole de la décision politique sur le territoire) ? Si exogène, l'évolution éventuelle relève d'un saillant du Parcours impérial (cf. rébellion périphérique dans <code>perturbations.md</code>), pas du Parcours national candidat.</p>
+<h4 id="b-société-pré-politique-amorphe">b) Société pré-politique amorphe<a class="anchor" href="#b-société-pré-politique-amorphe">#</a></h4>
+<p>Une société sans aucune structure d'autorité même locale, sans proto-aristocratie, sans identité ethnoculturelle reconnaissable, n'est pas encore une nation candidate au Parcours. Elle est trop en amont &mdash; le Parcours n'a pas commencé.</p>
+<p><strong>Test</strong> : existe-t-il au moins une proto-aristocratie locale (chefs, anciens, lignages dominants) et une identité ethnoculturelle émergente ? Si non, la nation candidate n'existe pas encore et il n'y a pas de pré-féodale à scorer.</p>
+<h4 id="c-effondrement-transitoire-dark-age-sans-stabilité-de-phase">c) Effondrement transitoire (dark age) sans stabilité de phase<a class="anchor" href="#c-effondrement-transitoire-dark-age-sans-stabilité-de-phase">#</a></h4>
+<p>Une période courte de désorganisation après un reboot ou un choc destructeur n'est pas une pré-féodale au sens d'une phase du Parcours &mdash; c'est un état transitoire. La pré-féodale suppose une certaine stabilité du pouvoir distribué (typiquement ~100 ans ou plus).</p>
+<p><strong>Test</strong> : la configuration de pouvoir distribué est-elle stable sur une période significative, ou est-elle un état de transition rapide entre deux configurations centralisées ? Si transition rapide, il s'agit d'un effet de perturbation (cf. <code>perturbations.md</code>), pas d'une phase pré-féodale.</p>
+<hr>
 <h2 id="sous-phase-unique-percolation-élitaire">Sous-phase unique : percolation élitaire<a class="anchor" href="#sous-phase-unique-percolation-élitaire">#</a></h2>
 <p>Le terme « percolation » est emprunté à la théorie des systèmes dynamiques (Deblonde). En physique, la percolation désigne le moment où, dans un système distribué, un chemin continu se forme à travers le réseau &mdash; le seuil critique au-delà duquel le système passe d'un état fragmenté à un état connecté. C'est un phénomène de <strong>transition de phase</strong> : avant le seuil, les connexions locales existent mais ne forment pas de réseau global ; au seuil, un chemin continu apparaît soudainement.</p>
-<p>En historionomie, la percolation est la période où le pouvoir est <strong>distribué</strong> &mdash; fragmenté entre des micro-pouvoirs locaux sans centre. Des liens se forment et se défont, des alliances se nouent et se rompent, sans direction ni structure. Le phénomène est encore distribué : il n'y a pas de centre.</p>
-<p>Un jour, un chemin continu se forme : un chef émerge qui est assez fort pour <strong>forcer les autres à se positionner par rapport à lui</strong>. Ce n'est pas un simple titre (comme Hugues Capet en 987, que ses vassaux ignorent) &mdash; c'est un pouvoir réel qui structure le jeu politique. C'est l'<strong>éveil féodal</strong>, et il marque la fin de la percolation et le début de la phase féodale. À partir de là, il y a un centre, et les terroirs s'agrègent autour de lui &mdash; ou en opposition à lui, mais le résultat est le même : le jeu politique est structuré.</p>
-<h3 id="marqueur-de-début">Marqueur de début<a class="anchor" href="#marqueur-de-début">#</a></h3>
-<p><strong>Apparition d'une entité politique distincte sans pouvoir centralisé</strong> &mdash; typiquement la fragmentation post-impériale (Carolingiens, Rome), ou l'émergence d'un titre royal sans effet. Ce n'est généralement pas un saillant nommé, mais un point de départ conventionnel (traité de Verdun 843 pour la France, etc.).</p>
-<h3 id="marqueur-de-fin">Marqueur de fin<a class="anchor" href="#marqueur-de-fin">#</a></h3>
-<p><strong>Éveil féodal</strong> (saillant canonique) &mdash; premier chef supra-régional dont l'autorité est <strong>effective</strong>, qui force les autres à se positionner par rapport à lui.</p>
-<h3 id="nature-de-la-phase">Nature de la phase<a class="anchor" href="#nature-de-la-phase">#</a></h3>
-<p>La pré-féodale est par nature difficile à documenter : pas de structure centralisée, peu de traces écrites, chronologie floue. La borne de début est souvent conventionnelle. La borne de fin (l'éveil féodal) est mieux identifiable car elle marque un changement qualitatif &mdash; l'apparition d'un centre.</p>
-<h3 id="exemples">Exemples<a class="anchor" href="#exemples">#</a></h3>
-<div class="table-wrapper"><table>
-<thead>
-  <tr>
-    <th>Parcours</th>
-    <th>Début</th>
-    <th>Fin (éveil féodal)</th>
-    <th>Durée</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>France</td>
-    <td>987 (Hugues Capet nominal)</td>
-    <td>1108 (Louis VI le Gros)</td>
-    <td>~121 ans</td>
-  </tr>
-  <tr>
-    <td>Angleterre</td>
-    <td>~600 (Heptarchie)</td>
-    <td>~829 (Ecgberht)</td>
-    <td>~229 ans</td>
-  </tr>
-  <tr>
-    <td>Israël antique</td>
-    <td>~-1200 (Juges)</td>
-    <td>~-1080 (Saül)</td>
-    <td>~120 ans</td>
-  </tr>
-  <tr>
-    <td>Milan</td>
-    <td>888 (fragmentation carolingienne)</td>
-    <td>979 (Landolfo II)</td>
-    <td>~91 ans</td>
-  </tr>
-  <tr>
-    <td>Castille</td>
-    <td>~930 (Fernán González)</td>
-    <td>~1035 (Ferdinand Ier)</td>
-    <td>~105 ans</td>
-  </tr>
-</tbody>
-</table></div>
+<p>En historionomie, la percolation élitaire est la période où le pouvoir politique est encore distribué : des liens se forment et se défont, des alliances se nouent et se rompent, sans direction ni structure globale. Le phénomène est par nature local et fluide. Puis un jour, un chemin continu se forme : un chef émerge qui est assez fort pour forcer les autres à se positionner par rapport à lui. C'est l'<strong>éveil féodal</strong> &mdash; la fin de la percolation et le début de la phase féodale.</p>
+<h3 id="saillant-terminal-éveil-féodal">Saillant terminal : Éveil féodal<a class="anchor" href="#saillant-terminal-éveil-féodal">#</a></h3>
+<p>Saillant canonique. Premier chef supra-régional dont l'autorité est effective, qui force les autres élites à se positionner par rapport à lui (alliance ou opposition). C'est le saillant qui marque la sortie de la pré-féodale et l'entrée en phase féodale.</p>
+<p>Définition complète, formes admises et marqueurs détaillés dans <code>phase_feodale.md</code>.</p>
+<hr>
+<h2 id="vue-corpus">Vue corpus<a class="anchor" href="#vue-corpus">#</a></h2>
+<p>Le tableau aligné par nation (durées et bornes des percolations élitaires) est dans <code>corpus_recapitulatif.md</code> &mdash; accessible au parent uniquement.</p>
 
 </article>
 </div>

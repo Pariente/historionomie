@@ -102,7 +102,7 @@ Pour les définitions des mécanismes et effets, voir `references/perturbations.
 
 ## Tableau récapitulatif — phase féodale
 
-Parcours canoniques uniquement (Bohême, Chili, Hongrie en débat — non inclus). Pour les définitions des saillants, voir `references/phase_feodale.md`.
+Parcours canoniques uniquement (Bohême, Hongrie en débat — non inclus). Pour les définitions des saillants, voir `references/phase_feodale.md`.
 
 | Parcours | Éveil féodal | Pics féodaux | Pacte oligarchique | Durée |
 |---|---|---|---|---|

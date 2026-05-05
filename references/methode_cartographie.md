@@ -32,6 +32,8 @@ L'isolation par contextes séparés est ce qui distingue cette procédure d'une 
 
 Si l'un de ces pièges réapparaît malgré tout dans le résultat final, reprendre la cartographie.
 
+**Règle de continuité** : une fois l'Étape 1 (cadrage du périmètre) validée par l'utilisateur, exécuter les Étapes 2 à 10 jusqu'au bout sans interrompre la procédure pour demander un avis. Annoncer brièvement les transitions d'étapes mais sans poser de question. L'utilisateur n'est sollicité qu'à l'Étape 11 (itération sur le résultat consolidé). La méthode multi-agent est conçue pour produire un scénario tranché par scoring formel à l'Étape 7 ; demander un arbitrage en cours casse cette architecture.
+
 ---
 
 ## Étape 1 : Lire le cadre théorique et cadrer le périmètre
@@ -149,7 +151,7 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - L'administration centrale a-t-elle préséance sur les administrations locales — sur **TOUTES** dans le cas des monarchies composites ?
 - Y a-t-il un pic d'impérialisme et de prestige ? (acmé absolutiste)
 - Y a-t-il sédimentation des élites, sclérose, bloc contestataire ? (Ancien Régime)
-- Pour les cités-États : la centralisation peut prendre des formes inhabituelles — appareil familial-bancaire (Florence sous Laurent), consortium oligarchique institutionnalisé (Venise, Gênes). Garder en tête que le critère est la centralisation effective de l'appareil, pas sa forme bureaucratique.
+- Pour les cités-États : la centralisation peut prendre des formes inhabituelles — appareil familial-bancaire ou consortium oligarchique institutionnalisé. Garder en tête que le critère est la centralisation effective de l'appareil, pas sa forme bureaucratique.
 
 #### Révolution Nationale
 **Saillants attendus** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution.
@@ -163,6 +165,7 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - **Durées** : écarts vs durées typiques expliqués par perturbations identifiées (mécanisme + effet) ? Rappel : la cohérence d'ensemble prime sur les durées — ne jamais déplacer une borne pour faire coller une durée.
 - **Échelle** : test discriminant absolutiste à l'échelle de TOUS les territoires de la nation ; guerre sociale à l'échelle nationale.
 - **Expansion** : attribuée à la phase qui était en cours quand elle a commencé (l'expansion prolonge la phase active).
+- **Balayage des perturbations structurelles (prolongement / accélération)**. Pour chaque événement majeur du dossier susceptible de modifier l'**homogénéité effective du corps politique** — accroître l'hétérogénéité (prolongement) ou augmenter l'homogénéité / forcer le recentrage interne (accélération) —, appliquer le triple test (mécanisme + effet + impact réel sur la trajectoire) ainsi que le **test de digestion** : le territoire ou la population concerné(e) est-il(elle) effectivement administré(e) par du personnel issu du noyau, soumis(e) au droit du noyau, et mobilise-t-il(elle) durablement les élites centrales ? Le canal territorial (acquisitions, pertes) est le plus fréquent mais ne suffit pas à lui seul : seule la digestion effective qualifie un changement territorial comme perturbation structurelle. Une union personnelle laissée autonome ne produit pas de prolongement (cf. possessions européennes des Habsbourg avant Nueva Planta) ; à l'inverse, une expansion entièrement administrée par le noyau le produit (cf. doublement bavarois 1806, stato da Mar vénitien). Modernisations imposées de l'extérieur, conquêtes culturelles non territoriales, ouvertures et fermetures d'exutoires militaires entrent dans le même balayage. Cf. `perturbations.md` §1 « Principe structurel » et §3. **Une cartographie sans aucune perturbation de prolongement ni d'accélération est une présomption de balayage incomplet** — sauf trajectoire géopolitique exceptionnellement plate, à justifier explicitement.
 - **Saillant manquant** : signal d'alarme. Soit l'histoire a été mal lue (recherche complémentaire), soit le cas est structurellement atypique (justifier alors structurellement). **Ne jamais se contenter de « absent, résolution diffuse »** sans justification solide.
 - **Perturbations ponctuelles vs étendues** : par défaut, toute perturbation est **ponctuelle** et codée comme `type: saillant` + `perturbation: true` + `mechanism` + `effect`. Les perturbations étendues (`type: perturbation` avec bandeau hachuré sur la frise) sont **réservées aux périodes où le Parcours est structurellement mis en pause** (cas-types : exil babylonien, effondrement valois 1392-1420, guerres d'Italie à Milan 1499-1535). Avant de coder une perturbation comme étendue, se demander explicitement : « le Parcours est-il réellement en pause structurellement, ou s'agit-il d'un événement ponctuel dont les effets se déploient ensuite ? ». Cf. `perturbations.md` §3.
 - **Synchronicité phase / sous-phases** : la fin d'une phase coïncide exactement avec la fin de sa dernière sous-phase ; le début d'une phase coïncide exactement avec le début de sa première sous-phase. Aucun chevauchement ni trou.
@@ -234,17 +237,38 @@ Ce fichier est le **résultat final** : il ne contient que l'hypothèse retenue,
 
 Les `highlight_1`, `highlight_2`, etc. de la metadata sont les éléments les plus visibles du fichier — c'est par eux que se joue la lisibilité du parcours. Ils doivent répondre à la question : **« qu'est-ce qui, dans ce parcours précis, est intéressant par rapport à ce qu'on sait de l'historionomie ? »**.
 
-Critères de sélection :
+Il faut typiquement 3-5 faits marquants par nation.
+
+#### Critères de sélection
+
 - **Atypicité structurelle** lisible historionomiquement — phase exceptionnellement longue ou courte avec cause identifiée (« phase absolutiste bavaroise prolongée par X »), reboot caractérisé (« reboot oligarchique français après Azincourt-Troyes »), RN avortée par mécanisme spécifique, configuration rare (consortium oligarchique, appareil familial-bancaire, etc.).
 - **Lecture nouvelle d'une période classique** — événement bien connu lu sous un angle historionomique non trivial (« 1848 = RN vénitienne avortée », « Pinochet = 1er MA chilien après vraie guerre sociale 1970-1973 », « Ferdinand III à Florence en 1799 = avortement par choc exogène, pas Restauration »).
 - **Test ou confirmation d'un point théorique** — cas qui valide ou tend une règle générale (« AR de Florence sans ruine financière endogène — confirme le critère discrédit + ruine simultanés »).
 
-Critères d'exclusion :
+#### Critères d'exclusion
+
 - Fait notable historiographiquement mais sans valeur historionomique singulière (ex. « première traduction de Dante » — anecdote culturelle).
 - Description narrative ordinaire de la nation (« cité prospère du commerce méditerranéen ») — sans angle historionomique.
 - Reprise d'éléments standards déjà couverts ailleurs dans le parcours (saillants canoniques sans atypicité particulière).
 
-Il faut typiquement 3-5 faits marquants par nation. Chacun pointe un saillant ou une période identifiable, avec une formulation courte (titre + 2-3 phrases) qui rend explicite l'intérêt historionomique.
+#### Forme de rédaction
+
+Le titre est plus important que le détail. Il doit être lisible et impactant à lui seul ; le texte développe le mécanisme.
+
+**Titre** (≤ 65 caractères, idéalement 40-55) :
+- Pose le **mécanisme structurel** ou **caractérise un événement par son rôle historionomique**. Le titre doit avoir du punch et être lisible à lui seul.
+- Pas de forme imposée. Patrons qui marchent souvent : énoncé causal court (« X plutôt que Y », « X → Y », « X prolonge Y », « Sans X, pas de Y »), nominale forte (« Le miracle capétien »), événement nommé suivi de sa caractérisation historionomique (« Azincourt-Troyes : un reboot (1415-1420) », « Crécy-Poitiers : un contre-temps (1346-1364) »), formule narrative ramassée.
+- Dates et noms propres autorisés s'ils servent l'impact. Préférer un événement nommé évocateur à une formulation encyclopédique froide. Éviter d'empiler les étiquettes : un titre, une idée.
+- Exemples corrects : « Un impérialisme financier plutôt que territorial » ; « Ingérences étrangères prolongent la phase oligarchique » ; « Patriciat sans sommet à contester → pas de Remontrance » ; « Le miracle capétien » ; « Azincourt-Troyes : un reboot (1415-1420) ».
+- Exemples à éviter : « Acmé absolutiste sans territoire — l'« âge des Génois » (1607-1627) » (formulation lourde, double tiret, étiquettes empilées) ; « 1528 — Andrea Doria et la configuration consortium oligarchique institutionnalisé » (titre encyclopédique sans punch ni mécanisme).
+
+**Texte** (350-450 caractères, jamais plus) :
+- Va à l'essentiel historionomique : pourquoi ce fait *est* historionomiquement intéressant, pas un récit factuel.
+- Structure typique : (1) le mécanisme en une phrase, (2) appui factuel minimal nécessaire (dates, noms), (3) éventuellement comparaison rapide au corpus (« cas complémentaire de X », « pattern parallèle à Y »).
+- Pas de récapitulation chronologique en prose. Pas d'énumération exhaustive de dates ou de figures secondaires. Pas de dispatching du saillant au sens canonique (« Configuration au sens de phase_X.md §Y ») — la doctrine reste dans la description du saillant ou la justification, pas dans le highlight.
+- Les détails factuels servent le mécanisme, pas l'inverse. Si on retire un détail et le mécanisme tient toujours, retirer le détail.
+
+**Vérification finale** : un lecteur qui ne connaît pas le parcours doit comprendre, en lisant *seulement le titre*, ce qui est singulier historionomiquement dans ce fait. Le texte doit confirmer et préciser, pas porter seul la compréhension.
 
 ---
 

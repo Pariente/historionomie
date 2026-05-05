@@ -115,7 +115,7 @@ Un régime peut avoir un parlement formel mais sans pouvoir réel — parlement 
 
 #### c) ENP contrariée figée — hypothèse en cours d'évaluation
 
-Lecture proposée pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé sans dynamique endogène d'élargissement. Hypothèse alternative à une lecture absolutiste à organe collégial autonome ; le test discriminant est dans `phase_rn.md` (3 questions sur exécutif / classe administrative / élargissement). Seul cas-type actuel dans le corpus : Gênes 1528-1797 (sous la lecture Philippe). À ne pas mobiliser comme cadre établi tant que d'autres cas n'auront pas été testés.
+Lecture proposée pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé sans dynamique endogène d'élargissement. Hypothèse alternative à une lecture absolutiste à organe collégial autonome ; le test discriminant est dans `phase_rn.md` (3 questions sur exécutif / classe administrative / élargissement). Hypothèse à tester systématiquement sur les cas d'organe collégial stable dans une cité-État ; à ne pas mobiliser comme cadre établi tant que des cas n'auront pas été clairement validés.
 
 ---
 

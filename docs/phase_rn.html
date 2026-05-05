@@ -62,7 +62,8 @@ h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#
 h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
 h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
 .h3-icon { font-size:1.1rem; flex-shrink:0; }
-h4, h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h4 { font-size:1rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
 .anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
 h2:hover .anchor, h3:hover .anchor { opacity:1; }
 
@@ -189,8 +190,10 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <li><a href="#comment-identifier-cette-phase">Comment identifier cette phase</a></li>
 <ul>
 <li><a href="#test-discriminant-rn-vs-phase-absolutiste-tardive">Test discriminant (RN vs phase absolutiste tardive)</a></li>
+<li><a href="#test-discriminant-rn-vs-phase-parlementaire-amorcée">Test discriminant (RN vs phase parlementaire amorcée)</a></li>
 <li><a href="#marqueurs-nécessaires">Marqueurs nécessaires</a></li>
 <li><a href="#marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)</a></li>
+<li><a href="#différencier-de-configurations-voisines-non-parcours">Différencier de configurations voisines non-Parcours</a></li>
 </ul>
 <li><a href="#sous-phase-1-révolution-initiale">Sous-phase 1 : Révolution initiale</a></li>
 <ul>
@@ -199,147 +202,272 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <li><a href="#saillant-phase-aiguë">Phase aiguë</a></li>
 <li><a href="#saillant-moment-thermidorien">Moment thermidorien</a></li>
 </ul>
-<li><a href="#sous-phase-2-impérialiste-revanchard">Sous-phase 2 : Impérialiste Revanchard</a></li>
+<li><a href="#sous-phase-2-impérialiste-revanchard-ir">Sous-phase 2 : Impérialiste Revanchard (IR)</a></li>
 <ul>
 <li><a href="#saillant-émergence-de-l-ir">Émergence de l&#x27;IR</a></li>
+<li><a href="#cas-particulier-ir-porté-par-une-puissance-étrangère">Cas particulier : IR porté par une puissance étrangère</a></li>
 </ul>
 <li><a href="#sous-phase-3-restauration">Sous-phase 3 : Restauration</a></li>
 <ul>
 <li><a href="#saillant-restauration">Restauration</a></li>
 <li><a href="#saillant-glorieuse-révolution">Glorieuse Révolution</a></li>
 </ul>
-<li><a href="#conditions-de-sortie-de-la-révolution-nationale">Conditions de sortie de la Révolution Nationale</a></li>
+<li><a href="#conditions-de-sortie-de-la-rn">Conditions de sortie de la RN</a></li>
 <ul>
-<li><a href="#vers-l-état-nation-parlementaire">Vers l&#x27;État-nation parlementaire</a></li>
-<li><a href="#vers-le-dominat">Vers le Dominat</a></li>
+<li><a href="#aboutissement-vers-l-enp-issue-canonique">Aboutissement vers l&#x27;ENP (issue canonique)</a></li>
+<li><a href="#bascule-vers-le-dominat-homogénéité-insuffisante">Bascule vers le Dominat (homogénéité insuffisante)</a></li>
+<li><a href="#avortement-écrasement-par-une-puissance-extérieure">Avortement (écrasement par une puissance extérieure)</a></li>
+<li><a href="#binarité-aboutie-ou-avortée">Binarité : aboutie ou avortée</a></li>
 </ul>
-<li><a href="#cas-particulier-rn-contre-un-occupant">Cas particulier : RN contre un occupant</a></li>
-<li><a href="#cas-particulier-révolution-nationale-avortée">Cas particulier : Révolution Nationale avortée</a></li>
-<li><a href="#cas-particulier-impérialiste-revanchard-partagé-entre-deux-parcours-hypothèse">Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)</a></li>
+<li><a href="#configurations-particulières">Configurations particulières</a></li>
 <ul>
-<li><a href="#test-discriminant-rn-avortée-vs-révolte-absolutiste">Test discriminant : RN avortée vs révolte absolutiste</a></li>
+<li><a href="#rn-contre-un-occupant">RN contre un occupant</a></li>
+<li><a href="#phase-parlementaire-qui-suit-active-ou-contrariée-figée-hypothèse">Phase parlementaire qui suit — active ou contrariée figée (hypothèse)</a></li>
 </ul>
+<li><a href="#vue-corpus">Vue corpus</a></li>
 <li><a href="#exemples-du-corpus">Exemples du corpus</a></li></ul></nav>
 <article>
-<p>La Révolution Nationale est la phase troublée qui renverse l'ordre absolutiste. Elle résulte de la convergence de deux facteurs : la perte de légitimité du pouvoir central (souvent par une humiliation, par exemple militaire) et l'épuisement de sa capacité financière (inéluctable du fait de la course aux armements déclenchée par la croissance économique, rendant le système fiscal caduc).</p>
-<p><strong>Les « égaux » de cette phase</strong> sont désormais <strong>tous les citoyens</strong> &mdash; l'homogénéisation culturelle a atteint un niveau où la population entière se perçoit comme une nation. L'administration centrale ne peut plus absorber ce cercle élargi ; le pouvoir doit être réorganisé. <strong>Résolution</strong> : la <strong>subordination du pouvoir administratif à la représentation nationale</strong> &mdash; le vote et les élus offrent un siège à tous les citoyens à la table. C'est la Glorieuse Révolution qui ancre définitivement ce principe.</p>
-<p>Les effets secondaires de la croissance économique (unification culturelle, alphabétisation, urbanisation) provoquent l'émergence de nouvelles élites et l'activation idéologique des masses. Le clivage gauche-droite classique a sauté pendant l'Ancien Régime (cf. <code>phase_absolutiste.md</code>) : le bloc élitaire (centre-droit + centre-gauche) fait face au bloc contestataire (ED + EG). Quand le régime perd simultanément sa légitimité et ses finances, la révolution commence.</p>
-<p>Durée typique endogène : 25 à 80 ans. Le stade de la figure autoritaire est généralement atteint en moins de 20 ans. Si l'Impérialiste Revanchard est vaincu rapidement, la RN sera plus proche de 25 ans. Si la figure autoritaire ne tente pas ou peu d'aventures militaires extérieures, la RN peut atteindre 80 ans.</p>
+<p>La Révolution Nationale est la phase troublée qui renverse l'ordre absolutiste. Elle résulte de la convergence de <strong>deux facteurs</strong> : la perte de légitimité du pouvoir central (souvent par une humiliation, par exemple militaire) et l'épuisement de sa capacité financière (inéluctable du fait de la course aux armements déclenchée par la croissance économique, rendant le système fiscal caduc).</p>
+<p><strong>Les « égaux » de cette phase</strong> sont désormais la nation tout entière au sens structurel du corps civique &mdash; l'homogénéisation culturelle a atteint un niveau où une portion significative de la population du cœur de la nation se perçoit comme une classe politique. L'administration centrale ne peut plus absorber ce cercle élargi ; le pouvoir doit être réorganisé. <strong>Résolution</strong> : la subordination du pouvoir administratif à la représentation nationale, une représentation significativement élargie par rapport à l'AR &mdash; pas seulement les grands seigneurs ou la famille royale, mais une fraction importante du corps civique selon les standards culturels de l'époque. C'est la Glorieuse Révolution qui ancre définitivement ce principe (l'extension progressive du cercle des représentés vers le suffrage universel est une dynamique de la phase parlementaire qui suit, pas un critère de la RN &mdash; cf. <code>phase_parlementaire.md</code>).</p>
+<p>Les effets secondaires de la croissance économique (unification culturelle, alphabétisation, urbanisation) provoquent l'émergence de nouvelles élites et l'activation idéologique des masses. Le clivage gauche-droite classique a sauté pendant l'ancien régime (cf. <code>phase_absolutiste.md</code>) : le bloc élitaire (centre-droit + centre-gauche) fait face au bloc contestataire (ED + EG). Quand le régime perd simultanément sa légitimité et ses finances, la révolution commence.</p>
+<p>La phase RN commence à l'<strong>éclatement de l'AR</strong> et s'achève soit à la <strong>Glorieuse Révolution</strong> (vers l'ENP), soit à un <strong>basculement vers le Dominat</strong> (homogénéité insuffisante), soit à un <strong>avortement</strong> (écrasement par une puissance extérieure). Durée typique endogène : 25 à 80 ans. Le stade de la figure autoritaire est généralement atteint en moins de 20 ans. Si l'IR est vaincu rapidement, la RN sera plus proche de 25 ans. Si l'IR ne tente pas ou peu d'aventures militaires, la RN peut atteindre 80 ans.</p>
+<hr>
 <h2 id="comment-identifier-cette-phase">Comment identifier cette phase<a class="anchor" href="#comment-identifier-cette-phase">#</a></h2>
 <h3 id="test-discriminant-rn-vs-phase-absolutiste-tardive">Test discriminant (RN vs phase absolutiste tardive)<a class="anchor" href="#test-discriminant-rn-vs-phase-absolutiste-tardive">#</a></h3>
-<p>L'<strong>Ancien Régime a-t-il explosé</strong> ? Les élites qui soutenaient le régime ont-elles <strong>basculé</strong> dans l'opposition ? Un <strong>gouvernement de coalition élargie</strong> (parlementaire ou quasi-parlementaire) a-t-il remplacé l'exécutif absolutiste ?</p>
+<p><strong>L'ancien régime a-t-il explosé ?</strong> Les élites qui soutenaient le régime ont-elles <strong>basculé</strong> dans l'opposition ? Un <strong>gouvernement de coalition élargie</strong> (parlementaire ou quasi-parlementaire) a-t-il remplacé l'exécutif absolutiste ?</p>
 <ul>
-  <li><strong>Non</strong> → encore en Ancien Régime. La contestation monte mais le régime tient.</li>
+  <li><strong>Non</strong> → encore en ancien régime. La contestation monte mais le régime tient (cf. <code>phase_absolutiste.md</code>).</li>
   <li><strong>Oui</strong> → Révolution Nationale en cours.</li>
 </ul>
-<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<h3 id="test-discriminant-rn-vs-phase-parlementaire-amorcée">Test discriminant (RN vs phase parlementaire amorcée)<a class="anchor" href="#test-discriminant-rn-vs-phase-parlementaire-amorcée">#</a></h3>
+<p><strong>La subordination du pouvoir administratif à la représentation nationale est-elle stabilisée et pérenne</strong> ? La chambre basse est-elle source ultime du pouvoir de manière incontestée ?</p>
 <ul>
-  <li>Rupture avec l'ordre absolutiste (pas une simple révolte, mais un changement de régime)</li>
-  <li>Basculement d'une partie significative des élites contre le pouvoir en place</li>
-  <li>Expérience parlementaire ou collégiale, même brève</li>
+  <li><strong>Non</strong> → encore en RN (en train de s'achever, en sous-phase de Restauration ou en attente de la Glorieuse Révolution).</li>
+  <li><strong>Oui</strong> → phase parlementaire (cf. <code>phase_parlementaire.md</code>).</li>
+</ul>
+<h3 id="marqueurs-nécessaires">Marqueurs nécessaires<a class="anchor" href="#marqueurs-nécessaires">#</a></h3>
+<h4 id="1-rupture-avec-l-ordre-absolutiste">1. Rupture avec l'ordre absolutiste<a class="anchor" href="#1-rupture-avec-l-ordre-absolutiste">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Effondrement effectif de l'exécutif absolutiste (vacance, abdication forcée, exécution, fuite, déposition)</li>
+  <li>Convocation extraordinaire d'assemblées élargies (États généraux, parlements rappelés après dissolution forcée, équivalents)</li>
+  <li>Constitution ou actes fondamentaux nouveaux établissant une légitimité différente</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Le souverain absolu reste en place et conserve l'initiative politique</li>
+  <li>Les institutions absolutistes fonctionnent normalement, sans rupture procédurale ni interruption institutionnelle</li>
+  <li>Les contestations restent confinées à des révoltes locales matées sans bascule du régime</li>
+</ul>
+<h4 id="2-basculement-d-une-partie-significative-des-élites">2. Basculement d'une partie significative des élites<a class="anchor" href="#2-basculement-d-une-partie-significative-des-élites">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Refus collectif de coopération de la part d'élites jusque-là intégrées au régime (parlementaires, noblesse de robe, hauts fonctionnaires, clergé)</li>
+  <li>Défections symboliques (cf. nuit du 4 août type, où des privilégiés renoncent à leurs privilèges)</li>
+  <li>Élites passant de la défense du régime à la rédaction d'un nouveau cadre</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Les élites continuent globalement de soutenir le régime</li>
+  <li>Les contestations viennent uniquement des classes populaires ou des marges, pas du cœur élitaire</li>
+  <li>Aucune défection significative au sein de l'appareil d'État ou des corps institutionnels</li>
+</ul>
+<h4 id="3-expérience-parlementaire-ou-collégiale-même-brève">3. Expérience parlementaire ou collégiale, même brève<a class="anchor" href="#3-expérience-parlementaire-ou-collégiale-même-brève">#</a></h4>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Assemblée constituante ou législative tenant des débats publics</li>
+  <li>Décisions politiques majeures passant par votes d'assemblée</li>
+  <li>Factions concurrentes identifiables alternant ou cohabitant</li>
+  <li>Transferts pacifiques de pouvoir entre factions</li>
+</ul>
+<p><strong>Contre-signes</strong> :</p>
+<ul>
+  <li>Aucun moment où un corps représentatif élargi détient effectivement le pouvoir</li>
+  <li>Le pouvoir reste concentré dans une figure unique tout au long de la séquence</li>
+  <li>Pas de débats publics, pas de votes structurants, pas de factions identifiables</li>
 </ul>
 <h3 id="marqueurs-fréquents-non-nécessaires">Marqueurs fréquents (non nécessaires)<a class="anchor" href="#marqueurs-fréquents-non-nécessaires">#</a></h3>
 <ul>
   <li>Crise financière du pouvoir central</li>
   <li>Humiliation militaire comme déclencheur</li>
-  <li>Montée aux extrêmes après l'expérience parlementaire</li>
+  <li>Montée aux extrêmes après l'expérience parlementaire (terreur ou équivalent)</li>
   <li>Figure d'Impérialiste Revanchard</li>
+  <li>Exécution ou destitution publique du souverain déchu</li>
 </ul>
+<h3 id="différencier-de-configurations-voisines-non-parcours">Différencier de configurations voisines non-Parcours<a class="anchor" href="#différencier-de-configurations-voisines-non-parcours">#</a></h3>
+<h4 id="a-révolte-absolutiste">a) Révolte absolutiste<a class="anchor" href="#a-révolte-absolutiste">#</a></h4>
+<p>Une révolte menée par un chef au statut hérité, religieux ou charismatique pour libérer ou refonder une nation <strong>n'est pas une RN</strong> &mdash; c'est une révolte qui s'inscrit dans la phase absolutiste (souvent comme guerre d'indépendance d'un 1er monarque absolu, cf. <code>phase_absolutiste.md</code> §reboot avec vide oligarchique dans <code>perturbations.md</code>).</p>
+<p><strong>Test</strong> : nature du leadership.</p>
+<ul>
+  <li><strong>Révolte absolutiste</strong> : autorité héritée/charismatique. Un chef au statut hérité, religieux ou charismatique mène la révolte de bout en bout. Pas de phase parlementaire, pas de factions concurrentes, pas d'assemblée élue.</li>
+  <li><strong>RN (aboutie ou avortée)</strong> : autorité construite par l'élection. La révolte commence par une expérience parlementaire avec assemblée élue et factions concurrentes, puis escalade vers une phase aiguë.</li>
+</ul>
+<p>Le marqueur le plus discriminant est la <strong>nature du leadership</strong> : autorité héritée/charismatique (révolte absolutiste) vs autorité construite par l'élection (RN).</p>
+<h4 id="b-révolte-populaire-matée-sans-bascule-des-élites">b) Révolte populaire matée sans bascule des élites<a class="anchor" href="#b-révolte-populaire-matée-sans-bascule-des-élites">#</a></h4>
+<p>Une jacquerie, un soulèvement populaire ou une contestation localisée matée par les autorités absolutistes sans que les élites ne basculent <strong>n'est pas une RN</strong> &mdash; c'est une perturbation intra-phase (souvent un saillant de tension de l'ancien régime, sans aller jusqu'à l'éclatement).</p>
+<p><strong>Test</strong> : les élites soutiennent-elles encore le régime ?</p>
+<ul>
+  <li>Oui → révolte simple, le régime tient, on reste en phase absolutiste</li>
+  <li>Non → bascule en cours, on entre en RN</li>
+</ul>
+<h4 id="c-coup-d-état-ou-changement-de-personnel-sans-rupture-institutionnelle">c) Coup d'État ou changement de personnel sans rupture institutionnelle<a class="anchor" href="#c-coup-d-état-ou-changement-de-personnel-sans-rupture-institutionnelle">#</a></h4>
+<p>Un coup d'État dans un cadre absolutiste qui change le souverain ou la dynastie sans changer le régime <strong>n'est pas une RN</strong> &mdash; c'est un changement de personnel qui laisse l'appareil absolutiste intact.</p>
+<p><strong>Test</strong> : après le changement, le régime reste-t-il structurellement absolutiste, avec son exécutif central capable d'agir sans frein juridique des oligarques ?</p>
+<ul>
+  <li>Oui → simple changement de personnel ou de dynastie, on reste en phase absolutiste</li>
+  <li>Non → entrée en RN si le régime explose et qu'une expérience collégiale s'installe</li>
+</ul>
+<h4 id="d-rébellion-périphérique">d) Rébellion périphérique<a class="anchor" href="#d-rébellion-périphérique">#</a></h4>
+<p>Cf. <code>perturbations.md</code> §2. Un soulèvement aux marges d'un empire à son acmé absolutiste relève du Parcours impérial, pas du Parcours national de la communauté soumise. Ne pas confondre avec une RN nationale.</p>
+<hr>
 <h2 id="sous-phase-1-révolution-initiale">Sous-phase 1 : Révolution initiale<a class="anchor" href="#sous-phase-1-révolution-initiale">#</a></h2>
-<p>La première période de la RN couvre l'explosion de l'Ancien Régime, l'expérience parlementaire, la montée aux extrêmes (phase aiguë), et la reprise en main par le centre (moment thermidorien). C'est la période la plus turbulente &mdash; dix ans pour la France (1789-1799), huit ans pour l'Angleterre (1640-1648/1653).</p>
+<p>La première période de la RN couvre l'explosion de l'ancien régime, l'expérience parlementaire, la montée aux extrêmes (phase aiguë), et la reprise en main par le centre (moment thermidorien). C'est la période la plus turbulente &mdash; typiquement de quelques années à une dizaine d'années.</p>
 <h3 id="saillant-éclatement-de-l-ar"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">flash_on</span>Éclatement de l'AR<a class="anchor" href="#saillant-éclatement-de-l-ar">#</a></h3>
-<p>L'Ancien Régime est ruiné et discrédité. Une partie des élites lâche le régime. Le basculement des élites est le déclencheur immédiat : tant que les élites prennent le parti du pouvoir, le régime tient ; quand elles basculent, la révolution devient possible.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1789</span></div><span class="card-desc">Convocation des États généraux, prise de la Bastille</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1640</span></div><span class="card-desc">Charles Ier tente de lever des impôts sans le Parlement</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">66</span></div><span class="card-desc">Le massacre de Florus pousse les élites romanisées dans la révolte</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">mars 1848</span></div><span class="card-desc">Insurrection &mdash; les arsenalotti prennent l'Arsenal, la garnison autrichienne capitule, Manin proclame la République de San Marco</span></div></div>
-</div>
+<p><strong>Définition</strong> : moment où l'ancien régime cesse de tenir. Une partie des élites lâche le régime ; le pouvoir central perd son initiative.</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue l'éclatement d'une simple crise grave de l'AR ?</p>
+<p>1. <strong>Bascule des élites</strong> : passage effectif du soutien à l'opposition pour une partie significative des élites jusqu'alors intégrées (pas seulement contestataires marginaux)</p>
+<p>2. <strong>Convergence des deux facteurs</strong> : crise simultanée de légitimité (humiliation, perte de prestige) <strong>et</strong> de capacité financière (banqueroute, refus du fisc, impossibilité de lever l'impôt nécessaire)</p>
+<p>3. <strong>Vacance ou délégitimation effective</strong> : l'exécutif absolutiste perd son initiative, son capacité d'agir contre la contestation</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Convocation extraordinaire d'assemblées élargies (États généraux, parlement rappelé après dissolution, équivalents)</li>
+  <li>Refus collectif d'obéir aux ordres de l'exécutif (refus de voter l'impôt, refus militaire, désobéissance massive)</li>
+  <li>Insurrection symbolique réussie (prise d'un lieu symbolique du pouvoir, défection d'une garnison, accueil populaire d'un défi à l'autorité)</li>
+  <li>Effondrement de l'autorité au-delà de quelques jours sans que le pouvoir central puisse rétablir l'ordre</li>
+</ul>
 <h3 id="saillant-expérience-parlementaire"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">account_balance</span>Expérience parlementaire<a class="anchor" href="#saillant-expérience-parlementaire">#</a></h3>
-<p>Les élites qui ont renversé l'ancien ordre proposent un régime à base politique élargie. Une coalition aussi large ne peut se gouverner que de manière collégiale : on expérimente le parlementarisme.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1789-1791</span></div><span class="card-desc">Assemblée nationale constituante</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1640-1648</span></div><span class="card-desc">Long Parliament</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">66-67</span></div><span class="card-desc">Gouvernement provisoire de coalition, frappe du shekel « Israël »</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1848-1849</span></div><span class="card-desc">République de San Marco &mdash; assemblée élue au suffrage universel, factions concurrentes (républicains, fusionnistes, mazziniens), transferts de pouvoir entre factions</span></div></div>
-</div>
+<p><strong>Définition</strong> : les élites qui ont renversé l'ancien ordre proposent un régime à base politique élargie. Une coalition aussi large ne peut se gouverner que de manière collégiale ; on expérimente le parlementarisme.</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue une expérience parlementaire d'une simple assemblée consultative ?</p>
+<p>1. <strong>Coalition élargie au pouvoir</strong> : la « nation politique » se reconnaît dans une assemblée qui a effectivement le pouvoir, pas seulement un rôle consultatif</p>
+<p>2. <strong>Gouvernement collégial effectif</strong> : les décisions majeures passent par l'assemblée, pas par un exécutif unique</p>
+<p>3. <strong>Factions concurrentes</strong> : alternance ou cohabitation de groupes politiques identifiables, transferts de pouvoir entre eux</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Assemblée constituante ou législative siégeant régulièrement, débats publics, votes structurants</li>
+  <li>Constitution ou actes fondamentaux rédigés et adoptés par l'assemblée</li>
+  <li>Factions identifiables et reconnues par leurs contemporains</li>
+  <li>Transferts pacifiques de pouvoir entre factions ; chefs émergent par soutien parlementaire et pas par hérédité ou charisme militaire</li>
+</ul>
 <h3 id="saillant-phase-aiguë"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;font-variation-settings:'FILL' 1;">skull</span>Phase aiguë<a class="anchor" href="#saillant-phase-aiguë">#</a></h3>
-<p>L'extrême-gauche (les révolutionnaires les plus radicaux) prend le contrôle et élimine les modérés. L'activation idéologique des masses rend possible des pouvoirs très autoritaires, reposant sur une coalition gagnante étroite et très militante.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1792-1794</span></div><span class="card-desc">La Terreur, Robespierre</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1649</span></div><span class="card-desc">Exécution de Charles Ier</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span><span class="card-date">67-70</span></div><span class="card-desc">Les Zélotes éliminent les modérés</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">mars 1849</span></div><span class="card-desc">Amorce seulement &mdash; l'assemblée vote les « pouvoirs illimités » pour Manin, mais l'Autriche écrase la République avant que l'escalade ne se complète</span></div></div>
-</div>
+<p><strong>Définition</strong> : l'extrême-gauche (les révolutionnaires les plus radicaux) prend le contrôle et élimine les modérés. L'activation idéologique des masses rend possibles des pouvoirs très autoritaires reposant sur une coalition gagnante étroite et très militante.</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue la phase aiguë d'une simple radicalisation ?</p>
+<p>1. <strong>Prise de contrôle effective par l'EG</strong> : les révolutionnaires les plus radicaux occupent le pouvoir réel</p>
+<p>2. <strong>Élimination violente des modérés</strong> : purges, exécutions, exils massifs des factions plus modérées qui partageaient le pouvoir avant</p>
+<p>3. <strong>Régime à coalition étroite et militante</strong> : la légitimité repose sur une fraction militante de la population, pas sur un consensus large</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Tribunaux révolutionnaires ou équivalents ; lois d'exception ; suspension des libertés</li>
+  <li>Exécutions politiques publiques (du souverain déchu, de modérés, de notables)</li>
+  <li>Interdiction des factions modérées ; figures dominantes radicales clairement identifiables</li>
+  <li>Mobilisation idéologique extrême ; rhétorique de purification ou refondation totale</li>
+</ul>
 <h3 id="saillant-moment-thermidorien"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">balance</span>Moment thermidorien<a class="anchor" href="#saillant-moment-thermidorien">#</a></h3>
-<p>Le centre et la droite reprennent le pouvoir et purgent l'extrême-gauche. Un régime plus stable émerge, mais avec une base moins large.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1794-1799</span></div><span class="card-desc">Réaction thermidorienne, Directoire</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1649-1653</span></div><span class="card-desc">Rump Parliament</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Israël</span></div><span class="card-desc">La RN est écrasée par Rome avant cette étape</span></div></div>
-</div>
-<h2 id="sous-phase-2-impérialiste-revanchard">Sous-phase 2 : Impérialiste Revanchard<a class="anchor" href="#sous-phase-2-impérialiste-revanchard">#</a></h2>
+<p><strong>Définition</strong> : le centre et la droite reprennent le pouvoir et purgent l'extrême-gauche. Un régime plus stable émerge, mais avec une base moins large.</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue le moment thermidorien d'une simple réaction conservatrice ?</p>
+<p>1. <strong>Renversement de l'EG par le centre/droite</strong> : bascule effective du pouvoir, pas simple modération de l'EG en place</p>
+<p>2. <strong>Stabilisation institutionnelle</strong> : nouvelle constitution ou révision majeure ; régime moins instable</p>
+<p>3. <strong>Base élitaire moins large mais plus stable</strong> : sortie de la coalition militante au profit d'une coalition modérée</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Coup d'État ou bascule politique mettant fin à la terreur ou à l'autoritarisme radical</li>
+  <li>Révision constitutionnelle ou nouvelle charte</li>
+  <li>Amnistie ou répression des extrémistes ; nouvelle élite plus modérée en place</li>
+  <li>Restauration de libertés civiles partielles ; fin des lois d'exception</li>
+</ul>
+<hr>
+<h2 id="sous-phase-2-impérialiste-revanchard-ir">Sous-phase 2 : Impérialiste Revanchard (IR)<a class="anchor" href="#sous-phase-2-impérialiste-revanchard-ir">#</a></h2>
 <p>Figure autoritaire qui renoue avec la verticalité du pouvoir. Sa coalition gagnante est plus réduite que le régime parlementaire mais plus large que les expériences extrémistes. Il pratique la ventilation des élites et la méritocratie. Pour les nations les plus puissantes, cette figure se lance dans l'impérialisme militaire. La purge permanente de sa coalition accroît la tension sociale et mine la stabilité de la dictature à moyen terme.</p>
 <h3 id="saillant-émergence-de-l-ir"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">military_tech</span>Émergence de l'IR<a class="anchor" href="#saillant-émergence-de-l-ir">#</a></h3>
-<p>Le moment où la figure autoritaire prend le pouvoir.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1799</span></div><span class="card-desc">Bonaparte, coup d'État du 18 Brumaire</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1653</span></div><span class="card-desc">Cromwell, Lord Protector</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1933</span></div><span class="card-desc">Hitler</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Russie</span></div><span class="card-desc">Staline</span></div></div>
-</div>
+<p><strong>Définition</strong> : le moment où la figure autoritaire prend le pouvoir, succédant au moment thermidorien.</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue l'IR d'un autre régime autoritaire de la séquence ?</p>
+<p>1. <strong>Figure autoritaire personnelle ou institutionnelle stable</strong> : pas un comité, mais un chef (ou une institution exerçant collectivement un pouvoir cohérent) qui prend l'initiative</p>
+<p>2. <strong>Coalition gagnante intermédiaire</strong> : plus étroite que la coalition parlementaire, plus large que la coalition militante de la phase aiguë</p>
+<p>3. <strong>Verticalité revanchée</strong> : le pouvoir reprend des moyens autoritaires d'agir, mais s'appuie sur la légitimité du redressement national après l'instabilité révolutionnaire</p>
+<p>4. <strong>Ventilation des élites par méritocratie</strong> : recrutement large dans les classes intermédiaires, promotion par mérite/loyauté plutôt que par hérédité</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Coup d'État ou prise de pouvoir extra-constitutionnelle, souvent pacifique au regard de la phase aiguë</li>
+  <li>Concentration personnelle ou institutionnelle du pouvoir (consulats, présidence à vie, dictature légale)</li>
+  <li>Recrutement large dans les classes intermédiaires (officiers, fonctionnaires, juristes, notables sans grande noblesse)</li>
+  <li>Pour les grandes nations : projection extérieure agressive (campagnes militaires, expansion territoriale, ambitions hégémoniques)</li>
+  <li>Construction d'un récit de redressement national contre les humiliations de l'AR ou de l'instabilité révolutionnaire</li>
+</ul>
+<h3 id="cas-particulier-ir-porté-par-une-puissance-étrangère">Cas particulier : IR porté par une puissance étrangère<a class="anchor" href="#cas-particulier-ir-porté-par-une-puissance-étrangère">#</a></h3>
+<p>L'IR peut être porté <strong>non par une figure endogène mais par une puissance étrangère</strong> qui intègre la nation dans son propre projet impérialiste. La figure étrangère est alors l'IR de la nation considérée &mdash; qu'elle soit ou non simultanément l'IR de sa propre nation.</p>
+<p><strong>Critère structurel</strong> : la nation considérée doit être <strong>cadre actif</strong> du projet impérialiste sous direction étrangère &mdash; c'est-à-dire que la dynamique IR (projection extérieure, ventilation des élites, verticalité autoritaire, coalition intermédiaire) opère effectivement <em>pour cette nation</em>, pas seulement pour la puissance occupante. Cas-type principal : <strong>Hitler comme IR de l'Autriche</strong> (en plus d'être IR de l'Allemagne) &mdash; l'Anschluss intègre activement l'Autriche dans le projet pangermaniste, qui est aussi un projet autrichien historique.</p>
+<p><strong>Contre-exemple</strong> : si la nation est juste <strong>annexée comme marge passive</strong> ou subordonnée à un État fantoche (sans dynamique nationale propre dans le projet), la figure étrangère <strong>n'est pas IR</strong> de cette nation &mdash; c'est un avortement de la RN par choc exogène. Cas-type : Bonaparte n'est <em>pas</em> l'IR de Florence (Royaume d'Étrurie sous Bourbons-Parme = État fantoche, puis annexion comme simples départements de l'Empire &mdash; pas de projet IR toscan).</p>
+<p><strong>Conditions à vérifier</strong> :</p>
+<p>1. Les fonctions canoniques de l'IR sont remplies <em>pour cette nation</em> (pas seulement pour la puissance occupante).</p>
+<p>2. La séquence canonique de la RN (révolution initiale → IR → restauration → GR) reste lisible pour cette nation.</p>
+<p>3. La nation a une dynamique propre dans le projet &mdash; armée nationale, administration nationale, projet politique national, pas simple intégration administrative passive.</p>
+<p><strong>Question théorique ouverte</strong> : sous quelles conditions exactes un IR exogène est-il admissible ? Hypothèse à tester systématiquement sur les cas d'occupation étrangère pendant ce qui ressemble à une RN.</p>
+<hr>
 <h2 id="sous-phase-3-restauration">Sous-phase 3 : Restauration<a class="anchor" href="#sous-phase-3-restauration">#</a></h2>
-<p>L'IR finit par tomber, de manière exogène (défaite militaire) ou endogène (tension sociale). Il est remplacé par un régime avec une base élargie, mais pas encore pleinement parlementaire.</p>
+<p>L'IR finit par tomber, de manière exogène (défaite militaire) ou endogène (tension sociale). Il est remplacé par un régime à base élargie, mais pas encore pleinement parlementaire.</p>
 <h3 id="saillant-restauration"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">star</span>Restauration<a class="anchor" href="#saillant-restauration">#</a></h3>
-<p>Le moment où l'ancien ordre (ou un ordre conservateur) est restauré après la chute de l'IR. C'est à la fois un saillant (le moment de la restauration) et le début de la sous-phase du même nom (la durée pendant laquelle cet ordre restauré se maintient).</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1815</span></div><span class="card-desc">Restauration bourbonienne &mdash; Louis XVIII après Waterloo</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1660</span></div><span class="card-desc">Restauration Stuart &mdash; Charles II après la mort de Cromwell</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1945</span></div><span class="card-desc">Occupation alliée et division &mdash; fin du régime nazi</span></div></div>
-</div>
+<p><strong>Définition</strong> : le moment où l'ancien ordre (ou un ordre conservateur) est restauré après la chute de l'IR. C'est à la fois un saillant (le moment de la restauration) et le début de la sous-phase du même nom (la durée pendant laquelle cet ordre restauré se maintient).</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue la Restauration d'un retour pur à l'AR ?</p>
+<p>1. <strong>Chute préalable de l'IR</strong> : la Restauration succède à un IR identifiable, pas directement à un AR</p>
+<p>2. <strong>Compromis avec les acquis révolutionnaires</strong> : le nouvel ordre ne peut pas effacer entièrement les transformations de la Révolution initiale et de l'IR (constitution, charte, certaines libertés acquises subsistent)</p>
+<p>3. <strong>Base politique élargie vs AR mais restreinte vs ENP</strong> : le corps politique reste plus large que sous l'AR mais reste plus étroit qu'il ne le sera après la Glorieuse Révolution</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Retour de la dynastie ancienne ou installation d'un régime à symbolique conservatrice</li>
+  <li>Adoption d'une charte ou constitution octroyée qui reconnaît certains acquis révolutionnaires</li>
+  <li>Coexistence tendue entre symboles anciens et institutions nouvelles</li>
+  <li>Tensions politiques récurrentes entre conservateurs (désirant le retour pur à l'AR) et libéraux (désirant l'achèvement parlementaire)</li>
+</ul>
+<h4 id="distinction-critique-restauration-canonique-vs-avortement-par-choc-exogène">Distinction critique : Restauration canonique vs avortement par choc exogène<a class="anchor" href="#distinction-critique-restauration-canonique-vs-avortement-par-choc-exogène">#</a></h4>
+<p>Une Restauration canonique vient <em>après</em> un IR identifiable et clôt une RN qui a parcouru ses sous-phases. Le retour d'un souverain par puissance étrangère <strong>sans</strong> IR préalable n'est <strong>pas</strong> une Restauration canonique : c'est un <strong>avortement par choc exogène</strong>, codé comme perturbation ponctuelle (<code>type: saillant</code> + <code>perturbation: true</code> + <code>mechanism: choc_exogene</code> + <code>effect: avortement</code>), pas comme saillant Restauration.</p>
+<p>Le critère opérationnel : <strong>y a-t-il eu un IR (endogène ou exogène substantiel) avant ?</strong> Si oui, Restauration canonique possible. Si non, c'est un avortement &mdash; la nation retombe en AR (exogène si imposé, endogène sinon), pas en sous-phase Restauration.</p>
+<p>Cas-type d'avortement à ne pas confondre avec Restauration : retour de Ferdinand III à Florence (juin 1799) sous protection autrichienne, sans IR préalable &mdash; codé comme saillant ponctuel d'avortement, qui rebascule Florence en AR exogène.</p>
 <h3 id="saillant-glorieuse-révolution"><span class="material-symbols-outlined h3-icon" style="color:#D4A017;">star</span>Glorieuse Révolution<a class="anchor" href="#saillant-glorieuse-révolution">#</a></h3>
-<p>Une réplique de la révolution initiale finit d'ancrer le parlementarisme dans la vie politique. La base politique est élargie fortement et définitivement. C'est la transition vers l'État-nation parlementaire.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">France</span><span class="card-date">1830</span></div><span class="card-desc">Révolution de 1830 (les Trois Glorieuses)</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Angleterre</span><span class="card-date">1688</span></div><span class="card-desc">Glorieuse Révolution</span></div></div>
-</div>
-<h2 id="conditions-de-sortie-de-la-révolution-nationale">Conditions de sortie de la Révolution Nationale<a class="anchor" href="#conditions-de-sortie-de-la-révolution-nationale">#</a></h2>
-<p>En fin de RN, l'homogénéité socioculturelle a généralement fortement augmenté, du fait du brassage social et des purges du mouvement révolutionnaire.</p>
-<h3 id="vers-l-état-nation-parlementaire">Vers l'État-nation parlementaire<a class="anchor" href="#vers-l-état-nation-parlementaire">#</a></h3>
-<p>Si la population a atteint un niveau d'homogénéité suffisant &mdash; souvent catalysé par la rencontre d'une altérité culturelle forte vis-à-vis de l'étranger &mdash; elle entre en régime parlementaire via la Glorieuse Révolution.</p>
-<h3 id="vers-le-dominat">Vers le Dominat<a class="anchor" href="#vers-le-dominat">#</a></h3>
-<p>Si la population n'a pas atteint un niveau d'homogénéité socioculturelle suffisant, le pays bascule en phase de Dominat.</p>
-<h2 id="cas-particulier-rn-contre-un-occupant">Cas particulier : RN contre un occupant<a class="anchor" href="#cas-particulier-rn-contre-un-occupant">#</a></h2>
+<p><strong>Définition</strong> : une réplique de la révolution initiale finit d'ancrer le parlementarisme dans la vie politique. La base politique est élargie fortement et définitivement. C'est la transition vers l'État-nation parlementaire.</p>
+<p><strong>Test discriminant</strong> : qu'est-ce qui distingue une Glorieuse Révolution d'une simple révolte de plus ?</p>
+<p>1. <strong>Réplique compressée de la révolution initiale</strong> : crise politique qui ressemble à l'éclatement de l'AR, mais résolue rapidement</p>
+<p>2. <strong>Renforcement du parlement, pas de l'exécutif</strong> : la crise se résout par subordination définitive de l'exécutif à la représentation, pas par une nouvelle figure autoritaire</p>
+<p>3. <strong>Caractère pérenne</strong> : le compromis qui s'installe survit aux successions et devient le cadre stable</p>
+<p><strong>Signes observables</strong> :</p>
+<ul>
+  <li>Crise de succession ou crise constitutionnelle qui se résout sans terreur ni IR</li>
+  <li>Bill of rights, constitution révisée, ou actes fondamentaux consacrant la subordination de l'exécutif à la représentation</li>
+  <li>Transition pacifique vers un régime où l'élargissement du corps civique devient possible et progressif</li>
+  <li>Le test discriminant RN vs ENP bascule à l'oui : la subordination du pouvoir administratif à la représentation devient stabilisée et pérenne</li>
+</ul>
+<hr>
+<h2 id="conditions-de-sortie-de-la-rn">Conditions de sortie de la RN<a class="anchor" href="#conditions-de-sortie-de-la-rn">#</a></h2>
+<p>En fin de RN, l'homogénéité socioculturelle a généralement fortement augmenté, du fait du brassage social et des purges du mouvement révolutionnaire. Trois issues sont possibles, selon le niveau d'homogénéité atteint et les chocs exogènes subis.</p>
+<h3 id="aboutissement-vers-l-enp-issue-canonique">Aboutissement vers l'ENP (issue canonique)<a class="anchor" href="#aboutissement-vers-l-enp-issue-canonique">#</a></h3>
+<p>Si la population a atteint un niveau d'homogénéité suffisant &mdash; souvent catalysé par la rencontre d'une altérité culturelle forte vis-à-vis de l'étranger &mdash; elle entre en régime parlementaire via la Glorieuse Révolution. C'est la sortie canonique de la RN.</p>
+<h3 id="bascule-vers-le-dominat-homogénéité-insuffisante">Bascule vers le Dominat (homogénéité insuffisante)<a class="anchor" href="#bascule-vers-le-dominat-homogénéité-insuffisante">#</a></h3>
+<p>Si la population n'a pas atteint un niveau d'homogénéité socioculturelle suffisant, le pays bascule en phase de Dominat (cf. <code>phase_parlementaire.md</code>). Le parlementarisme ne peut s'ancrer durablement.</p>
+<h3 id="avortement-écrasement-par-une-puissance-extérieure">Avortement (écrasement par une puissance extérieure)<a class="anchor" href="#avortement-écrasement-par-une-puissance-extérieure">#</a></h3>
+<p>La RN peut être écrasée par une puissance extérieure avant d'atteindre son terme. Le Parcours est interrompu et les institutions anciennes sont restaurées. La RN typiquement avortée a parcouru les premières étapes (éclatement, expérience parlementaire, parfois amorce de phase aiguë) sans atteindre le moment thermidorien ni l'IR.</p>
+<h3 id="binarité-aboutie-ou-avortée">Binarité : aboutie ou avortée<a class="anchor" href="#binarité-aboutie-ou-avortée">#</a></h3>
+<p>Une RN aboutit ou elle avorte. <strong>Il n'y a pas de catégorie intermédiaire.</strong> Le fait qu'une occupation étrangère ait eu lieu pendant la séquence &mdash; pendant la phase aiguë, pendant la restauration, ou entre les deux &mdash; ne modifie pas l'aboutissement : ce qui compte est l'<strong>issue institutionnelle finale</strong>.</p>
+<ul>
+  <li><strong>RN aboutie</strong> : un nouveau cadre institutionnel durable émerge (Glorieuse Révolution ou son équivalent compressé), les institutions absolutistes anciennes ne sont pas restaurées à l'identique, la phase parlementaire s'ouvre (active ou contrariée figée, cf. infra).</li>
+  <li><strong>RN avortée</strong> : l'ordre ancien est restauré à l'identique, aucun nouveau cadre stable n'émerge, le Parcours est refoulé et les tensions se rejouent ultérieurement.</li>
+</ul>
+<p><strong>Signature de l'aboutissement</strong> : présence effective d'un nouveau cadre institutionnel stable après la séquence révolutionnaire, avec rupture durable par rapport à l'AR antérieur. Certains saillants canoniques (IR endogène, moment thermidorien, Glorieuse Révolution distincte) peuvent être absents ou compressés sans que cela disqualifie l'aboutissement &mdash; l'examen porte sur l'issue institutionnelle, pas sur la complétude formelle des saillants.</p>
+<hr>
+<h2 id="configurations-particulières">Configurations particulières<a class="anchor" href="#configurations-particulières">#</a></h2>
+<h3 id="rn-contre-un-occupant">RN contre un occupant<a class="anchor" href="#rn-contre-un-occupant">#</a></h3>
 <p>La RN peut éclater contre un occupant étranger, pas seulement contre un pouvoir absolutiste local. La condition nécessaire côté peuple est la même : une <strong>homogénéité culturelle suffisante</strong> pour prétendre à une RN. Le Parcours est porté par un peuple, pas par des institutions &mdash; même sans institutions propres ni appareil étatique, si le peuple est culturellement au niveau RN, la RN peut éclater.</p>
 <p>Deux configurations :</p>
-<p>1. <strong>Les institutions locales sont absolutistes, le suzerain est formel</strong> &mdash; le Parcours local est en AR propre. L'explosion est contre l'ordre absolutiste local. Exemple : Israël sous Rome (66), où le Sanhédrin et l'aristocratie sadducéenne fonctionnent sous tutelle romaine.</p>
-<p>2. <strong>Les institutions locales sont totalement subordonnées à l'occupant</strong> &mdash; le Parcours local est en AR exogène (cf. <code>phase_absolutiste.md</code>). Les conditions d'AR (pression fiscale, mobilité bloquée, sédimentation) sont imposées par l'occupant, mais la réaction du peuple est endogène. Exemple : Venise sous l'Autriche (1848), Milan sous les Habsbourg.</p>
-<h2 id="cas-particulier-révolution-nationale-avortée">Cas particulier : Révolution Nationale avortée<a class="anchor" href="#cas-particulier-révolution-nationale-avortée">#</a></h2>
-<p>La Révolution Nationale peut être écrasée par une puissance extérieure avant d'atteindre son terme. Dans ce cas, le Parcours est interrompu.</p>
-<div class="saillant-examples">
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël (prolongement)"><span class="card-title">Israël (prolongement)</span><span class="card-date">66-70</span></div><span class="card-desc">La Grande Révolte suit les premières étapes de la RN (explosion de l'AR, expérience parlementaire, phase aiguë), mais est écrasée par Rome avant d'atteindre le moment thermidorien. Le peuple juif survit grâce à la refondation pharisienne du judaïsme sur l'étude et le culte synagogal</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Venise</span><span class="card-date">1848-1849</span></div><span class="card-desc">La République de Manin suit les premières étapes de la RN (explosion, expérience parlementaire, amorce de phase aiguë), mais est écrasée par l'Autriche avant que le cycle ne se complète</span></div></div>
-</div>
-<h2 id="cas-particulier-impérialiste-revanchard-partagé-entre-deux-parcours-hypothèse">Cas particulier : Impérialiste Revanchard partagé entre deux Parcours (hypothèse)<a class="anchor" href="#cas-particulier-impérialiste-revanchard-partagé-entre-deux-parcours-hypothèse">#</a></h2>
-<p>Dans certains cas, une même figure historique peut jouer le rôle d'Impérialiste Revanchard pour <strong>deux Parcours nationaux simultanément</strong>. C'est une hypothèse structurelle nouvelle, identifiée à l'occasion de l'analyse du Parcours autrichien, et qui reste à valider sur d'autres cas du corpus.</p>
-<p><strong>Cas identifié : Hitler comme IR double (allemand et autrichien)</strong></p>
-<p>Hitler est né à Braunau am Inn (Haute-Autriche) en 1889, a passé sa jeunesse à Linz et à Vienne, et adhère pleinement à l'idée pan-germanique qui a dominé la droite autrichienne depuis Schönerer (fin XIXe). L'Anschluss (12 mars 1938) est la réalisation historique de cette idée pan-germanique, portée par une figure autrichienne de naissance qui est aussi le chef du Reich allemand. Dans cette lecture, Hitler incarne simultanément l'IR du Parcours allemand (canonique) et l'IR du Parcours autrichien &mdash; la même personne, le même projet impérialiste revanchard, porté par deux Parcours nationaux qui se chevauchent pendant 1938-1945.</p>
-<p>Pour le Parcours autrichien, les fonctions canoniques de l'IR sont remplies :</p>
-<p>1. <strong>Projection impérialiste extérieure</strong> (conquêtes 1938-1941, guerre mondiale)</p>
-<p>2. <strong>Ventilation des élites par la méritocratie partisane</strong> (le parti nazi recrute massivement en Autriche, notamment dans la jeunesse petite-bourgeoise)</p>
-<p>3. <strong>Verticalité autoritaire</strong> qui transcende les factions de la Première République autrichienne (chrétiens-sociaux et pan-germanistes sont tous deux absorbés dans le parti nazi)</p>
-<p>4. <strong>Chute commune avec le Reich</strong> en mai 1945</p>
-<p>Cette lecture préserve la séquence canonique complète de la RN autrichienne (révolution initiale → IR → restauration → GR) et éclaire un élément biographique curieux &mdash; pourquoi est-ce un Autrichien qui porte l'impérialisme revanchard allemand.</p>
-<p><strong>Objection</strong> : l'historiographie post-1945 refuse l'attribution de Hitler au Parcours autrichien (doctrine de la « première victime »), et Hitler est devenu citoyen allemand en 1932. Ces objections relèvent de l'identité nationale construite rétroactivement, pas de la dynamique structurelle de 1918-1945.</p>
-<p><strong>Question théorique ouverte</strong> : sous quelles conditions un IR peut-il être partagé entre deux Parcours ? Faut-il une proximité culturelle et linguistique fondamentale (comme germanophone Allemagne/Autriche) ? Une phase de RN synchrone ? Une figure biographique ambiguë qui appartient structurellement aux deux nations ? Existe-t-il d'autres cas dans le corpus &mdash; IR partagé entre une nation et une diaspora, entre deux nations culturellement proches, entre un empire et son noyau ethnique ?</p>
-<p>La v4 du Parcours autrichien retient cette hypothèse comme hypothèse principale pour sa cohérence structurelle, tout en reconnaissant qu'elle est nouvelle et mérite discussion théorique.</p>
-<h3 id="test-discriminant-rn-avortée-vs-révolte-absolutiste">Test discriminant : RN avortée vs révolte absolutiste<a class="anchor" href="#test-discriminant-rn-avortée-vs-révolte-absolutiste">#</a></h3>
-<p>Comment distinguer une RN avortée (comme Israël en 66 ou Venise en 1848) d'une révolte absolutiste (comme les Maccabées en -167 ou Bar Kokhba en 132) ?</p>
-<ul>
-  <li><strong>Révolte absolutiste</strong> : un chef militaire ou charismatique, au statut héréditaire ou religieux, à l'autorité incontestée, mène la révolte de bout en bout. Pas de phase parlementaire, pas de factions concurrentes, pas d'assemblée élue. Exemples : Mattathias/Judah Maccabée (autorité sacerdotale héritée), Bar Kokhba (chef militaire endossé comme messie).</li>
-  <li><strong>RN avortée</strong> : la révolte commence par une expérience parlementaire avec assemblée élue et factions concurrentes, puis escalade vers une phase aiguë. Le leadership est construit par l'action politique et l'élection, pas par l'héritage. Exemples : Grande Révolte de 66 (gouvernement de coalition), Venise 1848 (Manin élu, démissionne quand il perd la majorité, réélu, reçoit les pouvoirs illimités par vote).</li>
-</ul>
-<p>Le marqueur le plus discriminant est la nature du leadership : <strong>autorité héritée/charismatique</strong> (révolte absolutiste) vs <strong>autorité construite par l'élection</strong> (RN).</p>
+<p>1. <strong>Les institutions locales sont absolutistes, le suzerain étranger est formel</strong> &mdash; le Parcours local est en AR propre. L'explosion est contre l'ordre absolutiste local. Le suzerain étranger peut intervenir pour restaurer l'ordre, ce qui peut faire avorter la RN.</p>
+<p>2. <strong>Les institutions locales sont totalement subordonnées à l'occupant</strong> &mdash; le Parcours local est en AR exogène (cf. <code>phase_absolutiste.md</code> §AR exogène). Les conditions d'AR (pression fiscale, mobilité bloquée, sédimentation) sont imposées par l'occupant, mais la réaction du peuple est endogène. La RN éclate contre l'occupant directement.</p>
+<h3 id="phase-parlementaire-qui-suit-active-ou-contrariée-figée-hypothèse">Phase parlementaire qui suit &mdash; active ou contrariée figée (hypothèse)<a class="anchor" href="#phase-parlementaire-qui-suit-active-ou-contrariée-figée-hypothèse">#</a></h3>
+<p>Quand une RN aboutit, la phase parlementaire qui s'ouvre est typiquement <strong>active</strong> : le mouvement sinistrogyre canonique fonctionne, le corps civique s'étend progressivement vers l'ensemble de la population au rythme de l'homogénéisation culturelle.</p>
+<p>Une <strong>phase parlementaire contrariée figée</strong> a été proposée comme lecture alternative pour rendre compte de configurations où les marqueurs formels du parlementarisme sont présents (subordination de l'exécutif à une représentation élargie, rotation des charges, bicaméralisme, égalité juridique au sein du corps civique) mais où le corps civique reste fermé et stable sans dynamique endogène d'élargissement. Hypothèse en cours d'évaluation, à tester systématiquement sur les cas d'organe collégial stable dans une cité-État ; la lecture concurrente est une phase absolutiste à organe collégial autonome (consortium oligarchique). À ne pas mobiliser comme cadre établi tant que des cas n'auront pas été clairement validés.</p>
+<p>Test discriminant entre les deux lectures (à appliquer aux régimes stables et institutionnalisés sur 200+ ans dans une cité-État avec organes collégiaux apparents) :</p>
+<p>1. <strong>L'organe exécutif central peut-il agir contre l'intérêt d'une majorité du corps élitaire inscrit ?</strong> Oui → phase absolutiste (institution autonome, type organe de surveillance secret doté de pouvoirs de police/justice sur le patriciat). Non → ENP contrariée (exécutif mandataire du corps, contrôlé, enquêté, limité en durée).</p>
+<p>2. <strong>Existe-t-il une classe administrative distincte du corps élitaire dominant ?</strong> Oui → phase absolutiste (noblesse de robe, fonctionnaires permanents). Non → ENP contrariée (administration auto-recrutée au sein du corps inscrit).</p>
+<p>3. <strong>Le corps inscrit est-il élargi par rapport à la phase oligarchique antérieure ?</strong> Non, même cercle → plutôt phase absolutiste. Oui, élargissement significatif (quelques dizaines → plusieurs centaines de familles, admission régulière) → plutôt ENP contrariée.</p>
+<p>Deux OUI aux questions 1-2 → phase absolutiste à organe collégial autonome. Deux NON aux questions 1-2 + OUI à la 3 → ENP contrariée. Autres combinaisons → cas ambigu. La stabilité de 200+ ans en soi ne tranche rien : elle caractérise les deux lectures.</p>
+<hr>
+<h2 id="vue-corpus">Vue corpus<a class="anchor" href="#vue-corpus">#</a></h2>
+<p>Le tableau récapitulatif aligné par nation (saillants RN par sous-phase) est dans <code>corpus_recapitulatif.md</code> &mdash; accessible au parent uniquement.</p>
 <section class="examples">
 <h2 id="exemples-du-corpus">Exemples du corpus<a class="anchor" href="#exemples-du-corpus">#</a></h2>
 <p class="examples-intro">Saillants identifiés dans les parcours nationaux déjà mappés.</p>
@@ -351,6 +479,8 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Massacre de Florus</span><span class="card-date">66</span></div><span class="card-desc">Le massacre ordonné par le procurateur Florus provoque le basculement des élites romanisées elles-mêmes dans la révolte, signe que l&#x27;Ancien Régime a atteint le point de rupture ...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Charles Ier</span><span class="card-date">1640</span></div><span class="card-desc">Le Long Parlement démantèle en quelques mois les instruments du pouvoir personnel de Charles Ier — Chambre étoilée, Cour de la Haute Commission, Strafford exécuté — et la tentat...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Prise de la Bastille</span><span class="card-date">1789</span></div><span class="card-desc">La convocation des États généraux pour résoudre la crise financière déclenche un basculement irrésistible : le tiers état et une partie de la noblesse libérale renversent l&#x27;ordr...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Invasion française</span><span class="card-date">1796</span></div><span class="card-desc">L&#x27;invasion française (1796) éclate l&#x27;AR léopoldin par choc exogène sur cadre financièrement sain. Sortie obligatoirement par choc externe car l&#x27;AR n&#x27;avait pas atteint la maturit...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Émeute jacobine et imposition par Bonaparte</span><span class="card-date">1797</span></div><span class="card-desc">Émeute jacobine du 22 mai - 14 juin 1797 ; le doge Giacomo Maria Brignole est renversé ; Bonaparte impose la République ligurienne (proclamée le 6 juin 1797). Sac du Palais des ...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Invasion française</span><span class="card-date">1798</span></div><span class="card-desc">L&#x27;invasion française (mars 1798) provoque l&#x27;éclatement de l&#x27;Ancien Régime confédéral. Le test discriminant RN vs AR tardif est satisfait : les élites patriciennes ont basculé da...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Lajos Batthyány</span><span class="card-date">1848</span></div><span class="card-desc">Le 15 mars 1848, Kossuth prononce son discours à la diète. Manifestations à Pest le même jour. Le 17 mars, Ferdinand V nomme Batthyány Premier ministre. April Laws adoptées et r...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Carlo Cattaneo</span><span class="card-date">1848</span></div><span class="card-desc">Les Cinque Giornate (18-22 mars 1848) satisfont le test discriminant de l&#x27;éclatement de l&#x27;AR : le bloc contestataire (ED + EG) renverse le bloc élitaire. Le régime absolutiste p...</span></div></div>
@@ -370,7 +500,9 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Gouvernement de coalition</span><span class="card-date">66</span></div><span class="card-desc">Un gouvernement provisoire de coalition réunissant Pharisiens, Sadducéens modérés et Zélotes est instauré après la victoire de Beth Horon, et la frappe du shekel inscrit « Israë...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">John Pym</span><span class="card-date">1640</span></div><span class="card-desc">Le Long Parlement gouverne pendant la guerre civile en s&#x27;appuyant sur ses propres comités et sur la New Model Army, première tentative de substituer un gouvernement parlementair...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Constitution de 1791</span><span class="card-date">1789</span></div><span class="card-desc">L&#x27;Assemblée nationale constituante tente d&#x27;instaurer un régime parlementaire en adoptant la Déclaration des droits de l&#x27;homme et du citoyen puis la Constitution de 1791, qui éta...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Régime directorial puis hybride</span><span class="card-date">1797</span></div><span class="card-desc">Constitution du 22 décembre 1797 (régime directorial inspiré de la Constitution française de l&#x27;an III). Déposition du Directoire en décembre 1799, commission exécutive provisoir...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">République helvétique</span><span class="card-date">1798</span></div><span class="card-desc">La République helvétique (1798-1803) est l&#x27;expérience parlementaire canonique : les élites qui ont renversé l&#x27;ancien ordre proposent un régime à base politique élargie. Une asse...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">République toscane jacobine</span><span class="card-date">1799</span></div><span class="card-desc">Après l&#x27;expulsion de Ferdinand III (mars 1799), brève République toscane jacobine sous protection française. Comprimée à quelques semaines avant l&#x27;insurrection contre-révolution...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Lajos Batthyány</span><span class="card-date">1848</span></div><span class="card-desc">Le gouvernement Batthyány (17 mars 1848 - 2 octobre 1848) est l&#x27;expérience parlementaire hongroise : gouvernement responsable, coalition des magnats réformateurs (Batthyány, Szé...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/milan/flag.png" alt="Milan"><span class="card-title">Gabrio Casati</span><span class="card-date">1848</span></div><span class="card-desc">Le Governo provvisorio (22 mars - 6 août 1848) est la première expérience parlementaire milanaise. Trois factions s&#x27;affrontent : les fusionnistes monarchistes (Casati, majorité)...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Daniele Manin</span><span class="card-date">1848</span></div><span class="card-desc">L&#x27;expérience parlementaire vénitienne satisfait le marqueur nécessaire de la RN (expérience collégiale avec factions concurrentes) et le test discriminant « RN vs révolte absolu...</span></div></div>
@@ -388,7 +520,9 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/israel/flag.png" alt="Israël"><span class="card-title">Terreur zélote</span><span class="card-date">67</span></div><span class="card-desc">Trois factions armées s&#x27;affrontent à l&#x27;intérieur même de Jérusalem, les Zélotes éliminent les modérés, assassinent le Grand Prêtre et brûlent les réserves de nourriture, reprodu...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Oliver Cromwell</span><span class="card-date">1648</span></div><span class="card-desc">L&#x27;Épuration de Pride expulse les modérés du Parlement, le Rump Parliament restant juge et exécute Charles Ier le 30 janvier 1649, et la monarchie est abolie au profit du Commonw...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Robespierre</span><span class="card-date">1792</span></div><span class="card-desc">L&#x27;extrême-gauche structurelle prend le contrôle du pouvoir : la monarchie est abolie le 10 août 1792, la République est proclamée, Louis XVI est exécuté et le Comité de salut pu...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Insurrection populaire Viva Maria</span><span class="card-date">1799</span></div><span class="card-desc">Insurrection populaire massive Viva Maria (printemps-été 1799) — soulèvement contre-révolutionnaire et anti-français qui balaye les Jacobins. Phase aiguë canonique mais d&#x27;orient...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Stecklikrieg</span><span class="card-date">1802</span></div><span class="card-desc">Le Stecklikrieg (1802) est la phase aiguë canonique : montée aux extrêmes après l&#x27;échec de l&#x27;expérience parlementaire. Les fédéralistes (ED + modérés) se soulèvent contre les un...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Révolte de Gênes 5-11 avril 1849</span><span class="card-date">1849</span></div><span class="card-desc">Suite à l&#x27;armistice de Vittorio Emanuele II avec Radetzky après la défaite de Novare (25 mars 1849), Gênes se soulève le 5 avril 1849 et restaure éphémèrement un gouvernement au...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Lajos Kossuth</span><span class="card-date">1849</span></div><span class="card-desc">Après la reprise des hostilités et le transfert du gouvernement à Debrecen, Kossuth devient le dirigeant effectif. Le 14 avril 1849, il proclame la Déclaration d&#x27;indépendance — ...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/venise/flag.png" alt="Venise"><span class="card-title">Daniele Manin</span><span class="card-date">1849</span></div><span class="card-desc">Le vote des « pouvoirs illimités » pour Manin (mars 1849) marque l&#x27;amorce de la phase aiguë : concentration du pouvoir dans les mains d&#x27;un seul homme, l&#x27;EG prenant le dessus fac...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Béla Kun</span><span class="card-date">1919</span></div><span class="card-desc">Le 21 mars 1919, fusion sociaux-démocrates + communistes et proclamation de la République hongroise des Conseils. 133 jours : nationalisation, Terreur rouge, alliance avec la Ru...</span></div></div>
@@ -414,7 +548,6 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="saillant-examples">
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Oliver Cromwell</span><span class="card-date">1653</span></div><span class="card-desc">Cromwell s&#x27;empare du pouvoir en dissolvant le Rump Parliament et en devenant Lord Protecteur, instaurant un régime méritocratique et impérialiste qui projette la puissance angla...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Bonaparte</span><span class="card-date">1799</span></div><span class="card-desc">Le coup d&#x27;État du 18 Brumaire le 9 novembre 1799 porte Bonaparte au pouvoir ; il instaure le Consulat puis l&#x27;Empire et réalise l&#x27;unification juridique définitive du pays par le ...</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Adolf Hitler</span><span class="card-date">1934</span></div><span class="card-desc">IR canonique : figure autoritaire qui ventile les élites par la méritocratie, canalise les tensions par l&#x27;impérialisme militaire, et dont le régime s&#x27;effondre avec sa personne.</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Adolf Hitler</span><span class="card-date">1938</span></div><span class="card-desc">Le 12 mars 1938, Hitler — né à Braunau am Inn, autrichien d&#x27;origine — annexe l&#x27;Autriche au Reich par l&#x27;Anschluss. L&#x27;Autriche disparaît formellement comme État indépendant. Struc...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Francisco Franco</span><span class="card-date">1939</span></div><span class="card-desc">Franco (r. 1939-1975) est l&#x27;IR contraint — il remplit les fonctions canoniques de l&#x27;IR (verticalité autoritaire, ventilation des élites par la méritocratie partisane, fusion des...</span></div></div>
 </div>
@@ -430,7 +563,6 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Adolf Hitler</span><span class="card-date">1945</span></div><span class="card-desc">3 ans de tentative de restauration démocratique post-guerre. Beneš revient de Londres, restauration de la République tchécoslovaque (3ème République). Décrets Beneš : expulsion ...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Miklós Horthy</span><span class="card-date">1945</span></div><span class="card-desc">Brève restauration démocratique 1945-1947 sous occupation alliée (majoritairement soviétique). Élections libres de novembre 1945 gagnées par les Petits Propriétaires (57%). « Ta...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Zoltán Tildy / Ferenc Nagy</span><span class="card-date">1945</span></div><span class="card-desc">Après la chute de Horthy (1944) et l&#x27;arrivée de l&#x27;Armée rouge, le gouvernement provisoire de Débrecen (décembre 1944) puis le gouvernement Tildy (novembre 1945) installent un ré...</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1949</span></div><span class="card-desc">Restauration canonique : un ordre conservateur remplace l&#x27;IR après sa chute. Base politique élargie (Grundgesetz) mais souveraineté incomplète (occupation alliée, division Est-O...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Imre Pozsgay / József Antall</span><span class="card-date">1989</span></div><span class="card-desc">Restauration institutionnelle très courte entre la proclamation de la République (23 octobre 1989) et l&#x27;installation du gouvernement Antall après les élections libres (mai 1990)...</span></div></div>
 </div>
 </div>
@@ -442,10 +574,11 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/angleterre/flag.png" alt="Angleterre"><span class="card-title">Guillaume III d&#x27;Orange</span><span class="card-date">1688</span></div><span class="card-desc">L&#x27;invitation faite à Guillaume d&#x27;Orange de débarquer en Angleterre, la fuite de Jacques II et l&#x27;adoption du Bill of Rights en 1689 ancrent définitivement la souveraineté parleme...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/france/flag.png" alt="France"><span class="card-title">Trois Glorieuses</span><span class="card-date">1830</span></div><span class="card-desc">Les Trois Glorieuses des 27, 28 et 29 juillet 1830 renversent Charles X et portent Louis-Philippe au pouvoir dans le cadre d&#x27;une monarchie constitutionnelle parlementaire, ancra...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/suisse/flag.png" alt="Suisse"><span class="card-title">Guillaume Henri Dufour</span><span class="card-date">1847</span></div><span class="card-desc">La Guerre du Sonderbund (novembre 1847) et la Constitution fédérale (1848) sont la Glorieuse Révolution suisse — l&#x27;acte qui ancre définitivement le parlementarisme et crée l&#x27;Éta...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Léopold II</span><span class="card-date">1848</span></div><span class="card-desc">Le 17 février 1848, Léopold II octroie le Statuto fondamentale — constitution bicamérale, suffrage censitaire, garanties civiques. Florence participe à la Première guerre d&#x27;indé...</span></div></div>
+<div class="example-card"><div class="card-content"><div class="card-header"><span class="card-title">Carlo Alberto</span><span class="card-date">1848</span></div><span class="card-desc">Le 4 mars 1848, Carlo Alberto octroie le Statut Albertin — constitution bicamérale, suffrage censitaire, garanties civiques. Applicable au territoire génois par extension comme ...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/autriche/flag.png" alt="Autriche"><span class="card-title">Leopold Figl / Julius Raab</span><span class="card-date">1955</span></div><span class="card-desc">Le Staatsvertrag de Vienne (15 mai 1955) est signé par les quatre puissances alliées et l&#x27;Autriche. Il rend la pleine souveraineté à l&#x27;Autriche, interdit toute union avec l&#x27;Alle...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">Imre Nagy</span><span class="card-date">1956</span></div><span class="card-desc">Le 23 octobre 1956, insurrection populaire à Budapest. Imre Nagy revient au pouvoir comme Premier ministre, forme un gouvernement multipartite, annonce la fin du système du part...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/espagne/flag.png" alt="Espagne"><span class="card-title">Juan Carlos Ier / Adolfo Suárez</span><span class="card-date">1978</span></div><span class="card-desc">La Transition (1975-1978) est la Glorieuse Révolution espagnole — une réplique de la révolution initiale qui ancre définitivement le parlementarisme. La Constitution de 1978 sub...</span></div></div>
-<div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/baviere/flag.png" alt="Allemagne"><span class="card-title">Allemagne</span><span class="card-date">1990</span></div><span class="card-desc">Glorieuse Révolution canonique : une réplique de la révolution initiale ancre définitivement le parlementarisme pour l&#x27;ensemble de la nation.</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/hongrie/flag.png" alt="Hongrie"><span class="card-title">József Antall</span><span class="card-date">1990</span></div><span class="card-desc">Les premières élections libres multipartites du 25 mars et 8 avril 1990 et l&#x27;installation du gouvernement József Antall (Forum démocratique hongrois) constituent la Glorieuse Ré...</span></div></div>
 <div class="example-card"><div class="card-content"><div class="card-header"><img class="card-flag" src="../docs/images/boheme/flag.png" alt="Bohême"><span class="card-title">Václav Klaus et Vladimír Mečiar</span><span class="card-date">1993</span></div><span class="card-desc">Le 1er janvier 1993, la Tchécoslovaquie est dissoute pacifiquement en deux États indépendants : la République tchèque et la République slovaque. Accord négocié en 1992 par Klaus...</span></div></div>
 </div>
