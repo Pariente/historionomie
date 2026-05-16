@@ -16,10 +16,25 @@ body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; col
 /* --- Navbar (= docs/index.html) --- */
 .navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
 .navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
-.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links { display:flex; gap:1.5rem; align-items:center; }
 .navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
 .navbar-links a:hover { color:#8B7355; }
 .navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* Nations dropdown */
+.nav-dropdown { position:relative; display:inline-block; }
+.nav-dropdown-toggle { background:none; border:1px solid #e0dcd4; cursor:pointer; font-family:inherit; font-size:0.85rem; color:#555; padding:0.25rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.4rem; line-height:1.4; }
+.nav-dropdown-toggle:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-toggle .nav-dropdown-current { font-weight:600; color:#8B7355; }
+.nav-dropdown-toggle .nav-dropdown-caret { font-size:0.7rem; color:#8B7355; }
+.nav-dropdown-menu { display:none; position:absolute; top:calc(100% + 4px); right:0; min-width:220px; max-height:65vh; overflow-y:auto; background:#fff; border:1px solid #e0dcd4; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.08); z-index:200; padding:0.3rem 0; }
+.nav-dropdown.open .nav-dropdown-menu { display:block; }
+.nav-dropdown-menu a { display:flex; align-items:center; gap:0.55rem; padding:0.4rem 0.95rem; font-size:0.85rem; color:#555; text-decoration:none; font-weight:500; border-bottom:none; }
+.nav-dropdown-menu a:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-menu a.active { color:#8B7355; font-weight:700; background:#faf6f0; }
+.nav-flag { display:inline-block; width:18px; height:18px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,0.12); }
+.nav-flag img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.nav-nation-label { line-height:1.2; }
 
 /* --- Layout --- */
 .page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
@@ -163,6 +178,7 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <div class="navbar-links">
     <a href="index.html">Accueil</a>
     <a class="active" href="parcours.html">Méthodologie</a>
+    <div class="nav-dropdown" id="nation-dropdown"><button type="button" class="nav-dropdown-toggle" onclick="document.getElementById('nation-dropdown').classList.toggle('open')"><span class="nav-dropdown-current">Parcours</span><span class="nav-dropdown-caret">&#9662;</span></button><div class="nav-dropdown-menu"><a href="angleterre.html"><span class="nav-flag"><img src="images/angleterre/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Angleterre</span></a><a href="autriche.html"><span class="nav-flag"><img src="images/autriche/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Autriche</span></a><a href="baviere.html"><span class="nav-flag"><img src="images/baviere/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Bavière</span></a><a href="boheme.html"><span class="nav-flag"><img src="images/boheme/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Bohême</span></a><a href="emilie-romagne.html"><span class="nav-flag"><img src="images/emilie-romagne/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Émilie-Romagne</span></a><a href="espagne.html"><span class="nav-flag"><img src="images/espagne/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Espagne</span></a><a href="etats-pontificaux.html"><span class="nav-flag"><img src="images/etats-pontificaux/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">États pontificaux</span></a><a href="florence.html"><span class="nav-flag"><img src="images/florence/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Florence</span></a><a href="france.html"><span class="nav-flag"><img src="images/france/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">France</span></a><a href="genes.html"><span class="nav-flag"><img src="images/genes/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Gênes</span></a><a href="hongrie.html"><span class="nav-flag"><img src="images/hongrie/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Hongrie</span></a><a href="israel.html"><span class="nav-flag"><img src="images/israel/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Israël</span></a><a href="milan.html"><span class="nav-flag"><img src="images/milan/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Milan</span></a><a href="naples.html"><span class="nav-flag"><img src="images/naples/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Naples</span></a><a href="piemont.html"><span class="nav-flag"><img src="images/piemont/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Piémont</span></a><a href="sicile.html"><span class="nav-flag"><img src="images/sicile/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Sicile</span></a><a href="suisse.html"><span class="nav-flag"><img src="images/suisse/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Suisse</span></a><a href="venise.html"><span class="nav-flag"><img src="images/venise/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Venise</span></a></div></div>
 </div>
 </nav>
 <div class="page-grid">
@@ -221,6 +237,8 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 </ul>
 <p>Ces deux processus sont à la fois les <em>moteurs</em> et les <em>indicateurs</em> du Parcours. Pour situer une nation, on observe le degré de centralisation de l'État et le degré d'homogénéité culturelle. Pour comprendre un ralentissement ou une accélération, on cherche ce qui a perturbé l'un ou l'autre.</p>
 <p>Les deux moteurs doivent progresser <strong>ensemble</strong>. Un État central avancé sans homogénéité culturelle suffisante = Parcours qui <strong>boucle</strong> : la phase féodale recommence en cycles (pic suivi de crise) sans produire le pacte oligarchique, faute d'homogénéité des grands. Une homogénéité culturelle forte sans construction étatique = Parcours qui <strong>stagne</strong> : l'identité de la nation existe mais l'appareil reste informel, l'éveil féodal lui-même est compromis. Le Parcours avance le plus vite quand les deux moteurs sont <strong>alignés</strong>.</p>
+<p><strong>Désynchronisation par tutelle prolongée</strong>. À ces deux configurations endogènes (bouclage, stagnation) s'ajoute une désynchronisation par tutelle exogène : quand un suzerain étranger tient l'appareil central de la nation sur une longue période, le moteur étatique stagne tandis que le moteur culturel continue de progresser via des canaux non-étatiques &mdash; langue vernaculaire, écoles juridiques, ordres religieux, presse, identité urbaine, classes professionnelles autonomes. Les deux moteurs se désynchronisent : l'homogénéité culturelle prend de l'avance sur l'État central, sans pour autant produire la stagnation décrite ci-dessus (qui suppose une informalité de l'appareil). À la levée de la tutelle &mdash; typiquement par un 1er monarque absolu imposé exogènement (figure dynastique installée par traité, puissance étrangère arbitrante) &mdash; l'État central rattrape rapidement sur un terrain culturellement déjà mûr. La phase absolutiste qui suit peut être structurellement compressée : la sédimentation sociologique des élites, l'articulation intellectuelle d'un programme prébendier, et la maturité de la classe administrative sont déjà acquises avant même que l'appareil central ne les formalise. L'absolutisation procède plus vite parce qu'elle institutionnalise une réalité sociale déjà en place plutôt que de la construire de zéro.</p>
+<p>Conditions d'activation : (1) tutelle par un suzerain étranger qui retient l'appareil central de la nation, (2) homogénéité culturelle progressant de façon autonome de l'État (densité urbaine, tradition vernaculaire, unité religieuse, classe professionnelle structurée), (3) souvent : petite/moyenne nation finalement absorbée avant maturation complète de l'AR. Le mécanisme ne s'applique pas aux nations dont le « gel » de l'État central est endogène (monarchies composites où la centralisation est portée activement par une couronne nationale, type Espagne pré-Nueva Planta). Cf. <code>perturbations.md</code> §4.6 pour la distinction avec l'exutoire.</p>
 <h3 id="nature-de-l-appareil-étatique-critère-fonctionnel-pas-juridique">Nature de l'appareil étatique : critère fonctionnel, pas juridique<a class="anchor" href="#nature-de-l-appareil-étatique-critère-fonctionnel-pas-juridique">#</a></h3>
 <p>L'appareil de l'État central &mdash; fisc, armée, justice, coordination &mdash; est défini par les <strong>fonctions qu'il exerce</strong>, pas par son statut juridique formel. Quand une structure formellement privée (banque familiale, consortium de créanciers institutionnalisé, ordre religieux militaire, compagnie à charte) exerce effectivement les fonctions de l'appareil central &mdash; extraction fiscale, coercition, coordination diplomatique, récompense-sanction des élites, administration de territoires soumis &mdash; elle constitue cet appareil au sens historionomique, indépendamment de son statut formel. La distinction public/privé est une catégorie juridique tardive et contingente ; le critère structurel est fonctionnel.</p>
 <p>Configurations possibles : tout dispositif formellement privé (banque dynastique-familiale, consortium de créanciers institutionnalisé, ordre religieux militaire, compagnie à charte) qui exerce les fonctions étatiques (fiscalité, coercition, administration territoriale, coordination diplomatique, récompense-sanction des élites) constitue l'appareil central au sens historionomique. Cette possibilité doit être tenue en tête lors de l'identification d'une phase oligarchique ou absolutiste : l'absence d'une bureaucratie formellement publique ne signifie pas l'absence d'appareil central, et les tests discriminants des phases s'appliquent à l'appareil fonctionnel quel que soit son habillage juridique.</p>
@@ -263,11 +281,13 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <p><strong>Phase pré-féodale (~90-120 ans).</strong> Percolation élitaire (Deblonde) : émergence d'une aristocratie qui se reconnaît comme telle, sans encore de chef supra-régional. Préparation de la phase féodale. Cf. <code>phase_pre_feodale.md</code>.</p>
 <p><strong>Phase féodale (~200 ans, peut boucler).</strong> Interconnexion des réseaux claniques et lignagers. Un chef des chefs émerge, dont l'autorité repose sur des liens de vassalité d'homme à homme. Pas d'administration centrale permanente. L'édifice est fragile et dépend de la personne du suzerain. Des <strong>pics féodaux</strong> (rois forts) alternent avec des <strong>crises féodales</strong> (fragmentation post-pic). Le <strong>pacte oligarchique</strong> ne survient que quand <strong>deux conditions</strong> sont réunies simultanément : homogénéité des oligarques + faiblesse du suzerain (Deblonde). Si la phase boucle (crises sans pacte par homogénéité insuffisante), elle peut durer plusieurs fois la durée typique &mdash; chaque cycle pic/crise rejoue la fragilité féodale. Cf. <code>phase_feodale.md</code>.</p>
 <ul>
-  <li>Sous-phases : coagulation des élites → [bascule oligarchique]</li>
+  <li>Sous-phases : coagulation des élites → bascule oligarchique (sous-phase terminale de transition, parallèle à la guerre sociale qui clôt l'oligarchique ou à l'ancien régime qui clôt l'absolutiste)</li>
 </ul>
 <p><strong>Phase oligarchique (~200 ans).</strong> Émergence de l'État central &mdash; impôt permanent, armée permanente, administration centrale. L'État central se renforce face aux pouvoirs locaux. Polarisation progressive entre faction prébendière et patrimoniale, jusqu'à la <strong>guerre sociale</strong>, résolue par un <strong>1er monarque absolu</strong>. Cf. <code>phase_oligarchique.md</code>.</p>
 <ul>
-  <li>Sous-phases : essor oligarchique → polarisation des élites → guerre sociale</li>
+  <li>Sous-phases (trajectoire canonique) : essor oligarchique → polarisation des élites → guerre sociale</li>
+  <li><strong>Variante alternative (Deblonde-Pariente, 2026-05-14)</strong> : essor oligarchique → <strong>équilibre oligarchique</strong> (phase prolongée indéfiniment quand l'homogénéité culturelle du substrat empêche la polarisation des élites &mdash; principe de catalyse hétérogène). Pas de GS, pas de 1er MA endogène. Sortie uniquement par imposition exogène. Cf. <code>phase_oligarchique.md</code> §Sous-phase 2 bis.</li>
+  <li>Saillant d'ouverture : Pacte oligarchique (1er saillant de l'essor, parallèle à 1er monarque absolu qui ouvre l'absolutiste, ou Éclatement de l'AR qui ouvre la RN)</li>
 </ul>
 <p><strong>Phase absolutiste (~200 ans).</strong> L'administration centrale acquiert une supériorité incontestée sur les administrations locales. Achèvement de l'élimination des réseaux féodaux et oligarchiques. Se conclut par l'<strong>ancien régime</strong> : système à maturité, élites sédimentées, mobilité sociale figée, rentes insupportables. Cf. <code>phase_absolutiste.md</code>.</p>
 <ul>
@@ -309,12 +329,12 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
   <tr>
     <td>Bascule oligarchique</td>
     <td><strong>Crise féodale terminale</strong></td>
-    <td><strong>Pacte oligarchique</strong></td>
+    <td><strong>Pacte oligarchique</strong> (boundary)</td>
     <td>~10-20 ans</td>
   </tr>
   <tr>
     <td>Essor oligarchique</td>
-    <td><strong>Pacte oligarchique</strong></td>
+    <td><strong>Pacte oligarchique</strong> (1er saillant d'oligarchique)</td>
     <td>⚠️ Basculement (projection extérieure → tension interfactions)</td>
     <td>~70-100 ans</td>
   </tr>
@@ -339,12 +359,12 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
   <tr>
     <td>Impérialisme absolutiste</td>
     <td><strong>Fin de la DGRO</strong></td>
-    <td><strong>Remontrance</strong></td>
+    <td><strong>Saturation fiscale</strong></td>
     <td>~45-100 ans</td>
   </tr>
   <tr>
     <td>Ancien régime</td>
-    <td><strong>Remontrance</strong></td>
+    <td><strong>Saturation fiscale</strong></td>
     <td><strong>Éclatement de l'AR</strong></td>
     <td>~35-100 ans</td>
   </tr>
@@ -373,7 +393,14 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <p>2. La fin d'une sous-phase et le début de la suivante coïncident (ou se chevauchent de ~1-2 ans).</p>
 <p>3. Les bornes ne doivent pas être forcées pour obtenir des durées typiques.</p>
 <p>4. Quand une sous-phase optionnelle est absente (bascule oligarchique, IR), justifier structurellement.</p>
-<p><strong>Saillants positionnés à l'intérieur d'une sous-phase</strong> (pas en borne) : 1er monarque oligarchique (interne à l'essor, premier souverain post-PO, typiquement quelques années après le PO) ; Acmé oligarchique (interne à l'essor) ; Fin de l'expansion oligarchique (peut coïncider avec le basculement essor → polarisation) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Fin de l'expansion absolutiste (interne à l'impérialisme absolutiste) ; Expérience parlementaire, Phase aiguë, Moment thermidorien (internes à la révolution initiale, qui s'étend de l'Éclatement de l'AR à l'Émergence de l'IR).</p>
+<p><strong>Saillants positionnés à l'intérieur d'une sous-phase</strong> (pas en borne) : 1er monarque oligarchique (interne à l'essor, premier souverain post-PO, typiquement quelques années après le PO) ; Acmé oligarchique (interne à l'essor) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Remontrance (généralement simultanée ou quasi-simultanée à la Saturation fiscale, manifestation politique contingente du basculement en AR &mdash; peut être absente) ; Réformes échouées (interne à l'AR mature) ; Expérience parlementaire, Phase aiguë, Moment thermidorien (internes à la révolution initiale, qui s'étend de l'Éclatement de l'AR à l'Émergence de l'IR).</p>
+<p><strong>Saillants de transition (filing convention)</strong> : les saillants qui marquent la transition d'une phase à la suivante sont <strong>filés sous la phase d'arrivée</strong>, pas sous la phase de départ. Pattern systémique :</p>
+<ul>
+  <li><strong>Bascule oligarchique</strong> (sous-phase féodale) → s'achève au <strong>Pacte oligarchique</strong> (1er saillant de l'oligarchique, dans Essor oligarchique)</li>
+  <li><strong>Guerre sociale</strong> (sous-phase oligarchique) → s'achève au <strong>1er monarque absolu</strong> (1er saillant de l'absolutiste, dans Absolutisation)</li>
+  <li><strong>Ancien régime</strong> (sous-phase absolutiste) → s'ouvre par la <strong>Saturation fiscale</strong> (saillant interne à l'AR, premier saillant de la sous-phase) et s'achève à l'<strong>Éclatement de l'AR</strong> (1er saillant de la RN, dans Révolution initiale)</li>
+</ul>
+<p>Le saillant frontière est l'acte fondateur de la phase suivante, pas le dernier acte de la phase précédente. La sous-phase terminale de chaque phase porte le nom du processus qui produit la transition (bascule, guerre sociale, AR), mais le saillant qui clôt cette transition appartient formellement à la phase d'après.</p>
 <hr>
 <h2 id="saillants-canoniques">Saillants canoniques<a class="anchor" href="#saillants-canoniques">#</a></h2>
 <p>Les <strong>saillants</strong> sont des éléments ponctuels facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison. Ils forment une <strong>liste fermée</strong> (cf. CLAUDE.md pour le naming canonique). Définitions courtes ci-dessous ; pour les tests discriminants, configurations rencontrées et marqueurs détaillés, cf. les <code>phase_*.md</code>.</p>
@@ -388,7 +415,6 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <ul>
   <li><em>1er monarque oligarchique</em> : premier souverain qui gouverne dans le cadre ouvert par le PO, dont la légitimité repose sur les règles codifiées et non plus sur la stature personnelle</li>
   <li><em>Acmé oligarchique</em> : pic de projection de puissance combinée souverain + nation, lié à la saturation de l'exutoire externe</li>
-  <li><em>Fin de l'expansion</em> : moment où la projection extérieure cesse, l'énergie compétitive se retourne vers l'intérieur</li>
   <li><em>Guerre sociale</em> : conflit ouvert entre deux factions oligarchiques pour le contrôle de l'État central (généralement entre une faction prébendière et une faction patrimoniale), résolu par l'émergence d'un nouveau cadre central qui subordonne les anciennes élites</li>
 </ul>
 <p><strong>Absolutiste</strong> :</p>
@@ -396,8 +422,8 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
   <li><em>1er monarque absolu</em> : figure (ou institution, ou dynastie, ou puissance étrangère arbitrante) qui résout la guerre sociale en créant un nouveau cadre central qui subordonne toutes les anciennes élites (cf. <code>phase_absolutiste.md</code> pour les configurations rencontrées dans le corpus)</li>
   <li><em>DGRO (Dernière Grande Révolte Oligarchique)</em> : dernier sursaut armé des oligarques avant l'ancrage absolutiste &mdash; son écrasement marque la fin de l'absolutisation</li>
   <li><em>Acmé absolutiste</em> : pic d'impérialisme et de prestige, apogée du règne absolutiste</li>
-  <li><em>Fin de l'expansion</em> : moment où la projection extérieure absolutiste cesse, retour vers l'intérieur</li>
-  <li><em>Remontrance</em> : contestation institutionnelle (sans force armée) des élites intégrées à l'appareil absolutiste &mdash; marque l'entrée en ancien régime. Premier moment du cycle de la classe administrative intermédiaire (Pariente)</li>
+  <li><em>Saturation fiscale</em> : moment où l'État central perd la capacité d'augmenter durablement ses revenus fiscaux ordinaires malgré ses tentatives, et bascule en mode expédients permanents (emprunts massifs, vénalité, ventes domaniales, manipulations monétaires). C'est ce saillant qui <strong>ouvre la sous-phase Ancien Régime</strong>. Critère Lanoue de Suremain, attribué à Martin</li>
+  <li><em>Remontrance</em> : contestation institutionnelle (sans force armée) des élites intégrées à l'appareil absolutiste. <strong>Manifestation politique contingente</strong> du basculement en AR &mdash; généralement simultanée ou quasi-simultanée à la Saturation fiscale (qui crée la fenêtre d'opportunité et l'incitation), mais peut être absente quand la classe administrative est embryonnaire, étouffée par une oligarchie patricienne extrême, ou réduite à un mode intellectuel. Premier moment du cycle de la classe administrative intermédiaire (Pariente)</li>
   <li><em>Réformes échouées</em> : séquence de tentatives de réforme structurelle par le souverain ou ses ministres, systématiquement bloquées par la classe administrative désormais sédimentée. La récurrence est le marqueur central (Deblonde) &mdash; pas qu'elles échouent, mais qu'elles s'enchaînent. Second moment du cycle de la classe administrative intermédiaire</li>
 </ul>
 <p><strong>RN</strong> :</p>
@@ -413,7 +439,7 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 <p><strong>Distinction sous-phase / saillant</strong> :</p>
 <ul>
   <li>La <strong>guerre sociale</strong> et la <strong>restauration</strong> sont à la fois sous-phase (durée) et saillant (moment).</li>
-  <li>L'<strong>ancien régime</strong> est une sous-phase <strong>seulement</strong> &mdash; l'entrée est marquée par le saillant <em>Remontrance</em>, la sortie par le saillant <em>Éclatement de l'AR</em>. Pas de saillant nommé « Ancien Régime ».</li>
+  <li>L'<strong>ancien régime</strong> est une sous-phase <strong>seulement</strong> &mdash; l'entrée est marquée par le saillant <em>Saturation fiscale</em> (critère Lanoue de Suremain), la sortie par le saillant <em>Éclatement de l'AR</em>. Pas de saillant nommé « Ancien Régime ». La <em>Remontrance</em>, quand elle a lieu, est généralement simultanée ou quasi-simultanée à la Saturation fiscale &mdash; mais c'est une manifestation politique contingente qui peut être absente.</li>
   <li>L'<strong>émergence de l'IR</strong> est un saillant (le moment) ; l'<strong>impérialisme revanchard</strong> est la sous-phase (la durée).</li>
 </ul>
 <p><strong>Les saillants sont des marqueurs, pas des conditions.</strong> Une nation peut être factuellement à une phase donnée par le niveau combiné de ses deux moteurs <strong>sans en présenter tous les saillants typiques</strong>. Trois configurations rendent les saillants politiques (monarques) absents alors que la phase est bien celle que les moteurs indiquent :</p>
@@ -462,6 +488,7 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
   <li><strong>Insuffisance interne</strong> (conflit lignager, blocage culturel) → prolongement par bouclage</li>
   <li><strong>Correction d'échelle</strong> (perte territoriale) → accélération</li>
   <li><strong>Exutoire</strong> (projection extérieure prolongée &mdash; empire, colonies, mercenariat) → prolongement de la phase en cours tant que l'exutoire fonctionne</li>
+  <li><strong>Désynchronisation par tutelle prolongée</strong> (gel de l'appareil central par un suzerain étranger pendant que l'homogénéisation culturelle continue par canaux non-étatiques) → prolongement de la phase oligarchique pendant la tutelle + compression de la phase absolutiste post-tutelle. Cf. §Les deux moteurs et <code>perturbations.md</code> §4.6.</li>
 </ul>
 <p>Une phase qui dure significativement plus longtemps que la norme est portée par un exutoire actif ou par une insuffisance interne ; une phase plus courte que la norme a subi un choc qui l'a accélérée.</p>
 <hr>
@@ -563,5 +590,12 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
     <div class="footer-brand">Historionomie</div>
     <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
 </footer>
+<script>
+document.addEventListener('click', function(e) {
+    var dd = document.getElementById('nation-dropdown');
+    if (!dd) return;
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+});
+</script>
 </body>
 </html>

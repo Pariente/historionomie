@@ -671,10 +671,25 @@ body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; col
 /* --- Navbar (= docs/index.html) --- */
 .navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
 .navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
-.navbar-links { display:flex; gap:1.5rem; }
+.navbar-links { display:flex; gap:1.5rem; align-items:center; }
 .navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
 .navbar-links a:hover { color:#8B7355; }
 .navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* Nations dropdown */
+.nav-dropdown { position:relative; display:inline-block; }
+.nav-dropdown-toggle { background:none; border:1px solid #e0dcd4; cursor:pointer; font-family:inherit; font-size:0.85rem; color:#555; padding:0.25rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.4rem; line-height:1.4; }
+.nav-dropdown-toggle:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-toggle .nav-dropdown-current { font-weight:600; color:#8B7355; }
+.nav-dropdown-toggle .nav-dropdown-caret { font-size:0.7rem; color:#8B7355; }
+.nav-dropdown-menu { display:none; position:absolute; top:calc(100% + 4px); right:0; min-width:220px; max-height:65vh; overflow-y:auto; background:#fff; border:1px solid #e0dcd4; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.08); z-index:200; padding:0.3rem 0; }
+.nav-dropdown.open .nav-dropdown-menu { display:block; }
+.nav-dropdown-menu a { display:flex; align-items:center; gap:0.55rem; padding:0.4rem 0.95rem; font-size:0.85rem; color:#555; text-decoration:none; font-weight:500; border-bottom:none; }
+.nav-dropdown-menu a:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-menu a.active { color:#8B7355; font-weight:700; background:#faf6f0; }
+.nav-flag { display:inline-block; width:18px; height:18px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,0.12); }
+.nav-flag img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.nav-nation-label { line-height:1.2; }
 
 /* --- Layout --- */
 .page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
@@ -813,13 +828,81 @@ footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:c
 """
 
 
+def discover_nations():
+    """Return [(html_filename, display_name, flag_path)] for each mapped nation, sorted alphabetically."""
+    import unicodedata
+    result = []
+    if not NATIONS.is_dir():
+        return result
+    for entry in sorted(NATIONS.iterdir()):
+        parcours_path = entry / "parcours.md"
+        if not parcours_path.is_file():
+            continue
+        display = entry.name
+        flag = ""
+        try:
+            with parcours_path.open("r", encoding="utf-8") as f:
+                for i, line in enumerate(f):
+                    if i > 40:
+                        break
+                    s = line.strip()
+                    m = re.match(r"-\s*nation\s*:\s*(.+)", s)
+                    if m:
+                        display = m.group(1).strip()
+                    m = re.match(r"-\s*flag\s*:\s*(.+)", s)
+                    if m:
+                        flag = m.group(1).strip()
+        except OSError:
+            pass
+        result.append((entry.name + ".html", display, flag))
+
+    def sort_key(item):
+        nfkd = unicodedata.normalize("NFKD", item[1])
+        return "".join(c for c in nfkd if not unicodedata.combining(c)).casefold()
+
+    result.sort(key=sort_key)
+    return result
+
+
+def _flag_circle_html(flag_path):
+    if not flag_path:
+        return '<span class="nav-flag"></span>'
+    return (
+        f'<span class="nav-flag"><img src="{escape(flag_path)}" alt="" '
+        f'onerror="this.parentElement.style.display=\'none\'"></span>'
+    )
+
+
+def build_nations_dropdown():
+    """Build the navbar nations dropdown. No active nation (methodology pages)."""
+    nations = discover_nations()
+    if not nations:
+        return ""
+    items = "".join(
+        f'<a href="{fname}">{_flag_circle_html(flag)}'
+        f'<span class="nav-nation-label">{escape(label)}</span></a>'
+        for fname, label, flag in nations
+    )
+    return (
+        '<div class="nav-dropdown" id="nation-dropdown">'
+        '<button type="button" class="nav-dropdown-toggle" '
+        "onclick=\"document.getElementById('nation-dropdown').classList.toggle('open')\">"
+        '<span class="nav-dropdown-current">Parcours</span>'
+        '<span class="nav-dropdown-caret">&#9662;</span>'
+        '</button>'
+        f'<div class="nav-dropdown-menu">{items}</div>'
+        '</div>'
+    )
+
+
 def build_topnav():
     """Build top navbar matching docs/index.html."""
-    return """<nav class="navbar">
+    return f"""<nav class="navbar">
 <a class="navbar-brand" href="index.html">Historionomie</a>
 <div class="navbar-links">
     <a href="index.html">Accueil</a>
     <a class="active" href="parcours.html">Méthodologie</a>
+    {build_nations_dropdown()}
 </div>
 </nav>"""
 
@@ -873,6 +956,13 @@ def build_page(title, topnav, sidebar, toc, body, examples='', phase_color='#8B7
     <div class="footer-brand">Historionomie</div>
     <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
 </footer>
+<script>
+document.addEventListener('click', function(e) {{
+    var dd = document.getElementById('nation-dropdown');
+    if (!dd) return;
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+}});
+</script>
 </body>
 </html>"""
 

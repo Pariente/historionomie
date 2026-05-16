@@ -384,6 +384,86 @@ def format_year(year, approx=False):
     return f"{prefix}{year}"
 
 
+def discover_nations(nations_dir: str) -> list:
+    """Return [(html_filename, display_name, flag_path)] for each mapped nation, sorted alphabetically."""
+    import unicodedata
+    result = []
+    if not os.path.isdir(nations_dir):
+        return result
+    for dirname in sorted(os.listdir(nations_dir)):
+        parcours_path = os.path.join(nations_dir, dirname, "parcours.md")
+        if not os.path.isfile(parcours_path):
+            continue
+        display = dirname
+        flag = ""
+        try:
+            with open(parcours_path, "r", encoding="utf-8") as f:
+                for i, line in enumerate(f):
+                    if i > 40:
+                        break
+                    s = line.strip()
+                    m = re.match(r"-\s*nation\s*:\s*(.+)", s)
+                    if m:
+                        display = m.group(1).strip()
+                    m = re.match(r"-\s*flag\s*:\s*(.+)", s)
+                    if m:
+                        flag = m.group(1).strip()
+        except OSError:
+            pass
+        result.append((dirname + ".html", display, flag))
+
+    def sort_key(item):
+        nfkd = unicodedata.normalize("NFKD", item[1])
+        return "".join(c for c in nfkd if not unicodedata.combining(c)).casefold()
+
+    result.sort(key=sort_key)
+    return result
+
+
+def _flag_circle_html(flag_path: str, size_class: str = "") -> str:
+    if not flag_path:
+        return f'<span class="nav-flag {size_class}"></span>'
+    return (
+        f'<span class="nav-flag {size_class}">'
+        f'<img src="{escape_html(flag_path)}" alt="" '
+        f'onerror="this.parentElement.style.display=\'none\'"></span>'
+    )
+
+
+def build_nations_dropdown(current_html: str = None) -> str:
+    """Build the navbar nations dropdown. current_html is e.g. 'france.html' or None."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    nations = discover_nations(os.path.join(script_dir, "references", "nations"))
+    if not nations:
+        return ""
+    current_label = "Parcours"
+    current_flag = ""
+    for fname, label, flag in nations:
+        if fname == current_html:
+            current_label = label
+            current_flag = flag
+            break
+    items = []
+    for fname, label, flag in nations:
+        cls = ' class="active"' if fname == current_html else ""
+        items.append(
+            f'<a href="{fname}"{cls}>{_flag_circle_html(flag)}'
+            f'<span class="nav-nation-label">{escape_html(label)}</span></a>'
+        )
+    trigger_flag = _flag_circle_html(current_flag, "nav-flag-trigger") if current_flag else ""
+    return (
+        '<div class="nav-dropdown" id="nation-dropdown">'
+        '<button type="button" class="nav-dropdown-toggle" '
+        "onclick=\"document.getElementById('nation-dropdown').classList.toggle('open')\">"
+        f'{trigger_flag}'
+        f'<span class="nav-dropdown-current">{escape_html(current_label)}</span>'
+        '<span class="nav-dropdown-caret">&#9662;</span>'
+        "</button>"
+        f'<div class="nav-dropdown-menu">{"".join(items)}</div>'
+        "</div>"
+    )
+
+
 def generate_html(data: dict) -> str:
     elements = data["elements"]
 
@@ -790,6 +870,8 @@ def generate_html(data: dict) -> str:
     phase_count = len([e for e in elements if e["kind"] == "phase"])
     total_duration = timeline_end - timeline_start
 
+    nations_dropdown_html = build_nations_dropdown(data.get("_html_filename"))
+
     html = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -807,9 +889,25 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
 /* Navbar */
 .navbar {{ background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }}
 .navbar-brand {{ font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }}
-.navbar-links {{ display:flex; gap:1.2rem; }}
+.navbar-links {{ display:flex; gap:1.2rem; align-items:center; }}
 .navbar-links a {{ text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }}
 .navbar-links a:hover {{ color:#333; }}
+
+/* Nations dropdown */
+.nav-dropdown {{ position:relative; display:inline-block; }}
+.nav-dropdown-toggle {{ background:none; border:1px solid #e0dcd4; cursor:pointer; font-family:inherit; font-size:0.85rem; color:#555; padding:0.25rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.4rem; line-height:1.4; }}
+.nav-dropdown-toggle:hover {{ background:#f5f1eb; color:#1a1c1c; }}
+.nav-dropdown-toggle .nav-dropdown-current {{ font-weight:600; color:#8B7355; }}
+.nav-dropdown-toggle .nav-dropdown-caret {{ font-size:0.7rem; color:#8B7355; }}
+.nav-dropdown-menu {{ display:none; position:absolute; top:calc(100% + 4px); left:0; min-width:220px; max-height:65vh; overflow-y:auto; background:#fff; border:1px solid #e0dcd4; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.08); z-index:200; padding:0.3rem 0; }}
+.nav-dropdown.open .nav-dropdown-menu {{ display:block; }}
+.nav-dropdown-menu a {{ display:flex; align-items:center; gap:0.55rem; padding:0.4rem 0.95rem; font-size:0.85rem; color:#555; text-decoration:none; font-weight:500; }}
+.nav-dropdown-menu a:hover {{ background:#f5f1eb; color:#1a1c1c; }}
+.nav-dropdown-menu a.active {{ color:#8B7355; font-weight:700; background:#faf6f0; }}
+.nav-flag {{ display:inline-block; width:18px; height:18px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,0.12); }}
+.nav-flag img {{ width:100%; height:100%; object-fit:cover; object-position:center; display:block; }}
+.nav-flag-trigger {{ width:16px; height:16px; }}
+.nav-nation-label {{ line-height:1.2; }}
 
 /* Header — briefing style */
 .header {{ background:#f9f9f9; padding:1.5rem 2rem 0; }}
@@ -1045,6 +1143,7 @@ body {{ font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; backgroun
     <div class="navbar-links">
         <a href="index.html">Accueil</a>
         <a href="index.html#wiki">Wiki</a>
+        {nations_dropdown_html}
     </div>
 </nav>
 
@@ -1451,6 +1550,12 @@ function closeDetail() {{
 }}
 
 document.addEventListener('keydown', e => {{ if (e.key === 'Escape') closeDetail(); }});
+
+document.addEventListener('click', function(e) {{
+    var dd = document.getElementById('nation-dropdown');
+    if (!dd) return;
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+}});
 </script>
 </body>
 </html>"""
@@ -1488,12 +1593,14 @@ def main():
 
     data = parse_parcours(args.input)
 
-    html = generate_html(data)
-
     output_path = args.output
     if output_path is None:
         base = os.path.splitext(os.path.basename(args.input))[0]
         output_path = base + ".html"
+
+    data["_html_filename"] = os.path.basename(output_path)
+
+    html = generate_html(data)
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html)
