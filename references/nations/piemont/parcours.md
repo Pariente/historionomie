@@ -134,17 +134,6 @@
 - confidence: high
 - summary: Louis d'Achaïe (r. 1402-1418), dernier prince de la branche, meurt sans héritiers le 11 décembre 1418, ayant désigné Amédée VIII comme successeur. La succession est pacifique — pas de résistance des élites piémontaises. L'ordre féodal piémontais (185 ans de princes d'Achaïe) s'éteint littéralement. Les conditions du pacte sont réunies : homogénéité des élites piémontaises (parlamenta, focaticum, 185 ans de brassage) + Amédée VIII, nouveau en Piémont, doit négocier l'intégration avec les élites locales.
 
-
-#### Saillant : Pacte oligarchique — Amédée VIII et les Statuta Sabaudiae
-- type: saillant
-- start: 1430
-- figure: Amédée VIII
-- subtitle: Statuta Sabaudiae
-- title: Pacte oligarchique
-- confidence: medium
-- summary: Les Statuta Sabaudiae (1430) satisfont les trois éléments structurels du PO : codification formelle (350+ articles en 5 livres), caractère collectif (négociation avec les élites cismontaines), moment de faiblesse (Amédée VIII nouveau en Piémont après l'extinction de la branche Savoie-Achaïe en 1418). Cas mixte **chemin B (dominant) + A** — codification de l'exercice (droit, administration, fiscalité, justice ducale) avec composante de succession (réunification dynastique entérinée).
-- description: Les Statuta Sabaudiae satisfont les trois éléments structurels du PO. (1) Codification formelle : 350+ articles en 5 livres couvrant le droit, l'administration, la fiscalité et la justice. (2) Caractère collectif : Amédée VIII, nouveau en Piémont après la réunification de 1418, a besoin de la coopération des élites et doit négocier — les élites obtiennent le Principat de Piémont (1424), les capitula préservant leurs particularités, et des assemblées cismontaines séparées en échange de l'acceptation de l'autorité ducale. (3) Moment de faiblesse : Amédée VIII doit négocier l'intégration, et la condition d'homogénéité est réunie (185 ans de parlamenta sous les Achaïe). C'est un cas mixte **chemin B + A** : la composante B (dominante) codifie l'exercice du pouvoir ducal sur un large périmètre (droit, fiscalité, administration, justice), tandis que la composante A se manifeste dans la légitimation de la réunification dynastique post-extinction Achaïe — Amédée VIII fixe les règles de transmission de l'ensemble réunifié. Preuve que le test discriminant oligarchique est passé : après 1430, le pouvoir survit aux successions sans fragmentation, même sous des ducs faibles. Structurellement comparable au Trastámara espagnol (1369-1371, mixte A+B) et à la Bohême de Kutná Hora (1311, mixte A+B), où une situation de succession irrégulière oblige à codifier en même temps l'accès et l'exercice.
-
 ---
 
 ## Phase : Oligarchique (1er cycle)
@@ -168,6 +157,16 @@
 - title: Essor oligarchique
 - summary: Le système institutionnel d'Amédée VIII fonctionne mais s'affaiblit sous une succession de ducs faibles. L'État ne se fragmente pas — les institutions (Camera dei Conti, Statuta, Principat de Piémont) survivent — mais le pouvoir central s'érode, rendant le duché vulnérable à l'invasion française.
 - description: **Marqueurs de l'essor oligarchique présents** : fisc central coexistant avec des fiscs locaux (Camera dei Conti gère les revenus ducaux, mais les communautés conservent leurs propres bases fiscales). Codification du droit (Statuta Sabaudiae, 1430). Assemblées des élites (assemblées cismontaines et ultramontaines). Administration permanente (châtellenies, Principat). **Marqueurs absents** : pas d'armée permanente soldée, pas de polarisation visible des élites, pas de faction prébendière/patrimoniale identifiable. L'essor est LENT — les ducs faibles post-Amédée VIII (Louis, Amédée IX, Philibert Ier, Charles Ier, Charles II, Philippe II, Philibert II, Charles III) ne projettent pas la puissance vers l'extérieur et ne renforcent pas l'État central. C'est un essor par inertie institutionnelle, pas par dynamisme. **Pourquoi l'essor ne débouche pas sur une polarisation** : parce qu'il n'y a pas assez d'énergie pour que les factions se cristallisent. Le duc est trop faible pour provoquer des résistances, et il n'y a pas d'expansion extérieure pour créer des tensions de redistribution. Le système stagne dans un équilibre mou — jusqu'à ce que le choc exogène (invasion française, 1536) le détruise.
+
+#### Saillant : Pacte oligarchique — Amédée VIII et les Statuta Sabaudiae
+- type: saillant
+- start: 1430
+- figure: Amédée VIII
+- subtitle: Statuta Sabaudiae
+- title: Pacte oligarchique
+- confidence: medium
+- summary: Les Statuta Sabaudiae (1430) satisfont les trois éléments structurels du PO : codification formelle (350+ articles en 5 livres), caractère collectif (négociation avec les élites cismontaines), moment de faiblesse (Amédée VIII nouveau en Piémont après l'extinction de la branche Savoie-Achaïe en 1418). Cas mixte **chemin B (dominant) + A** — codification de l'exercice (droit, administration, fiscalité, justice ducale) avec composante de succession (réunification dynastique entérinée).
+- description: Les Statuta Sabaudiae satisfont les trois éléments structurels du PO. (1) Codification formelle : 350+ articles en 5 livres couvrant le droit, l'administration, la fiscalité et la justice. (2) Caractère collectif : Amédée VIII, nouveau en Piémont après la réunification de 1418, a besoin de la coopération des élites et doit négocier — les élites obtiennent le Principat de Piémont (1424), les capitula préservant leurs particularités, et des assemblées cismontaines séparées en échange de l'acceptation de l'autorité ducale. (3) Moment de faiblesse : Amédée VIII doit négocier l'intégration, et la condition d'homogénéité est réunie (185 ans de parlamenta sous les Achaïe). C'est un cas mixte **chemin B + A** : la composante B (dominante) codifie l'exercice du pouvoir ducal sur un large périmètre (droit, fiscalité, administration, justice), tandis que la composante A se manifeste dans la légitimation de la réunification dynastique post-extinction Achaïe — Amédée VIII fixe les règles de transmission de l'ensemble réunifié. Preuve que le test discriminant oligarchique est passé : après 1430, le pouvoir survit aux successions sans fragmentation, même sous des ducs faibles. Structurellement comparable au Trastámara espagnol (1369-1371, mixte A+B) et à la Bohême de Kutná Hora (1311, mixte A+B), où une situation de succession irrégulière oblige à codifier en même temps l'accès et l'exercice.
 
 #### Saillant : 1er monarque oligarchique — Amédée VIII
 - type: saillant
@@ -255,16 +254,6 @@
 - confidence: medium
 - summary: Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l'expansionniste agressif qui porte l'énergie oligarchique à son maximum. Saisie du marquisat de Saluzzo (1588, confirmée par le Traité de Lyon 1601 en échange de la Bresse, du Bugey et du Gex), tentatives sur Genève, alternance d'alliances française et espagnole, guerres constantes. Tant que l'expansion fournit un exutoire, la polarisation interne est retardée.
 - description: Charles Emmanuel Ier est l'analogue piémontais de François Ier pour la France ou de Foscari pour Venise : la figure de puissance maximale pendant la phase oligarchique, avant que la polarisation ne commence. Son énergie expansionniste (Saluzzo, Genève, guerres permanentes) canalise les tensions des élites vers l'extérieur. Le Traité de Lyon (1601) est emblématique : il obtient Saluzzo (côté italien) mais cède la Bresse, le Bugey et le Gex (côté français) — c'est la clarification d'échelle qui confirme le choix piémontais d'Emmanuel Philibert.
-
-#### Saillant : Fin de l'expansion — Mort de Charles Emmanuel Ier
-- type: saillant
-- start: 1630
-- figure: Charles Emmanuel Ier
-- subtitle: Fin de l'expansion
-- title: Fin de l'expansion
-- confidence: medium
-- alternatives: Traité de Cherasco (1631) ou Traité de Lyon (1601) comme fin de l'expansion agressive. Charles Emmanuel Ier étant mort en 1630 et la posture devenant défensive après lui, 1630 est retenu.
-- summary: Charles Emmanuel Ier (r. 1580-1630), « Testa di Fuoco », est l'expansionniste agressif : saisie du marquisat de Saluzzo (1588, confirmée par le Traité de Lyon 1601 en échange de la Bresse, du Bugey et du Gex), tentatives sur Genève, alternance d'alliances française et espagnole. Après sa mort (1630), la posture devient défensive et les tensions internes prennent le relais.
 
 ### Subphase : Polarisation des élites (1630-1637)
 - type: subphase
@@ -360,14 +349,6 @@
 - confidence: high
 - summary: Charles Emmanuel III (r. 1730-1773) porte le Piémont-Sardaigne au sommet de sa puissance. Guerre de Succession de Pologne : occupe Milan, victoire de Guastalla (1734), gains de Novara et Tortona (Traité de Vienne 1738). Guerre de Succession d'Autriche : victoire éclatante d'Assietta (1747), récupération de la Savoie et de Nice, gain de Vigevano (Traité d'Aix-la-Chapelle 1748). Prestige militaire maximal.
 - description: Charles Emmanuel III est l'analogue piémontais de Louis XIV, d'Élisabeth Ière ou de Morosini — la figure qui incarne l'apogée du prestige absolutiste. L'armée piémontaise, réformée par son père, est à son maximum d'efficacité. La victoire d'Assietta (19 juillet 1747) — 7 400 Piémontais repoussant 27 000 Franco-Espagnols avec des pertes de 5 000 contre 200 — entre dans la légende militaire piémontaise. Après Aix-la-Chapelle (1748), Charles Emmanuel III opte pour la neutralité dans la guerre de Sept Ans, et le système entre progressivement en sédimentation.
-
-#### Saillant : Fin de l'expansion — Aix-la-Chapelle
-- type: saillant
-- start: 1748
-- subtitle: Aix-la-Chapelle
-- title: Fin de l'expansion
-- confidence: high
-- summary: Le Traité d'Aix-la-Chapelle (1748) entérine les derniers gains territoriaux piémontais (Vigevano) et marque la fin définitive de l'expansion. Après cette date, le système entre en Ancien Régime.
 
 ### Subphase : Ancien Régime (1748-1796)
 - type: subphase

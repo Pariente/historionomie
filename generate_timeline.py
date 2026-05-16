@@ -157,7 +157,11 @@ def parse_fields(lines: list) -> dict:
             current_val = [m.group(2)]
         elif current_key is not None and line.startswith("  "):
             current_val.append(line.strip())
-        # other lines (blank, ---) just ignored
+        elif current_key is not None and line.strip() == "":
+            # blank line within a continuation block: preserve as paragraph break marker
+            if current_val and current_val[-1] != "":
+                current_val.append("")
+        # other lines (---, etc.) just ignored
 
     if current_key is not None:
         fields[current_key] = "\n".join(current_val).strip()
@@ -255,12 +259,12 @@ SAILLANT_ICONS = {
     "Pacte oligarchique": "gavel",
     "1er monarque oligarchique": "stars",
     "Acmé oligarchique": "terrain",
-    "Fin de l'expansion": "block",
     "Guerre sociale": "local_fire_department",
     "1er monarque absolu": "crown",
     "1er monarque absolu (du reboot)": "crown",
     "Dernière grande révolte oligarchique": "whatshot",
     "Acmé absolutiste": "terrain",
+    "Saturation fiscale": "payments",
     "Éclatement de l'AR": "flash_on",
     "Expérience parlementaire": "account_balance",
     "Phase aiguë": "skull",
@@ -298,6 +302,16 @@ PERTURBATION_MECHANISM_ICONS = {
     "choc_exogene": "bolt",
     "insuffisance_interne": "close",
     "correction_echelle": "compress",
+    "exutoire": "outbound",
+}
+
+# Effect-based icons (preferred): the icon shows what happens to the parcours,
+# aligning with the effect-based color encoding.
+PERTURBATION_EFFECT_ICONS = {
+    "prolongement": "open_in_full",
+    "acceleration": "fast_forward",
+    "avortement": "block",
+    "reboot": "restart_alt",
 }
 
 PHASE_LABELS = {
@@ -327,6 +341,34 @@ def very_light_hex(hex_color: str) -> str:
 
 def escape_html(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;").replace("'", "&#39;")
+
+
+def md_bold_to_html(s: str) -> str:
+    """Convert **bold** markdown to <strong> HTML tags, and paragraph breaks to </p><p>."""
+    out = re.sub(r'\*\*([^*]+?)\*\*', r'<strong>\1</strong>', s)
+    # Paragraph breaks (blank line in source) → </p><p>
+    # Single line breaks within a paragraph → space (markdown default)
+    out = re.sub(r'\n\s*\n', '__PARABREAK__', out)
+    out = out.replace('\n', ' ')
+    out = out.replace('__PARABREAK__', '</p><p>')
+    return out
+
+
+def escape_html_with_bold(s: str) -> str:
+    """Escape HTML, then convert **bold** markdown to <strong> tags."""
+    escaped = escape_html(s)
+    return re.sub(r'\*\*([^*]+?)\*\*', r'<strong>\1</strong>', escaped)
+
+
+def escape_html_tooltip_with_bold(s: str) -> str:
+    """Escape HTML for tooltip use, then convert **bold** markdown to escaped <strong> tags."""
+    escaped = escape_html(s)
+    return re.sub(r'\*\*([^*]+?)\*\*', r'&lt;strong&gt;\1&lt;/strong&gt;', escaped)
+
+
+# Fields containing prose where **bold** markdown should be processed for the JS detail panel.
+RICH_TEXT_FIELDS = {"summary", "description", "deviation", "alternatives",
+                    "resolution", "resolution_conditions", "avortement", "note"}
 
 
 def escape_js_string(s: str) -> str:
@@ -403,7 +445,10 @@ def generate_html(data: dict) -> str:
                      "figure", "confidence", "alternatives", "step", "deviation",
                      "typical_duration", "perturbation_type", "affected_motor", "note",
                      "resolution", "resolution_conditions", "avortement"]:
-            parts.append(f"'{key}':'{escape_js_string(str(e.get(key, '')))}'")
+            val = str(e.get(key, ''))
+            if key in RICH_TEXT_FIELDS:
+                val = md_bold_to_html(val)
+            parts.append(f"'{key}':'{escape_js_string(val)}'")
         parts.append(f"'start':{e['start'] if e['start'] is not None else 'null'}")
         parts.append(f"'end':{e['end'] if e['end'] is not None else 'null'}")
         parts.append(f"'start_approx':{'true' if e['start_approx'] else 'false'}")
@@ -434,9 +479,9 @@ def generate_html(data: dict) -> str:
                 parts = parts[:-1]
             dot_html = f'<span style="width:10px;height:10px;border-radius:50%;background:{phase_color};flex-shrink:0;"></span>' if phase_color else ""
             if len(parts) >= 2:
-                h_html = f'<span class="insight-title">{dot_html}{escape_html(parts[0])}</span><span class="insight-desc">{escape_html(parts[1])}</span>'
+                h_html = f'<span class="insight-title">{dot_html}{escape_html_with_bold(parts[0])}</span><span class="insight-desc">{escape_html_with_bold(parts[1])}</span>'
             else:
-                h_html = f'<span class="insight-desc">{escape_html(h)}</span>'
+                h_html = f'<span class="insight-desc">{escape_html_with_bold(h)}</span>'
             if img_url:
                 icon_html = f'<img class="insight-img" src="{img_url}" alt="">'
             else:
@@ -508,7 +553,7 @@ def generate_html(data: dict) -> str:
             pin_icon = NARROW_PHASE_ICONS.get(p["phase"], "circle")
             narrow_indicator = f"""
         <div class="narrow-indicator" style="left:{mid_pct:.4f}%; top:-8px;"
-            data-tooltip="&lt;strong&gt;{escape_html(p['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html(p['summary'])}"
+            data-tooltip="&lt;strong&gt;{escape_html(p['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html_tooltip_with_bold(p['summary'])}"
             onclick="showDetail({elements.index(p)})">
             <div class="narrow-indicator-pin" style="background:{color};">
                 <span class="material-icons">{pin_icon}</span>
@@ -519,7 +564,7 @@ def generate_html(data: dict) -> str:
         phase_bands_html += f"""{narrow_indicator}
         <div class="phase-band{narrow_class}" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;
             background:{bg};border-top:3px {border_style} {color};border-right:1px solid #fff;"
-            data-tooltip="&lt;strong&gt;{escape_html(p['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html(p['summary'])}"
+            data-tooltip="&lt;strong&gt;{escape_html(p['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html_tooltip_with_bold(p['summary'])}"
             onclick="showDetail({elements.index(p)})">
             {"" if is_narrow else f'<div class="phase-band-label" style="color:{color};">{escape_html(phase_display)}</div>'}
             {"" if is_narrow else f'<div class="phase-band-dates">{start_label} — {end_label}</div>'}
@@ -547,7 +592,7 @@ def generate_html(data: dict) -> str:
         subphase_bands_html += f"""
         <div class="subphase-band{narrow_class}" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;
             background:{bg};border-bottom:2px solid {color};"
-            data-tooltip="&lt;strong&gt;{escape_html(sp['title'])}{step_label}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html(sp['summary'])}"
+            data-tooltip="&lt;strong&gt;{escape_html(sp['title'])}{step_label}&lt;/strong&gt; ({start_label} — {end_label})&#10;{escape_html_tooltip_with_bold(sp['summary'])}"
             onclick="showDetail({elements.index(sp)})">
             <span class="subphase-label">{escape_html(sp['title'])}{step_label}</span>
         </div>"""
@@ -567,7 +612,7 @@ def generate_html(data: dict) -> str:
         pt_narrow = " narrow" if width_pct < 4 else ""
         perturbation_html += f"""
         <div class="perturbation-overlay{pt_narrow}" style="left:{left_pct:.4f}%;width:{width_pct:.4f}%;"
-            data-tooltip="&lt;strong&gt;{escape_html(pt['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;Type : {escape_html(ptype)}&#10;{escape_html(pt['summary'])}"
+            data-tooltip="&lt;strong&gt;{escape_html(pt['title'])}&lt;/strong&gt; ({start_label} — {end_label})&#10;Type : {escape_html(ptype)}&#10;{escape_html_tooltip_with_bold(pt['summary'])}"
             onclick="showDetail({elements.index(pt)})">
             <span class="perturbation-label">{escape_html(pt['title'])}</span>
         </div>"""
@@ -607,10 +652,10 @@ def generate_html(data: dict) -> str:
             if has_marges:
                 noyau_tooltip = f"&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;{escape_html(noyau_fmt)}"
                 marges_fmt = f"~{d['marges'] * 1000:,}".replace(",", " ") + " km²"
-                marges_line = escape_html(f"{marges_fmt} — {label_text}") if label_text else escape_html(marges_fmt)
+                marges_line = escape_html_tooltip_with_bold(f"{marges_fmt} — {label_text}") if label_text else escape_html(marges_fmt)
                 marges_tooltip = f"&lt;strong&gt;Marges&lt;/strong&gt;&#10;{marges_line}"
             else:
-                noyau_line = escape_html(f"{noyau_fmt} — {label_text}") if label_text else escape_html(noyau_fmt)
+                noyau_line = escape_html_tooltip_with_bold(f"{noyau_fmt} — {label_text}") if label_text else escape_html(noyau_fmt)
                 noyau_tooltip = f"&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;{noyau_line}"
 
             # Stacked chart — noyau + marges
@@ -672,10 +717,7 @@ def generate_html(data: dict) -> str:
         mechanism = s.get("mechanism", "")
         effect = s.get("effect", "")
         bg_color = PERTURBATION_EFFECT_COLORS.get(effect, "#c0392b")
-        if effect == "reboot":
-            icon_name = "restart_alt"
-        else:
-            icon_name = PERTURBATION_MECHANISM_ICONS.get(mechanism, SAILLANT_ICON_AVORTEMENT)
+        icon_name = PERTURBATION_EFFECT_ICONS.get(effect, SAILLANT_ICON_AVORTEMENT)
         icon_class = 'material-symbols-outlined' if icon_name in ('crown', 'skull', 'swords') else 'material-icons'
         frise_subtitle = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else "")
         tooltip_label = s["subtitle"] if s["subtitle"] else (s["figure"] if s["figure"] else s["title"])
@@ -684,7 +726,7 @@ def generate_html(data: dict) -> str:
         area_saillants_html += f"""
         <div class="area-saillant-group" style="left:{left_pct:.4f}%;">
             <div class="saillant-marker perturbation-marker" style="background:{bg_color};"
-                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html(s['summary'])}"
+                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html_tooltip_with_bold(s['summary'])}"
                 onclick="showDetail({elements.index(s)})">
                 <span class="{icon_class}">{icon_name}</span>
             </div>
@@ -706,12 +748,10 @@ def generate_html(data: dict) -> str:
         effect = s.get("effect", "")
 
         if is_perturbation:
-            # New system: color from effect, icon from mechanism (with reboot override)
+            # Both color and icon from effect — the visual encoding describes
+            # what happens to the parcours, not what triggered the perturbation.
             bg_color = PERTURBATION_EFFECT_COLORS.get(effect, "#c0392b")
-            if effect == "reboot":
-                icon_name = "restart_alt"
-            else:
-                icon_name = PERTURBATION_MECHANISM_ICONS.get(mechanism, SAILLANT_ICON_AVORTEMENT)
+            icon_name = PERTURBATION_EFFECT_ICONS.get(effect, SAILLANT_ICON_AVORTEMENT)
             marker_class = " perturbation-marker"
         else:
             bg_color = color
@@ -722,7 +762,7 @@ def generate_html(data: dict) -> str:
         saillant_markers_html += f"""
         <div class="saillant-group" style="left:{left_pct:.4f}%;">
             <div class="saillant-marker{marker_class}" style="background:{bg_color};"
-                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html(s['summary'])}"
+                data-tooltip="&lt;strong&gt;{escape_html(s['title'])}&lt;/strong&gt;&#10;{escape_html(tooltip_label)} ({start_label})&#10;{escape_html_tooltip_with_bold(s['summary'])}"
                 onclick="showDetail({elements.index(s)})">
                 <span class="{icon_class}">{icon_name}</span>
             </div>
@@ -1372,7 +1412,7 @@ function showDetail(idx) {{
     if (e.description) {{
         html += `<section>`;
         html += `<span class="detail-section-label">Analyse détaillée</span>`;
-        html += `<div class="detail-description">${{e.description}}</div>`;
+        html += `<div class="detail-description"><p>${{e.description}}</p></div>`;
         html += `</section>`;
     }}
 

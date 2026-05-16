@@ -170,7 +170,9 @@ Note opérationnelle : la bascule oligarchique se mesure à partir de la **crise
 
 ## Sous-phase 2 : Bascule oligarchique
 
-La bascule oligarchique est la sous-phase courte (souvent quelques années) pendant laquelle le pacte oligarchique se conclut. Elle s'enclenche quand les conditions du pacte convergent.
+La bascule oligarchique est la sous-phase terminale de la phase féodale, courte (souvent quelques années), pendant laquelle se prépare et se conclut le pacte oligarchique. Elle s'enclenche quand les conditions du pacte convergent. Sa borne de fin est le **Pacte oligarchique** lui-même — qui par convention de filing est le **premier saillant de la phase oligarchique** (sous-phase Essor oligarchique), pas le dernier de la féodale. Voir `phase_oligarchique.md` pour le détail du saillant Pacte oligarchique (conditions, mécanismes, marqueurs, cas limites).
+
+Pattern systémique : la bascule oligarchique est, pour la transition féodale → oligarchique, l'équivalent structurel de ce que la guerre sociale est pour la transition oligarchique → absolutiste, ou de ce que l'ancien régime est pour la transition absolutiste → RN. Dans chaque cas, la sous-phase terminale d'une phase porte le nom du processus de transition, et le saillant qui clôt cette transition est filé sous la phase d'après.
 
 ### Conditions simultanées du pacte
 
@@ -194,44 +196,6 @@ Quand l'échelle du royaume **augmente** (conquête, union dynastique), le seuil
 
 La sécession n'est pas un échec du Parcours — c'est un mécanisme de correction d'échelle. Le Parcours ajuste sa taille pour correspondre au niveau réel d'homogénéité.
 
-### Saillant : Pacte oligarchique
-
-Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la structure de l'exécutif. C'est la résolution de la phase féodale — le passage à la phase oligarchique.
-
-#### Critère universel : la garantie collective de la stabilité aux successions
-
-**Ce que le pacte doit produire structurellement** : la stabilité du régime aux successions est désormais garantie collectivement par les élites, et le pouvoir survit au remplacement du suzerain. C'est ce qui fait basculer le test discriminant féodal/oligarchique. Le pacte est l'acte par lequel les oligarques fournissent cette garantie.
-
-Trois éléments structurels caractérisent l'acte :
-
-1. **Codification** — un acte formel, daté, qui fixe des règles (et non une accumulation coutumière diffuse).
-2. **Caractère collectif** — issu d'une assemblée des oligarques (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers, etc.), non d'une décision unilatérale du souverain.
-3. **Moment de faiblesse** — opéré quand les deux conditions (homogénéité + faiblesse) convergent.
-
-#### Deux mécanismes pour produire la stabilité aux successions
-
-Le critère universel est le résultat — la stabilité aux successions est désormais garantie collectivement — pas le contenu spécifique de la codification. Empiriquement, le corpus présente deux mécanismes distincts qui produisent ce même résultat, parfois successivement dans la même nation.
-
-Premier mécanisme : **codification de la transmission**. L'acte fixe explicitement qui hérite ou comment l'élection se fait. Le pouvoir survit aux successions parce que la transmission est verrouillée.
-
-Second mécanisme : **codification de l'exercice du pouvoir**. L'acte ne traite pas de la succession mais encadre l'exercice du pouvoir (consentement aux nominations, contrôle des finances, des campagnes militaires) au point que le pouvoir cesse d'être le patrimoine personnel du suzerain. Le pouvoir survit aux successions parce que le souverain est devenu accessoire à un appareil institutionnel collégial. Test empirique : un souverain peut être déposé, écarté ou remplacé sans que l'État ne vacille.
-
-Les deux mécanismes sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux successivement (verrouillage de la transmission d'abord, complété ensuite par la maturation institutionnelle qui encadre l'exercice), mais c'est la première codification produisant la stabilité aux successions qui ouvre la phase oligarchique.
-
-#### Distinction avec les créations institutionnelles unilatérales
-
-Le pacte ne se confond pas avec la simple existence d'institutions centrales. Un roi fort peut créer un parlement, une chambre des comptes, une cour de justice, une administration bureaucratique : ces créations sont des outils du roi. Le test décisif n'est pas « les structures existent-elles ? » mais « les oligarques se les sont-ils collectivement appropriées par un acte de codification qui contraint le souverain ? ».
-
-Une institution créée à la discrétion du roi peut être abolie à sa discrétion. Une institution issue d'un pacte oligarchique ne peut plus l'être : elle a sa propre légitimité indépendante du souverain.
-
-#### Cas limite : « suzerain collectif »
-
-Dans certaines configurations (cités-États, ligues), le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul, président élu) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les responsabilités de l'exécutif qui sont codifiées collectivement, mais la forme est institutionnelle.
-
-#### Cas du PO probable mais textuellement invisible
-
-Dans certaines sociétés à faible production documentaire ou dont les sources écrites sont tardives et hostiles, l'acte de codification lui-même peut ne pas être attesté. Si les **effets structurels** d'un PO sont reconnaissables (le pouvoir survit désormais aux successions, la dynastie est stable, le fisc et l'armée sont permanents et survivent au souverain, la nation est reconnue par ses voisins comme une entité stable), on peut conclure à un **PO structurellement probable mais textuellement invisible**. Précédent méthodologique : l'absence de trace écrite d'un acte de codification dans une société à faible production documentaire ne réfute pas l'existence du pacte, dès lors que ses effets structurels sont attestés.
-
 ### Marqueurs forts de la transition vers l'oligarchique
 
 - Codification juridique et légale du rapport entre les oligarques/grands féodaux et l'exécutif
@@ -239,6 +203,8 @@ Dans certaines sociétés à faible production documentaire ou dont les sources 
 - Les oligarques s'organisent en une classe structurée avec des intérêts communs
 - Rébellions des grands féodaux imposant des contraintes à l'exécutif
 - Premiers signes d'institutions qui survivent au remplacement du souverain
+
+Pour la définition complète du saillant Pacte oligarchique (critère universel, deux mécanismes, distinction avec les créations institutionnelles unilatérales, cas du suzerain collectif, cas du PO probable mais textuellement invisible), voir `phase_oligarchique.md` §Saillant : Pacte oligarchique.
 
 ---
 

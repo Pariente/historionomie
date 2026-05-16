@@ -138,7 +138,7 @@
 - start: 1314
 - end: 1328
 - title: Bascule oligarchique
-- summary: La mort de Philippe le Bel ouvre une crise dynastique majeure : ses trois fils meurent sans héritier mâle entre 1314 et 1328, forçant les grands du royaume à codifier explicitement les règles de succession par la loi salique en 1317, ce qui marque le passage d'un pouvoir fondé sur la personne du suzerain à un pouvoir régi par des règles institutionnelles.
+- summary: La mort de Philippe le Bel ouvre une crise dynastique majeure : ses trois fils meurent sans héritier mâle entre 1314 et 1328, forçant les grands du royaume à codifier explicitement les règles de succession par la loi salique en 1317, ce qui marque le passage d'un pouvoir fondé sur la personne du suzerain à un pouvoir régi par des règles institutionnelles. (Le PO est filé sous phase oligarchique en 1er saillant d'essor selon la nouvelle convention.)
 - description: La bascule oligarchique française s'étend sur quatorze ans de crise dynastique. Les trois fils de Philippe le Bel — Louis X, Philippe V et Charles IV — meurent successivement sans héritier mâle, laissant le pouvoir royal flotter. Les grands du royaume saisissent l'occasion pour purger les créatures de l'ancien régime (Enguerrand de Marigny est pendu en 1315) et imposer la codification des règles de succession. En 1317, Philippe V convoque les États généraux pour faire valider la loi salique. Ce passage d'une tradition dynastique implicite à une règle constitutionnelle explicite, adoptée collectivement par les élites, est exactement ce qui définit le pacte oligarchique : les seigneurs se perçoivent désormais comme un groupe capable de fixer les règles du jeu politique.
 
 #### Saillant : Crise féodale
@@ -150,16 +150,6 @@
 - confidence: high
 - summary: Les trois fils de Philippe le Bel — Louis X, Philippe V et Charles IV — meurent successivement sans héritier mâle entre 1314 et 1328, créant un vide de pouvoir qui permet aux grands du royaume de reprendre l'initiative politique.
 - description: La succession de Philippe le Bel illustre de manière exemplaire la fragilité du pouvoir féodal personnel. Louis X règne de 1314 à 1316, Philippe V de 1316 à 1322 et Charles IV de 1322 à 1328 — trois règnes brefs, sans héritier mâle direct, qui laissent le pouvoir royal flotter. Les grands du royaume saisissent l'occasion pour purger les créatures de l'ancien régime : Enguerrand de Marigny, principal ministre et homme de confiance de Philippe le Bel, est pendu en 1315 dans ce qui constitue une véritable réaction oligarchique contre le pouvoir personnel du roi défunt. Cette période de transition, où le pouvoir revient de facto aux grands vassaux et aux princes du sang, prépare le terrain pour la codification des règles de succession qui fondera le nouveau régime.
-
-#### Saillant : Pacte oligarchique
-- type: saillant
-- start: 1317
-- figure: Philippe V
-- subtitle: Loi salique
-- title: Pacte oligarchique
-- confidence: medium
-- summary: En 1317, Philippe V convoque les États généraux pour légitimer sa propre succession et fait codifier la loi salique, transformant pour la première fois les règles de succession d'une tradition dynastique en une loi explicite adoptée par la communauté politique. Cas paradigmatique du **chemin A** (codification de la succession) du pacte oligarchique.
-- description: Le pacte oligarchique français se cristallise en 1317, lorsque Philippe V convoque les États généraux pour faire valider son accession au trône. C'est un moment charnière au sens de Deblonde : pour la première fois, les règles de succession sont explicitement codifiées par l'assemblée des grands du royaume, et non simplement transmises par la tradition dynastique du co-couronnement capétien. La loi salique, qui exclut les femmes de la succession au trône, est formalisée comme règle constitutionnelle du royaume. Les trois éléments structurels du PO sont satisfaits : codification formelle (loi écrite), caractère collectif (États généraux comme assemblée des oligarques), moment de faiblesse (crise dynastique post-Capétiens, trois fils de Philippe le Bel morts sans héritier mâle entre 1314 et 1328). C'est le cas paradigmatique du **chemin A** dans le corpus : ce qui est codifié est la règle de succession elle-même, et le pouvoir survit aux successions parce que la transmission est désormais verrouillée par une règle collective. Le contraste avec l'Angleterre (Ordonnances de 1311, chemin B) est instructif — l'Angleterre garantit la stabilité aux successions en encadrant l'exercice du pouvoir ; la France la garantit en verrouillant l'accès. Les deux chemins produisent le même résultat structurel : le pouvoir royal est désormais encadré par des règles que les élites ont collectivement adoptées.
 
 ---
 
@@ -186,6 +176,16 @@
 - title: Essor oligarchique
 - summary: Philippe VI, premier roi dont la légitimité repose sur les règles codifiées de la loi salique, inaugure l'essor oligarchique. Jean II le Bon achète le Dauphiné en 1349, première extension du domaine royal hors du périmètre capétien. L'essor est ralenti dès 1346 par le premier reflux de la Guerre de Cent Ans.
 - description: Philippe VI accède au trône en 1328 en vertu de la loi salique fraîchement codifiée, inaugurant la branche des Valois dans un cadre où le pouvoir royal est désormais encadré par des normes institutionnelles. Il hérite d'un appareil étatique solide — baillis, Parlement de Paris, administration fiscale — et l'essor s'amorce immédiatement avec l'achat du Dauphiné en 1349, première extension du domaine royal hors du périmètre capétien historique. Mais la prétention d'Édouard III au trône de France déclenche en 1337 la Guerre de Cent Ans, qui frappe l'essor dès 1346 avec le désastre de Crécy.
+
+#### Saillant : Pacte oligarchique
+- type: saillant
+- start: 1317
+- figure: Philippe V
+- subtitle: Loi salique
+- title: Pacte oligarchique
+- confidence: medium
+- summary: En 1317, Philippe V convoque les États généraux pour légitimer sa propre succession et fait codifier la loi salique, transformant pour la première fois les règles de succession d'une tradition dynastique en une loi explicite adoptée par la communauté politique. Cas paradigmatique du **chemin A** (codification de la succession) du pacte oligarchique.
+- description: Le pacte oligarchique français se cristallise en 1317, lorsque Philippe V convoque les États généraux pour faire valider son accession au trône. C'est un moment charnière au sens de Deblonde : pour la première fois, les règles de succession sont explicitement codifiées par l'assemblée des grands du royaume, et non simplement transmises par la tradition dynastique du co-couronnement capétien. La loi salique, qui exclut les femmes de la succession au trône, est formalisée comme règle constitutionnelle du royaume. Les trois éléments structurels du PO sont satisfaits : codification formelle (loi écrite), caractère collectif (États généraux comme assemblée des oligarques), moment de faiblesse (crise dynastique post-Capétiens, trois fils de Philippe le Bel morts sans héritier mâle entre 1314 et 1328). C'est le cas paradigmatique du **chemin A** dans le corpus : ce qui est codifié est la règle de succession elle-même, et le pouvoir survit aux successions parce que la transmission est désormais verrouillée par une règle collective. Le contraste avec l'Angleterre (Ordonnances de 1311, chemin B) est instructif — l'Angleterre garantit la stabilité aux successions en encadrant l'exercice du pouvoir ; la France la garantit en verrouillant l'accès. Les deux chemins produisent le même résultat structurel : le pouvoir royal est désormais encadré par des règles que les élites ont collectivement adoptées.
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
@@ -321,15 +321,6 @@
 - summary: François Ier porte la monarchie oligarchique française à son apogée avec le Concordat de Bologne en 1516, qui lui donne le contrôle des nominations ecclésiastiques, la victoire de Marignan et l'éclat de la cour Renaissance, avant que la capture de Pavie en 1525 n'amorce le reflux.
 - description: François Ier règne de 1515 à 1547 et représente le point culminant de la phase oligarchique française. Le Concordat de Bologne, signé avec le pape en 1516, lui confère le contrôle des nominations ecclésiastiques dans tout le royaume, un pouvoir considérable qui renforce l'autorité royale sur l'Église de France. La victoire de Marignan en 1515 et les Guerres d'Italie projettent le prestige français à l'échelle européenne, tandis que la cour Renaissance — Chambord, Fontainebleau, l'invitation de Léonard de Vinci — fait de la France un centre culturel de premier plan. Cependant, la capture du roi à Pavie par Charles Quint en 1525 marque un premier coup d'arrêt, et après la mort de François Ier puis celle d'Henri II en 1559, les tensions religieuses accumulées pendant l'apogée explosent dans un reflux post-pic classique.
 
-#### Saillant : Fin de l'expansion
-- type: saillant
-- start: 1559
-- subtitle: Cateau-Cambrésis
-- title: Fin de l'expansion
-- confidence: high
-- summary: Le Traité de Cateau-Cambrésis met fin aux Guerres d'Italie en 1559 et la mort accidentelle d'Henri II la même année ferme la soupape extérieure qui canalisait les tensions entre élites, laissant le clivage religieux devenir le conflit dominant.
-- description: Le Traité de Cateau-Cambrésis, signé en 1559, contraint la France à renoncer définitivement à ses ambitions italiennes, mettant fin à un demi-siècle de guerres de projection qui avaient permis de canaliser les énergies de la noblesse vers l'extérieur. La même année, Henri II meurt accidentellement lors d'un tournoi, laissant le trône à ses fils — François II, Charles IX puis Henri III — qui sont jeunes, faibles ou contestés. Sans la soupape des guerres extérieures et sans un roi fort capable de maintenir l'équilibre entre les factions, le clivage religieux entre catholiques et protestants, qui couvait depuis les années 1530, devient le conflit dominant et structure la polarisation des élites qui mène à la guerre sociale.
-
 ### Subphase : Polarisation des élites
 - type: subphase
 - phase: oligarchique
@@ -435,6 +426,15 @@
 - summary: Le Traité d'Utrecht (1713) solde la Guerre de Succession d'Espagne par des pertes territoriales (Terre-Neuve, Acadie) et la ruine des finances royales. La mort de Louis XIV en 1715 clôt l'ère de l'expansion absolutiste et accélère l'entrée dans l'Ancien Régime.
 - description: Le Traité d'Utrecht de 1713 met fin à la Guerre de Succession d'Espagne dans des conditions défavorables pour la France, qui perd Terre-Neuve, l'Acadie et cède des territoires aux Pays-Bas. Les finances royales sont ruinées après des décennies de guerres coûteuses. La mort de Louis XIV en 1715 clôt symboliquement l'ère de l'expansion absolutiste. La Régence de Philippe d'Orléans desserre immédiatement l'étau du pouvoir central, et le système de Law (1716-1720), tentative audacieuse de résoudre la crise financière par l'innovation monétaire, s'effondre spectaculairement, révélant la fragilité structurelle du système. Le parallèle avec l'Espagne est direct : Utrecht accélère les deux Parcours en fermant la soupape d'expansion.
 
+#### Saillant : Saturation fiscale
+- type: saillant
+- start: 1710
+- subtitle: Échec du dixième de Desmaretz
+- title: Saturation fiscale
+- confidence: medium
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué à la machine fiscale française au sens strict — incapacité POLITIQUE d'augmenter l'impôt ordinaire par voie d'élargissement durable, due au caractère inacceptable dans la société d'AR (privilèges fiscaux figés du clergé et de la noblesse, particularismes parlementaires). Datation **1710** : Desmaretz institue le **dixième** (édit d'octobre 1710), impôt sur le revenu universel sur tous les ordres y compris clergé et noblesse, conçu pour faire face aux dépenses de la Guerre de Succession d'Espagne. L'impôt fonctionne nominalement pendant la guerre mais ne peut être maintenu sous l'inacceptabilité sociale — abolition partielle en 1717, transformations successives en vingtième puis cinquantième sous Louis XV qui le rendent symbolique. C'est le premier marqueur net où l'État absolutiste français bute sur l'incapacité d'établir une fiscalité égalitaire durable. La capitation de 1695 (Pontchartrain) avait été le précédent — universelle en principe mais largement neutralisée par rachat des privilégiés. Pattern simultané à la Remontrance (Polysynodie 1715, mêmes corps intermédiaires aristocratiques tentant de reprendre la main à la mort de Louis XIV). La séquence ultérieure de Réformes échouées (Machault 1749, Maupeou 1771, Turgot 1774, Necker, Calonne, Brienne 1786-1788) confirme l'incapacité structurelle. **Datations alternatives écartées** : 1648 (banqueroute Mazarin) est crise conjoncturelle de sous-phase d'absolutisation, pas saturation — Colbert élargit substantiellement après 1661 ; 1715 (mort Louis XIV + système de Law) est événement de surendettement réactif à la saturation déjà installée, pas la saturation elle-même. Les séries Dincecco montrent un plateau continu fin XVIIᵉ-1789, cohérent avec une saturation politique structurelle dès 1710.
+- summary: Le dixième institué par Desmaretz en octobre 1710 — impôt universel sur tous les ordres y compris clergé et noblesse — est la première tentative française d'élargissement structurel de l'assiette par fiscalité égalitaire. Bloqué par l'inacceptabilité sociale dès la fin de la Guerre de Succession d'Espagne : abolition partielle en 1717, transformations successives qui le vident de sa substance sous Louis XV. La capitation de 1695, universelle en principe, avait déjà été neutralisée par rachat des privilégiés. La monarchie absolue française ne parvient plus à élargir durablement son assiette ordinaire ; tout ce qui suit est expédient (vénalité, anticipations, manipulations monétaires). Polysynodie 1715 = manifestation politique simultanée de la Remontrance. Séquence ultérieure de Réformes échouées (Machault, Maupeou, Turgot, Necker, Calonne, Brienne) confirme l'incapacité.
+
 #### Saillant : Remontrance
 - type: saillant
 - start: 1715
@@ -442,7 +442,8 @@
 - subtitle: Polysynodie
 - title: Remontrance
 - confidence: high
-- summary: À la mort de Louis XIV (1715), le Régent Philippe d'Orléans remplace les ministres par des conseils aristocratiques (Polysynodie). La haute noblesse tente de reprendre des prérogatives à l'exécutif centralisé. L'expérience échoue en 1718 — la dernière voie de réforme institutionnelle est fermée, l'AR commence.
+- alternatives: Précède de 5 ans la borne canonique d'entrée en AR — quasi-simultanéité avec la Saturation fiscale (~1710, échec du dixième de Desmaretz). Pattern canonique des monarchies à corps intermédiaires externes : la même classe aristocratique qui a bloqué la fiscalité égalitaire tente, à la mort du souverain, de reprendre les prérogatives gouvernementales par voie conciliaire.
+- summary: À la mort de Louis XIV (1715), le Régent Philippe d'Orléans remplace les ministres par des conseils aristocratiques (Polysynodie). La haute noblesse tente de reprendre des prérogatives à l'exécutif centralisé. L'expérience échoue en 1718 — la dernière voie de réforme institutionnelle est fermée. Manifestation politique quasi-simultanée à la Saturation fiscale (~1710, dixième Desmaretz vidé), portée par les mêmes corps qui ont bloqué l'élargissement fiscal égalitaire.
 - description: La Polysynodie (1715-1718) est la remontrance française. À la mort de Louis XIV, le Régent Philippe d'Orléans remplace le système ministériel centralisé par sept conseils (polysynodie) dominés par la haute noblesse — Conseil de Régence, Conseil de guerre, Conseil de finances, Conseil de marine, Conseil du dedans, Conseil de conscience, Conseil de commerce. C'est la tentative de la classe aristocratique de reprendre des prérogatives au pouvoir absolu en redistribuant le pouvoir exécutif. L'expérience échoue en 1718 : les conseils sont dissous et le système ministériel est rétabli. C'est structurellement identique à l'Apology of the Commons anglaise (1604), à la Correzione vénitienne (1761), et à la Polysynodie bavaroise (1848) : la classe administrative/aristocratique tente de prendre des prérogatives au monarque absolu et échoue. L'échec marque le passage de l'impérialisme absolutiste à l'Ancien Régime.
 
 ### Subphase : Ancien Régime

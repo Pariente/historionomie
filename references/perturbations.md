@@ -8,22 +8,24 @@ Le Parcours de construction nationale peut être perturbé par des événements 
 
 ### Les 4 effets
 
-| Effet | Ce qui arrive | Couleur (frise) |
-|---|---|---|
-| **Prolongement** | La phase en cours est rallongée | 🟠 orange |
-| **Accélération** | La phase en cours est raccourcie | 🔵 bleu |
-| **Avortement** | Le passage à la phase suivante est bloqué | 🔴 rouge |
-| **Reboot** | Redémarrage de la phase ou retour à une phase antérieure | 🟤 cramoisi |
+| Effet | Ce qui arrive | Couleur (frise) | Icône (frise) |
+|---|---|---|---|
+| **Prolongement** | La phase en cours est rallongée | 🟠 orange | `open_in_full` |
+| **Accélération** | La phase en cours est raccourcie | 🔵 bleu | `fast_forward` |
+| **Avortement** | Le passage à la phase suivante est bloqué | 🔴 rouge | `block` |
+| **Reboot** | Redémarrage de la phase ou retour à une phase antérieure | 🟤 cramoisi | `restart_alt` |
+
+L'icône **et** la couleur encodent l'effet — le visuel décrit ce qui arrive au Parcours, pas ce qui a déclenché la perturbation. Le mécanisme est lisible dans le tooltip et la description, pas dans l'icône.
 
 ### Les 5 mécanismes (4 ponctuels + 1 état continu)
 
-| Mécanisme | Type | Icône (frise) |
-|---|---|---|
-| **Choc d'hétérogénéité** | Ponctuel ou graduel | `open_in_full` |
-| **Choc exogène** | Ponctuel | `bolt` |
-| **Insuffisance interne** | Ponctuel | `close` |
-| **Correction d'échelle** | Ponctuel ou graduel | `compress` |
-| **Exutoire** | **Continu** | *(pas de marqueur — implicite)* |
+| Mécanisme | Type |
+|---|---|
+| **Choc d'hétérogénéité** | Ponctuel ou graduel |
+| **Choc exogène** | Ponctuel |
+| **Insuffisance interne** | Ponctuel |
+| **Correction d'échelle** | Ponctuel ou graduel |
+| **Exutoire** | Continu (ou borné — cf. exutoire intérieur sicilien) |
 
 ### Couplage mécanisme × effet
 
@@ -54,12 +56,13 @@ Le canal non territorial existe aussi : modernisation administrative imposée pa
 
 ### Affichage sur la frise
 
-Les perturbations sont affichées comme des **losanges** (◆) pour les distinguer des saillants normaux (●). La **couleur** encode l'effet, l'**icône** encode le mécanisme.
+Les perturbations sont affichées comme des **losanges** (◆) pour les distinguer des saillants normaux (●). La **couleur et l'icône** encodent toutes les deux l'effet — le visuel décrit ce qui arrive au Parcours, le mécanisme est dans le tooltip et la description.
 
 - **Perturbation ponctuelle** (cas par défaut) : losange à la date de l'événement, codé `type: saillant` + `perturbation: true` + `mechanism` + `effect`.
 - **Perturbation étendue** (cas rare) : losange pour le déclencheur + bande hachurée pour la durée, codé `type: perturbation` + `start` + `end` + `mechanism` + `effect`.
-- **Exutoire** : pas de marqueur (mentionné dans la description de la durée de la phase).
-- **Fin de l'exutoire** : saillant canonique « fin de l'expansion » (●, couleur de la phase — pas un losange de perturbation).
+- **Exutoire extérieur continu** (empire, colonies, mercenariat) : pas de marqueur (mentionné dans la description de la durée de la phase) — la dimension séculaire rend un marqueur ponctuel inadéquat.
+- **Exutoire intérieur borné** (frontière agraire interne, cf. Sicile 1590-1650) : marqué comme perturbation étendue avec `mechanism: exutoire` + `effect: prolongement` + bande hachurée. La durée bornée et la nouveauté théorique justifient la matérialisation visuelle.
+- **Fin de l'exutoire** (extérieur) : saillant canonique « fin de l'expansion » (●, couleur de la phase — pas un losange de perturbation).
 
 #### Règle par défaut : perturbation ponctuelle
 
@@ -223,6 +226,30 @@ Cas typique de la fin d'exutoire militaire : perte d'une possession continentale
 **Timing : phase active vs phase parlementaire**.
 - *Pendant une phase active* (féodale, oligarchique, absolutiste) : l'exutoire colonial ou militaire prolonge la phase en cours en absorbant les tensions internes.
 - *Après la RN* (phase parlementaire) : l'exutoire colonial ne perturbe pas le Parcours, car la phase parlementaire est l'aboutissement et n'a pas de transition à venir à retarder.
+
+### 4.6 Désynchronisation par tutelle prolongée (état continu)
+
+**Définition** : état durable où l'appareil central d'une nation est gelé par un suzerain étranger pendant que le moteur culturel (langue, religion, écoles juridiques, identité urbaine, classes professionnelles) continue de progresser via des canaux non-étatiques. Pas un événement ponctuel — comme l'exutoire, c'est une **condition** du Parcours, qui n'a pas de marqueur losange propre sur la frise.
+
+**Effet structurel double** :
+- *Pendant la tutelle* : prolongement de la phase oligarchique. Le test discriminant absolutiste ne peut pas être passé tant que l'appareil central est tenu hors de la nation, et la polarisation factionnelle endogène est gelée parce que l'enjeu (le contrôle du centre) n'est pas localement disponible.
+- *À la levée de la tutelle* : compression de la phase absolutiste. La levée se fait typiquement par 1er monarque absolu imposé exogènement (figure dynastique installée par traité, puissance étrangère arbitrante). L'État central rattrape rapidement sur un terrain culturellement déjà mûr — sédimentation sociologique des élites, articulation intellectuelle d'un programme prébendier, classe administrative déjà constituée. L'absolutisation institutionnalise une réalité sociale en place plutôt que de la construire.
+
+**Distinction avec l'exutoire** : l'exutoire détourne l'énergie élitaire vers l'extérieur (commerce, conquêtes, colonies, mercenariat) pour prolonger une phase oligarchique active. La désynchronisation par tutelle, au contraire, **gèle activement l'appareil central** — la phase oligarchique se prolonge non par projection mais par blocage. Les deux mécanismes peuvent coexister (Sicile combine exutoire intérieur baronnial 1590-1650 + tutelle hispanique-austrienne).
+
+**Conditions d'activation** :
+1. Tutelle par un suzerain étranger qui retient l'appareil central
+2. Homogénéité culturelle progressant de façon autonome de l'État (densité urbaine, tradition vernaculaire, unité religieuse, classe professionnelle structurée)
+3. Souvent : petite/moyenne nation finalement absorbée avant maturation complète de l'AR
+
+**Cas-types** :
+- *Milan* (post-1535) : oligarchique cycle 2 sous tutelle hispanique-austrienne 261 ans, absolutiste cycle 2 post-napoléonien 52 ans. La fiche Milan note explicitement « le moteur étatique tourne au ralenti sans souverain autochtone ».
+- *Sicile* (post-1296) : oligarchique 382 ans sous tutelles successives, absolutiste fragmenté à partir de 1678 avec maturation rapide.
+- *Naples* : oligarchique 290 ans, absolutiste 124 ans cumulé.
+
+**Contre-exemple** : Espagne pré-Nueva Planta (oligarchique 345 ans, absolutiste 217 ans non compressé). La monarchie composite Habsbourg n'est pas une tutelle étrangère mais une centralisation incomplète endogène ; la castillanisation est state-driven ; l'absence d'absorption laisse la phase absolutiste courir sa pleine durée. Le mécanisme suppose tutelle exogène + culture progressant autonomement de l'État, pas une simple lenteur de centralisation.
+
+**Affichage sur la frise** : pas de marqueur losange propre. La condition est mentionnée dans la description des phases oligarchique (prolongement) et absolutiste (compression) concernées. La durée des phases reflète le mécanisme, comme pour l'exutoire.
 
 ---
 

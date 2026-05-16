@@ -38,8 +38,8 @@ Les données sur lesquelles je m'appuyais étaient **effectivement incomplètes*
 
 | Point empirique | Ce que disent les sources sérieuses | Implication pour C | Implication pour D |
 |---|---|---|---|
-| Fiscalité centrale 1339-1528 | État cède les recettes aux créanciers ; Banco capture l'appareil fiscal | **Réfute forme 3** | **Confirme verrouillage** |
-| Bureaucratie distincte du patriciat | N'existe pas ; instabilité politique empêche la construction bureaucratique | Réfute forme 3 et ENP | Confirme verrouillage |
+| Fiscalité centrale 1339-1528 | État cède les recettes aux créanciers ; Banco capture l'appareil fiscal | **Réfute l'absolutisme informel factionnel** | **Confirme verrouillage** |
+| Bureaucratie distincte du patriciat | N'existe pas ; instabilité politique empêche la construction bureaucratique | Réfute l'absolutisme informel factionnel et l'ENP | Confirme verrouillage |
 | Administration des colonies | État cède la souveraineté à Banco/Mahona (privé-collectif) | Réfute exutoire absolutiste | Confirme absence d'exutoire étatique |
 | Nature du régime post-1528 | « Aristocratic republic » (Greif), « government of creditors » (Winter), « financial oligarchy » | Réfute parlementaire contrariée | Confirme AR oligarchique |
 | Fonction de la Banque | « Isolated the economy from the polity » ; « limited the scope of doges to turn into signori » | Réfute appareil fiscal absolutiste | **Identifie le mécanisme du verrouillage** |
@@ -77,7 +77,7 @@ Le Banco est incontestablement :
 - Qui **survit aux rotations politiques** (40+ révoltes entre 1407 et 1526, le Banco continue)
 - Qui **dispose d'une infrastructure administrative permanente** (Protettori, Procuratori, Magistrato del Sale, personnel technique)
 
-À ce niveau, il coche les cases du cadre théorique pour un **« cadre central institutionnel durable avec magistrature permanente, conseils, administration parallèle, fiscalité centrale »** — ce qui est précisément le critère de la forme 3.
+À ce niveau, il coche les cases du cadre théorique pour un **« cadre central institutionnel durable avec magistrature permanente, conseils, administration parallèle, fiscalité centrale »** — ce qui est précisément le critère d'un absolutisme informel factionnel.
 
 Si on s'arrêtait là, Martin aurait raison et ma lecture serait à revoir.
 
@@ -102,7 +102,7 @@ Voilà le point théorique important :
 
 **Le Banco est un appareil central en forme, mais pas en propriété**. Ses fonctions ressemblent à celles d'un État absolutiste ; sa gouvernance est celle d'un consortium privé-collectif d'oligarques. Les deux ne se confondent pas.
 
-Dans une forme 3 canonique, la rotation chaotique entre lignages concurrents se fait **pour le contrôle de l'appareil central**, parce que celui qui tient l'appareil a un pouvoir absolutisant sur les autres. À Gênes, la rotation Fregoso/Adorno au dogat **ne donne pas** ce pouvoir absolutisant — parce que l'appareil fiscal-central (le Banco) est possédé collectivement par les oligarques, y compris ceux qui sont en exil à tel moment. Tenir le dogat ne donne pas le contrôle du Banco. C'est précisément pour ça que l'instabilité politique ne se résout jamais en absolutisation : le vrai pouvoir central est institutionnellement verrouillé par les oligarques collectivement, pas capturable par une faction.
+Dans un absolutisme informel factionnel canonique, la rotation chaotique entre lignages concurrents se fait **pour le contrôle de l'appareil central**, parce que celui qui tient l'appareil a un pouvoir absolutisant sur les autres. À Gênes, la rotation Fregoso/Adorno au dogat **ne donne pas** ce pouvoir absolutisant — parce que l'appareil fiscal-central (le Banco) est possédé collectivement par les oligarques, y compris ceux qui sont en exil à tel moment. Tenir le dogat ne donne pas le contrôle du Banco. C'est précisément pour ça que l'instabilité politique ne se résout jamais en absolutisation : le vrai pouvoir central est institutionnellement verrouillé par les oligarques collectivement, pas capturable par une faction.
 
 ### Le point théorique plus profond
 

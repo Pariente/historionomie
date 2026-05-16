@@ -126,19 +126,8 @@
 - start: 1282
 - end: 1293
 - title: Bascule oligarchique
-- summary: Après l'élimination des Hohenstaufen (Conradin 1268), tentative de réconciliation (Paix du cardinal Latino, 1280) qui échoue. **Crise féodale terminale** : le système consulaire-podestariat ne peut plus contenir le factionnalisme magnatial. **Bascule oligarchique resserrée** : Secondo Popolo (juin 1282) instituant les Priori delle Arti, Ordinamenti di Giustizia (1293) codifiant l'exclusion des magnats — ~11 ans, dans la norme.
+- summary: Après l'élimination des Hohenstaufen (Conradin 1268), tentative de réconciliation (Paix du cardinal Latino, 1280) qui échoue. **Crise féodale terminale** : le système consulaire-podestariat ne peut plus contenir le factionnalisme magnatial. **Bascule oligarchique resserrée** : Secondo Popolo (juin 1282) instituant les Priori delle Arti, Ordinamenti di Giustizia (1293) codifiant l'exclusion des magnats — ~11 ans, dans la norme. (Le PO est filé sous phase oligarchique en 1er saillant d'essor selon la nouvelle convention.)
 - description: La crise féodale terminale florentine prend la forme d'un échec institutionnel : la Paix du cardinal Latino (1280), qui institue les Quatorze Buoni Uomini (8 guelfes + 6 gibelins) pour réconcilier les factions, échoue rapidement. Le système consulaire-podestariat est incapable de garantir la stabilité face au factionnalisme magnatial. Le Secondo Popolo de juin 1282 marque la bascule en créant les **Priori delle Arti** — magistrature collégiale élue parmi les sept Arts majeurs avec mandat de deux mois — qui devient l'embryon de la Signoria. Les Ordinamenti de Giano della Bella (18 janvier 1293) achèvent la bascule en codifiant l'exclusion des magnats des magistratures, en instituant le Gonfalonier de Justice comme chef du popolo armé, et en formalisant la rotation des charges sur listes d'inscrits aux Arts.
-
-#### Saillant : Pacte oligarchique — Ordinamenti di Giustizia
-
-- type: saillant
-- start: 1293
-- figure: Giano della Bella
-- subtitle: Ordonnances de Justice
-- title: Pacte oligarchique
-- confidence: high
-- summary: Acte formel daté (18 janvier 1293), passé par les Conseils, qui satisfait les trois éléments structurels du PO : codification, caractère collectif, moment de faiblesse. Cas paradigmatique de **chemin B** en suzerain collectif — codification de l'exercice du pouvoir (rotation des magistratures, mandat de 2 mois, tirage au sort sur listes d'inscrits aux Arts) en l'absence de souverain personnel à transmettre.
-- description: Les Ordonnances de Justice sont un cas paradigmatique de **chemin B** dans la configuration du suzerain collectif typique des cités-États. Ce qui est codifié n'est pas une règle de succession (il n'y a pas de souverain personnel à transmettre — le pouvoir est collégial dès l'origine), mais les règles d'exercice : exclusion des magnats des magistratures, obligation pour les non-magnats de s'immatriculer dans un Art pour accéder aux charges, institution du Gonfalonier de Justice comme chef du popolo armé contre les magnats, rotation des Priori (mandat de 2 mois). Les trois éléments structurels du PO sont satisfaits : codification formelle, caractère collectif (validation par les Conseils), moment de faiblesse (échec de la Paix Latino, ascendance temporaire des Arts mineurs). Test empirique : après 1293, le cadre survit à de nombreuses crises politiques sans rupture institutionnelle formelle jusqu'en 1532. Structurellement analogue aux pactes communaux italiens (Compagna Communis génoise 1097, commune milanaise 1097, abolition co-régence vénitienne 1032).
 
 ---
 
@@ -165,6 +154,17 @@
 - title: Essor oligarchique
 - summary: Construction institutionnelle dense (Esecutore degli Ordinamenti 1306, magistratures, Parte Guelfa). Projection bancaire internationale (Bardi, Peruzzi, Acciaiuoli financent papes et rois), extension du contado (Pistoia 1331). L'exutoire bancaire absorbe l'énergie élitaire et retarde la polarisation interne.
 
+#### Saillant : Pacte oligarchique — Ordinamenti di Giustizia
+
+- type: saillant
+- start: 1293
+- figure: Giano della Bella
+- subtitle: Ordonnances de Justice
+- title: Pacte oligarchique
+- confidence: high
+- summary: Acte formel daté (18 janvier 1293), passé par les Conseils, qui satisfait les trois éléments structurels du PO : codification, caractère collectif, moment de faiblesse. Cas paradigmatique de **chemin B** en suzerain collectif — codification de l'exercice du pouvoir (rotation des magistratures, mandat de 2 mois, tirage au sort sur listes d'inscrits aux Arts) en l'absence de souverain personnel à transmettre.
+- description: Les Ordonnances de Justice sont un cas paradigmatique de **chemin B** dans la configuration du suzerain collectif typique des cités-États. Ce qui est codifié n'est pas une règle de succession (il n'y a pas de souverain personnel à transmettre — le pouvoir est collégial dès l'origine), mais les règles d'exercice : exclusion des magnats des magistratures, obligation pour les non-magnats de s'immatriculer dans un Art pour accéder aux charges, institution du Gonfalonier de Justice comme chef du popolo armé contre les magnats, rotation des Priori (mandat de 2 mois). Les trois éléments structurels du PO sont satisfaits : codification formelle, caractère collectif (validation par les Conseils), moment de faiblesse (échec de la Paix Latino, ascendance temporaire des Arts mineurs). Test empirique : après 1293, le cadre survit à de nombreuses crises politiques sans rupture institutionnelle formelle jusqu'en 1532. Structurellement analogue aux pactes communaux italiens (Compagna Communis génoise 1097, commune milanaise 1097, abolition co-régence vénitienne 1032).
+
 #### Saillant : 1er monarque oligarchique — Signoria post-Ordinamenti
 
 - type: saillant
@@ -187,15 +187,6 @@
 - alternatives: Position précoce dans la phase (~0.32), atypique par rapport à Venise (Foscari ~0.64), Gênes (Meloria ~0.93). S'explique par le caractère bref de l'exutoire (60 ans actif) — saturation rapide d'une projection bancaire intense plutôt que d'un empire territorial durable.
 - summary: Pic combinant projection bancaire européenne (financement papes + Edward III), florin d'or comme référence monétaire continentale, prestige diplomatique, et premiers fruits de la Renaissance précoce (Dante, Giotto). L'acmé est portée par un exutoire bancaire et non territorial — d'où sa position précoce dans la phase et sa saturation rapide.
 - description: L'acmé oligarchique florentine est portée par les compagnies bancaires Bardi, Peruzzi, Acciaiuoli, qui dominent le crédit européen au début du XIVe siècle — financement de la curie pontificale d'Avignon, prêts massifs à Edward III d'Angleterre pour la guerre de Cent Ans, comptoirs commerciaux de Bruges à Constantinople. Le florin d'or (frappe 1252, 3,536 g d'or fin) devient la référence monétaire européenne. L'acmé sature avec la double crise du défaut anglais d'Edward III (1339) et la Peste noire (1348) qui suit. La position de l'acmé dans la phase (~0.32) est précoce par rapport au corpus des cités-États italiennes, mais s'explique par la nature de l'exutoire : Florence n'a pas d'empire territorial à conquérir et à digérer, seulement un réseau bancaire international qui sature rapidement.
-
-#### Saillant : Fin de l'expansion — faillite Bardi-Peruzzi
-
-- type: saillant
-- start: 1339
-- subtitle: Défaut anglais et faillite bancaire
-- title: Fin de l'expansion
-- confidence: high
-- summary: Le défaut d'Edward III (1339) entraîne la faillite des Bardi (1346) et Peruzzi (1343), qui clôt l'exutoire bancaire international florentin. L'énergie élitaire ne se projette plus à l'extérieur ; la polarisation interne peut commencer. La Peste de 1348 (50-60% de mortalité) achève de redéfinir le terrain.
 
 ### Subphase : Polarisation des élites (1339-1433)
 
@@ -317,10 +308,21 @@
 - start: 1670
 - end: 1796
 - title: Ancien Régime
-- summary: AR long (~126 ans), aligné avec Venise (130 ans) et Piémont (113 ans). Pattern « petite nation italienne » : satisfait le critère de discrédit (sédimentation, Cosme III bigot, échecs léopoldins) mais pas celui de ruine financière (cité-État de taille modeste, AR léopoldin assainit), d'où impossibilité d'éclatement endogène et sortie obligatoire par choc exogène (Napoléon 1796). Structuré en deux moments par la nature de la dynastie : AR décliniste médicéen (1670-1737) puis AR aux tentatives réformatrices vouées à l'échec sous secundogéniture habsbourgeoise (1737-1796). Remontrance structurellement absente.
+- summary: AR long (~126 ans), aligné avec Venise (130 ans) et Piémont (113 ans). Ouvert par la Saturation fiscale de 1705 (bancarotta virtuelle du Trésor grand-ducal sous Cosme III, expansion des Monti, multiplication des collette universali). Pattern « petite nation italienne » : satisfait le critère de discrédit (sédimentation, Cosme III bigot, échecs léopoldins) mais pas celui de ruine financière (cité-État de taille modeste, AR léopoldin assainit), d'où impossibilité d'éclatement endogène et sortie obligatoire par choc exogène (Napoléon 1796). Structuré en deux moments par la nature de la dynastie : AR décliniste médicéen (1670-1737) puis AR aux tentatives réformatrices vouées à l'échec sous secundogéniture habsbourgeoise (1737-1796). Remontrance structurellement absente (pas de corps charté).
 - description: L'AR florentin est l'un des plus longs du corpus, mais sans devenir une singularité — il s'aligne avec Venise (1718-1848, 130 ans) et Piémont (1748-1861, 113 ans avec éclipse). Pattern structurel commun : petites nations italiennes/périphériques traversant une RN compressée par chocs exogènes successifs avant absorption italienne. La cause structurelle de la longueur est l'**absence de ruine financière endogène** : Florence est une cité-État de taille modeste avec budget contenu (pas d'armée massive, pas de cour royale dispendieuse, pas de guerre coûteuse), Cosme III tend les finances mais ne les ruine pas, et Pierre-Léopold les assainit activement (abolition des fidéicommis 1788, suppression des couvents et ventes de biens ecclésiastiques, modernisation du Catasto). À l'arrivée de Bonaparte (1796), le Grand-Duché léopoldin est financièrement sain. Le critère de discrédit, lui, est satisfait au moins partiellement (Cosme III bigot, surfiscalité, déclin économique, échecs léopoldins, émeute Prato 1787, émeutes Florence/Livourne 1790), mais cela ne suffit pas seul à produire un éclatement endogène. La **Remontrance est structurellement absente — cas particulier de classe admin sociologique sans corps charté** (cf. `phase_absolutiste.md` §Le cycle de la classe administrative intermédiaire). Le bloc bloqueur existe sociologiquement (clergé urbain, patriciat sédimenté, fidéicommissaires) — c'est lui qui défait les réformes léopoldines —, mais il n'est pas constitué en corps représentatif distinct capable de formuler une Remontrance institutionnelle. Le patriciat ancien a été éliminé à Montemurlo (1537, exécution de Filippo Strozzi, confiscations massives), le Grand-Duché ne se dote pas de parlement (pas de Maggior Consiglio comme Venise, pas de Liber aureus comme Gênes, pas de Cortès), et la noblesse de robe ducale reste embryonnaire (Marzi, Campana, Grifoni, Torelli — secrétaires personnels du Grand-Duc sans organe collégial formel). Le lieu logique d'où une Remontrance pourrait venir n'existe pas — d'où Réformes échouées présentes (la classe sédimentée bloque) sans Remontrance (pas de corps charté pour parler). Pierre-Léopold tente des réformes par en haut (constitution Gianni 1779-1782 abandonnée, réformes religieuses provoquant l'émeute Prato 1787, suppression des couvents avec résistance) mais c'est un souverain réformateur, pas une Remontrance d'un corps intégré. Le contre-exemple décisif est Venise, autre cité-État absorbée tardivement, qui *a* sa Remontrance (Correzione 1761) parce qu'elle a le corps (Maggior Consiglio + barnabotti) ET le sommet (Inquisiteurs d'État). La sortie est par choc exogène, qui ouvre une RN compressée mais aboutissant tout de même à une Glorieuse Révolution canonique (Statuto 1848) — laquelle est ensuite avortée par puissance étrangère, faisant retomber Florence en AR exogène avant absorption italienne.
 
 L'AR florentin se déploie en deux moments selon la nature de la dynastie. **AR décliniste médicéen (1670-1737)** sous Cosme III (1670-1723) puis Jean-Gaston (1723-1737) : sédimentation des élites, mobilité figée, surfiscalité, lois somptuaires absurdes, lois anti-juives partielles, déclin économique structurel (laine et soie déclassées par concurrents Hollande, Angleterre, Lyon), déclin démographique, extinction dynastique (Jean-Gaston meurt sans postérité, sa sœur Anna Maria Luisa sans enfants). Aucune contestation institutionnelle organisée — pas de Remontrance. **AR sous secundogéniture habsbourgeoise (1737-1796)** — avènement Habsbourg-Lorraine par accord diplomatique européen (traités 1731-1735) : François III (1737-1765, absent après 1745 quand il devient empereur), Pierre-Léopold (1765-1790, frère cadet de Joseph II), Ferdinand III (1790-1801). Pas une occupation militaire — secundogéniture dynastique, la Toscane reste souveraine avec administration toscane continue. Tentatives massives de réformes par Pierre-Léopold qui échouent systémiquement par incapacité de la nation à se réformer en AR (cf. saillant Réformes échouées infra) — la séquence léopoldine est l'un des deux cas-types canoniques avec la France de Louis XVI.
+
+#### Saillant : Saturation fiscale
+- type: saillant
+- start: 1774
+- end: 1775
+- figure: Pierre-Léopold
+- subtitle: Tassa di redenzione et concordat
+- title: Saturation fiscale
+- confidence: high
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué à la Toscane au sens strict — incapacité POLITIQUE d'augmenter l'impôt ordinaire par voie d'élargissement durable. Datation **1774-1775** : Pierre-Léopold institue la **Tassa di redenzione** (mai 1774) — taxe foncière unifiée substituant les anciens droits sur les terres, distribuée sur base territoriale — et signe le **Concordat de 1775** qui soumet « tutti i beni del clero » à la fiscalité ordinaire. C'est la première tentative toscane de fiscalité égalitaire touchant patriciat sédimenté, clergé et fidéicommissaires. La résistance se cristallise progressivement : émeute de Prato (mai 1787) contre les réformes religieuses, émeutes Florence/Livourne au départ de Pierre-Léopold pour Vienne (1790, appel au retour aux « ordres médicéens »), démantèlement progressif sous Ferdinand III, contournement systématique de l'abolition des fidéicommis (1788) par les familles patriciennes. **Cas particulier toscan** : Saturation fiscale (1774-1775, première tentative bloquée) et Réformes échouées (séquence léopoldine 1779-1790, cf. saillant infra) sont **comprimées dans la même séquence** sous le même souverain — pattern d'AR très court où la classe administrative intermédiaire n'a pas le temps de se constituer en corps de Remontrance distinct. **Datation antérieure 1705 (bancarotta virtuelle Cosme III) écartée** : c'est un surendettement, conséquence de gabelles et collette universali, mais Cosme III ne tente pas l'élargissement vers les privilégiés — il empile les expédients sur la base existante. Sources : Waquet *Le Grand-Duché de Toscane sous les derniers Médicis*, Diaz *Il Granducato di Toscana: I Lorena*, Sordi sur la réforme léopoldine.
+- summary: Pierre-Léopold institue la Tassa di redenzione en mai 1774 — taxe foncière unifiée substituant les anciens droits — et signe en 1775 le concordat soumettant les biens du clergé à la fiscalité ordinaire. Première tentative toscane de fiscalité égalitaire touchant patriciat sédimenté et clergé. La résistance se cristallise progressivement : émeute Prato 1787, émeutes 1790 au départ du grand-duc, démantèlement progressif sous Ferdinand III, contournement de l'abolition des fidéicommis (1788). Cas particulier : Saturation fiscale et Réformes échouées comprimées dans la séquence léopoldine sous le même souverain, AR très court sans Remontrance distincte. La bancarotta de 1705 sous Cosme III est un surendettement préalable, pas la saturation. Sources : Waquet, Diaz, Sordi.
 
 #### Saillant : Réformes échouées — la séquence léopoldine
 
@@ -508,14 +510,13 @@ L'AR florentin se déploie en deux moments selon la nature de la dynastie. **AR 
 | Pacte oligarchique | Ordinamenti di Giustizia (1293, chemin B) |
 | 1er monarque oligarchique | Signoria post-1293 (suzerain collectif) |
 | Acmé oligarchique | Pic bancaire international (1325-1339, Bardi-Peruzzi) |
-| Fin de l'expansion oligarchique | Faillite Bardi-Peruzzi (1339) |
 | Guerre sociale | Albizzi contre Médicis (1433-1480) |
 | **1er monarque absolu** | **Laurent le Magnifique (1480) — appareil familial-bancaire (Settanta + Banque Médicis)** |
 | Consolidation post-DGRO | **Cosme Ier (1537) — pattern Sforza-like** |
 | **DGRO** | **Montemurlo (1537)** — 57 ans après le 1er MA |
 | **Choc d'hétérogénéité** | **Conquête de Sienne (1555)** — marge sénoise digérée par administration ducale directe, prolonge la phase absolutiste |
 | Acmé absolutiste | Ferdinand Ier — Livourne (~1591-1609) |
-| Fin de l'expansion absolutiste | — (structurellement absent, pas d'expansion absolutiste majeure) |
+| **Saturation fiscale** | **Tassa di redenzione + concordat (1774-1775, Pierre-Léopold)** — première tentative de fiscalité égalitaire touchant patriciat sédimenté et clergé, bloquée progressivement (Prato 1787, émeutes 1790, démantèlement Ferdinand III). Comprimée avec Réformes échouées dans la séquence léopoldine. Sources Waquet, Diaz, Sordi |
 | Remontrance | — (structurellement absente, manque du pôle corps institutionnel formel — analyse à deux pôles, complémentaire de Gênes) |
 | Ancien Régime | 1670-1796 (décliniste médicéen 1670-1737, secundogéniture habsbourgeoise 1737-1796) |
 | **Réformes échouées** | **Séquence léopoldine (1779-1790)** — constitution Gianni abandonnée, réformes religieuses → émeute Prato 1787, émeutes anti-réformes 1790. Cas-type canonique avec la France de Louis XVI |

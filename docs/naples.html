@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Naples</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:flex-start; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-title span { margin-top:5px; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:730px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/naples/flag.svg' alt='drapeau'>
+        <h1>Naples</h1>
+        <span class='header-badge badge-status wip'>à valider</span>
+    </div>
+    <div class="header-subtitle">Reboot féodal angevin (1266) ouvrant un second cycle féodal, PO aragonais Capitula Regni (1444), guerre sociale Masaniello (1647) avortée par tutelle hispanique, 1er MA bourbonien Charles VII (1734) imposant la synthèse top-down, deux RN avortées (1820, 1848), absorption italienne 1860</div>
+</div>
+
+<div class="briefing briefing-full"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Charles_I_of_Anjou.jpg/250px-Charles_I_of_Anjou.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#8B7355;flex-shrink:0;"></span>Le reboot féodal angevin (1266)</span><span class="insight-desc">Charles I d&#39;Anjou défait Manfred à Bénévent (1266) puis exécute Conradin (1268). Redistribution de <strong>~700 fiefs</strong> à des barons français/provençaux, capitale déplacée Palerme→Naples. Le tissu vassalique Hauteville-Hohenstaufen est rasé ; <strong>un nouveau cycle féodal s&#39;ouvre</strong> avec une couche élitaire entièrement neuve. Pattern parallèle à la conquête normande de l&#39;Angleterre 1066, par convention codé comme nouveau début de phase féodale.</span></div></div><div class="insight-item"><img class="insight-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Onofrio_palumbo%2C_ritratto_di_masaniello.jpg/250px-Onofrio_palumbo%2C_ritratto_di_masaniello.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;"></span>Tutelle hispanique — polarisation gelée, Masaniello avortée</span><span class="insight-desc">La conquête espagnole 1503 <strong>gèle la polarisation prébendier/patrimonial</strong> — tant que l&#39;appareil central reste à Madrid, l&#39;enjeu factionnel est bloqué. <strong>Masaniello 1647</strong> : guerre sociale ouverte (popolari + togati + barons anti-Madrid vs Crown + baronnie loyaliste, *Repubblica Napoletana*) écrasée par Don Juan d&#39;Autriche en 10 mois, <strong>avant qu&#39;aucun cadre central résolvant n&#39;émerge</strong>. La résolution attend <strong>86 ans</strong>.</span></div></div><div class="insight-item"><img class="insight-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Charles_III_of_Spain_high_resolution.jpg/250px-Charles_III_of_Spain_high_resolution.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;"></span>Charles VII (1734) impose la synthèse top-down</span><span class="insight-desc">86 ans après l&#39;avortement de Masaniello, Charles VII trouve la polarisation <strong>structurellement mature</strong> mais latente : togati professionnalisés, baronnie sédimentée, programme prébendier articulé (Giannone *Istoria civile* 1723). Installé par traité de Vienne 1738, autonome de Madrid dès 1759, il <strong>impose top-down</strong> la synthèse via Tanucci toscan + togati napolitains. Pas de nouvelle guerre sociale ouverte — il trouve les factions prêtes à être synthétisées.</span></div></div><div class="insight-item"><img class="insight-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Guglielmo_Pepe_Illustration.jpg/250px-Guglielmo_Pepe_Illustration.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;"></span>Deux RN avortées (1820, 1848) avant absorption</span><span class="insight-desc">AR exogène 1815-1860 produit deux <strong>RN avortées</strong>. <strong>1820-1821</strong> : pronunciamento carbonaro à Nola (Guglielmo Pepe), Constitution espagnole, parlement <strong>8 mois</strong>, Sainte-Alliance écrase à Rieti. <strong>1848-1849</strong> : insurrection populaire, Constitution de janvier, parlement <strong>1 mois</strong>, coup royal du 15 mai (*Re Bomba*), reconquête sicilienne. Conditions d&#39;éclatement endogène mature jamais convergentes ; absorption garibaldienne 1860 ferme le Parcours.</span></div></div><div class="insight-item"><img class="insight-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Murat2.jpg/250px-Murat2.jpg" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;"></span>Décennie française — accélération comme à Milan</span><span class="insight-desc">Décret du <strong>2 août 1806</strong> (Joseph Bonaparte) : abolition de la féodalité, juridictions seigneuriales et *adoa* supprimées. La Commissione feudale opère le transfert : <strong>2 000 grands propriétaires → 18 000+ en 1815</strong>. Code, conscription, intendances. <strong>Accélération de la phase absolutiste, parallèle à Milan napoléonienne</strong> — Joseph achève par contrainte exogène le programme prébendier-tanuccien que Charles VII n&#39;avait pu imposer.</span></div></div></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:3.2520%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">800</div>
+        </div>
+        <div class="tick" style="left:21.3189%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1000</div>
+        </div>
+        <div class="tick" style="left:39.3857%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1200</div>
+        </div>
+        <div class="tick" style="left:57.4526%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1400</div>
+        </div>
+        <div class="tick" style="left:75.5194%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1600</div>
+        </div>
+        <div class="tick" style="left:93.5863%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">1800</div>
+        </div>
+        
+        <div class="phase-band" style="left:0.9033%;width:32.1590%;
+            background:#e7e7e7;border-top:3px solid #A0A0A0;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase pré-féodale&lt;/strong&gt; (774 — 1130)&#10;Phase pré-féodale anormalement longue (~356 ans) par fragmentation polycentrique persistante. L&#39;effondrement du royaume lombard du Nord (774) laisse Bénévent autonome, mais l&#39;Italie méridionale reste partagée entre principautés lombardes (Bénévent, Capoue, Salerne après 849), duchés byzantins maritimes (Naples, Amalfi, Gaète), enclaves arabes intermittentes. Aucun chef supra-régional n&#39;émerge avant l&#39;arrivée des Hauteville au XIᵉ siècle. La percolation élitaire endogène se déploie sur cette mosaïque sans cristallisation, jusqu&#39;à ce que les Normands l&#39;unifient par conquête."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#A0A0A0;">Pré-féodale</div>
+            <div class="phase-band-dates">774 — 1130</div>
+        </div>
+        <div class="phase-band" style="left:33.0623%;width:12.2855%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale (cycle 1)&lt;/strong&gt; (1130 — 1266)&#10;Premier cycle féodal du Parcours napolitain (~136 ans). Roger II éveille le *Regnum Siciliae* unifié (1130) ; deux pics féodaux (Roger II 1130-1154, Frédéric II 1198-1250) consolident temporairement sans produire de PO. Deux crises féodales avortent par insuffisance interne (extinction lignée mâle Hauteville 1189-1194, extinction Hohenstaufen 1250-1266). La cristallisation finale est empêchée par la conquête angevine de 1266, qui rase le tissu vassalique et ouvre un nouveau cycle féodal."
+            onclick="showDetail(2)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">1130 — 1266</div>
+        </div>
+        <div class="phase-band" style="left:45.3478%;width:16.0795%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale (cycle 2)&lt;/strong&gt; (1266 — 1444)&#10;Second cycle féodal (~178 ans), ouvert par reboot angevin sur une couche élitaire neuve. Pic Charles I d&#39;Anjou (1266-1285), perturbation territoriale Vêpres siciliennes (1282), deux crises féodales (guerre civile angevine 1382-1414 avortée par bouclage ; succession Anjou-Aragon 1435-1442 terminale). La conquête aragonaise de 1442 importe le modèle parlementaire à trois bras qui débouche sur le PO Capitula Regni de 1444 — captation exogène stabilisatrice (au lieu de relancer un cycle, comme avait fait Anjou)."
+            onclick="showDetail(9)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">1266 — 1444</div>
+        </div>
+        <div class="phase-band" style="left:61.4273%;width:26.1969%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (1444 — 1734)&#10;Phase oligarchique longue (~290 ans), structurée en quatre temps. Essor aragonais court (1444-1503), interrompu par la conquête espagnole. Polarisation longue sous tutelle hispanique (1503-1647) : émergence du clivage prébendier (togati, popolari, bourgeoisie urbaine) vs patrimonial (baronnie territoriale, curie romaine), gel partiel par tutelle. &lt;strong&gt;Guerre sociale Masaniello (1647-1648) avortée par reconquête espagnole&lt;/strong&gt; avant qu&#39;un cadre central résolvant n&#39;émerge. Polarisation reprise sous tutelle continue (1648-1734) jusqu&#39;à la conquête bourbonienne qui installe une dynastie résidente capable d&#39;opérer la synthèse absolutiste."
+            onclick="showDetail(17)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">1444 — 1734</div>
+        </div>
+        <div class="phase-band" style="left:87.6242%;width:7.7687%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste (segment 1 — installation et impérialisme)&lt;/strong&gt; (1734 — 1820)&#10;Premier segment de la phase absolutiste (~86 ans). 1er MA Charles VII de Bourbon (1734) en configuration *figure dynastique avec administration distincte* — Tanucci toscan + togati napolitains intégrés à l&#39;appareil. Trois sous-phases : absolutisation 1734-1759 (Charles VII + Tanucci, Concordat, Catasto Onciario), impérialisme absolutiste 1759-1815 modeste (acmé Tanucci 1759-1776, Lumières napolitaines, complétion exogène par Joseph Bonaparte 1806 qui abolit la féodalité), AR exogène 1815-1820 (Bourbons restaurés sur cadre napoléonien). Segment terminé par éclatement de l&#39;AR (Pronunciamento de Nola 1820)."
+            onclick="showDetail(26)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1734 — 1820</div>
+        </div>
+        <div class="narrow-indicator" style="left:95.4381%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Phase RN (avortée 1820-1821)&lt;/strong&gt; (1820 — 1821)&#10;Première RN napolitaine, courte et avortée. Pronunciamento carbonaro à Nola (juillet 1820, Guglielmo Pepe vétéran napoléonien), Constitution espagnole octroyée par Ferdinand I sous pression, parlement réuni ~8 mois. Intervention austro-impériale décidée à Laibach (janvier 1821), bataille de Rieti (mars 1821), restauration. RN avortée par choc exogène militaire avant maturation."
+            onclick="showDetail(34)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:95.3930%;width:0.0903%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase RN (avortée 1820-1821)&lt;/strong&gt; (1820 — 1821)&#10;Première RN napolitaine, courte et avortée. Pronunciamento carbonaro à Nola (juillet 1820, Guglielmo Pepe vétéran napoléonien), Constitution espagnole octroyée par Ferdinand I sous pression, parlement réuni ~8 mois. Intervention austro-impériale décidée à Laibach (janvier 1821), bataille de Rieti (mars 1821), restauration. RN avortée par choc exogène militaire avant maturation."
+            onclick="showDetail(34)">
+            
+            
+        </div>
+        <div class="phase-band" style="left:95.4833%;width:2.4390%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste (segment 2 — AR exogène repris)&lt;/strong&gt; (1821 — 1848)&#10;Reprise de la phase absolutiste après avortement de la première RN. AR exogène continué sous Ferdinand I puis François I (1825-1830) puis Ferdinand II (1830-1859). Maintien du cadre napoléonien (Code des Deux-Siciles), répression des libéraux, surveillance carbonaro persistante. Pas de réformes structurelles. Discrédit progressif, pression révolutionnaire qui ré-éclate en 1848 dans la vague italienne."
+            onclick="showDetail(39)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">1821 — 1848</div>
+        </div>
+        <div class="narrow-indicator" style="left:97.9675%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Phase RN (avortée 1848-1849)&lt;/strong&gt; (1848 — 1849)&#10;Seconde RN napolitaine, courte et avortée. Insurrection populaire napolitaine (janvier 1848, synchronisée avec Palerme et la vague italienne), Constitution bicamérale octroyée le 29 janvier par Ferdinand II, parlement réuni ~1 mois. Coup royal du 15 mai 1848 (combats de rue, suspension de la Constitution, dissolution du parlement), bombardement de Messine en septembre 1848 (« Re Bomba »), reconquête sicilienne sous Filangieri (mai 1849). RN avortée par contre-révolution royale appuyée sur le contexte austrien italien."
+            onclick="showDetail(41)">
+            <div class="narrow-indicator-pin" style="background:#D4A017;">
+                <span class="material-icons">bolt</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:97.9223%;width:0.0903%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase RN (avortée 1848-1849)&lt;/strong&gt; (1848 — 1849)&#10;Seconde RN napolitaine, courte et avortée. Insurrection populaire napolitaine (janvier 1848, synchronisée avec Palerme et la vague italienne), Constitution bicamérale octroyée le 29 janvier par Ferdinand II, parlement réuni ~1 mois. Coup royal du 15 mai 1848 (combats de rue, suspension de la Constitution, dissolution du parlement), bombardement de Messine en septembre 1848 (« Re Bomba »), reconquête sicilienne sous Filangieri (mai 1849). RN avortée par contre-révolution royale appuyée sur le contexte austrien italien."
+            onclick="showDetail(41)">
+            
+            
+        </div>
+        <div class="narrow-indicator" style="left:98.5095%; top:-8px;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste (segment 3 — AR exogène jusqu&#39;à absorption)&lt;/strong&gt; (1849 — 1860)&#10;Dernier segment de la phase absolutiste (~11 ans). AR exogène repris sous Ferdinand II (jusqu&#39;en 1859) puis François II (1859-1860). Régime tient ses finances par modernisation économique limitée mais discrédit international avéré (campagne Gladstone 1851). Pas de réformes politiques structurelles. Absorption par expédition garibaldienne 1860 — fusion dans le Parcours italien avant éclatement endogène complet."
+            onclick="showDetail(46)">
+            <div class="narrow-indicator-pin" style="background:#6A0DAD;">
+                <span class="material-icons">crown</span>
+            </div>
+        </div>
+        <div class="phase-band phase-narrow" style="left:98.0126%;width:0.9937%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste (segment 3 — AR exogène jusqu&#39;à absorption)&lt;/strong&gt; (1849 — 1860)&#10;Dernier segment de la phase absolutiste (~11 ans). AR exogène repris sous Ferdinand II (jusqu&#39;en 1859) puis François II (1859-1860). Régime tient ses finances par modernisation économique limitée mais discrédit international avéré (campagne Gladstone 1851). Pas de réformes politiques structurelles. Absorption par expédition garibaldienne 1860 — fusion dans le Parcours italien avant éclatement endogène complet."
+            onclick="showDetail(46)">
+            
+            
+        </div>
+        
+        <div class="subphase-band" style="left:0.9033%;width:32.1590%;
+            background:#d4d4d4;border-bottom:2px solid #A0A0A0;"
+            data-tooltip="&lt;strong&gt;Percolation élitaire&lt;/strong&gt; (774 — 1130)&#10;Sous-phase de 356 ans. Émergence d&#39;aristocraties lombardes (*gastalds*, comtes), byzantines (*tribuni*, *consules*), bourgeoisies maritimes (Amalfi, Gaète), monastères réformateurs (Mont-Cassin), enclaves arabes intermittentes. Aucun chef supra-régional avant la conquête normande. La fragmentation se prolonge sous les Hauteville (Robert Guiscard, Roger Ier de Sicile) qui consolident progressivement par traités, mariages et conquêtes, jusqu&#39;au couronnement de Roger II (1130)."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Percolation élitaire</span>
+        </div>
+        <div class="subphase-band" style="left:33.0623%;width:12.2855%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites (cycle 1)&lt;/strong&gt; (1130 — 1266)&#10;Sous-phase de 136 ans sur élite Hauteville-Hohenstaufen. Pic Roger II (1130-1154), pic Frédéric II (1198-1250), deux crises féodales avortées par insuffisance interne (mort de Tancrède 1189-1194, effondrement Hohenstaufen 1250-1266). Aucune des deux crises ne produit de PO — la captation Hohenstaufen 1194 prolonge le cycle, l&#39;extinction Hohenstaufen 1266 le clôt par reboot angevin."
+            onclick="showDetail(3)">
+            <span class="subphase-label">Coagulation des élites (cycle 1)</span>
+        </div>
+        <div class="subphase-band" style="left:45.3478%;width:15.8988%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites (cycle 2)&lt;/strong&gt; (1266 — 1442)&#10;Sous-phase de 176 ans sur élite Anjou-Aragon. Éveil et pic féodal Charles I (1266-1285), Vêpres siciliennes (1282), crise féodale guerre civile angevine (1382-1414), crise terminale succession Anjou-Aragon (1435-1442). La cristallisation finale advient à la conquête aragonaise (1442), qui ouvre une bascule oligarchique courte."
+            onclick="showDetail(10)">
+            <span class="subphase-label">Coagulation des élites (cycle 2)</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:61.2466%;width:0.1807%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Bascule oligarchique&lt;/strong&gt; (1442 — 1444)&#10;Sous-phase courte (~2 ans), terminale de la phase féodale. Conquête de Naples par Alphonse V (juin 1442), entrée triomphale, transposition du modèle institutionnel aragonais, négociation des *Capitula Regni* avec le parlement à trois bras. Le PO de 1444 clôt la phase féodale (filé sous oligarchique en 1er saillant d&#39;essor)."
+            onclick="showDetail(16)">
+            <span class="subphase-label">Bascule oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:61.4273%;width:5.3297%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (1444 — 1503)&#10;Sous-phase courte (~60 ans) sous dynastie aragonaise napolitaine. Ouverture par le **Pacte oligarchique des *Capitula Regni* (1444)**, 1er saillant de la phase oligarchique. Ferrante (1458-1494) déploie l&#39;appareil aragonais (Sommaria, Vicaria), perçoit le *focatico*, lève la *Dohana Mena Pecudum*, écrase la conjuration des barons (1485-1487, conflit encore lignager). Pas de projection externe propre. Coupée par les Guerres d&#39;Italie (Charles VIII 1494, Louis XII 1501, conquête espagnole définitive 1503). Quasi-exutoire mineur sous forme de service mercenaire dans les guerres italiennes et d&#39;extension latifundiaire vers la Capitanata."
+            onclick="showDetail(18)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:66.7570%;width:13.0081%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation des élites&lt;/strong&gt; (1503 — 1647)&#10;Sous-phase longue (~144 ans) sous tutelle hispanique. Cristallisation progressive du clivage &lt;strong&gt;prébendier&lt;/strong&gt; (togati du Sacro Regio Consiglio, popolari de Naples-ville, bourgeoisie marchande, école juridique anti-curiale) vs &lt;strong&gt;patrimonial&lt;/strong&gt; (baronnie territoriale avec *mero e misto imperio*, curie romaine, jésuites). Trois moments structurants : Pedro de Toledo (1532-1553) qui tente l&#39;absolutisation déléguée et heurte la baronnie comme le clergé (révolte anti-Inquisition de 1547, comprimée) ; consolidation institutionnelle de la classe togata (Francesco D&#39;Andrea, Giuseppe Valletta) ; oligarchisation fiscale par *arrendamenti* à des consortiums de créanciers privés à partir des années 1620, qui matérialise financièrement le clivage. Pression fiscale extrême 1638-1647 (financement guerres hispaniques de Trente Ans) — pré-révolutionnaire."
+            onclick="showDetail(22)">
+            <span class="subphase-label">Polarisation des élites</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:79.7651%;width:0.0903%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (1647 — 1648)&#10;Sous-phase courte (~1 an), avortée. Soulèvement urbain napolitain qui devient *Repubblica Napoletana* sous Gennaro Annese, soutenu par intervention française (Henri de Guise, novembre 1647). Reconquête par Don Juan d&#39;Autriche (avril 1648) avant qu&#39;un cadre central résolvant n&#39;émerge."
+            onclick="showDetail(23)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:79.8555%;width:7.7687%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Polarisation reprise&lt;/strong&gt; (1648 — 1734)&#10;Sous-phase de 86 ans après guerre sociale avortée. La phase oligarchique se poursuit en l&#39;absence de cadre central résolvant (cf. `phase_oligarchique.md` §Non-résolution). Continuation du clivage prébendier/patrimonial sous tutelle hispanique puis autrichienne (Utrecht 1713 → vice-rois nommés par Vienne). Maturation intellectuelle du programme prébendier : Pietro Giannone *Istoria civile del Regno di Napoli* (1723, exilé), revendication anticurialiste de la juridiction royale ; école juridique napolitaine. Aucune nouvelle ouverture endogène possible tant que la couronne suzeraine refuse une résolution favorisant l&#39;une des factions. Le passage aux Bourbons (1734) débloque la situation par installation d&#39;une dynastie résidente."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Polarisation reprise</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:87.6242%;width:2.2584%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (1734 — 1759)&#10;Sous-phase de durée standard (~25 ans). Charles VII (1734-1759, départ pour Madrid 1759 où il devient Charles III d&#39;Espagne) + Tanucci (premier ministre 1734-1776) déploient l&#39;absolutisation : Catasto Onciario (1741-1755, premier essai d&#39;imposition uniforme incluant biens nobles et ecclésiastiques), Concordat (1741, soumission relative de l&#39;Église), construction monumentale (San Carlo 1737, Caserta 1752, Capodimonte). Pas de DGRO — la baronnie est sédimentée institutionnellement, pas militairement. L&#39;absolutisation se fait par décrets cumulatifs et négociations bilatérales, sans soulèvement nobiliaire écrasé en bloc."
+            onclick="showDetail(27)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band" style="left:89.8826%;width:5.0587%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (1759 — 1815)&#10;Sous-phase de durée moyenne (~56 ans), modeste par contrainte de taille (pas d&#39;expansion militaire possible pour une nation de cette dimension entre grands voisins). Acmé absolutiste sous régence Tanucci-Ferdinand IV (1759-1776) : apogée intellectuel des Lumières napolitaines (Genovesi, Filangieri, Pagano), expulsion des jésuites (1767), abolition du *chinea* (1788). Perturbation napoléonienne 1798-1815 : République parthénopéenne avortée (1799), décennie française (1806-1815) qui complète exogènement l&#39;absolutisation par abolition de la féodalité. Restauration Bourbon (1815) hérite intégralement du cadre français."
+            onclick="showDetail(30)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:94.9413%;width:0.4517%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime exogène&lt;/strong&gt; (1815 — 1820)&#10;Sous-phase courte (~5 ans) d&#39;AR exogène sous Ferdinand I restauré (Bourbon redevenu Ferdinand I des Deux-Siciles avec la fusion juridique de décembre 1816). Bloc administratif sédimenté constitué par la classe administrative bourbonienne héritière du cadre napoléonien (Code des Deux-Siciles 1819 = Code Napoléon adapté). AR jeune mais immédiatement sclérosé par sa nature de restauration sur cadre napoléonien — les vétérans des armées de Murat + bourgeois libéraux carbonari ne tolèrent pas le régime restauré. Ouverture du premier éclatement par pronunciamento carbonaro à Nola (juillet 1820)."
+            onclick="showDetail(33)">
+            <span class="subphase-label">Ancien régime exogène</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:95.3930%;width:0.0903%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1820 — 1821)&#10;Sous-phase de la RN avortée 1820-1821. Éclatement par pronunciamento carbonaro à Nola (juillet 1820), expérience parlementaire sur Constitution espagnole (~8 mois), avortement par défaite à Rieti (mars 1821). Pas de phase aiguë (radicalisation interne), pas de moment thermidorien — RN écourtée à l&#39;expérience parlementaire par intervention exogène."
+            onclick="showDetail(35)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:95.4833%;width:2.4390%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime exogène&lt;/strong&gt; (1821 — 1848)&#10;Sous-phase d&#39;AR exogène repris (~27 ans). Bourbons restaurés (Ferdinand I, François I, Ferdinand II) maintiennent le cadre napoléonien (Code des Deux-Siciles), répriment les libéraux, surveillent les carbonari. Ferdinand II (1830-1859) entreprend une modernisation économique limitée (Naples-Portici 1839, Mongiana, Castellammare) sans desserrer le verrou politique. Discrédit progressif, AR mûrit (atteint 33 ans cumulés en 1848 depuis 1815). Réouverture par insurrection populaire de janvier 1848 dans la vague révolutionnaire italienne."
+            onclick="showDetail(40)">
+            <span class="subphase-label">Ancien régime exogène</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:97.9223%;width:0.0903%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (1848 — 1849)&#10;Sous-phase de la RN avortée 1848-1849. Éclatement par insurrection populaire et octroi de la Constitution de janvier (29 janvier 1848), expérience parlementaire bicamérale (~1 mois en avril-mai), avortement par coup royal du 15 mai puis reconquête sicilienne (1849). Pas de phase aiguë interne, pas de moment thermidorien."
+            onclick="showDetail(42)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:98.0126%;width:0.9937%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien régime exogène&lt;/strong&gt; (1849 — 1860)&#10;Sous-phase finale d&#39;AR exogène (~11 ans). Ferdinand II jusqu&#39;en 1859, puis François II (1859-1860). Pas de réformes politiques. Modernisation économique limitée maintient le régime financièrement, mais discrédit international avéré (campagne Gladstone 1851, isolement diplomatique). Conditions d&#39;éclatement endogène jamais convergentes en 1860 — discrédit oui, ruine partielle non. L&#39;absorption garibaldienne ferme le Parcours par fusion italienne, pas par RN aboutie endogène."
+            onclick="showDetail(47)">
+            <span class="subphase-label">Ancien régime exogène</span>
+        </div>
+        
+        
+    <div class="area-chart" style="top:230px;">
+        
+        <div class="area-chart-label" style="left:0.9033%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:0.9033%;width:6.7751%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Bénévent autonome après chute de Pavie ; mosaïque polycentrique (duchés byzantins Naples-Amalfi-Gaète, principautés lombardes, enclaves arabes)"></div></div>
+        <div class="area-step-group" style="left:7.6784%;width:16.3505%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — *Divisio Beneventi* — fragmentation polycentrique maximale"></div></div>
+        <div class="area-step-group" style="left:24.0289%;width:9.0334%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Premiers Hauteville en Pouille (Aversa concédée à Rainulf Drengot)"></div></div>
+        <div class="area-step-group has-marges" style="left:33.0623%;width:5.7814%;height:62.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km²"></div><div class="area-marges" style="bottom:31.0px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~25 000 km² — Couronnement Roger II — *Regnum Siciliae* unifié (Mezzogiorno noyau + Sicile marge)"></div></div>
+        <div class="area-step-group has-marges" style="left:38.8437%;width:6.5041%;height:62.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km²"></div><div class="area-marges" style="bottom:31.0px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~25 000 km² — Conquête Hohenstaufen — union dynastique avec Empire, périmètre du *Regnum* inchangé"></div></div>
+        <div class="area-step-group has-marges" style="left:45.3478%;width:1.4453%;height:62.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km²"></div><div class="area-marges" style="bottom:31.0px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~25 000 km² — Conquête angevine — capitale déplacée à Naples, Sicile administrée séparément"></div></div>
+        <div class="area-step-group" style="left:46.7931%;width:14.4535%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Vêpres siciliennes — Sicile détachée, Naples péninsulaire seule"></div></div>
+        <div class="area-step-group" style="left:61.2466%;width:1.4453%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Conquête aragonaise — union personnelle Naples-Sicile sous Alphonse V (administrations séparées)"></div></div>
+        <div class="area-step-group" style="left:62.6920%;width:4.0650%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Re-séparation à la mort d&#39;Alphonse V — Naples péninsulaire indépendante sous Ferrante"></div></div>
+        <div class="area-step-group" style="left:66.7570%;width:18.4282%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Conquête espagnole — vice-royauté Habsbourg de Madrid, sans modification territoriale"></div></div>
+        <div class="area-step-group" style="left:85.1852%;width:2.4390%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Tutelle Habsbourg de Vienne (Utrecht)"></div></div>
+        <div class="area-step-group" style="left:87.6242%;width:0.0903%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Bourbons d&#39;Espagne (Charles VII) — Naples retrouve une dynastie résidente"></div></div>
+        <div class="area-step-group has-marges" style="left:87.7145%;width:7.3171%;height:62.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km²"></div><div class="area-marges" style="bottom:31.0px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~25 000 km² — Charles VII obtient aussi la Sicile (union personnelle, administrations séparées)"></div></div>
+        <div class="area-step-group has-marges" style="left:95.0316%;width:3.9747%;height:62.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km²"></div><div class="area-marges" style="bottom:31.0px;height:31.0px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~25 000 km² — Fusion juridique en Royaume des Deux-Siciles (Sicile devient marge institutionnelle)"></div></div>
+        <div class="area-step-group" style="left:99.0063%;width:0.9937%;height:31.0px;"><div class="area-noyau" style="height:31.0px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~25 000 km² — Annexion au Royaume d&#39;Italie — fin du Parcours napolitain par fusion dans le Parcours italien"></div></div>
+        
+        <div class="area-edge" style="left:7.6784%;height:31.0px;"></div>
+        <div class="area-edge" style="left:24.0289%;height:31.0px;"></div>
+        <div class="area-edge" style="left:33.0623%;height:62.0px;"></div>
+        <div class="area-edge" style="left:38.8437%;height:62.0px;"></div>
+        <div class="area-edge" style="left:45.3478%;height:62.0px;"></div>
+        <div class="area-edge" style="left:46.7931%;height:62.0px;"></div>
+        <div class="area-edge" style="left:61.2466%;height:31.0px;"></div>
+        <div class="area-edge" style="left:62.6920%;height:31.0px;"></div>
+        <div class="area-edge" style="left:66.7570%;height:31.0px;"></div>
+        <div class="area-edge" style="left:85.1852%;height:31.0px;"></div>
+        <div class="area-edge" style="left:87.6242%;height:31.0px;"></div>
+        <div class="area-edge" style="left:87.7145%;height:62.0px;"></div>
+        <div class="area-edge" style="left:95.0316%;height:62.0px;"></div>
+        <div class="area-edge" style="left:99.0063%;height:62.0px;"></div>
+    </div>
+        
+        <div class="area-saillant-group" style="left:46.7931%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Vêpres siciliennes&lt;/strong&gt;&#10;Sécession sicilienne (1282)&#10;Le 30 mars 1282, soulèvement palermitain expulse la garnison angevine ; Pierre III d&#39;Aragon est couronné roi de Sicile en septembre. La guerre des Vêpres (1282-1302) sépare définitivement la Sicile insulaire (qui ouvre son propre Parcours autour du PO de 1296) du Mezzogiorno continental. Sicile avait été digérée par le *Regnum* unifié sous Hauteville-Hohenstaufen (1130-1266, administration multilingue commune) ; sa perte est une &lt;strong&gt;correction d&#39;échelle&lt;/strong&gt; qui ramène Naples à son noyau péninsulaire culturellement plus homogène. Mécanisme correction d&#39;échelle (perte de la marge digérée), effet accélération par homogénéisation du noyau et recentrage sur la péninsule."
+                onclick="showDetail(13)">
+                <span class="material-icons">fast_forward</span>
+            </div>
+            <div class="area-saillant-label"><span class="saillant-figure">Vêpres siciliennes</span><span class="saillant-date">1282</span></div>
+        </div>
+        
+        <div class="saillant-group" style="left:33.0623%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Roger II (1130)&#10;Le 25 décembre 1130, Roger II est couronné *Rex Siciliae* à Palerme par décision de l&#39;antipape Anaclet II. Il unifie pour la première fois sous une même couronne l&#39;Italie méridionale péninsulaire (Pouille, Calabre, Campanie) et la Sicile insulaire. Premier chef supra-régional dont la puissance personnelle force la coalition baronnie+pape+Empereur à se positionner (guerres 1130-1139, capitulation d&#39;Innocent II à Mignano 1139). Test discriminant éveil féodal satisfait — capacité d&#39;arbitrage effective à l&#39;échelle du *Regnum*."
+                onclick="showDetail(4)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Roger II</span><span class="saillant-date">1130</span></div>
+        </div>
+        <div class="saillant-group" style="left:33.0623%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Roger II (1130)&#10;Premier pic féodal du Parcours napolitain. Projection externe : raids africains (Mahdia 1148), interventions en Italie centrale, conflits avec Byzance et l&#39;Empire. Codification royale : Assises d&#39;Ariano (1140, premier code unilatéral pour le *Regnum*). Cristallisation de l&#39;opposition : révoltes baronniales sous Roger II et Guillaume Ier (1154-1166, assassinat du chancelier Maion 1160). Appareil administratif multilingue (Curia regis, *duana de secretis*, justiciars provinciaux) — exceptionnel pour le XIIᵉ siècle, mais outil du roi."
+                onclick="showDetail(5)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Roger II</span><span class="saillant-date">1130</span></div>
+        </div>
+        <div class="saillant-group" style="left:38.3921%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Mort de Tancrède (1189)&#10;Mort de Guillaume II sans héritier mâle (1189) → succession contestée entre Tancrède de Lecce (faction « lombarde ») et Constance, fille posthume de Roger II, épouse d&#39;Henri VI Hohenstaufen. Tancrède règne 1190-1194 mais sa mort prématurée ouvre la voie à la conquête impériale (1194). La fenêtre de PO endogène se ferme — l&#39;homogénéité élitaire n&#39;est pas atteinte au sein de l&#39;élite Hauteville. Mécanisme insuffisance interne (extinction de la lignée mâle Hauteville, succession non codifiée), effet avortement."
+                onclick="showDetail(6)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Mort de Tancrède</span><span class="saillant-date">1189</span></div>
+        </div>
+        <div class="saillant-group" style="left:39.2051%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Frédéric II (1198)&#10;Frédéric II Hohenstaufen (roi de Sicile depuis 1198, empereur depuis 1220) constitue le second pic féodal du Parcours. Projection externe massive (croisade 1228-1229 et couronnement à Jérusalem, conflits avec papauté et communes lombardes), codification royale exceptionnelle (*Liber Augustalis* 1231 — 253 clauses, juges salariés, suppression des juridictions privées non concédées, monopoles royaux), Université de Naples (1224) formant les fonctionnaires. Pic démultiplié par projection impériale supranationale, mais l&#39;appareil reste un outil du roi qui s&#39;effondre à sa mort."
+                onclick="showDetail(7)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Frédéric II</span><span class="saillant-date">1198</span></div>
+        </div>
+        <div class="saillant-group" style="left:43.9024%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Effondrement Hohenstaufen (1250)&#10;Mort de Frédéric II (13 décembre 1250). Conrad IV (1250-1254) ne contrôle déjà plus le royaume. Manfred régent puis usurpateur (1258-1266) sans légitimité dynastique reconnue. Croisade angevine instrumentalisée par la papauté contre les Hohenstaufen ; défaite et mort de Manfred à Bénévent (26 février 1266). La crise féodale aurait pu déboucher sur un PO endogène si la dynastie souabe avait stabilisé sa transmission ; au lieu de cela, l&#39;extinction Hohenstaufen + croisade papale ouvrent la voie au reboot angevin. Mécanisme insuffisance interne, effet avortement."
+                onclick="showDetail(8)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Effondrement Hohenstaufen</span><span class="saillant-date">1250</span></div>
+        </div>
+        <div class="saillant-group" style="left:45.3478%;">
+            <div class="saillant-marker perturbation-marker" style="background:#8B0000;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Bénévent (1266)&#10;26 février 1266 : Charles I d&#39;Anjou défait Manfred à Bénévent, est couronné roi de Sicile par Clément IV. 23 août 1268 : Tagliacozzo, défaite et exécution de Conradin (29 octobre 1268), fin de la dynastie Hohenstaufen. &lt;strong&gt;Reboot féodal par swap d&#39;élites&lt;/strong&gt; : ~700 fiefs concédés à des barons français/provençaux, capitale déplacée à Naples, élite Hauteville-Hohenstaufen liquidée ou dispersée. Charles I est l&#39;éveil féodal du cycle 2 — premier chef supra-régional du nouveau réseau vassalique, qui force toutes les élites néo-installées à se positionner."
+                onclick="showDetail(11)">
+                <span class="material-icons">restart_alt</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Bénévent</span><span class="saillant-date">1266</span></div>
+        </div>
+        <div class="saillant-group" style="left:45.3478%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Pic féodal&lt;/strong&gt;&#10;Charles I d&#39;Anjou (1266)&#10;Pic féodal du second cycle. Projection externe ambitieuse : projet de reconquête de Constantinople (interrompu par les Vêpres 1282), interventions en Italie centrale (sénateur de Rome, vicariat impérial en Toscane), guerre contre Aragon. Continuité administrative (Magna Curia, *iustitiarii* régionaux des Hohenstaufen confirmés), nouvelle aristocratie franco-provençale dotée des fiefs confisqués. Cristallisation de l&#39;opposition : Vêpres siciliennes (1282) qui détachent l&#39;île, révoltes baronniales sporadiques sur le continent."
+                onclick="showDetail(12)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pic féodal</span><span class="saillant-figure">Charles I d&#39;Anjou</span><span class="saillant-date">1266</span></div>
+        </div>
+        <div class="saillant-group" style="left:55.8266%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Guerre civile angevine (1382)&#10;Mort sans héritier de Robert le Sage (1343) → règne contesté de Jeanne Ire (1343-1382, plusieurs maris assassinés) → assassinat de Jeanne Ire (1382) → guerre dynastique entre Anjou-Duras (Charles III, Ladislas, Joanne II) et Anjou-Valois (Louis Ier, Louis II) jusqu&#39;aux années 1410-1414. Le pouvoir effectif est fragmenté entre prétendants et factions baronniales rivales ; les institutions héritées de Frédéric II survivent mais ne portent plus l&#39;unité. Aucune faction n&#39;impose une codification stable — crise féodale qui aurait pu basculer en PO si l&#39;homogénéité élitaire avait suffi. Mécanisme insuffisance interne, effet avortement."
+                onclick="showDetail(14)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Guerre civile angevine</span><span class="saillant-date">1382</span></div>
+        </div>
+        <div class="saillant-group" style="left:60.6143%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Crise féodale&lt;/strong&gt;&#10;Succession Anjou-Aragon (1435)&#10;Mort de Joanne II (1435) sans héritier direct. Guerre dynastique entre René d&#39;Anjou (héritier désigné en 1438) et Alphonse V d&#39;Aragon, qui revendique le testament antérieur. Conquête aragonaise progressive (siège de Naples 1441-1442). &lt;strong&gt;Crise terminale&lt;/strong&gt; : Alphonse V, victorieux, ne se contente pas d&#39;imposer sa dynastie — il transpose le modèle institutionnel aragonais (parlement à trois bras, *Sacro Regio Consiglio*, *Sommaria*, *Vicaria*) et négocie en 1444 les *Capitula Regni*. La conquête aragonaise est ainsi une captation exogène &lt;strong&gt;stabilisatrice&lt;/strong&gt; : au lieu de relancer un cycle féodal (comme Anjou 1266), elle débloque la convergence des conditions de Deblonde par importation d&#39;un modèle parlementaire externe."
+                onclick="showDetail(15)">
+                <span class="material-symbols-outlined">swords</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Crise féodale</span><span class="saillant-figure">Succession Anjou-Aragon</span><span class="saillant-date">1435</span></div>
+        </div>
+        <div class="saillant-group" style="left:61.4273%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Capitula Regni (1444)&#10;Les *Capitula Regni* négociés en 1444 entre Alphonse V d&#39;Aragon et le parlement napolitain à trois bras (baronnial, ecclésiastique, villes royales) constituent le PO canonique. Ils codifient l&#39;exercice du pouvoir : consentement parlementaire aux subsides extraordinaires (*donativi*), garanties juridictionnelles, prérogatives parlementaires reconnues. Acte formel daté + caractère collectif (parlement tripartite) + moment de faiblesse (post-conquête) : les trois conditions structurelles cochées. Mécanisme « codification de l&#39;exercice du pouvoir ». Le parlement fonctionnera sur cette base jusqu&#39;à sa dernière convocation en 1642."
+                onclick="showDetail(19)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Capitula Regni</span><span class="saillant-date">1444</span></div>
+        </div>
+        <div class="saillant-group" style="left:62.6920%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1er monarque oligarchique&lt;/strong&gt;&#10;Ferrante (1458)&#10;À la mort d&#39;Alphonse V (1458), la couronne d&#39;Aragon revient à son frère Jean II tandis que Naples passe à son fils naturel Ferrante (1458-1494) — confirmé par le pape Pie II et accepté par le parlement. Ferrante est le 1er monarque oligarchique post-PO : sa légitimité repose sur les *Capitula Regni* (élection parlementaire confirmée, cadre négocié) et non sur la stature personnelle féodale. Il déploie l&#39;appareil aragonais (Sommaria, Vicaria), perçoit le *focatico*, lève la *Dohana Mena Pecudum* (1447), maintient le parlement, écrase la conjuration des barons (1485-1487) avec exécutions et confiscations massives. Test discriminant satisfait — pouvoir survit aux successions par cadre collectif."
+                onclick="showDetail(20)">
+                <span class="material-icons">stars</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque oligarchique</span><span class="saillant-figure">Ferrante</span><span class="saillant-date">1458</span></div>
+        </div>
+        <div class="saillant-group" style="left:66.7570%;">
+            <div class="saillant-marker perturbation-marker" style="background:#E67E22;"
+                data-tooltip="&lt;strong&gt;Cerignola&lt;/strong&gt;&#10;Conquête espagnole (1503)&#10;1500-1501 : traité de Grenade entre Louis XII et Ferdinand le Catholique pour partager Naples ; Frédéric IV exilé. 1502-1503 : guerre franco-espagnole pour le contrôle exclusif ; victoires de Gonzalve de Cordoue à Cerignola (avril 1503) et au Garigliano (décembre 1503). Naples passe sous vice-royauté espagnole pour deux siècles. Mécanisme choc exogène (conquête étrangère et installation d&#39;une administration vice-royale durable), effet prolongement de la phase oligarchique par mise sous tutelle. Le royaume conserve ses institutions internes (parlement, Sacro Regio Consiglio, droit napolitain) mais ne dispose plus de souverain résident — les décisions stratégiques majeures passent à Madrid via le Conseil d&#39;Italie. Interrompt l&#39;essor oligarchique aragonais à mi-course."
+                onclick="showDetail(21)">
+                <span class="material-icons">open_in_full</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Cerignola</span><span class="saillant-figure">Conquête espagnole</span><span class="saillant-date">1503</span></div>
+        </div>
+        <div class="saillant-group" style="left:79.7651%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Masaniello (1647)&#10;7 juillet 1647 : Tommaso Aniello (« Masaniello ») déclenche une révolte populaire à Naples contre la gabelle des fruits ; courte république populaire jusqu&#39;à son assassinat (16 juillet) ; institutions populaires sous Gennaro Annese ; intervention française d&#39;Henri de Guise (novembre 1647), proclamation de la *Repubblica Napoletana* ; reprise espagnole en avril 1648 sous Don Juan d&#39;Autriche. Factions structurées : popolari + togati + segments baronnial anti-Madrid vs Crown hispanique + baronnie loyaliste. Enjeu = contrôle de l&#39;appareil central (abolition des gabelles, redistribution fiscale, reconfiguration institutionnelle). Mécanisme choc exogène (intervention armée espagnole), effet avortement — la résolution endogène par synthèse n&#39;a pas le temps d&#39;émerger."
+                onclick="showDetail(24)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Masaniello</span><span class="saillant-date">1647</span></div>
+        </div>
+        <div class="saillant-group" style="left:87.6242%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Charles VII (1734)&#10;Charles VII de Bourbon (1734-1759, fils de Philippe V d&#39;Espagne, devient Charles III d&#39;Espagne en 1759) est installé à Naples en mai 1734 par les armées espagnoles, confirmé par le traité de Vienne 1738. &lt;strong&gt;Premier monarque résident depuis Frédéric II&lt;/strong&gt;, autonome de Madrid après 1759. Configuration *figure dynastique avec administration distincte* : Tanucci (juriste toscan, hors baronnie napolitaine) + togati napolitains + juristes-philosophes (Genovesi, Filangieri, Pagano) opèrent l&#39;appareil. Acte fondateur composite : Concordat 1741, Catasto Onciario 1741, expulsion des jésuites 1767, pragmatiques unifiantes. Test discriminant absolutiste passé : préséance de l&#39;administration centrale (parlement aboli depuis 1642, Sacro Regio Consiglio comme cour suprême avec recours possible au-dessus des juridictions seigneuriales), exécutif sans frein juridique des oligarques (décrets royaux), résolution par synthèse (baronnie intégrée comme noblesse de cour, togati comme cadre administratif, Crown arbitrant)."
+                onclick="showDetail(28)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Charles VII</span><span class="saillant-date">1734</span></div>
+        </div>
+        <div class="saillant-group" style="left:88.2565%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Saturation fiscale&lt;/strong&gt;&#10;Catasto Onciario bloqué (1741)&#10;Le Catasto Onciario, promulgué par Charles VII en 1740 et élaboré par Tanucci, vise une taxation universelle de tous les patrimoines en *once* incluant biens nobles et ecclésiastiques. La résistance est immédiate et structurellement efficace : déclarations falsifiées par les propriétaires, contrôle communal capturé par le baronnage local, biens féodaux exemptés, clergé taxé à demi. En 1753, Charles VII envoie des commissaires royaux dans les communes récalcitrantes — aveu d&#39;échec administratif. Vers 1770, la Couronne accepte le retour au système des gabelles. &lt;strong&gt;Cas atypique&lt;/strong&gt; : la Saturation (1755) précède l&#39;Acmé absolutiste sous Tanucci (1759-1776), inversion par rapport au canon ; le blocage de la voie fiscale directe redirige l&#39;absolutisme bourbonien vers les autres terrains (regalisme anti-clérical, juridictionnel). À remonter comme variante structurelle (séquence compressée dans AR endogène court 1755-1798). Sources : Calabria, Galasso, Astarita."
+                onclick="showDetail(29)">
+                <span class="material-icons">payments</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Saturation fiscale</span><span class="saillant-figure">Catasto Onciario bloqué</span><span class="saillant-date">1741</span></div>
+        </div>
+        <div class="saillant-group" style="left:89.8826%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Acmé absolutiste&lt;/strong&gt;&#10;Tanucci (1759)&#10;L&#39;acmé absolutiste napolitain est porté par Bernardo Tanucci (premier ministre 1759-1776 sous régence puis sous Ferdinand IV), pas par le souverain titulaire. Pic de modernisation administrative (expulsion des jésuites 1767, contrôle ecclésiastique renforcé, ministères organisés) et apogée culturel (Genovesi première chaire d&#39;économie politique européenne 1754, Filangieri *La scienza della legislazione* 1780-1785, Pagano *Saggi politici* 1783-1785), prestige diplomatique européen. Acmé modeste contraint par la taille de la nation — pas de projection militaire impérialiste possible."
+                onclick="showDetail(31)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé absolutiste</span><span class="saillant-figure">Tanucci</span><span class="saillant-date">1759</span></div>
+        </div>
+        <div class="saillant-group" style="left:94.1283%;">
+            <div class="saillant-marker perturbation-marker" style="background:#2980B9;"
+                data-tooltip="&lt;strong&gt;Décennie française&lt;/strong&gt;&#10;Joseph Bonaparte (1806)&#10;14 février 1806 : entrée des troupes françaises à Naples. Joseph Bonaparte couronné roi (mars 1806). &lt;strong&gt;2 août 1806 : décret d&#39;abolition de la féodalité&lt;/strong&gt; — suppression des juridictions seigneuriales, du *mero e misto imperio*, des banalités, de l&#39;*adoa*, des servitudes personnelles. Commissione feudale (1807-1810, présidée par Davide Winspeare, juriste napolitain) règle des milliers de litiges et opère un transfert massif de propriétés (de 2 000 grands propriétaires en 1806 à plus de 18 000 en 1815). Joseph passe à Madrid en 1808 ; Joachim Murat règne (1808-1815). Code civil napolitain (1809), conscription, intendances préfectorales, cadastre, Banco delle Due Sicilie (1808). Mécanisme choc exogène modernisateur, effet accélération par &lt;strong&gt;complétion exogène de l&#39;absolutisation&lt;/strong&gt; — Joseph achève par contrainte ce que le programme prébendier-tanuccien réclamait depuis 50 ans sans pouvoir l&#39;imposer."
+                onclick="showDetail(32)">
+                <span class="material-icons">fast_forward</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Décennie française</span><span class="saillant-figure">Joseph Bonaparte</span><span class="saillant-date">1806</span></div>
+        </div>
+        <div class="saillant-group" style="left:95.3930%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Éclatement de l&#39;AR&lt;/strong&gt;&#10;Pronunciamento de Nola (1820)&#10;2 juillet 1820 : pronunciamento carbonaro à Nola sous Guglielmo Pepe (vétéran napoléonien). Ferdinand I octroie la Constitution espagnole le 13 juillet sous pression. &lt;strong&gt;Premier Éclatement de l&#39;AR napolitain&lt;/strong&gt; — éclatement précoce sur AR jeune (5 ans) mais hérité du cadre napoléonien sclérosé, porté par les carbonari (vétérans napoléoniens + bourgeois libéraux) qui ne tolèrent pas la régression Bourbon de 1815."
+                onclick="showDetail(36)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éclatement de l&#39;AR</span><span class="saillant-figure">Pronunciamento de Nola</span><span class="saillant-date">1820</span></div>
+        </div>
+        <div class="saillant-group" style="left:95.3930%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Constitution espagnole (1820)&#10;Parlement réuni à Naples (octobre 1820 - mars 1821) sur base de la Constitution espagnole de 1812. ~8 mois d&#39;expérience constitutionnelle libérale, conflit ouvert avec la révolte autonomiste palermitaine (qui revendique sa propre Constitution sicilienne de 1812). Brève expérience parlementaire interrompue avant maturation institutionnelle."
+                onclick="showDetail(37)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Constitution espagnole</span><span class="saillant-date">1820</span></div>
+        </div>
+        <div class="saillant-group" style="left:95.4833%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Écrasement&lt;/strong&gt;&#10;Rieti (1821)&#10;Janvier 1821 : Congrès de Laibach décide l&#39;intervention austro-impériale contre le régime constitutionnel napolitain. &lt;strong&gt;7 mars 1821 : bataille de Rieti&lt;/strong&gt;, défaite de l&#39;armée constitutionnelle de Guglielmo Pepe par les troupes de Frimont. Restauration absolutiste à Naples, exil des libéraux, exécutions. Écrasement de la RN par choc exogène militaire — pas de phase aiguë de radicalisation interne, la RN est écrasée de l&#39;extérieur avant maturation. Mécanisme choc exogène (Sainte-Alliance), effet avortement."
+                onclick="showDetail(38)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Écrasement</span><span class="saillant-figure">Rieti</span><span class="saillant-date">1821</span></div>
+        </div>
+        <div class="saillant-group" style="left:97.9223%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Éclatement de l&#39;AR&lt;/strong&gt;&#10;Constitution de janvier (1848)&#10;Janvier 1848 : insurrection populaire napolitaine, synchronisée avec le soulèvement palermitain (12 janvier) et la vague italienne. &lt;strong&gt;29 janvier 1848&lt;/strong&gt; : Ferdinand II octroie une Constitution bicamérale sous pression révolutionnaire (Naples est la première capitale italienne à octroyer, avant Pie IX, Léopold II, Charles-Albert). &lt;strong&gt;Second Éclatement de l&#39;AR napolitain&lt;/strong&gt; — sur AR mature (33 ans cumulés depuis 1815), discrédit avéré, ruine partielle. Conditions structurelles d&#39;éclatement endogène mieux réunies qu&#39;en 1820, mais tutelle internationale et division Sicile-continent fragilisent."
+                onclick="showDetail(43)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éclatement de l&#39;AR</span><span class="saillant-figure">Constitution de janvier</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:97.9223%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Parlement de Naples (1848)&#10;Parlement bicaméral réuni à Naples sur base de la Constitution de janvier 1848 (chambre des pairs + chambre des députés). ~1 mois d&#39;activité effective (avril - 15 mai 1848). Tension immédiate avec Ferdinand II qui refuse de prêter serment au texte modifié par les députés. Expérience parlementaire avortée avant maturation, plus brève qu&#39;en 1820."
+                onclick="showDetail(44)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Parlement de Naples</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:97.9223%;">
+            <div class="saillant-marker perturbation-marker" style="background:#c0392b;"
+                data-tooltip="&lt;strong&gt;Écrasement&lt;/strong&gt;&#10;Coup du 15 mai (1848)&#10;&lt;strong&gt;15 mai 1848&lt;/strong&gt; : combats de rue à Naples entre troupes royales et milices nationales libérales, Ferdinand II suspend la Constitution, dissout le parlement. &lt;strong&gt;Septembre 1848&lt;/strong&gt; : bombardement de Messine (d&#39;où le surnom *Re Bomba*). &lt;strong&gt;Mai 1849&lt;/strong&gt; : reconquête de la Sicile par Filangieri achevée. Écrasement par contre-révolution royale appuyée sur le contexte austrien italien (défaite des révolutions du Nord, intervention austrienne contre Charles-Albert). Pas de phase aiguë interne de radicalisation — la RN est écrasée par coup royal et répression militaire avant maturation. Discrédit accru (campagne Gladstone *Letters to Lord Aberdeen* 1851 — *negazione di Dio eretta a sistema di governo*), mais régime tient ses finances et résiste jusqu&#39;en 1860. Mécanisme choc exogène, effet avortement."
+                onclick="showDetail(45)">
+                <span class="material-icons">block</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Écrasement</span><span class="saillant-figure">Coup du 15 mai</span><span class="saillant-date">1848</span></div>
+        </div>
+        <div class="saillant-group" style="left:99.0063%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Unification italienne&lt;/strong&gt;&#10;Garibaldi et plébiscite (1860)&#10;11 mai 1860 : débarquement à Marsala. Mai-août 1860 : conquête de la Sicile, traversée du détroit (19 août). 7 septembre 1860 : entrée de Garibaldi à Naples ; François II se réfugie à Gaète (siège novembre 1860 - février 1861). 1ᵉʳ-2 octobre 1860 : bataille du Volturne. 21 octobre 1860 : plébiscite massivement favorable à l&#39;annexion (1 302 064 oui contre 10 312 non). 17 mars 1861 : proclamation du Royaume d&#39;Italie. Le Parcours napolitain se dissout par fusion dans le Parcours italien — l&#39;AR exogène est absorbé avant éclatement endogène complet, pas par RN aboutie. *Grande Brigantaggio* 1861-1865 (~80 000 hommes en armes, ~12 000 morts) : résistance qui relève &lt;strong&gt;du Parcours italien comme rébellion périphérique&lt;/strong&gt;, pas du Parcours napolitain endogène."
+                onclick="showDetail(48)">
+                <span class="material-icons">diamond</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Unification italienne</span><span class="saillant-figure">Garibaldi et plébiscite</span><span class="saillant-date">1860</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 16/05/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'prefeodale','title':'Phase pré-féodale','subtitle':'','summary':'Phase pré-féodale anormalement longue (~356 ans) par fragmentation polycentrique persistante. L\'effondrement du royaume lombard du Nord (774) laisse Bénévent autonome, mais l\'Italie méridionale reste partagée entre principautés lombardes (Bénévent, Capoue, Salerne après 849), duchés byzantins maritimes (Naples, Amalfi, Gaète), enclaves arabes intermittentes. Aucun chef supra-régional n\'émerge avant l\'arrivée des Hauteville au XIᵉ siècle. La percolation élitaire endogène se déploie sur cette mosaïque sans cristallisation, jusqu\'à ce que les Normands l\'unifient par conquête.','description':'Avant 774, le Mezzogiorno est inscrit dans des structures supra-régionales appartenant à d\'autres ensembles (royaume lombard de Pavie, Empire byzantin, Empire carolingien comme suzerain nominal post-774) ; aucune percolation élitaire endogène n\'y est lisible. La chute de Pavie sous Charlemagne (774) émancipe Bénévent, dont Arichis II prend le titre de *princeps*. La *Divisio Beneventi* (849) éclate la principauté en trois (Bénévent, Salerne, Capoue), aux côtés des duchés byzantins maritimes et des enclaves arabes (émirat de Bari 847-871, Tarente). La fragmentation se prolonge jusqu\'à l\'arrivée des frères normands : mercenaires d\'abord (1030, Aversa concédée à Rainulf Drengot), conquérants ensuite (Robert Guiscard *dux Apuliae et Calabriae* 1059, traité de Melfi avec la papauté). Les Hauteville unifient progressivement le sud par conquête, absorbant les élites lombardes, byzantines et arabes locales dans leur appareil multilingue. L\'éveil féodal canonique advient au couronnement de Roger II en 1130, qui crée le *Regnum Siciliae* — premier chef supra-régional dont l\'autorité force toutes les élites du Mezzogiorno et de la Sicile à se positionner.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+236 ans. Persistance d\'une mosaïque polycentrique sous suzerainetés impériales nominales (carolingienne puis ottonienne) et intégration normande progressive. La percolation élitaire est continue mais ne cristallise pas avant la conquête Hauteville.','typical_duration':'~90-120 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Éveil féodal de Roger II (1130) — couronnement comme *Rex Siciliae*, premier chef supra-régional dont l\'autorité unifie l\'Italie méridionale péninsulaire et l\'île.','resolution_conditions':'','avortement':'','start':774,'end':1130,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'prefeodale','title':'Percolation élitaire','subtitle':'','summary':'Sous-phase de 356 ans. Émergence d\'aristocraties lombardes (*gastalds*, comtes), byzantines (*tribuni*, *consules*), bourgeoisies maritimes (Amalfi, Gaète), monastères réformateurs (Mont-Cassin), enclaves arabes intermittentes. Aucun chef supra-régional avant la conquête normande. La fragmentation se prolonge sous les Hauteville (Robert Guiscard, Roger Ier de Sicile) qui consolident progressivement par traités, mariages et conquêtes, jusqu\'au couronnement de Roger II (1130).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':774,'end':1130,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale (cycle 1)','subtitle':'','summary':'Premier cycle féodal du Parcours napolitain (~136 ans). Roger II éveille le *Regnum Siciliae* unifié (1130) ; deux pics féodaux (Roger II 1130-1154, Frédéric II 1198-1250) consolident temporairement sans produire de PO. Deux crises féodales avortent par insuffisance interne (extinction lignée mâle Hauteville 1189-1194, extinction Hohenstaufen 1250-1266). La cristallisation finale est empêchée par la conquête angevine de 1266, qui rase le tissu vassalique et ouvre un nouveau cycle féodal.','description':'Le cycle féodal Hauteville-Hohenstaufen ne parvient pas à converger vers un PO endogène, malgré deux pics féodaux institutionnellement avancés (Assises d\'Ariano 1140, *Liber Augustalis* 1231). Le moteur étatique progresse fortement — appareil multilingue, codification royale, université d\'État — mais reste un outil du roi qui s\'effondre à chaque succession difficile. L\'homogénéité élitaire, fragilisée par le mélange ethnique (lombards, normands, grecs, arabes) et les tensions dynastiques, ne suffit pas à produire un acte collectif des oligarques. La conquête angevine de 1266 ferme définitivement la fenêtre du PO Hauteville-Hohenstaufen et ouvre, par convention de phase, un nouveau cycle féodal sur une couche élitaire neuve.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-64 ans (par rapport à la durée typique de 200 ans). Cycle interrompu par reboot exogène avant convergence des conditions de Deblonde — la phase féodale se prolonge de fait dans le cycle 2.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Reboot féodal angevin (1266) — Charles I d\'Anjou conquiert le *Regnum* à Bénévent et redistribue les fiefs aux Français/Provençaux, terminant le cycle Hauteville-Hohenstaufen sans PO.','resolution_conditions':'','avortement':'','start':1130,'end':1266,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites (cycle 1)','subtitle':'','summary':'Sous-phase de 136 ans sur élite Hauteville-Hohenstaufen. Pic Roger II (1130-1154), pic Frédéric II (1198-1250), deux crises féodales avortées par insuffisance interne (mort de Tancrède 1189-1194, effondrement Hohenstaufen 1250-1266). Aucune des deux crises ne produit de PO — la captation Hohenstaufen 1194 prolonge le cycle, l\'extinction Hohenstaufen 1266 le clôt par reboot angevin.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1130,'end':1266,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Roger II','summary':'Le 25 décembre 1130, Roger II est couronné *Rex Siciliae* à Palerme par décision de l\'antipape Anaclet II. Il unifie pour la première fois sous une même couronne l\'Italie méridionale péninsulaire (Pouille, Calabre, Campanie) et la Sicile insulaire. Premier chef supra-régional dont la puissance personnelle force la coalition baronnie+pape+Empereur à se positionner (guerres 1130-1139, capitulation d\'Innocent II à Mignano 1139). Test discriminant éveil féodal satisfait — capacité d\'arbitrage effective à l\'échelle du *Regnum*.','description':'','figure':'Roger II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1130,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Roger II','summary':'Premier pic féodal du Parcours napolitain. Projection externe : raids africains (Mahdia 1148), interventions en Italie centrale, conflits avec Byzance et l\'Empire. Codification royale : Assises d\'Ariano (1140, premier code unilatéral pour le *Regnum*). Cristallisation de l\'opposition : révoltes baronniales sous Roger II et Guillaume Ier (1154-1166, assassinat du chancelier Maion 1160). Appareil administratif multilingue (Curia regis, *duana de secretis*, justiciars provinciaux) — exceptionnel pour le XIIᵉ siècle, mais outil du roi.','description':'','figure':'Roger II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1130,'end':1154,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Mort de Tancrède','summary':'Mort de Guillaume II sans héritier mâle (1189) → succession contestée entre Tancrède de Lecce (faction « lombarde ») et Constance, fille posthume de Roger II, épouse d\'Henri VI Hohenstaufen. Tancrède règne 1190-1194 mais sa mort prématurée ouvre la voie à la conquête impériale (1194). La fenêtre de PO endogène se ferme — l\'homogénéité élitaire n\'est pas atteinte au sein de l\'élite Hauteville. Mécanisme insuffisance interne (extinction de la lignée mâle Hauteville, succession non codifiée), effet avortement.','description':'','figure':'Tancrède de Lecce','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1189,'end':1194,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Frédéric II','summary':'Frédéric II Hohenstaufen (roi de Sicile depuis 1198, empereur depuis 1220) constitue le second pic féodal du Parcours. Projection externe massive (croisade 1228-1229 et couronnement à Jérusalem, conflits avec papauté et communes lombardes), codification royale exceptionnelle (*Liber Augustalis* 1231 — 253 clauses, juges salariés, suppression des juridictions privées non concédées, monopoles royaux), Université de Naples (1224) formant les fonctionnaires. Pic démultiplié par projection impériale supranationale, mais l\'appareil reste un outil du roi qui s\'effondre à sa mort.','description':'','figure':'Frédéric II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1198,'end':1250,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Effondrement Hohenstaufen','summary':'Mort de Frédéric II (13 décembre 1250). Conrad IV (1250-1254) ne contrôle déjà plus le royaume. Manfred régent puis usurpateur (1258-1266) sans légitimité dynastique reconnue. Croisade angevine instrumentalisée par la papauté contre les Hohenstaufen ; défaite et mort de Manfred à Bénévent (26 février 1266). La crise féodale aurait pu déboucher sur un PO endogène si la dynastie souabe avait stabilisé sa transmission ; au lieu de cela, l\'extinction Hohenstaufen + croisade papale ouvrent la voie au reboot angevin. Mécanisme insuffisance interne, effet avortement.','description':'','figure':'Manfred','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1250,'end':1266,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale (cycle 2)','subtitle':'','summary':'Second cycle féodal (~178 ans), ouvert par reboot angevin sur une couche élitaire neuve. Pic Charles I d\'Anjou (1266-1285), perturbation territoriale Vêpres siciliennes (1282), deux crises féodales (guerre civile angevine 1382-1414 avortée par bouclage ; succession Anjou-Aragon 1435-1442 terminale). La conquête aragonaise de 1442 importe le modèle parlementaire à trois bras qui débouche sur le PO Capitula Regni de 1444 — captation exogène stabilisatrice (au lieu de relancer un cycle, comme avait fait Anjou).','description':'Le cycle 2 démarre par reboot angevin sur élite française/provençale, parallèle à la conquête normande de l\'Angleterre 1066 — par convention historionomique, un reboot marque un nouveau début de phase féodale. Charles I d\'Anjou est l\'éveil féodal de cette nouvelle phase : premier chef supra-régional du nouveau réseau vassalique, qui force toutes les élites néo-installées (barons français, ecclésiastiques romains, communes survivantes) à se positionner par rapport à lui. Continuité institutionnelle (Constitutions de Melfi confirmées) mais réinitialisation complète des fidélités personnelles. Le cycle s\'allonge par perturbation territoriale (Vêpres 1282 : sécession sicilienne, recentrage forcé) et par deux crises féodales — guerre civile angevine 1382-1414 (avortée par bouclage), succession Anjou-Aragon 1435-1442 (terminale). La conquête aragonaise de 1442 importe enfin un cadre parlementaire éprouvé qui produit le PO Capitula Regni en 1444 par codification de l\'exercice du pouvoir.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-22 ans (par rapport à 200 ans typiques). Durée proche de la norme — cycle 2 plus court parce que stabilisé par captation aragonaise institutionnellement importée plutôt que par bouclage indéfini.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique des *Capitula Regni* (1444) — Alphonse V négocie avec le parlement à trois bras un cadre fiscal et constitutionnel codifié.','resolution_conditions':'','avortement':'','start':1266,'end':1444,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites (cycle 2)','subtitle':'','summary':'Sous-phase de 176 ans sur élite Anjou-Aragon. Éveil et pic féodal Charles I (1266-1285), Vêpres siciliennes (1282), crise féodale guerre civile angevine (1382-1414), crise terminale succession Anjou-Aragon (1435-1442). La cristallisation finale advient à la conquête aragonaise (1442), qui ouvre une bascule oligarchique courte.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1266,'end':1442,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Bénévent','summary':'26 février 1266 : Charles I d\'Anjou défait Manfred à Bénévent, est couronné roi de Sicile par Clément IV. 23 août 1268 : Tagliacozzo, défaite et exécution de Conradin (29 octobre 1268), fin de la dynastie Hohenstaufen. <strong>Reboot féodal par swap d\'élites</strong> : ~700 fiefs concédés à des barons français/provençaux, capitale déplacée à Naples, élite Hauteville-Hohenstaufen liquidée ou dispersée. Charles I est l\'éveil féodal du cycle 2 — premier chef supra-régional du nouveau réseau vassalique, qui force toutes les élites néo-installées à se positionner.','description':'Bénévent (1266) et Tagliacozzo (1268) ne sont pas une simple captation dynastique mais un swap d\'élites par invasion comparable à Hastings 1066. Charles d\'Anjou n\'hérite pas du *Regnum* par mariage légitime (comme Henri VI en 1194 via Constance) — il le conquiert militairement avec sa propre noblesse française et provençale, qui se voit attribuer les fiefs des partisans souabes confisqués. Les Constitutions de Melfi sont confirmées (continuité institutionnelle), mais le réseau de fidélités personnelles qui constituait le cycle 1 est intégralement détruit et remplacé. Par convention historionomique, le reboot ouvre une nouvelle phase féodale dont Charles I est l\'éveil féodal — parallèle structurel avec William le Conquérant en Angleterre (1066). Distinct du choc Hohenstaufen 1194 (héritage légitime, élite locale conservée) et de la conquête aragonaise 1442 (importation institutionnelle sans reboot). Apport théorique : la méthodologie standard discute le reboot inter-phase (régression à phase antérieure) ; le cas napolitain documente un reboot intra-phase féodale par swap d\'élites avec convention de nouvelle phase.','figure':'Charles I d\'Anjou','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1266,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Pic féodal','subtitle':'Charles I d\'Anjou','summary':'Pic féodal du second cycle. Projection externe ambitieuse : projet de reconquête de Constantinople (interrompu par les Vêpres 1282), interventions en Italie centrale (sénateur de Rome, vicariat impérial en Toscane), guerre contre Aragon. Continuité administrative (Magna Curia, *iustitiarii* régionaux des Hohenstaufen confirmés), nouvelle aristocratie franco-provençale dotée des fiefs confisqués. Cristallisation de l\'opposition : Vêpres siciliennes (1282) qui détachent l\'île, révoltes baronniales sporadiques sur le continent.','description':'','figure':'Charles I d\'Anjou','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1266,'end':1285,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Vêpres siciliennes','subtitle':'Sécession sicilienne','summary':'Le 30 mars 1282, soulèvement palermitain expulse la garnison angevine ; Pierre III d\'Aragon est couronné roi de Sicile en septembre. La guerre des Vêpres (1282-1302) sépare définitivement la Sicile insulaire (qui ouvre son propre Parcours autour du PO de 1296) du Mezzogiorno continental. Sicile avait été digérée par le *Regnum* unifié sous Hauteville-Hohenstaufen (1130-1266, administration multilingue commune) ; sa perte est une <strong>correction d\'échelle</strong> qui ramène Naples à son noyau péninsulaire culturellement plus homogène. Mécanisme correction d\'échelle (perte de la marge digérée), effet accélération par homogénéisation du noyau et recentrage sur la péninsule.','description':'','figure':'','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1282,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Guerre civile angevine','summary':'Mort sans héritier de Robert le Sage (1343) → règne contesté de Jeanne Ire (1343-1382, plusieurs maris assassinés) → assassinat de Jeanne Ire (1382) → guerre dynastique entre Anjou-Duras (Charles III, Ladislas, Joanne II) et Anjou-Valois (Louis Ier, Louis II) jusqu\'aux années 1410-1414. Le pouvoir effectif est fragmenté entre prétendants et factions baronniales rivales ; les institutions héritées de Frédéric II survivent mais ne portent plus l\'unité. Aucune faction n\'impose une codification stable — crise féodale qui aurait pu basculer en PO si l\'homogénéité élitaire avait suffi. Mécanisme insuffisance interne, effet avortement.','description':'','figure':'Jeanne Ire / Ladislas','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1382,'end':1414,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Crise féodale','subtitle':'Succession Anjou-Aragon','summary':'Mort de Joanne II (1435) sans héritier direct. Guerre dynastique entre René d\'Anjou (héritier désigné en 1438) et Alphonse V d\'Aragon, qui revendique le testament antérieur. Conquête aragonaise progressive (siège de Naples 1441-1442). <strong>Crise terminale</strong> : Alphonse V, victorieux, ne se contente pas d\'imposer sa dynastie — il transpose le modèle institutionnel aragonais (parlement à trois bras, *Sacro Regio Consiglio*, *Sommaria*, *Vicaria*) et négocie en 1444 les *Capitula Regni*. La conquête aragonaise est ainsi une captation exogène <strong>stabilisatrice</strong> : au lieu de relancer un cycle féodal (comme Anjou 1266), elle débloque la convergence des conditions de Deblonde par importation d\'un modèle parlementaire externe.','description':'','figure':'Joanne II / René d\'Anjou / Alphonse V','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1435,'end':1442,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Bascule oligarchique','subtitle':'','summary':'Sous-phase courte (~2 ans), terminale de la phase féodale. Conquête de Naples par Alphonse V (juin 1442), entrée triomphale, transposition du modèle institutionnel aragonais, négociation des *Capitula Regni* avec le parlement à trois bras. Le PO de 1444 clôt la phase féodale (filé sous oligarchique en 1er saillant d\'essor).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1442,'end':1444,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'Phase oligarchique longue (~290 ans), structurée en quatre temps. Essor aragonais court (1444-1503), interrompu par la conquête espagnole. Polarisation longue sous tutelle hispanique (1503-1647) : émergence du clivage prébendier (togati, popolari, bourgeoisie urbaine) vs patrimonial (baronnie territoriale, curie romaine), gel partiel par tutelle. <strong>Guerre sociale Masaniello (1647-1648) avortée par reconquête espagnole</strong> avant qu\'un cadre central résolvant n\'émerge. Polarisation reprise sous tutelle continue (1648-1734) jusqu\'à la conquête bourbonienne qui installe une dynastie résidente capable d\'opérer la synthèse absolutiste.','description':'La phase oligarchique napolitaine s\'ouvre par un PO canonique (Capitula Regni 1444) après l\'absorption aragonaise. Sous Ferrante (1458-1494), 1er monarque oligarchique post-PO, l\'appareil aragonais (Sacro Regio Consiglio, Sommaria, Vicaria, parlement général) fonctionne effectivement et les votes parlementaires fixent les *donativi* extraordinaires. La conjuration des barons (1485-1487, Antonello Sanseverino prince de Salerne, Coppola, Petrucci) écrasée par Ferrante avec exécutions massives reste un conflit lignager, pas encore une polarisation prébendier/patrimonial cristallisée. La conquête française (1494-1495) puis espagnole (1503) interrompent la dynamique aragonaise endogène et installent une vice-royauté espagnole qui durera plus de deux siècles. Sous tutelle hispanique, le royaume conserve ses institutions internes (parlement, Sacro Regio Consiglio, *Prammatica de Baronibus* 1517-1554, droit napolitain, banques publiques) — Parcours endogène sous tutelle, pas marge impériale passive. La polarisation se cristallise progressivement : Pedro de Toledo (1532-1553) tente l\'absolutisation déléguée (limite des juridictions seigneuriales, contrôle judiciaire, tentative ratée d\'Inquisition espagnole 1547 — premier choc multi-factionnel), émergence de la classe togata (Sacro Regio Consiglio, école juridique de Francesco D\'Andrea puis Giuseppe Valletta), oligarchisation fiscale par *arrendamenti* à des consortiums de créanciers privés (1620s onwards), pression fiscale extrême (1638-1647). La guerre sociale ouverte de 1647-1648 (Masaniello, *Repubblica Napoletana* sous Gennaro Annese, intervention française d\'Henri de Guise) est avortée par la reconquête espagnole de Don Juan d\'Autriche avant qu\'un cadre central résolvant n\'émerge — la phase oligarchique se poursuit (cf. `phase_oligarchique.md` §Non-résolution). 86 ans de polarisation reprise sous tutelle continue (Habsbourg de Madrid, puis de Vienne après Utrecht 1713) avec maturation du programme prébendier (Pietro Giannone *Istoria civile del Regno di Napoli* 1723, anticurialisme juridique). La conquête bourbonienne de 1734 installe enfin une dynastie résidente capable de porter la résolution absolutiste, en s\'alignant explicitement avec la faction prébendière contre la patrimoniale.','figure':'','confidence':'','alternatives':'','step':'','deviation':'+90 ans. Phase prolongée par <strong>avortement de la guerre sociale par puissance étrangère</strong> (Madrid 1648 refuse toute résolution endogène). Les exutoires diffus disponibles aux élites napolitaines (service militaire dans les armées hispaniques, charges dans le réseau monarchique hispanique, extension latifundiaire vers le sud) ne constituent pas un vrai exutoire étatique au sens de `phase_oligarchique.md` (test des trois OUI non passé) et ne prolongent pas structurellement la phase au-delà de leur fonction de retardement de la polarisation. L\'allongement vient principalement du blocage exogène post-Masaniello.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'1er monarque absolu Charles VII de Bourbon (1734) — figure dynastique résidente avec administration distincte (Tanucci toscan + togati napolitains), confirmée par le traité de Vienne 1738.','resolution_conditions':'','avortement':'','start':1444,'end':1734,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'Sous-phase courte (~60 ans) sous dynastie aragonaise napolitaine. Ouverture par le **Pacte oligarchique des *Capitula Regni* (1444)**, 1er saillant de la phase oligarchique. Ferrante (1458-1494) déploie l\'appareil aragonais (Sommaria, Vicaria), perçoit le *focatico*, lève la *Dohana Mena Pecudum*, écrase la conjuration des barons (1485-1487, conflit encore lignager). Pas de projection externe propre. Coupée par les Guerres d\'Italie (Charles VIII 1494, Louis XII 1501, conquête espagnole définitive 1503). Quasi-exutoire mineur sous forme de service mercenaire dans les guerres italiennes et d\'extension latifundiaire vers la Capitanata.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1444,'end':1503,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pacte oligarchique','subtitle':'Capitula Regni','summary':'Les *Capitula Regni* négociés en 1444 entre Alphonse V d\'Aragon et le parlement napolitain à trois bras (baronnial, ecclésiastique, villes royales) constituent le PO canonique. Ils codifient l\'exercice du pouvoir : consentement parlementaire aux subsides extraordinaires (*donativi*), garanties juridictionnelles, prérogatives parlementaires reconnues. Acte formel daté + caractère collectif (parlement tripartite) + moment de faiblesse (post-conquête) : les trois conditions structurelles cochées. Mécanisme « codification de l\'exercice du pouvoir ». Le parlement fonctionnera sur cette base jusqu\'à sa dernière convocation en 1642.','description':'Le PO napolitain est une transposition aragonaise (modèle Cortes de Catalogne et Aragon) imposée par conquête et négociée immédiatement avec les élites locales. Cette importation institutionnelle est la condition même de sa réussite : tant que les souverains endogènes successifs (Hauteville, Hohenstaufen, Anjou) tentaient de gouverner par codification royale unilatérale (Assises d\'Ariano, *Liber Augustalis*) sans céder aux oligarques, la convergence Deblonde restait impossible. Alphonse V, qui dispose d\'un cadre parlementaire éprouvé en Aragon, accepte de le reproduire à Naples comme contrepartie d\'une légitimation rapide — c\'est cette transposition qui débloque la phase oligarchique.','figure':'Alphonse V','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1444,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1er monarque oligarchique','subtitle':'Ferrante','summary':'À la mort d\'Alphonse V (1458), la couronne d\'Aragon revient à son frère Jean II tandis que Naples passe à son fils naturel Ferrante (1458-1494) — confirmé par le pape Pie II et accepté par le parlement. Ferrante est le 1er monarque oligarchique post-PO : sa légitimité repose sur les *Capitula Regni* (élection parlementaire confirmée, cadre négocié) et non sur la stature personnelle féodale. Il déploie l\'appareil aragonais (Sommaria, Vicaria), perçoit le *focatico*, lève la *Dohana Mena Pecudum* (1447), maintient le parlement, écrase la conjuration des barons (1485-1487) avec exécutions et confiscations massives. Test discriminant satisfait — pouvoir survit aux successions par cadre collectif.','description':'','figure':'Ferrante','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1458,'end':1494,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Cerignola','subtitle':'Conquête espagnole','summary':'1500-1501 : traité de Grenade entre Louis XII et Ferdinand le Catholique pour partager Naples ; Frédéric IV exilé. 1502-1503 : guerre franco-espagnole pour le contrôle exclusif ; victoires de Gonzalve de Cordoue à Cerignola (avril 1503) et au Garigliano (décembre 1503). Naples passe sous vice-royauté espagnole pour deux siècles. Mécanisme choc exogène (conquête étrangère et installation d\'une administration vice-royale durable), effet prolongement de la phase oligarchique par mise sous tutelle. Le royaume conserve ses institutions internes (parlement, Sacro Regio Consiglio, droit napolitain) mais ne dispose plus de souverain résident — les décisions stratégiques majeures passent à Madrid via le Conseil d\'Italie. Interrompt l\'essor oligarchique aragonais à mi-course.','description':'','figure':'Gonzalve de Cordoue','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1503,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation des élites','subtitle':'','summary':'Sous-phase longue (~144 ans) sous tutelle hispanique. Cristallisation progressive du clivage <strong>prébendier</strong> (togati du Sacro Regio Consiglio, popolari de Naples-ville, bourgeoisie marchande, école juridique anti-curiale) vs <strong>patrimonial</strong> (baronnie territoriale avec *mero e misto imperio*, curie romaine, jésuites). Trois moments structurants : Pedro de Toledo (1532-1553) qui tente l\'absolutisation déléguée et heurte la baronnie comme le clergé (révolte anti-Inquisition de 1547, comprimée) ; consolidation institutionnelle de la classe togata (Francesco D\'Andrea, Giuseppe Valletta) ; oligarchisation fiscale par *arrendamenti* à des consortiums de créanciers privés à partir des années 1620, qui matérialise financièrement le clivage. Pression fiscale extrême 1638-1647 (financement guerres hispaniques de Trente Ans) — pré-révolutionnaire.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1503,'end':1647,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'Sous-phase courte (~1 an), avortée. Soulèvement urbain napolitain qui devient *Repubblica Napoletana* sous Gennaro Annese, soutenu par intervention française (Henri de Guise, novembre 1647). Reconquête par Don Juan d\'Autriche (avril 1648) avant qu\'un cadre central résolvant n\'émerge.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1647,'end':1648,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Masaniello','summary':'7 juillet 1647 : Tommaso Aniello (« Masaniello ») déclenche une révolte populaire à Naples contre la gabelle des fruits ; courte république populaire jusqu\'à son assassinat (16 juillet) ; institutions populaires sous Gennaro Annese ; intervention française d\'Henri de Guise (novembre 1647), proclamation de la *Repubblica Napoletana* ; reprise espagnole en avril 1648 sous Don Juan d\'Autriche. Factions structurées : popolari + togati + segments baronnial anti-Madrid vs Crown hispanique + baronnie loyaliste. Enjeu = contrôle de l\'appareil central (abolition des gabelles, redistribution fiscale, reconfiguration institutionnelle). Mécanisme choc exogène (intervention armée espagnole), effet avortement — la résolution endogène par synthèse n\'a pas le temps d\'émerger.','description':'La révolte de Masaniello passe le test discriminant de la guerre sociale : factions structurées et nommées, confrontation ouverte (prise de contrôle de Naples par les insurgés, *Repubblica Napoletana* proclamée octobre 1647), enjeu portant sur le contrôle de l\'appareil central pour la distribution des prébendes. Synchrone avec la crise multi-territoriale hispanique 1640-1668 (Catalogne, Portugal, révolte de Palerme la Pelosa-d\'Alesi 1647). Pourquoi avortée et non pas résolue : la reconquête espagnole de Don Juan d\'Autriche restaure le *status quo ante* sans construire de cadre central transcendant le clivage — pas de synthèse au sens de `phase_oligarchique.md`. Madrid impose le retour aux institutions antérieures, la baronnie loyaliste est réinstallée, les togati n\'accèdent pas au contrôle de l\'appareil. La phase oligarchique se poursuit faute de résolution structurelle ; la polarisation reprend pour 86 ans avant qu\'une nouvelle tentative (top-down, sous Charles VII) puisse aboutir.','figure':'Masaniello','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1647,'end':1648,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Polarisation reprise','subtitle':'','summary':'Sous-phase de 86 ans après guerre sociale avortée. La phase oligarchique se poursuit en l\'absence de cadre central résolvant (cf. `phase_oligarchique.md` §Non-résolution). Continuation du clivage prébendier/patrimonial sous tutelle hispanique puis autrichienne (Utrecht 1713 → vice-rois nommés par Vienne). Maturation intellectuelle du programme prébendier : Pietro Giannone *Istoria civile del Regno di Napoli* (1723, exilé), revendication anticurialiste de la juridiction royale ; école juridique napolitaine. Aucune nouvelle ouverture endogène possible tant que la couronne suzeraine refuse une résolution favorisant l\'une des factions. Le passage aux Bourbons (1734) débloque la situation par installation d\'une dynastie résidente.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1648,'end':1734,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste (segment 1 — installation et impérialisme)','subtitle':'','summary':'Premier segment de la phase absolutiste (~86 ans). 1er MA Charles VII de Bourbon (1734) en configuration *figure dynastique avec administration distincte* — Tanucci toscan + togati napolitains intégrés à l\'appareil. Trois sous-phases : absolutisation 1734-1759 (Charles VII + Tanucci, Concordat, Catasto Onciario), impérialisme absolutiste 1759-1815 modeste (acmé Tanucci 1759-1776, Lumières napolitaines, complétion exogène par Joseph Bonaparte 1806 qui abolit la féodalité), AR exogène 1815-1820 (Bourbons restaurés sur cadre napoléonien). Segment terminé par éclatement de l\'AR (Pronunciamento de Nola 1820).','description':'La phase absolutiste napolitaine est portée par un 1er MA *hérodien* (figure installée par puissance étrangère mais souveraine de plein droit, parallèle Hérode-Rome). Charles VII de Bourbon, fils de Philippe V d\'Espagne, est installé à Naples en 1734 par les armées espagnoles puis confirmé par le traité de Vienne 1738. Il fonde une dynastie résidente, autonome de Madrid après 1759. Configuration *figure dynastique avec administration distincte* : Tanucci (juriste toscan, hors baronnie napolitaine) recrute la classe togata napolitaine et les juristes-philosophes (Genovesi, Filangieri, Pagano) pour opérer l\'appareil. La synthèse opère par intégration : la baronnie n\'est pas écrasée mais absorbée comme noblesse de cour et de service ; les togati fournissent le cadre administratif ; le Crown arbitre. Le programme prébendier-tanuccien (Concordat 1741, Catasto Onciario 1741, expulsion des jésuites 1767, abolition du *chinea* 1788) avance mais bute sur la féodalité résiduelle, qui n\'est abolie qu\'exogènement par le décret du 2 août 1806 (Joseph Bonaparte) — complétion exogène. La restauration Bourbon (1815) hérite intégralement du cadre français (Code des Deux-Siciles 1819) et entre en AR exogène. Cinq ans plus tard, le pronunciamento carbonaro à Nola (juillet 1820) ouvre la première RN napolitaine.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-114 ans (segment 1 vs durée typique de 200 ans). Segment écourté par RN avortée 1820-1821 ; reprise en segment 2 (1821-1848). La phase absolutiste totale (cumul des trois segments) est de 124 ans, ce qui reste sous-typique — phase écourtée par absorption italienne avant maturation complète de l\'AR endogène.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Éclatement de l\'AR (1820) — pronunciamento carbonaro à Nola, ouvre la première RN avortée napolitaine.','resolution_conditions':'','avortement':'','start':1734,'end':1820,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'Sous-phase de durée standard (~25 ans). Charles VII (1734-1759, départ pour Madrid 1759 où il devient Charles III d\'Espagne) + Tanucci (premier ministre 1734-1776) déploient l\'absolutisation : Catasto Onciario (1741-1755, premier essai d\'imposition uniforme incluant biens nobles et ecclésiastiques), Concordat (1741, soumission relative de l\'Église), construction monumentale (San Carlo 1737, Caserta 1752, Capodimonte). Pas de DGRO — la baronnie est sédimentée institutionnellement, pas militairement. L\'absolutisation se fait par décrets cumulatifs et négociations bilatérales, sans soulèvement nobiliaire écrasé en bloc.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1734,'end':1759,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Charles VII','summary':'Charles VII de Bourbon (1734-1759, fils de Philippe V d\'Espagne, devient Charles III d\'Espagne en 1759) est installé à Naples en mai 1734 par les armées espagnoles, confirmé par le traité de Vienne 1738. <strong>Premier monarque résident depuis Frédéric II</strong>, autonome de Madrid après 1759. Configuration *figure dynastique avec administration distincte* : Tanucci (juriste toscan, hors baronnie napolitaine) + togati napolitains + juristes-philosophes (Genovesi, Filangieri, Pagano) opèrent l\'appareil. Acte fondateur composite : Concordat 1741, Catasto Onciario 1741, expulsion des jésuites 1767, pragmatiques unifiantes. Test discriminant absolutiste passé : préséance de l\'administration centrale (parlement aboli depuis 1642, Sacro Regio Consiglio comme cour suprême avec recours possible au-dessus des juridictions seigneuriales), exécutif sans frein juridique des oligarques (décrets royaux), résolution par synthèse (baronnie intégrée comme noblesse de cour, togati comme cadre administratif, Crown arbitrant).','description':'Le 1er MA napolitain est *hérodien* — installé par arbitrage européen (traité de Vienne 1738), comme Hérode l\'avait été par Rome. <strong>L\'origine externe ne disqualifie pas la fonction</strong> : Charles règne en monarque absolu de plein droit, fonde une dynastie résidente qui durera jusqu\'en 1860. La résolution structurelle qu\'il porte est cohérente avec la guerre sociale Masaniello avortée 86 ans plus tôt : il <strong>impose top-down</strong> une synthèse sur une polarisation déjà mature mais latente. La couronne s\'aligne explicitement avec la faction prébendière (recrutement togati, programme anti-curial et anti-féodal) sans annihiler la patrimoniale (baronnie intégrée par cooptation de cour) — synthèse au sens de `phase_oligarchique.md`, l\'appareil central absorbe les réseaux des deux camps. La féodalité résiduelle ne disqualifie pas l\'absolutisation : le 1er MA n\'est pas un dictateur total, des privilèges nobiliaires persistent sous Henri IV ou Louis XIII en France sans invalider leur statut absolutiste.','figure':'Charles VII de Bourbon','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1734,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Saturation fiscale','subtitle':'Catasto Onciario bloqué','summary':'Le Catasto Onciario, promulgué par Charles VII en 1740 et élaboré par Tanucci, vise une taxation universelle de tous les patrimoines en *once* incluant biens nobles et ecclésiastiques. La résistance est immédiate et structurellement efficace : déclarations falsifiées par les propriétaires, contrôle communal capturé par le baronnage local, biens féodaux exemptés, clergé taxé à demi. En 1753, Charles VII envoie des commissaires royaux dans les communes récalcitrantes — aveu d\'échec administratif. Vers 1770, la Couronne accepte le retour au système des gabelles. <strong>Cas atypique</strong> : la Saturation (1755) précède l\'Acmé absolutiste sous Tanucci (1759-1776), inversion par rapport au canon ; le blocage de la voie fiscale directe redirige l\'absolutisme bourbonien vers les autres terrains (regalisme anti-clérical, juridictionnel). À remonter comme variante structurelle (séquence compressée dans AR endogène court 1755-1798). Sources : Calabria, Galasso, Astarita.','description':'','figure':'Charles VII / Tanucci','confidence':'high','alternatives':'Critère Lanoue de Suremain (Martin) appliqué à la machine bourbonienne napolitaine au sens strict. Datation <strong>1741-1755</strong> : Catasto Onciario promulgué par dépêche royale du 4 octobre 1740, élaboré par Tanucci, conçu pour établir un <strong>principe d\'universalité</strong> (taxation de tous les patrimoines en *once*, incluant biens nobles et ecclésiastiques par déclaration). Pragmatiques 1741-1748 ordonnent la compilation dans toutes les universités du royaume. <strong>Échec documenté</strong> : déclarations laissées aux propriétaires + contrôle confié aux communes dominées par le baronnage local (capture institutionnelle), biens féodaux exemptés (soumis seulement à l\'*adoa* et au *relevio*), clergé taxé à demi, barons réclament massivement comme féodaux des biens allodiaux. En mai 1753, Charles VII envoie des <strong>commissaires royaux</strong> dans les communes récalcitrantes — aveu d\'échec administratif. ~1770, la Couronne accepte officiellement que les communes puissent revenir au système des gabelles. Galasso parle de *« fallimento sostanziale »*. Borne pivot conventionnelle <strong>1755</strong> (clôture nominale de la compilation, retour de fait au régime ancien). <strong>Datation alternative 1647-1648 (Masaniello)</strong> écartée : c\'est la fin de l\'extensibilité fiscale sous vice-royauté espagnole (phase oligarchique sous tutelle), pas la saturation absolutiste endogène. <strong>Cas atypique : séquence compressée / inversée</strong> : la Saturation (1755) précède l\'Acmé absolutiste sous Tanucci (1759-1776), à l\'inverse du canon. Lecture historionomique : c\'est précisément parce que la voie fiscale directe est bloquée que l\'absolutisme bourbonien se déploie sur les autres terrains (regalisme anti-clérical 1768 expulsion jésuites, juridictionnel, administratif) jusqu\'à son pic, puis s\'enkyste en AR. À remonter comme variante structurelle possible (séquence compressée dans AR endogène court). Pas de Remontrance documentée — le blocage est diffus (communes capturées) plutôt que concentré dans une institution. Sources : Calabria *The Cost of Empire*, Galasso *Storia del Regno di Napoli*, Astarita.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1741,'end':1755,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'Sous-phase de durée moyenne (~56 ans), modeste par contrainte de taille (pas d\'expansion militaire possible pour une nation de cette dimension entre grands voisins). Acmé absolutiste sous régence Tanucci-Ferdinand IV (1759-1776) : apogée intellectuel des Lumières napolitaines (Genovesi, Filangieri, Pagano), expulsion des jésuites (1767), abolition du *chinea* (1788). Perturbation napoléonienne 1798-1815 : République parthénopéenne avortée (1799), décennie française (1806-1815) qui complète exogènement l\'absolutisation par abolition de la féodalité. Restauration Bourbon (1815) hérite intégralement du cadre français.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1759,'end':1815,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Acmé absolutiste','subtitle':'Tanucci','summary':'L\'acmé absolutiste napolitain est porté par Bernardo Tanucci (premier ministre 1759-1776 sous régence puis sous Ferdinand IV), pas par le souverain titulaire. Pic de modernisation administrative (expulsion des jésuites 1767, contrôle ecclésiastique renforcé, ministères organisés) et apogée culturel (Genovesi première chaire d\'économie politique européenne 1754, Filangieri *La scienza della legislazione* 1780-1785, Pagano *Saggi politici* 1783-1785), prestige diplomatique européen. Acmé modeste contraint par la taille de la nation — pas de projection militaire impérialiste possible.','description':'','figure':'Bernardo Tanucci','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1759,'end':1776,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Décennie française','subtitle':'Joseph Bonaparte','summary':'14 février 1806 : entrée des troupes françaises à Naples. Joseph Bonaparte couronné roi (mars 1806). <strong>2 août 1806 : décret d\'abolition de la féodalité</strong> — suppression des juridictions seigneuriales, du *mero e misto imperio*, des banalités, de l\'*adoa*, des servitudes personnelles. Commissione feudale (1807-1810, présidée par Davide Winspeare, juriste napolitain) règle des milliers de litiges et opère un transfert massif de propriétés (de 2 000 grands propriétaires en 1806 à plus de 18 000 en 1815). Joseph passe à Madrid en 1808 ; Joachim Murat règne (1808-1815). Code civil napolitain (1809), conscription, intendances préfectorales, cadastre, Banco delle Due Sicilie (1808). Mécanisme choc exogène modernisateur, effet accélération par <strong>complétion exogène de l\'absolutisation</strong> — Joseph achève par contrainte ce que le programme prébendier-tanuccien réclamait depuis 50 ans sans pouvoir l\'imposer.','description':'La décennie française n\'est pas un nouveau 1er MA mais une <strong>perturbation modernisatrice qui complète l\'absolutisation</strong> ouverte par Charles VII en 1734. Le décret du 2 août 1806 fait par contrainte exogène ce que Tanucci, Filangieri et Pagano réclamaient depuis 50 ans sans pouvoir l\'imposer : la Commissione feudale n\'est pas composée de Français de passage mais de juristes napolitains (Davide Winspeare en tête) qui opèrent enfin avec l\'appui d\'une force étatique extérieure capable de briser la résistance baronniale. La République parthénopéenne (janvier-juin 1799), précédente brève occupation française avec Pagano, Cuoco, Pimentel Fonseca, est une tentative endogène avortée par sanfédistes et reconquête bourbonienne — non codée comme saillant séparé parce qu\'elle ne change pas structurellement la trajectoire (les Bourbons reviennent, l\'absolutisation continue). C\'est le décret de 1806 qui modifie durablement la trajectoire, et que la restauration Bourbon de 1815 hérite intégralement. Parallèle structurel avec Milan napoléonienne — accélération de la phase absolutiste par modernisation imposée.','figure':'Joseph Bonaparte / Joachim Murat','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1806,'end':1815,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime exogène','subtitle':'','summary':'Sous-phase courte (~5 ans) d\'AR exogène sous Ferdinand I restauré (Bourbon redevenu Ferdinand I des Deux-Siciles avec la fusion juridique de décembre 1816). Bloc administratif sédimenté constitué par la classe administrative bourbonienne héritière du cadre napoléonien (Code des Deux-Siciles 1819 = Code Napoléon adapté). AR jeune mais immédiatement sclérosé par sa nature de restauration sur cadre napoléonien — les vétérans des armées de Murat + bourgeois libéraux carbonari ne tolèrent pas le régime restauré. Ouverture du premier éclatement par pronunciamento carbonaro à Nola (juillet 1820).','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1815,'end':1820,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Phase RN (avortée 1820-1821)','subtitle':'','summary':'Première RN napolitaine, courte et avortée. Pronunciamento carbonaro à Nola (juillet 1820, Guglielmo Pepe vétéran napoléonien), Constitution espagnole octroyée par Ferdinand I sous pression, parlement réuni ~8 mois. Intervention austro-impériale décidée à Laibach (janvier 1821), bataille de Rieti (mars 1821), restauration. RN avortée par choc exogène militaire avant maturation.','description':'La RN de 1820-1821 est ouverte par éclatement précoce sur AR jeune (5 ans) mais hérité du cadre napoléonien sclérosé. Les carbonari (vétérans napoléoniens + bourgeois libéraux) imposent l\'octroi de la Constitution espagnole de 1812, qui ouvre une expérience parlementaire de 8 mois. Conflit ouvert avec la révolte autonomiste palermitaine pendant cette période. La Sainte-Alliance, réunie en Congrès de Laibach (janvier 1821), décide l\'intervention armée austro-impériale ; les troupes de Frimont défont l\'armée constitutionnelle de Pepe à Rieti (7 mars 1821). Restauration absolutiste, exil des libéraux, exécutions. La RN n\'atteint pas la phase aiguë de radicalisation interne — l\'avortement vient de l\'extérieur, pas d\'une dynamique factionnelle interne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-24 ans (par rapport à la durée typique minimale de 25 ans). RN avortée par choc exogène militaire avant maturation — la dynamique RN endogène est interrompue à l\'expérience parlementaire.','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Avortement par bataille de Rieti (mars 1821) — défaite de l\'armée constitutionnelle de Pepe par les troupes austro-impériales de Frimont, restauration absolutiste à Naples.','resolution_conditions':'','avortement':'','start':1820,'end':1821,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Sous-phase de la RN avortée 1820-1821. Éclatement par pronunciamento carbonaro à Nola (juillet 1820), expérience parlementaire sur Constitution espagnole (~8 mois), avortement par défaite à Rieti (mars 1821). Pas de phase aiguë (radicalisation interne), pas de moment thermidorien — RN écourtée à l\'expérience parlementaire par intervention exogène.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1820,'end':1821,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Éclatement de l\'AR','subtitle':'Pronunciamento de Nola','summary':'2 juillet 1820 : pronunciamento carbonaro à Nola sous Guglielmo Pepe (vétéran napoléonien). Ferdinand I octroie la Constitution espagnole le 13 juillet sous pression. <strong>Premier Éclatement de l\'AR napolitain</strong> — éclatement précoce sur AR jeune (5 ans) mais hérité du cadre napoléonien sclérosé, porté par les carbonari (vétérans napoléoniens + bourgeois libéraux) qui ne tolèrent pas la régression Bourbon de 1815.','description':'','figure':'Guglielmo Pepe','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1820,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Constitution espagnole','summary':'Parlement réuni à Naples (octobre 1820 - mars 1821) sur base de la Constitution espagnole de 1812. ~8 mois d\'expérience constitutionnelle libérale, conflit ouvert avec la révolte autonomiste palermitaine (qui revendique sa propre Constitution sicilienne de 1812). Brève expérience parlementaire interrompue avant maturation institutionnelle.','description':'','figure':'Parlement de Naples','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1820,'end':1821,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Écrasement','subtitle':'Rieti','summary':'Janvier 1821 : Congrès de Laibach décide l\'intervention austro-impériale contre le régime constitutionnel napolitain. <strong>7 mars 1821 : bataille de Rieti</strong>, défaite de l\'armée constitutionnelle de Guglielmo Pepe par les troupes de Frimont. Restauration absolutiste à Naples, exil des libéraux, exécutions. Écrasement de la RN par choc exogène militaire — pas de phase aiguë de radicalisation interne, la RN est écrasée de l\'extérieur avant maturation. Mécanisme choc exogène (Sainte-Alliance), effet avortement.','description':'','figure':'Frimont','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1821,'end':null,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste (segment 2 — AR exogène repris)','subtitle':'','summary':'Reprise de la phase absolutiste après avortement de la première RN. AR exogène continué sous Ferdinand I puis François I (1825-1830) puis Ferdinand II (1830-1859). Maintien du cadre napoléonien (Code des Deux-Siciles), répression des libéraux, surveillance carbonaro persistante. Pas de réformes structurelles. Discrédit progressif, pression révolutionnaire qui ré-éclate en 1848 dans la vague italienne.','description':'La phase absolutiste reprend (cf. `phase_oligarchique.md` §Non-résolution adapté à RN avortée — l\'avortement renvoie à la phase précédente). AR exogène continué : Bourbons restaurés sur cadre napoléonien, classe administrative sédimentée, politique réactionnaire. Ferdinand II (à partir de 1830) tente quelques modernisations économiques (premier chemin de fer italien Naples-Portici 1839, sidérurgie de Mongiana, chantiers de Castellammare) mais maintient le verrou politique. Le discrédit s\'accumule sans atteindre le seuil d\'éclatement endogène — la pression vient de l\'extérieur (vague révolutionnaire italienne 1848 synchronisée avec Palerme, Milan, Vienne, Berlin) qui ré-ouvre l\'AR par insurrection populaire en janvier 1848.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-173 ans (par rapport à 200 typiques). Segment de phase fragmentée — durée non significative en soi, mais l\'AR continue d\'accumuler de la maturité (33 ans cumulés depuis 1815 au moment de l\'éclatement de 1848).','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Éclatement de l\'AR (1848) — Constitution de janvier octroyée sous pression révolutionnaire, ouvre la seconde RN avortée napolitaine.','resolution_conditions':'','avortement':'','start':1821,'end':1848,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime exogène','subtitle':'','summary':'Sous-phase d\'AR exogène repris (~27 ans). Bourbons restaurés (Ferdinand I, François I, Ferdinand II) maintiennent le cadre napoléonien (Code des Deux-Siciles), répriment les libéraux, surveillent les carbonari. Ferdinand II (1830-1859) entreprend une modernisation économique limitée (Naples-Portici 1839, Mongiana, Castellammare) sans desserrer le verrou politique. Discrédit progressif, AR mûrit (atteint 33 ans cumulés en 1848 depuis 1815). Réouverture par insurrection populaire de janvier 1848 dans la vague révolutionnaire italienne.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1821,'end':1848,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Phase RN (avortée 1848-1849)','subtitle':'','summary':'Seconde RN napolitaine, courte et avortée. Insurrection populaire napolitaine (janvier 1848, synchronisée avec Palerme et la vague italienne), Constitution bicamérale octroyée le 29 janvier par Ferdinand II, parlement réuni ~1 mois. Coup royal du 15 mai 1848 (combats de rue, suspension de la Constitution, dissolution du parlement), bombardement de Messine en septembre 1848 (« Re Bomba »), reconquête sicilienne sous Filangieri (mai 1849). RN avortée par contre-révolution royale appuyée sur le contexte austrien italien.','description':'La RN de 1848-1849 est ouverte sur AR plus mature (33 ans cumulés depuis 1815). Synchronisée avec la vague révolutionnaire italienne (Palerme 12 janvier, Milan, Venise) et européenne (Vienne, Berlin, Paris). Naples est la première capitale italienne à octroyer une Constitution (29 janvier 1848, avant Pie IX, Léopold II, Charles-Albert). Le parlement bicaméral réuni en avril ne dure qu\'un mois — le 15 mai, combats de rue à Naples opposent troupes royales et milices nationales libérales, Ferdinand II suspend la Constitution et dissout la chambre. La répression s\'étend à la Sicile : bombardement de Messine en septembre 1848 (qui vaut au roi le surnom de *Re Bomba*), reconquête militaire sous Filangieri achevée en mai 1849. La RN n\'atteint pas non plus la phase aiguë de radicalisation interne — l\'avortement vient du coup royal renforcé par la défaite des révolutions du Nord italien (intervention austrienne contre Charles-Albert).','figure':'','confidence':'','alternatives':'','step':'','deviation':'-24 ans (par rapport à 25 ans typiques minimaux). RN avortée par choc exogène (coup royal + contexte austrien italien) avant maturation.','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Avortement par coup royal du 15 mai 1848 + reconquête sicilienne sous Filangieri (mai 1849) — Ferdinand II suspend la Constitution, dissout le parlement, bombarde Messine (« Re Bomba »), restaure le contrôle absolutiste.','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'Sous-phase de la RN avortée 1848-1849. Éclatement par insurrection populaire et octroi de la Constitution de janvier (29 janvier 1848), expérience parlementaire bicamérale (~1 mois en avril-mai), avortement par coup royal du 15 mai puis reconquête sicilienne (1849). Pas de phase aiguë interne, pas de moment thermidorien.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Éclatement de l\'AR','subtitle':'Constitution de janvier','summary':'Janvier 1848 : insurrection populaire napolitaine, synchronisée avec le soulèvement palermitain (12 janvier) et la vague italienne. <strong>29 janvier 1848</strong> : Ferdinand II octroie une Constitution bicamérale sous pression révolutionnaire (Naples est la première capitale italienne à octroyer, avant Pie IX, Léopold II, Charles-Albert). <strong>Second Éclatement de l\'AR napolitain</strong> — sur AR mature (33 ans cumulés depuis 1815), discrédit avéré, ruine partielle. Conditions structurelles d\'éclatement endogène mieux réunies qu\'en 1820, mais tutelle internationale et division Sicile-continent fragilisent.','description':'','figure':'Ferdinand II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Parlement de Naples','summary':'Parlement bicaméral réuni à Naples sur base de la Constitution de janvier 1848 (chambre des pairs + chambre des députés). ~1 mois d\'activité effective (avril - 15 mai 1848). Tension immédiate avec Ferdinand II qui refuse de prêter serment au texte modifié par les députés. Expérience parlementaire avortée avant maturation, plus brève qu\'en 1820.','description':'','figure':'Parlement bicaméral','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':1848,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Écrasement','subtitle':'Coup du 15 mai','summary':'<strong>15 mai 1848</strong> : combats de rue à Naples entre troupes royales et milices nationales libérales, Ferdinand II suspend la Constitution, dissout le parlement. <strong>Septembre 1848</strong> : bombardement de Messine (d\'où le surnom *Re Bomba*). <strong>Mai 1849</strong> : reconquête de la Sicile par Filangieri achevée. Écrasement par contre-révolution royale appuyée sur le contexte austrien italien (défaite des révolutions du Nord, intervention austrienne contre Charles-Albert). Pas de phase aiguë interne de radicalisation — la RN est écrasée par coup royal et répression militaire avant maturation. Discrédit accru (campagne Gladstone *Letters to Lord Aberdeen* 1851 — *negazione di Dio eretta a sistema di governo*), mais régime tient ses finances et résiste jusqu\'en 1860. Mécanisme choc exogène, effet avortement.','description':'','figure':'Ferdinand II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1848,'end':1849,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste (segment 3 — AR exogène jusqu\'à absorption)','subtitle':'','summary':'Dernier segment de la phase absolutiste (~11 ans). AR exogène repris sous Ferdinand II (jusqu\'en 1859) puis François II (1859-1860). Régime tient ses finances par modernisation économique limitée mais discrédit international avéré (campagne Gladstone 1851). Pas de réformes politiques structurelles. Absorption par expédition garibaldienne 1860 — fusion dans le Parcours italien avant éclatement endogène complet.','description':'Le segment 3 est l\'AR exogène final, qui n\'a pas le temps de mûrir endogènement. Conditions d\'éclatement endogène en 1860 partiellement réunies : discrédit avéré (Re Bomba, campagne Gladstone *Letters to Lord Aberdeen* 1851 — *negazione di Dio eretta a sistema di governo*), mais ruine financière partielle empêchée par la modernisation économique sous Ferdinand II (premier chemin de fer italien Naples-Portici 1839, sidérurgie de Mongiana, chantiers de Castellammare, Banco delle Due Sicilie solide). François II (1859-1860) hérite d\'un régime financièrement viable mais politiquement à bout. L\'absorption garibaldienne 1860 ferme le Parcours napolitain par fusion dans le Parcours italien — pas de RN aboutie napolitaine, pas d\'IR endogène, pas de Glorieuse Révolution.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-189 ans (par rapport à 200 typiques). Segment écourté par absorption italienne avant maturation complète de l\'AR endogène. La phase absolutiste totale (cumul des trois segments 86 + 27 + 11 = 124 ans) reste sous-typique — Parcours absorbé avant éclatement endogène.','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Absorption garibaldienne (1860) — débarquement à Marsala mai 1860, entrée à Naples septembre 1860, plébiscite octobre 1860, intégration au Royaume d\'Italie 1861.','resolution_conditions':'','avortement':'','start':1849,'end':1860,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien régime exogène','subtitle':'','summary':'Sous-phase finale d\'AR exogène (~11 ans). Ferdinand II jusqu\'en 1859, puis François II (1859-1860). Pas de réformes politiques. Modernisation économique limitée maintient le régime financièrement, mais discrédit international avéré (campagne Gladstone 1851, isolement diplomatique). Conditions d\'éclatement endogène jamais convergentes en 1860 — discrédit oui, ruine partielle non. L\'absorption garibaldienne ferme le Parcours par fusion italienne, pas par RN aboutie endogène.','description':'','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1849,'end':1860,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Unification italienne','subtitle':'Garibaldi et plébiscite','summary':'11 mai 1860 : débarquement à Marsala. Mai-août 1860 : conquête de la Sicile, traversée du détroit (19 août). 7 septembre 1860 : entrée de Garibaldi à Naples ; François II se réfugie à Gaète (siège novembre 1860 - février 1861). 1ᵉʳ-2 octobre 1860 : bataille du Volturne. 21 octobre 1860 : plébiscite massivement favorable à l\'annexion (1 302 064 oui contre 10 312 non). 17 mars 1861 : proclamation du Royaume d\'Italie. Le Parcours napolitain se dissout par fusion dans le Parcours italien — l\'AR exogène est absorbé avant éclatement endogène complet, pas par RN aboutie. *Grande Brigantaggio* 1861-1865 (~80 000 hommes en armes, ~12 000 morts) : résistance qui relève <strong>du Parcours italien comme rébellion périphérique</strong>, pas du Parcours napolitain endogène.','description':'','figure':'Giuseppe Garibaldi / Victor-Emmanuel II','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':1860,'end':1861,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 7;
+    const BASE_TOP = 315;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+        // Florence
+        'Giano della Bella': 'images/florence/giano-della-bella.jpg',
+        'Laurent de Médicis': 'images/florence/laurent-de-medici.jpg',
+        'Filippo Strozzi': 'images/florence/filippo-strozzi.jpg',
+        'Ferdinand Ier de Médicis': 'images/florence/ferdinand-ier.jpg',
+        'Ferdinand III': 'images/florence/ferdinand-iii.jpg',
+        'Léopold II': 'images/florence/leopold-ii.jpg',
+        'Bettino Ricasoli, Vittorio Emanuele II': 'images/florence/bettino-ricasoli.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Acmé oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Acmé absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description"><p>${e.description}</p></div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>

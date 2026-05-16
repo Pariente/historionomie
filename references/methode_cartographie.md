@@ -135,7 +135,7 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - Quand apparaît une première administration centrale, un fisc, une armée permanente ? (fin de la phase féodale)
 
 #### Phase oligarchique
-**Saillants attendus** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale.
+**Saillants attendus** : 1er monarque oligarchique, Acmé oligarchique, Guerre sociale.
 **Vérifications** :
 - Qui est le premier souverain disposant d'un État central (impôt + armée + administration) ?
 - Y a-t-il un acte collectif garantissant la stabilité aux successions — soit en codifiant la transmission, soit en encadrant l'exercice du pouvoir ? Une nation peut combiner les deux successivement (cf. `phase_feodale.md`).
@@ -145,7 +145,7 @@ Pour chaque phase du scénario, vérifier la présence des saillants canoniques 
 - Y a-t-il une guerre sociale identifiable, et à l'échelle nationale (pas seulement régionale) ?
 
 #### Phase absolutiste
-**Saillants attendus** : 1er monarque absolu (cf. `phase_absolutiste.md` §Configurations rencontrées — l'image mentale par défaut du monarque personnel-titré masque des configurations canoniques), Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance.
+**Saillants attendus** : 1er monarque absolu (cf. `phase_absolutiste.md` §Configurations rencontrées — l'image mentale par défaut du monarque personnel-titré masque des configurations canoniques), Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Saturation fiscale (critère Lanoue de Suremain, borne d'entrée en AR), Remontrance (manifestation politique contingente du basculement en AR), Réformes échouées.
 **Vérifications** :
 - Qui résout la guerre sociale et centralise l'appareil ? La figure résolvante peut être un tiers neutre (cas le plus fréquent) ou un chef de faction qui crée un cadre transcendant son propre camp ; ne pas s'arrêter au premier cas.
 - L'administration centrale a-t-elle préséance sur les administrations locales — sur **TOUTES** dans le cas des monarchies composites ?
@@ -222,6 +222,8 @@ Le scénario avec le meilleur scoring gagne. Les scénarios écartés sont docum
 
 ## Étape 8 : Produire le fichier `parcours.md`
 
+> **Avant de rédiger** : lire `references/style_redactionnel.md`. Ce fichier consolide les conventions de style (titres, subtitles, summaries, descriptions, highlights, icônes effect-based, markdown bold supporté dans les highlights) et la **checklist de relecture finale**. Les règles de cette Étape 8 restent valides — `style_redactionnel.md` les complète et les organise pour la relecture.
+
 Créer `references/nations/<nation>/parcours.md` avec :
 - Metadata du fichier : `nation`, `territory`, `flag`, `start`, `end`, `subtitle`, **highlights** (cf. ci-dessous), `status`, `confidence`
 - Section `## Superficie de référence` (noyau + marges, format dans `references/parcours.md`)
@@ -230,6 +232,10 @@ Créer `references/nations/<nation>/parcours.md` avec :
 - Flag `territorial: false` sur les perturbations non territoriales
 - Champs normalisés (type, start, end, title, summary, description, figure, confidence)
 - Résumés (summary) en 1-2 phrases, descriptions (description) en 3-6 phrases construites — pas de style télégraphique
+- **Titres et sous-titres des saillants : nom canonique strict + étiquette courte** (cf. France, Angleterre comme références).
+  - `title:` = uniquement le nom canonique de la liste fermée (`Éveil féodal`, `Pic féodal`, `Crise féodale`, `Pacte oligarchique`, `1er monarque oligarchique`, `Acmé oligarchique`, `Guerre sociale`, `1er monarque absolu`, `DGRO`, `Acmé absolutiste`, `Saturation fiscale`, `Remontrance`, `Réformes échouées`, `Éclatement de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien`, `Émergence de l'IR`, `Restauration`, `Glorieuse Révolution`). Pour les saillants-perturbations dont le nom canonique ne s'applique pas, utiliser le nom historique sec de l'événement (`Quattro Vicari`, `Conjuration de Squarcialupo`, `Tremblement de terre`). **Jamais** de qualificateur entre parenthèses (`Crise féodale (avortée)`, `Crise féodale (Vêpres siciliennes)`), jamais de numérotation de cycle (`Bouclage 1 — ...`), jamais d'ajout descriptif (`Avortement par reconquête bourbonienne`). Le caractère perturbatif est porté par les champs `perturbation: true` + `mechanism` + `effect`, pas par le titre.
+  - `subtitle:` = courte étiquette spécifique (figure principale, nom propre court, lieu, ou date), quelques mots maximum. Exemples corrects : `Roger I de Hauteville`, `Frédéric II`, `Vêpres siciliennes`, `Le Parlement élit Frédéric III`, `Édit de l'Alhambra`, `Re Bomba`, `Bentinck`, `Caracciolo`, `Filangieri`, `Garibaldi et plébiscite`. À éviter : phrase narrative (`30 mars 1282 — soulèvement de Palerme expulsant l'occupation angevine`), description du mécanisme (`Forme 5 — puissance étrangère arbitrante`), accumulation d'éléments (`Patriciat messinois et corporations contre Palerme et couronne — appel à Louis XIV`), reformulation du titre (`Premier souverain post-PO` quand le titre est déjà `1er monarque oligarchique`).
+  - Le contenu narratif et les justifications structurelles vont dans `summary` et `description`, jamais dans `title` ni `subtitle`.
 
 Ce fichier est le **résultat final** : il ne contient que l'hypothèse retenue, pas les débats.
 
@@ -288,21 +294,65 @@ Le fichier de justification est **séparé** du parcours : le parcours est le r�
 
 ## Étape 10 : Télécharger et intégrer les images
 
-**Étape obligatoire** avant de présenter le résultat. Le rendu HTML s'appuie sur des images qui doivent exister localement ou être accessibles via les URLs codées dans le parcours.
+**Étape obligatoire** avant de présenter le résultat. **Limiter strictement les images à deux usages** : drapeau de la nation + une illustration par fait marquant. Pas d'image de popup dédiée, pas de portraits de figures-clefs séparés — réutiliser l'image du highlight le plus emblématique pour le popup de la carte d'accueil.
 
 Images à fournir :
-- **Drapeau** (`images/<slug>/flag.png`) — drapeau de la nation, référencé dans la metadata `flag` du parcours.
-- **Nation-card** — image qui représente la nation dans la liste des parcours (cf. `docs/index.html`). Choisir une image emblématique du pays/de la cité.
-- **Illustrations des faits marquants** — chaque `highlight_N` du parcours a un champ image. Source courante : Wikimedia Commons via URL de la forme `https://commons.wikimedia.org/wiki/Special:FilePath/<filename>?width=120`. Choisir des images représentatives du fait marquant (portrait du personnage, peinture de l'événement, vue de la ville à l'époque).
-- **Portraits des personnages-clefs** — chaque saillant porteur d'un champ `figure` peut avoir une image associée. Mêmes sources.
+- **Drapeau** (`docs/images/<slug>/flag.svg`) — drapeau de la nation au format SVG, référencé dans la metadata `flag` du parcours et dans le marqueur de la carte d'accueil. Téléchargé localement.
+- **Illustrations des faits marquants** — une par `highlight_N` du parcours. URL Wikimedia, pas de téléchargement local.
 
-Procédure :
-1. Identifier les images nécessaires (drapeau + nation-card + N highlights + figures principales).
-2. Pour chaque image Wikimedia Commons : vérifier que l'URL est correcte (ouvrir dans un navigateur ou utiliser `curl`). Privilégier les images en domaine public ou Creative Commons.
-3. Pour le drapeau et la nation-card : télécharger localement dans `images/<slug>/`.
-4. Régénérer le HTML avec `python3 generate_timeline.py references/nations/<slug>/parcours.md` et déplacer dans `docs/<slug>.html`.
-5. Mettre à jour `docs/index.html` pour ajouter la nation à la liste (carte + lien).
-6. Vérifier visuellement que toutes les images apparaissent correctement.
+### Trouver les images via l'API MediaWiki `pageimages`
+
+Plutôt que de chercher des noms de fichiers à tâtons et de vérifier des URLs ensuite (lent, plein de 404), utiliser l'API `pageimages` qui retourne directement l'URL d'un thumbnail à partir du titre d'un article Wikipedia :
+
+```
+https://en.wikipedia.org/w/api.php?action=query&titles=<Article_Title>&prop=pageimages&format=json&pithumbsize=240
+```
+
+Réponse JSON : champ `query.pages.<id>.thumbnail.source` = URL utilisable directement (déjà un thumbnail Wikimedia, pas besoin de `Special:FilePath`). Une requête, un résultat. Pour chaque highlight, identifier l'article Wikipedia le plus pertinent (le sujet du highlight : événement, personnage, période) et récupérer son image principale.
+
+Si l'article principal n'a pas d'image satisfaisante, essayer l'article du personnage ou de l'événement secondaire mentionné dans le highlight. En dernier recours, recherche `opensearch` puis `Special:FilePath`. Ne pas s'éterniser : si une image manque, mettre une URL vide et passer.
+
+### Drapeau
+
+Pattern le plus fiable : `Flag_of_<Nation>.svg` via Wikimedia. Télécharger avec :
+
+```bash
+mkdir -p docs/images/<slug>
+curl -sL "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_<Nation>.svg" -o docs/images/<slug>/flag.svg
+```
+
+Vérifier que le fichier fait > quelques Ko et commence par `<?xml` ou `<svg`.
+
+### Intégration dans `docs/index.html`
+
+Ajouter un objet JS dans le tableau `nations` :
+
+```js
+{ name:'<Nom>', lat:<float>, lng:<float>, dates:'<début> — <fin>', href:'<slug>.html',
+  desc:"<une phrase qui dit ce qui est singulier historionomiquement dans ce parcours>",
+  flag:'docs/images/<slug>/flag.svg',
+  image:'<URL du highlight le plus emblématique, réutilisée comme image de popup>',
+  badge:{cls:'<complete|draft|debate>', label:'<Complet|À valider|Proposition|Débat>'},
+  offset:[<dx>,<dy>] /* optionnel */ }
+```
+
+- `lat`/`lng` : coordonnées de la **capitale historique** de la période étudiée (Paris pour la France, Prague pour la Bohême, Jérusalem pour Israël antique).
+- `dates` : bornes de la **période historionomique étudiée**, pas les dates politiques modernes (ex. France `1108 — 1830`, pas `987 — 1789`).
+- `image` : réutiliser l'URL d'un des highlights (typiquement le highlight 1 ou le plus visuellement parlant). Pas d'image dédiée à télécharger.
+- `badge.cls` (liste fermée, jamais d'autre valeur) :
+  - `complete` / `Complet` — parcours stabilisé, validé par Thomas.
+  - `draft` / `À valider` — parcours rédigé, en attente de relecture.
+  - `draft` / `Proposition` — parcours posé comme hypothèse, plus exploratoire qu'`À valider`.
+  - `debate` / `Débat` — parcours actif en débat (cf. mémoire `project_boheme_debat.md`).
+- `offset` : `[dx, dy]` en pixels, optionnel, pour décaler le pin et son label quand la zone est dense (Italie du Nord, Europe centrale). À ajuster visuellement après vérification.
+
+### Procédure synthétique
+
+1. Pour chaque highlight, requête `pageimages` sur l'article Wikipedia pertinent → URL thumbnail directement utilisable.
+2. Drapeau SVG : `curl` sur `Special:FilePath/Flag_of_<Nation>.svg` → `docs/images/<slug>/flag.svg`.
+3. Régénérer le HTML : `python3 generate_timeline.py references/nations/<slug>/parcours.md` puis déplacer dans `docs/<slug>.html`.
+4. Ajouter l'entrée dans le tableau `nations` de `docs/index.html` en réutilisant l'URL du highlight emblématique pour le champ `image`.
+5. Vérifier visuellement le pin et le popup.
 
 ---
 

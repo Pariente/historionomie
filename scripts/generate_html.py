@@ -129,7 +129,7 @@ MATERIAL_ICON_NAMES = {
     'open_in_full', 'bolt', 'close', 'compress', 'wb_sunny', 'terrain',
     'gavel', 'stars', 'local_fire_department', 'block', 'crown', 'whatshot',
     'record_voice_over', 'flash_on', 'account_balance', 'skull', 'balance',
-    'military_tech', 'star', 'swords', 'circle', 'restart_alt',
+    'military_tech', 'star', 'swords', 'circle', 'restart_alt', 'fast_forward',
 }
 
 
