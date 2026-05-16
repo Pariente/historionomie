@@ -457,7 +457,31 @@ const nations = [
       desc:"Double AR exogène successif — habsbourgeois puis soviétique. Rákóczi comme guerre sociale, 1956 comme Glorieuse Révolution avortée.",
       flag:'images/hongrie/flag.svg',
       image:'images/hongrie/card.png',
-      badge:{cls:'debate', label:'Débat'} }
+      badge:{cls:'debate', label:'Débat'} },
+    { name:'Sicile', lat:38.12, lng:13.36, dates:'1061 — 1860', href:'sicile.html',
+      desc:"Oligarchique gelée 439 ans par exiguïté, AR exogène napolitain, trois RN avortées avant absorption italienne.",
+      flag:'images/sicile/flag.svg',
+      image:'images/sicile/card.jpg',
+      badge:{cls:'draft', label:'À valider'},
+      offset:[0,22] },
+    { name:'Naples', lat:40.85, lng:14.27, dates:'774 — 1860', href:'naples.html',
+      desc:"Reboot féodal angevin 1266, guerre sociale Masaniello avortée par tutelle hispanique, 1er MA bourbonien hérodien (Charles VII 1734), féodalité abolie exogènement par Joseph Bonaparte 1806.",
+      flag:'images/naples/flag.svg',
+      image:'https://upload.wikimedia.org/wikipedia/commons/6/61/Paolo_Albertis_-_Rientro_a_Napoli_di_Ferdinando_I.jpg',
+      badge:{cls:'draft', label:'À valider'},
+      offset:[0,-18] },
+    { name:'Émilie-Romagne', lat:44.49, lng:11.34, dates:'1077 — 1860', href:'emilie-romagne.html',
+      desc:"Nation distribuée polycentrique — absolutisation tutélaire diffractée (papauté + Empire + Espagne), RN par IR exogène napoléonien, fin par fusion italienne. Drapeau tricolore inventé à Reggio Emilia (1796).",
+      flag:'images/emilie-romagne/flag.svg',
+      image:'https://assets.culturabologna.it/bd93e17f-c3a5-43cb-bbff-f4dc8d56ab59-facciata-tomasellizanotti.jpg/658e92357ddaf83a37526e47323880e7e339b4c0.jpg',
+      badge:{cls:'draft', label:'Proposition'},
+      offset:[10,-10] },
+    { name:'États pontificaux', lat:41.90, lng:12.50, dates:'754 — 1870', href:'etats-pontificaux.html',
+      desc:"Monarchie élective théocratique — PO « suzerain collectif » pur (conclave 1274), absolutisation sans guerre sociale par séquence Borgia-Jules II-Sixte V, AR de 200 ans maintenu par les cours catholiques, RN 1848 avortée par Oudinot.",
+      flag:'images/etats-pontificaux/flag.svg',
+      image:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/His_Holiness_Pope_Sixtus_V_Pietro_Fachetti.jpg/250px-His_Holiness_Pope_Sixtus_V_Pietro_Fachetti.jpg',
+      badge:{cls:'draft', label:'À valider'},
+      offset:[-12,8] }
 ];
 
 nations.forEach(n => {

@@ -106,16 +106,6 @@
 - summary: La mort d'Ariberto (1045) fragmente l'édifice personnel qu'il avait construit — crise féodale classique (effondrement post-pic). Les deux conditions de Deblonde sont alors réunies : homogénéité des élites à l'échelle de Milan (produite par la concentration urbaine, le rite ambrosien et la Pataria) et faiblesse du suzerain (l'archevêque, décrédibilisé par la Querelle des Investitures). Le pacte suit immédiatement, sans boucle.
 - description: La crise est en trois temps. D'abord la fragmentation post-Ariberto (1045-1057) : sans la personnalité dominante d'Ariberto, le pouvoir archiépiscopal perd sa force centripète. Puis la Pataria (1057-1075) : ce mouvement, soutenu par Rome contre l'archevêque simoniaque Guido da Velate, brise le monopole politique des capitanei en mobilisant les valvassores et les cives — ce faisant, il accélère l'homogénéisation des élites (condition 1 de Deblonde) en forgeant une conscience civique transversale aux trois ordres. Enfin la Querelle des Investitures (1075-1122) : le conflit entre le pape et l'empereur sur la nomination des évêques détruit le Reichskirchensystem, fondement du pouvoir archiépiscopal — produisant la faiblesse du suzerain (condition 2 de Deblonde). Les deux conditions sont réunies simultanément : le pacte suit immédiatement (1097), comme en France (1314-1317) et en Angleterre (1307-1311).
 
-#### Saillant : Pacte oligarchique — établissement de la commune
-- type: saillant
-- start: 1097
-- subtitle: Commune de Milan
-- title: Pacte oligarchique
-- confidence: medium
-- alternatives: 1117 (première attestation documentaire de consuls urbis) ou 1130 (23 consuls attestés). 1097 est la date conventionnelle.
-- summary: Vers 1097, les trois ordres (capitanei, valvassores, cives) établissent un gouvernement consulaire collectif. Codification formelle, caractère collectif (les trois ordres en assemblée), moment de faiblesse (post-Ariberto, Pataria, Querelle des Investitures qui paralyse l'archevêque-suzerain). Cas de **chemin B** en suzerain collectif — codification de l'exercice (élection annuelle des consuls, partage des pouvoirs législatif/judiciaire/exécutif). Après 1097, le pouvoir survit aux changements de personnel sans fragmentation : le test discriminant féodal devient négatif.
-- description: Le pacte oligarchique milanais émerge dans le contexte de la Querelle des Investitures, qui détruit l'autorité de l'archevêque comme suzerain et ouvre la fenêtre de faiblesse nécessaire au pacte. Les trois ordres (capitanei — grands seigneurs féodaux ; valvassores — chevaliers et petits feudataires ; cives — bourgeoisie marchande montante) se coalisent dans la commune et codifient un gouvernement consulaire collectif : consuls élus annuellement, partage des pouvoirs législatif (arengo), judiciaire et exécutif. C'est un cas paradigmatique de **chemin B** en configuration de suzerain collectif : ce qui est codifié n'est pas une règle de succession (il n'y a pas de souverain personnel à transmettre une fois l'archevêque écarté) mais les règles d'exercice du pouvoir — comment les consuls sont élus, leur durée, leurs prérogatives, leur reddition de comptes. Le mouvement communal européen plus large (Pise ~1080, Venise 1032 puis ~1140, Gênes 1097, Florence ~1115) suit ce schéma : codification collective de l'exercice du pouvoir par les bourgeoisies urbaines en l'absence d'un suzerain monarchique fort. Structurellement analogue aux Ordonnances anglaises de 1311 et à la Stanser Verkommnis suisse (1481), tous trois chemin B.
-
 ---
 
 ## Phase : Oligarchique (1er cycle)
@@ -139,6 +129,16 @@
 - title: Essor oligarchique
 - summary: Construction institutionnelle rapide (consuls, podestà, conseils) et projection extérieure — conformément au schéma canonique de l'essor oligarchique. Milan mène la Ligue lombarde, triomphe à Legnano (1176), obtient la reconnaissance impériale de l'autonomie communale (Constance, 1183). La projection extérieure fonctionne comme exutoire : tant que la Ligue lombarde absorbe l'énergie des élites, la polarisation interne est retardée. La destruction par Barberousse (1162) est une perturbation intra-phase qui renforce paradoxalement l'identité (moteur culturel).
 
+#### Saillant : Pacte oligarchique — établissement de la commune
+- type: saillant
+- start: 1097
+- subtitle: Commune de Milan
+- title: Pacte oligarchique
+- confidence: medium
+- alternatives: 1117 (première attestation documentaire de consuls urbis) ou 1130 (23 consuls attestés). 1097 est la date conventionnelle.
+- summary: Vers 1097, les trois ordres (capitanei, valvassores, cives) établissent un gouvernement consulaire collectif. Codification formelle, caractère collectif (les trois ordres en assemblée), moment de faiblesse (post-Ariberto, Pataria, Querelle des Investitures qui paralyse l'archevêque-suzerain). Cas de **chemin B** en suzerain collectif — codification de l'exercice (élection annuelle des consuls, partage des pouvoirs législatif/judiciaire/exécutif). Après 1097, le pouvoir survit aux changements de personnel sans fragmentation : le test discriminant féodal devient négatif.
+- description: Le pacte oligarchique milanais émerge dans le contexte de la Querelle des Investitures, qui détruit l'autorité de l'archevêque comme suzerain et ouvre la fenêtre de faiblesse nécessaire au pacte. Les trois ordres (capitanei — grands seigneurs féodaux ; valvassores — chevaliers et petits feudataires ; cives — bourgeoisie marchande montante) se coalisent dans la commune et codifient un gouvernement consulaire collectif : consuls élus annuellement, partage des pouvoirs législatif (arengo), judiciaire et exécutif. C'est un cas paradigmatique de **chemin B** en configuration de suzerain collectif : ce qui est codifié n'est pas une règle de succession (il n'y a pas de souverain personnel à transmettre une fois l'archevêque écarté) mais les règles d'exercice du pouvoir — comment les consuls sont élus, leur durée, leurs prérogatives, leur reddition de comptes. Le mouvement communal européen plus large (Pise ~1080, Venise 1032 puis ~1140, Gênes 1097, Florence ~1115) suit ce schéma : codification collective de l'exercice du pouvoir par les bourgeoisies urbaines en l'absence d'un suzerain monarchique fort. Structurellement analogue aux Ordonnances anglaises de 1311 et à la Stanser Verkommnis suisse (1481), tous trois chemin B.
+
 #### Saillant : 1er monarque oligarchique — le système communal
 - type: saillant
 - start: 1097
@@ -155,15 +155,6 @@
 - title: Acmé oligarchique
 - confidence: medium
 - summary: La Paix de Constance (1183) consacre l'auto-gouvernement des cités lombardes. Milan est au sommet de sa puissance communale et de sa projection extérieure — leader de la Ligue, vainqueur de Legnano (1176). Position ~0.48 dans la phase, à la charnière essor/polarisation — cohérent avec les cas sans exutoire prolongé (France ~0.53, Angleterre ~0.56, Bavière ~0.54, Israël ~0.47).
-
-#### Saillant : Fin de l'expansion — Cortenuova
-- type: saillant
-- start: 1237
-- figure: Frédéric II de Hohenstaufen
-- subtitle: Cortenuova
-- title: Fin de l'expansion
-- confidence: medium
-- summary: La défaite de Cortenuova (1237) face à Frédéric II marque la fin de l'expansion agressive — le Carroccio est capturé. Après Cortenuova, la projection extérieure cesse de fonctionner comme exutoire et les tensions internes prennent le relais : la question dominante passe de « comment s'enrichir à l'extérieur ? » à « qui contrôle l'État central ? ».
 
 ### Subphase : Polarisation (1200-1240)
 - type: subphase
@@ -333,7 +324,7 @@
 - resolution: Guerre sociale (1780-1796) entre le patriciat (patrimoniale) et les réformateurs/bourgeoisie des Lumières (prébendière), résolue par l'intervention de Napoléon (1796) qui détruit les deux factions et crée un État centralisé.
 - summary: Le test discriminant absolutiste est négatif tout au long de cette phase : l'administration centrale (gouverneur espagnol puis autrichien) n'a PAS préséance sur les administrations locales, et l'exécutif ne peut PAS agir sans l'accord des oligarques (double verrou : Grand Chancelier en amont, interinazione du Sénat en aval). Les marqueurs nécessaires de la phase oligarchique sont présents : fisc permanent, administration institutionnalisée, coexistence du centre avec des pouvoirs locaux autonomes. La guerre sociale oppose le patriciat (patrimoniale) à la bourgeoisie des Lumières (prébendière), résolue par Napoléon (1796).
 - description: Le diagnostic oligarchique repose sur le test discriminant appliqué rigoureusement : l'administration centrale n'a PAS préséance sur les administrations locales, et l'exécutif ne peut PAS agir sans l'accord des oligarques. Le gouverneur espagnol est contraint par un double verrou (sceau du Grand Chancelier en amont, interinazione du Sénat en aval). Quand le gouverneur Ferrante Gonzaga (1546-1554) tente de centraliser, le patriciat fait pression sur Madrid et obtient son rappel — preuve empirique que le test absolutiste reste négatif. Les villes conservent leurs propres conseils décurionaux, podestà et bases fiscales. La re-féodalisation massive du XVIIe siècle (103 marquisats, 98 comtés vendus) crée de nouvelles juridictions autonomes — marqueur fréquent de la phase oligarchique. L'essor (1535-1630) voit la consolidation du système (Novae Constitutiones 1541, Borromeo 1564-1584). La polarisation (1630-1780) oppose progressivement le patriciat (patrimoniale au sens de Weber — 259 familles contrôlant plus de la moitié des terres, revenus fonciers indépendants du centre) à la bourgeoisie des Lumières (prébendière — Beccaria, Verri, revenus liés à l'appareil réformateur autrichien). Joseph II (1780-1790) tente de forcer l'absolutisation mais échoue (Léopold II annule). Napoléon tranche en 1796.
-- deviation: +61 ans par rapport à la norme (~200 ans). La peste de 1630 et le ralentissement des moteurs sous domination étrangère (le moteur étatique tourne au ralenti sans souverain autochtone) expliquent l'allongement.
+- deviation: +61 ans par rapport à la norme (~200 ans). La peste de 1630 et la **désynchronisation des moteurs sous tutelle prolongée** (cf. `parcours.md` §Les deux moteurs et `perturbations.md` §4.6) expliquent l'allongement : le moteur étatique tourne au ralenti sans souverain autochtone (gouverneur étranger sans préséance, double verrou Grand Chancelier + Sénat) tandis que le moteur culturel milanais continue de progresser via les écoles juridiques, les ordres religieux, l'identité urbaine et la classe administrative qui mature autonomement (Beccaria, Verri).
 
 ### Subphase : Essor oligarchique (1535-1630)
 - type: subphase
@@ -371,14 +362,6 @@
 - title: Acmé oligarchique
 - confidence: medium
 - summary: Carlo Borromeo (archevêque 1564-1584) porte le Milan espagnol au sommet de sa puissance et de son prestige — acmé oligarchique au sens de la combinaison « puissance personnelle + projection maximale » dans le cadre oligarchique existant. Il incarne surtout le moteur d'homogénéisation culturelle (Contre-Réforme, visite pastorale de chaque paroisse, séminaires, discipline liturgique). Son autorité morale surpasse celle du gouverneur espagnol. Position ~0.30 dans la phase — précoce, cohérente avec un exutoire limité (Milan n'a pas de colonie ni d'empire propre dans ce cycle).
-
-#### Saillant : Fin de l'expansion — Peste de 1630
-- type: saillant
-- start: 1630
-- subtitle: Peste de 1630
-- title: Fin de l'expansion
-- confidence: medium
-- summary: La peste de 1630 marque la fin de l'expansion oligarchique et le basculement de dynamique vers la polarisation. Avant la peste, le Milan espagnol est l'un des territoires les plus riches de la monarchie hispanique — l'essor fonctionne encore comme mode d'enrichissement. Après, la question dominante passe de la prospérité extérieure à la lutte pour le contrôle des ressources internes — le basculement vers la polarisation des élites (patrimoniale vs prébendière).
 
 ### Perturbation : Peste de 1630
 - type: perturbation
@@ -430,7 +413,7 @@
 - resolution: L'AR explose avec les Cinque Giornate (1848). RN avortée (hypothèse — à confirmer par l'analyse du Parcours piémontais).
 - summary: Le test discriminant absolutiste est positif dès 1796 : l'administration centrale (préfets napoléoniens) a préséance de facto et de jure sur les administrations locales, et l'exécutif peut agir sans l'accord des oligarques (Sénat aboli, patriciat dissous). Tous les marqueurs nécessaires sont confirmés en 18 ans. Le Royaume d'Italie (1805-1814) constitue l'impérialisme absolutiste. L'AR se développe sous la Restauration autrichienne (1814-1848) avec les marqueurs canoniques : sédimentation des élites, surproduction élitaire, clivage G-D qui saute.
 - description: La brièveté de la phase (~52 ans) s'explique par le caractère exogène de l'absolutisation. Napoléon importe en 18 ans un modèle d'État centralisé rodé en France depuis deux siècles. Les huit marqueurs de l'absolutisation sont tous confirmés : préfets « quasi-seigneurs absolus » des départements, decurionati abolis, Corps législatif jamais reconvoqué après 1805, Code Napoléon (première traduction du Code civil français, 1806), jury supprimé, centralisation fiscale totale (1,3% d'impôt non collecté en 1808), conscription massive (~200 000 soldats entre 1800 et 1812), patriciat aboli et remplacé par une nouvelle noblesse de service (2 ducs, 104 comtes, 93 barons). Le Royaume d'Italie (6,7M habitants à son maximum, 24 départements) constitue un impérialisme absolutiste accéléré : expansion vers la Vénétie (1805), Guastalla (1806), les Marches (1808), le Trentin (1810). L'armée italienne atteint la parité qualitative avec les unités françaises vers 1810 et combat en Espagne, en Autriche, en Russie. L'effondrement napoléonien (1814) ouvre l'AR : la Restauration autrichienne (Royaume de Lombardie-Vénétie) réimpose un cadre de domination étrangère. L'AR de 34 ans (1814-1848) est au plancher de la fourchette typique (35-100 ans) mais comparable à l'AR anglais (39 ans, 1603-1642). Ses marqueurs sont présents : sédimentation des élites, surproduction élitaire (trop d'Italiens éduqués pour trop peu de positions), pression fiscale (impôts lombards financent l'armée autrichienne), clivage G-D qui saute (bloc élitaire = administration autrichienne + nobles collaborants vs bloc contestataire = patriotes aristocratiques ED + républicains démocrates EG).
-- deviation: -148 ans par rapport à la norme (~200 ans). L'absolutisation exogène (Napoléon) comprime les sous-phases 1 et 2 en ~18 ans. L'AR est au plancher de la fourchette mais pas anomalique.
+- deviation: -148 ans par rapport à la norme (~200 ans). Cas-type de **compression par désynchronisation des moteurs** (cf. `parcours.md` §Les deux moteurs et `perturbations.md` §4.6) : l'absolutisation exogène (Napoléon) comprime les sous-phases 1 et 2 en ~18 ans parce qu'elle s'inscrit sur un terrain culturellement déjà mûr — deux siècles de tutelle hispanique-austrienne ont laissé le moteur culturel milanais avancer autonomement (école des Lumières lombardes, classe administrative bourgeoise réformatrice, identité civique urbaine), si bien que Napoléon institutionnalise une réalité sociale en place plutôt que de la construire. L'AR est au plancher de la fourchette mais pas anomalique.
 
 ### Subphase : Absolutisation (1796-1805)
 - type: subphase
@@ -479,15 +462,6 @@
 - title: Acmé absolutiste
 - confidence: medium
 - summary: Le Royaume d'Italie atteint son apogée vers 1810-1812 : expansion maximale, prestige maximal, domestication complète des élites — les trois marqueurs de l'acmé absolutiste. 6,7 millions d'habitants, 24 départements, expansion territoriale maximale (Vénétie, Marches, Trentin), armée de 80 000-90 000 hommes atteignant la parité qualitative avec les unités françaises, revenus fiscaux au maximum (1,3% d'impôt non collecté en 1808). L'impérialisme absolutiste est au zénith — mais sous tutelle impériale française.
-
-#### Saillant : Fin de l'expansion — chute de Napoléon
-- type: saillant
-- start: 1814
-- figure: Giuseppe Prina
-- subtitle: Chute de Napoléon
-- title: Fin de l'expansion
-- confidence: high
-- summary: L'effondrement napoléonien (1814) met fin à l'expansion — le pouvoir central atteint les limites de son potentiel d'expansion et l'impérialisme s'essouffle (saillant canonique marquant le tournant impérialisme vers AR). Le lynchage du ministre Prina (20 avril 1814) symbolise la rupture avec le régime fiscal impérial et le basculement vers la dynamique d'Ancien Régime.
 
 ### Subphase : Ancien Régime (1814-1848)
 - type: subphase
@@ -559,7 +533,6 @@
 | Pacte oligarchique | Commune (1097) | Novae Constitutiones (1541) |
 | 1er monarque oligarchique | Système communal (1097) | Système Sénat/patriciat (1541) |
 | Acmé oligarchique | Paix de Constance (1183) | Borromeo (1564-1584) |
-| Fin de l'expansion (olig.) | Cortenuova (1237) | Peste de 1630 |
 | Guerre sociale | Torriani contre Visconti (1240-1277) | Patriciat contre réformateurs (1780-1796) |
 | 1er monarque absolu | Ottone Visconti (1277) | Napoléon (1796) |
 | DGRO | Retour Della Torre (1302-1311) | — |

@@ -13,6 +13,10 @@ Ces deux processus sont à la fois les *moteurs* et les *indicateurs* du Parcour
 
 Les deux moteurs doivent progresser **ensemble**. Un État central avancé sans homogénéité culturelle suffisante = Parcours qui **boucle** : la phase féodale recommence en cycles (pic suivi de crise) sans produire le pacte oligarchique, faute d'homogénéité des grands. Une homogénéité culturelle forte sans construction étatique = Parcours qui **stagne** : l'identité de la nation existe mais l'appareil reste informel, l'éveil féodal lui-même est compromis. Le Parcours avance le plus vite quand les deux moteurs sont **alignés**.
 
+**Désynchronisation par tutelle prolongée**. À ces deux configurations endogènes (bouclage, stagnation) s'ajoute une désynchronisation par tutelle exogène : quand un suzerain étranger tient l'appareil central de la nation sur une longue période, le moteur étatique stagne tandis que le moteur culturel continue de progresser via des canaux non-étatiques — langue vernaculaire, écoles juridiques, ordres religieux, presse, identité urbaine, classes professionnelles autonomes. Les deux moteurs se désynchronisent : l'homogénéité culturelle prend de l'avance sur l'État central, sans pour autant produire la stagnation décrite ci-dessus (qui suppose une informalité de l'appareil). À la levée de la tutelle — typiquement par un 1er monarque absolu imposé exogènement (figure dynastique installée par traité, puissance étrangère arbitrante) — l'État central rattrape rapidement sur un terrain culturellement déjà mûr. La phase absolutiste qui suit peut être structurellement compressée : la sédimentation sociologique des élites, l'articulation intellectuelle d'un programme prébendier, et la maturité de la classe administrative sont déjà acquises avant même que l'appareil central ne les formalise. L'absolutisation procède plus vite parce qu'elle institutionnalise une réalité sociale déjà en place plutôt que de la construire de zéro.
+
+Conditions d'activation : (1) tutelle par un suzerain étranger qui retient l'appareil central de la nation, (2) homogénéité culturelle progressant de façon autonome de l'État (densité urbaine, tradition vernaculaire, unité religieuse, classe professionnelle structurée), (3) souvent : petite/moyenne nation finalement absorbée avant maturation complète de l'AR. Le mécanisme ne s'applique pas aux nations dont le « gel » de l'État central est endogène (monarchies composites où la centralisation est portée activement par une couronne nationale, type Espagne pré-Nueva Planta). Cf. `perturbations.md` §4.6 pour la distinction avec l'exutoire.
+
 ### Nature de l'appareil étatique : critère fonctionnel, pas juridique
 
 L'appareil de l'État central — fisc, armée, justice, coordination — est défini par les **fonctions qu'il exerce**, pas par son statut juridique formel. Quand une structure formellement privée (banque familiale, consortium de créanciers institutionnalisé, ordre religieux militaire, compagnie à charte) exerce effectivement les fonctions de l'appareil central — extraction fiscale, coercition, coordination diplomatique, récompense-sanction des élites, administration de territoires soumis — elle constitue cet appareil au sens historionomique, indépendamment de son statut formel. La distinction public/privé est une catégorie juridique tardive et contingente ; le critère structurel est fonctionnel.
@@ -39,10 +43,12 @@ La construction de l'État central est le **moyen** de répondre à cette questi
 **Phase pré-féodale (~90-120 ans).** Percolation élitaire (Deblonde) : émergence d'une aristocratie qui se reconnaît comme telle, sans encore de chef supra-régional. Préparation de la phase féodale. Cf. `phase_pre_feodale.md`.
 
 **Phase féodale (~200 ans, peut boucler).** Interconnexion des réseaux claniques et lignagers. Un chef des chefs émerge, dont l'autorité repose sur des liens de vassalité d'homme à homme. Pas d'administration centrale permanente. L'édifice est fragile et dépend de la personne du suzerain. Des **pics féodaux** (rois forts) alternent avec des **crises féodales** (fragmentation post-pic). Le **pacte oligarchique** ne survient que quand **deux conditions** sont réunies simultanément : homogénéité des oligarques + faiblesse du suzerain (Deblonde). Si la phase boucle (crises sans pacte par homogénéité insuffisante), elle peut durer plusieurs fois la durée typique — chaque cycle pic/crise rejoue la fragilité féodale. Cf. `phase_feodale.md`.
-- Sous-phases : coagulation des élites → [bascule oligarchique]
+- Sous-phases : coagulation des élites → bascule oligarchique (sous-phase terminale de transition, parallèle à la guerre sociale qui clôt l'oligarchique ou à l'ancien régime qui clôt l'absolutiste)
 
 **Phase oligarchique (~200 ans).** Émergence de l'État central — impôt permanent, armée permanente, administration centrale. L'État central se renforce face aux pouvoirs locaux. Polarisation progressive entre faction prébendière et patrimoniale, jusqu'à la **guerre sociale**, résolue par un **1er monarque absolu**. Cf. `phase_oligarchique.md`.
-- Sous-phases : essor oligarchique → polarisation des élites → guerre sociale
+- Sous-phases (trajectoire canonique) : essor oligarchique → polarisation des élites → guerre sociale
+- **Variante alternative (Deblonde-Pariente, 2026-05-14)** : essor oligarchique → **équilibre oligarchique** (phase prolongée indéfiniment quand l'homogénéité culturelle du substrat empêche la polarisation des élites — principe de catalyse hétérogène). Pas de GS, pas de 1er MA endogène. Sortie uniquement par imposition exogène. Cf. `phase_oligarchique.md` §Sous-phase 2 bis.
+- Saillant d'ouverture : Pacte oligarchique (1er saillant de l'essor, parallèle à 1er monarque absolu qui ouvre l'absolutiste, ou Éclatement de l'AR qui ouvre la RN)
 
 **Phase absolutiste (~200 ans).** L'administration centrale acquiert une supériorité incontestée sur les administrations locales. Achèvement de l'élimination des réseaux féodaux et oligarchiques. Se conclut par l'**ancien régime** : système à maturité, élites sédimentées, mobilité sociale figée, rentes insupportables. Cf. `phase_absolutiste.md`.
 - Sous-phases : absolutisation (~30-70 ans) → impérialisme absolutiste (~45-100 ans) → ancien régime (~35-100 ans)
@@ -67,13 +73,13 @@ Les **sous-phases** découpent chaque phase en étapes successives pour comprend
 |---|---|---|---|
 | Percolation élitaire | Fragmentation / identité émergente | **Éveil féodal** | ~90-120 ans |
 | Coagulation des élites | **Éveil féodal** | **Crise féodale terminale** OU **Pacte oligarchique** direct | ~100-250 ans |
-| Bascule oligarchique | **Crise féodale terminale** | **Pacte oligarchique** | ~10-20 ans |
-| Essor oligarchique | **Pacte oligarchique** | ⚠️ Basculement (projection extérieure → tension interfactions) | ~70-100 ans |
+| Bascule oligarchique | **Crise féodale terminale** | **Pacte oligarchique** (boundary) | ~10-20 ans |
+| Essor oligarchique | **Pacte oligarchique** (1er saillant d'oligarchique) | ⚠️ Basculement (projection extérieure → tension interfactions) | ~70-100 ans |
 | Polarisation des élites | ⚠️ Basculement | **Début de la guerre sociale** | ~10-40 ans |
 | Guerre sociale | Premier épisode ouvert du conflit | **1er monarque absolu** | ~15-60 ans |
 | Absolutisation | **1er monarque absolu** | **Fin de la DGRO** (consensus absolutiste) | ~30-70 ans |
-| Impérialisme absolutiste | **Fin de la DGRO** | **Remontrance** | ~45-100 ans |
-| Ancien régime | **Remontrance** | **Éclatement de l'AR** | ~35-100 ans |
+| Impérialisme absolutiste | **Fin de la DGRO** | **Saturation fiscale** | ~45-100 ans |
+| Ancien régime | **Saturation fiscale** | **Éclatement de l'AR** | ~35-100 ans |
 | Révolution initiale | **Éclatement de l'AR** | **Émergence de l'IR** | ~10-15 ans |
 | Impérialisme revanchard | **Émergence de l'IR** | **Restauration** | ~10-16 ans |
 | Restauration | **Restauration** | **Glorieuse Révolution** | ~3-40 ans |
@@ -85,13 +91,21 @@ Les **sous-phases** découpent chaque phase en étapes successives pour comprend
 3. Les bornes ne doivent pas être forcées pour obtenir des durées typiques.
 4. Quand une sous-phase optionnelle est absente (bascule oligarchique, IR), justifier structurellement.
 
-**Saillants positionnés à l'intérieur d'une sous-phase** (pas en borne) : 1er monarque oligarchique (interne à l'essor, premier souverain post-PO, typiquement quelques années après le PO) ; Acmé oligarchique (interne à l'essor) ; Fin de l'expansion oligarchique (peut coïncider avec le basculement essor → polarisation) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Fin de l'expansion absolutiste (interne à l'impérialisme absolutiste) ; Expérience parlementaire, Phase aiguë, Moment thermidorien (internes à la révolution initiale, qui s'étend de l'Éclatement de l'AR à l'Émergence de l'IR).
+**Saillants positionnés à l'intérieur d'une sous-phase** (pas en borne) : 1er monarque oligarchique (interne à l'essor, premier souverain post-PO, typiquement quelques années après le PO) ; Acmé oligarchique (interne à l'essor) ; DGRO (interne à l'absolutisation, son écrasement marque la fin) ; Acmé absolutiste (interne à l'impérialisme absolutiste) ; Remontrance (généralement simultanée ou quasi-simultanée à la Saturation fiscale, manifestation politique contingente du basculement en AR — peut être absente) ; Réformes échouées (interne à l'AR mature) ; Expérience parlementaire, Phase aiguë, Moment thermidorien (internes à la révolution initiale, qui s'étend de l'Éclatement de l'AR à l'Émergence de l'IR).
+
+**Saillants de transition (filing convention)** : les saillants qui marquent la transition d'une phase à la suivante sont **filés sous la phase d'arrivée**, pas sous la phase de départ. Pattern systémique :
+
+- **Bascule oligarchique** (sous-phase féodale) → s'achève au **Pacte oligarchique** (1er saillant de l'oligarchique, dans Essor oligarchique)
+- **Guerre sociale** (sous-phase oligarchique) → s'achève au **1er monarque absolu** (1er saillant de l'absolutiste, dans Absolutisation)
+- **Ancien régime** (sous-phase absolutiste) → s'ouvre par la **Saturation fiscale** (saillant interne à l'AR, premier saillant de la sous-phase) et s'achève à l'**Éclatement de l'AR** (1er saillant de la RN, dans Révolution initiale)
+
+Le saillant frontière est l'acte fondateur de la phase suivante, pas le dernier acte de la phase précédente. La sous-phase terminale de chaque phase porte le nom du processus qui produit la transition (bascule, guerre sociale, AR), mais le saillant qui clôt cette transition appartient formellement à la phase d'après.
 
 ---
 
 ## Saillants canoniques
 
-Les **saillants** sont des éléments ponctuels facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison. Ils forment une **liste fermée** (cf. CLAUDE.md pour le naming canonique). Définitions courtes ci-dessous ; pour les tests discriminants, formes admises et marqueurs détaillés, cf. les `phase_*.md`.
+Les **saillants** sont des éléments ponctuels facilement identifiables dans l'histoire d'une nation, utiles pour la recherche et la comparaison. Ils forment une **liste fermée** (cf. CLAUDE.md pour le naming canonique). Définitions courtes ci-dessous ; pour les tests discriminants, configurations rencontrées et marqueurs détaillés, cf. les `phase_*.md`.
 
 **Féodale** :
 - *Éveil féodal* : émergence du premier chef supra-régional, dont l'autorité force les autres à se positionner (premier souverain dont le pouvoir personnel est au moins l'égal de ses vassaux, les grands féodaux)
@@ -102,15 +116,14 @@ Les **saillants** sont des éléments ponctuels facilement identifiables dans l'
 **Oligarchique** :
 - *1er monarque oligarchique* : premier souverain qui gouverne dans le cadre ouvert par le PO, dont la légitimité repose sur les règles codifiées et non plus sur la stature personnelle
 - *Acmé oligarchique* : pic de projection de puissance combinée souverain + nation, lié à la saturation de l'exutoire externe
-- *Fin de l'expansion* : moment où la projection extérieure cesse, l'énergie compétitive se retourne vers l'intérieur
 - *Guerre sociale* : conflit ouvert entre deux factions oligarchiques pour le contrôle de l'État central (généralement entre une faction prébendière et une faction patrimoniale), résolu par l'émergence d'un nouveau cadre central qui subordonne les anciennes élites
 
 **Absolutiste** :
-- *1er monarque absolu* : figure (ou institution, ou dynastie, ou puissance étrangère arbitrante) qui résout la guerre sociale en créant un nouveau cadre central qui subordonne toutes les anciennes élites — 5 formes admises (cf. `phase_absolutiste.md`)
+- *1er monarque absolu* : figure (ou institution, ou dynastie, ou puissance étrangère arbitrante) qui résout la guerre sociale en créant un nouveau cadre central qui subordonne toutes les anciennes élites (cf. `phase_absolutiste.md` pour les configurations rencontrées dans le corpus)
 - *DGRO (Dernière Grande Révolte Oligarchique)* : dernier sursaut armé des oligarques avant l'ancrage absolutiste — son écrasement marque la fin de l'absolutisation
 - *Acmé absolutiste* : pic d'impérialisme et de prestige, apogée du règne absolutiste
-- *Fin de l'expansion* : moment où la projection extérieure absolutiste cesse, retour vers l'intérieur
-- *Remontrance* : contestation institutionnelle (sans force armée) des élites intégrées à l'appareil absolutiste — marque l'entrée en ancien régime. Premier moment du cycle de la classe administrative intermédiaire (Pariente)
+- *Saturation fiscale* : moment où l'État central perd la capacité d'augmenter durablement ses revenus fiscaux ordinaires malgré ses tentatives, et bascule en mode expédients permanents (emprunts massifs, vénalité, ventes domaniales, manipulations monétaires). C'est ce saillant qui **ouvre la sous-phase Ancien Régime**. Critère Lanoue de Suremain, attribué à Martin
+- *Remontrance* : contestation institutionnelle (sans force armée) des élites intégrées à l'appareil absolutiste. **Manifestation politique contingente** du basculement en AR — généralement simultanée ou quasi-simultanée à la Saturation fiscale (qui crée la fenêtre d'opportunité et l'incitation), mais peut être absente quand la classe administrative est embryonnaire, étouffée par une oligarchie patricienne extrême, ou réduite à un mode intellectuel. Premier moment du cycle de la classe administrative intermédiaire (Pariente)
 - *Réformes échouées* : séquence de tentatives de réforme structurelle par le souverain ou ses ministres, systématiquement bloquées par la classe administrative désormais sédimentée. La récurrence est le marqueur central (Deblonde) — pas qu'elles échouent, mais qu'elles s'enchaînent. Second moment du cycle de la classe administrative intermédiaire
 
 **RN** :
@@ -124,7 +137,7 @@ Les **saillants** sont des éléments ponctuels facilement identifiables dans l'
 
 **Distinction sous-phase / saillant** :
 - La **guerre sociale** et la **restauration** sont à la fois sous-phase (durée) et saillant (moment).
-- L'**ancien régime** est une sous-phase **seulement** — l'entrée est marquée par le saillant *Remontrance*, la sortie par le saillant *Éclatement de l'AR*. Pas de saillant nommé « Ancien Régime ».
+- L'**ancien régime** est une sous-phase **seulement** — l'entrée est marquée par le saillant *Saturation fiscale* (critère Lanoue de Suremain), la sortie par le saillant *Éclatement de l'AR*. Pas de saillant nommé « Ancien Régime ». La *Remontrance*, quand elle a lieu, est généralement simultanée ou quasi-simultanée à la Saturation fiscale — mais c'est une manifestation politique contingente qui peut être absente.
 - L'**émergence de l'IR** est un saillant (le moment) ; l'**impérialisme revanchard** est la sous-phase (la durée).
 
 **Les saillants sont des marqueurs, pas des conditions.** Une nation peut être factuellement à une phase donnée par le niveau combiné de ses deux moteurs **sans en présenter tous les saillants typiques**. Trois configurations rendent les saillants politiques (monarques) absents alors que la phase est bien celle que les moteurs indiquent :
@@ -154,6 +167,7 @@ Les écarts à ces durées sont toujours significatifs et s'expliquent par une p
 - **Insuffisance interne** (conflit lignager, blocage culturel) → prolongement par bouclage
 - **Correction d'échelle** (perte territoriale) → accélération
 - **Exutoire** (projection extérieure prolongée — empire, colonies, mercenariat) → prolongement de la phase en cours tant que l'exutoire fonctionne
+- **Désynchronisation par tutelle prolongée** (gel de l'appareil central par un suzerain étranger pendant que l'homogénéisation culturelle continue par canaux non-étatiques) → prolongement de la phase oligarchique pendant la tutelle + compression de la phase absolutiste post-tutelle. Cf. §Les deux moteurs et `perturbations.md` §4.6.
 
 Une phase qui dure significativement plus longtemps que la norme est portée par un exutoire actif ou par une insuffisance interne ; une phase plus courte que la norme a subi un choc qui l'a accélérée.
 
@@ -172,7 +186,7 @@ La **cohérence du parcours d'ensemble** (cf. CLAUDE.md, *Critère essentiel*) e
 
 ### Tests discriminants principaux par transition
 
-Tableau de synthèse — pour le détail (formes admises, marqueurs, cas particuliers, exceptions documentées), cf. les `phase_*.md`.
+Tableau de synthèse — pour le détail (configurations rencontrées, marqueurs, cas particuliers, exceptions documentées), cf. les `phase_*.md`.
 
 | Transition | Test discriminant principal |
 |---|---|

@@ -127,9 +127,47 @@ Un territoire qui ressemble à une phase oligarchique mais dont l'autonomie poli
 
 ## Sous-phase 1 : Essor oligarchique
 
-Après le pacte oligarchique, la nation se dote de nouveaux outils — fisc permanent, armée permanente, administration centrale — et peut déployer une **énergie focalisée** vers l'extérieur. C'est l'essor oligarchique : la période la plus dynamique de la phase. Le souverain utilise cette puissance nouvelle pour conquérir de nouveaux territoires et projeter la nation vers l'extérieur (sauf si le différentiel de puissance avec les voisins l'interdit).
+L'essor oligarchique s'ouvre par le **Pacte oligarchique** — saillant fondateur de la phase oligarchique. Après le pacte, la nation se dote de nouveaux outils — fisc permanent, armée permanente, administration centrale — et peut déployer une **énergie focalisée** vers l'extérieur. C'est l'essor oligarchique : la période la plus dynamique de la phase. Le souverain utilise cette puissance nouvelle pour conquérir de nouveaux territoires et projeter la nation vers l'extérieur (sauf si le différentiel de puissance avec les voisins l'interdit).
 
 **Tant que cette projection extérieure fonctionne comme mode d'enrichissement et exutoire**, la polarisation des élites est retardée. Les conquêtes et le commerce extérieur absorbent l'énergie des élites et les enrichissent — elles n'ont pas besoin de se battre pour le contrôle de l'État central. La codification du droit, la protection de la propriété privée et la concurrence entre élites favorisent la croissance économique.
+
+### Saillant : Pacte oligarchique (saillant d'ouverture)
+
+Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la structure de l'exécutif. C'est la **résolution de la phase féodale** et le **passage à la phase oligarchique** — le PO est par convention de filing le **premier saillant de la phase oligarchique** (sous-phase Essor oligarchique), pas le dernier de la féodale. Pattern systémique avec les autres saillants frontière (1er monarque absolu, Éclatement de l'AR), tous filés sous la phase d'arrivée. La sous-phase Bascule oligarchique reste en féodale comme sous-phase terminale de transition (cf. `phase_feodale.md` §Sous-phase 2).
+
+#### Critère universel : la garantie collective de la stabilité aux successions
+
+**Ce que le pacte doit produire structurellement** : la stabilité du régime aux successions est désormais garantie collectivement par les élites, et le pouvoir survit au remplacement du suzerain. C'est ce qui fait basculer le test discriminant féodal/oligarchique. Le pacte est l'acte par lequel les oligarques fournissent cette garantie.
+
+Trois éléments structurels caractérisent l'acte :
+
+1. **Codification** — un acte formel, daté, qui fixe des règles (et non une accumulation coutumière diffuse).
+2. **Caractère collectif** — issu d'une assemblée des oligarques (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers, etc.), non d'une décision unilatérale du souverain.
+3. **Moment de faiblesse** — opéré quand les deux conditions (homogénéité + faiblesse) convergent. Pour le détail des conditions de Deblonde, cf. `phase_feodale.md` §Conditions simultanées du pacte.
+
+#### Deux mécanismes pour produire la stabilité aux successions
+
+Le critère universel est le résultat — la stabilité aux successions est désormais garantie collectivement — pas le contenu spécifique de la codification. Empiriquement, le corpus présente deux mécanismes distincts qui produisent ce même résultat, parfois successivement dans la même nation.
+
+Premier mécanisme : **codification de la transmission**. L'acte fixe explicitement qui hérite ou comment l'élection se fait. Le pouvoir survit aux successions parce que la transmission est verrouillée.
+
+Second mécanisme : **codification de l'exercice du pouvoir**. L'acte ne traite pas de la succession mais encadre l'exercice du pouvoir (consentement aux nominations, contrôle des finances, des campagnes militaires) au point que le pouvoir cesse d'être le patrimoine personnel du suzerain. Le pouvoir survit aux successions parce que le souverain est devenu accessoire à un appareil institutionnel collégial. Test empirique : un souverain peut être déposé, écarté ou remplacé sans que l'État ne vacille.
+
+Les deux mécanismes sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux successivement (verrouillage de la transmission d'abord, complété ensuite par la maturation institutionnelle qui encadre l'exercice), mais c'est la première codification produisant la stabilité aux successions qui ouvre la phase oligarchique.
+
+#### Distinction avec les créations institutionnelles unilatérales
+
+Le pacte ne se confond pas avec la simple existence d'institutions centrales. Un roi fort peut créer un parlement, une chambre des comptes, une cour de justice, une administration bureaucratique : ces créations sont des outils du roi. Le test décisif n'est pas « les structures existent-elles ? » mais « les oligarques se les sont-ils collectivement appropriées par un acte de codification qui contraint le souverain ? ».
+
+Une institution créée à la discrétion du roi peut être abolie à sa discrétion. Une institution issue d'un pacte oligarchique ne peut plus l'être : elle a sa propre légitimité indépendante du souverain.
+
+#### Cas limite : « suzerain collectif »
+
+Dans certaines configurations (cités-États, ligues), le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul, président élu) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les responsabilités de l'exécutif qui sont codifiées collectivement, mais la forme est institutionnelle.
+
+#### Cas du PO probable mais textuellement invisible
+
+Dans certaines sociétés à faible production documentaire ou dont les sources écrites sont tardives et hostiles, l'acte de codification lui-même peut ne pas être attesté. Si les **effets structurels** d'un PO sont reconnaissables (le pouvoir survit désormais aux successions, la dynastie est stable, le fisc et l'armée sont permanents et survivent au souverain, la nation est reconnue par ses voisins comme une entité stable), on peut conclure à un **PO structurellement probable mais textuellement invisible**. Précédent méthodologique : l'absence de trace écrite d'un acte de codification dans une société à faible production documentaire ne réfute pas l'existence du pacte, dès lors que ses effets structurels sont attestés.
 
 ### Saillant : 1er monarque oligarchique (T0)
 
@@ -163,25 +201,11 @@ Après le pacte oligarchique, la nation se dote de nouveaux outils — fisc perm
 - Fiscalité et armée à leur pleine capacité opérationnelle
 - Souverain « qui sort du lot par la puissance de son pouvoir personnel » dans le cadre oligarchique
 
-### Saillant : Fin de l'expansion (tournant essor → polarisation)
-
-**Définition** : le moment où l'expansion extérieure cesse de fonctionner et où les tensions internes prennent le relais. Marque le tournant entre l'essor dynamique et la polarisation des élites.
-
-**Test discriminant** : qu'est-ce qui distingue une fin de l'expansion d'un simple revers passager ?
-
-1. **Caractère structurel** : il s'agit d'un arrêt durable de la projection extérieure, pas d'une défaite ponctuelle suivie d'une reprise
-2. **Reconfiguration interne** : les élites cessent de mobiliser leur énergie vers l'extérieur et se réorientent vers la lutte pour le contrôle de l'État central
-3. **Changement de modalité de l'enrichissement** : les revenus de l'expansion (butin, conquêtes, commerce dominant) cèdent la place aux revenus internes (charges, prébendes, contrats) comme moteur principal de l'enrichissement élitaire
-
-**Signes observables** :
-- Défaite militaire significative consacrée par un traité de paix limitant durablement la projection extérieure
-- Perte territoriale stable ou recul commercial structurel
-- Recentrage forcé sur le territoire propre (politique militaire défensive plutôt qu'offensive)
-- Basculement des préoccupations élitaires vers les enjeux internes (réformes fiscales, contrôle de l'administration, factions rivales se structurant)
-
 ---
 
 ## Sous-phase 2 : Polarisation des élites
+
+**Variante alternative** : *équilibre oligarchique* (voir Sous-phase 2 bis ci-dessous) — la phase oligarchique peut s'arrêter à son stade essor et y demeurer indéfiniment si l'homogénéité culturelle du substrat est suffisamment élevée pour empêcher la polarisation. Le cas standard (polarisation des élites) suppose un substrat hétérogène qui catalyse le clivage prébendière/patrimoniale.
 
 Dès que les aventures extérieures cessent de rapporter — par saturation, défaite, ou fermeture des débouchés — la dynamique principale de la nation change. La question n'est plus « comment s'enrichir à l'extérieur ? » mais « **qui contrôle l'État central ?** ». L'État a grossi pendant l'essor : il lève des impôts, distribue des charges, structure le commerce, rend la justice. Pour les élites, s'assurer que cet appareil ne soit pas utilisé *contre* elles — et qu'il soit utilisé *pour* elles — devient la priorité.
 
@@ -220,6 +244,49 @@ La sous-phase « polarisation des élites » s'achève au déclenchement de la g
 
 ---
 
+## Sous-phase 2 bis : Équilibre oligarchique (variante alternative à la polarisation des élites)
+
+**Variante du parcours canonique introduite par Deblonde-Pariente (2026-05-14)**.
+
+Une phase oligarchique peut s'arrêter à son stade essor et y demeurer indéfiniment si le **niveau d'homogénéité culturelle du substrat social est suffisamment élevé pour empêcher la polarisation des élites**.
+
+### Mécanisme
+
+La polarisation des élites (sous-phase 2 standard) est la mécanique d'avancement de la phase oligarchique : elle clive les élites en blocs concurrents (prébendière vs patrimoniale), produit la guerre sociale comme cristallisation maximale du conflit, et la résolution canonique se fait par construction d'un nouveau cadre supérieur (absolutisation par 1er MA).
+
+**Principe de catalyse hétérogène (Deblonde)** : la croissance de l'administration centrale déclenche la polarisation des élites *seulement si* il existe des blocs d'hétérogénéité culturelle dans le substrat social qui peuvent lui servir de catalyseur. Sans ces blocs, la croissance administrative reste cooptative et homogène ; les élites se distribuent les positions de pouvoir sans se polariser.
+
+Si les élites sont culturellement homogènes au point de ne pas se polariser, les institutions oligarchiques précoces (conseils urbains, podestat, statuts municipaux, magistratures cooptatives) **suffisent à satisfaire toutes les élites** par circulation et cooptation. Aucune fraction ne se sent exclue, aucune coalition structurée ne se forme, aucune cristallisation antimagnatique ultérieure (autre que le PO d'ouverture déjà passé) n'est nécessaire.
+
+**Du côté des classes populaires** : pas de motivation à une révolte de type RN, parce que la RN canonique cible la **soumission à la représentation nationale d'un outil administratif central puissant**. Si l'outil administratif reste léger (peu de prébendes, pas d'impôt direct permanent, pas de classe administrative dotée de postes prestigieux à conquérir, pas de monopolisation de la justice ou de la violence par le centre), il n'y a pas de cible révolutionnaire structurelle. Les populari peuvent avoir des griefs ponctuels (fiscalité ad hoc, abus locaux) mais pas le projet de soumettre un Léviathan administratif inexistant.
+
+### Caractéristiques
+
+- Toutes les institutions oligarchiques précoces sont présentes (conseils, magistratures, statuts municipaux, podestat ou équivalent, élites consolidées comme classe, urbanisation, monétarisation)
+- Pas de polarisation prébendière/patrimoniale structurée
+- Pas de Guerre sociale canonique
+- Pas de 1er MA endogène
+- Pas de classe administrative distincte du bloc oligarchique (puisque pas de polarisation pour la cristalliser)
+- État central léger, fonctions administratives cumulées avec personnel curial-domestique du seigneur ou des conseils urbains
+- Équilibre stable dynamique (élites satisfaites par cooptation, populari sans cible révolutionnaire)
+
+### Sortie
+
+Aucun mécanisme endogène connu pour faire évoluer un système en équilibre oligarchique. Sortie uniquement par **imposition exogène** :
+- Conquête par un État plus avancé phasiquement
+- Fusion-absorption dans un parcours plus vaste
+- Médiatisation moderne (Bonaparte, Risorgimento, Reichsdeputationshauptschluss 1803, etc.)
+
+### Observation empirique et question ouverte
+
+Jusqu'à présent, l'état d'homogénéité culturelle suffisant pour produire l'équilibre oligarchique n'a été observé que sur des **territoires de petite taille** (petits États dynastiques, micro-principautés, dépendances). **La question de savoir si la petitesse du territoire est une condition nécessaire ou simplement une corrélation fréquente reste ouverte** — il n'est pas exclu théoriquement qu'un grand territoire culturellement très homogène (par construction politique délibérée, par isolement géographique prolongé, ou autre cause) puisse présenter le même blocage.
+
+### Pas de saillant terminal canonique
+
+La sous-phase équilibre oligarchique n'a pas de saillant terminal endogène (puisqu'il n'y a pas de mécanisme endogène de sortie). Sa fin est marquée par l'événement exogène qui impose la sortie.
+
+---
+
 ## Sous-phase 3 : Guerre sociale
 
 La guerre sociale est à la fois une **sous-phase** (la durée du conflit entre factions) et un **saillant** (le moment de son déclenchement). En tant que saillant, « Guerre sociale » marque le déclenchement du conflit — pas sa durée.
@@ -251,15 +318,23 @@ On désigne par « guerre sociale » le conflit entre deux factions élitaires �
 
 La religion, la région, la dynastie, la langue sont des **modes d'expression du clivage**, pas sa cause. Le test critique : *l'enjeu du conflit est-il bien le contrôle de l'appareil central pour la distribution des prébendes* (pas le salut des âmes, pas l'autonomie régionale, pas la continuité dynastique comme fin en soi) ?
 
-**2. La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme — le tiers qui gagne, c'est le parti des prébendes en soi, l'État central comme distributeur souverain.
+**2. La résolution conduit à un nouveau cadre** — qui renforce le pouvoir central et subordonne les grands oligarques. Ce n'est pas la simple victoire d'une faction sur l'autre (qui ne ferait que marginaliser le perdant) : c'est l'émergence d'un cadre nouveau qui transcende le clivage précédent. C'est pour cette raison que la guerre sociale débouche sur l'absolutisme : ce qui « gagne » n'est pas une troisième faction sociologique mais l'**État central** lui-même comme distributeur souverain — un appareil qui s'affranchit de l'enjeu factionnel en absorbant les réseaux des deux camps.
 
 ### La figure résolvante
 
-Ce qui compte structurellement n'est pas la provenance de la figure mais l'**émergence d'un nouveau cadre central** qui renforce le pouvoir central et subordonne les anciennes élites oligarchiques.
+Ce qui compte structurellement n'est pas la **provenance sociologique** de la figure mais sa **rupture fonctionnelle avec la logique factionnelle** : l'émergence d'un appareil central qui subordonne les deux camps en absorbant leurs réseaux dans une administration unifiée. Trois tests fonctionnels qualifient la figure comme 1er monarque absolu :
 
-Empiriquement, deux trajectoires reviennent dans le corpus. La plus fréquente : la figure résolvante est un **tiers** non affilié aux deux factions — typiquement une figure populiste s'appuyant sur les clientèles délaissées par les deux camps et sur la classe moyenne administrative pour forcer les puissants à plier devant le pouvoir central. Elle offre des concessions et un compromis légal qui en réalité renforcent le pouvoir central ; l'abandon progressif des clientèles par les élites rend ces populations disponibles pour de telles figures. La trajectoire moins fréquente mais tout aussi canonique : un **chef de faction** l'emporte militairement ou politiquement et, au lieu de simplement marginaliser le camp adverse, crée un nouveau cadre central qui subordonne *toutes* les anciennes élites, y compris celles de son propre camp. C'est notamment fréquent quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive.
+1. Subordonne-t-elle sa propre faction d'origine, pas seulement l'adverse ?
+2. Absorbe-t-elle les réseaux des deux camps dans un appareil unifié (recrutement, fiscalité, justice indifférents au camp d'origine) ?
+3. La logique factionnelle elle-même cesse-t-elle de structurer la vie politique nationale ?
 
-Le tiers neutre est une observation empirique fréquente, pas un critère structurel : ne pas confondre l'absence de tiers avec l'absence de résolution. La résolution se fait par le 1er monarque absolu (cf. `phase_absolutiste.md`).
+Empiriquement, le cas le plus fréquent dans le corpus est celui d'une **figure d'origine factionnelle qui rompt fonctionnellement avec sa faction** — elle émerge depuis l'un des deux camps (qui lui fournit base, réseau, prétention légitime) mais sa fonction historique est d'**abolir le clivage factionnel** en construisant un appareil au-dessus des deux. Henri IV est huguenot d'origine, mais l'Édit de Nantes pacifie ligueurs et protestants sous arbitrage royal et sa conversion (« Paris vaut bien une messe ») est l'acte fondateur de cette transfactionnalité. Henry VII se réclame Lancastre par les Beaufort mais bâtit délibérément sa légitimité « au-dessus » des deux roses (rose Tudor, mariage avec Élisabeth d'York) et démantèle le *bastard feudalism* via les *livery and maintenance acts* sans considération de camp. Felipe V est Bourbon, mais les Decretos de Nueva Planta abolissent les fueros aragonais, valenciens et catalans, et la centralisation s'impose aussi dans les territoires loyalistes. Dans tous ces cas, l'origine factionnelle est un **tremplin** légitime, pas une victoire factionnelle.
+
+Plus rarement, la figure résolvante est un **véritable tiers** non affilié aux deux factions — typiquement une figure populiste s'appuyant sur les clientèles délaissées par les deux camps et sur la classe administrative pour faire plier les puissants. Configuration structurellement plus rare, parce qu'un tiers exogène a rarement la légitimité ou le réseau requis pour s'imposer ; quand le cas se présente, l'absence d'attaches factionnelles préalables facilite mécaniquement la rupture fonctionnelle.
+
+Cas particulier : quand la guerre sociale se superpose à une guerre d'indépendance ou à une révolte populaire contre une caste dirigeante exclusive, le chef victorieux crée un cadre qui subordonne *toutes* les anciennes élites, y compris celles de son propre camp d'origine.
+
+Le test reste donc **fonctionnel, pas sociologique** : ne pas confondre l'**origine** de la figure (presque toujours factionnelle) avec sa **fonction** (abolir le clivage factionnel par étatisation). Inversement, quand un « 1er monarque absolu » apparent installe simplement sa faction au pouvoir sans construire d'appareil au-dessus, ce n'est pas une vraie résolution de la guerre sociale — la phase oligarchique se poursuit (cf. §Non-résolution).
 
 ### Non-résolution
 

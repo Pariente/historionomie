@@ -136,17 +136,6 @@
 - confidence: high
 - summary: Le doge le plus puissant de la période féodale : conquête de la Dalmatie (1000), privilèges commerciaux de Byzance (992), alliances dynastiques européennes. L'apogée du pouvoir personnel déclenche la réaction qui aboutit au pacte de 1032.
 
-#### Saillant : Pacte oligarchique — abolition de la co-régence
-- type: saillant
-- start: 1032
-- figure: Domenico Flabanico (doge de transition)
-- subtitle: Abolition co-régence
-- title: Pacte oligarchique
-- confidence: medium
-- alternatives: On pourrait placer le pacte en 1172 (création du Grand Conseil après l'assassinat de Vitale II Michiel). Mais le test discriminant bascule dès 1032 : après cette date, le pouvoir survit aux successions sans fragmentation.
-- summary: L'abolition de la co-régence (1032) satisfait le critère du PO : première codification négociée et entérinée des responsabilités de l'exécutif, imposée collectivement par les familles marchandes au moment où les deux conditions de Deblonde convergent (homogénéité lagunaire + faiblesse post-Orseolo).
-- description: Le renversement des Orseolo en 1026 met fin à la dernière dynastie dogale et ouvre la fenêtre de faiblesse que les conditions de Deblonde exigent. Domenico Flabanico, élu en 1032, est un doge délibérément faible, choisi pour incarner la rupture. L'abolition de la co-régence satisfait les trois éléments du critère du PO : codification formelle (acte écrit interdisant la co-régence), responsabilités du suzerain (le doge ne pourra plus désigner son successeur), et caractère négocié et entériné (imposé collectivement par l'assemblée des familles marchandes, non par décision unilatérale du doge). La condition d'homogénéité (Deblonde) est remplie par 300 ans de brassage dans l'espace confiné du lagon — les familles marchandes se perçoivent comme une classe avec des intérêts communs. Le pacte est fonctionnellement analogue à la loi salique (France, 1317) ou aux Ordonnances (Angleterre, 1311) : transition d'un pouvoir fondé sur la personne vers un pouvoir fondé sur des règles.
-
 ---
 
 ## Phase : Oligarchique
@@ -170,6 +159,17 @@
 - title: Essor oligarchique
 - summary: Construction institutionnelle et expansion massive. L'essor est prolongé par les exutoires extérieurs (Stato da Màr, Terraferma, guerres ottomanes) qui empêchent la polarisation des élites pendant près de cinq siècles.
 - description: L'essor oligarchique vénitien est porté par le commerce maritime et se déploie en plusieurs étapes denses. Après le pacte de 1032, Domenico Contarini (1043-1070) est le premier doge à gouverner de manière stable sous le nouveau régime : la succession devient paisible, le test discriminant féodal (le pouvoir est-il en péril à chaque succession ?) bascule réellement. La fondation économique est posée par la chrysobulle d'Alexis Comnène (1082), qui accorde à Venise des privilèges commerciaux extraordinaires en échange de l'aide navale contre les Normands. L'Arsenal (1104), plus grand complexe industriel d'Europe pré-moderne, scelle l'appareil militaro-industriel d'État permanent. La participation aux croisades (200 navires en 1099, prises de Sidon 1110 et Tyr 1124, Pacta Warmundi) installe Venise comme intermédiaire incontournable entre Orient et Occident. La construction institutionnelle progresse par étapes : Consilium Sapientium (~1130), puis surtout la refondation de 1172 — déclenchée par l'arrestation de tous les Vénitiens dans l'Empire byzantin par Manuel Comnène (1171) puis l'assassinat du doge Vitale II Michiel — qui crée le Maggior Consiglio élu par les sestieri, formalise l'élection de Sebastiano Ziani et inaugure la Promissio ducale (engagement écrit qui contraint le doge). Quarantia (~1179) et Avogadori de Comun complètent le cadre. L'apogée diplomatique est atteint avec la paix de Venise de 1177 (arbitrage entre Frédéric Barberousse et Alexandre III), puis l'apogée stratégique avec Enrico Dandolo et la IVe croisade (1204). La Serrata (1297) ferme le Grand Conseil aux ~200 familles du Libro d'Oro, le Conseil des Dix (1310) sécurise l'oligarchie contre les coups d'État, la Terraferma est conquise (1404-1428). L'essor ne s'achève qu'à Agnadello (1509), quand la Ligue de Cambrai démontre que l'expansion agressive a atteint ses limites.
+
+#### Saillant : Pacte oligarchique — abolition de la co-régence
+- type: saillant
+- start: 1032
+- figure: Domenico Flabanico (doge de transition)
+- subtitle: Abolition co-régence
+- title: Pacte oligarchique
+- confidence: medium
+- alternatives: On pourrait placer le pacte en 1172 (création du Grand Conseil après l'assassinat de Vitale II Michiel). Mais le test discriminant bascule dès 1032 : après cette date, le pouvoir survit aux successions sans fragmentation.
+- summary: L'abolition de la co-régence (1032) satisfait le critère du PO : première codification négociée et entérinée des responsabilités de l'exécutif, imposée collectivement par les familles marchandes au moment où les deux conditions de Deblonde convergent (homogénéité lagunaire + faiblesse post-Orseolo).
+- description: Le renversement des Orseolo en 1026 met fin à la dernière dynastie dogale et ouvre la fenêtre de faiblesse que les conditions de Deblonde exigent. Domenico Flabanico, élu en 1032, est un doge délibérément faible, choisi pour incarner la rupture. L'abolition de la co-régence satisfait les trois éléments du critère du PO : codification formelle (acte écrit interdisant la co-régence), responsabilités du suzerain (le doge ne pourra plus désigner son successeur), et caractère négocié et entériné (imposé collectivement par l'assemblée des familles marchandes, non par décision unilatérale du doge). La condition d'homogénéité (Deblonde) est remplie par 300 ans de brassage dans l'espace confiné du lagon — les familles marchandes se perçoivent comme une classe avec des intérêts communs. Le pacte est fonctionnellement analogue à la loi salique (France, 1317) ou aux Ordonnances (Angleterre, 1311) : transition d'un pouvoir fondé sur la personne vers un pouvoir fondé sur des règles.
 
 #### Saillant : 1er monarque oligarchique — Contarini / système post-1032
 - type: saillant
@@ -218,14 +218,6 @@
 - alternatives: Enrico Dandolo (~1192-1205) — prestige extraordinaire (IVe croisade, création du Stato da Màr), mais Venise ne contrôle pas encore la Terraferma. Dandolo est le pic de la puissance maritime seule. Foscari est retenu car il incarne le pic de la puissance combinée (maritime + terrestre).
 - summary: Foscari correspond au point de saturation de l'exutoire externe : puissance personnelle maximale du souverain combinée avec la projection extérieure maximale de la nation (empire maritime + Terraferma à leur extension maximale). Position tardive dans la phase (~0.64), cohérente avec un exutoire très long.
 - description: Foscari incarne le point de saturation de l'exutoire externe, selon le pattern vérifié sur le corpus : l'acmé oligarchique arrive quand l'exutoire cesse de produire son surplus d'énergie. Sa position à ~0.64 de la phase (tardive) est cohérente avec un exutoire très long (Stato da Màr + Terraferma), comparable à l'Autriche (Léopold Ier à ~0.71, porté par l'exutoire anti-ottoman). Son dogat de 34 ans (le plus long de l'histoire de la République) coïncide avec le maximum d'extension territoriale : l'empire maritime hérité de la IVe croisade est toujours en place (Crète, Eubée, comptoirs), et la conquête de la Terraferma (1404-1428) a ajouté un vaste territoire continental (Bergame, Brescia, Vérone, Padoue). Les guerres contre Milan projettent la puissance vénitienne à l'échelle de l'Italie entière. Foscari gouverne dans le cadre oligarchique — la promissione ducale le contraint, et le Conseil des Dix finira par le forcer à démissionner (1457) — mais son pouvoir personnel est considérable. Le test discriminant oligarchique reste négatif : l'exécutif ne peut agir sans l'accord des oligarques.
-
-#### Saillant : Fin de l'expansion — Agnadello
-- type: saillant
-- start: 1509
-- subtitle: Agnadello
-- title: Fin de l'expansion
-- confidence: high
-- summary: La Ligue de Cambrai inflige à Venise la défaite d'Agnadello (1509) : toute la Terraferma est perdue avant d'être récupérée par la diplomatie. L'épisode marque la fin de l'expansion agressive — après cette date, les guerres deviennent défensives et la polarisation des élites peut commencer.
 
 ### Subphase : Polarisation des élites (1509-1628)
 - type: subphase
@@ -319,13 +311,14 @@
 - summary: Morosini satisfait la définition de l'acmé absolutiste : expansion maximale (reconquête de la Morée), prestige maximal (élection unanime au dogat depuis le champ de bataille, titre de « Peloponnesiaco »), et domestication complète des élites (le consensus absolutiste post-1669 est à son sommet).
 - description: Morosini incarne le sommet de la puissance absolutiste vénitienne selon les trois critères de l'acmé : expansion maximale (reconquête de la Morée, 1684-1699, dernière campagne offensive vénitienne), prestige maximal (élection unanime au dogat depuis le champ de bataille en 1688, titre de « Peloponnesiaco »), et domestication complète des élites (la polarisation politique est devenue faible après la résolution de la guerre sociale — le consensus absolutiste est en place). En 1669, Morosini avait signé la capitulation de Candie sans autorisation du Sénat — un acte d'exécutif pur qui illustre la nature de l'absolutisme vénitien : l'administration centrale agit souverainement, sans frein juridique des oligarques. L'acmé Morosini est positionné seulement ~19 ans après le 1er monarque absolu, ce qui est cohérent avec la brièveté de l'absolutisation vénitienne (pas de DGRO, absolutisation « fluide »).
 
-#### Saillant : Fin de l'expansion — Passarowitz
+#### Saillant : Saturation fiscale
 - type: saillant
-- start: 1718
-- subtitle: Passarowitz
-- title: Fin de l'expansion
-- confidence: high
-- summary: Le traité de Passarowitz (1718) entérine la perte de la Morée et marque la fin définitive de toute expansion vénitienne. À partir de cette date, le système entre en Ancien Régime.
+- start: 1740
+- subtitle: Décrochage face à Trieste, dette à 71M ducats
+- title: Saturation fiscale
+- confidence: medium
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué à Venise. Borne plus tardive que dans les monarchies à corps intermédiaires externes (France 1648, Angleterre 1628) parce que l'oligarchie patricienne extrême — Inquisiteurs d'État + cittadini — étouffe en interne la contestation institutionnelle qui ailleurs accompagne la saturation. Décalage Saturation → Remontrance ~20 ans (vs. quasi-simultanéité dans les autres cas validés du critère) cohérent avec ce blocage interne (cf. `phase_absolutiste.md` §Remontrance contingente).
+- summary: Vers 1740, la machine fiscale vénitienne atteint sa limite d'extraction durable : l'avènement du port franc de Trieste (1719) ronge structurellement les recettes commerciales, la dette publique atteint environ 71 millions de ducats, et les tentatives sénatoriales d'élargir l'assiette se heurtent à l'autonomie fiscale patricienne. La République bascule en mode expédients permanents — vente de charges, monopoles affermés, manipulations monétaires — sans pouvoir reconstituer une assiette durable. Entrée en Ancien Régime au sens canonique du critère Lanoue de Suremain.
 
 #### Saillant : Remontrance
 - type: saillant
@@ -334,8 +327,8 @@
 - subtitle: Correzione de 1761
 - title: Remontrance
 - confidence: medium
-- alternatives: Pisani-Contarini (1779) — plus tardif, même mécanisme. La Correzione de 1761 est retenue car c'est la première tentative significative.
-- summary: La Correzione de 1761 est la remontrance vénitienne : dernière tentative de la classe administrative et patricienne de reprendre des prérogatives au pouvoir absolutiste par les voies institutionnelles. Son échec ferme la dernière voie de réforme et marque l'entrée en Ancien Régime.
+- alternatives: Pisani-Contarini (1779) — plus tardif, même mécanisme. La Correzione de 1761 est retenue car c'est la première tentative significative. Manifestation politique de la Saturation fiscale (~1740) avec décalage d'environ vingt ans, cohérent avec le pattern oligarchique patricien extrême (cf. `phase_absolutiste.md` §Remontrance contingente).
+- summary: La Correzione de 1761 est la remontrance vénitienne : dernière tentative de la classe administrative et patricienne de reprendre des prérogatives au pouvoir absolutiste par les voies institutionnelles. Manifestation politique tardive du basculement déjà opéré par la Saturation fiscale (~1740) : la fenêtre d'opportunité s'est ouverte vingt ans après la saturation, étouffée en interne par les Inquisiteurs d'État avant de s'exprimer. Son échec ferme la dernière voie de réforme institutionnelle.
 - description: La Correzione de 1761 satisfait la définition de la remontrance : tentative de la classe administrative ou patricienne de redistribuer le pouvoir par les voies institutionnelles, écrasée par l'exécutif absolutiste, et dont l'échec ferme la dernière voie de réforme. Angelo Querini tente de limiter l'autorité des Inquisiteurs d'État et d'ouvrir les charges aux nobles appauvris (barnabotti). Les Inquisiteurs écrasent la tentative. Ce n'est pas une DGRO (les contestataires n'ont pas d'assise territoriale — condition structurelle de la DGRO absente) mais une contestation institutionnelle, pas militaire. Le mouvement Pisani-Contarini (1779) est une réplique du même mécanisme. Le parallèle structurel est exact avec la Polysynodie française (1715, redistribution du pouvoir au profit des Conseils, vidée de substance), l'Apology of the Commons anglaise (1604, les Communes affirment des prérogatives ignorées par Jacques Ier), et la remontrance bavaroise (Landtag de 1848, réformes votées puis vidées de substance par Maximilien II).
 
 ### Subphase : Impérialisme absolutiste (1688-1761)
@@ -466,11 +459,11 @@
 | Pacte oligarchique | Abolition de la co-régence (1032) |
 | 1er monarque oligarchique | Contarini (1043) / système post-1032 |
 | Acmé oligarchique | Foscari (1440) |
-| Fin de l'expansion | Agnadello (1509) |
 | Guerre sociale | Giovani vs vecchi / triomphe des Inquisiteurs (1628-1669) |
 | 1er monarque absolu | Inquisiteurs d'État (1669) |
 | Acmé absolutiste | Morosini (1688) |
-| Fin de l'expansion | Passarowitz (1718) |
+| Saturation fiscale | ~1740 (Trieste port franc 1719, dette 71M ducats) |
+| Remontrance | Correzione de 1761 (Angelo Querini) |
 | Avortement | Conquête par Bonaparte (1797) |
 | Éclatement de l'AR | Insurrection de mars 1848 |
 | Expérience parlementaire | République de Manin (1848-1849) |
@@ -498,7 +491,6 @@
 | | France | Angleterre | Venise |
 |---|---|---|---|
 | Phase oligarchique | ~270 ans | ~213 ans | ~637 ans |
-| Fin de l'expansion | Cateau-Cambrésis (1559) | ? | Agnadello (1509) |
 | Guerre sociale | Guerres de Religion (1562-1598) | Guerre des Deux-Roses (1455-1485) | Tensions institutionnelles (1628-1669) |
 | 1er monarque absolu | Henri IV (1598) | Henri VII (1485) | Inquisiteurs (1669) |
 | Acmé absolutiste | Louis XIV (~1661-1715) | Élisabeth Ire (~1558-1603) | Morosini (1688) |

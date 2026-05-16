@@ -140,15 +140,15 @@ Le Parcours bohême moderne (post-1918) présente une **double RN** rare dans le
 - summary: Ottokar II (r. 1253-1278), petit-fils d'Ottokar Ier, construit en 25 ans une hégémonie centre-européenne inédite : acquisition de l'Autriche (1251), de la Styrie (1260), de la Carinthie et de la Carniole (1269). Il fut un temps candidat à l'Empire mais ses pairs électeurs lui préfèrent Rodolphe de Habsbourg (1273) — humiliation qui déclenche la guerre fatale. Deuxième pic féodal, le plus éclatant.
 - description: Ottokar II hérite d'une Bohême consolidée par Ottokar Ier et par son père Venceslas Ier. Il en fait la base d'une projection de puissance sans précédent : il profite de l'extinction babenberg en 1246 pour faire élire comme duc d'Autriche et de Styrie (1251, 1260), puis acquiert la Carinthie et la Carniole à la mort d'Ulrich III (1269). Sa cour — à Prague, à Vienne, à Znojmo — est l'une des plus brillantes d'Europe. Il mène des campagnes en Prusse orientale aux côtés de l'Ordre teutonique (fondation de Königsberg qui lui est nommée en son honneur, 1255). Au moment où s'ouvre l'élection impériale de 1273, il est le candidat le plus puissant d'Europe centrale. Mais les princes-électeurs lui préfèrent Rodolphe de Habsbourg, un comte modeste dont la faible base territoriale leur semble moins menaçante. Humilié, refusant de prêter hommage à Rodolphe pour ses duchés austro-alpins, Ottokar II est mis au ban de l'Empire et contraint en 1276 de céder toutes ses acquisitions hors de Bohême-Moravie. Il tente le tout pour le tout en 1278 — la bataille de Marchfeld (26 août 1278) est une défaite décisive où il est tué et son armée dispersée.
 
-#### Saillant : Fin de l'expansion — Marchfeld
+#### Saillant : Bataille de Marchfeld
 - type: saillant
 - perturbation: true
 - mechanism: choc_exogene
 - effect: acceleration
 - start: 1278
 - figure: Rodolphe Ier de Habsbourg
-- subtitle: Bataille de Marchfeld
-- title: Fin de l'expansion
+- subtitle: Défaite et mort d'Ottokar II
+- title: Bataille de Marchfeld
 - confidence: high
 - territorial: true
 - summary: La défaite et la mort d'Ottokar II à Marchfeld (26 août 1278) met fin à l'hégémonie centre-européenne bohême et fait perdre au royaume ses marges austro-alpines. Ces territoires, jamais digérés culturellement, fonctionnaient comme exutoire militaire pour l'énergie élitaire bohême — leur perte est une accélération du Parcours par fin d'exutoire externe, analogue à la perte de la Normandie pour l'Angleterre (1204).
@@ -174,18 +174,7 @@ Le Parcours bohême moderne (post-1918) présente une **double RN** rare dans le
 - start: 1306
 - end: 1311
 - title: Bascule oligarchique
-- summary: Bascule très courte (5 ans). Interrègne, compétitions dynastiques (Henri de Carinthie, Rodolphe Ier de Habsbourg, Jean de Luxembourg). La diète bohême choisit Jean de Luxembourg en 1310 et lui impose le Diplôme inaugural de Kutenberg en 1311. Pattern analogue aux bascules françaises et anglaises (1314-1328 France, 1307-1327 Angleterre) mais beaucoup plus rapide grâce à la maturité institutionnelle préexistante.
-
-#### Saillant : Pacte oligarchique
-- type: saillant
-- start: 1311
-- figure: Jean de Luxembourg
-- subtitle: Diplôme inaugural de Kutenberg
-- title: Pacte oligarchique
-- confidence: high
-- alternatives: Les Pactes de Břetislav (1054) — première codification dynastique de la succession, mais unilatérale et non-pactiste. La Bulle d'Or de Sicile (1212) — acte impérial sur la Bohême, pas un accord roi-états. Les Compactata de Jihlava (1436) — pacte de compromis post-guerre sociale, pas pacte fondateur. Le Diplôme inaugural est retenu car il réunit les quatre critères canoniques : (1) codification écrite formelle, (2) négociée avec la diète bohême (« John capitulated and agreed with the nobles on a kind of Magna Carta for Bohemia »), (3) portant sur les responsabilités du roi (interdiction de conseillers non-bohêmes, pas d'impôts sans consentement, contrôle nobiliaire des finances), (4) dans un contexte de souverain extrêmement affaibli (Jean a 14 ans, dynaste étranger sans base locale, élu après interrègne).
-- summary: Peu après son couronnement du 7 février 1311, Jean de Luxembourg accepte le Diplôme inaugural qui codifie ses obligations envers la diète bohême. Les trois éléments structurels du PO sont satisfaits : codification écrite (acte inaugural formel), caractère collectif (négocié avec la diète bohême), moment de faiblesse (Jean a 14 ans, dynaste étranger sans base locale, élu après quatre ans d'interrègne). Cas mixte **chemin A + B** — codification simultanée de l'accès (compromis d'élection après extinction Přemyslide) et de l'exercice (interdiction conseillers non-bohêmes, pas d'impôts sans consentement, contrôle nobiliaire des finances).
-- description: Le Diplôme inaugural de Kutenberg est un pacte oligarchique canonique qui réunit les trois éléments structurels avec netteté. (1) **Codification formelle** : acte inaugural écrit émis après le couronnement, document fondamental. (2) **Caractère collectif** : Jean « capitule » selon les sources et accepte les conditions posées par les états — pas d'impôts sans consentement nobiliaire, contrôle des finances royales par les barons, interdiction de nommer des conseillers non-bohêmes. (3) **Moment de faiblesse** : Jean a 14 ans, dynaste luxembourgeois sans base locale bohême, élu après quatre années d'interrègne où la diète a goûté à son pouvoir d'arbitrage. C'est un cas mixte **chemin A + B** : la composante A est le compromis d'élection lui-même — la diète choisit Jean après l'extinction Přemyslide, les conditions d'accession au trône sont collectivement codifiées et l'élection devient la nouvelle source de légitimité dynastique ; la composante B est dans les clauses substantielles encadrant l'exercice du pouvoir — veto fiscal nobiliaire, contrôle des finances royales, restrictions sur la nomination des conseillers. Le pacte fonde le cadre constitutionnel bohême pour les **307 années suivantes**, jusqu'à ce que la Verneuerte Landesordnung de Ferdinand II y mette fin en 1627. C'est le test de durabilité d'un vrai pacte fondateur — il devient le référentiel jusqu'au changement de phase ou au reboot. Pattern Tudor / Habsbourg / Bourbon : dynaste étranger en position de faiblesse maximale qui accepte formellement les conditions de la diète avant de pouvoir régner effectivement. Structurellement comparable à Charles Ier Robert d'Anjou en Hongrie (compromis d'élection 1308) et au Trastámara en Castille (1369-1371) : dans les trois cas, la situation de succession irrégulière (extinction dynastique + interrègne, ou usurpation) oblige à codifier en même temps l'accès et l'exercice. **Note sur la clause « conseillers non-bohêmes »** (objection Philippe Fabry) : cette clause spécifique reflète le contexte SERG (le double degré impérial-national) et fonctionne comme protection nationale anti-germanisation plutôt que comme marqueur anti-absolutiste pur. Pattern analogue à la Charte de Cracovie 1374 en Pologne. Elle ne doit pas être lue comme un argument structurel contre une éventuelle absolutisation ultérieure, seulement comme une composante factuelle du pacte de 1311. Les autres clauses (veto fiscal, contrôle nobiliaire des finances) restent en revanche des marqueurs structurels classiques de chemin B qui ne dépendent pas du contexte impérial.
+- summary: Bascule très courte (5 ans). Interrègne, compétitions dynastiques (Henri de Carinthie, Rodolphe Ier de Habsbourg, Jean de Luxembourg). La diète bohême choisit Jean de Luxembourg en 1310 et lui impose le Diplôme inaugural de Kutenberg en 1311. Pattern analogue aux bascules françaises et anglaises (1314-1328 France, 1307-1327 Angleterre) mais beaucoup plus rapide grâce à la maturité institutionnelle préexistante. (Le PO est filé sous phase oligarchique en 1er saillant d'essor selon la nouvelle convention.)
 
 ---
 
@@ -212,6 +201,17 @@ Le Parcours bohême moderne (post-1918) présente une **double RN** rare dans le
 - end: 1378
 - title: Essor oligarchique
 - summary: Essor canonique 1311-1378. Jean de Luxembourg (1er MO, élu, dynaste étranger, Diplôme de Kutenberg) règne en partenariat conflictuel avec la noblesse. Charles IV (acmé oligarchique, 1346-1378) porte la sophistication institutionnelle bohême au plus haut niveau européen de l'époque — Université, archevêché, Corona regni, Bulle d'Or impériale. Tentative de codification royale (Maiestas Carolina 1355) rejetée par la diète. Charles IV reste un acmé oligarchique exceptionnel sans franchir le seuil absolutiste.
+
+#### Saillant : Pacte oligarchique
+- type: saillant
+- start: 1311
+- figure: Jean de Luxembourg
+- subtitle: Diplôme inaugural de Kutenberg
+- title: Pacte oligarchique
+- confidence: high
+- alternatives: Les Pactes de Břetislav (1054) — première codification dynastique de la succession, mais unilatérale et non-pactiste. La Bulle d'Or de Sicile (1212) — acte impérial sur la Bohême, pas un accord roi-états. Les Compactata de Jihlava (1436) — pacte de compromis post-guerre sociale, pas pacte fondateur. Le Diplôme inaugural est retenu car il réunit les quatre critères canoniques : (1) codification écrite formelle, (2) négociée avec la diète bohême (« John capitulated and agreed with the nobles on a kind of Magna Carta for Bohemia »), (3) portant sur les responsabilités du roi (interdiction de conseillers non-bohêmes, pas d'impôts sans consentement, contrôle nobiliaire des finances), (4) dans un contexte de souverain extrêmement affaibli (Jean a 14 ans, dynaste étranger sans base locale, élu après interrègne).
+- summary: Peu après son couronnement du 7 février 1311, Jean de Luxembourg accepte le Diplôme inaugural qui codifie ses obligations envers la diète bohême. Les trois éléments structurels du PO sont satisfaits : codification écrite (acte inaugural formel), caractère collectif (négocié avec la diète bohême), moment de faiblesse (Jean a 14 ans, dynaste étranger sans base locale, élu après quatre ans d'interrègne). Cas mixte **chemin A + B** — codification simultanée de l'accès (compromis d'élection après extinction Přemyslide) et de l'exercice (interdiction conseillers non-bohêmes, pas d'impôts sans consentement, contrôle nobiliaire des finances).
+- description: Le Diplôme inaugural de Kutenberg est un pacte oligarchique canonique qui réunit les trois éléments structurels avec netteté. (1) **Codification formelle** : acte inaugural écrit émis après le couronnement, document fondamental. (2) **Caractère collectif** : Jean « capitule » selon les sources et accepte les conditions posées par les états — pas d'impôts sans consentement nobiliaire, contrôle des finances royales par les barons, interdiction de nommer des conseillers non-bohêmes. (3) **Moment de faiblesse** : Jean a 14 ans, dynaste luxembourgeois sans base locale bohême, élu après quatre années d'interrègne où la diète a goûté à son pouvoir d'arbitrage. C'est un cas mixte **chemin A + B** : la composante A est le compromis d'élection lui-même — la diète choisit Jean après l'extinction Přemyslide, les conditions d'accession au trône sont collectivement codifiées et l'élection devient la nouvelle source de légitimité dynastique ; la composante B est dans les clauses substantielles encadrant l'exercice du pouvoir — veto fiscal nobiliaire, contrôle des finances royales, restrictions sur la nomination des conseillers. Le pacte fonde le cadre constitutionnel bohême pour les **307 années suivantes**, jusqu'à ce que la Verneuerte Landesordnung de Ferdinand II y mette fin en 1627. C'est le test de durabilité d'un vrai pacte fondateur — il devient le référentiel jusqu'au changement de phase ou au reboot. Pattern Tudor / Habsbourg / Bourbon : dynaste étranger en position de faiblesse maximale qui accepte formellement les conditions de la diète avant de pouvoir régner effectivement. Structurellement comparable à Charles Ier Robert d'Anjou en Hongrie (compromis d'élection 1308) et au Trastámara en Castille (1369-1371) : dans les trois cas, la situation de succession irrégulière (extinction dynastique + interrègne, ou usurpation) oblige à codifier en même temps l'accès et l'exercice. **Note sur la clause « conseillers non-bohêmes »** (objection Philippe Fabry) : cette clause spécifique reflète le contexte SERG (le double degré impérial-national) et fonctionne comme protection nationale anti-germanisation plutôt que comme marqueur anti-absolutiste pur. Pattern analogue à la Charte de Cracovie 1374 en Pologne. Elle ne doit pas être lue comme un argument structurel contre une éventuelle absolutisation ultérieure, seulement comme une composante factuelle du pacte de 1311. Les autres clauses (veto fiscal, contrôle nobiliaire des finances) restent en revanche des marqueurs structurels classiques de chemin B qui ne dépendent pas du contexte impérial.
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
@@ -451,7 +451,18 @@ Le Parcours bohême moderne (post-1918) présente une **double RN** rare dans le
 - title: Ancien régime
 - summary: Ancien régime de 70 ans, intégré au Parcours autrichien. Remontrance de 1848 (Congrès slave de Prague écrasé par Windischgrätz, parlement de Kremsier dissous par François-Joseph). Ausgleich de 1867 qui laisse la Bohême en Cisleithanie sans autonomie (contrairement à la Hongrie). Modernisation économique de la Bohême, réveil national tchèque culturellement et politiquement actif (Palacký, Rieger, jeunes-Tchèques), tensions nationales croissantes. Éclatement de l'AR en 1918 par effondrement habsbourgeois post-défaite militaire.
 
-#### Saillant : 1848 à Prague — Remontrance avortée
+#### Saillant : Saturation fiscale
+- type: saillant
+- start: 1789
+- end: 1790
+- figure: Joseph II / Léopold II
+- subtitle: Stände bohêmes bloquent le Steuerpatent joséphin
+- title: Saturation fiscale
+- confidence: high
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué à la machine habsbourgeoise qui porte le parcours bohême en configuration tutélaire (AR exogène). Datation **1789-1790** : Joseph II promulgue le Steuerpatent + Urbarialpatent (10 février 1789) qui établissent une imposition foncière étendue à la noblesse. **Les Stände bohêmes sont co-acteurs de la résistance** qui bloque la réforme, aux côtés des comitats hongrois et de la noblesse autrichienne — ce n'est pas une saturation passivement « héritée », la Bohême participe activement au blocage. Léopold II retire les deux patentes en 1790. Datation antérieure 1811 (banqueroute Wallis, Finanzpatent) écartée : expédient réactif, pas la saturation. Sources : Beales *Joseph II*, Dickson, Macartney.
+- summary: Joseph II promulgue le 10 février 1789 le Steuerpatent et l'Urbarialpatent — fiscalité égalitaire incluant la noblesse. Les Stände bohêmes, aux côtés des comitats hongrois et de la noblesse autrichienne, bloquent la réforme par refus d'enregistrement et résistance organisée. À la mort de Joseph II (février 1790), Léopold II retire les deux patentes. La Bohême est co-actrice de la saturation habsbourgeoise — pas saturation « héritée », mais participation active au blocage. Sources : Beales, Dickson, Macartney.
+
+#### Saillant : Remontrance — Congrès slave de Prague
 - type: saillant
 - perturbation: true
 - mechanism: choc_exogene

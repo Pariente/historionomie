@@ -181,16 +181,6 @@
 - confidence: medium
 - summary: **Forme mixte** : populari (Adorno, Fregoso, Boccanegra, Guarco, Montaldo — prébendiers-marchands) contre nobili (Doria, Spinola, Fieschi, Grimaldi — patrimoniaux-claniques). Déclenchée par la révolution populaire de 1339 (institutionnalisation du dogat à vie sous Simone Boccanegra). Mode d'expression : coups de palais, expulsions, conjurations, et surtout **appel répété aux puissances étrangères** par chaque faction défaite (France, Visconti, Espagne) — pattern « petite cité-État perturbée par voisins » qui empêche la résolution endogène. Résolution finale par Doria (1528) capturant le moment Charles-Quint.
 
-#### Saillant : Fin de l'expansion oligarchique — Chioggia
-
-- type: saillant
-- start: 1378
-- end: 1381
-- subtitle: Défaite navale décisive contre Venise
-- title: Fin de l'expansion
-- confidence: high
-- summary: La guerre de Chioggia (1378-1381) voit les Génois atteindre l'entrée de la lagune vénitienne mais y être défaits décisivement par la flotte vénitienne reconstituée. Gênes perd la suprématie navale en Méditerranée orientale ; le quasi-exutoire commercial-naval se contracte structurellement. Saillant intra-guerre sociale (les ambitions impériales survivent au chaos politique interne jusqu'à la défaite définitive), illustrant la déconnexion partielle entre projection externe et cohésion interne dans les cités-États de taille insuffisante.
-
 #### Saillant : Tutelle française — Boucicaut
 
 - type: saillant
@@ -304,15 +294,28 @@
 - alternatives: Position dans la phase ~0.29 — précoce. Acmé fonctionnelle (puissance financière) plutôt que territoriale-militaire ; pas d'expansion absolutiste classique parce que cité-État de taille insuffisante pour les ambitions territoriales d'un Louis XIV ou d'un Charles Quint. La période plus large 1557-1627 est l'« âge des Génois » au sens de Braudel ; le pic des asientos et de la diplomatie financière européenne est typiquement situé entre 1607 et 1627.
 - summary: Après la faillite de Philippe II (1557) et l'effondrement des Fugger, les banquiers génois (Spinola, Sauli, Centurione, Lomellini, Pallavicini) capturent les asientos de la Couronne d'Espagne et deviennent les financiers de la Monarchie hispanique. Hégémonie financière sur l'Empire hispanique pendant 70 ans, sans expansion territoriale propre. Acmé fonctionnelle plutôt que territoriale, portée par un quasi-exutoire financier (test formel : NON sur les trois questions — administration directe, revenus fiscaux centraux, accès élitaire central ; tout opère par réseaux privés et banques familiales). Saturation par la grande faillite de Philippe IV (1627), qui clôt la séquence et marque le début du déclin financier. Cas paradigmatique d'acmé absolutiste fonctionnelle dans une cité-État de taille insuffisante — projection par capture financière d'un empire extérieur, pas par conquête propre.
 
-#### Saillant : Fin de l'expansion absolutiste — bombardement de Duquesne
+#### Saillant : Bombardement de Duquesne
 
 - type: saillant
+- perturbation: true
+- mechanism: choc_exogene
+- effect: prolongement
 - start: 1684
 - subtitle: Bombardement français
-- title: Fin de l'expansion
+- title: Bombardement de Duquesne
 - confidence: medium
-- alternatives: Datation alternative 1627 (grande faillite espagnole) écartée — 1627 marque la saturation du quasi-exutoire financier mais l'humiliation militaire externe consacre vraiment le recentrage interne. Le bombardement Duquesne (18-28 mai 1684, 13 000 boulets, deux tiers de la ville détruits) suivi de l'humiliation du doge à Versailles (15 mai 1685) consomment la fin de toute projection extérieure absolutiste.
-- summary: Le bombardement de Gênes par Abraham Duquesne sur ordre de Louis XIV (18-28 mai 1684, en représailles de l'alliance espagnole) détruit deux tiers de la ville. L'humiliation du doge Francesco Maria Lercaro Imperiale à Versailles (15 mai 1685, cérémonie dans la Galerie des Glaces) consomme l'incapacité militaire et diplomatique. Recentrage forcé sur le territoire propre, fin de toute projection extérieure absolutiste. Borne d'entrée en sous-phase d'ancien régime.
+- territorial: false
+- summary: Le bombardement de Gênes par Abraham Duquesne sur ordre de Louis XIV (18-28 mai 1684, en représailles de l'alliance espagnole) détruit deux tiers de la ville. L'humiliation du doge Francesco Maria Lercaro Imperiale à Versailles (15 mai 1685, cérémonie dans la Galerie des Glaces) consomme l'incapacité militaire et diplomatique. Recentrage forcé sur le territoire propre et bascule en sous-phase d'ancien régime.
+
+#### Saillant : Saturation fiscale — non applicable
+- type: saillant
+- start: 1684
+- end: 1684
+- subtitle: Configuration Casa di San Giorgio
+- title: Saturation fiscale
+- confidence: low
+- alternatives: Critère Lanoue de Suremain (Martin) **non applicable canoniquement** à Gênes. Le critère présuppose une machine d'extraction fiscale absolutiste centralisée qui atteint sa limite après pleine maturation ; or Gênes fonctionne dès 1407 selon une architecture financière inversée : la **Casa di San Giorgio**, association privée de créanciers patriciens, gère directement la dette publique, perçoit les gabelles, et possède même certains territoires de la République. Le « mode expédients » n'est pas une bascule tardive — c'est l'**état permanent** depuis le XVᵉ siècle. La faillite de Philippe IV (1627) marque le désengagement génois de la finance impériale espagnole avec pertes massives, mais provoque un retour des capitaux qui se réinvestissent dans la Casa di San Giorgio (Felloni) — mutation du modèle, pas épuisement. Le bombardement Duquesne (1684) et l'indemnité autrichienne post-1746 sont des **chocs exogènes** clairement caractérisables, pas des saturations endogènes. Datation 1684 retenue par convention de borne d'entrée AR, mais le saillant est structurellement **N/A** au sens strict. Cas-type partagé avec Suisse et Venise : oligarchies patriciennes extrêmes où la dette est gérée par une association privée de créanciers — élément nouveau théorique à théoriser (variante structurelle du critère pour oligarchies patriciennes).
+- summary: Gênes ne présente pas de Saturation fiscale endogène canonique. La machine financière génoise — pilotée par la Casa di San Giorgio depuis 1407 — opère en mode « expédients permanents » comme état structurel, non comme bascule tardive : la distinction ordinaire/extraordinaire qui définit le critère Lanoue de Suremain n'y a pas le même sens. Borne d'entrée AR conventionnellement portée par le bombardement Duquesne (1684, choc exogène). Cas-type d'oligarchie patricienne extrême analogue à Venise et Suisse — variante structurelle du critère à théoriser.
 
 ### Subphase : Ancien Régime (1684-1797)
 
@@ -515,13 +518,12 @@
 | Pacte oligarchique | Passage au podestat (1191, chemin B — codification de l'exercice) |
 | 1er monarque oligarchique | Système podestaril (1191, suzerain collectif) |
 | Acmé oligarchique | Méloria (1284, élimination de Pise) |
-| Fin de l'expansion oligarchique | Chioggia (1378-1381, défaite contre Venise) |
 | Guerre sociale | Populari contre nobili (1339-1528) — déclenchement 1339, prolongée par ingérences étrangères chroniques 1396-1528 |
 | **Cycle des tutelles étrangères** | **Boucicaut (1396), Visconti (1421), Louis XII (1499)** — trois chocs exogènes ponctuels qui prolongent cumulativement la guerre sociale ; pattern « petite cité-État perturbée par voisins » |
 | **1er monarque absolu** | **Andrea Doria (1528) — consortium oligarchique institutionnalisé (Forma reipublicae + 28 Alberghi + Banco di San Giorgio)** |
 | **DGRO** | **Conjuration Fieschi (1547)** — 19 ans après le 1er MA |
 | Acmé absolutiste | « Âge des Génois » (1607-1627, capture des asientos espagnols, acmé financière) |
-| Fin de l'expansion absolutiste | Bombardement de Duquesne (1684) + humiliation Versailles (1685) |
+| **Saturation fiscale** | **— (non applicable, architecture Casa di San Giorgio rend la distinction ordinaire/expédient floue ; bombardement Duquesne 1684 comme proxy de borne AR par choc exogène)** |
 | **Remontrance** | **— (structurellement absente, manque du pôle sommet exécutif stable — analyse à deux pôles, complémentaire de Florence)** |
 | Ancien Régime | 1684-1797 (~113 ans, dans la norme) |
 | **RN (1) avortée** | **1797-1805 (~8 ans)** — Éclatement (1797), Expérience parlementaire (1797-1802), Annexion comme marge passive (1805) |

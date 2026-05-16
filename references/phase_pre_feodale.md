@@ -108,7 +108,7 @@ En historionomie, la percolation élitaire est la période où le pouvoir politi
 
 Saillant canonique. Premier chef supra-régional dont l'autorité est effective, qui force les autres élites à se positionner par rapport à lui (alliance ou opposition). C'est le saillant qui marque la sortie de la pré-féodale et l'entrée en phase féodale.
 
-Définition complète, formes admises et marqueurs détaillés dans `phase_feodale.md`.
+Définition complète, configurations rencontrées et marqueurs détaillés dans `phase_feodale.md`.
 
 ---
 

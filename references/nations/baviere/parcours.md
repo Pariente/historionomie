@@ -145,17 +145,6 @@
 - summary: Crise féodale terminale : les deux conditions de Deblonde sont réunies simultanément pour la première fois — homogénéité des oligarques pan-bavarois (300 ans de brassage) et faiblesse du suzerain (Albert IV épuisé et endetté). Le pacte suit en 1 an.
 - description: C'est la crise féodale terminale — celle qui débouche sur le pacte parce que les deux conditions de Deblonde sont enfin réunies simultanément, à la différence des boucles précédentes (1255, 1349, 1392) où la faiblesse existait mais l'homogénéité faisait défaut. Condition 1 — homogénéité des oligarques à l'échelle du royaume : après 300 ans de brassage entre les élites des duchés fragmentés (même langue, même religion, mêmes réseaux familiaux, 64 chartes de privilèges renforcant la conscience de classe), les oligarques se perçoivent comme une classe pan-bavaroise. Condition 2 — moment de faiblesse du suzerain : Albert IV sort victorieux de la guerre de Landshut mais épuisé, endetté, dépendant des Landstände pour financer la reconstruction. La séquence crise → pacte en 1 an (1505 → 1506) confirme la maturité de l'homogénéité — exactement comme en France (1314 → 1317) et en Angleterre (1307 → 1311).
 
-#### Saillant : Pacte oligarchique
-- type: saillant
-- start: 1506
-- figure: Albert IV
-- subtitle: Primogéniture
-- title: Pacte oligarchique
-- confidence: medium
-- alternatives: L'Ottonische Handfeste de 1311 est un proto-pacte pour la Basse-Bavière seule — il ne couvre pas l'ensemble du territoire. Le Landrecht de 1346 codifie le droit mais ne codifie pas la structure de l'exécutif.
-- summary: Le décret de primogéniture (8 juillet 1506) satisfait les trois éléments structurels du pacte oligarchique : codification formelle, caractère collectif (Landstände), moment de faiblesse du suzerain (Albert IV épuisé après la guerre de Landshut). Cas de **chemin A** (codification de la succession) — comme la loi salique française.
-- description: Le décret de primogéniture satisfait les trois éléments structurels du pacte oligarchique. (1) Codification formelle : un acte écrit qui fixe des règles successorales (indivisibilité du duché, transmission par primogéniture mâle, cadets réduits au titre de comte et sujets du duc). (2) Caractère collectif : Albert IV convoque les Landstände le 24 juin 1506, propose la sanction de primogéniture, et le texte définitif est promulgué le 8 juillet après acceptation des états — qui y consentent en échange de la confirmation de leurs droits. C'est un acte de codification mutuelle, pas une imposition unilatérale. (3) Moment de faiblesse : Albert IV sort victorieux mais épuisé et endetté de la guerre de Landshut, et la condition d'homogénéité des oligarques est réunie après 300 ans de brassage entre les élites des duchés fragmentés (même langue, même religion, mêmes réseaux familiaux). C'est un cas de **chemin A** : ce qui est verrouillé est la règle de succession (indivisibilité + primogéniture mâle), au même titre que la loi salique française de 1317. Le parallèle avec la France est direct, le contraste avec l'Angleterre instructif — Bavière et France codifient l'accès au pouvoir, l'Angleterre codifie son exercice ; dans les trois cas, la séquence crise terminale → pacte en 1-3 ans confirme que l'homogénéité était mûre.
-
 ---
 
 ## Phase : Oligarchique
@@ -179,6 +168,17 @@
 - title: Essor oligarchique
 - summary: Essor porté par la construction de l'État central (fisc, administration, justice) dans le cadre codifié du pacte oligarchique. La Contre-Réforme (Jésuites dès 1542) accélère le moteur d'homogénéisation culturelle. Pas d'exutoire extérieur — la polarisation s'amorce rapidement.
 - description: L'essor oligarchique bavarois suit le mécanisme standard : la nation se dote de nouveaux outils (fisc, administration, justice) et peut déployer une énergie focalisée. Guillaume IV hérite d'un duché réunifié et consolidé par la primogéniture et développe les outils de l'État central dans ce cadre codifié. La Contre-Réforme accélère le moteur d'homogénéisation culturelle : en 1522, premier mandat contre les écrits de Luther ; en 1524, accord avec Clément VII faisant de la Bavière le pilier de la Contre-Réforme en Allemagne ; en 1542, les Jésuites s'installent à Ingolstadt. Les Landstände conservent un pouvoir réel (pendant la minorité de Guillaume IV, les états gouvernent effectivement le pays) — confirmant que le test discriminant oligarchique/absolutiste reste négatif. L'absence totale d'exutoire extérieur (territoire compact, pas d'empire, pas de projection militaire prolongée) explique pourquoi la polarisation s'amorce si rapidement : sans débouchés pour absorber l'énergie élitaire, la question « qui contrôle l'État central ? » se pose immédiatement.
+
+#### Saillant : Pacte oligarchique
+- type: saillant
+- start: 1506
+- figure: Albert IV
+- subtitle: Primogéniture
+- title: Pacte oligarchique
+- confidence: medium
+- alternatives: L'Ottonische Handfeste de 1311 est un proto-pacte pour la Basse-Bavière seule — il ne couvre pas l'ensemble du territoire. Le Landrecht de 1346 codifie le droit mais ne codifie pas la structure de l'exécutif.
+- summary: Le décret de primogéniture (8 juillet 1506) satisfait les trois éléments structurels du pacte oligarchique : codification formelle, caractère collectif (Landstände), moment de faiblesse du suzerain (Albert IV épuisé après la guerre de Landshut). Cas de **chemin A** (codification de la succession) — comme la loi salique française.
+- description: Le décret de primogéniture satisfait les trois éléments structurels du pacte oligarchique. (1) Codification formelle : un acte écrit qui fixe des règles successorales (indivisibilité du duché, transmission par primogéniture mâle, cadets réduits au titre de comte et sujets du duc). (2) Caractère collectif : Albert IV convoque les Landstände le 24 juin 1506, propose la sanction de primogéniture, et le texte définitif est promulgué le 8 juillet après acceptation des états — qui y consentent en échange de la confirmation de leurs droits. C'est un acte de codification mutuelle, pas une imposition unilatérale. (3) Moment de faiblesse : Albert IV sort victorieux mais épuisé et endetté de la guerre de Landshut, et la condition d'homogénéité des oligarques est réunie après 300 ans de brassage entre les élites des duchés fragmentés (même langue, même religion, mêmes réseaux familiaux). C'est un cas de **chemin A** : ce qui est verrouillé est la règle de succession (indivisibilité + primogéniture mâle), au même titre que la loi salique française de 1317. Le parallèle avec la France est direct, le contraste avec l'Angleterre instructif — Bavière et France codifient l'accès au pouvoir, l'Angleterre codifie son exercice ; dans les trois cas, la séquence crise terminale → pacte en 1-3 ans confirme que l'homogénéité était mûre.
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
@@ -284,15 +284,6 @@
 - summary: Maximilien III Joseph incarne le sommet de la puissance absolutiste du premier cycle : expansion maximale de l'appareil central vers l'intérieur (Codex Maximilianeus, Académie des Sciences, école obligatoire), prestige maximal, domestication complète des élites. L'expansion extérieure est épuisée depuis Blenheim (1704).
 - description: Maximilien III Joseph est l'acmé absolutiste du premier cycle — la figure qui incarne le sommet de la puissance absolutiste conformément au saillant canonique : expansion maximale, prestige maximal, domestication complète des élites. Privé de toute projection extérieure après l'échec de Charles VII, il tourne les moyens de l'État vers l'intérieur. Le Codex Maximilianeus bavaricus civilis (1756) est la codification juridique la plus complète d'Allemagne avant le Code Napoléon. L'Académie des Sciences de Munich (1759) et l'école obligatoire (1771) sont des instruments d'homogénéisation culturelle qui accélèrent le moteur culturel. L'abolition de la censure jésuite libère la production intellectuelle. Le parallèle structurel avec Élisabeth Iere en Angleterre est étroit : projection culturelle plutôt que militaire, pouvoir domestique consolidé au maximum, moment de puissance effective maximale avant la sclérose de l'AR.
 
-#### Saillant : Fin de l'expansion — Blenheim
-- type: saillant
-- start: 1704
-- subtitle: Blenheim
-- title: Fin de l'expansion
-- confidence: high
-- summary: La bataille de Blenheim (13 août 1704) marque le tournant impérialisme → sclérose : le pouvoir central atteint les limites de son expansion extérieure. Dix ans d'occupation autrichienne (1704-1714) suivent.
-- description: Blenheim est le saillant canonique « fin de l'expansion » — le moment où les guerres deviennent coûteuses et les victoires rares, marquant le tournant de l'impérialisme absolutiste vers la sclérose. L'armée franco-bavaroise est écrasée par Marlborough et le Prince Eugène. La Bavière est occupée par l'Autriche pendant dix ans (1704-1714), provoquant le soulèvement paysan de 1705-1706 (Sendlinger Mordweihnacht). Max-Emmanuel est restauré par le traité de Rastatt (1714). L'expérience impériale de Charles VII (1742-1745) est un dernier sursaut pyrrhique qui confirme l'épuisement de la projection extérieure. Après Blenheim, la puissance de l'État se tourne vers l'intérieur (Maximilien III Joseph).
-
 ### Subphase : Ancien Régime [1] (1777-1806)
 - type: subphase
 - phase: absolutiste
@@ -346,6 +337,16 @@
 - summary: Louis Ier incarne l'acmé absolutiste du second cycle : projection maximale du prestige (Munich « Athènes sur l'Isar »), domestication des élites, autocratisme assumé. L'État, consolidé par les réformes Montgelas et la digestion des marges franconniennes et souabes, est au sommet de sa puissance effective.
 - description: Louis Ier est l'acmé absolutiste du second cycle, produit par le prolongement napoléonien. Les réformes Montgelas ont été digérées, les marges franconniennes et souabes sont en cours d'intégration, l'État est consolidé et moderne. Louis Ier projette cette puissance sous forme culturelle : la Ludwigstrasse, l'Alte et la Neue Pinakothek, la Glyptothek, la Feldherrnhalle, le Befreiungshalle de Kelheim transforment Munich en capitale culturelle européenne. Il gouverne en autocrate assumé — les marqueurs absolutistes sont au maximum (domestication des élites, prestige maximal, expansion culturelle plutôt que militaire). Le parallèle structurel avec Louis XIV est direct : même projection de prestige, même domestication, même moment de puissance effective maximale dans le cadre absolutiste. Le déclin s'amorce avec l'affaire Montez (1846-1848) qui mène à l'abdication et à la Remontrance.
 
+#### Saillant : Saturation fiscale
+- type: saillant
+- start: 1835
+- end: 1840
+- subtitle: Blocage du Landtag sous Louis Ier
+- title: Saturation fiscale
+- confidence: medium
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué à la machine fiscale bavaroise. La période 1835-1840 voit le blocage durable de l'élargissement de l'assiette fiscale par le Landtag, alors même que l'État Louis Ier déploie une politique culturelle ambitieuse (Ludwigstrasse, Pinakothek, Glyptothek) financée par expédients croissants. Le décalage avec la Remontrance (Landtag 1848) est d'environ 10-13 ans — court mais non simultané, pattern partagé avec les autres monarchies à corps intermédiaires externes (France 1648 / Polysynodie 1715, Angleterre 1610-1635 / Petition of Right 1628). Pattern partagé avec France (1648), Angleterre (1610-1635), Espagne (1898), Venise (~1740).
+- summary: Sous le règne de Louis Ier, le Landtag bavarois bloque durablement l'élargissement de l'assiette fiscale entre 1835 et 1840, alors que la politique culturelle ambitieuse (Munich « Athènes sur l'Isar », Ludwigstrasse, Pinakothek, Glyptothek) accélère la dépense. L'État bascule en mode expédients permanents — emprunts, manipulations douanières, contributions extraordinaires. Entrée en AR au sens canonique du critère Lanoue de Suremain.
+
 #### Saillant : Remontrance
 - type: saillant
 - start: 1848
@@ -353,7 +354,8 @@
 - subtitle: Landtag de 1848
 - title: Remontrance
 - confidence: high
-- summary: Tentative de la classe administrative et parlementaire de redistribuer le pouvoir en sa faveur par les voies institutionnelles. L'exécutif écoute puis vide les réformes de leur substance — l'échec ferme la dernière voie de réforme et ouvre l'Ancien Régime.
+- alternatives: Manifestation politique du basculement déjà opéré par la Saturation fiscale (~1835-1840). Décalage Saturation → Remontrance d'environ 10-13 ans, plus court que le cas vénitien (~20 ans) mais nettement plus long que France/Angleterre (quasi-simultanéité). Cohérent avec une classe parlementaire-administrative bavaroise structurée mais sans antagonisme constitutionnel fort avec l'exécutif jusqu'au choc de l'affaire Montez (1846-1848).
+- summary: Tentative de la classe administrative et parlementaire de redistribuer le pouvoir en sa faveur par les voies institutionnelles. L'exécutif écoute puis vide les réformes de leur substance — l'échec ferme la dernière voie de réforme et ouvre le second Ancien Régime. Manifestation politique différée du basculement opéré par la Saturation fiscale (~1835-1840), précipitée par l'affaire Montez et l'abdication de Louis Ier.
 - description: La remontrance bavaroise de 1848 suit le mécanisme constant décrit dans le cadre théorique : les élites intégrées à l'appareil absolutiste (classe parlementaire, noblesse de robe) tentent de redistribuer le pouvoir en leur faveur sans la force de renverser l'exécutif. Le 20 mars 1848, Louis Ier abdique (affaire Montez). Le Landtag vote des réformes substantielles : liberté de la presse, suffrage égal, responsabilité ministérielle. Mais Maximilien II restaure l'ordre conservateur et vide les réformes de leur substance. C'est structurellement distinct d'une DGRO (les parlementaires n'ont pas d'assise territoriale armée) et distinct de l'éclatement de l'AR (le bloc élitaire n'est pas renversé). L'échec ouvre le second Ancien Régime : la dernière voie de réforme institutionnelle est fermée.
 
 ### Subphase : Ancien Régime [2] (1848-1918)
@@ -433,9 +435,9 @@
 | Guerre sociale | 1564-1597 |
 | 1er monarque absolu | Maximilien Ier (1597) |
 | Acmé absolutiste [1] | Maximilien III Joseph (1756) |
-| Fin de l'expansion | Blenheim (1704) |
 | Choc d'hétérogénéité | Doublement napoléonien (1806) |
 | Acmé absolutiste [2] | Louis Ier (1835) |
+| Saturation fiscale | ~1835-1840 (blocage Landtag Ludwig I) |
 | Remontrance | 1848 (échoue) |
 | Ancien Régime | 1848-1918 |
 | Éclatement de l'AR | Eisner (7 nov 1918) |

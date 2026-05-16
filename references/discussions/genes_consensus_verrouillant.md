@@ -6,7 +6,7 @@
 
 Comment interpréter le Parcours génois dans le cadre historionomique ? Deux lectures candidates :
 
-**Lecture A (Philippe Fabry)** : phase féodale courte (~100 ans) → phase oligarchique (1097-1339) → **phase absolutiste forme 3** (absolutisme informel factionnel, 1339-1506, doges Fregoso/Adorno) → **Révolution Nationale perturbée-mais-aboutie** (1506-1528, révolte des cappette → réforme Doria sous arbitrage impérial de Charles Quint) → **phase parlementaire** (1528-1797) → absorption par le Piémont (1815).
+**Lecture A (Philippe Fabry)** : phase féodale courte (~100 ans) → phase oligarchique (1097-1339) → **phase absolutiste sous absolutisme informel factionnel** (1339-1506, doges Fregoso/Adorno) → **Révolution Nationale perturbée-mais-aboutie** (1506-1528, révolte des cappette → réforme Doria sous arbitrage impérial de Charles Quint) → **phase parlementaire** (1528-1797) → absorption par le Piémont (1815).
 
 **Lecture B (hypothèse alternative)** : phase féodale courte → phase oligarchique **qui n'est jamais dépassée**, parce que la guerre sociale est désamorcée non par un nouveau cadre central absolutisant, mais par un **consensus oligarchique** qui unifie la classe élitaire en un bloc transcendant le clivage factionnel. Le régime se stabilise dans une configuration oligarchique verrouillée, jusqu'à l'absorption exogène de 1815.
 
@@ -16,7 +16,7 @@ Deux grandes raisons : (1) ce qu'il identifie comme **phase absolutiste** (1339-
 
 ### 1. Pas les marqueurs d'une phase absolutiste — 1339-1506
 
-Philippe lit le dogat à vie institué en 1339 comme l'installation d'une phase absolutiste forme 3 (absolutisme informel factionnel) qui s'étendrait jusqu'à l'éclatement des cappette en 1506. Les marqueurs canoniques d'une telle phase sont :
+Philippe lit le dogat à vie institué en 1339 comme l'installation d'une phase absolutiste de configuration absolutisme informel factionnel qui s'étendrait jusqu'à l'éclatement des cappette en 1506. Les marqueurs canoniques d'une telle phase sont :
 
 - **Administration centrale ayant préséance de facto sur les administrations locales**
 - **Exécutif capable d'agir sans frein juridique des oligarques**
@@ -27,7 +27,7 @@ Philippe lit le dogat à vie institué en 1339 comme l'installation d'une phase 
 À Gênes 1339-1506, aucun de ces marqueurs ne tient :
 
 - **Pas d'administration centrale autonome**. Ni magistrature administrative distincte du patriciat, ni fonctionnariat permanent, ni corps de juges nommés par le centre. Les magistrats sortent du même vivier que les doges. L'État central n'a pas grossi — il a été capturé et recapturé.
-- **Le Banco di San Giorgio (1407) n'est pas une fiscalité centrale autonome — c'est un consortium privé de créanciers**. Il gère la dette publique et certaines colonies au nom et au profit de ses investisseurs, pas de l'État. Le marqueur « fiscalité centrale autonome » propre à la forme 3 est tout simplement manqué.
+- **Le Banco di San Giorgio (1407) n'est pas une fiscalité centrale autonome — c'est un consortium privé de créanciers**. Il gère la dette publique et certaines colonies au nom et au profit de ses investisseurs, pas de l'État. Le marqueur « fiscalité centrale autonome » propre à un absolutisme informel factionnel est tout simplement manqué.
 - **Les doges Fregoso/Adorno ne s'émancipent jamais du frein juridique des oligarques**, parce qu'ils SONT les oligarques. La faction opposée les contraint en permanence via les Anziani, les conseils, et surtout par l'appel aux puissances étrangères (France, Milan). Le test fonctionnel par règne individuel échoue : aucun Fregoso, aucun Adorno ne gouverne sans entrave pendant son mandat.
 - **La rotation Fregoso/Adorno n'est pas un absolutisme informel** mais un **renouvellement factionnel intra-oligarchique** — les nouvelles familles marchandes remplacent les anciennes aristocraties féodales au dogat, mais elles restent elles-mêmes des oligarques factionnels, pas un centre administratif absolutisant.
 - **Les dominations étrangères 1396-1499 sont l'opposé d'une absolutisation**. Chaque faction en déclin appelle une puissance étrangère pour paralyser la faction dominante. C'est la signature d'une oligarchie factionnaliste chronique qui n'arrive pas à produire un centre autonome, pas d'un centre absolutisant qui devrait être neutralisé de l'extérieur.
@@ -67,7 +67,7 @@ Ce que le régime 1528-1797 présente en réalité, ce sont les marqueurs d'une 
 
 ### Synthèse
 
-Ni « phase absolutiste forme 3 » (1339-1506), ni « phase parlementaire contrariée » (1528-1797) ne tiennent à l'épreuve des marqueurs. Dans les deux cas, Philippe projette sur les faits un cadre catégoriel dont les marqueurs structurels de fond sont absents, en s'appuyant sur des marqueurs superficiels (institution dogale d'un côté, bicaméralisme de l'autre) qui ne suffisent pas à caractériser les phases.
+Ni « phase absolutiste sous absolutisme informel factionnel » (1339-1506), ni « phase parlementaire contrariée » (1528-1797) ne tiennent à l'épreuve des marqueurs. Dans les deux cas, Philippe projette sur les faits un cadre catégoriel dont les marqueurs structurels de fond sont absents, en s'appuyant sur des marqueurs superficiels (institution dogale d'un côté, bicaméralisme de l'autre) qui ne suffisent pas à caractériser les phases.
 
 La séquence entière 1097-1815 présente en revanche de façon cohérente les marqueurs d'une **phase oligarchique** — avec essor, polarisation, tentative avortée d'absolutisation factionnelle (1339-1506), consolidation consensuelle (1528), et verrouillage inertiel (1528-1797) jusqu'à l'absorption exogène.
 
@@ -130,7 +130,7 @@ L'hypothèse B, si elle est validée, introduit une **configuration structurelle
 
 ### Différences avec les patterns documentés
 
-- **vs forme 3 (absolutisme informel factionnel)** : dans la forme 3, le centre est absolutisant mais instable (rotation chaotique entre factions) ; dans le verrouillage, le centre est **empêché** par le bloc unifié.
+- **vs absolutisme informel factionnel** : dans l'absolutisme informel factionnel, le centre est absolutisant mais instable (rotation chaotique entre factions) ; dans le verrouillage, le centre est **empêché** par le bloc unifié.
 - **vs phase parlementaire contrariée** : dans l'ENP contrarié, il y a un vrai élargissement vers la population (même limité) et la subordination de l'exécutif à une représentation élargie ; dans le verrouillage, l'élargissement est **strictement intra-élitaire**.
 - **vs oligarchie normale en essor/polarisation** : dans l'oligarchie normale, la polarisation monte vers une guerre sociale qui se résoudra ; dans le verrouillage, la polarisation se *dissout* en consensus avant résolution.
 
@@ -138,7 +138,7 @@ L'hypothèse B, si elle est validée, introduit une **configuration structurelle
 
 C'est un **élément nouveau théorique** (catégorie 4 au sens CLAUDE.md) à documenter et à tester sur d'autres cités-États. Deux candidats à examiner en priorité :
 - **Florence** : Philippe suggère un parallèle fort Gênes-Florence. Le duché Médicis post-1530 est-il une absolutisation ou un consensus verrouillant ?
-- **Venise** : la lecture canonique (1er MA forme 2 = Inquisiteurs d'État) est-elle solide, ou Venise relève-t-elle aussi du verrouillage oligarchique ? C'est une question lourde — si Venise relève du verrouillage, c'est tout l'édifice de la forme 2 canonique qui mérite réexamen.
+- **Venise** : la lecture canonique (1er MA porté par un organe collégial autonome — les Inquisiteurs d'État) est-elle solide, ou Venise relève-t-elle aussi du verrouillage oligarchique ? C'est une question lourde — si Venise relève du verrouillage, c'est tout l'édifice de cette lecture canonique qui mérite réexamen.
 
 ## Partie V — Questions ouvertes
 

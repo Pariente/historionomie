@@ -171,17 +171,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - start: 1350
 - end: 1371
 - title: Bascule oligarchique
-- summary: Pierre Ier (1350-1369) tente de centraliser — c'est un Faliero castillan. Son renversement par Henri de Trastámara (1369) ouvre la négociation du cadre légal : mercedes enriqueñas, Cortès de Toro (1371, Audiencia permanente), nouveau principe de succession.
-
-#### Saillant : Pacte oligarchique
-- type: saillant
-- start: 1369
-- figure: Henri II de Trastámara
-- subtitle: Règlement trastámara
-- title: Pacte oligarchique
-- confidence: medium
-- summary: Le reglement trastamara (1369-1371) est le pacte oligarchique castillan : codification formelle, caractere collectif (Cortes de Toro), moment de faiblesse (Henri II usurpateur ayant besoin de legitimation contre les loyalistes de Pierre Ier). Cas mixte **chemin A + B** — codification simultanee de la succession (legitimation Trastamara) et de l'exercice (mercedes enriquenas, Audiencia, Consejo, alcabala).
-- description: Le pacte satisfait les trois elements structurels du PO. (1) Codification formelle : actes ecrits successifs — mercedes enriquenas, Audiencia (Cortes de Toro, 1371), Consejo Real (1385, Jean Ier), alcabala permanente (1393, Henri III). (2) Caractere collectif : negociation avec la noblesse en assemblee des Cortes, non decision unilaterale. (3) Moment de faiblesse : Henri II est usurpateur fratricide (Pierre Ier mort a Montiel, 1369) et a besoin de la noblesse pour se legitimer ; les deux conditions de Deblonde sont reunies (homogeneite des oligarques a l'echelle du royaume apres trois siecles de Reconquista + faiblesse maximale de l'executif usurpateur). Le pacte combine **chemin A et chemin B** : la composante A est la legitimation Trastamara qui fixe la nouvelle ligne dynastique contre les heritiers de Pierre Ier ; la composante B (dominante) est la codification de l'exercice — les mercedes enriquenas codifient formellement les obligations de la couronne envers la noblesse et creent la nobleza nueva (famille dont la richesse depend de la faveur royale, embryon de la classe prebendiere), l'Audiencia institutionnalise la justice royale permanente, le Consejo Real et l'alcabala permanente structurent l'exercice fiscal et administratif. Les structures preexistent partiellement (chancellerie castillane, justices locales), mais 1369-1371 marque l'**appropriation collective** par les Cortes du cadre institutionnel et son caractere contraignant pour la couronne. Structurellement analogue a la loi salique francaise (1317, chemin A), aux Ordonnances anglaises (1311, chemin B), au Libell autrichien (1518, chemin B), ou a la primogeniture bavaroise (1506, chemin A).
+- summary: Pierre Ier (1350-1369) tente de centraliser — c'est un Faliero castillan. Son renversement par Henri de Trastámara (1369) ouvre la négociation du cadre légal : mercedes enriqueñas, Cortès de Toro (1371, Audiencia permanente), nouveau principe de succession. (Le PO est filé sous phase oligarchique en 1er saillant d'essor selon la nouvelle convention.)
 
 ---
 
@@ -206,6 +196,16 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - end: 1640
 - title: Essor oligarchique
 - summary: D'Henri II aux révoltes de 1640. L'appareil d'État se consolide : Audiencia (1371), Consejo Real (1385), alcabala permanente (1393), corregidores (~1393). Les Rois Catholiques (~1492) portent la puissance à son maximum — acmé oligarchique. La conquête du Mexique (1521) puis du Pérou (1533) ouvre l'empire colonial américain, seul vrai choc d'hétérogénéité du Parcours : administré directement par du personnel castillan, il mobilise l'énergie élitaire pour trois siècles et prolonge l'essor. L'héritage habsbourgeois européen (1516), en union personnelle, fournit quant à lui une soupape militaire (guerres d'Italie, guerre des Flandres) sans digestion par les élites castillanes. Philippe II (~1580) porte l'empire à son apogée mais opère toujours dans la monarchie composite. L'Armada (1588) marque la fin de l'expansion offensive, mais la machine coloniale continue d'absorber l'énergie élitaire. La polarisation ne se cristallise qu'avec les révoltes de 1640.
+
+#### Saillant : Pacte oligarchique
+- type: saillant
+- start: 1369
+- figure: Henri II de Trastámara
+- subtitle: Règlement trastámara
+- title: Pacte oligarchique
+- confidence: medium
+- summary: Le reglement trastamara (1369-1371) est le pacte oligarchique castillan : codification formelle, caractere collectif (Cortes de Toro), moment de faiblesse (Henri II usurpateur ayant besoin de legitimation contre les loyalistes de Pierre Ier). Cas mixte **chemin A + B** — codification simultanee de la succession (legitimation Trastamara) et de l'exercice (mercedes enriquenas, Audiencia, Consejo, alcabala).
+- description: Le pacte satisfait les trois elements structurels du PO. (1) Codification formelle : actes ecrits successifs — mercedes enriquenas, Audiencia (Cortes de Toro, 1371), Consejo Real (1385, Jean Ier), alcabala permanente (1393, Henri III). (2) Caractere collectif : negociation avec la noblesse en assemblee des Cortes, non decision unilaterale. (3) Moment de faiblesse : Henri II est usurpateur fratricide (Pierre Ier mort a Montiel, 1369) et a besoin de la noblesse pour se legitimer ; les deux conditions de Deblonde sont reunies (homogeneite des oligarques a l'echelle du royaume apres trois siecles de Reconquista + faiblesse maximale de l'executif usurpateur). Le pacte combine **chemin A et chemin B** : la composante A est la legitimation Trastamara qui fixe la nouvelle ligne dynastique contre les heritiers de Pierre Ier ; la composante B (dominante) est la codification de l'exercice — les mercedes enriquenas codifient formellement les obligations de la couronne envers la noblesse et creent la nobleza nueva (famille dont la richesse depend de la faveur royale, embryon de la classe prebendiere), l'Audiencia institutionnalise la justice royale permanente, le Consejo Real et l'alcabala permanente structurent l'exercice fiscal et administratif. Les structures preexistent partiellement (chancellerie castillane, justices locales), mais 1369-1371 marque l'**appropriation collective** par les Cortes du cadre institutionnel et son caractere contraignant pour la couronne. Structurellement analogue a la loi salique francaise (1317, chemin A), aux Ordonnances anglaises (1311, chemin B), au Libell autrichien (1518, chemin B), ou a la primogeniture bavaroise (1506, chemin A).
 
 #### Saillant : 1er monarque oligarchique
 - type: saillant
@@ -240,15 +240,6 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - confidence: high
 - summary: Mecanisme : choc d'heterogeneite (cf. perturbations.md) — l'empire colonial americain est administre directement par du personnel castillan (vice-rois, corregidores, audiencias), satisfaisant la condition necessaire d'administration commune. Effet : prolongement de la phase oligarchique (~145 ans supplementaires). Seul vrai choc d'heterogeneite du Parcours oligarchique espagnol — les possessions europeennes habsbourgeoises, en union personnelle, ne satisfont pas le critere de digestion.
 - description: L'empire colonial américain est la clé du prolongement exceptionnel de la phase oligarchique espagnole. Contrairement aux possessions européennes habsbourgeoises (Pays-Bas, Lombardie, Naples, Sicile, Franche-Comté), qui restent en **union personnelle** avec leurs institutions locales (États de Brabant, Sénat de Milan, Cortes napolitaines, gouverneurs distincts) et fonctionnent comme **soupape militaire** sans mobiliser les élites castillanes pour un travail de digestion, l'Amérique est **administrée directement** par du personnel castillan : vice-rois (Nouvelle-Espagne 1535, Pérou 1542), corregidores dans les provinces, audiencias comme hautes cours royales, oidores comme juges royaux, tous issus du système castillan et répondant au Consejo de Indias à Madrid. Le droit appliqué est castillan, adapté par les Leyes de Indias. Les Indios n'ont aucune représentation politique, et le personnel administratif, judiciaire et ecclésiastique est presque exclusivement péninsulaire jusqu'au XVIIIe siècle. Ce dispositif mobilise massivement l'énergie élitaire castillane pendant trois siècles — carrières administratives, entreprises de conquête, commerce (Casa de Contratación à Séville), missions évangéliques, extraction minière (Potosí à partir de 1545). C'est une vraie machine de digestion, analogue fonctionnellement aux provveditori vénitiens mais à l'échelle transatlantique. La phase oligarchique ne peut pas se résoudre tant que cette machine absorbe l'énergie élitaire. **Distinction essentielle avec l'empire européen habsbourgeois** : l'héritage que Charles Quint reçoit en 1516 contient deux composantes structurellement différentes. La composante **européenne** (Pays-Bas, Lombardie, Naples, Sicile, Franche-Comté, titre impérial) est une collection d'unions personnelles qui conservent leurs institutions et qui fonctionnent comme soupape militaire — elles consomment de l'énergie (guerres des Flandres, guerres d'Italie) sans produire de digestion par les élites castillanes. Leur perte progressive (Utrecht 1713, perte définitive d'Italie et Pays-Bas) ne constitue donc pas une « correction d'échelle » au sens d'un retour vers le noyau naturel — elle marque simplement la fin d'une soupape militaire. La composante **américaine**, elle, est administrée directement et produit un vrai choc d'hétérogénéité structurel. C'est pourquoi le prolongement de la phase oligarchique espagnole (~345 ans) est analogue à celui de Venise (~637 ans, empire intégré par provveditori) et non à celui de l'Autriche (~231 ans, empire continental majoritairement en union personnelle). La perte de l'empire américain commencera dans les années 1810-1820 (indépendances) et marquera l'accélération finale vers la RN.
-
-#### Saillant : Fin de l'expansion
-- type: saillant
-- start: 1588
-- subtitle: L'Invincible Armada
-- title: Fin de l'expansion
-- confidence: high
-- summary: La defaite de l'Armada (1588) marque le tournant de l'expansion exterieure vers la polarisation interne. Les guerres deviennent defensives et la soupape militaire europeenne s'epuise progressivement.
-- description: La fin de l'expansion oligarchique marque le basculement de dynamique (cf. phase_oligarchique.md) : l'expansion exterieure cesse de fonctionner et les tensions internes prennent le relais. La defaite de l'Armada (1588) contre l'Angleterre met fin a l'offensive maritime espagnole. Les guerres deviennent defensives — revolte des Pays-Bas, guerres d'attrition sur le continent. Les pertes europeennes successives (secession du Portugal 1640, independance des Provinces-Unies par Westphalie 1648, cession de l'Italie et des Pays-Bas meridionaux a Utrecht 1713) ne constituent pas des corrections d'echelle structurelles au sens du cadre (cf. perturbations.md) : ces possessions etaient en union personnelle, jamais digerees par les elites castillanes. Leur perte marque la fin progressive de la soupape militaire europeenne, pas un retour vers le noyau naturel. L'empire colonial americain continue d'absorber l'energie elitaire (exutoire continu), retardant la polarisation de ~50 ans supplementaires.
 
 ### Subphase : Polarisation des élites (~1640-1700)
 - type: subphase
@@ -332,7 +323,7 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - start: ~1770
 - end: 1874
 - title: Impérialisme absolutiste
-- summary: Charles III (~1770) est le acme absolutiste. L'empire colonial prolonge l'imperialisme en fournissant un exutoire continu (revenus, carrieres, prestige). La correction d'echelle principale (perte de l'empire americain, 1808-1826) accelere la phase. La Gloriosa (1868) est la remontrance (cf. phase_absolutiste.md) — son echec (Restauration, 1874) ferme la derniere voie de reforme institutionnelle et marque l'entree en AR.
+- summary: Charles III (~1770) est le acme absolutiste. L'empire colonial prolonge l'imperialisme en fournissant un exutoire continu (revenus, carrieres, prestige). La correction d'echelle principale (perte de l'empire americain, 1808-1826) accelere la phase. La vague europeenne de 1848 ne se propage quasiment pas en Espagne — deux tentatives progresistas a Madrid (mars et mai 1848) sont etouffees immediatement par Narvaez, confirmation que le rythme intra-absolutiste espagnol est desynchronise : le combustible liberal a deja ete brule (Cadix 1812, Trienio 1820-1823, premiere guerre carliste) et la remontrance n'arrivera que vingt ans plus tard. La Gloriosa (1868) est cette remontrance (cf. phase_absolutiste.md) — son echec (Restauration, 1874) ferme la derniere voie de reforme institutionnelle et marque l'entree en AR.
 
 #### Saillant : Acmé absolutiste
 - type: saillant
@@ -344,16 +335,28 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - summary: Charles III (r. 1759-1788) incarne le sommet de la puissance absolutiste espagnole — expansion maximale, prestige maximal, domestication complete des elites. Les marqueurs frequents de l'acme (imperialisme, domestication de la noblesse, controle de la hierarchie ecclesiastique) sont tous presents.
 - description: Charles III remplit les criteres du saillant « acme absolutiste » (cf. phase_absolutiste.md) : il combine puissance personnelle maximale, expansion imperialiste et domestication complete des elites. Les reformes bourboniennes atteignent leur apogee sous son regne : les intendants controlent tout le territoire, les secrétaires d'Etat (Aranda, Campomanes, Floridablanca) forment une administration centrale sophistiquee. L'expulsion des Jesuites (1767) illustre la mise sous tutelle de la religion — marqueur frequent de la phase absolutiste. Le decret de libre commerce colonial (1778) restructure l'empire americain au benefice exclusif de l'administration centrale. La domestication de la noblesse est achevee — les grands d'Espagne sont des courtisans, plus des seigneurs autonomes. Structurellement analogue a Louis XIV en France (~1682) et Elisabeth Iere en Angleterre (~1580).
 
-### Perturbation : Perte de l'empire colonial américain (1808-1826)
-- type: perturbation
+#### Saillant : Perte de l'empire colonial américain
+- type: saillant
+- perturbation: true
 - mechanism: correction_echelle
 - effect: acceleration
-- start: 1808
-- end: 1826
+- start: 1824
+- subtitle: Ayacucho
 - title: Perte de l'empire colonial américain
-- summary: Les colonies americaines font secession (1808-1826). Mecanisme : correction d'echelle (cf. perturbations.md) — le territoire perdu avait ete effectivement digere par le noyau (administration directe par vice-rois et corregidores castillans pendant trois siecles). Effet : acceleration de la phase absolutiste. Seule vraie correction d'echelle du Parcours espagnol — les pertes europeennes anterieures (Portugal 1640, Provinces-Unies 1648, Utrecht 1713) ne satisfont pas le critere de digestion prealable.
-- description: La correction d'échelle est le mécanisme central. L'empire colonial américain fonctionnait comme machine de digestion continue pour le Parcours espagnol depuis la conquête du Mexique (1521) et du Pérou (1533) : administration directe par un personnel castillan (vice-rois, corregidores, audiencias, oidores) qui mobilisait massivement l'énergie élitaire — revenus, carrières, prestige, projet de civilisation. Sa perte entre 1808 et 1826 ramène brutalement l'Espagne à son noyau péninsulaire effectif. Le déclencheur est exogène (invasion napoléonienne qui brise la légitimité de la métropole et ouvre la fenêtre des indépendances), mais l'effet structurel est une correction d'échelle : l'Espagne perd le territoire dont la digestion maintenait la phase en cours. Le contraste avec Milan est éclairant : à Milan, Napoléon modernise l'administration (accélération par modernisation). En Espagne, Ferdinand VII restaure l'ancien système à l'identique — l'accélération vient exclusivement de la perte de la machine de digestion coloniale. C'est la seule vraie correction d'échelle structurelle du Parcours espagnol : les pertes européennes antérieures (Portugal, Provinces-Unies, Pays-Bas méridionaux, Italie) n'en sont pas, parce que ces possessions étaient en union personnelle et n'avaient jamais contribué à la digestion par le noyau.
+- confidence: high
+- summary: Les colonies americaines font secession (cascade 1808-1826, decision a Ayacucho le 9 decembre 1824). Mecanisme : correction d'echelle (cf. perturbations.md) — le territoire perdu avait ete effectivement digere par le noyau (administration directe par vice-rois et corregidores castillans pendant trois siecles). Effet : acceleration de la phase absolutiste. Seule vraie correction d'echelle du Parcours espagnol — les pertes europeennes anterieures (Portugal 1640, Provinces-Unies 1648, Utrecht 1713) ne satisfont pas le critere de digestion prealable.
+- description: La correction d'échelle est le mécanisme central. L'empire colonial américain fonctionnait comme machine de digestion continue pour le Parcours espagnol depuis la conquête du Mexique (1521) et du Pérou (1533) : administration directe par un personnel castillan (vice-rois, corregidores, audiencias, oidores) qui mobilisait massivement l'énergie élitaire — revenus, carrières, prestige, projet de civilisation. Le déclencheur est exogène (invasion napoléonienne de 1808 qui brise la légitimité de la métropole et ouvre la fenêtre des indépendances), la cascade s'étend de 1810 (Caracas, Buenos Aires, Hidalgo) à 1826 (capitulation du Callao), mais la **bataille d'Ayacucho** (9 décembre 1824) scelle structurellement le sort de l'empire continental — la dernière armée royaliste de campagne y est anéantie et l'Espagne perd définitivement le territoire dont la digestion maintenait sa phase absolutiste en cours. L'effet est une accélération par destruction de l'exutoire colonial : Ferdinand VII restaure l'ancien système à l'identique en métropole (contraste avec Milan, où Napoléon modernise l'administration et accélère par modernisation), donc l'accélération vient exclusivement de la perte de la machine de digestion coloniale. C'est la seule vraie correction d'échelle structurelle du Parcours espagnol — les pertes européennes antérieures (Portugal, Provinces-Unies, Pays-Bas méridionaux, Italie) n'en sont pas, parce que ces possessions étaient en union personnelle et n'avaient jamais contribué à la digestion par le noyau.
 - affected_motor: Construction de l'État central (exutoire colonial détruit)
+
+#### Saillant : Saturation fiscale
+- type: saillant
+- start: 1868
+- end: 1871
+- subtitle: Abolition des consumos et échec Figuerola
+- title: Saturation fiscale
+- confidence: high
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué à la machine fiscale espagnole au sens strict — incapacité POLITIQUE d'augmenter l'impôt ordinaire par voie d'élargissement durable, due au caractère inacceptable dans la société d'AR. Datation **1868-1871** : la Gloriosa abolit les *consumos* (impôt indirect sur les denrées de consommation) sous pression populaire — réduction obligée de la base fiscale indirecte parce qu'elle était devenue politiquement insoutenable. Figuerola tente immédiatement de les remplacer par fiscalité directe : impôt sur le revenu (proyecto 1869), Loi minière (1871), réforme douanière (1869). Les tentatives ÉCHOUENT par incapacité de la classe parlementaire à imposer une fiscalité directe générale face aux résistances oligarchiques (grands propriétaires, anciennes élites du turno). Premier marqueur net où l'État espagnol bute structurellement sur l'incapacité d'élargir l'assiette ordinaire. **Datations alternatives écartées** : 1872 (Moratoria Salaverría) = défaut sur intérêts de dette = surendettement réactif, conséquence de la saturation et non saturation ; 1898 (Désastre) = choc exogène ; 1841 (Mon-Santillán) = rupture de centralisation administrative qui RÉUSSIT à élargir, l'opposé de la saturation. Pattern simultané à la Remontrance (Gloriosa 1868 = à la fois bascule fiscale et manifestation politique), conforme au pattern canonique des monarchies à corps intermédiaires externes. Sources : Comín *Las crisis de la deuda soberana en España 1500-2015* (2016), Tedde de Lorca *El Banco de España y el Estado liberal*, Comín-Diaz-Fuentes dans Carreras-Tafunell.
+- summary: L'abolition des *consumos* par la Gloriosa (1868) consacre l'incapacité de la machine fiscale espagnole à maintenir l'extraction indirecte sous pression populaire. Figuerola tente de les remplacer par fiscalité directe (impôt sur le revenu 1869, Loi minière 1871, réforme douanière) ; toutes les tentatives échouent par incapacité de la classe parlementaire à imposer une assiette générale face aux résistances oligarchiques. L'État ne peut plus augmenter durablement ses recettes ordinaires malgré ses tentatives. Pattern simultané à la Remontrance (Gloriosa = à la fois rupture politique et rupture fiscale). La moratoria Salaverría (1872, défaut sur 2/3 des intérêts) et le Désastre de 1898 sont des conséquences ultérieures, pas la saturation. Sources : Comín, Tedde de Lorca, Carreras-Tafunell.
 
 #### Saillant : Remontrance
 - type: saillant
@@ -361,18 +364,11 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - end: 1874
 - subtitle: La Gloriosa + Sexenio
 - title: Remontrance
-- confidence: medium
-- summary: La Gloriosa (1868) et le Sexenio Democrático (1868-1874) sont la remontrance espagnole — la dernière tentative de la classe parlementaire d'imposer un régime constitutionnel. Constitution de 1869, suffrage universel, Amadeo Ier, Première République. L'expérience échoue : le pronunciamiento de Martínez Campos (1874) réimpose l'ancien ordre. L'échec marque l'entrée en Ancien Régime — le turno pacífico (1874-1931) est le système sclérosé final.
+- confidence: high
+- alternatives: Strictement simultanée à la Saturation fiscale (Gloriosa 1868), conformément au pattern canonique des monarchies à corps intermédiaires externes. La Gloriosa est à la fois rupture politique (Remontrance) et rupture fiscale (abolition consumos, déclenche les tentatives Figuerola qui échouent). Pattern partagé avec France (~1710 dixième Desmaretz + 1715 Polysynodie), Hongrie (1811-1812).
+- summary: La Gloriosa (1868) et le Sexenio Democrático (1868-1874) sont la remontrance espagnole — la dernière tentative de la classe parlementaire d'imposer un régime constitutionnel. Constitution de 1869, suffrage universel, Amadeo Ier, Première République. L'expérience échoue : le pronunciamiento de Martínez Campos (1874) réimpose l'ancien ordre. Manifestation politique strictement simultanée à la Saturation fiscale — même conjoncture (abolition consumos + échec Figuerola pour les remplacer).
 - description: La Gloriosa est structurellement analogue à la Polysynodie française (1715), à l'Apology of the Commons anglaise (1604), à la Correzione vénitienne (1761) ou au Landtag bavarois de 1848 : la classe administrative et parlementaire tente de redistribuer le pouvoir en sa faveur. En Espagne, la tentative va plus loin que dans les autres cas — une véritable révolution, une nouvelle constitution, un roi constitutionnel (Amadeo Ier), puis une république. Mais le résultat est le même : l'exécutif reprend le contrôle (pronunciamiento de Martínez Campos, 29 décembre 1874) et installe le système de la Restauration. La dernière voie de réforme institutionnelle est fermée — l'Espagne entre en Ancien Régime.
 
-#### Saillant : Fin de l'expansion
-- type: saillant
-- start: 1898
-- subtitle: Désastre de 1898
-- title: Fin de l'expansion
-- confidence: high
-- summary: La perte de Cuba, des Philippines et de Porto Rico (1898) elimine le dernier exutoire colonial. Apres 1898, le Parcours accelere : l'AR ne dure que ~33 ans (1898-1931). Analogue fonctionnel de Passarowitz (1718) pour Venise.
-- description: Le Desastre de 1898 est le saillant « fin de l'expansion » absolutiste (cf. phase_absolutiste.md) : le pouvoir central atteint les limites de son expansion et les guerres deviennent couteuses. La defaite face aux Etats-Unis elimine Cuba, les Philippines et Porto Rico — dernier exutoire colonial residuel apres les independances americaines de 1808-1826. L'effondrement est progressif : la correction d'echelle principale (perte de l'empire americain, 1808-1826) avait deja ramene l'Espagne a son noyau peninsulaire ; 1898 acheve le processus en eliminant meme l'exutoire residuel. Les consequences structurelles sont immediates : les carrieres coloniales disparaissent (surproduction elitaire), la legitimite imperiale s'effondre (Generation de 98), et les symptomes classiques d'AR s'accelerent (sedimentation des elites, contestation croissante). Analogue de Passarowitz (1718) pour Venise : la perte de la derniere possession lointaine force le repli sur le noyau et accelere l'entree en AR.
 
 ### Subphase : Ancien Régime (~1874-1931)
 - type: subphase
@@ -498,14 +494,14 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 | 1er monarque oligarchique | Henri II (1369) |
 | Acmé oligarchique | Rois Catholiques (~1492) |
 | Choc d'hétérogénéité | Empire colonial américain (1521-1533) |
-| Fin de l'expansion (olig.) | Armada (1588) |
 | Correction d'échelle | Indépendances américaines (1808-1826) — seule vraie correction d'échelle. Les pertes européennes antérieures (Portugal 1640, Provinces-Unies 1648, Italie/Pays-Bas 1713) sont des fins de soupape militaire sans effet structurel. |
 | Guerre sociale | Guerre de Succession d'Espagne (1700-1714) |
 | 1er monarque absolu | Philippe V (1714) |
 | Acmé absolutiste | Charles III (~1770) |
+| Saturation fiscale | 1868-1871 (abolition consumos + échec tentatives Figuerola pour les remplacer par fiscalité directe ; sources Comín, Tedde de Lorca) — strictement simultanée à la Remontrance, pattern canonique |
 | Remontrance | La Gloriosa + Sexenio (1868-1874) |
-| Fin de l'expansion (abs.) | Désastre de 1898 |
-| Ancien Régime | ~1874-1931 |
+| Désastre de 1898 + Villaverde | Choc exogène + sortie partielle par amputation territoriale (pas une saturation distincte) |
+| Ancien Régime | ~1868-1931 |
 | Début de la RN | 1931 (chute de la monarchie) |
 | Expérience parlementaire | Seconde République (1931-1936) |
 | Phase aiguë | Guerre civile (1936-1939) |

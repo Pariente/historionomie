@@ -19,18 +19,38 @@ Pour le détail par nation, voir `references/nations/*/parcours.md` et `referenc
 | Pacte oligarchique | Probable sous Omri (-885), non textuellement attesté | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) | Ordinamenti di Giustizia (1293) |
 | 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Contarini (~1043) / système | Guillaume IV (~1508) | Amédée VIII (~1430) / Emmanuel Philibert (1559) | Signoria post-1293 |
 | Acmé oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) | Bardi-Peruzzi (~1325-1339) |
-| Fin de l'expansion (olig.) | ~-746 | — | Cateau-Cambrésis (1559) | — | Agnadello (1509) | — | Mort Ch. Emmanuel Ier (1630) | Faillite Bardi-Peruzzi (1339) |
 | Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Tensions institutionnelles (~1628-1669) | ~1564-1597 | Madamisti/Principisti (~1637-1696) | Albizzi vs Médicis (1433-1480) |
 | 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) | Laurent le Magnifique (1480) |
 | Dernière grande révolte oligarchique (DGRO) | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — (pas d'assise) | — (pas d'assise) | Affaire Graneri (1722-1723) | Montemurlo (1537) |
 | Acmé absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Morosini (~1688) | Max. III Joseph (~1756) / Louis Ier (~1835) | Ch. Emmanuel III (~1748) | Ferdinand Ier (~1591-1609) |
-| Fin de l'expansion (abs.) | — | Mort d'Hérode (-4) | Utrecht (1713) | — | Passarowitz (1718) | Blenheim (1704) | Aix-la-Chapelle (1748) | — |
-| Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) | Correzione (1761) | Landtag (1848) | Révolte de 1821 | — |
+| Saturation fiscale | — | -4 (à reconsidérer, prolongement sous tutelle) | 1710 (échec dixième Desmaretz) | 1610 (Great Contract échoué) | ~1740 (épuisement extension fiscale dans oligarchie patricienne extrême) | — (machine Montgelas pas durablement bloquée avant Reich 1871) | — (AR avorté avant maturation 1796) | 1774-1775 (Tassa di redenzione + concordat Pierre-Léopold ; comprimée avec Réformes échouées) |
+| Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) + Petition of Right (1628) | Correzione (1761) | Landtag (1848) | Révolte de 1821 | — |
 | Éclatement de l'AR | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | République de Manin (1848) | Eisner (1918) | — (absorbée, 1861) | Invasion française (1796) |
 | Émergence de l'IR | — | — | Bonaparte (1799) | Cromwell (1653) | — (RN avortée) | — (absorbée) | — (absorbée) | — (absorbée) |
 | Glorieuse Révolution | — | — | 1830 | 1688 | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) | — (absorbée, 1860) |
 
-Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1715-1789 ; Angleterre ~1603-1642 ; Venise ~1718-1848 ; Bavière ~1848-1918 ; Piémont ~1748-1861 (éclipse 1796-1814) ; Florence ~1670-1796 ; Israël prolongement -4 à 66.
+**Note méthodologique sur le critère Saturation fiscale (Lanoue de Suremain)** : la saturation est l'incapacité POLITIQUE de l'État absolutiste à augmenter l'impôt ordinaire par voie d'élargissement durable — du fait du caractère inacceptable de la fiscalité égalitaire dans la société d'AR (privilèges fiscaux figés, corps intermédiaires). Le niveau absolu d'imposition peut être plus bas qu'en phase oligarchique précédente, plus haut en phase parlementaire suivante. Les banqueroutes, défauts, manipulations monétaires, consolidations de dette sont des **expédients réactifs**, pas la saturation elle-même.
+
+**Nations hors tableau principal** :
+- **Espagne** : Saturation fiscale **1868-1871** (abolition consumos par la Gloriosa + échec tentatives Figuerola pour les remplacer par fiscalité directe universelle), simultanée à la Remontrance. Sources Comín, Tedde de Lorca, Carreras-Tafunell.
+- **Sicile** : Saturation fiscale **1781-1786** (Caracciolo tente cadastre général + abolition privilèges fiscaux nobiliaires + droits féodaux, bloqué par baronnage parlementaire), simultanée à la séquence Réformes échouées canonique. Sources Ligresti, Cancila, Aymard.
+- **Hongrie** : Saturation fiscale **1811-1812** (Diète refuse augmentation contribution + exemption nobiliaire tient jusqu'aux April Laws 1848), simultanée à la Remontrance. Sources Dobszay/Poór/Szijártó.
+- **États pontificaux** : Saturation fiscale **1708-1710** (Tassa del Milione de Clément XI, contribution générale sur tous les revenus, bloquée par noblesse et clergé exemptés). Sources Pastor, Treccani, Piola Caselli.
+- **Émilie-Romagne (Bologne)** : Saturation fiscale **1708** (machine pontificale dont Bologne fait partie en Légation tutélaire).
+- **Autriche** : Saturation fiscale **1789-1790** (Steuerpatent + Urbarialpatent joséphins retirés par Léopold II sous résistance Stände + comitats hongrois + noblesse). Sources Beales, Dickson, Macartney.
+- **Bohême** : Saturation fiscale **1789-1790** (Stände bohêmes co-acteurs de la résistance au Steuerpatent joséphin).
+- **Naples** : Saturation fiscale **1741-1755** (Catasto Onciario de Charles VII/Tanucci bloqué par capture communale du baronnage local). **Cas atypique** : séquence inversée — Saturation précède l'Acmé absolutiste (Tanucci 1759-1776). Sources Calabria, Galasso, Astarita.
+- **Florence** : Saturation fiscale **1774-1775** (Tassa di redenzione + concordat de Pierre-Léopold, résistance progressive de patriciat sédimenté et clergé). **Cas particulier** : Saturation + Réformes échouées comprimées dans la séquence léopoldine sous le même souverain. Sources Waquet, Diaz, Sordi.
+- **Gênes, Suisse** : non applicable canoniquement (architecture Casa di San Giorgio / absolutisme rentier-patrimonial — pas de machine d'extraction fiscale centralisée qui tenterait d'élargir).
+- **Piémont, Milan, Bavière** : pas de saturation observée — AR avorté ou sous tutelle exogène (Piémont, Milan), ou machine fiscale moderne qui n'a pas été durablement bloquée avant absorption Reich (Bavière).
+
+**Cas atypiques structurels** (à théoriser, cf. `phase_absolutiste.md`) :
+1. **Séquence compressée / inversée** : Naples (Saturation 1755 précède Acmé Tanucci 1759-1776) — l'absolutisme se redéploie sur les terrains non-fiscaux quand la voie fiscale sature précocement.
+2. **Saturation + Réformes échouées compressées** : Florence (Pierre-Léopold cumule les deux dans une AR très court, sans Remontrance distincte).
+3. **Absolutismes rentier-patrimoniaux** : Gênes, Suisse cantonale — pas de Saturation au sens strict car pas de machine d'extraction centralisée.
+4. **AR exogène** : Bohême (machine habsbourgeoise), Émilie-Romagne / Bologne (machine pontificale) — la Saturation est celle de la machine porteuse, dont la nation sous tutelle est co-actrice ou co-affectée. Pas une « saturation héritée » distincte, juste la même saturation.
+
+Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1710-1789 ; Angleterre ~1610-1642 ; Espagne ~1868-1931 ; Sicile ~1781-1812 ; Hongrie ~1811-1848 ; États pontificaux ~1708-1798 ; Émilie-Romagne ~1708-1796 ; Autriche ~1790-1848 ; Bohême ~1790-1848 (AR exogène) ; Naples ~1755-1798 (AR endogène court avant interruption napoléonienne) ; Florence ~1774-1796 ; Venise ~1740-1848 ; Israël prolongement -4 à 66.
 
 ---
 

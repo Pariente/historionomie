@@ -26,6 +26,7 @@ Avant toute analyse, lire les fichiers de référence pertinents :
 | Fichier | Contenu | Lire quand... |
 |---|---|---|
 | `references/parcours.md` | Cadre théorique, deux moteurs, durées typiques, vue d'ensemble des phases, tableau récapitulatif des saillants connus | **Toujours lire en premier** |
+| `references/style_redactionnel.md` | Conventions de style pour les fichiers `parcours.md` des nations : titres, subtitles, summaries, descriptions, highlights, conventions visuelles, anti-patterns observés, checklist de relecture | **Toujours lire avant rédaction finale d'un parcours** |
 | `references/methode_cartographie.md` | Manuel d'orchestration de la cartographie multi-agent (11 étapes : collecteur Agent 1 → évaluateur Agent 2 → synthèse parent → vérifications → corpus → fichiers de sortie → images). Contient les prompts de spawn des sous-agents et les Étapes 4-11 (synthèse, sortie, images). | La tâche est de **cartographier un Parcours complet** d'une nation |
 | `references/methode_collecte.md` | Procédure du **Collecteur** (Agent 1) — collecte historique pure, découpage en tranches, sans cadre phasique. Lue par Agent 1 uniquement. | Référencé depuis `methode_cartographie.md` lors du spawn d'Agent 1 |
 | `references/methode_scoring.md` | Procédure de l'**Évaluateur** (Agent 2) — scoring tranche × phase + recherche complémentaire. Lue par Agent 2 uniquement. | Référencé depuis `methode_cartographie.md` lors du spawn d'Agent 2 |
@@ -83,20 +84,20 @@ Les écarts sont toujours significatifs — les expliquer par perturbation ident
 **Sous-phases** (liste fermée) :
 - `percolation élitaire` (pré-féodale)
 - `coagulation des élites`, `bascule oligarchique` (féodale)
-- `essor oligarchique`, `polarisation des élites`, `guerre sociale` (oligarchique)
+- `essor oligarchique`, `polarisation des élites`, `guerre sociale` (oligarchique). Variante alternative à `polarisation des élites` : `équilibre oligarchique` (phase oligarchique bloquée par homogénéité culturelle empêchant la polarisation des élites).
 - `absolutisation`, `impérialisme absolutiste`, `ancien régime` (absolutiste). Dérivation rare : `ancien régime exogène`.
 - `révolution initiale`, `impérialisme revanchard`, `restauration` (RN)
 
 Toute autre dérivation requiert un précédent documenté.
 
 **Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
-- **Féodale** : Éveil féodal, Pic féodal, Crise féodale, Pacte oligarchique
-- **Oligarchique** : 1er monarque oligarchique, Acmé oligarchique, Fin de l'expansion, Guerre sociale
-- **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Fin de l'expansion, Remontrance, Réformes échouées
+- **Féodale** : Éveil féodal, Pic féodal, Crise féodale
+- **Oligarchique** : Pacte oligarchique, 1er monarque oligarchique, Acmé oligarchique, Guerre sociale
+- **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Saturation fiscale, Remontrance, Réformes échouées
 - **RN** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution
 
 **Distinction saillant vs sous-phase** :
-- `Ancien régime` est une sous-phase **seulement** — l'entrée en AR est marquée par la Remontrance, pas par un saillant « Ancien Régime ».
+- `Ancien régime` est une sous-phase **seulement** — l'entrée en AR est marquée par le saillant **Saturation fiscale** (critère Lanoue de Suremain), pas par un saillant « Ancien Régime ». La Remontrance, quand elle a lieu, est généralement simultanée ou quasi-simultanée à la Saturation fiscale — mais c'est une manifestation politique contingente qui peut être absente.
 - `révolution initiale` est une sous-phase **seulement** — elle contient les 4 saillants Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
 - `Restauration` est à la fois un **saillant** (le moment) ET une **sous-phase** (la durée).
 - `Émergence de l'IR` est un **saillant** ; `impérialisme revanchard` est la **sous-phase**.

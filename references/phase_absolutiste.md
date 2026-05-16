@@ -137,7 +137,7 @@ Les structures institutionnelles de la phase oligarchique ne disparaissent pas, 
 
 **Définition** : la figure, l'institution ou le consortium qui résout la guerre sociale et inaugure la **centralisation de l'appareil** (cf. §Lecture abstraite ci-dessus). Saillant principal de l'entrée en phase absolutiste.
 
-**Critère structurel invariant** (cf. `phase_oligarchique.md` §Guerre sociale) : la résolution conduit à un **nouveau cadre central qui subordonne les anciennes élites** — l'appareil cesse d'être démembré entre oligarques. La figure résolvante peut être un tiers neutre s'appuyant sur les clientèles délaissées (cas le plus fréquent) ou un chef de faction qui crée un cadre transcendant son propre camp ; ce qui compte est le résultat structurel, pas le statut de la figure.
+**Critère structurel invariant** (cf. `phase_oligarchique.md` §Guerre sociale) : la résolution conduit à un **nouveau cadre central qui subordonne les anciennes élites** — l'appareil cesse d'être démembré entre oligarques. La figure résolvante est presque toujours **d'origine factionnelle** (elle émerge d'un des deux camps qui lui fournit base, réseau et légitimité) ; ce qui la qualifie comme 1er monarque absolu n'est pas une neutralité sociologique mais sa **rupture fonctionnelle avec sa faction d'origine** — subordonne-t-elle sa propre faction autant que l'adverse, absorbe-t-elle les réseaux des deux camps dans un appareil unifié, la logique factionnelle cesse-t-elle de structurer la politique nationale ? Le cas du tiers exogène (figure non affiliée aux deux factions) existe mais est plus rare. Voir `phase_oligarchique.md` §La figure résolvante pour le détail.
 
 #### Configurations rencontrées dans le corpus
 
@@ -223,55 +223,21 @@ Quand la DGRO est présente, la sous-phase commence par son échec ; sinon, la t
 
 Marqueurs récurrents : multiplication des guerres d'agression, début ou intensification du colonialisme, professionnalisation de l'encadrement militaire, monopole effectif de la violence par le centre (interdiction des armées privées), construction d'infrastructures militaires (places fortes, ports, arsenaux), unification linguistique de la noblesse.
 
-### Saillant : Fin de l'expansion (tournant impérialisme → ancien régime)
-
-**Définition** : le pouvoir central atteint les limites de son expansion. Les guerres deviennent coûteuses et les victoires rares. L'impérialisme s'essouffle.
-
-**Test discriminant** : qu'est-ce qui distingue la fin de l'expansion absolutiste d'un revers passager ?
-
-1. **Caractère structurel** — arrêt durable de la projection extérieure, pas une défaite ponctuelle suivie d'une reprise
-2. **Limite atteinte** — les rendements de la guerre passent en négatif (les conquêtes coûtent plus qu'elles ne rapportent ; les défenses des acquis épuisent le trésor)
-3. **Recentrage forcé** — l'énergie politique et économique se réoriente vers l'intérieur du territoire national
-
-**Signes observables** :
-- Traité de paix consacrant des limites territoriales définitives, accepté par le centre comme une perte ou une stagnation
-- Défaites militaires structurelles non rattrapées par des victoires ultérieures
-- Recul commercial structurel (perte de marchés externes, contraction des routes commerciales contrôlées)
-- Recentrage économique sur le territoire propre (investissements infrastructurels internes, productivité agricole et industrielle plutôt que butin extérieur)
-
 ### Le cycle de la classe administrative intermédiaire (Pariente)
 
-Les saillants **Remontrance** (fin d'impérialisme) et **Réformes échouées** (fin d'AR) sont **deux moments d'un même mécanisme** (Pariente) : le cycle de vie de la classe administrative intermédiaire créée par l'absolutisation.
+Les saillants **Remontrance** (manifestation politique de l'entrée en AR) et **Réformes échouées** (fin d'AR) sont **deux moments d'un même mécanisme** (Pariente) : le cycle de vie de la classe administrative intermédiaire créée par l'absolutisation.
 
 **Le mécanisme** : pour court-circuiter les anciennes oligarchies pendant l'absolutisation, l'exécutif s'appuie sur une classe administrative qu'il crée (noblesse de robe, intendants, fonctionnaires de cour, parlementaires nommés, patriciat administratif). Cette classe est l'instrument de la centralisation pendant l'impérialisme. À mesure qu'elle s'enracine, elle développe sa propre conscience corporative et parle deux fois :
 
-- **En fin d'impérialisme** : *« reconnaissez-nous »* — la classe revendique la collégialité de l'exercice du pouvoir, demande la responsabilité ministérielle, le contrôle fiscal, la consultation obligatoire. C'est la **Remontrance**, qui échoue parce que l'exécutif ne veut pas céder et est encore assez fort. L'échec ferme la dernière voie de réforme institutionnelle pacifique et ouvre l'AR.
+- **À l'entrée en AR** : *« reconnaissez-nous »* — la classe revendique la collégialité de l'exercice du pouvoir, demande la responsabilité ministérielle, le contrôle fiscal, la consultation obligatoire. C'est la **Remontrance**, qui échoue parce que l'exécutif ne veut pas céder. La Remontrance est la **manifestation politique** du basculement causé par la saturation fiscale (cf. saillant Saturation fiscale dans la sous-phase AR) : l'exécutif est affaibli par la saturation, la classe administrative profite de la fenêtre pour réclamer la collégialité.
 - **En fin d'AR** : *« nous ne céderons rien »* — la classe, désormais sédimentée, héréditarisée, occupant tous les postes, bloque chaque tentative du souverain de réformer le cadre. Ce sont les **Réformes échouées**, dont la récurrence + l'épuisement + la dette accumulée forcent la convocation d'une institution représentative qui déclenche l'éclatement.
 
 **Deux conditions d'activation** :
 
 1. **Existence d'une classe administrative créée par l'absolutisation et distincte du bloc oligarchique**. Sans elle, ni Remontrance ni Réformes échouées. Cas typique d'absence : configuration où le patriciat *est* l'appareil — consortium oligarchique institutionnalisé (Gênes), patriciat républicain (Suisse, qui a une Remontrance en mode intellectuel mais pas de Réformes échouées). Dans ces configurations, la classe qui devrait remontrer ou bloquer ne peut se distinguer de l'appareil.
-2. **L'AR doit mûrir assez pour que la sédimentation soit terminale**. La Remontrance survient à la transition impérialisme → AR ; les Réformes échouées sont un phénomène d'AR mature. Si l'AR est interrompu prématurément (cités-États italiennes face à Bonaparte), gelé exogènement (Bavière sous suzeraineté prussienne), ou exogène dès le départ (AR sous tutelle étrangère), la Remontrance peut être survenue mais les Réformes échouées n'ont pas le temps d'apparaître.
+2. **L'AR doit mûrir assez pour que la sédimentation soit terminale**. La Remontrance survient quasi-simultanément à la Saturation fiscale ; les Réformes échouées sont un phénomène d'AR mature. Si l'AR est interrompu prématurément (cités-États italiennes face à Bonaparte), gelé exogènement (Bavière sous suzeraineté prussienne), ou exogène dès le départ (AR sous tutelle étrangère), la Remontrance peut être survenue mais les Réformes échouées n'ont pas le temps d'apparaître.
 
 **Cas singulier : classe admin sans corps charté** (Florence). La classe admin existe sociologiquement (clergé urbain, patriciat sédimenté, fidéicommissaires) sans être chartée en corps représentatif distinct (pas de Maggior Consiglio, pas de Cortès, pas de parlement) — le bloc bloqueur opère sans véhicule pour formuler une Remontrance. Réformes échouées présentes (Pierre-Léopold), Remontrance absente. Cas intermédiaire entre activation pleine et absence.
-
-### Saillant : Remontrance (tournant impérialisme → ancien régime)
-
-**Définition** : moment où la classe administrative intermédiaire revendique la collégialité de l'exercice du pouvoir par les voies institutionnelles. Elle échoue systématiquement — et son échec marque l'entrée en ancien régime, en fermant la dernière voie de réforme.
-
-**Test discriminant** :
-
-1. **Acteurs intégrés à l'appareil absolutiste** — la Remontrance vient de la classe administrative, parlementaire ou patricienne intégrée, pas des oligarques traditionnels (qui n'ont plus de force depuis la DGRO ou l'absorption)
-2. **Voie institutionnelle, pas armée** — pétition formelle, déclaration collective d'un corps institutionnel, projet de réforme ; pas une révolte
-3. **Échec systématique** — l'exécutif rejette ou vide la Remontrance de sa substance ; elle ne produit aucune redistribution durable du pouvoir
-
-**Signes observables** :
-- Pétition formelle ou déclaration collective d'un corps institutionnel intégré à l'appareil absolutiste (parlement de cour, assemblée parlementaire, conseil du patriciat, équivalents)
-- Demandes portant sur la responsabilité ministérielle, le contrôle fiscal, la consultation obligatoire des assemblées, la redistribution du pouvoir entre exécutif et corps institutionnel
-- Réponse de l'exécutif : rejet pur, ignorance, ou octroi de réformes vidées de leur substance ensuite
-- Pas de répression armée massive (les remontrants ne sont pas des rebelles ; ils sont des élites intégrées qui ont simplement échoué à obtenir gain de cause)
-
-**Distinction avec la DGRO** : la DGRO est une révolte armée des oligarques à base territoriale, en sous-phase d'absolutisation. La Remontrance est une contestation institutionnelle d'élites intégrées, en fin de sous-phase d'impérialisme. Une nation peut avoir l'une, l'autre, les deux, ou aucune.
 
 ---
 
@@ -294,6 +260,77 @@ L'ancien régime, contrairement aux autres phases, ne s'achève pas par une tran
 - Apparition d'une littérature critique du régime tolérée puis combattue
 - **Tentatives de réforme par le souverain qui échouent systémiquement** — élevé au rang de saillant canonique « Réformes échouées » (cf. infra).
 
+### Saillant : Saturation fiscale (critère Lanoue de Suremain, attribué à Martin)
+
+**Définition stricte** : moment où l'État absolutiste, pendant sa phase absolutiste, **ne peut plus augmenter l'impôt par voie ordinaire** parce que la société d'AR le refuse — privilèges fiscaux figés, exemptions de la noblesse et du clergé, corps intermédiaires protégeant les particularismes. La limite est **politique-sociale**, pas technique ni financière. **Ce saillant marque la borne phasique Impérialisme → Ancien Régime**.
+
+**Important** : le niveau absolu d'imposition peut être plus bas qu'en phase oligarchique précédente et plus haut en phase parlementaire suivante (Dincecco documente le doublement des recettes anglaises post-1688 et leur multiplication par 2,5 en Prusse post-1806). Ce qui marque la saturation n'est pas un niveau d'extraction, c'est l'**incapacité politique** d'augmentation, due au caractère inacceptable de la fiscalité égalitaire dans la société d'AR.
+
+**Marqueur empirique central** : **tentative datée d'élargissement de l'assiette qui échoue par résistance organisée des privilégiés / corps intermédiaires** (parlements, états provinciaux, diètes, clergé, baronnage). C'est l'événement-pivot à identifier dans le parcours.
+
+**Distinction surendettement / saturation** : banqueroutes, défauts, dévaluations monétaires, consolidations forcées de dette sont des **expédients réactifs** qui peuvent suivre la saturation (l'État cherche du cash autrement que par fiscalité ordinaire), pas la saturation elle-même. Ne pas confondre : 1715 (mort de Louis XIV + système de Law) en France est un surendettement réactif, **la saturation a eu lieu en 1710** avec l'échec du dixième de Desmaretz. Pareil pour 1872 en Espagne (Moratoria Salaverría = défaut, la saturation est en 1868-1871 avec l'abolition des consumos et l'échec Figuerola). Pareil pour 1811 en Autriche (banqueroute Wallis, expédient réactif ; la saturation est en 1789-1790 avec le retrait des patentes joséphines).
+
+**Cascade d'expédients post-saturation** (signature de l'AR, pas de la saturation) :
+- Emprunts massifs avec dette publique structurellement croissante
+- Vénalité d'offices systématisée comme financement régulier
+- Ventes domaniales (Crown Lands, terres ducales)
+- Ventes de patrimoine (collections, biens ecclésiastiques par sécularisation, bijoux de couronne)
+- Contributions extraordinaires permanentes (souvent contournées par rachat des privilégiés)
+- Manipulations monétaires (refontes, dévaluations, monétisation par banque d'émission)
+- Banqueroutes successives, défauts négociés, restructurations de dette
+
+Un État saturé peut encore emprunter, vendre, lever des contributions extraordinaires — c'est précisément la signature de l'AR. La France finance la Guerre d'Indépendance américaine (1778-1783) en plein AR par emprunt massif, ce qui contribue directement à son éclatement.
+
+**Exemples empiriques** (datations sur événement-pivot d'élargissement bloqué) :
+- France **1710** : échec du dixième de Desmaretz (impôt sur le revenu universel suspendu)
+- Angleterre **1610** : échec du Great Contract de Salisbury (Parlement refuse de remplacer wardships/purveyance par rente fixe)
+- États pontificaux **1708** : Tassa del Milione de Clément XI (contribution universelle bloquée par noblesse et clergé exemptés)
+- Émilie-Romagne **1708** : machine pontificale (Bologne suit en configuration tutélaire)
+- Naples **1755** : Catasto Onciario de Charles VII/Tanucci (capture communale par baronnage local)
+- Florence **1774-1775** : Tassa di redenzione + concordat de Pierre-Léopold (résistance progressive de patriciat sédimenté et clergé)
+- Sicile **1781-1786** : Caracciolo (cadastre général + privilèges nobiliaires bloqués par baronnage parlementaire)
+- Autriche **1789-1790** : patentes joséphines (Steuerpatent + Urbarialpatent retirés par Léopold II sous résistance Stände + comitats hongrois)
+- Bohême **1789-1790** : co-actrice de la saturation habsbourgeoise (Stände bohêmes parmi les bloqueurs)
+- Hongrie **1811-1812** : Diète refuse l'augmentation de la contribution, exemption nobiliaire tient jusqu'aux April Laws de 1848
+- Espagne **1868-1871** : abolition des consumos par la Gloriosa + échec des tentatives Figuerola (impôt sur le revenu, Loi minière)
+- Venise **~1740** : épuisement de l'extension fiscale ordinaire dans une oligarchie patricienne extrême
+
+### Cas atypiques
+
+**Variantes structurelles** :
+
+1. **Séquence compressée / inversée** (Naples) — la Saturation fiscale **précède** l'Acmé absolutiste plutôt que de la suivre. Lecture : la voie fiscale directe est bloquée précocement, l'absolutisme se redéploie sur les terrains non-fiscaux (regalisme anti-clérical, juridictionnel, administratif) jusqu'à son pic, puis s'enkyste en AR. Pattern observé sur AR endogène court.
+
+2. **Saturation compressée avec Réformes échouées** (Florence sous Pierre-Léopold) — première tentative bloquée (Saturation) et séquence de réformes répétées (Réformes échouées) se déploient sous le même souverain dans une fenêtre courte (~15 ans). Cohérent avec l'absence de Remontrance distincte : la classe administrative intermédiaire n'a pas le temps de se constituer en corps de pétition.
+
+**Cas non applicables** :
+
+3. **Absolutismes rentier-patrimoniaux** (Suisse cantonale, Gênes via Casa di San Giorgio) — pas de machine d'extraction fiscale centralisée qui pourrait tenter un élargissement, donc pas de Saturation au sens strict. L'AR (s'il existe) se signale par d'autres marqueurs (sédimentation patricienne, fermeture des familles éligibles). Berne accumule au XVIIIᵉ un trésor d'État investi sur le marché londonien — pattern structurellement **inverse** de la saturation.
+
+4. **AR avorté ou tutélaire sans saturation observée** (Piémont 1748-1796, Milan post-1814, Bavière post-Montgelas) — la phase absolutiste est interrompue (Piémont par Bonaparte) ou la machine fiscale moderne (Montgelas en Bavière) n'a pas été durablement bloquée avant absorption supra-étatique (Bavière dans le Reich 1871). Pas d'événement-pivot identifiable.
+
+### Saillant : Remontrance
+
+**Définition** : manifestation politique du passage en AR. La classe administrative intermédiaire intégrée (noblesse de robe, parlementaires, conseillers d'État, patriciat administratif) tente collégialement, par voie institutionnelle, de fléchir le pouvoir absolu — réclamant collégialité de l'exercice du pouvoir, responsabilité ministérielle, contrôle fiscal, consultation obligatoire. L'exécutif rejette ou vide de substance.
+
+**La Remontrance n'est pas la borne phasique** (qui est portée par la Saturation fiscale) ; elle est sa **manifestation politique** : la saturation crée à la fois la fenêtre d'opportunité (exécutif affaibli) et l'incitation (la classe administrative protège ses positions corporatives). C'est pourquoi Remontrance et Saturation fiscale tendent à être **simultanées ou quasi-simultanées** (France 1648 / Chambre Saint-Louis, Angleterre 1628 / Petition of Right, Bavière 1848 / Landtag, Espagne 1899 / Villaverde).
+
+**La Remontrance peut ne pas avoir lieu**. C'est une manifestation politique contingente qui dépend de l'existence d'une classe administrative intégrée suffisamment autonome. Quand cette classe est embryonnaire (petites principautés type Modène), absente comme corps charté (Florence), ou étouffée par oligarchie patricienne extrême (Venise — Remontrance différée d'une génération ; Gênes — Remontrance impossible), la Remontrance peut être absente, différée, ou réduite à un mode intellectuel (Suisse). **La Saturation fiscale reste valide comme borne** même quand la Remontrance est absente.
+
+**Test discriminant** :
+
+1. **Acteurs intégrés à l'appareil absolutiste** — la Remontrance vient de la classe administrative, parlementaire ou patricienne intégrée, pas des oligarques traditionnels (qui n'ont plus de force depuis la DGRO ou l'absorption)
+2. **Voie institutionnelle, pas armée** — pétition formelle, déclaration collective d'un corps institutionnel, projet de réforme ; pas une révolte
+3. **Échec systématique** — l'exécutif rejette ou vide la Remontrance de sa substance ; elle ne produit aucune redistribution durable du pouvoir
+
+**Signes observables** :
+- Pétition formelle ou déclaration collective d'un corps institutionnel intégré à l'appareil absolutiste (parlement de cour, assemblée parlementaire, conseil du patriciat, équivalents)
+- Demandes portant sur la responsabilité ministérielle, le contrôle fiscal, la consultation obligatoire des assemblées, la redistribution du pouvoir entre exécutif et corps institutionnel
+- Réponse de l'exécutif : rejet pur, ignorance, ou octroi de réformes vidées de leur substance ensuite
+- Pas de répression armée massive (les remontrants ne sont pas des rebelles ; ils sont des élites intégrées qui ont simplement échoué à obtenir gain de cause)
+
+**Distinction avec la DGRO** : la DGRO est une révolte armée des oligarques à base territoriale, en sous-phase d'absolutisation. La Remontrance est une contestation institutionnelle d'élites intégrées, simultanée à la Saturation fiscale (entrée en AR). Une nation peut avoir l'une, l'autre, les deux, ou aucune.
+
 ### Saillant : Réformes échouées
 
 **Définition** : séquence de tentatives de réforme structurelle par le souverain ou ses ministres, systématiquement bloquées par la classe administrative intermédiaire désormais sédimentée. C'est le second moment du cycle de cette classe (cf. supra « Le cycle de la classe administrative intermédiaire »).
@@ -313,7 +350,7 @@ L'ancien régime, contrairement aux autres phases, ne s'achève pas par une tran
 
 **Style des tentatives selon les bloqueurs** : le style varie selon que les bloqueurs sont eux-mêmes Crown-créés (parlements de robe sédimentés en France, magnats aulici en Hongrie) ou autonomes pré-existants (Common Law + Parlement en Angleterre). Dans le premier cas, les tentatives s'enchaînent par voie négociée puis échec interne (Maupeou-Brienne). Dans le second, le souverain peut basculer vers le contournement-durcissement après que les voies négociées ont échoué (Cecil 1610 négocié → Strafford-Laud 1629-1640 par contournement parlementaire). Le mécanisme structurel est le même : sédimentation qui bloque ; la forme prise par les tentatives s'adapte aux blocages rencontrés.
 
-**Distinction avec la Remontrance** : la Remontrance est l'initiative *du corps institutionnel* contre l'exécutif, en fin d'impérialisme. Les Réformes échouées sont à l'inverse l'initiative *de l'exécutif* contre le bloc élitaire devenu sédimenté, en AR mature. Mais c'est la même classe qui parle deux fois : d'abord pour exiger la collégialité, ensuite pour refuser toute redistribution. Cf. supra « Le cycle de la classe administrative intermédiaire » pour les conditions d'activation et les cas d'absence.
+**Distinction avec la Remontrance** : la Remontrance est l'initiative *du corps institutionnel* contre l'exécutif, simultanée à la Saturation fiscale (entrée en AR). Les Réformes échouées sont à l'inverse l'initiative *de l'exécutif* contre le bloc élitaire devenu sédimenté, en AR mature. Mais c'est la même classe qui parle deux fois : d'abord pour exiger la collégialité, ensuite pour refuser toute redistribution. Cf. supra « Le cycle de la classe administrative intermédiaire » pour les conditions d'activation et les cas d'absence.
 
 ### Le clivage gauche-droite se reconfigure
 

@@ -153,15 +153,6 @@
 - summary: Sous Jéroboam II, le royaume d'Israël atteint le point de saturation de l'exutoire externe — extension maximale de la Syrie à la mer Morte, combinaison de puissance personnelle du souverain et de projection extérieure maximale. La position de l'acmé (~0.47 de la phase) correspond au cluster des cas sans exutoire prolongé.
 - description: Le règne de Jéroboam II correspond à la définition de l'acmé oligarchique : combinaison de la puissance personnelle du souverain et de la projection extérieure maximale de la nation dans le cadre oligarchique existant. Le territoire s'étend de la Syrie à la mer Morte, le commerce régional est intensifié, et les palais décorés d'ivoires témoignent d'une prospérité sans précédent. Sa position chronologique (~0.47 de la phase) le situe dans le cluster des cas sans exutoire prolongé (France 0.53, Angleterre 0.56, Bavière 0.54), ce qui est cohérent avec un royaume d'Israël dont l'exutoire externe n'est ni maritime ni impérial. Après Jéroboam II, l'exutoire cesse de produire son surplus d'énergie, et les tensions internes prennent le relais — les prophètes Amos et Osée dénoncent les inégalités croissantes, marqueur de la bascule vers la polarisation.
 
-#### Saillant : Fin de l'expansion
-- type: saillant
-- start: -746
-- subtitle: Mort de Jéroboam II
-- title: Fin de l'expansion
-- confidence: medium
-- summary: La mort de Jéroboam II en -746 marque le tournant essor / polarisation : l'expansion extérieure cesse de fonctionner comme exutoire, et la dynamique principale de la nation passe de « comment s'enrichir à l'extérieur ? » à « qui contrôle l'État central ? ».
-- description: Après la mort de Jéroboam II en -746, le royaume d'Israël entre dans une spirale de coups d'État et d'assassinats : cinq rois se succèdent en vingt ans (Zacharie, Shallum, Menahem, Peqahya, Peqah). L'expansion ne fonctionne plus comme exutoire — les bénéfices de la projection extérieure cessent de compenser les tensions internes. La pression assyrienne s'intensifie avec l'obligation de verser un tribut à Tiglath-Pileser III, et un clivage proto-prébendier/patrimonial se cristallise entre les élites pro-assyriennes (intégrées aux circuits impériaux, dont le revenu dépend de la soumission à l'Assyrie) et les nationalistes yahvistes (dont le revenu repose sur le patrimoine foncier et la légitimité sacerdotale). Ce clivage est le germe de la guerre sociale qui se jouera en Judée après le transfert du Parcours.
-
 ### Subphase : Polarisation des élites
 - type: subphase
 - phase: oligarchique
@@ -424,14 +415,14 @@
 - summary: Hérode incarne l'acmé absolutiste — expansion maximale, prestige monumental maximal, domestication complète des élites — avec tous les marqueurs de la sous-phase d'impérialisme absolutiste : guerres d'agression, professionnalisation de l'armée (mercenaires gaulois, thraces, germains), interdiction des armées privées, construction d'infrastructures militaires (Massada, Hérodion).
 - description: Le règne d'Hérode Ier (-37 à -4) satisfait la définition de l'acmé absolutiste : expansion maximale, prestige maximal, domestication complète des élites. Après avoir éliminé tous ses rivaux (les Hasmonéens survivants sont exécutés — exclusion des patrimoniales gouvernementales), Hérode déploie un programme monumental sans précédent : agrandissement considérable du Temple (-20 à ~-15), fondation de Césarée Maritime, reconstruction de Samarie (rebaptisée Sébaste), forteresses de Massada et d'Hérodion. Son armée professionnelle de mercenaires gaulois, thraces et germains lui assure un monopole absolu de la force — marqueur observable de l'impérialisme absolutiste (interdiction des armées privées, professionnalisation de l'encadrement militaire). L'acmé se situe autour de -20, moment de convergence du prestige monumental, de la capacité militaire et du contrôle territorial maximal — comparable à Louis XIV (Versailles) ou Élisabeth Ière (défaite de l'Armada).
 
-#### Saillant : Fin de l'expansion
+#### Saillant : Saturation fiscale
 - type: saillant
 - start: -4
-- subtitle: Mort d'Hérode
-- title: Fin de l'expansion
-- confidence: high
-- summary: La mort d'Hérode en -4 marque le tournant impérialisme / Ancien Régime : le pouvoir central atteint les limites de son expansion, le territoire est divisé et encadré par Rome, et les guerres deviennent coûteuses et les victoires rares — marqueurs classiques de la fin de l'expansion absolutiste.
-- description: La mort d'Hérode en -4 révèle la fragilité structurelle du système absolutiste hérodien. Le royaume est divisé entre ses trois fils (Archélaüs, Antipas, Philippe), et l'expansion est définitivement terminée — le territoire est désormais encadré par Rome, et aucun souverain judéen ne dispose plus des moyens de projeter sa puissance vers l'extérieur. C'est le marqueur classique de la fin de l'expansion absolutiste : les guerres deviennent coûteuses, les victoires rares, et l'impérialisme s'essouffle. La coïncidence avec la mort du souverain est fréquente dans le corpus (cf. Louis XIV en 1715, Élisabeth Ière en 1603).
+- subtitle: Mort d'Hérode et passage à la procuratèle
+- title: Saturation fiscale
+- confidence: low
+- alternatives: Critère Lanoue de Suremain (Martin) appliqué au prolongement antique. **Lecture délicate** : la mort d'Hérode (-4) ouvre une transition vers la procuratèle romaine directe (Archélaüs déposé en 6, Judée en province), qui modifie radicalement le régime fiscal — l'extraction passe d'un État hérodien souverain à un régime tributaire romain. La saturation s'opère à la fois (a) sur le système hérodien terminal (fiscalité du Temple + corvées monumentales + tribut romain accumulés saturent la base) et (b) par la bascule en tutelle fiscale exogène. Pattern analogue à la Bohême (saturation héritée par AR exogène). Datation par convention sur la mort d'Hérode (-4), simultanée à la Remontrance (Ambassade à Auguste). Confidence basse — applicabilité du critère à un prolongement antique sous tutelle impériale à théoriser.
+- summary: À la mort d'Hérode (-4), le système absolutiste hérodien tardif présente les marqueurs de saturation : fiscalité du Temple maximisée, programme monumental insoutenable, tribut romain accumulé, expédients permanents (vente de charges sacerdotales, manipulations sur les revenus du Temple). La bascule simultanée vers la procuratèle romaine (6 apr. J.-C.) consacre la saturation par tutelle exogène. Cas atypique de saturation antique sous tutelle impériale, parallèle structurel à la Bohême sous Habsbourg (AR exogène). Datation simultanée à la Remontrance (Ambassade à Auguste).
 
 #### Saillant : Remontrance
 - type: saillant
