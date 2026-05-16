@@ -15,9 +15,25 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
 /* Navbar */
 .navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
 .navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
-.navbar-links { display:flex; gap:1.2rem; }
+.navbar-links { display:flex; gap:1.2rem; align-items:center; }
 .navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
 .navbar-links a:hover { color:#333; }
+
+/* Nations dropdown */
+.nav-dropdown { position:relative; display:inline-block; }
+.nav-dropdown-toggle { background:none; border:1px solid #e0dcd4; cursor:pointer; font-family:inherit; font-size:0.85rem; color:#555; padding:0.25rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.4rem; line-height:1.4; }
+.nav-dropdown-toggle:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-toggle .nav-dropdown-current { font-weight:600; color:#8B7355; }
+.nav-dropdown-toggle .nav-dropdown-caret { font-size:0.7rem; color:#8B7355; }
+.nav-dropdown-menu { display:none; position:absolute; top:calc(100% + 4px); left:0; min-width:220px; max-height:65vh; overflow-y:auto; background:#fff; border:1px solid #e0dcd4; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.08); z-index:200; padding:0.3rem 0; }
+.nav-dropdown.open .nav-dropdown-menu { display:block; }
+.nav-dropdown-menu a { display:flex; align-items:center; gap:0.55rem; padding:0.4rem 0.95rem; font-size:0.85rem; color:#555; text-decoration:none; font-weight:500; }
+.nav-dropdown-menu a:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-menu a.active { color:#8B7355; font-weight:700; background:#faf6f0; }
+.nav-flag { display:inline-block; width:18px; height:18px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,0.12); }
+.nav-flag img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.nav-flag-trigger { width:16px; height:16px; }
+.nav-nation-label { line-height:1.2; }
 
 /* Header — briefing style */
 .header { background:#f9f9f9; padding:1.5rem 2rem 0; }
@@ -253,6 +269,7 @@ body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background
     <div class="navbar-links">
         <a href="index.html">Accueil</a>
         <a href="index.html#wiki">Wiki</a>
+        <div class="nav-dropdown" id="nation-dropdown"><button type="button" class="nav-dropdown-toggle" onclick="document.getElementById('nation-dropdown').classList.toggle('open')"><span class="nav-flag nav-flag-trigger"><img src="images/naples/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-dropdown-current">Naples</span><span class="nav-dropdown-caret">&#9662;</span></button><div class="nav-dropdown-menu"><a href="angleterre.html"><span class="nav-flag "><img src="images/angleterre/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Angleterre</span></a><a href="autriche.html"><span class="nav-flag "><img src="images/autriche/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Autriche</span></a><a href="baviere.html"><span class="nav-flag "><img src="images/baviere/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Bavière</span></a><a href="boheme.html"><span class="nav-flag "><img src="images/boheme/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Bohême</span></a><a href="emilie-romagne.html"><span class="nav-flag "><img src="images/emilie-romagne/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Émilie-Romagne</span></a><a href="espagne.html"><span class="nav-flag "><img src="images/espagne/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Espagne</span></a><a href="etats-pontificaux.html"><span class="nav-flag "><img src="images/etats-pontificaux/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">États pontificaux</span></a><a href="florence.html"><span class="nav-flag "><img src="images/florence/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Florence</span></a><a href="france.html"><span class="nav-flag "><img src="images/france/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">France</span></a><a href="genes.html"><span class="nav-flag "><img src="images/genes/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Gênes</span></a><a href="hongrie.html"><span class="nav-flag "><img src="images/hongrie/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Hongrie</span></a><a href="israel.html"><span class="nav-flag "><img src="images/israel/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Israël</span></a><a href="milan.html"><span class="nav-flag "><img src="images/milan/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Milan</span></a><a href="naples.html" class="active"><span class="nav-flag "><img src="images/naples/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Naples</span></a><a href="piemont.html"><span class="nav-flag "><img src="images/piemont/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Piémont</span></a><a href="sicile.html"><span class="nav-flag "><img src="images/sicile/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Sicile</span></a><a href="suisse.html"><span class="nav-flag "><img src="images/suisse/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Suisse</span></a><a href="venise.html"><span class="nav-flag "><img src="images/venise/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Venise</span></a></div></div>
     </div>
 </nav>
 
@@ -1095,6 +1112,12 @@ function closeDetail() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+document.addEventListener('click', function(e) {
+    var dd = document.getElementById('nation-dropdown');
+    if (!dd) return;
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+});
 </script>
 </body>
 </html>
