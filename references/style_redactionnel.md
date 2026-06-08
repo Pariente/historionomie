@@ -10,7 +10,7 @@ Les règles ici complètent — sans les répéter — celles de `CLAUDE.md` (na
 
 ### Saillants canoniques
 
-Le titre est exactement le vocabulaire canonique fermé de `CLAUDE.md` : `Pic féodal`, `Crise féodale`, `Pacte oligarchique`, `1er monarque oligarchique`, `Acmé oligarchique`, `Guerre sociale`, `1er monarque absolu`, `Acmé absolutiste`, `Réformes échouées`, `Éclatement de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien`, `Émergence de l'IR`, `Restauration`, `Glorieuse Révolution`, etc.
+Le titre est exactement le vocabulaire canonique fermé de `CLAUDE.md` : `Pic féodal`, `Crise féodale`, `Pacte oligarchique`, `1er monarque oligarchique`, `1er impôt permanent`, `1re armée permanente`, `Acmé oligarchique`, `Guerre sociale`, `1er monarque absolu`, `Acmé absolutiste`, `Réformes échouées`, `Éclatement de l'AR`, `Expérience parlementaire`, `Phase aiguë`, `Moment thermidorien`, `Émergence de l'IR`, `Restauration`, `Glorieuse Révolution`, etc.
 
 **Pas de variante**, pas d'ajout, pas de qualifiant. La désambiguïsation entre plusieurs occurrences (deux pics féodaux, trois RN avortées) se fait au niveau du **subtitle**, pas du titre.
 

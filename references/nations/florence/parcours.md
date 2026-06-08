@@ -224,14 +224,14 @@
 - type: phase
 - phase: absolutiste
 - start: 1480
-- end: 1796
+- end: 1807
 - title: Phase absolutiste
 - typical_duration: ~200 ans
-- actual_duration: ~316 ans
-- resolution: Choc exogène — invasion française (1796) éclate l'AR léopoldin et ouvre la phase RN. Sous-phase de révolution initiale tronquée par chocs exogènes successifs (Royaume d'Étrurie 1801-1807, annexion napoléonienne 1807-1814).
-- summary: Phase absolutiste longue (~316 ans), structurée en deux moments par la nature du pouvoir : **appareil familial-bancaire fragile** sous Médicis pré-ducaux (1480-1532, avec boucle d'instabilité par chocs exogènes 1494-1530) puis **figure dynastique stable** sous duché-Grand-Duché (1532-1796). 1er MA Laurent le Magnifique (1480, Settanta + Banque Médicis comme appareil de pouvoir parallèle). DGRO Montemurlo (1537, après consolidation Sforza-like par Cosme Ier post-Charles Quint). Acmé Ferdinand Ier 1591 (Lois Livornine). AR 1670-1796, sans ruine financière endogène, sortie par Napoléon.
-- description: La phase absolutiste florentine s'ouvre avec Laurent le Magnifique en 1480 : la création du **Conseil des Settanta** comme magistrature à vie qui supplante la Signoria à mandats courts, combinée au rôle d'**appareil d'État parallèle joué par la Banque Médicis** (lever des fonds sans dépendre du fisc public, récompenser les alliés et étrangler les opposants, conduire la diplomatie financière, maintenir un réseau d'agents internationaux), satisfait fonctionnellement le test discriminant absolutiste — préséance de facto de l'administration centrale (squittini contrôlés, Settanta, Banque), capacité de l'exécutif à agir sans frein juridique des oligarques, classe administrative distincte (l'appareil familial-bancaire). Mais cette configuration personnelle factionnelle est **fragile**, comme à Milan sous les Visconti : elle s'effondre à l'invasion de Charles VIII (1494), boucle pendant 36 ans (oscillations République/Médicis sous chocs exogènes successifs : Charles VIII 1494, Jules II 1512, Sac de Rome 1527, Charles Quint 1530-1532), puis se reconstitue par consolidation Sforza-like avec Cosme Ier (1537) après écrasement de la DGRO (Montemurlo 1537). À partir de 1537, la centralisation se stabilise en absolutisme dynastique avec construction d'une noblesse de robe ducale embryonnaire (secrétaires hors patriciat : Marzi, Campana, Grifoni, Torelli) — classe administrative distincte qui dépasse le cadre purement familial-bancaire de Laurent. L'acmé absolutiste se situe sous Ferdinand Ier (1591-1609, Lois Livornine, mariages européens, Livourne port franc). L'AR commence sous Cosme III (1670). La phase se clôt par choc exogène (Napoléon 1796) — sans ruine financière endogène, l'AR n'a pas atteint la maturité requise pour éclater de l'intérieur, d'où sortie obligatoire par choc externe et entrée en RN par perturbation exogène.
-- deviation: +116 ans. Prolongée par : (a) boucle d'instabilité 1494-1537 (chocs exogènes répétés sur appareil familial-bancaire fragile, pattern Milan-like), (b) digestion de Sienne 1555-1786 (choc d'hétérogénéité par marge sénoise plus grande que le noyau, intégrée par administration ducale directe, ~230 ans de digestion progressive), (c) AR sans ruine financière endogène (cité-État de taille modeste, budget contenu, AR léopoldin assainit), d'où sortie obligatoire par choc exogène plus tardif.
+- actual_duration: ~327 ans
+- resolution: Choc exogène par annexion à l'Empire français (10 décembre 1807) — l'AR léopoldin éclate par suppression de l'État toscan (dissolution du Royaume d'Étrurie, départementalisation : Arno, Méditerranée, Ombrone), Code napoléonien, sécularisation systématique, conscription. L'AR a traversé sans éclater les épisodes exogènes répétés de 1796-1807 (occupation de Livourne 1796-1797, brève occupation française et Viva Maria 1799, 2nde occupation française et Giunta triumvirale 1800-1801, Royaume d'Étrurie Bourbon-Parme 1801-1807), avant de s'éclater définitivement en 1807.
+- summary: Phase absolutiste longue (~327 ans), structurée en deux moments par la nature du pouvoir : **appareil familial-bancaire fragile** sous Médicis pré-ducaux (1480-1532, avec boucle d'instabilité par chocs exogènes 1494-1530) puis **figure dynastique stable** sous duché-Grand-Duché (1532-1807). 1er MA Laurent le Magnifique (1480, Settanta + Banque Médicis comme appareil de pouvoir parallèle). DGRO Montemurlo (1537, après consolidation Sforza-like par Cosme Ier post-Charles Quint). Acmé Ferdinand Ier 1591 (Lois Livornine). AR 1670-1807, sans ruine financière endogène, traversé par une série d'épisodes exogènes 1796-1807 sans éclater (institutions léopoldines maintenues à chaque épisode), sortie définitive par annexion napoléonienne 1807.
+- description: La phase absolutiste florentine s'ouvre avec Laurent le Magnifique en 1480 : la création du **Conseil des Settanta** comme magistrature à vie qui supplante la Signoria à mandats courts, combinée au rôle d'**appareil d'État parallèle joué par la Banque Médicis** (lever des fonds sans dépendre du fisc public, récompenser les alliés et étrangler les opposants, conduire la diplomatie financière, maintenir un réseau d'agents internationaux), satisfait fonctionnellement le test discriminant absolutiste — préséance de facto de l'administration centrale (squittini contrôlés, Settanta, Banque), capacité de l'exécutif à agir sans frein juridique des oligarques, classe administrative distincte (l'appareil familial-bancaire). Mais cette configuration personnelle factionnelle est **fragile**, comme à Milan sous les Visconti : elle s'effondre à l'invasion de Charles VIII (1494), boucle pendant 36 ans (oscillations République/Médicis sous chocs exogènes successifs : Charles VIII 1494, Jules II 1512, Sac de Rome 1527, Charles Quint 1530-1532), puis se reconstitue par consolidation Sforza-like avec Cosme Ier (1537) après écrasement de la DGRO (Montemurlo 1537). À partir de 1537, la centralisation se stabilise en absolutisme dynastique avec construction d'une noblesse de robe ducale embryonnaire (secrétaires hors patriciat : Marzi, Campana, Grifoni, Torelli) — classe administrative distincte qui dépasse le cadre purement familial-bancaire de Laurent. L'acmé absolutiste se situe sous Ferdinand Ier (1591-1609, Lois Livornine, mariages européens, Livourne port franc). L'AR commence sous Cosme III (1670). La phase est traversée à partir de 1796 par une série d'**épisodes exogènes** que l'AR encaisse sans éclater (occupation de Livourne 1796-1797, brève occupation française et insurrection Viva Maria mars-juillet 1799, 2nde occupation française et Giunta triumvirale novembre 1800 - août 1801, Royaume d'Étrurie sous Bourbons-Parme août 1801 - décembre 1807). Aucun de ces épisodes ne modifie structurellement la trajectoire de l'AR : les institutions léopoldines, les élites toscanes et la continuité administrative sont préservées à travers chacun d'eux — y compris sous la dynastie fantoche Bourbon-Parme où le cadre granducal continue d'opérer. L'Éclatement de l'AR définitif n'intervient qu'en décembre 1807 avec l'annexion directe à l'Empire français, qui supprime l'État toscan et impose le Code napoléonien.
+- deviation: +127 ans. Prolongée par : (a) boucle d'instabilité 1494-1537 (chocs exogènes répétés sur appareil familial-bancaire fragile, pattern Milan-like), (b) digestion de Sienne 1555-1786 (choc d'hétérogénéité par marge sénoise plus grande que le noyau, intégrée par administration ducale directe, ~230 ans de digestion progressive), (c) AR sans ruine financière endogène (cité-État de taille modeste, budget contenu, AR léopoldin assainit), d'où sortie obligatoire par choc exogène tardif (annexion napoléonienne directe 1807).
 
 ### Subphase : Absolutisation (1480-1537)
 
@@ -301,14 +301,14 @@
 - confidence: medium
 - summary: Ferdinand Ier (1587-1609) incarne l'acmé absolutiste florentine : Lois Livornine (1591, 1593) qui font de Livourne un port franc cosmopolite, mariages dynastiques européens (Christine de Lorraine, Marie de Médicis avec Henri IV 1600), flotte de Saint-Étienne active, prestige diplomatique. Domestication de l'ancien patriciat à la cour. Position dans la phase ~0.35 — précoce, contrainte par la taille (pas de projection militaire à l'échelle continentale).
 
-### Subphase : Ancien Régime (1670-1796)
+### Subphase : Ancien Régime (1670-1807)
 
 - type: subphase
 - phase: absolutiste
 - start: 1670
-- end: 1796
+- end: 1807
 - title: Ancien Régime
-- summary: AR long (~126 ans), aligné avec Venise (130 ans) et Piémont (113 ans). Ouvert par la Saturation fiscale de 1705 (bancarotta virtuelle du Trésor grand-ducal sous Cosme III, expansion des Monti, multiplication des collette universali). Pattern « petite nation italienne » : satisfait le critère de discrédit (sédimentation, Cosme III bigot, échecs léopoldins) mais pas celui de ruine financière (cité-État de taille modeste, AR léopoldin assainit), d'où impossibilité d'éclatement endogène et sortie obligatoire par choc exogène (Napoléon 1796). Structuré en deux moments par la nature de la dynastie : AR décliniste médicéen (1670-1737) puis AR aux tentatives réformatrices vouées à l'échec sous secundogéniture habsbourgeoise (1737-1796). Remontrance structurellement absente (pas de corps charté).
+- summary: AR long (~137 ans), aligné avec Venise (130 ans) et Piémont (113 ans). Ouvert par la Saturation fiscale de 1705 (bancarotta virtuelle du Trésor grand-ducal sous Cosme III, expansion des Monti, multiplication des collette universali). Pattern « petite nation italienne » : satisfait le critère de discrédit (sédimentation, Cosme III bigot, échecs léopoldins) mais pas celui de ruine financière (cité-État de taille modeste, AR léopoldin assainit), d'où impossibilité d'éclatement endogène. Structuré en trois moments : AR décliniste médicéen (1670-1737), AR aux tentatives réformatrices vouées à l'échec sous secundogéniture habsbourgeoise (1737-1796), puis AR traversé par des épisodes exogènes successifs sans éclater (1796-1807) — occupation de Livourne, brève occupation française et Viva Maria 1799, 2nde occupation 1800-1801, Royaume d'Étrurie Bourbon-Parme 1801-1807. Éclatement définitif par annexion directe à l'Empire français (10 décembre 1807). Remontrance structurellement absente (pas de corps charté).
 - description: L'AR florentin est l'un des plus longs du corpus, mais sans devenir une singularité — il s'aligne avec Venise (1718-1848, 130 ans) et Piémont (1748-1861, 113 ans avec éclipse). Pattern structurel commun : petites nations italiennes/périphériques traversant une RN compressée par chocs exogènes successifs avant absorption italienne. La cause structurelle de la longueur est l'**absence de ruine financière endogène** : Florence est une cité-État de taille modeste avec budget contenu (pas d'armée massive, pas de cour royale dispendieuse, pas de guerre coûteuse), Cosme III tend les finances mais ne les ruine pas, et Pierre-Léopold les assainit activement (abolition des fidéicommis 1788, suppression des couvents et ventes de biens ecclésiastiques, modernisation du Catasto). À l'arrivée de Bonaparte (1796), le Grand-Duché léopoldin est financièrement sain. Le critère de discrédit, lui, est satisfait au moins partiellement (Cosme III bigot, surfiscalité, déclin économique, échecs léopoldins, émeute Prato 1787, émeutes Florence/Livourne 1790), mais cela ne suffit pas seul à produire un éclatement endogène. La **Remontrance est structurellement absente — cas particulier de classe admin sociologique sans corps charté** (cf. `phase_absolutiste.md` §Le cycle de la classe administrative intermédiaire). Le bloc bloqueur existe sociologiquement (clergé urbain, patriciat sédimenté, fidéicommissaires) — c'est lui qui défait les réformes léopoldines —, mais il n'est pas constitué en corps représentatif distinct capable de formuler une Remontrance institutionnelle. Le patriciat ancien a été éliminé à Montemurlo (1537, exécution de Filippo Strozzi, confiscations massives), le Grand-Duché ne se dote pas de parlement (pas de Maggior Consiglio comme Venise, pas de Liber aureus comme Gênes, pas de Cortès), et la noblesse de robe ducale reste embryonnaire (Marzi, Campana, Grifoni, Torelli — secrétaires personnels du Grand-Duc sans organe collégial formel). Le lieu logique d'où une Remontrance pourrait venir n'existe pas — d'où Réformes échouées présentes (la classe sédimentée bloque) sans Remontrance (pas de corps charté pour parler). Pierre-Léopold tente des réformes par en haut (constitution Gianni 1779-1782 abandonnée, réformes religieuses provoquant l'émeute Prato 1787, suppression des couvents avec résistance) mais c'est un souverain réformateur, pas une Remontrance d'un corps intégré. Le contre-exemple décisif est Venise, autre cité-État absorbée tardivement, qui *a* sa Remontrance (Correzione 1761) parce qu'elle a le corps (Maggior Consiglio + barnabotti) ET le sommet (Inquisiteurs d'État). La sortie est par choc exogène, qui ouvre une RN compressée mais aboutissant tout de même à une Glorieuse Révolution canonique (Statuto 1848) — laquelle est ensuite avortée par puissance étrangère, faisant retomber Florence en AR exogène avant absorption italienne.
 
 L'AR florentin se déploie en deux moments selon la nature de la dynastie. **AR décliniste médicéen (1670-1737)** sous Cosme III (1670-1723) puis Jean-Gaston (1723-1737) : sédimentation des élites, mobilité figée, surfiscalité, lois somptuaires absurdes, lois anti-juives partielles, déclin économique structurel (laine et soie déclassées par concurrents Hollande, Angleterre, Lyon), déclin démographique, extinction dynastique (Jean-Gaston meurt sans postérité, sa sœur Anna Maria Luisa sans enfants). Aucune contestation institutionnelle organisée — pas de Remontrance. **AR sous secundogéniture habsbourgeoise (1737-1796)** — avènement Habsbourg-Lorraine par accord diplomatique européen (traités 1731-1735) : François III (1737-1765, absent après 1745 quand il devient empereur), Pierre-Léopold (1765-1790, frère cadet de Joseph II), Ferdinand III (1790-1801). Pas une occupation militaire — secundogéniture dynastique, la Toscane reste souveraine avec administration toscane continue. Tentatives massives de réformes par Pierre-Léopold qui échouent systémiquement par incapacité de la nation à se réformer en AR (cf. saillant Réformes échouées infra) — la séquence léopoldine est l'un des deux cas-types canoniques avec la France de Louis XVI.
@@ -334,155 +334,116 @@ L'AR florentin se déploie en deux moments selon la nature de la dynastie. **AR 
 - title: Réformes échouées
 - confidence: high
 - summary: Pierre-Léopold (1765-1790, secundogéniture habsbourgeoise) tente massivement de réformer l'AR toscan par en haut sous influence des Lumières et de son frère Joseph II. Les réformes structurelles échouent systémiquement — constitution Gianni 1779-1782 abandonnée, réformes religieuses (suppression des couvents, vente des biens ecclésiastiques) provoquent l'émeute Prato 1787, émeutes anti-réformes Florence/Livourne 1790. Seules réussites durables : Code Léopoldin 1786 (première abolition de la peine de mort en Europe), abolition des fidéicommis 1788. Cas-type canonique du saillant — démontre l'incapacité structurelle de l'AR à se réformer même sous un souverain pleinement engagé.
-- description: Pierre-Léopold est le **prototype du souverain-réformateur des Lumières** dans le corpus historionomique, comparable à Joseph II à Vienne et à Louis XVI à Versailles. Élevé dans le réformisme habsbourgeois, frère cadet de Joseph II, il accède au trône toscan en 1765 (à 18 ans) et entreprend pendant 25 ans une refonte structurelle massive du Grand-Duché. **Constitution Gianni (1779-1782)** : Francesco Maria Gianni rédige, sous direction du grand-duc, un projet constitutionnel inspiré de Montesquieu — assemblée nationale élue par notables des communautés, séparation des pouvoirs, garanties civiques. Le projet est circulé dans les milieux européens (Mirabeau le commente) mais Pierre-Léopold l'abandonne en 1782 face à l'absence de soutien institutionnel et à la résistance des élites toscanes établies. **Code Léopoldin (1786)** : seule réussite structurelle durable — abolition de la peine de mort et de la torture, première au monde, ce qui survivra à Pierre-Léopold parce qu'elle ne touche pas les rentes des élites. **Réformes religieuses** : sous influence du jansénisme italien (Synode de Pistoia 1786, évêque Scipione de' Ricci), suppression de couvents, redistribution de paroisses, contrôle des confraternités, abolition de la fête de la Madonna delle Carceri à Prato. Émeute Prato (mai 1787) : résistance armée des fidèles contre la sécularisation, ramène Pierre-Léopold à modérer ses réformes religieuses. **Abolition des fidéicommis (1788)** : libéralisation des successions, partiellement contournée par les familles patriciennes. **Émeutes anti-réformes 1790** : à l'annonce du départ de Pierre-Léopold pour Vienne (où il succède à Joseph II), émeutes massives à Florence et Livourne contre les réformes religieuses et fiscales — appel à un retour aux ordres médicéens. Ferdinand III, son fils, suspend les réformes les plus contestées dès son accession. Le mécanisme est exactement celui du saillant : malgré l'engagement total du souverain, le bloc élitaire (cour florentine, clergé urbain, patriciat médicéen sédimenté, fidéicommissaires) bloque chaque tentative qui menace ses positions ; l'incapacité de la nation à se réformer en AR est démontrée. Sans la sortie par choc exogène (Bonaparte 1796), l'AR aurait probablement persisté faute de convergence ruine financière + discrédit (Pierre-Léopold ayant *assaini* les finances par ses réformes économiques contournables, tandis que le discrédit n'avait atteint qu'une partie du corps social). Cas-type canonique du saillant Réformes échouées avec la France de Louis XVI.
+- description: Pierre-Léopold est le **prototype du souverain-réformateur des Lumières** dans le corpus historionomique, comparable à Joseph II à Vienne et à Louis XVI à Versailles. Élevé dans le réformisme habsbourgeois, frère cadet de Joseph II, il accède au trône toscan en 1765 (à 18 ans) et entreprend pendant 25 ans une refonte structurelle massive du Grand-Duché. **Constitution Gianni (1779-1782)** : Francesco Maria Gianni rédige, sous direction du grand-duc, un projet constitutionnel inspiré de Montesquieu — assemblée nationale élue par notables des communautés, séparation des pouvoirs, garanties civiques. Le projet est circulé dans les milieux européens (Mirabeau le commente) mais Pierre-Léopold l'abandonne en 1782 face à l'absence de soutien institutionnel et à la résistance des élites toscanes établies. **Code Léopoldin (1786)** : seule réussite structurelle durable — abolition de la peine de mort et de la torture, première au monde, ce qui survivra à Pierre-Léopold parce qu'elle ne touche pas les rentes des élites. **Réformes religieuses** : sous influence du jansénisme italien (Synode de Pistoia 1786, évêque Scipione de' Ricci), suppression de couvents, redistribution de paroisses, contrôle des confraternités, abolition de la fête de la Madonna delle Carceri à Prato. Émeute Prato (mai 1787) : résistance armée des fidèles contre la sécularisation, ramène Pierre-Léopold à modérer ses réformes religieuses. **Abolition des fidéicommis (1788)** : libéralisation des successions, partiellement contournée par les familles patriciennes. **Émeutes anti-réformes 1790** : à l'annonce du départ de Pierre-Léopold pour Vienne (où il succède à Joseph II), émeutes massives à Florence et Livourne contre les réformes religieuses et fiscales — appel à un retour aux ordres médicéens. Ferdinand III, son fils, suspend les réformes les plus contestées dès son accession. Le mécanisme est exactement celui du saillant : malgré l'engagement total du souverain, le bloc élitaire (cour florentine, clergé urbain, patriciat médicéen sédimenté, fidéicommissaires) bloque chaque tentative qui menace ses positions ; l'incapacité de la nation à se réformer en AR est démontrée. Sans la sortie par choc exogène (annexion napoléonienne 1807), l'AR aurait probablement persisté faute de convergence ruine financière + discrédit (Pierre-Léopold ayant *assaini* les finances par ses réformes économiques contournables, tandis que le discrédit n'avait atteint qu'une partie du corps social). Cas-type canonique du saillant Réformes échouées avec la France de Louis XVI.
 
 ---
 
-## Phase : Révolution Nationale (avortée 1799)
+## Phase : Révolution Nationale
 
 - type: phase
 - phase: rn
-- start: 1796
-- end: 1799
-- title: Révolution Nationale (avortée)
+- start: 1807
+- end: 1860
+- title: Révolution Nationale
 - typical_duration: ~25-80 ans
-- actual_duration: ~3 ans
-- resolution: Moment thermidorien transformé en AR exogène — le retour de Ferdinand III en juin 1799 sous protection autrichienne ne stabilise pas une phase de Restauration canonique mais ouvre directement un AR exogène long sous tutelles étrangères successives.
-- summary: RN ultra-compressée et avortée. Sous-phase unique : révolution initiale (1796-1799). Trois saillants canoniques compressés en quelques mois en 1799 (Éclatement de l'AR 1796, Expérience parlementaire 1799, Phase aiguë 1799), puis avortement par perturbation exogène (Restauration imposée par les puissances étrangères, 1799) — pas de moment thermidorien canonique, pas d'IR, pas de sous-phase de Restauration. La phase RN bascule directement en AR exogène long.
-- description: La RN florentine s'ouvre par l'invasion française (1796) qui éclate l'AR léopoldin par choc exogène sur cadre financièrement sain. Sa sous-phase unique de révolution initiale comprime trois saillants canoniques en quelques mois en 1799 : Éclatement de l'AR (invasion française), Expérience parlementaire (République toscane jacobine de mars-juin 1799), Phase aiguë (insurrection populaire Viva Maria au printemps-été 1799, contre-révolutionnaire et anti-française). Le retour de Ferdinand III en juin 1799 sous protection autrichienne, qui aurait pu être un moment thermidorien canonique, est en réalité une Restauration imposée par les puissances étrangères — codée comme perturbation Avortement de la RN (choc exogène / avortement). La phase RN s'avorte donc structurellement dès 1799 sans avoir parcouru ses sous-phases canoniques (pas d'IR, pas de sous-phase Restauration), et bascule directement en AR exogène long sous tutelles successives.
-- deviation: Durée ~3 ans. Sous-phase IR et sous-phase Restauration structurellement absentes ; pas de moment thermidorien canonique. La RN est avortée par chocs exogènes successifs, qui se prolongent en AR exogène long (cf. phase suivante).
+- actual_duration: ~53 ans
+- resolution: Plébiscite du 15 mars 1860 (~95% pour l'annexion au Royaume de Sardaigne), loi du 22 mars 1860 — la Révolution Nationale toscane s'achève par fusion-absorption dans le Parcours italien plus vaste, sans Glorieuse Révolution endogène stabilisée.
+- summary: Révolution Nationale longue (~53 ans), articulée en deux sous-phases. La sous-phase Révolution initiale est ultra-comprimée et entièrement exogène (1807-1814) : l'annexion à l'Empire français téléscope l'Éclatement de l'AR léopoldin et l'Émergence de l'IR napoléonien en un seul moment, sans Expérience parlementaire endogène, sans Phase aiguë, sans Moment thermidorien — pattern d'une nation conquise directement par l'IR exogène. La sous-phase Restauration (1814-1859) s'ouvre par la Restauration canonique des Habsbourg-Lorraine (conservation partielle des acquis napoléoniens, ouverture libérale progressive sous Léopold II) et se prolonge jusqu'à la fusion italienne, avec une tentative de Glorieuse Révolution avortée en 1848-1849 (Statuto fondamentale, brève République Guerrazzi, intervention autrichienne). Aboutissement final par fusion italienne (1859-1860).
+- description: La Révolution Nationale florentine s'étend sur cinquante-trois ans, ouverte par l'annexion à l'Empire français qui combine Éclatement de l'AR léopoldin et Émergence de l'IR napoléonien en un seul moment compressé.
 
-### Subphase : Révolution initiale (1796-1799)
+  La sous-phase de Révolution initiale exogène (1807-1814) est ultra-comprimée. L'AR léopoldin, perturbé depuis 1796 par les occupations françaises successives et le Royaume d'Étrurie Bourbon-Parme (1801-1807) sans avoir éclaté, est définitivement brisé par l'annexion directe à l'Empire français (10 décembre 1807) : suppression de l'État toscan, départementalisation (Arno, Méditerranée, Ombrone), Code napoléonien imposé, sécularisation systématique, conscription, état civil laïc, système métrique. Élisa Bonaparte, grande-duchesse de Toscane (1809-1814), incarne l'IR exogène napoléonien. Pas d'Expérience parlementaire endogène, pas de Phase aiguë jacobine, pas de Moment thermidorien — la séquence canonique est entièrement portée par la tutelle impériale française, parallèle structurel à l'Émilie-Romagne sous le Royaume d'Italie napoléonien.
+
+  La sous-phase de Restauration (1814-1859) s'ouvre par la Restauration canonique des Habsbourg-Lorraine — Ferdinand III (1814-1824) puis Léopold II « Canapone » (1824-1859) — avec conservation partielle des acquis napoléoniens (état civil laïc, organisation judiciaire napoléonienne, abolition féodale, biens nationaux non restitués au clergé). Pattern de Restauration modérée-réformatrice. La Toscane devient refuge des libéraux italiens modérés (cabinet Vieusseux, *Antologia* 1821-1833 fermée par pression autrichienne). Expansion territoriale légitime (Stato dei Presidi et Piombino 1815, Lucques 1847). Le 17 février 1848, Léopold II octroie le Statuto fondamentale (constitution bicamérale, suffrage censitaire, garanties civiques) — saillant de Glorieuse Révolution canonique, qui aurait pu stabiliser le parlementarisme. Mais la radicalisation rapide (triumvirat Guerrazzi-Montanelli-Mazzoni 8 février 1849, fuite de Léopold II à Gaeta avec Pie IX, brève République toscane 15 février - 12 avril 1849) et l'intervention autrichienne (avril 1849) avortent le passage à la phase parlementaire. Léopold II est rappelé par les modérés florentins eux-mêmes (commission Capponi-Serristori), abolit le Statuto en 1852, et la Restauration se prolonge sous garnison autrichienne (« biennio nero » 1849-1855) jusqu'à la rivoluzione toscana de 1859. Pas de nouvel AR consolidé sur 1849-1859 (pas de Saturation fiscale, pas de 1er monarque absolu d'un nouveau cycle) — la décennie reste structurellement sous-phase Restauration prolongée, pas reboot d'AR.
+
+  L'aboutissement final intervient en 1859-1860 sous forme de fusion italienne, non comme Glorieuse Révolution canonique endogène. Le 27 avril 1859, Léopold II quitte Florence sans effusion de sang devant l'avancée piémontaise. Gouvernement provisoire de Bettino Ricasoli, choix de l'union avec le Piémont. Plébiscite du 15 mars 1860 (~95% pour l'annexion au Royaume de Sardaigne). Pattern typique des nations distribuées non unifiées (parallèle structurel avec Émilie-Romagne, Milan, Venise — toutes absorbées par le Royaume d'Italie sans aboutissement parlementaire endogène).
+- deviation: +0 an. Durée 53 ans dans la fourchette canonique (25-80). Cas particulier d'une Révolution initiale entièrement exogène (Éclatement + IR napoléonien téléscopés en 1807, sans cycle républicain intermédiaire endogène), suivie d'une Restauration canonique avec Glorieuse Révolution avortée en 1848-1849.
+
+### Subphase : Révolution initiale exogène (1807-1814)
 
 - type: subphase
 - phase: rn
-- start: 1796
-- end: 1799
-- title: Révolution initiale
-- summary: Sous-phase ultra-compressée. Trois saillants canoniques en quelques mois en 1799 : Éclatement de l'AR (invasion française 1796), Expérience parlementaire (République toscane jacobine 1799), Phase aiguë (insurrection Viva Maria 1799, contre-révolutionnaire). Pas de moment thermidorien canonique : le retour de Ferdinand III sous protection autrichienne est traité comme perturbation Avortement de la RN (Restauration imposée par puissances étrangères), qui clôt la phase RN par bascule directe en AR exogène.
+- start: 1807
+- end: 1814
+- title: Révolution initiale exogène
+- summary: Sous-phase ultra-comprimée et entièrement exogène. L'annexion directe à l'Empire français (10 décembre 1807) téléscope l'Éclatement de l'AR léopoldin et l'Émergence de l'IR napoléonien en un seul moment. Toscane = 3 départements (Arno, Méditerranée, Ombrone), Code napoléonien, sécularisation systématique, conscription, état civil laïc. Élisa Bonaparte grande-duchesse 1809-1814. Pas d'Expérience parlementaire endogène, pas de Phase aiguë jacobine, pas de Moment thermidorien — la séquence canonique est entièrement portée par la tutelle impériale française. Sortie par chute napoléonienne (1814) et Restauration habsbourgeoise canonique.
 
-#### Saillant : Éclatement de l'AR — invasion française
+#### Saillant : Éclatement de l'AR — annexion à l'Empire français
 
 - type: saillant
-- start: 1796
-- subtitle: Invasion française
+- start: 1807
+- end: 1807
+- subtitle: Annexion à l'Empire français, départementalisation
 - title: Éclatement de l'AR
-- confidence: medium
-- summary: L'invasion française (1796) éclate l'AR léopoldin par choc exogène sur cadre financièrement sain. Sortie obligatoirement par choc externe car l'AR n'avait pas atteint la maturité endogène (discrédit oui partiel, ruine financière non).
+- confidence: high
+- alternatives: Datation 1796 (occupation française de Livourne) écartée — Ferdinand III maintenu sur son trône, occupation cantonnée au port, gouvernement granducal continu, retour à l'état antérieur après évacuation française mai 1797. Datation 1799 (1ère occupation française) écartée — durée 3 mois et 12 jours, gouvernement provisoire collaboratif Rivani-Martini, pas de ventilation élitaire, pas d'institutionnalisation républicaine, restauration directe de Ferdinand III sous protection autrichienne. Datation 1801 (Royaume d'Étrurie) écartée — institutions léopoldines maintenues, élites toscanes en continuité, pas de Code napoléonien imposé ; rupture dynastique permanente mais pas rupture institutionnelle (perturbation prolongement d'AR par dynastie fantoche). Datation 1807 retenue parce que c'est ici que l'État toscan disparaît : suppression du Royaume d'Étrurie, départementalisation préfectorale, Code napoléonien imposé, sécularisation systématique, conscription, ventilation effective des élites (intégration ou exclusion du nouveau système administratif impérial). L'AR léopoldin est définitivement éclaté.
+- summary: Le 10 décembre 1807, le Royaume d'Étrurie est dissous et la Toscane est annexée directement à l'Empire français. Trois départements (Arno, Méditerranée, Ombrone), Code napoléonien, sécularisation systématique, conscription, état civil laïc. Test discriminant satisfait : rupture institutionnelle (fin de l'État toscan), ventilation des élites (intégration ou exclusion du système préfectoral), cadre politique nouveau (départementalisation impériale). L'AR léopoldin, qui avait tenu à travers les perturbations de 1796-1807, s'éclate définitivement ici.
 
-#### Saillant : Expérience parlementaire — République toscane jacobine
-
-- type: saillant
-- start: 1799
-- subtitle: République toscane jacobine
-- title: Expérience parlementaire
-- confidence: medium
-- summary: Après l'expulsion de Ferdinand III (mars 1799), brève République toscane jacobine sous protection française. Comprimée à quelques semaines avant l'insurrection contre-révolutionnaire.
-
-#### Saillant : Phase aiguë — insurrection Viva Maria
+#### Saillant : Émergence de l'IR — annexion napoléonienne, Élisa Bonaparte
 
 - type: saillant
-- start: 1799
-- subtitle: Insurrection populaire Viva Maria
-- title: Phase aiguë
-- confidence: medium
-- summary: Insurrection populaire massive Viva Maria (printemps-été 1799) — soulèvement contre-révolutionnaire et anti-français qui balaye les Jacobins. Phase aiguë canonique mais d'orientation contre-révolutionnaire, comprimée et exogéniquement orientée par l'occupation française.
+- start: 1807
+- end: 1814
+- figure: Napoléon Bonaparte
+- subtitle: Élisa Bonaparte grande-duchesse
+- title: Émergence de l'IR
+- confidence: high
+- alternatives: IR entièrement exogène et téléscopé avec l'Éclatement, sans transition par une République sœur intermédiaire (contrairement à l'Émilie-Romagne qui connaît Cispadane → Cisalpine → République Italienne → Royaume d'Italie entre 1796 et 1805). Florence passe directement de l'AR léopoldin perturbé à l'IR napoléonien direct (départements de l'Empire français). Pas d'EP endogène à instaurer puis à dépasser : la séquence est ultra-comprimée.
+- summary: L'IR napoléonien est exogène et téléscopé avec l'Éclatement de l'AR en 1807. Élisa Bonaparte gouverne d'abord les départements toscans, puis devient grande-duchesse de Toscane (1809-1814) — fiction restaurée pour la sœur de l'Empereur, mais la Toscane reste intégrée à l'Empire français comme 3 départements. Code napoléonien, biens nationaux, sécularisation systématique, conscription, état civil laïc, système métrique. Cas-type d'IR entièrement exogène napoléonien — parallèle Émilie-Romagne sous le Royaume d'Italie, mais sans la fiction d'une République ou Royaume satellite. Chute en 1814 avec la défaite napoléonienne.
 
-#### Saillant : Retour de Ferdinand III — avortement de la RN
-
-- type: saillant
-- perturbation: true
-- mechanism: choc_exogene
-- effect: avortement
-- start: 1799
-- figure: Ferdinand III
-- subtitle: Restauration imposée par les puissances étrangères
-- title: Retour de Ferdinand III
-- summary: Retour de Ferdinand III en juin 1799 sous protection autrichienne, qui ne stabilise pas un moment thermidorien canonique mais avorte la RN par intervention exogène. Suivent immédiatement de nouvelles tutelles étrangères (Royaume d'Étrurie sous Bourbons-Parme 1801, annexion à l'Empire français 1807, Restauration habsbourgeoise 1814). La RN florentine est avortée sans avoir parcouru ses sous-phases canoniques (pas d'IR, pas de Restauration au sens canonique). Bascule directe en AR exogène long.
-
----
-
-## Phase : Absolutiste (AR exogène, 1799-1848)
-
-- type: phase
-- phase: absolutiste
-- start: 1799
-- end: 1848
-- title: Phase absolutiste — Ancien Régime exogène (1er bloc)
-- typical_duration: variable (dérivation rare)
-- actual_duration: ~49 ans
-- resolution: Octroi du Statuto fondamentale par Léopold II (17 février 1848) — Glorieuse Révolution qui ouvre une nouvelle phase RN (cf. phase suivante).
-- summary: AR exogène long (~49 ans) ouvert dès l'avortement de la RN en 1799 et qui dure jusqu'à la GR de 1848. Régime sans légitimité endogène, sous tutelles étrangères successives — Ferdinand III restauré 1799-1801, Royaume d'Étrurie sous Bourbons-Parme 1801-1807, annexion à l'Empire français sous Élisa Bonaparte 1807-1814, Restauration habsbourgeoise-lorraine de Ferdinand III puis Léopold II 1814-1848. Sortie par GR en 1848.
-- description: Suite à l'avortement de la RN en 1799 (Restauration imposée par les puissances étrangères), Florence entre en AR exogène long sous tutelles successives. Phase de tutelles étrangères en quatre temps : (1) Ferdinand III restauré sous protection autrichienne 1799-1801 ; (2) Royaume d'Étrurie sous Bourbons-Parme imposé par traités franco-espagnols 1801-1807, État fantoche sans armée ni politique extérieure propres ; (3) annexion directe à l'Empire français avec Élisa Bonaparte grande-duchesse 1807-1814, Toscane = 3 départements (Arno, Méditerranée, Ombrone), Code napoléonien imposé ; (4) Restauration habsbourgeoise-lorraine 1814-1848 sous Ferdinand III puis Léopold II « Canapone » (1824), conservation partielle des codes napoléoniens (état civil, organisation judiciaire), Toscane refuge des modérés italiens (cabinet Vieusseux, *Antologia* 1821-1833 fermée par pression autrichienne), expansion territoriale (Stato dei Presidi et Piombino 1815, Lucques 1847). La phase se clôt par la Glorieuse Révolution de 1848 (Statuto), qui ouvre une nouvelle phase RN (avortée immédiatement, cf. phase suivante).
-
-### Subphase : Ancien Régime exogène (1799-1848)
+### Subphase : Restauration (1814-1859)
 
 - type: subphase
-- phase: absolutiste
-- start: 1799
-- end: 1848
-- title: Ancien Régime exogène
-- summary: Sous-phase unique. Tutelles étrangères successives sans légitimité endogène : Ferdinand III restauré 1799-1801, Royaume d'Étrurie sous Bourbons-Parme 1801-1807, annexion française 1807-1814, Restauration habsbourgeoise-lorraine 1814-1848. Pas de saillant absolutiste canonique propre — la sous-phase entière est une parenthèse exogène. Sortie par GR en 1848.
-
----
-
-## Phase : Révolution Nationale (re-tentative avortée, 1848-1849)
-
-- type: phase
 - phase: rn
+- start: 1814
+- end: 1859
+- title: Restauration
+- summary: Sous-phase longue (~45 ans) ouverte par la Restauration canonique des Habsbourg-Lorraine en 1814 — Ferdinand III puis Léopold II « Canapone » (1824) — avec conservation partielle des acquis napoléoniens. Pattern de Restauration modérée-réformatrice : Toscane refuge des libéraux italiens modérés (cabinet Vieusseux, *Antologia*), expansion territoriale légitime (Stato dei Presidi et Piombino 1815, Lucques 1847). Tentative de Glorieuse Révolution avortée en 1848 (Statuto fondamentale octroyé par Léopold II, radicalisation Guerrazzi-Montanelli avortée par retour des modérés et intervention autrichienne d'avril 1849). Le Statuto est aboli en 1852. La sous-phase Restauration se prolonge sous garnison autrichienne (« biennio nero » 1849-1855) jusqu'au départ pacifique de Léopold II en 1859. Pas de nouvel AR consolidé — absence de Saturation fiscale, absence de 1er monarque absolu d'un nouveau cycle. Sortie par fusion italienne 1859-1860.
+
+#### Saillant : Restauration — Habsbourg-Lorraine restaurés
+
+- type: saillant
+- start: 1814
+- end: 1814
+- figure: Ferdinand III
+- subtitle: Retour des Habsbourg-Lorraine
+- title: Restauration
+- confidence: high
+- summary: Ferdinand III est restauré comme grand-duc en 1814 dans le cadre du Congrès de Vienne, puis Léopold II « Canapone » lui succède en 1824. La Restauration est modérée-réformatrice : conservation de l'état civil laïc, de l'organisation judiciaire napoléonienne, de l'abolition féodale, biens nationaux non restitués au clergé. Pattern Restauration canonique (compromis avec la transformation RN, pas reboot d'AR pré-révolutionnaire). La Toscane devient refuge des libéraux italiens modérés (cabinet Vieusseux 1819, *Antologia* 1821-1833 fermée par pression autrichienne, accueil de Capponi, Niccolini, Tommaseo). Expansion territoriale légitime : Stato dei Presidi et Piombino (1815), Lucques (1847, à la mort de la duchesse Marie-Louise de Bourbon-Parme).
+
+#### Saillant : Glorieuse Révolution (avortée) — Statuto fondamentale 1848
+
+- type: saillant
 - start: 1848
 - end: 1849
-- title: Révolution Nationale (re-tentative)
-- typical_duration: ~25-80 ans
-- actual_duration: ~1 an
-- resolution: Écrasement autrichien (avril 1849) — restauration imposée qui rebascule Florence en AR exogène (cf. phase suivante).
-- summary: RN ultra-comprimée et avortée. La GR (Statuto fondamentale, 17 février 1848) ouvre une nouvelle phase RN à l'intérieur de l'AR exogène long. Mais la phase est immédiatement avortée par l'écrasement autrichien d'avril 1849 — la phase parlementaire qui aurait dû s'ouvrir n'existe pas. Florence retombe en AR exogène (cf. phase suivante). Cas atypique : RN comprimée à un saillant GR + saillant Écrasement, sans sous-phases canoniques.
-- description: Le 17 février 1848, Léopold II octroie le Statuto fondamentale (constitution bicamérale, suffrage censitaire, garanties civiques) — Glorieuse Révolution canonique qui ouvre une nouvelle phase RN. Florence participe à la Première guerre d'indépendance contre l'Autriche, cabinets Capponi puis Montanelli-Guerrazzi. Léopold II quitte Florence (Gaète, février 1849), République toscane proclamée (8 février-12 avril 1849, Guerrazzi-Montanelli-Mazzoni). Restauration autrichienne en avril 1849 — comme à Venise et Milan, la phase parlementaire italienne naissante est écrasée par l'Empire autrichien à son acmé absolutiste. La phase RN est avortée moins d'un an après son ouverture, sans avoir parcouru aucune sous-phase canonique au-delà de la GR initiale.
-
-#### Saillant : Glorieuse Révolution — Statuto fondamentale 1848
-
-- type: saillant
-- start: 1848
 - figure: Léopold II
-- subtitle: Statuto fondamentale
+- subtitle: Statuto fondamentale puis triumvirat Guerrazzi avorté
 - title: Glorieuse Révolution
 - confidence: medium
-- summary: Le 17 février 1848, Léopold II octroie le Statuto fondamentale — constitution bicamérale, suffrage censitaire, garanties civiques. Florence participe à la Première guerre d'indépendance contre l'Autriche. Cabinets Capponi puis Montanelli-Guerrazzi. Saillant canonique de Glorieuse Révolution qui ouvre une nouvelle phase RN à l'intérieur de l'AR exogène long.
+- alternatives: Discrimination GR avortée vs nouvelle RN-initiale. GR avortée retenue parce que (1) Statuto octroyé par le souverain lui-même = pattern GR canonique, pas Éclatement révolutionnaire ; (2) Léopold II rappelé par les modérés florentins eux-mêmes (commission Capponi-Serristori) = continuité dynastique préservée, pas vraie rupture institutionnelle ; (3) durée totale de la radicalisation très brève (3 mois) — pas d'Expérience parlementaire stabilisée ni de Phase aiguë RN canonique avec ventilation durable des élites ; (4) absence de marqueurs d'AR consolidé post-1849 (pas de Saturation fiscale, pas de 1er monarque absolu d'un nouveau cycle) — 1849-1859 reste sous-phase Restauration prolongée, pas un nouvel AR. Pattern parallèle Émilie-Romagne 1831/1848.
+- summary: Le 17 février 1848, Léopold II octroie le Statuto fondamentale (constitution bicamérale, suffrage censitaire, garanties civiques) — saillant de Glorieuse Révolution canonique simultané à Statuto Albertino, Constitution sicilienne et Constitution napolitaine. Florence participe à la Première guerre d'indépendance contre l'Autriche, cabinets Capponi puis Montanelli-Guerrazzi. Oscillation modérés-radicaux propre à toute ouverture de GR : triumvirat Guerrazzi-Montanelli-Mazzoni (8 février 1849), fuite de Léopold II à Gaeta, brève République toscane (15 février - 12 avril 1849), puis recentrage modéré (commission Capponi-Serristori rappelant Léopold II) — dynamique parallèle à la France 1830 (hésitation République / Orléans, La Fayette stabilisant sur Louis-Philippe). La GR aurait pu se consolider sur ce recentrage modéré. Mais l'**intervention autrichienne** (juillet 1849) ratifie le retour de Léopold II sous protection, conduit à l'abrogation du Statuto (6 mai 1852) et à la garnison autrichienne maintenue jusqu'en 1855. C'est ce choc exogène qui avorte la GR — pattern parallèle Milan 1848, Venise 1849, Naples 1849.
 
-#### Saillant : Écrasement autrichien — République Guerrazzi écrasée
+#### Perturbation : Avortement de la GR — intervention autrichienne
 
 - type: saillant
 - perturbation: true
 - mechanism: choc_exogene
 - effect: avortement
 - start: 1849
-- subtitle: République Guerrazzi écrasée par les Autrichiens
-- title: Écrasement autrichien
-- summary: Léopold II quitte Florence (Gaète, février 1849), République toscane proclamée (8 février-12 avril 1849, Guerrazzi-Montanelli-Mazzoni), restauration autrichienne en avril 1849. Comme à Venise et Milan, la phase parlementaire italienne naissante est écrasée par l'Empire autrichien à son acmé absolutiste. Avortement effectif de la phase RN, retour en AR exogène (cf. phase suivante).
+- end: 1849
+- subtitle: Intervention autrichienne, restauration de Léopold II
+- title: Avortement de la GR
+- summary: L'intervention autrichienne de juillet 1849 ratifie le retour de Léopold II sous protection, conduit à l'abrogation formelle du Statuto (6 mai 1852) et à la garnison autrichienne maintenue jusqu'en 1855. La GR octroyée en 1848 est avortée par choc exogène — l'oscillation modérés-radicaux des mois précédents (triumvirat Guerrazzi puis rappel par commission Capponi-Serristori) relève de la dynamique normale d'ouverture de GR (parallèle France 1830), pas d'un avortement endogène distinct. La sous-phase Restauration se prolonge sous tutelle viennoise (« biennio nero ») jusqu'en 1859. Pattern parallèle Milan 1848, Venise 1849, Naples 1849.
 
----
+#### Saillant : Fuite définitive de Léopold II et rivoluzione toscana
 
-## Phase : Absolutiste (AR exogène, 1849-1859)
-
-- type: phase
-- phase: absolutiste
-- start: 1849
+- type: saillant
+- start: 1859
 - end: 1859
-- title: Phase absolutiste — Ancien Régime exogène (2e bloc)
-- typical_duration: variable (dérivation rare)
-- actual_duration: ~10 ans
-- resolution: La « rivoluzione toscana » du 27 avril 1859 — Léopold II quitte Florence sans effusion de sang devant l'avancée piémontaise pendant la Seconde guerre d'indépendance. Gouvernement provisoire de Bettino Ricasoli, choix de l'union avec le Piémont.
-- summary: AR exogène court (~10 ans) imposé par les Autrichiens après l'écrasement de la RN de 1848-1849 : Léopold II ramené à Florence, révocation du Statuto (1852), occupation autrichienne (jusqu'en 1855). Régime sans légitimité endogène, simple prolongement sous tutelle viennoise. Sortie par fusion italienne (cf. fin du Parcours).
-- description: Après l'écrasement autrichien de 1849, Florence retombe en AR exogène. Léopold II revient à Florence sous protection autrichienne, le Statuto est révoqué en 1852, les troupes autrichiennes restent stationnées jusqu'en 1855. Le régime ne dispose d'aucune légitimité endogène. La sortie est elle aussi exogène — la Seconde guerre d'indépendance italienne (1859) provoque le départ pacifique de Léopold II le 27 avril 1859, suivi de l'absorption italienne.
-
-### Subphase : Ancien Régime exogène (1849-1859)
-
-- type: subphase
-- phase: absolutiste
-- start: 1849
-- end: 1859
-- title: Ancien Régime exogène
-- summary: Sous-phase unique post-écrasement. Léopold II ramené par les Autrichiens, révocation du Statuto (1852), occupation autrichienne jusqu'en 1855. Pas de saillant absolutiste canonique propre — parenthèse exogène avant absorption italienne.
+- figure: Léopold II
+- subtitle: Départ pacifique devant l'avancée piémontaise
+- title: Fuite de Léopold II
+- confidence: high
+- summary: 27 avril 1859 : pendant la Seconde guerre d'indépendance italienne, Léopold II quitte Florence sans effusion de sang devant l'avancée piémontaise et la pression de la bourgeoisie modérée florentine. Gouvernement provisoire de Bettino Ricasoli, choix de l'union avec le Piémont. C'est la fin effective de la dynastie Habsbourg-Lorraine en Toscane et l'ouverture de la séquence de fusion italienne. La Restauration toscane s'achève sans avoir produit ni Glorieuse Révolution stabilisée ni phase parlementaire endogène — le Parcours toscan se résout par absorption dans le Parcours italien.
 
 ---
 
@@ -518,15 +479,15 @@ L'AR florentin se déploie en deux moments selon la nature de la dynastie. **AR 
 | Acmé absolutiste | Ferdinand Ier — Livourne (~1591-1609) |
 | **Saturation fiscale** | **Tassa di redenzione + concordat (1774-1775, Pierre-Léopold)** — première tentative de fiscalité égalitaire touchant patriciat sédimenté et clergé, bloquée progressivement (Prato 1787, émeutes 1790, démantèlement Ferdinand III). Comprimée avec Réformes échouées dans la séquence léopoldine. Sources Waquet, Diaz, Sordi |
 | Remontrance | — (structurellement absente, manque du pôle corps institutionnel formel — analyse à deux pôles, complémentaire de Gênes) |
-| Ancien Régime | 1670-1796 (décliniste médicéen 1670-1737, secundogéniture habsbourgeoise 1737-1796) |
+| Ancien Régime | 1670-1807 (décliniste médicéen 1670-1737, secundogéniture habsbourgeoise 1737-1796, AR perturbé 1796-1807) |
 | **Réformes échouées** | **Séquence léopoldine (1779-1790)** — constitution Gianni abandonnée, réformes religieuses → émeute Prato 1787, émeutes anti-réformes 1790. Cas-type canonique avec la France de Louis XVI |
-| Éclatement de l'AR | Invasion française (1796) |
-| Expérience parlementaire | République toscane jacobine (1799, comprimée) |
-| Phase aiguë | Insurrection Viva Maria (1799, contre-révolutionnaire) |
-| Moment thermidorien | — (remplacé par perturbation Avortement de la RN — Restauration imposée par puissances étrangères, 1799) |
-| Émergence de l'IR | — (cité-État trop petite, pas d'État italien intermédiaire) |
-| Restauration | — (sous-phase canonique absente — la RN est avortée par chocs exogènes, pas parcourue jusqu'à une Restauration canonique) |
-| AR exogène long (1er bloc) | 1799-1848 (49 ans) sous tutelles successives : Ferdinand III restauré, Royaume d'Étrurie, annexion française, Restauration habsbourgeoise-lorraine |
-| **RN (re-tentative avortée)** | **1848-1849 (~1 an)** — GR Statuto 1848 + écrasement autrichien 1849 |
-| AR exogène (2e bloc) | 1849-1859 (10 ans) sous restauration autrichienne |
-| Fusion / Fin du Parcours | Rivoluzione toscana 1859, plébiscite 1860, absorption italienne |
+| **Épisodes exogènes 1796-1807** | **Occupation Livourne (1796-1797), 1ère occupation française + Viva Maria (1799), 2nde occupation française + Giunta triumvirale (1800-1801), Royaume d'Étrurie Bourbon-Parme (1801-1807)** — quatre épisodes exogènes successifs qui ne perturbent pas la trajectoire de l'AR (institutions léopoldines, élites toscanes et continuité administrative préservées à chaque épisode) ; mentionnés dans le récit, pas codés comme saillants |
+| **Éclatement de l'AR** | **Annexion à l'Empire français (10 décembre 1807)** — suppression de l'État toscan, départementalisation, Code napoléonien. L'AR léopoldin ne s'éclate qu'ici, après avoir tenu à travers les épisodes exogènes 1796-1807 |
+| Expérience parlementaire | — (structurellement absente — RN initiale entièrement exogène, Éclatement et IR téléscopés en 1807, pas de cycle républicain endogène intermédiaire) |
+| Phase aiguë | — (structurellement absente — pas de radicalisation EG endogène, la séquence est tenue d'en haut par la tutelle impériale française. Viva Maria 1799 disqualifié comme Phase aiguë canonique car contre-révolutionnaire) |
+| Moment thermidorien | — (structurellement absent — pas de Phase aiguë endogène à thermidoriser) |
+| **Émergence de l'IR** | **Annexion napoléonienne, Élisa Bonaparte grande-duchesse (1807-1814)** — IR entièrement exogène, téléscopé avec l'Éclatement de l'AR. Parallèle Émilie-Romagne sous Royaume d'Italie napoléonien |
+| **Restauration** | **Habsbourg-Lorraine restaurés (1814)** — Ferdinand III puis Léopold II « Canapone » (1824). Conservation partielle des acquis napoléoniens, pattern modéré-réformateur, Toscane refuge des libéraux italiens, expansion territoriale légitime (Stato dei Presidi et Piombino 1815, Lucques 1847) |
+| **Glorieuse Révolution (avortée)** | **Statuto fondamentale (17 février 1848)** — octroyé par Léopold II. Radicalisation Guerrazzi-Montanelli 1849 brève (3 mois), Léopold II rappelé par les modérés florentins eux-mêmes (commission Capponi-Serristori) + intervention autrichienne avril 1849. Statuto aboli en 1852. Pattern GR avortée à l'intérieur de la sous-phase Restauration |
+| **Fuite de Léopold II** | **27 avril 1859** — départ pacifique devant l'avancée piémontaise pendant la Seconde guerre d'indépendance |
+| Fusion / Fin du Parcours | Gouvernement provisoire Ricasoli, plébiscite 15 mars 1860 (~95% pour l'annexion au Royaume de Sardaigne), absorption italienne |

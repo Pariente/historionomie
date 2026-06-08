@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Athènes — chouette d'Athéna">
+  <defs>
+    <clipPath id="r"><rect x="0" y="0" width="100" height="100" rx="10"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="100" height="100" fill="#1f3a63"/>
+    <!-- olive sprig -->
+    <g stroke="#cbb26a" stroke-width="2.2" fill="#cbb26a">
+      <path d="M50 86 C 42 78, 40 70, 41 62" fill="none"/>
+      <ellipse cx="40" cy="70" rx="3.4" ry="1.8" transform="rotate(-35 40 70)"/>
+      <ellipse cx="44" cy="64" rx="3.4" ry="1.8" transform="rotate(-35 44 64)"/>
+      <path d="M50 86 C 58 78, 60 70, 59 62" fill="none"/>
+      <ellipse cx="60" cy="70" rx="3.4" ry="1.8" transform="rotate(35 60 70)"/>
+      <ellipse cx="56" cy="64" rx="3.4" ry="1.8" transform="rotate(35 56 64)"/>
+    </g>
+    <!-- owl of Athena -->
+    <g fill="#f3ead2">
+      <!-- body -->
+      <path d="M50 30 C 36 30, 30 42, 30 56 C 30 72, 39 82, 50 82 C 61 82, 70 72, 70 56 C 70 42, 64 30, 50 30 Z"/>
+      <!-- ear tufts -->
+      <path d="M34 33 L 30 22 L 41 30 Z"/>
+      <path d="M66 33 L 70 22 L 59 30 Z"/>
+    </g>
+    <!-- eyes -->
+    <circle cx="42" cy="45" r="9" fill="#f3ead2"/>
+    <circle cx="58" cy="45" r="9" fill="#f3ead2"/>
+    <circle cx="42" cy="45" r="4.6" fill="#1f3a63"/>
+    <circle cx="58" cy="45" r="4.6" fill="#1f3a63"/>
+    <!-- beak -->
+    <path d="M50 50 L 46 57 L 54 57 Z" fill="#cbb26a"/>
+    <!-- wing hint -->
+    <path d="M50 60 L 50 78" stroke="#cbb26a" stroke-width="1.6" fill="none"/>
+  </g>
+</svg>

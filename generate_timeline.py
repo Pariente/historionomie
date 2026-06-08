@@ -260,6 +260,8 @@ SAILLANT_ICONS = {
     "1er monarque oligarchique": "stars",
     "Acmé oligarchique": "terrain",
     "Guerre sociale": "local_fire_department",
+    "1er impôt permanent": "toll",
+    "1re armée permanente": "military_tech",
     "1er monarque absolu": "crown",
     "1er monarque absolu (du reboot)": "crown",
     "Dernière grande révolte oligarchique": "whatshot",
@@ -1227,7 +1229,7 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {{
 // Layout saillants: measure real label widths and assign rows to avoid overlap
 (function layoutSaillants() {{
     const ROW_HEIGHT = 90;
-    const MAX_ROWS = 7;
+    const MAX_ROWS = 9;
     const BASE_TOP = {area_chart_top + 85 if has_area_data else 200};
     const MARGIN = 6; // px of horizontal breathing room between labels
 

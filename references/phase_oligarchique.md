@@ -125,6 +125,20 @@ Un territoire qui ressemble à une phase oligarchique mais dont l'autonomie poli
 
 ---
 
+## Les trois saillants de déploiement oligarchique
+
+Les trois saillants qui structurent le déploiement oligarchique — **Pacte oligarchique**, **1er impôt permanent**, **1re armée permanente** — partagent un même opérateur conceptuel. Ils ne sont pas trois marqueurs juxtaposés mais trois déclinaisons d'un même principe, appliqué à trois fonctions étatiques distinctes.
+
+> **Opérateur commun.** Appropriation collective et formalisée d'une fonction étatique, qui la rend pérenne par-delà la personne du détenteur du pouvoir : passage du **pouvoir-patrimoine** au **pouvoir-fonction**. Le PO l'applique à la stabilité du régime, le 1er impôt permanent à l'extraction, la 1re armée permanente à la coercition.
+>
+> **Asymétrie de rôle (moteur de phase).** Au PO, l'agent est le corps des grands, qui se subordonne lui-même au cadre qu'il institue. Pour l'impôt et l'armée, l'agent est le centre ainsi créé, qui s'attribue une fonction avec le consentement-régime des grands. Les grands fondent l'instance qui les dépasse, puis consentent à ce qu'elle s'arme et se finance — ce qui alimente le grossissement du centre jusqu'à la guerre sociale.
+>
+> **Note de datation.** Un saillant peut se réaliser par **acte net** (date tranchée) ou par **bascule graduelle** (seuil étalé). On date alors au premier fait qui rend le franchissement irréversible en pratique, et on borne l'étalement. Un saillant graduel doit rester falsifiable : on doit pouvoir nommer l'état-avant et l'état-après.
+
+Les trois saillants sont déclinés ci-dessous au sein de la **Sous-phase 1 (essor oligarchique)**.
+
+---
+
 ## Sous-phase 1 : Essor oligarchique
 
 L'essor oligarchique s'ouvre par le **Pacte oligarchique** — saillant fondateur de la phase oligarchique. Après le pacte, la nation se dote de nouveaux outils — fisc permanent, armée permanente, administration centrale — et peut déployer une **énergie focalisée** vers l'extérieur. C'est l'essor oligarchique : la période la plus dynamique de la phase. Le souverain utilise cette puissance nouvelle pour conquérir de nouveaux territoires et projeter la nation vers l'extérieur (sauf si le différentiel de puissance avec les voisins l'interdit).
@@ -135,39 +149,43 @@ L'essor oligarchique s'ouvre par le **Pacte oligarchique** — saillant fondateu
 
 Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la structure de l'exécutif. C'est la **résolution de la phase féodale** et le **passage à la phase oligarchique** — le PO est par convention de filing le **premier saillant de la phase oligarchique** (sous-phase Essor oligarchique), pas le dernier de la féodale. Pattern systémique avec les autres saillants frontière (1er monarque absolu, Éclatement de l'AR), tous filés sous la phase d'arrivée. La sous-phase Bascule oligarchique reste en féodale comme sous-phase terminale de transition (cf. `phase_feodale.md` §Sous-phase 2).
 
-#### Critère universel : la garantie collective de la stabilité aux successions
+#### Définition
 
-**Ce que le pacte doit produire structurellement** : la stabilité du régime aux successions est désormais garantie collectivement par les élites, et le pouvoir survit au remplacement du suzerain. C'est ce qui fait basculer le test discriminant féodal/oligarchique. Le pacte est l'acte par lequel les oligarques fournissent cette garantie.
+Acte par lequel le corps des grands subordonne son pouvoir à un cadre central, lui conférant une stabilité qui survit désormais aux successions — faisant passer le pouvoir du régime patrimonial (lien d'homme à homme renégocié à chaque règne) au régime fonctionnel (fonction attachée à une institution persistante). La codification peut porter sur la transmission du pouvoir et/ou sur son exercice ; c'est l'effet, non l'objet codifié, qui est nécessaire.
 
-Trois éléments structurels caractérisent l'acte :
+#### Marqueurs
 
-1. **Codification** — un acte formel, daté, qui fixe des règles (et non une accumulation coutumière diffuse).
-2. **Caractère collectif** — issu d'une assemblée des oligarques (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers, etc.), non d'une décision unilatérale du souverain.
-3. **Moment de faiblesse** — opéré quand les deux conditions (homogénéité + faiblesse) convergent. Pour le détail des conditions de Deblonde, cf. `phase_feodale.md` §Conditions simultanées du pacte.
+- **Formalisation** — l'acte fixe des règles de façon explicite et datable ; pas une évolution coutumière diffuse.
+- **Collectivité** — il émane d'une assemblée des grands (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers, etc.), non d'une décision unilatérale du détenteur du pouvoir.
+- **Fenêtre de faiblesse** — il opère là où convergent l'homogénéité du corps des grands et l'affaiblissement ou la vacance de l'autorité préexistante. Pour le détail des conditions de Deblonde, cf. `phase_feodale.md` §Conditions simultanées du pacte.
+- **Direction subordonnante** — les grands se contraignent au profit du cadre ; le centre ne cède pas du pouvoir aux grands. *(Test directionnel décisif.)*
+- **Effet de survie aux successions** — après l'acte, l'édifice administratif et la loyauté des grands n'ont plus à être reconstruits à chaque transmission. *(Test empirique : une transmission administrée sans effondrement.)*
 
-#### Deux mécanismes pour produire la stabilité aux successions
+#### Le test directionnel : subordination vs capture
 
-Le critère universel est le résultat — la stabilité aux successions est désormais garantie collectivement — pas le contenu spécifique de la codification. Empiriquement, le corpus présente deux mécanismes distincts qui produisent ce même résultat, parfois successivement dans la même nation.
+Un acte collectif et daté qui transfère du pouvoir du centre vers les grands n'est pas un PO, même s'il satisfait formalisation, collectivité et fenêtre de faiblesse : c'est son inverse. Deux contre-exemples du corpus :
 
-Premier mécanisme : **codification de la transmission**. L'acte fixe explicitement qui hérite ou comment l'élection se fait. Le pouvoir survit aux successions parce que la transmission est verrouillée.
+**Mercedes enriqueñas — Castille, 1369.** Henri II Trastámare, usurpateur dépendant du soutien noble, transfère matériellement les revenus royaux (juros, rentes, terres) à la noblesse. Captation pure par transfert de ressources, sans aucun cadre instituant des obligations en retour. Le vrai PO castillan viendra un siècle plus tard (déclaratoria de Tolède, 1480), précisément par révocation des mercedes.
 
-Second mécanisme : **codification de l'exercice du pouvoir**. L'acte ne traite pas de la succession mais encadre l'exercice du pouvoir (consentement aux nominations, contrôle des finances, des campagnes militaires) au point que le pouvoir cesse d'être le patrimoine personnel du suzerain. Le pouvoir survit aux successions parce que le souverain est devenu accessoire à un appareil institutionnel collégial. Test empirique : un souverain peut être déposé, écarté ou remplacé sans que l'État ne vacille.
+**Magna Carta — Angleterre, 1215.** Les barons imposent à Jean Sans Terre un cadre d'enforcement (conseil des 25), mais asymétrique : il contraint le roi sans contraindre les barons, qui restent libres d'agir individuellement contre lui — d'où la Première guerre des Barons. Limitation constitutionnelle sans cadre subordonnant les grands eux-mêmes. Le vrai PO anglais viendra près d'un siècle plus tard (Ordonnances de 1311), avec un cadre institutionnel — le Parlement — qui régit l'action de tous.
 
-Les deux mécanismes sont équivalents structurellement : ce qui compte est le passage du pouvoir-patrimoine au pouvoir-fonction. Une nation peut combiner les deux successivement (verrouillage de la transmission d'abord, complété ensuite par la maturation institutionnelle qui encadre l'exercice), mais c'est la première codification produisant la stabilité aux successions qui ouvre la phase oligarchique.
+#### Le moteur comme test du PO
 
-#### Distinction avec les créations institutionnelles unilatérales
+La survie aux successions (test empirique du marqueur « Effet de survie ») est **nécessaire mais non suffisante** : elle peut aussi être produite par l'enracinement dynastique d'une féodale tardive (la lignée capétienne traverse minorités et morts précoces sans PO, restant féodale jusqu'en 1317 ; la maison de Savoie absorbe neuf successions entre 1430 et 1536 sans PO). Pour départager un vrai PO d'une coagulation féodale réussie, on dispose d'un test externe : le **déploiement du moteur** (1er impôt permanent + 1re armée permanente).
 
-Le pacte ne se confond pas avec la simple existence d'institutions centrales. Un roi fort peut créer un parlement, une chambre des comptes, une cour de justice, une administration bureaucratique : ces créations sont des outils du roi. Le test décisif n'est pas « les structures existent-elles ? » mais « les oligarques se les sont-ils collectivement appropriées par un acte de codification qui contraint le souverain ? ».
+L'asymétrie de rôle l'implique : après un vrai PO, le cadre central s'arme et se finance — les deux marqueurs se déploient typiquement dans le siècle qui suit. Donc si, un siècle après un acte candidat, il n'y a toujours ni impôt ni armée permanents, l'acte n'était pas un PO mais une **codification de souverain fort** (coagulation institutionnelle féodale, équivalent du Parlement de Paris). Le déploiement du moteur **corrobore** le PO ; son absence prolongée le **falsifie**.
 
-Une institution créée à la discrétion du roi peut être abolie à sa discrétion. Une institution issue d'un pacte oligarchique ne peut plus l'être : elle a sa propre légitimité indépendante du souverain.
+Ce test n'est pas circulaire : le PO garde ses critères propres (formalisation, collectivité, fenêtre de faiblesse, direction subordonnante). Le moteur est une corroboration externe, décisive quand ces critères sont ambigus — typiquement quand l'acte candidat ressemble à une codification ducale. **Cas-école : le Piémont.** Les Statuta Sabaudiae (1430) et les Ordini Nuovi (1561) sont deux codifications ducales d'apparence semblable. Mais aucun moteur ne se déploie après les Statuta (106 ans de tasso extraordinaire voté et d'armée féodale commandée par les féodataires) → pas un PO, coagulation institutionnelle féodale ; le moteur se déploie immédiatement après les Ordini Nuovi (gabella del sale + milice paysanne 1566) → vrai PO. Ce qui a changé entre les deux : la correction d'échelle de 1536 qui homogénéise le noyau et réunit la condition de Deblonde.
 
 #### Cas limite : « suzerain collectif »
 
-Dans certaines configurations (cités-États, ligues), le pacte est une codification des règles d'élection et de pouvoir d'un suzerain institutionnel (doge, consul, président élu) plutôt que d'un monarque individuel. Le critère est satisfait parce que ce sont bien les responsabilités de l'exécutif qui sont codifiées collectivement, mais la forme est institutionnelle.
+Le « souverain » dont le PO codifie les règles est le chef de la puissance centrale — typiquement un monarque, mais qui peut aussi être une instance collective (doge, consul, président élu, conseil restreint). Dans les cités-États et les ligues, le pacte codifie les règles d'élection et de pouvoir de cette instance collective au lieu d'un monarque ; le principe reste identique.
+
+À distinguer du contrôle direct des oligarques sur un pouvoir central qui leur reste extérieur (Magna Carta) : dans le cas du suzerain collectif (Venise 1032, Milan 1097), l'instance collective *devient* la puissance centrale codifiée ; dans le cas du contrôle direct, les oligarques surveillent un suzerain externe sans devenir eux-mêmes le centre.
 
 #### Cas du PO probable mais textuellement invisible
 
-Dans certaines sociétés à faible production documentaire ou dont les sources écrites sont tardives et hostiles, l'acte de codification lui-même peut ne pas être attesté. Si les **effets structurels** d'un PO sont reconnaissables (le pouvoir survit désormais aux successions, la dynastie est stable, le fisc et l'armée sont permanents et survivent au souverain, la nation est reconnue par ses voisins comme une entité stable), on peut conclure à un **PO structurellement probable mais textuellement invisible**. Précédent méthodologique : l'absence de trace écrite d'un acte de codification dans une société à faible production documentaire ne réfute pas l'existence du pacte, dès lors que ses effets structurels sont attestés.
+Quand l'acte n'est pas attesté mais que les effets structurels d'un PO sont reconnaissables, on peut conclure à un PO probable mais textuellement invisible. Cas-clef : Omri d'Israël (~885 av. J.-C.).
 
 ### Saillant : 1er monarque oligarchique (T0)
 
@@ -180,7 +198,35 @@ Dans certaines sociétés à faible production documentaire ou dont les sources 
 - Pas d'effondrement à la transition (preuve que le cadre tient)
 - Premier déploiement effectif des outils oligarchiques nouveaux (fisc régulier, troupes soldées, administration centralisée embryonnaire)
 
-**PO et maturation institutionnelle peuvent être étalés.** Le PO acte la bascule (le pouvoir survit désormais aux successions), mais l'appareil oligarchique mature continue de se déployer pendant l'essor. Le décalage typique entre PO et 1er monarque oligarchique est court (quelques années), mais le décalage entre PO et maturité institutionnelle complète peut être beaucoup plus long. Cette maturation étalée n'est pas un second PO ; c'est le déploiement progressif des outils oligarchiques (fisc, armée permanente, administration, codification large) au sein de l'essor.
+**PO et maturation institutionnelle peuvent être étalés.** Le PO acte la bascule (le pouvoir survit désormais aux successions), mais l'appareil oligarchique mature continue de se déployer pendant l'essor. Le décalage typique entre PO et 1er monarque oligarchique est court (quelques années), mais le décalage entre PO et maturité institutionnelle complète peut être beaucoup plus long. Cette maturation étalée n'est pas un second PO ; c'est le déploiement progressif des outils oligarchiques (fisc, armée permanente, administration, codification large) au sein de l'essor — et deux de ces moments sont eux-mêmes des saillants, le **1er impôt permanent** et la **1re armée permanente** (voir ci-dessous).
+
+### Saillant : 1er impôt permanent
+
+#### Définition
+
+Première ressource fiscale dont l'extraction est appropriée par le cadre central de façon pérenne : consentie comme régime durable, effectivement disponible pour les structures publiques centrales, et survivant au détenteur qui l'a instituée.
+
+#### Marqueurs
+
+- **Consentement-régime, non consentement-événement** — l'impôt se reconduit de lui-même, et n'est pas reconcédé au coup par coup, prélèvement par prélèvement ou campagne par campagne.
+- **Affectation centrale-publique effective** — le produit est disponible pour le centre, non capté par des intermédiaires. La permanence juridique ne suffit pas si l'impôt est aliéné : le critère est rempli quand le résidu non capté suffit au centre pour financer ses fonctions.
+- **Ampleur régalienne** — assiette suffisante pour soutenir durablement une fonction régalienne, non un appoint marginal.
+- **Pérennité par-delà le règne** — le prélèvement subsiste au détenteur qui l'a institué.
+
+> Le saillant date le **basculement** vers ce régime, qui peut coïncider avec l'instauration de l'impôt ou survenir plus tard, quand un impôt préexistant — temporaire, ou juridiquement permanent mais capté — est pérennisé ou recentralisé.
+
+### Saillant : 1re armée permanente
+
+#### Définition
+
+Première force de coercition dont l'entretien est approprié par le cadre central de façon permanente, déployée comme instrument du centre sur le territoire et non attachée à la personne du détenteur du pouvoir. *(Pour les nations maritimes, la flotte permanente est l'équivalent canonique.)*
+
+#### Marqueurs
+
+- **Permanence** — la force subsiste entre les campagnes ; elle n'est pas levée puis dissoute à chaque guerre.
+- **Rétribution centrale** — entretenue par l'exécutif central sur base régulière, par une rétribution (monétaire ou non) qui lie le combattant directement au centre, sans intermédiation d'un pouvoir local ou seigneurial. *(Garde-fou contre l'ost féodal.)*
+- **Territorialisation** — déployée comme instrument de coercition sur le territoire (tient des places), indépendamment de la présence physique du détenteur. *(Distingue la force de la garde liée à sa personne — critère fonctionnel, non numérique.)*
+- **Pérennité par-delà le règne** — la force survit au détenteur qui l'a instituée. *(Son échec = avortement par non-survie, ex. Armée Noire de Mathias Corvin, dissoute en 1490.)*
 
 ### Saillant : Acmé oligarchique
 

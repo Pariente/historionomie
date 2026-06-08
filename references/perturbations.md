@@ -31,13 +31,13 @@ L'icône **et** la couleur encodent l'effet — le visuel décrit ce qui arrive 
 
 |  | Prolongement 🟠 | Accélération 🔵 | Avortement 🔴 | Reboot 🟤 |
 |---|---|---|---|---|
-| **Choc d'hétérogénéité** | ✓ | | (peut avorter une sous-phase) | |
+| **Choc d'hétérogénéité** | ✓ | | (peut avorter une sous-phase) | ✓ (pattern Philippe — cf. §4.7) |
 | **Choc exogène** | ✓ | ✓ | ✓ | ✓ |
 | **Insuffisance interne** | | | ✓ | |
 | **Correction d'échelle** | | ✓ | | |
 | **Exutoire** (continu) | ✓ | | | |
 
-Le **choc exogène** est le seul mécanisme polyvalent — son effet dépend de ce que le choc fait. Les autres mécanismes sont chacun couplés à un effet dominant.
+Le **choc exogène** est le seul mécanisme polyvalent — son effet dépend de ce que le choc fait. Les autres mécanismes sont chacun couplés à un effet dominant, avec deux variantes secondaires : choc d'hétérogénéité peut avorter une sous-phase (§4.1) ou rebooter une RN mûre pour GR en AR (pattern Philippe §4.7).
 
 ### Principe structurel : prolongement/accélération encodent une variation d'homogénéité
 
@@ -250,6 +250,44 @@ Cas typique de la fin d'exutoire militaire : perte d'une possession continentale
 **Contre-exemple** : Espagne pré-Nueva Planta (oligarchique 345 ans, absolutiste 217 ans non compressé). La monarchie composite Habsbourg n'est pas une tutelle étrangère mais une centralisation incomplète endogène ; la castillanisation est state-driven ; l'absence d'absorption laisse la phase absolutiste courir sa pleine durée. Le mécanisme suppose tutelle exogène + culture progressant autonomement de l'État, pas une simple lenteur de centralisation.
 
 **Affichage sur la frise** : pas de marqueur losange propre. La condition est mentionnée dans la description des phases oligarchique (prolongement) et absolutiste (compression) concernées. La durée des phases reflète le mécanisme, comme pour l'exutoire.
+
+### 4.7 Pattern Philippe : choc d'hétérogénéité injecté en RN qui reboote en AR
+
+**Définition** : combinaison `choc_heterogeneite` + `reboot` qui dévie la trajectoire d'une RN avortée mûre pour son élargissement final (vers GR souveraine) en la rebootant en phase absolutiste exogène composite. Premier exemple bien documenté du pattern : Ausgleich hongrois (1867).
+
+**Mécanisme structurel** : la nation se trouve dans une sous-phase Restauration exogène (cf. `phase_rn.md`) avec homogénéité élevée — la coalition restreinte d'occupation est intenable et doit s'élargir. L'élargissement attendu est la GR souveraine. Mais au lieu d'un élargissement qui libère, la puissance tutélaire injecte une hétérogénéité massive sous trois formes typiques :
+
+1. **Subordination dualiste ou fédérale** : la nation est liée institutionnellement à un ensemble multi-national (ministères communs, monnaie commune, stratégie commune). Elle n'est plus une coalition gagnante homogène mais une moitié d'un ensemble plus large.
+2. **Multi-ethnicité imposée** : le territoire de la nation est élargi (ou maintenu élargi) à des marges culturellement distinctes que la nation doit gérer par magyarisation/russification/etc. forcée plutôt que d'être homogène souveraine.
+3. **Légitimité dynastique hybride** : la nation est dotée d'un souverain qui appartient à la puissance tutélaire (souvent couronné séparément, formellement national mais en réalité dynastique étranger).
+
+Ces trois sources d'hétérogénéité empêchent structurellement la GR souveraine et créent les conditions d'un AR composite avec roman national propre mais sous tutelle. C'est la signature canonique d'une nouvelle **phase absolutiste rebootée** (cf. `phase_absolutiste.md` §AR exogène composite rebooté).
+
+**Saillant correspondant** : `Reboot d'AR` (ad-hoc, accepté comme perturbation-saillant), avec `mechanism: choc_heterogeneite` + `effect: reboot`. Positionné au moment de l'injection d'hétérogénéité (typiquement le traité ou compromis qui scelle l'élargissement dualiste/fédéral).
+
+**Cas-type documenté** : Hongrie 1867. La Restauration sous occupation Bach 1849-1867 devait s'élargir vers GR (homogénéité magyare élevée, défaites Solferino/Sadowa rendant la coalition restreinte intenable). L'Ausgleich injecte les trois hétérogénéités simultanément (dualisme habsbourgeois, royaume multi-ethnique à magyariser, légitimité hybride François-Joseph). La trajectoire RN est rebootée en phase absolutiste exogène composite (1867-1918).
+
+**Cas à examiner** : restaurations italiennes post-1815 (Lombardie-Vénétie, Modène, Parme), normalisations est-européennes post-1947 (Kádár, Husák, Gierek), peut-être Pologne XIXe (partages successifs).
+
+**Distinction avec choc d'hétérogénéité classique en phase oligarchique (4.1)** : le choc d'hétérogénéité classique opère pendant une phase en cours et la prolonge. Le pattern Philippe opère à un moment de transition critique (sortie de Restauration exogène vers GR attendue) et reboote la trajectoire vers une phase nouvelle. Le déclencheur est typiquement un acte juridique ou diplomatique structurant (compromis, traité, fédération imposée) plutôt qu'une absorption territoriale.
+
+### 4.8 Pattern de symétrie : saillant canonique + Écrasement perturbation
+
+**Définition** : convention d'encodage pour les saillants canoniques de RN qui se déroulent mais ne tiennent pas (Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Émergence de l'IR, Restauration, Glorieuse Révolution).
+
+**Règle** :
+
+- **Gap temporel exploitable entre l'événement canonique et son écrasement** (typiquement quelques jours à quelques années) : **deux saillants distincts** sur la frise — saillant canonique (sans flag perturbation) qui marque la tentative + saillant Écrasement (perturbation `choc_exogene` + `avortement`) qui marque l'avortement par intervention externe.
+- **Gap temporel nul ou collapsé** (semaines à mois) : **un seul saillant** qui capture les deux moments — typiquement le saillant canonique avec `perturbation: true` quand la conflation est complète, ou le saillant Restauration qui hérite de la dimension écrasement dans sa description.
+
+**Cas-types documentés** :
+- **Restauration avortée par Coup** : saillant canonique Restauration (Tildy/Nagy 1945 Hongrie ; Beneš 1945-1948 Bohême) + saillant Écrasement séparé (Coup de Budapest 1947 ; Coup de Prague 1948). Gap 2-3 ans → deux saillants.
+- **GR avortée par intervention extérieure** : saillant canonique Glorieuse Révolution (Nagy 1956 Hongrie ; Dubček 1968 Bohême) + saillant Écrasement séparé (intervention soviétique 4 nov 1956 ; intervention du Pacte de Varsovie août 1968). Gap quelques jours-mois → deux saillants.
+- **Restauration exogène collapsée avec écrasement** : un seul saillant Restauration (Hongrie 1849 : Världos + Terreur blanche + installation Bach sur quelques mois). Gap quasi-nul → un seul saillant qui capture la séquence.
+
+**Pourquoi cette règle** : le saillant canonique sans flag perturbation se lit comme une vraie tentative dans son ancrage structurel (les trois marqueurs canoniques sont présents). L'Écrasement comme losange séparé indique clairement la cause structurelle de l'avortement (intervention externe, hétérogénéité injectée, etc.). C'est plus lisible que la conflation en un seul saillant + perturbation:true, qui masque la nature distincte des deux événements quand un gap existe.
+
+Cf. `phase_rn.md` §Règle de symétrie pour le détail des cas RN.
 
 ---
 

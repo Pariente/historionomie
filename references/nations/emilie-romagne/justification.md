@@ -131,7 +131,21 @@ Pas de saillant Remontrance Estense. Justifié par :
 
 Cohérent avec le pattern Florence (qui n'a pas non plus de Remontrance, faute de corps institutionnel intégré pétitionnant le sommet).
 
-### 7. Glorieuse Révolution : fin par fusion (confiance LOW)
+### 7. Phase aiguë (avortée) + Moment thermidorien : jacobinisme italien radical et coups Trouvé/Brune (confiance medium)
+
+Deux saillants ajoutés à la sous-phase de Révolution initiale (1796-1805), entre Expérience parlementaire et bascule en IR.
+
+**Phase aiguë (avortée, 1797-1798)** — Identifie le courant unitaire des jacobins italiens (Compagnoni, Galdi, Gioia, Ranza, Salfi, Custodi) comme amorce canonique de radicalisation EG endogène. Vecteurs : presse révolutionnaire, Circoli Costituzionali (clubs jacobins) de Bologne, Modène et Milan, projet de République italienne unitaire en rupture avec la modération directoriale française. Cas particulier d'une Phase aiguë où la radicalisation interne au camp révolutionnaire est réelle (programmatique, organisationnelle, idéologique) mais ne parvient jamais au contrôle effectif des leviers d'État — ceux-ci restent tenus par les commissaires français. D'où l'avortement : pas de Comité de salut public, pas de Tribunal révolutionnaire, pas de Terreur.
+
+Distinct des insurrections Viva Maria / sanfedistes / sac de Lugo (1796-1799) : ces dernières sont contre-révolutionnaires (paysans-cléricaux contre jacobins), donc disqualifiées comme Phase aiguë canonique. Hypothèse écartée explicitement.
+
+**Moment thermidorien (1798)** — Identifie les coups Trouvé (30 août 1798, ambassadeur français impose une constitution recentrée) et Brune (octobre 1798, général ajuste à nouveau) comme opération fonctionnellement thermidorienne : purge des EG radicaux, restitution du pouvoir aux G/D modérés, refermeture de la fenêtre de radicalisation. Cas particulier où l'agent de l'opération est exogène (Paris) et non interne au camp révolutionnaire local. Le tuteur français joue donc à la fois le rôle d'auteur de la révolution, d'arbitre thermidorien préemptif, et d'IR à venir — la même autorité externe tient toute la séquence.
+
+Pattern probablement récurrent dans les autres satellites napoléoniens (Cisalpine entière, Helvétique, Romaine, Parthénopéenne) — non instruit ici, à explorer séparément si jugé utile. Pas remonté comme catégorie théorique nouvelle dans les fichiers de méthodologie : noté comme cas particulier du parcours émilien-romagnol.
+
+**Confiance medium** pour les deux saillants : la mécanique historique (courant unitaire jacobin, coups Trouvé/Brune) est solidement documentée à l'échelle cisalpine, mais l'imputation spécifique à l'aire émilienne-romagnole (par opposition à Milan, centre politique de la Cisalpine) reste partiellement inférée. Bologne, Modène, Ferrare appartiennent au cadre cisalpin et sont donc affectées de plein droit, mais le poids relatif des jacobins émiliens-romagnols spécifiquement dans le courant unitaire mériterait instruction archivistique.
+
+### 8. Glorieuse Révolution : fin par fusion (confiance LOW)
 
 Pas de Glorieuse Révolution endogène au sens canonique. Le saillant final est une **fusion-absorption dans le Parcours italien**.
 

@@ -167,13 +167,18 @@ Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources
 
 ### Saillant : Dernière grande révolte oligarchique (DGRO)
 
-**Définition** : les grands féodaux et oligarques, mis au pas progressivement, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites.
+**Définition** : les grands féodaux et oligarques, mis au pas progressivement par l'absolutisation, se révoltent une dernière fois. L'échec de cette révolte marque la fin de la résistance organisée des anciennes élites.
+
+**Position temporelle canonique** : la DGRO survient **pendant la sous-phase d'absolutisation**, typiquement **30 à 50 ans après le 1er monarque absolu**. Elle est le sursaut tardif des oligarques contre l'imposition progressive du nouveau cadre central — pas la phase terminale de la guerre sociale qui a déjà été résolue.
+
+> **⚠️ Piège fréquent à éviter : confusion DGRO / dernière phase de GS.** La DGRO et la guerre sociale sont deux saillants distincts qui ne se chevauchent **jamais**. La GS est résolue par l'émergence du 1er MA (saillant frontière oligarchique → absolutiste) ; la DGRO est une révolte ultérieure des oligarques **contre** le 1er MA déjà installé. Quand un événement armé concomitant avec la résolution de la GS écrase les oligarques (cas typique des résolutions exogènes : Montagne Blanche en Tchéquie 1620), il appartient à la GS comme phase terminale, pas à la DGRO. Si l'écrasement de la GS est suffisamment radical pour éliminer les oligarques comme classe avec assise territoriale (exécutions, confiscations massives, expulsions, importation d'aristocratie de service étrangère), la DGRO devient **structurellement impossible** par la suite — cf. §Cas particulier : absence de DGRO ci-dessous.
 
 **Test discriminant** : qu'est-ce qui distingue une DGRO d'une révolte ordinaire ou d'une remontrance ?
 
 1. **Caractère armé** — la DGRO est une révolte effective, pas une simple contestation institutionnelle (cf. Remontrance ci-dessous)
 2. **Assise territoriale** — les oligarques disposent de bases territoriales locales (seigneuries, places fortes, clientèles armées) depuis lesquelles résister
 3. **Caractère terminal** — l'échec marque la fin de la résistance organisée des anciennes élites ; après la DGRO, les oligarques cessent d'être un facteur militaire indépendant
+4. **Position temporelle** — postérieure au 1er MA, pendant l'absolutisation (typiquement 30-50 ans après le 1er MA), jamais simultanée à la résolution de la GS
 
 **Signes observables** :
 - Soulèvement armé d'oligarques traditionnels (pas d'élites administratives) avec bases territoriales propres
@@ -183,7 +188,10 @@ Cette mise sous contrôle peut prendre les apparences d'un « retour aux sources
 
 #### Cas particulier : absence de DGRO
 
-La DGRO suppose que les oligarques disposent d'une **assise territoriale locale** depuis laquelle résister. Si les oligarques sont concentrés dans un seul lieu sans base territoriale propre (typique des cités-États où le patriciat vit dans la cité-mère et où ses propriétés extérieures sont des investissements gérés par rotation administrative), la DGRO est impossible — l'absolutisation est « fluide ».
+La DGRO suppose que les oligarques disposent d'une **assise territoriale locale** depuis laquelle résister. Deux configurations rendent la DGRO impossible :
+
+1. **Oligarques sans base territoriale propre** (typique des cités-États où le patriciat vit dans la cité-mère et où ses propriétés extérieures sont des investissements gérés par rotation administrative).
+2. **Absolutisation par éradication** : quand la résolution de la GS s'opère par puissance étrangère qui élimine simultanément les oligarques comme classe (exécutions massives, confiscations sur tout le territoire, expulsions, importation d'une nouvelle aristocratie de service sans patrimoine indépendant). Cas-type : Tchéquie post-Montagne Blanche 1620-1627. Les oligarques tchèques cessent d'exister comme classe avec assise territoriale dès la résolution de la GS — aucune révolte ultérieure ne peut se constituer.
 
 Quand la DGRO est absente, la transition de l'absolutisation vers l'impérialisme se fait sans rupture, portée simplement par la mécanique de mise au pas des oligarques. Les contestations ultérieures de la classe administrative prendront la forme de **remontrances** (cf. ci-dessous, sous-phase 2), pas de DGRO.
 
@@ -377,6 +385,35 @@ L'AR ne s'achève pas par une transition ordonnée. Pour qu'il **éclate de faç
 Tant que l'un des deux critères manque, l'AR perdure. Si un choc exogène arrive avant que la maturité endogène ne soit atteinte, l'AR éclate quand même mais **prématurément** — la RN qui suit peut malgré tout aboutir si elle n'est pas écrasée par puissance extérieure (cf. `phase_rn.md` §Conditions de sortie).
 
 Ce critère explique pourquoi certains AR durent au-delà de la norme — typiquement quand le discrédit est avéré mais qu'un souverain réformateur ou une situation budgétaire contenue empêche la convergence avec une ruine financière effective.
+
+---
+
+## Dérivation rare : AR exogène (sous-phase ou phase à part)
+
+L'AR exogène est un régime tutélaire imposé par puissance extérieure qui occupe structurellement l'espace d'une sous-phase Ancien régime. Trois formes sont à distinguer selon le moment d'imposition et la position dans le cycle :
+
+### Forme 1 : sous-phase AR exogène dans une phase absolutiste continue
+
+Quand un AR endogène se voit imposer, en cours de phase, une administration tutélaire extérieure (cooptation des élites locales sous tutelle, perte d'autonomie effective). La sous-phase canonique `ancien régime` devient `ancien régime exogène`. La phase absolutiste reste continue. Cas-type : Bohême post-Verneuerte Landesordnung (1627) intégrée au cadre habsbourgeois.
+
+### Forme 2 : phase absolutiste exogène nouvelle, ouverte après écrasement d'une RN
+
+Quand une RN est avortée tôt (à la révolution initiale, sans IR ni Restauration endogène) et que la puissance occupante installe un régime durable qui satisfait les marqueurs absolutistes (admin centrale préséante, exécutif sans frein, cycle d'AR observable). Cette forme peut succéder directement à la sous-phase Restauration exogène de la RN avortée — cf. `phase_rn.md` §Dérivation rare : Restauration exogène. Cas à examiner au cas par cas selon la durée et la consistance institutionnelle.
+
+### Forme 3 : phase absolutiste exogène composite **rebootée** par choc d'hétérogénéité
+
+Pattern Philippe (cf. `perturbations.md` §4.7) : une Restauration exogène (sous-phase de RN) qui aurait dû s'élargir vers GR est déviée par injection d'hétérogénéité massive et **rebootée en phase absolutiste exogène composite**. Le saillant de bascule est un **Reboot d'AR** (perturbation `choc_heterogeneite` + `reboot`), positionné au moment de l'injection d'hétérogénéité.
+
+**Marqueurs distinctifs de l'AR exogène composite rebooté** :
+
+1. **Admin centrale rendue aux nationaux** (contraste avec la Restauration exogène pure qui précède, où l'admin était pilotée par les étrangers). Critère opérationnel décisif — c'est ce qui distingue la forme composite de la forme occupation.
+2. **Roman national assumé dans cadre composite tutélaire** : la nation a sa propre légitimité narrative et institutionnelle, mais à l'intérieur d'un cadre subordonné stratégiquement à la puissance tutélaire (ministères communs, monnaie commune, stratégie commune).
+3. **Cycle d'AR canonique** : sédimentation longue, bloc contestataire structuré, magyarisation ou autre processus d'homogénéisation interne forcée, pic de prestige (commémoration, exposition, jubilé), éclatement final par défaite ou effondrement externe.
+4. **Pattern d'entrée par Reboot d'AR** : saillant ad-hoc qui ouvre la phase, distinct de la simple Restauration. Le titre `Reboot d'AR` n'est pas dans la liste canonique fermée des saillants mais est accepté comme perturbation-saillant marquant la transition.
+
+**Cas-type documenté** : Hongrie 1867-1918, ouverte par le saillant Reboot d'AR (Ausgleich, 29 mai 1867) après la sous-phase Restauration exogène Bach 1849-1867. AR exogène composite rebooté qui dure 51 ans (Millénaire 1896 comme pic de prestige) jusqu'à l'effondrement de la Double Monarchie en 1918.
+
+**Cas à examiner** : restaurations italiennes post-1815 (Lombardie-Vénétie, Modène, Parme) et normalisations est-européennes post-1947 (où la normalisation Kádár/Husák/Gierek injecte des hétérogénéités dualistes URSS/national qui peuvent matcher le pattern reboot).
 
 ---
 

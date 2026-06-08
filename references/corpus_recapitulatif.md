@@ -16,8 +16,8 @@ Pour le détail par nation, voir `references/nations/*/parcours.md` et `referenc
 |---|---|---|---|---|---|---|---|---|
 | Éveil féodal | Saül (~-1080) | — | Louis VI (1108) | Guillaume (1066, reboot) | Orso Ipato (~726) | Louis Ier (~1204) | Thomas II (~1233) | Communes consulaires (~1115) |
 | Pic féodal | Salomon (~-960) | — | Philippe le Bel (~1295) | Édouard Ier (~1295) | Orseolo (~991) | Louis IV (~1328) | Philippe Ier d'Achaïe (~1295) | — |
-| Pacte oligarchique | Probable sous Omri (-885), non textuellement attesté | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Statuta (1430) / Ordini Nuovi (1561) | Ordinamenti di Giustizia (1293) |
-| 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Contarini (~1043) / système | Guillaume IV (~1508) | Amédée VIII (~1430) / Emmanuel Philibert (1559) | Signoria post-1293 |
+| Pacte oligarchique | Probable sous Omri (-885), non textuellement attesté | — | Loi salique (1317) | Ordonnances (1311) | Abolition co-régence (1032) | Primogéniture (1506) | Ordini Nuovi (1561) | Ordinamenti di Giustizia (1293) |
+| 1er monarque oligarchique | Omri (-885) | — | Philippe VI (1328) | Édouard III (1327) | Contarini (~1043) / système | Guillaume IV (~1508) | Emmanuel Philibert (1559) | Signoria post-1293 |
 | Acmé oligarchique | Jéroboam II (~-770) | — | François Ier (~1515) | Édouard III (~1350) | Foscari (~1440) | Albert V (~1555) | Charles Emmanuel Ier (~1600) | Bardi-Peruzzi (~1325-1339) |
 | Guerre sociale | -700 à -641 | -175 à -140 | Guerres de Religion (~1562-1598) | Guerre des Deux-Roses (~1455-1485) | Tensions institutionnelles (~1628-1669) | ~1564-1597 | Madamisti/Principisti (~1637-1696) | Albizzi vs Médicis (1433-1480) |
 | 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) | Laurent le Magnifique (1480) |
@@ -97,7 +97,7 @@ Pour les définitions des mécanismes et effets, voir `references/perturbations.
 | Partitions (1255, 1349, 1392) | Bavière | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
 | Doublement napoléonien (1806) | Bavière | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | **Piémont** |
-| Invasion française (1536) | Piémont | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
+| Conquête bernoise du Vaud (1536-1564) | Piémont | Correction d'échelle | Accélération 🔵 | Oui | ◆🔵 `compress` |
 | Éclipse napoléonienne (1796-1814) | Piémont | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
 | **Autriche** |
 | Crise féodale — extinction Babenberg (1246) | Autriche | Insuffisance interne | Avortement 🔴 | Non | ◆🔴 `close` |
@@ -135,7 +135,7 @@ Parcours canoniques uniquement (Bohême, Hongrie en débat — non inclus). Pour
 | France | Louis VI (~1108) | Philippe Auguste (~1214), Philippe le Bel (~1295) | Loi salique (1317) | ~220 ans |
 | Autriche [1] (avortée) | Léopold VI (~1198) | — | — (avortée, extinction Babenberg 1246) | ~48 ans |
 | Bavière | Louis Ier (~1204) | Louis IV (~1328), Ludwig IX (~1450) | Primogéniture (1506) | ~326 ans |
-| Piémont | Thomas II (1233) | Philippe Ier d'Achaïe (~1295), Amédée d'Achaïe (~1380) | Statuta Sabaudiae (1430) | ~197 ans |
+| Piémont | Thomas II (1233) | Philippe Ier d'Achaïe (~1295), Amédée d'Achaïe (~1380), Amédée VIII / Statuta (1430) | Ordini Nuovi (1561) | ~328 ans |
 | Suisse | Bundesbrief (1291) | Sempach (1386), Guerres de Bourgogne (~1474) | Stanser Verkommnis (1481) | ~190 ans |
 | Autriche [2] | Rudolf IV (1358) | — | Innsbrucker Libell (1518) | ~160 ans |
 | USA | ~1776 | Lincoln/Grant (~1865), McKinley/T. Roosevelt (~1905) | Fed + IRS (1913) | ~137 ans |
@@ -156,7 +156,7 @@ Pour les définitions des saillants, voir `references/phase_oligarchique.md`.
 | Angleterre | Édouard III (1327) | Édouard III (~1350) | Guerre des Deux-Roses (~1455-1485) | Henri VII (1485) |
 | France | Philippe VI (1328) | François Ier (~1515) | Guerres de Religion (~1562-1598) | Henri IV (1598) |
 | Espagne | Henri II Trastámara (1369) | Rois Catholiques (~1492) | Succession d'Espagne (1700-1714) | Philippe V (1714) |
-| Piémont | Amédée VIII (1430) | Charles Emmanuel Ier (~1600) | Madamisti vs Principisti (1637-1696) | Victor Amédée II (1696) |
+| Piémont | Emmanuel Philibert (1561) | Charles Emmanuel Ier (~1600) | Madamisti vs Principisti (1637-1696) | Victor Amédée II (1696) |
 | Suisse | Tagsatzung (~1501) | Occupation de Milan (~1512) | Paysans / Villmergen (1653-1712) | Patriciat trans-confessionnel (1712) |
 | Bavière | Guillaume IV (1508) | Albert V (~1555) | ~1564-1597 | Maximilien Ier (1597) |
 | Autriche | Maximilien Ier (1518) | Léopold Ier (~1683) | Succession d'Autriche (1740-1748) | Marie-Thérèse (1749) |

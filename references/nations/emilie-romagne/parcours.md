@@ -373,12 +373,12 @@
 - typical_duration: ~25-80 ans
 - actual_duration: ~64 ans
 - resolution: Plébiscites de mars 1860 (426 006 oui, 756 non) — annexion au Royaume de Sardaigne, intégration au Royaume d'Italie proclamé le 17 mars 1861. La Révolution Nationale émilienne-romagnole s'achève par fusion-absorption dans le Parcours italien plus vaste, sans Glorieuse Révolution endogène.
-- summary: Révolution Nationale longue et diffractée (~64 ans), articulée autour d'un Impérialisme revanchard exogène napoléonien et de répliques successives écrasées par puissance étrangère. L'Éclatement de l'AR s'opère par l'invasion française de 1796 ; la République Cispadane voit le jour à Reggio Emilia avec le drapeau tricolore et la première constitution jacobine d'Italie ; la République Cisalpine puis le Royaume d'Italie napoléonien (1805) réalisent — pour la première fois depuis l'Antiquité — l'unification politique de toute l'aire. La Restauration intervient en 1815. Deux Glorieuses Révolutions sont ensuite avortées par intervention extérieure : Menotti et la sécession des Légations (1831) écrasés par l'Autriche, l'Otto Agosto bolonais et les gouvernements provisoires (1848) écrasés après Custoza et Novare. L'aboutissement prend la forme d'une fin par fusion italienne (1859-1860), avec Farini dictateur, plébiscites massifs et clôture du Parcours endogène distinct.
+- summary: Révolution Nationale longue et diffractée (~64 ans), articulée autour d'un Impérialisme revanchard exogène napoléonien et de deux Glorieuses Révolutions Mode B avortées par puissance étrangère. L'Éclatement de l'AR s'opère par l'invasion française de 1796 ; la République Cispadane voit le jour à Reggio Emilia avec le drapeau tricolore et la première constitution jacobine d'Italie ; la République Cisalpine puis le Royaume d'Italie napoléonien (1805) réalisent — pour la première fois depuis l'Antiquité — l'unification politique de toute l'aire. La Restauration exogène intervient en 1815 (souverains tous étrangers : Habsbourg-Este à Modène, Bourbon-Parme à Parme, Légations papales). Deux Glorieuses Révolutions Mode B sont ensuite avortées par intervention extérieure : Menotti et la sécession des Légations (1831) écrasés par l'Autriche, l'Otto Agosto bolonais et les gouvernements provisoires (1848) écrasés après Custoza et Novare. L'aboutissement prend la forme d'une fin par fusion italienne (1859-1860), avec Farini dictateur, plébiscites massifs et clôture du Parcours endogène distinct.
 - description: La Révolution Nationale émilienne-romagnole s'étale sur environ soixante-quatre ans selon une structure singulière : un Éclatement initial, un Impérialisme revanchard exogène, une Restauration, puis une succession de cycles révolutionnaires avortés jusqu'à l'aboutissement par fusion.
 
   L'Éclatement de l'AR (1796) procède de l'invasion française. L'Armistice de Bologne (23 juin) consacre l'expulsion des autorités papales et ducales. Le Congrès de Modène (16 octobre 1796) puis celui de Reggio Emilia (27 décembre 1796) rassemblent les représentants de Modène, Bologne, Ferrare et Reggio Emilia : ils proclament la République Cispadane, adoptent le drapeau tricolore vert-blanc-rouge — première utilisation politique italienne du symbole — et rédigent la première constitution jacobine d'Italie.
 
-  L'Expérience parlementaire de la Cispadane est immédiatement absorbée par la République Cisalpine (juin-juillet 1797), puis le Traité de Campo Formio (octobre 1797), la République Italienne (1802) et enfin le Royaume d'Italie napoléonien (1805) sous Eugène de Beauharnais se succèdent rapidement. Pour la première fois depuis l'Antiquité, toute l'aire émilienne-romagnole se retrouve sous une autorité unique, dotée d'une administration départementale uniforme, du Code civil, de l'abolition de la féodalité résiduelle, de la sécularisation des biens ecclésiastiques, de la conscription, de l'état civil laïc et du système métrique.
+  L'Expérience parlementaire de la Cispadane est immédiatement absorbée par la République Cisalpine (juin-juillet 1797), puis le Traité de Campo Formio (octobre 1797). À l'intérieur de ce nouveau cadre se déploie en 1797-1798 une Phase aiguë canonique mais avortée : le courant unitaire des jacobins italiens — Compagnoni, Galdi, Gioia, Salfi, Ranza — pousse pour une République italienne unitaire et une démocratie élargie, anime les Circoli Costituzionali de Bologne et de Milan, mais ne parvient jamais au contrôle effectif des leviers d'État, qui restent tenus par les commissaires français. La fenêtre se referme par les coups Trouvé (août 1798) et Brune (octobre 1798), qui constituent un Moment thermidorien fonctionnellement canonique mais d'agent exogène : c'est le tuteur français lui-même qui purge les radicaux et restitue le pouvoir aux modérés, sans que la Cisalpine ait pu connaître ni Comité de salut public ni Terreur. La République Italienne (1802) puis le Royaume d'Italie napoléonien (1805) sous Eugène de Beauharnais se succèdent ensuite rapidement. Pour la première fois depuis l'Antiquité, toute l'aire émilienne-romagnole se retrouve sous une autorité unique, dotée d'une administration départementale uniforme, du Code civil, de l'abolition de la féodalité résiduelle, de la sécularisation des biens ecclésiastiques, de la conscription, de l'état civil laïc et du système métrique.
 
   L'Émergence de l'Impérialisme revanchard est exogène : Napoléon en assume la fonction dès 1796, et formellement avec le Royaume d'Italie en 1805. C'est cet IR exogène qui réalise pour la première fois l'unification politique de l'aire.
 
@@ -387,7 +387,7 @@
   Deux Glorieuses Révolutions sont ensuite tentées puis avortées par intervention extérieure. En 1831, la conjuration de Ciro Menotti à Modène — initialement prévue pour le 5 février, démantelée par François IV le 3 février, son chef exécuté le 26 mai — se propage néanmoins : sécession proclamée des Légations de Bologne, Ferrare, Ravenne et Forlì le 5 février, gouvernement provisoire à Bologne, avant l'écrasement par l'intervention autrichienne en mars 1831. En 1848, le soulèvement bolonais de l'Otto Agosto chasse une garnison autrichienne, des gouvernements provisoires se forment à Modène, Parme et dans les Légations, et l'aire s'insère dans la Première Guerre d'Indépendance italienne ; mais les défaites piémontaises de Custoza (juillet 1848) puis Novare (mars 1849) provoquent la restauration des ducs et de la légation papale.
 
   L'aboutissement final intervient en 1859-1860, non comme Glorieuse Révolution canonique mais comme fin par fusion italienne. La Seconde Guerre d'Indépendance (avril-juillet 1859) chasse les ducs et les légats ; Luigi Carlo Farini est désigné commissaire pour Modène puis dictateur des « Province dell'Emilia » en décembre 1859 ; la fusion dans les Provinces Unies de l'Italie Centrale précède les plébiscites de mars 1860 (426 006 oui, 756 non) qui prononcent l'annexion à la Sardaigne ; la proclamation du Royaume d'Italie le 17 mars 1861 clôt le processus. Le parcours émilien-romagnol ne connaît donc pas de Glorieuse Révolution endogène : la Révolution Nationale s'achève par fusion-absorption dans un parcours italien plus vaste qui prend désormais le relais. Le pattern est typique des nations distribuées non unifiées (parallèle structurel avec Florence, Milan, Venise — toutes absorbées par le Royaume d'Italie sans aboutissement parlementaire endogène).
-- deviation: +0 an. Durée dans la fourchette typique de la Révolution Nationale (~25-80 ans). Pattern caractéristique d'éclatements répétés et de répliques avortées avant aboutissement final.
+- deviation: +0 an. Durée dans la fourchette typique de la Révolution Nationale (~25-80 ans). Pattern caractéristique d'une RN longue avec sous-phase Restauration exogène traversée de deux GR Mode B avortées (1831, 1848) avant aboutissement final par fusion italienne.
 
 ### Subphase : Révolution initiale (1796-1805)
 
@@ -396,7 +396,7 @@
 - start: 1796
 - end: 1805
 - title: Révolution initiale
-- summary: La sous-phase de Révolution initiale s'ouvre avec l'invasion française de 1796 et l'Armistice de Bologne. La République Cispadane est proclamée lors des Congrès de Modène (octobre 1796) puis de Reggio Emilia (décembre 1796), avec l'adoption du drapeau tricolore et la première constitution jacobine d'Italie. Elle est rapidement absorbée par la République Cisalpine (1797), interrompue par un bref retour autrichien (1799-1800), puis reprise sous la République Italienne (1802) jusqu'à la proclamation du Royaume d'Italie napoléonien en 1805 qui ouvre la sous-phase d'Impérialisme revanchard.
+- summary: La sous-phase de Révolution initiale s'ouvre avec l'invasion française de 1796 et l'Armistice de Bologne. La République Cispadane est proclamée lors des Congrès de Modène (octobre 1796) puis de Reggio Emilia (décembre 1796), avec l'adoption du drapeau tricolore et la première constitution jacobine d'Italie. Elle est rapidement absorbée par la République Cisalpine (1797). La séquence canonique Phase aiguë / Moment thermidorien s'y déploie sous une forme particulière : le courant unitaire des jacobins italiens radicaux (Compagnoni, Galdi, Gioia, Ranza, Salfi) amorce une Phase aiguë endogène en 1797-1798 — sans pouvoir aller au bout faute de contrôle effectif des leviers d'État — puis le tuteur français lui-même referme la fenêtre par les coups Trouvé (août 1798) et Brune (octobre 1798), qui purgent les radicaux et installent les modérés. Bref retour autrichien (1799-1800), puis reprise sous la République Italienne (1802) jusqu'à la proclamation du Royaume d'Italie napoléonien en 1805 qui ouvre la sous-phase d'Impérialisme revanchard.
 
 #### Saillant : Éclatement de l'AR — invasion française
 
@@ -418,6 +418,29 @@
 - confidence: high
 - summary: Lors du Congrès de Reggio Emilia (27 décembre 1796), les représentants de Modène, Bologne, Ferrare et Reggio Emilia rédigent et adoptent une constitution républicaine. Il s'agit du premier essai parlementaire à l'échelle de l'aire émilienne, immédiatement absorbé par la République Cisalpine (juin-juillet 1797). C'est à cette occasion qu'est inventé le drapeau tricolore — symbole dont la portée dépasse rapidement l'aire pour devenir emblème du Risorgimento italien tout entier.
 
+#### Saillant : Phase aiguë (avortée) — jacobinisme italien radical
+
+- type: saillant
+- start: 1797
+- end: 1798
+- subtitle: Courant unitaire des jacobins italiens
+- title: Phase aiguë
+- confidence: medium
+- alternatives: Cas particulier de Phase aiguë canonique dont la radicalisation EG endogène est amorcée mais ne parvient jamais au contrôle effectif des leviers d'État, parce que ces leviers restent tenus par le tuteur français. Pas de Comité de salut public émilien, pas de Tribunal révolutionnaire, pas de Terreur — mais bien un courant révolutionnaire interne qui pousse, par la presse et les Circoli Costituzionali, vers une République unitaire italienne plus radicale, la rupture avec la France directoriale et l'extension de la révolution. Distinct de la réaction Viva Maria / sanfedistes (1796-1799), qui est contre-révolutionnaire et donc disqualifiée comme Phase aiguë canonique.
+- summary: Le courant unitaire des jacobins italiens — Giuseppe Compagnoni (rédacteur de la Constitution cispadane), Matteo Galdi, Melchiorre Gioia, Giovanni Antonio Ranza, Francesco Salfi, Pietro Custodi — pousse pendant 1797-1798 pour une République italienne unitaire, une démocratie élargie et une rupture avec la modération directoriale française. La radicalisation s'exprime dans les Circoli Costituzionali (clubs jacobins) de Bologne, Milan et Modène, ainsi que dans la presse révolutionnaire (Gioia publie en 1797 *Quale dei governi liberi meglio convenga alla felicità dell'Italia* qui plaide pour la République unitaire). Mais le courant n'atteint jamais le contrôle effectif des leviers d'État — ceux-ci restent tenus par les commissaires français — et la fenêtre se referme dès août 1798 par le coup Trouvé. Phase aiguë canonique avortée non par contre-révolution intérieure ni par choc militaire extérieur, mais par préemption du tuteur révolutionnaire lui-même.
+
+#### Saillant : Moment thermidorien — coups Trouvé et Brune
+
+- type: saillant
+- start: 1798
+- end: 1798
+- figure: Louis-Marie Trouvé
+- subtitle: Purge des jacobins radicaux par le tuteur français
+- title: Moment thermidorien
+- confidence: medium
+- alternatives: Cas particulier de Moment thermidorien dont l'opération de recentrage est conduite non depuis l'intérieur du camp révolutionnaire mais par le tuteur exogène (la France directoriale puis consulaire). Le pattern reste fonctionnellement canonique — purge des EG radicaux, restitution du pouvoir aux G/D modérés, refermeture de la fenêtre de radicalisation — mais l'agent est exogène. Conséquence : il n'y a pas de basculement endogène entre Phase aiguë et IR, c'est le même acteur (Paris) qui referme la radicalisation et inaugure l'IR napoléonien.
+- summary: Louis-Marie Trouvé, ambassadeur français à Milan, impose le 30 août 1798 une nouvelle constitution à la Cisalpine, restreint le suffrage et purge les jacobins radicaux du Directoire exécutif et des conseils législatifs. Le général Guillaume Brune complète l'opération en octobre 1798 par un second coup qui ajuste de nouveau les institutions au profit des modérés. La séquence évince Compagnoni, Galdi, Salfi et l'essentiel du courant unitaire ; elle stabilise la République Cisalpine — Émilie comprise — comme satellite modéré du Directoire. Fonctionnellement c'est un thermidor : refermeture de la fenêtre de radicalisation, retour aux G/D bourgeois, neutralisation des EG. Mais l'opération est tenue depuis Paris, pas depuis Milan ou Bologne. Pattern probablement récurrent dans les satellites napoléoniens (Cisalpine, Helvétique, Parthénopéenne, Romaine) — à instruire séparément.
+
 ### Subphase : Impérialisme revanchard exogène (1805-1814)
 
 - type: subphase
@@ -438,14 +461,14 @@
 - confidence: high
 - summary: Napoléon incarne l'Impérialisme revanchard exogène de la Révolution Nationale émilienne-romagnole. Le Royaume d'Italie napoléonien, proclamé en 1805 sous le vice-royaume d'Eugène de Beauharnais, place pour la première fois depuis l'Antiquité l'aire émilienne-romagnole entière sous une autorité unique. Centralisation administrative préfectorale, Code civil, sécularisation systématique, conscription : les piliers de la modernité napoléonienne se déploient simultanément. Le cas relève d'un IR entièrement exogène, comparable mutatis mutandis à celui de Florence (Royaume d'Étrurie en 1801, intégration directe à l'Empire entre 1808 et 1814).
 
-### Subphase : Restauration (1815-1860)
+### Subphase : Restauration exogène (1815-1860)
 
 - type: subphase
 - phase: rn
 - start: 1815
 - end: 1860
-- title: Restauration
-- summary: La sous-phase de Restauration restaure une tripartition stable : Marie-Louise d'Autriche à Parme puis Bourbon-Parme, Habsbourg-Este à Modène, Légations papales à Bologne, Ferrare et en Romagne. Le Code civil napoléonien est partiellement conservé. Deux Glorieuses Révolutions sont successivement tentées puis avortées par puissance étrangère : Menotti et la sécession des Légations en 1831, écrasés par l'Autriche ; l'Otto Agosto et les gouvernements provisoires en 1848, écrasés après Custoza et Novare. L'aboutissement intervient en 1859-1860 sous forme de fusion italienne — fuite des souverains, dictature Farini, plébiscites massifs — et non comme Glorieuse Révolution endogène.
+- title: Restauration exogène
+- summary: Sous-phase de Restauration exogène — tous les souverains de l'aire sont étrangers (Marie-Louise d'Autriche puis Bourbon-Parme à Parme, Habsbourg-Este à Modène, Légations papales à Bologne, Ferrare et en Romagne) ; aucun souverain émilien-romagnol propre n'existe à 1815. Le Code civil napoléonien est partiellement conservé. Deux Glorieuses Révolutions Mode B (bottom-up contre les occupants, faute de souverain local légitime qui pourrait octroyer) sont successivement tentées puis avortées par puissance étrangère : Menotti et la sécession des Légations en 1831, écrasés par l'Autriche ; l'Otto Agosto et les gouvernements provisoires en 1848, écrasés après Custoza et Novare. L'aboutissement intervient en 1859-1860 sous forme de fusion italienne — fuite des souverains, dictature Farini, plébiscites massifs.
 
 #### Saillant : Restauration — Congrès de Vienne
 
@@ -455,7 +478,7 @@
 - subtitle: Tripartition restaurée
 - title: Restauration
 - confidence: high
-- summary: Le Congrès de Vienne restaure la tripartition antérieure : Marie-Louise d'Autriche reçoit le duché de Parme-Plaisance-Guastalla en viager (1815-1847), les Habsbourg-Este récupèrent Modène-Reggio (François IV puis François V), et les Légations papales sont restaurées à Bologne, Ferrare et en Romagne (Pie VII et ses successeurs). Le Code civil napoléonien est partiellement conservé à Modène et Parme — transformation incomplète qui témoigne d'une rupture impossible à effacer entièrement. Le souvenir de l'unification napoléonienne demeure vif dans les élites bourgeoises, et nourrira les répliques révolutionnaires des décennies suivantes.
+- summary: Le Congrès de Vienne installe une tripartition de souverains tous étrangers : Marie-Louise d'Autriche reçoit le duché de Parme-Plaisance-Guastalla en viager (1815-1847), les Habsbourg-Este récupèrent Modène-Reggio (François IV puis François V), et les Légations papales sont restaurées à Bologne, Ferrare et en Romagne (Pie VII et ses successeurs). Aucun souverain n'est émilien-romagnol propre — d'où le caractère **exogène** de cette Restauration. Le Code civil napoléonien est partiellement conservé à Modène et Parme — transformation incomplète qui témoigne d'une rupture impossible à effacer entièrement. Le souvenir de l'unification napoléonienne demeure vif dans les élites bourgeoises, et nourrira les Glorieuses Révolutions Mode B des décennies suivantes.
 
 #### Saillant : Glorieuse Révolution — Menotti et sécession des Légations
 
@@ -466,7 +489,7 @@
 - subtitle: Sécession des Légations
 - title: Glorieuse Révolution
 - confidence: high
-- summary: La conjuration de Ciro Menotti à Modène, initialement prévue pour le 5 février 1831, est démantelée par François IV dès le 3 février ; Menotti sera exécuté le 26 mai. Le mouvement s'étend néanmoins : dès le 5 février, les Légations de Bologne, Ferrare, Ravenne et Forlì proclament leur sécession des États pontificaux, et un gouvernement provisoire s'installe à Bologne. Il s'agit de la première réplique de la révolution initiale dans la sous-phase de Restauration — tentative d'aboutissement de la Révolution Nationale qui aurait pu déboucher sur une fusion italienne précoce.
+- summary: La conjuration de Ciro Menotti à Modène, initialement prévue pour le 5 février 1831, est démantelée par François IV dès le 3 février ; Menotti sera exécuté le 26 mai. Le mouvement s'étend néanmoins : dès le 5 février, les Légations de Bologne, Ferrare, Ravenne et Forlì proclament leur sécession des États pontificaux, et un gouvernement provisoire s'installe à Bologne. Il s'agit d'une **Glorieuse Révolution canonique en Mode B** (cf. `phase_rn.md` §Saillant : Glorieuse Révolution / Deux modes formels) — mouvement bottom-up contre les souverains occupants étrangers (Habsbourg-Este à Modène, Bourbon-Parme à Parme, Légations papales à Bologne et en Romagne) sans souverain local légitime pouvant octroyer une GR Mode A. Composition modérée-libérale du leadership révolutionnaire (Menotti, Vicini, Orioli), gouvernement provisoire constitutionnel sans Phase aiguë radicale — pattern GR canonique. Aurait pu stabiliser un cadre constitutionnel et déboucher sur une fusion italienne précoce.
 
 #### Saillant : Avortement — Intervention autrichienne 1831
 
@@ -490,7 +513,7 @@
 - subtitle: Bologne expulse l'Autriche
 - title: Glorieuse Révolution
 - confidence: high
-- summary: Le soulèvement bolonais d'août 1848, connu sous le nom d'« Otto Agosto », chasse une garnison autrichienne. Des gouvernements provisoires se forment simultanément à Modène, Parme et dans les Légations, et l'aire s'insère dans la Première Guerre d'Indépendance italienne (Charles-Albert de Sardaigne contre l'Autriche). C'est la seconde réplique de la révolution initiale — tentative d'aboutissement de la Révolution Nationale qui aurait pu déboucher sur une fusion italienne anticipée.
+- summary: Le soulèvement bolonais d'août 1848, connu sous le nom d'« Otto Agosto », chasse une garnison autrichienne. Des gouvernements provisoires se forment simultanément à Modène, Parme et dans les Légations, et l'aire s'insère dans la Première Guerre d'Indépendance italienne (Charles-Albert de Sardaigne contre l'Autriche). C'est une **seconde Glorieuse Révolution canonique en Mode B** (cf. `phase_rn.md`) — mouvement bottom-up contre les mêmes souverains occupants étrangers, dans la vague italienne du printemps des peuples. Composition modérée-libérale, gouvernements provisoires constitutionnels, pas de Phase aiguë radicale endogène — pattern GR canonique. Aurait pu déboucher sur une fusion italienne anticipée.
 
 #### Saillant : Avortement — Défaite Custoza-Novare
 

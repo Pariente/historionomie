@@ -1,279 +1,337 @@
-# Justification du Parcours hongrois (v2)
+# Justification du Parcours hongrois
 
-Ce document présente le raisonnement derrière l'hypothèse retenue dans `parcours.md` (v2), les alternatives écartées avec leurs arguments pour et contre (*machlokot*), les points fragiles, et les comparaisons avec les parcours connus.
+Ce document présente le raisonnement derrière l'hypothèse retenue dans `parcours.md`, les alternatives écartées avec leurs arguments pour et contre, les points fragiles, et les comparaisons avec les parcours connus du corpus.
 
-La v2 est une révision substantielle de la v1 suite à une discussion méthodologique avec Thomas sur quatre points centraux : (1) Mohács comme fin de l'expansion, (2) Rákóczi comme guerre sociale canonique, (3) marqueurs d'absolutisme au XVIIIe siècle hongrois, (4) 1848 comme RN avortée canonique (pas Remontrance). La nouvelle lecture est **structurellement plus orthodoxe** que la v1 : phase absolutiste dans la fourchette canonique, Rákóczi comme guerre sociale, Joseph II comme acmé absolutiste, 1848 comme explosion d'AR sédimenté (pattern Venise/Milan). Elle introduit un pattern nouveau : **double AR exogène successif** (habsbourgeois 1849-1918 + soviétique 1947-1989).
-
-La confidence générale du parcours est **medium**. Il devrait être considéré comme une **hypothèse de travail sérieuse** dans la même catégorie épistémique que la Bohême (v2).
+La confidence générale du parcours est **medium**. Les zones les plus solides sont la phase féodale et le découpage du cycle féodale/oligarchique/absolutiste autour des marqueurs canoniques (1er MO Charles Robert, 1er MA Charles VI, Saturation+Remontrance 1811, éclatement 1848). Les zones les plus fragiles concernent la longueur très inhabituelle de l'essor oligarchique (391 ans) et le pattern Reboot d'AR par choc d'hétérogénéité (Ausgleich 1867) qui est nouveau dans le corpus.
 
 ---
 
-## 1. Le pacte oligarchique hongrois : Bulle d'or 1222 vs élection de Charles Ier Robert 1308
+## 1. Le pacte oligarchique : Bulle d'or 1222 vs élection de Charles Robert 1308
 
-**Hypothèse retenue** : le pacte oligarchique canonique est le compromis d'élection de Charles Ier Robert d'Anjou (1308, couronnement canonique 1310). La Bulle d'or de 1222 est traitée comme un **pacte avorté** (pattern Magna Carta anglaise 1215).
+**Hypothèse retenue** : le pacte oligarchique canonique est le **compromis d'élection de Charles Ier Robert d'Anjou** (1308, couronnement canonique 1310). La Bulle d'or de 1222 est traitée comme un pacte avorté (pattern Magna Carta 1215).
 
 ### Arguments pour la Bulle d'or (écartée)
 
 1. Acte écrit, formel, collectif — première charte constitutionnelle hongroise.
 2. Codification des privilèges nobiliaires et du *ius resistendi*.
-3. Homogénéité des élites et faiblesse du suzerain présentes en 1222.
-4. Continuité historique — reprise par tous les rois postérieurs jusqu'à 1918.
+3. Conditions Deblonde partiellement présentes en 1222 (homogénéité des élites en formation, faiblesse réelle d'André II).
 
-### Arguments contre (arguments pour l'hypothèse retenue)
+### Arguments contre
 
-1. **Pas de 1er MO immédiat** : 86 ans entre la Bulle (1222) et Charles Ier Robert (1308). Aucun précédent dans le corpus d'un pacte canonique suivi d'un tel délai. Les pactes canoniques sont suivis de leur 1er MO dans les 0-20 ans.
-2. **Rejet explicite par Charles Ier Robert en 1318** : il affirme que les nobles doivent servir à leurs propres frais dans son armée, position incompatible avec une continuité pactiste.
-3. **Pas de consolidation institutionnelle immédiate** : le cycle féodal continue à boucler après 1222 avec l'invasion mongole, Béla IV, Ladislas IV, André III.
-4. **Parallèle structurel direct avec la Magna Carta anglaise (1215)** : premier acte collectif écrit de codification des libertés nobiliaires qui ne tient pas et ne produit pas de 1er MO immédiat, nécessitant un nouveau pacte des décennies plus tard (Ordonnances 1311 → Édouard III 1327 pour l'Angleterre ; élection Charles Robert 1308-1310 pour la Hongrie).
+1. **Pas de 1er MO immédiat** : 86 ans entre la Bulle (1222) et Charles Robert (1308). Aucun précédent dans le corpus d'un pacte canonique suivi d'un tel délai.
+2. **Rejet explicite par Charles Robert en 1318** : il affirme que les nobles doivent servir à leurs propres frais dans son armée, position incompatible avec une continuité pactiste.
+3. **Pas de consolidation institutionnelle durable** : le cycle féodal continue de boucler après 1222 (invasion mongole 1241, Béla IV reconstructeur, Ladislas IV, André III).
+4. **Parallèle structurel direct avec la Magna Carta anglaise (1215)** : premier acte collectif écrit de codification des libertés nobiliaires qui ne tient pas et ne produit pas de 1er MO immédiat (Édouard III 1327 pour l'Angleterre, Charles Robert 1308-1310 pour la Hongrie).
 
-**Confidence medium** : la lecture est défendable mais le pacte hongrois canonique (compromis d'élection) n'est pas formalisé dans un acte écrit unique, ce qui le distingue des pactes canoniques documentés. Il est analogue au cas bohème (Diplôme inaugural de Jean de Luxembourg 1310-1311 comme pacte d'élection) — pattern confirmé partiel.
+**Confidence medium** : la lecture est défendable mais le pacte hongrois canonique (compromis d'élection) n'est pas formalisé dans un acte écrit unique. Pattern analogue au cas bohème (Diplôme inaugural de Jean de Luxembourg 1310-1311) — précédent partiel confirmé.
 
 ---
 
-## 2. Mohács 1526 comme fin de l'expansion et bascule essor → polarisation
+## 2. Un essor oligarchique de 391 ans, étiré par exutoire militaire continu
 
-**Hypothèse retenue** : Mohács marque la fin de l'expansion oligarchique hongroise et le basculement vers la polarisation des élites. C'est à la fois un saillant canonique (fin de l'expansion) et une perturbation majeure (choc exogène avec effet de prolongement).
+**Hypothèse retenue** : la phase oligarchique hongroise (1308-1711) est essentiellement un très long essor (1308-1699) étiré par exutoire militaire continu, suivi d'une polarisation extrêmement courte (4 ans) et d'une guerre sociale brève (Rákóczi 1703-1711). Pattern Venise : le Stato da Mar étire de la même manière l'essor oligarchique vénitien.
 
-### Arguments
+### Test : quand la polarisation devient-elle la dynamique principale ?
 
-1. **Chronologie** : 1526 est ~218 ans après le 1er MO (Charles Ier Robert 1308), dans la fourchette canonique de l'essor (70-220 ans).
-2. **Dynamique d'expansion jusqu'à Mohács** : Angevins vers Balkans (Louis Ier), Mathias Corvin vers Autriche-Silésie-Moravie, projection continue jusqu'au XVe siècle.
-3. **Retournement brutal après Mohács** : perte de l'élite militaire, tripartition territoriale, fin de toute projection extérieure hongroise autonome.
-4. **Pattern canonique** : la fin de l'expansion marque typiquement la bascule essor → polarisation (Cateau-Cambrésis 1559 pour la France, Agnadello 1509 pour Venise, Passarowitz 1718 pour l'Autriche).
+Le critère structurel : la sous-phase polarisation commence quand la polarisation factionnelle interne devient la dynamique principale du pays, et non plus les aventures extérieures.
 
-Ce point n'avait pas été correctement identifié dans la v1, qui voyait Mohács comme un événement ambigu et prolongeait la polarisation sur 322 ans. La v2 le place clairement comme fin de l'expansion, ce qui ramène la polarisation à une durée plus orthodoxe (177 ans).
+| Moment | Dynamique principale | Polarisation comme dominante ? |
+|---|---|---|
+| 1308-1490 | Construction étatique angevine + projection extérieure (Naples, Dalmatie, Balkans, Bohême, Vienne) | Non — essor actif |
+| 1490-1526 (Jagellone) | Dérive nobiliaire intérieure mais pression ottomane permanente structure l'horizon | Non — exutoire militaire reste dominant |
+| 1526-1699 | Confins militaires anti-ottomans permanents, magnats des marches mobilisés en continu, insurrections kuruc systématiquement réabsorbées par la guerre extérieure | Non — exutoire défensif structurellement dominant |
+| **1699-1703** | **Karlowitz ferme l'exutoire ; pression fiscale habsbourgeoise + Contre-Réforme cristallisent kuruc/labanc** | **Oui — polarisation devient principale** |
+| 1703-1711 | Guerre sociale Rákóczi | Sortie de phase |
+
+L'exutoire militaire opère continument de 1347 (premières campagnes napolitaines de Louis Ier) à 1699 (Karlowitz). Pendant 352 ans, les magnats hongrois et leurs banderia sont mobilisés vers l'extérieur — offensivement sous les Angevins et Mathias, défensivement sous Sigismond, Hunyadi et post-Mohács. Cette canalisation continue empêche structurellement la cristallisation factionnelle interne.
+
+### Pourquoi exutoire et pas autre chose
+
+Trois critères du mécanisme exutoire (`perturbations.md` §4.5) sont satisfaits :
+
+1. **Canalisation de l'énergie élitaire vers l'extérieur** : les magnats hongrois bâtissent leurs carrières et leurs fortunes dans la guerre extérieure plutôt que dans la confrontation factionnelle interne. Les grandes familles des marches (Zrínyi, Nádasdy, Esterházy, Batthyány, Rákóczi) deviennent puissantes par capitaineries frontalières, possessions militarisées, butin de raids transfrontaliers.
+2. **Substitution à la dynamique interne** : la guerre anti-ottomane (offensive puis défensive) remplace la confrontation prébendière/patrimoniale comme débouché de l'ambition élitaire.
+3. **Fin d'exutoire produisant cristallisation rapide** : la reconquête anti-ottomane 1683-1699 supprime l'ennemi extérieur permanent. Quatre ans plus tard, la guerre sociale éclate.
+
+### Pourquoi les conquêtes angevines comptent comme exutoire malgré leurs échecs
+
+L'analogie clé est les **Guerres d'Italie françaises (1494-1559)** : 65 ans de mobilisation de la noblesse française pour zéro gain durable, mais exutoire effectif. L'échec territorial ne supprime pas la fonction d'exutoire d'enrichissement élitaire — ce qui compte est la mobilisation continue des banderia, pas la conquête durable. Les campagnes napolitaines de Louis Ier (1347-1352, ratées militairement) jouent ce rôle pour la Hongrie, comme les vassalages balkaniques (Bulgarie, Serbie, Bosnie, Valachie, Moldavie) et la défense anti-ottomane sous Sigismond et Hunyadi.
+
+**Exception explicite** : la Pologne (union personnelle 1370-1382 sous Louis Ier) est purement dynastique sans mobilisation magnat hongroise — pattern Habsbourg-personal-union, pas exutoire.
+
+### Conséquences pour le découpage des sous-phases
+
+Le découpage retenu est :
+
+- **Essor 1308-1699** (391 ans) : construction active 1308-1490 + continuation par exutoire militaire pur 1490-1699
+- **Polarisation 1699-1703** (4 ans) : cristallisation-éclair par fin d'exutoire
+- **Guerre sociale 1703-1711** (8 ans) : Rákóczi → Szatmár
+
+Cette répartition est inhabituelle (essor extrêmement long, polarisation extrêmement courte) mais structurellement honnête : toutes les conditions de la guerre sociale sont préparées pendant les 150+ ans d'exutoire défensif (tentatives kuruc avortées qui installent le clivage structurel), puis cristallisent en quatre ans une fois l'exutoire fermé.
 
 ---
 
 ## 3. Rákóczi (1703-1711) comme guerre sociale canonique
 
-**Hypothèse retenue** : l'insurrection de Rákóczi est la guerre sociale hongroise canonique. Elle passe les marqueurs structurels de la guerre sociale avec solidité remarquable.
-
-### Test contre les marqueurs canoniques
+**Hypothèse retenue** : l'insurrection de Rákóczi est la guerre sociale hongroise canonique. Sept marqueurs structurels sur sept.
 
 | Marqueur | Présence |
 |---|---|
-| Deux factions identifiables (prébendière vs patrimoniale) | **Oui, fort.** Labanc (nobles catholiques liés à la couronne, clergé, élites urbaines germanophiles, administration royale) vs Kuruc (magnats et gentry protestants nationalistes, noblesse rurale, comitats). |
+| Deux factions identifiables (prébendière vs patrimoniale) | **Oui, fort.** Labanc (nobles catholiques liés à la couronne, clergé, élites urbaines germanophiles) vs Kuruc (magnats et gentry protestants nationalistes, noblesse rurale, comitats). |
 | Conflit ouvert armé | **Oui.** 8 ans d'insurrection, batailles rangées (Trencsén 1708), mobilisation de masse. |
-| Base territoriale patrimoniale | **Oui.** Haute-Hongrie, Transylvanie, région de la Tisza. Rákóczi élu prince de Transylvanie 1704, duc de Hongrie 1705. |
+| Base territoriale patrimoniale | **Oui.** Haute-Hongrie, Transylvanie. Rákóczi élu prince de Transylvanie 1704, duc de Hongrie 1705. |
 | Mobilisation des clientèles délaissées | **Oui.** Paysans ruthènes et slovaques mobilisés par les promesses d'allègements fiscaux. |
-| Projet politique transcendant | **Oui.** Indépendance hongroise, nouvelle constitution, soutiens internationaux (Louis XIV, Pierre le Grand), déposition formelle des Habsbourg par la diète d'Ónod (1707). |
-| Marqueur fort : abus de pouvoir exécutif sans autorisation | **Oui côté habsbourgeois.** Les magnats contestent précisément le pouvoir de Léopold Ier/Joseph Ier de lever troupes et impôts sans consentement de la diète. |
-| Marqueur fort : sommet administration centrale prépondérant | **Oui.** La Gubernium militaire installé par les Habsbourg et l'Hofkammer hongroise deviennent le vrai centre de pouvoir post-Karlowitz, au détriment de la diète. |
-
-**Sept marqueurs sur sept.** Rákóczi est une guerre sociale canonique.
+| Projet politique transcendant | **Oui.** Indépendance hongroise, soutiens internationaux (Louis XIV, Pierre le Grand), déposition formelle des Habsbourg par la diète d'Ónod (1707). |
+| Abus de pouvoir exécutif sans autorisation | **Oui côté habsbourgeois.** Les magnats contestent le pouvoir de Léopold Ier/Joseph Ier de lever troupes et impôts sans consentement de la diète. |
+| Sommet administration centrale prépondérant | **Oui.** Le Gubernium militaire installé par les Habsbourg et l'Hofkammer hongroise post-Karlowitz. |
 
 ### Pattern de résolution : hybride avec Pálffy et Charles VI
 
-Rákóczi est vaincu militairement mais négocie Szatmár (29 avril 1711) via Pálffy János (magnat hongrois catholique, général habsbourgeois, labanc). Charles VI (Charles III en Hongrie) ratifie. Le compromis accorde amnistie, libertés religieuses, maintien de la constitution hongroise. Dans les années suivantes, Charles VI construit un nouveau cadre central hongrois : Consilium Regium Locumtenentiale (1723), Pragmatique Sanction (1723), administration absolutiste composite.
+Rákóczi est vaincu militairement mais négocie Szatmár (29 avril 1711) via Pálffy János (magnat hongrois catholique, général habsbourgeois, labanc). Charles VI ratifie. Le compromis accorde amnistie, libertés religieuses, maintien de la constitution hongroise. Dans les années suivantes, Charles VI construit un nouveau cadre central hongrois : Consilium Regium Locumtenentiale (1723), Pragmatique Sanction (1723), administration absolutiste composite.
 
-Ce pattern est proche du **Pattern #3 (victoire de faction qui construit le nouveau cadre)** canonique de Simon Thassi, mais avec une torsion : c'est la faction labanc qui gagne militairement, puis intègre les revendications kuruc dans le nouveau cadre au lieu de les écraser. Pálffy János joue le rôle structurel de médiateur labanc intégrateur. Charles VI joue le rôle du dynaste qui ratifie et construit. C'est une variante cohérente du pattern canonique — la faction victorieuse construit le nouveau cadre central transcendant qui rend les anciennes divisions obsolètes, avec Pálffy comme opérateur structurel et Charles VI comme figure centrale.
-
-**Alternative analogique** : pattern des guerres de religion françaises 1562-1598 résolues par Henri IV. Henri IV est protestant au départ, se convertit au catholicisme, et offre des garanties aux deux factions via l'Édit de Nantes pour apaiser et consolider l'exécutif central. Le cas hongrois est analogue : la résolution passe par un compromis qui apaise et consolide l'exécutif habsbourgeois, avec liberté religieuse pour les protestants et maintien des privilèges nobiliaires pour les magnats.
+C'est une variante du pattern #3 (victoire de faction qui construit le nouveau cadre) avec une torsion : la faction labanc gagne militairement, puis intègre les revendications kuruc dans le nouveau cadre au lieu de les écraser. Pálffy joue le rôle de médiateur labanc intégrateur. Charles VI joue le rôle du dynaste qui ratifie et construit. **Analogie** : les guerres de religion françaises 1562-1598 résolues par Henri IV, qui offre des garanties aux deux factions via l'Édit de Nantes pour apaiser et consolider l'exécutif central.
 
 ---
 
-## 4. Marqueurs d'absolutisme hongrois 1711-1848
+## 4. L'acmé oligarchique : Mathias Corvin seul
 
-**Hypothèse retenue** : la Hongrie traverse une phase absolutiste canonique de 137 ans (1711-1848), dans la fourchette basse mais acceptable. L'absolutisme hongrois se déploie dans le cadre composite habsbourgeois — ce qui n'invalide pas son caractère absolutiste, comme la Castille pré-Nueva Planta ou la Bohême pré-Haugwitz.
+**Hypothèse retenue** : Mathias Corvin (1458-1490) est le seul acmé oligarchique canonique. Louis Ier le Grand (1342-1382), bien qu'il porte la projection territoriale à son maximum historique (apogée angevine 1382), n'est pas un acmé canonique mais l'ouvreur de l'exutoire militaire (saillant Aventures angevines).
 
-### Marqueurs nécessaires d'absolutisme
+### Pourquoi Mathias et pas Louis Ier
 
-| Marqueur | Présence en Hongrie XVIIIe |
+L'acmé oligarchique combine trois marqueurs : puissance personnelle maximale + projection extérieure maximale + essai d'absolutisation précoce. Louis Ier a les deux premiers (puissance et projection) mais pas le troisième — son règne respecte le cadre pactiste (décrets de 1351 confirment una eademque libertas et aviticitas, qui sont pro-pacte). Mathias a les trois : Armée Noire mercenaire qui court-circuite les banderia magnates, bureaucratie centralisée, fiscalité rationalisée, projection extérieure (Vienne, Silésie, Moravie, Lusace, Bosnie).
+
+Louis Ier est représenté sur la frise par le losange Aventures angevines (mécanisme exutoire) qui capture sa fonction structurelle d'ouvreur du long continuum d'exutoire militaire hongrois.
+
+---
+
+## 5. Phase absolutiste composite 1711-1848
+
+**Hypothèse retenue** : la Hongrie a sa propre phase absolutiste composite de 137 ans (1711-1848), dans la fourchette basse. Pattern Castille pré-Nueva Planta et Bohême pré-Haugwitz : un royaume peut avoir son propre cycle absolutiste endogène dans un cadre composite subordonné.
+
+### Le critère opérationnel : qui pilote l'administration centrale ?
+
+C'est le critère décisif : sous le critère « administration centrale pilotée par les Hongrois = union personnelle composite ; pilotée par Vienne = absorption », l'absolutisme hongrois 1711-1848 est endogène composite sur tout le cycle. Consilium Regium Locumtenentiale (1723) à Presbourg, présidé par le Palatin (magnat hongrois), staffé par des magnats hongrois. Pragmatique Sanction (1723) ratifiée par la diète hongroise. Cours royales hongroises (Tabula Septemviralis, Tabula Regia Judicia).
+
+Joseph II tente l'absorption administrative en 1784-1790 (abolition du Palatin, germanisation, réorganisation des comitats en districts) mais Léopold II rétracte en 1790, restaurant le pilotage hongrois. C'est une **première tentative d'absorption habsbourgeoise qui préfigure Bach**, échouée.
+
+### Marqueurs d'absolutisme satisfaits
+
+| Marqueur nécessaire | Présence en Hongrie XVIIIe |
 |---|---|
-| Administration centrale avec préséance *de facto* sur les locales | **Oui.** Consilium Regium Locumtenentiale (1723) comme organe exécutif central permanent à Presbourg, tutelle sur les comitats, application des édits royaux. |
-| Préséance *de jure* | **Oui, partiellement.** Pragmatique Sanction (1723) ratifiée par la diète, Consilium avec base légale claire, Tabula Septemviralis et Tabula Regia Judicia comme cours royales supérieures. |
-| Exécutif sans frein juridique des oligarques | **Oui, largement.** Guerre et diplomatie exercées par Vienne. Impôts militaires levés via le Consilium. Justice royale court-circuite les juridictions nobiliaires. |
-| Perte d'autonomie fiscale des entités décentralisées | **Partielle.** Comitats collectent mais dans les cadres fixés par le Consilium. Urbarium (1767) régule le prélèvement sur les serfs. |
-| Figure ou dynastie issue de la guerre sociale | **Oui.** Charles VI comme 1er MO post-Szatmár 1711. |
+| Administration centrale avec préséance | **Oui.** Consilium Regium 1723. |
+| Préséance *de jure* | **Oui partiellement.** Pragmatique Sanction 1723, Tabulae Septemviralis et Regia Judicia. |
+| Exécutif sans frein juridique des oligarques | **Oui largement.** Guerre et diplomatie exercées par Vienne. Impôts militaires levés via le Consilium. |
+| Perte d'autonomie fiscale des entités décentralisées | **Partielle.** Comitats collectent dans les cadres fixés par le Consilium. Urbarium 1767. |
+| Figure ou dynastie issue de la guerre sociale | **Oui.** Charles VI post-Szatmár 1711. |
 
-### Marqueurs observables
+### Acmé absolutiste = Joseph II
 
-| Marqueur | Présence |
+Joseph II applique le même programme de despote éclairé à ses trois royaumes (Autriche, Bohême, Hongrie). En Hongrie : abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation (1782), allemand comme langue administrative (1784, rétracté), réorganisation des comitats. La résistance magyare porte sur l'**importation culturelle allemande** (langue, refus du couronnement), pas sur l'absolutisme comme tel. Beaucoup de réformes joséphistes sont maintenues après la rétraction des plus visibles par Léopold II — abolition du servage, Patent de tolérance, sécularisation, contrôle ecclésiastique.
+
+### Saturation fiscale et Remontrance simultanées en 1811
+
+Application stricte du critère Lanoue de Suremain : la Diète hongroise refuse l'augmentation de la contribution en 1811-1812 et maintient l'exemption fiscale nobiliaire. François I impose unilatéralement la dévaluation des Bancozettel sans pouvoir briser le blocage parlementaire-nobiliaire. La Couronne ne parvient plus à augmenter durablement ses recettes ordinaires en Hongrie. Datation simultanée à la Remontrance (dissolution de la Diète en 1811, 14 ans sans reconvocation jusqu'en 1825), conformément au pattern canonique des monarchies à corps intermédiaires externes (parallèle structurel : Polysynodie française 1715-1718, Apology of the Commons anglaise 1604, Correzione vénitienne 1761).
+
+### Reformkor 1825-1848 comme Réformes échouées
+
+Variante structurelle : contrairement à la France et à Florence où les réformes sont portées par l'exécutif central contre le bloc élitaire, en Hongrie elles sont portées par le **bloc contestataire structuré** dans la diète (Széchenyi conservateur progressiste, Kossuth radical libéral, Deák libéral modéré, Wesselényi gentry transylvaine) contre l'exécutif central viennois et le bloc élitaire des magnats aulici. Le canal d'initiative est inversé mais le mécanisme de blocage reste le même. Concession symbolique 1844 (langue hongroise officielle), mais blocage des réformes structurelles (servage, fiscalité universelle, presse libre, responsabilité ministérielle).
+
+---
+
+## 6. RN avortée 1848-1867 en deux temps, déviée par Ausgleich
+
+**Hypothèse retenue** : la Révolution Nationale 1848-1867 est une RN avortée canonique en deux temps. Premier temps : révolution initiale écrasée à Världos 1849 (pattern Venise/Milan). Deuxième temps : Restauration sous occupation Bach 1849-1867 (sous-phase de la RN, pattern Restauration exogène d'Antoine Deblonde) qui aurait dû s'élargir vers une Glorieuse Révolution mais est **déviée en reboot d'AR par l'Ausgleich 1867** (pattern Philippe).
+
+### Critère 1 — état structurel préalable à 1848
+
+Test : la Hongrie en 1848 est-elle en impérialisme absolutiste actif ou en AR sédimenté ?
+
+| Marqueur AR sédimenté | Présent en 1848 ? |
 |---|---|
-| Accroissement de la production réglementaire centrale | Oui (Consilium, édits royaux, codifications) |
-| Mise sous tutelle de la religion | Oui, fort sous Marie-Thérèse et Joseph II (joséphisme) |
-| Contrôle de la hiérarchie ecclésiastique | Oui (Patent de tolérance 1781, sécularisation 1782, nomination des évêques par le centre) |
-| Domestication de la noblesse par la cour | Oui (Tereziánum 1746, intégration des magnats hongrois à l'élite viennoise) |
-| Ouverture de la fonction publique aux roturiers | Oui (Consilium et cours royales recrutent des juristes de robe) |
-| Expansion territoriale / impérialisme | Partielle (partagée avec Autriche : Passarowitz 1718, guerres turques) |
-| Codification juridique | Partielle (Tripartitum reste en vigueur mais interprété dans le cadre absolutiste) |
+| Sédimentation maximale des élites | Oui (magnats figés, gentry bloquée, bourgeoisie exclue) |
+| Rentes féodales insupportables | Oui (le servage n'est toujours pas aboli alors qu'il l'est dans les Erbländer depuis 1781) |
+| Clivage gauche-droite qui saute | Oui (bloc élitaire aulici vs bloc contestataire Âge des Réformes) |
+| Croissance économique et alphabétisation qui alimentent la contestation | Oui |
+| Blocage des réformes par l'exécutif | Oui (20 ans de diètes 1825-1844 demandant des réformes) |
+| Pas d'impérialisme actif depuis 1815 | Oui (Congrès de Vienne) |
+| Explosion par déclencheur externe + crise financière + humiliation | Oui (onde 1848) |
 
-### Acmé absolutiste : Joseph II (1780-1790)
+**Sept marqueurs sur sept** d'AR sédimenté. Zéro marqueur d'impérialisme actif. Le test tranche pour la RN.
 
-Joseph II applique le même programme de despote éclairé à ses trois royaumes (Autriche, Bohême, Hongrie). En Hongrie : abolition du servage personnel (1781), Patent de tolérance (1781), sécularisation de monastères contemplatifs (1782), allemand comme langue administrative (1784, rétracté), réorganisation des comitats en districts numériques, refus du couronnement.
+### Critère 2 — pattern Venise/Milan 1848
 
-**Point important** : la résistance hongroise porte sur l'**importation culturelle allemande** (langue, refus du couronnement, effacement de l'identité historique), pas sur l'absolutisme comme tel. Beaucoup de réformes joséphistes sont maintenues après la rétraction des plus visibles par Léopold II — abolition du servage, Patent de tolérance, sécularisation, contrôle ecclésiastique. La résistance est à l'importation culturelle étrangère, pas au programme absolutiste lui-même.
+Les trois cas suivent le même déroulement : explosion d'AR sédimenté → expérience parlementaire → phase aiguë → écrasement externe avant moment thermidorien. Venise et Milan 1848 sont canoniquement RN avortées dans le corpus. Par cohérence, Hongrie 1848 doit l'être aussi.
 
-Cette distinction est structurellement importante : elle montre que la Hongrie, **même lorsqu'elle résiste à Joseph II, reste dans un cadre absolutiste**. Les magnats hongrois acceptent l'absolutisation absolutiste ; ils refusent seulement qu'elle leur soit imposée en allemand depuis Vienne sans respect de la Sainte Couronne. Pattern analogue au rejet bohème de la Maiestas Carolina en 1355 — rejet d'importation de droit étranger, pas de l'absolutisme en soi.
+### Pourquoi le saillant 1849 est « Restauration » et pas « Écrasement »
 
-### Remontrance : dissolution de la diète de 1811
+Structurellement, le moment Världos + Terreur blanche + installation Bach combine indissociablement la fin de la révolution initiale et le début de la nouvelle sous-phase Restauration. Contrairement aux cas où l'avortement et la Restauration sont séparés temporellement (1945 Tildy puis 1947 Coup de Budapest ; 1956 GR puis intervention soviétique quelques jours après), ici les deux événements sont collapsés. L'intervention russo-habsbourgeoise EST la Restauration habsbourgeoise. Pattern structurellement identique à Milan 1849 et Venise 1849 (Restaurations habsbourgeoises post-1848).
 
-La Remontrance hongroise canonique est la dissolution de la diète de 1811 par François Ier (après que celle-ci refuse d'accorder les subsides demandés sans réformes compensatoires). François Ier impose par décret une dévaluation monétaire (patente de 1811) qui fonctionne comme impôt forcé sur les détenteurs de papier-monnaie, incluant les nobles hongrois. La diète n'est pas reconvoquée pendant 14 ans (1811-1825).
+### Restauration exogène 1849-1867 comme sous-phase de la RN
 
-Pattern Remontrance canonique : classe parlementaire tente de négocier avec l'exécutif, échoue, la voie institutionnelle est fermée. Analogue structurel à la Polysynodie française (1715-1718), à l'Apology of the Commons anglaise (1604), à la Correzione vénitienne (1761), au Landtag bavarois de 1848.
+La Restauration sous occupation Bach est une **sous-phase de la RN**, pas une phase autonome. Pattern Restauration exogène au sens d'Antoine Deblonde — pure occupation, pas de roman national propre, coalition restreinte taillée pour empêcher (a) la réémergence d'un souverain charismatique hongrois et (b) tout élargissement de la coalition.
 
-### Ancien Régime 1825-1848
+Sous le critère opérationnel, Bach 1849-1867 est la **seule période d'occupation administrative authentique** de l'histoire hongroise pré-1947 : Hofkanzlei viennoise à la place du Consilium hongrois, fonctionnaires allemands et tchèques (« hussards de Bach »), langue administrative allemande, droit autrichien (ABGB) étendu à la Hongrie, constitution hongroise suspendue.
 
-L'AR hongrois est court (23 ans) mais intense. La réouverture de la diète en 1825 marque l'entrée en AR sédimenté. **L'Âge des Réformes (1825-1848)** est l'expression canonique du bloc contestataire en AR : Széchenyi (conservateur progressiste), Kossuth (radical), Deák (libéral modéré), Wesselényi (gentry réformatrice). Blocage croissant des réformes substantielles, sédimentation des élites magnates conservatrices, croissance économique et urbanisation qui alimentent la contestation. Pattern AR canonique.
+### Pourquoi la Restauration aurait dû s'élargir vers GR
 
-**Confidence medium** : la lecture est structurellement cohérente. Le point le plus délicat est que l'absolutisme hongrois se déploie dans un cadre composite subordonné à Vienne, ce qui peut faire douter de son autonomie structurelle. Mais Thomas a tranché sur ce point : « le fait que la Hongrie soit dominée par l'Autriche implique une forme de subordination, donc il n'est pas incohérent qu'il y a un absolutisme composite ». Le pattern Castille pré-Nueva Planta et Bohême pré-Haugwitz montre qu'un royaume peut avoir sa propre phase absolutiste dans un cadre composite subordonné.
+Trois facteurs convergents en 1867 :
+1. **Homogénéité magyare élevée** (héritage Reformkor + mémoire 1848) rend la coalition restreinte d'occupation intenable à long terme.
+2. **Défaites autrichiennes** (Solferino 1859 = perte de la Lombardie, Sadowa 1866 = exclusion de l'Allemagne, perte de la Vénétie) privent Vienne des moyens financiers et politiques de maintenir l'occupation directe.
+3. **Négociation patiente de Deák** depuis l'intérieur (« résistance de velours ») fournit le cadre constitutionnel de sortie.
 
----
+À ce stade, l'élargissement maximal attendu était une **GR souveraine hongroise** (parlementarisme magyar, souveraineté nationale).
 
-## 5. 1848 hongrois comme RN avortée canonique (pas Remontrance)
+### Le pattern Philippe : reboot d'AR par choc d'hétérogénéité
 
-**Hypothèse retenue** : la révolution hongroise de 1848-1849 est une Révolution Nationale avortée canonique, analogue structurellement à Venise 1848 et Milan 1848.
+L'Ausgleich (29 mai 1867) dévie cette trajectoire. Au lieu d'aboutir à la GR, l'élargissement injecte une hétérogénéité massive qui reboote en AR. Trois sources d'hétérogénéité simultanées :
 
-### Test contre les deux critères discriminants
+1. **Subordination dualiste à Vienne** — trois ministères communs (Affaires étrangères, Guerre, Finances communes), monnaie commune, stratégie commune. La Hongrie est institutionnellement liée à un ensemble multi-national (Autriche-Bohême-Galicie).
+2. **Royaume hongrois multi-ethnique** — la Hongrie restaurée hérite des Slovaques, Roumains, Ruthènes, Croates, Serbes au sein de son propre territoire, devant gérer leur magyarisation forcée plutôt que d'être une nation magyare homogène souveraine.
+3. **Légitimité dynastique hybride** — François-Joseph couronné roi de Hongrie à Budapest le 8 juin 1867, mais roi des Habsbourg pas roi magyar électif.
 
-**Critère 1 — état structurel préalable** :
-- **Remontrance** : arrive en fin d'impérialisme absolutiste actif, pour le terminer et ouvrir l'AR.
-- **RN** : arrive en fin d'AR sédimenté (sclérose, blocage social).
+Ces trois hétérogénéités empêchent structurellement la GR souveraine. Elles créent les conditions d'un AR composite avec roman national magyar assumé mais sous tutelle — ce qui est la signature canonique d'une nouvelle phase absolutiste rebootée.
 
-En 1848, la Hongrie est-elle en impérialisme absolutiste actif ou en AR sédimenté ? **Sept marqueurs d'AR sur sept** :
-- Sédimentation maximale des élites (magnats figés, gentry bloquée, bourgeoisie exclue)
-- Rentes féodales insupportables (le servage n'est toujours pas aboli alors qu'il l'est dans les Erbländer depuis 1781)
-- Clivage gauche-droite qui saute (bloc élitaire aulici vs bloc contestataire Âge des Réformes)
-- Croissance économique et alphabétisation qui alimentent la contestation
-- Blocage des réformes par Vienne (20 ans de diètes 1825-1844 qui demandent des réformes)
-- Pas d'impérialisme actif depuis le Congrès de Vienne (1815)
-- Explosion par déclencheur externe + crise financière + humiliation (onde de 1848)
+### Pourquoi c'est important théoriquement
 
-**Zéro marqueur d'impérialisme actif** : pas de guerres d'agression, pas de colonialisme, pas de prestige monarchique maximal, pas de acmé absolutiste en cours, pas d'expansion territoriale.
-
-**Verdict** : la Hongrie en 1848 est clairement en AR sédimenté, pas en impérialisme actif. Le test du critère 1 tranche pour la RN.
-
-**Critère 2 — capacité à produire un nouveau régime durable** :
-- **Venise 1848** : RN avortée, écrasée par l'Autriche après 17 mois → canoniquement classée comme RN
-- **Milan 1848** : RN avortée, écrasée par l'Autriche après 5 mois → canoniquement classée comme RN
-- **Hongrie 1848** : écrasée par intervention russo-habsbourgeoise après 17 mois → par cohérence, RN avortée
-
-Le test structurel : les trois séquences ont le même déroulement (explosion → expérience parlementaire → phase aiguë → écrasement externe avant moment thermidorien). Venise et Milan sont canoniquement RN avortées. Par cohérence du corpus, Hongrie 1848 doit l'être aussi.
-
-### Pattern de résolution
-
-1848-1849 suit la séquence canonique d'une RN : explosion (mars 1848, April Laws, Batthyány), expérience parlementaire (gouvernement Batthyány de 6 mois), phase aiguë (Déclaration d'indépendance de Debrecen, Kossuth gouverneur-président), écrasement externe (intervention russe, Világos 13 août 1849). Pas de moment thermidorien — la RN est avortée avant.
+Le pattern Philippe (choc d'hétérogénéité sur nation mûre pour GR = reboot AR au lieu de libération) est nouveau dans le corpus. La Hongrie en est le premier exemple bien documenté. Il est probablement applicable à plusieurs cas italiens post-1815 (Lombardie-Vénétie, Modène, Parme dont les régimes oscillent entre Restauration exogène pure et reboot d'AR composite) et est-européens post-1947 (où la normalisation Kádár/Husák/Gierek injecte des hétérogénéités dualistes URSS/national qui rebootent en AR composite).
 
 ---
 
-## 6. Ancien Régime exogène habsbourgeois 1849-1918
+## 7. AR exogène composite rebooté 1867-1918
 
-**Hypothèse retenue** : après l'écrasement de la RN 1 en 1849, la Hongrie entre dans un Ancien Régime exogène habsbourgeois de 69 ans (1849-1918), qui se termine par l'explosion de 1918.
+**Hypothèse retenue** : la période 1867-1918 est une **nouvelle phase absolutiste** ouverte par le saillant Reboot d'AR (Ausgleich). C'est un AR exogène composite : exogène parce que subordonné stratégiquement à Vienne, composite parce que l'administration centrale est restaurée aux Hongrois (Andrássy président du conseil, parlement bicaméral à Budapest, Honvéd, administration hongroise unifiée), avec roman national magyar assumé.
 
-### Pattern canonique
+### Pourquoi phase et pas perturbation
 
-L'AR exogène suit le pattern déjà documenté dans la Bohême v2 (AR exogène soviétique 1948-1989) : régime tutélaire imposé après écrasement d'une séquence RN, maintien formel de certaines institutions nationales avec subordination à la puissance tutélaire, stabilisation progressive par accommodation, sédimentation des élites dans un cadre figé, bloc contestataire qui monte jusqu'à l'explosion finale.
+La phase satisfait les marqueurs canoniques d'AR : sédimentation longue (51 ans), bloc contestataire structuré (sociaux-démocrates, nationalités minoritaires, radicaux 48ards), éclatement final par défaite externe (1918). Sa nature composite (subordination dualiste maintenue) la distingue d'une phase absolutiste endogène mais ne la disqualifie pas comme phase à part entière.
 
-### Séquences internes
+### Asymétrie avec 1947-1989
 
-**Séquence 1 — Néo-absolutisme Bach (1849-1859)** : phase répressive initiale. Alexander Bach impose un régime absolutiste germanique. Constitution hongroise suspendue, diète dissoute, fonctionnaires allemands et tchèques, langue administrative allemande, droit autrichien. Répression, émigrations massives. Pattern analogue au stalinisme Rákosi 1949-1953 (phase répressive initiale de l'AR exogène soviétique).
+Le critère opérationnel s'applique aussi à la période soviétique (Rákosi 1947-1956 = vraie absorption, Kádár 1956-1989 = autonomie sous tutelle composite, pattern Bach/Ausgleich rejoué). Mais la position dans le cycle diffère :
 
-**Séquence 2 — Négociations et Ausgleich (1859-1867)** : défaites autrichiennes successives (Solferino, Sadowa) forcent l'accommodation. Deák négocie depuis l'intérieur. Le **Compromis de 1867 (Ausgleich)** est ratifié par la diète hongroise et signé par François-Joseph couronné roi de Hongrie à Budapest. Création d'un gouvernement hongrois responsable, parlement bicaméral, armée royale hongroise, administration unifiée, trois ministères communs avec Vienne. Pattern analogue à la normalisation Kádár post-1956 — après la phase répressive, la puissance tutélaire accorde une autonomie accrue en échange de l'acceptation du cadre fondamental.
+- 1849-1918 vient après une RN avortée tôt (à la phase aiguë, sans IR ni Restauration endogène) → la Restauration exogène Bach forme une sous-phase de la RN puis l'Ausgleich reboote en phase AR composite nouvelle.
+- 1947-1989 vient après l'avortement de la sous-phase Restauration au sein d'une RN qui a déjà couru tout son cycle canonique (révolution initiale + IR Horthy + Restauration démocratique Tildy/Nagy) → la tutelle soviétique prolonge la même sous-phase Restauration sans constituer une nouvelle phase.
 
-**Séquence 3 — Règne long et sédimentation (1867-1918)** : François-Joseph règne 68 ans, maximisant la sédimentation. Développement économique et culturel remarquable. Magyarisation progressive des minorités. **Millénaire de 1896** comme pic de prestige dans l'AR — inauguration du Parlement néogothique, métro de Budapest, Avenue Andrássy, Millénaire commémoratif. Bloc contestataire croissant (sociaux-démocrates, nationalités minoritaires, radicaux 48ards).
+Cette asymétrie est structurellement justifiée par le moment où la trajectoire est interrompue, pas par une différence de pattern interne.
 
-**Séquence 4 — Crise et explosion (1913-1918)** : gouvernement Tisza István, entrée en guerre mondiale, défaites cumulatives, effondrement militaire, Révolution des Chrysanthèmes (31 octobre 1918).
+### Marqueurs canoniques de l'AR 1867-1918
 
-### Argument contre la lecture « François-Joseph comme 1er MO absolu hongrois »
-
-Dans la v1, j'avais retenu François-Joseph post-Ausgleich comme 1er monarque absolu hongrois. Cette lecture est écartée en v2 pour trois raisons :
-
-1. **La Hongrie a déjà eu sa phase absolutiste** (1711-1848) avec Charles VI comme 1er MO canonique. Une seconde phase absolutiste par quasi-reboot post-RN avortée serait atypique sans précédent dans le corpus (Israël 70 implique destruction du Temple, pas le cas hongrois).
-2. **1848 est structurellement une RN avortée**, pas une Remontrance — donc la phase absolutiste se termine en 1848, et 1849-1918 n'est pas une phase absolutiste nouvelle mais la suite de la RN interrompue.
-3. **L'Ausgleich n'est pas une résolution canonique de guerre sociale** (pas de tiers résolvant, pas de nouveau cadre central construit au sens structurel) mais une stabilisation accommodationniste d'AR exogène, pattern analogue à la normalisation Kádár.
-
-### Pattern nouveau : AR exogène habsbourgeois
-
-Le pattern « AR exogène habsbourgeois » est nouveau dans le corpus. Les précédents partiels :
-- **Piémont post-1748** : AR exogène sous influence habsbourgeoise (mentionné dans CLAUDE.md comme cas d'« ancien régime exogène » dérivation autorisée).
-- **Bohême post-1627** : intégration administrative par Verneuerte Landesordnung, mais ce n'est pas strictement un AR exogène, c'est une absorption dans le Parcours autrichien.
-- **Milan post-1815** : AR exogène autrichien court (34 ans), analogue partiel.
-
-Le cas hongrois est le premier cas documenté d'AR exogène habsbourgeois de longue durée (69 ans) **dans un Parcours qui garde son identité** (la Hongrie n'est pas absorbée, elle reste hongroise). Il est ensuite suivi d'un second AR exogène (soviétique, 42 ans), rendant le Parcours hongrois unique par son **pattern à double AR exogène successif**.
+- **Sédimentation longue** : 51 ans de stabilité institutionnelle, développement économique remarquable (Budapest 700 000 habitants, boom ferroviaire, industrialisation), bourgeoisie magyare et juive cooptée dans le cadre dualiste.
+- **Magyarisation systématique** des minorités (lois Apponyi 1907 sur l'enseignement, magyarisation administrative).
+- **Pic de prestige** : Millénaire 1896 célèbre 1000 ans depuis l'honfoglalás magyar — apogée symbolique du roman national dans le cadre composite.
+- **Bloc contestataire structuré** : MSZDP fondé 1890, nationalités minoritaires qui résistent à la magyarisation, radicaux 48ards (Parti de l'Indépendance qui invoque la mémoire 1848).
+- **Éclatement final par défaite externe** : Tisza István chancelier de crise 1913-1917, entrée en guerre mondiale, défaites cumulatives, dissolution de la Double Monarchie, Révolution des Chrysanthèmes 31 octobre 1918.
 
 ---
 
-## 7. Horthy comme IR régentiel et RN 2
+## 8. RN canonique 1918-1990
 
-**Hypothèse retenue** : la RN 2 canonique commence avec l'explosion de 1918 et suit la séquence canonique complète — révolution initiale (Károlyi, Kun, Horthy thermidor), IR Horthy (1920-1944), chute 1944-1945, restauration avortée 1945-1947, AR exogène soviétique 1947-1989 avec 1956 comme réplique avortée, Glorieuse Révolution 1989-1990.
+**Hypothèse retenue** : la RN hongroise 1918-1990 est canonique dans son cycle (révolution initiale → IR → Restauration → GR) mais étirée par tutelle soviétique 1947-1989 qui prolonge la sous-phase Restauration de 42 ans.
 
-### Horthy comme IR canonique
+### Cycle canonique respecté
 
-Les quatre fonctions structurelles de l'IR sont remplies :
-1. **Projection impérialiste extérieure** : revanchisme Trianon comme doctrine officielle pendant 24 ans, récupération de 36% des pertes territoriales entre 1938 et 1941 (Vienna Awards, Ruthénie, Bačka), entrée en guerre contre l'URSS.
+- **Révolution initiale 1918-1920** : éclatement Révolution des Chrysanthèmes (Károlyi, 31 octobre 1918), expérience parlementaire (République populaire hongroise novembre 1918-mars 1919), phase aiguë (République des Conseils de Béla Kun, 133 jours), moment thermidorien (contre-révolution de Szeged, Horthy régent mars 1920).
+- **IR Horthy 1920-1944** : régence revanchard, durée hors norme (24 ans) expliquée par l'absence de guerre européenne avant 1939 + forme régentielle stabilisante.
+- **Restauration démocratique 1945-1947** : Tildy/Nagy, IIe République proclamée le 1er février 1946, élections libres novembre 1945 (Petits Propriétaires 57%).
+- **Avortement de la Restauration par Coup de Budapest 1947** : tactique du salami de Rákosi élimine progressivement les partis non-communistes.
+- **Tutelle soviétique 1947-1989** : prolongement structurel de la sous-phase Restauration.
+- **Reprise et GR 1989-1990** : effondrement du bloc soviétique, transition pacifique négociée à la Table ronde, élections libres mars-avril 1990, gouvernement Antall (FIDDH).
+
+### Horthy comme IR régentiel
+
+Les quatre fonctions canoniques de l'IR sont remplies :
+1. **Projection impérialiste extérieure** : revanchisme Trianon comme doctrine officielle pendant 24 ans, récupération de 36% des pertes territoriales entre 1938 et 1941 (Vienna Awards, Ruthénie, Bačka), entrée en guerre contre l'URSS juin 1941.
 2. **Ventilation des élites par la méritocratie** : Terreur blanche initiale, promotion des officiers de Szeged, éviction des libéraux et de la gauche.
 3. **Verticalité autoritaire** : régime formellement parlementaire mais en pratique dictature parlementaire, parti dominant, contrôle presse et armée.
 4. **Chute par défaite externe** : occupation allemande mars 1944, Armée rouge fin 1944-début 1945.
 
-### Atypicité
+Pattern analogue partiel au Franco espagnol (IR conservateur-militaire longue durée) mais avec chute par défaite externe comme Napoléon et Hitler.
 
-Horthy est un IR canonique atypique par deux traits :
-1. **Forme régentielle** : régent d'un royaume sans roi. Pattern inédit dans le corpus.
-2. **Durée inhabituelle** : 24 ans (vs fourchette canonique 10-16 ans). Expliquée par l'absence de guerre européenne avant 1939 + forme régentielle stabilisante.
+### Tutelle soviétique : pattern Bach/Ausgleich rejoué
 
-Pattern analogue partiel à Franco (IR conservateur-militaire longue durée) mais avec chute par défaite externe comme Napoléon et Hitler.
+Sous le critère opérationnel :
+- **Rákosi 1947-1956** = vraie absorption (admin sous contrôle soviétique direct, conseillers russes omniprésents, AVH téléguidée par le NKVD/KGB, procès Rajk 1949, collectivisation forcée). Pattern structurellement identique à Bach 1849-1859.
+- **Kádár 1956-1989** = autonomie sous tutelle composite (MSZMP hongrois, gouvernement hongrois, Nouveau Mécanisme Économique 1968 conçu localement, « communisme goulash », sous contraintes stratégiques moscovites Pacte de Varsovie + COMECON). Pattern structurellement identique à Ausgleich 1867-1918.
 
-### Ancien Régime exogène soviétique 1947-1989
+### Tentative de Glorieuse Révolution 1956
 
-Pattern analogue à la Bohême v2. Phase répressive (stalinisme Rákosi 1949-1953), réplique avortée (1956 = Printemps de Prague 1968 en Bohême), normalisation accommodationniste (Kádár 1956-1988). Durée 42 ans. Pattern documenté.
+1956 satisfait les trois marqueurs canoniques de la GR :
+1. **Ancrage démocratique** : gouvernement multipartite formé par Nagy le 30 octobre incluant Petits Propriétaires, sociaux-démocrates, communistes nationaux.
+2. **Ancrage parlementaire** : réactivation des institutions représentatives, retour au pluralisme.
+3. **Ancrage identitaire et de souveraineté** : sortie unilatérale du Pacte de Varsovie le 1er novembre, déclaration de neutralité, appel à l'ONU.
 
-### Glorieuse Révolution 1989-1990
+Ce n'est pas une nouvelle RN (pas d'explosion d'un AR sédimenté, pas de cycle complet à rejouer) mais une **réplique terminale** qui tente d'achever la RN entamée en 1918 dont la Restauration avait été avortée par le Coup de Budapest. Écrasée par intervention militaire soviétique du 4 novembre (150 000 soldats, 2 500 morts, 200 000 réfugiés).
 
-Transition démocratique pacifique, pattern analogue à la Transition espagnole ou à la Réunification allemande. Pleinement ancrée (OTAN 1999, UE 2004). La date symbolique du 23 octobre 1989 relie la GR à l'insurrection de 1956, donnant sens à la séquence complète.
-
----
-
-## Comparaisons structurelles avec les parcours du corpus
-
-### Comparaison 1 : Venise et Milan 1848 — pattern RN avortée
-
-Les trois cas (Venise, Milan, Hongrie) suivent le même pattern structurel de 1848 : explosion d'AR sédimenté → expérience parlementaire → phase aiguë amorcée → écrasement externe. La différence est que Venise et Milan sont absorbées dans le Parcours italien après 1866, alors que la Hongrie reste autonome et poursuit son Parcours (RN 2 en 1918).
-
-### Comparaison 2 : Bohême — double RN avec AR exogène soviétique
-
-La Hongrie est structurellement la plus proche de la Bohême : toutes deux ont un Parcours qui s'intercale entre Autriche-Empire et influence soviétique, toutes deux ont une RN double avec AR exogène soviétique au milieu, toutes deux ont une Glorieuse Révolution tardive (1989-1990 pour la Hongrie, 1989-1993 pour la Bohême).
-
-Différence : la Hongrie a **deux** AR exogènes (habsbourgeois + soviétique), la Bohême **un seul** (soviétique). La Bohême est intégrée administrativement au Parcours autrichien via la Verneuerte Landesordnung (1627) et hérite des saillants autrichiens post-1749, alors que la Hongrie garde son autonomie absolutiste propre (1711-1848) et traverse son propre cycle avant de subir l'AR exogène habsbourgeois.
-
-### Comparaison 3 : Autriche — cadre composite habsbourgeois
-
-Le Parcours hongrois interfère continuellement avec le Parcours autrichien sans s'y confondre. Points communs : acmé absolutiste Joseph II (1780-1790) simultané, Congrès de Vienne 1815 comme fin de l'expansion commune, explosion 1918 par effondrement commun. Différences : la Hongrie a sa propre guerre sociale (Rákóczi) alors que la guerre sociale autrichienne est la Succession d'Autriche (1740-1748) ; la Hongrie a son propre 1er MO (Charles VI 1711) alors que l'Autriche a son propre (Marie-Thérèse 1749) ; la Hongrie a sa propre RN avortée (1848) et son AR exogène habsbourgeois (1849-1918) alors que l'Autriche suit un cycle différent.
-
-### Comparaison 4 : Espagne — cadre composite composite avec exceptions
-
-Pattern comparable : monarchie composite, guerre sociale résolue par nouveau cadre central (Nueva Planta pour l'Espagne / Consilium Regium pour la Hongrie), exceptions périphériques (Pays basque/Navarre en Espagne, pas d'équivalent strict en Hongrie). Différences : l'Espagne a un 1er MO étranger (Philippe V Bourbon) alors que la Hongrie a un dynaste déjà présent (Charles VI Habsbourg).
+La GR canonique 1956 et l'Écrasement 1956 sont encodés comme deux saillants distincts (cf. règle de symétrie : tout saillant canonique qui ne tient pas est accompagné d'un Écrasement séparé quand le gap temporel le permet).
 
 ---
 
-## Points fragiles et questions ouvertes
+## 9. Comparaisons structurelles avec les parcours du corpus
 
-1. **Le pacte oligarchique hongrois est-il vraiment le compromis d'élection de Charles Ier Robert, ou faut-il accepter la Bulle d'or de 1222 malgré les 86 ans d'écart ?** La lecture retenue s'appuie sur le pattern Magna Carta, mais aucun autre cas du corpus n'a un pacte aussi informel (pas d'acte écrit unique) que celui proposé pour la Hongrie.
+### Venise — Stato da Mar comme exutoire prolongeant l'essor oligarchique
 
-2. **Rákóczi comme guerre sociale canonique** : le pattern de résolution (Pálffy + Charles VI comme médiateurs labancs) est une variante du pattern #3 (victoire de faction + nouveau cadre) mais avec une torsion — Rákóczi lui-même ne construit pas le cadre. Pattern analogue aux guerres de religion françaises résolues par Henri IV (Thomas a explicitement validé cette analogie : compromis qui apaise les deux factions pour consolider l'exécutif central). Défendable mais atypique.
+Pattern structurellement identique à l'exutoire militaire hongrois. Le Stato da Mar vénitien (territoires d'outre-mer administrés par provveditori issus du patriciat) canalise l'énergie du patriciat vénitien vers la projection extérieure et prolonge l'essor oligarchique vénitien sur des siècles. La Hongrie applique le même mécanisme via la projection angevine offensive puis les Confins militaires anti-ottomans défensifs.
 
-3. **Phase absolutiste hongroise sous cadre composite** : la Hongrie a son propre cycle absolutiste dans un cadre composite subordonné à Vienne. Pattern analogue à la Castille pré-Nueva Planta et à la Bohême pré-Haugwitz. Thomas a tranché que c'est acceptable structurellement. Mais la phase absolutiste hongroise est dans la fourchette basse (137 ans), ce qui peut être interprété comme signe de compression ou de fragilité structurelle.
+### Bohême — RN 2 sous tutelle soviétique
 
-4. **1848 comme RN avortée et non Remontrance** : lecture retenue sur la base du test structurel (sept marqueurs d'AR, zéro d'impérialisme actif) et de la comparaison canonique avec Venise et Milan. Écartée la lecture Remontrance armée (v1 précédente). Fragile point : la résistance hongroise à Joseph II n'est pas la Remontrance — elle est une résistance à l'importation culturelle qui ne remet pas en cause le cadre absolutiste. La vraie Remontrance canonique est la dissolution de la diète en 1811 par François Ier.
+La Hongrie est structurellement proche de la Bohême pour la RN 1918-1990 : toutes deux ont une RN intercalée entre Autriche-Empire et influence soviétique, avec tutelle soviétique au milieu et Glorieuse Révolution tardive (1989-1990 pour la Hongrie, 1989-1993 pour la Bohême).
 
-5. **Double AR exogène successif** : pattern nouveau dans le corpus (AR exogène habsbourgeois 1849-1918 puis AR exogène soviétique 1947-1989). Aucun autre Parcours n'a deux interruptions externes successives aussi longues. Cela reflète la situation géopolitique particulière de la Hongrie, au cœur de l'Europe centrale, successivement subordonnée à Vienne puis à Moscou.
+### Castille pré-Nueva Planta et Bohême pré-Haugwitz — absolutisme composite
 
-6. **Horthy comme IR régentiel** : pattern nouveau (régent d'un royaume sans roi) et durée inhabituelle (24 ans). Cohérent structurellement avec les quatre fonctions de l'IR mais mérite validation sur d'autres cas (Franco espagnol comme pattern comparable).
+Pattern comparable : monarchie composite, royaume avec son propre cycle absolutiste dans un cadre composite subordonné, administration centrale pilotée par les nationaux. La Hongrie 1711-1848 suit ce pattern.
 
-7. **Le Millénaire de 1896 comme pic de prestige dans l'AR** (et non acmé absolutiste) : lecture atypique mais cohérente avec le fait que la Hongrie est en AR exogène, pas en impérialisme actif. Le Millénaire est une démonstration de prestige culturel dans un cadre tutélaire, pas une apogée absolutiste autonome.
+### Autriche — cadre composite habsbourgeois
+
+Le Parcours hongrois interfère continuellement avec le Parcours autrichien sans s'y confondre. Points communs : acmé absolutiste Joseph II (1780-1790) simultané, Congrès de Vienne 1815 comme fin de l'expansion commune, explosion 1918 par effondrement commun. Différences : la Hongrie a sa propre guerre sociale (Rákóczi) alors que la guerre sociale autrichienne est la Succession d'Autriche (1740-1748) ; la Hongrie a son propre 1er MO (Charles VI 1711) alors que l'Autriche a le sien (Marie-Thérèse 1749) ; la Hongrie a sa propre RN avortée 1848-1867 et son AR exogène composite 1867-1918.
+
+### Magna Carta anglaise et Diplôme inaugural de Jean de Luxembourg (Bohême) — pacte oligarchique
+
+Pattern du pacte avorté suivi du vrai pacte des décennies plus tard. La Bulle d'or 1222 (analogue Magna Carta 1215) prépare structurellement le compromis d'élection de Charles Robert 1308-1310 (analogue partiel Jean de Luxembourg 1310-1311) sans en être directement le pacte canonique.
+
+### Guerres d'Italie françaises 1494-1559 — exutoire militaire à échec territorial
+
+Pattern analogue aux Aventures angevines hongroises (Naples ratée, Balkans en vassalages instables) : l'échec territorial ne supprime pas la fonction d'exutoire d'enrichissement élitaire.
+
+### Pattern Philippe (à valider sur d'autres cas) — reboot d'AR par hétérogénéité
+
+Premier exemple bien documenté du pattern dans le corpus avec l'Ausgleich 1867. Pattern probablement applicable aux Restaurations italiennes post-1815 et aux normalisations est-européennes post-1947, à valider cas par cas.
 
 ---
 
-## Synthèse v2
+## 10. Points fragiles et questions ouvertes
 
-Le Parcours hongrois v2 est structurellement **beaucoup plus orthodoxe** que la v1 :
+1. **Pacte oligarchique = compromis d'élection de Charles Robert** : la forme atypique (pas d'acte écrit unique) reste un point fragile. Pattern Bohême confirmé partiellement.
 
-- Phase féodale 1000-1308 (~308 ans) : inchangée, prolongée par choc mongol + extinction Árpád
-- **Phase oligarchique 1308-1711 (~403 ans)** : essor canonique 1308-1526 (Charles Ier Robert, Louis Ier, Mathias Corvin), **Mohács 1526 comme fin de l'expansion**, polarisation 1526-1703 (tripartition, insurrections kuruc), **guerre sociale 1703-1711 (Rákóczi)** résolue par Szatmár + Charles VI construisant le nouveau cadre
-- **Phase absolutiste 1711-1848 (~137 ans, dans la norme basse)** : absolutisation Charles VI + Marie-Thérèse, **acmé absolutiste Joseph II 1780-1790**, fin de l'expansion Congrès de Vienne 1815, **Remontrance dissolution de la diète 1811**, AR 1825-1848 avec Âge des Réformes comme bloc contestataire
-- **Révolution Nationale 1848-1990 (~142 ans)** : **RN 1 avortée 1848-1849** (pattern Venise/Milan), **AR exogène habsbourgeois 1849-1918** (69 ans, pattern Bach + Ausgleich + FJ + Millénaire + explosion 1918), RN 2 canonique 1918-1990 (Horthy IR + AR exogène soviétique 1947-1989 + 1956 réplique avortée + **GR 1989-1990**)
-- Phase parlementaire depuis 1990
+2. **Essor de 391 ans** : extrêmement long. Défendable par le mécanisme d'exutoire militaire continu (pattern Venise) mais la durée reste atypique dans le corpus.
 
-**Pattern unique** : double AR exogène successif (habsbourgeois + soviétique) dans un seul Parcours. Aucun autre cas du corpus ne présente cette structure.
+3. **Polarisation de 4 ans** : extrêmement courte. Défendable par la préparation pendant les tentatives kuruc, mais inhabituellement compressée.
 
-**Confidence generale : medium**. À traiter comme une hypothèse de travail sérieuse, dans la même catégorie épistémique que la Bohême (v2). Les points les plus fragiles sont : la forme atypique du pacte oligarchique (compromis d'élection non écrit), la variante du pattern de résolution de guerre sociale (Pálffy + Charles VI comme médiateurs), et le pattern double AR exogène qui est nouveau dans le corpus.
+4. **Rákóczi comme guerre sociale canonique avec résolution hybride** : Pálffy + Charles VI comme médiateurs labancs intégrateurs. Variante du pattern #3 (victoire de faction + nouveau cadre) mais avec une torsion — Rákóczi lui-même ne construit pas le cadre. Pattern analogue aux guerres de religion françaises résolues par Henri IV. Défendable mais atypique.
+
+5. **Phase absolutiste hongroise sous cadre composite (137 ans, fourchette basse)** : compressée mais cohérente. Pattern Castille pré-Nueva Planta et Bohême pré-Haugwitz.
+
+6. **Horthy comme IR régentiel** : pattern atypique (régent d'un royaume sans roi) et durée inhabituelle (24 ans). Cohérent structurellement.
+
+7. **Pattern Philippe (Reboot d'AR par Ausgleich)** : nouveau dans le corpus. À valider sur d'autres cas italiens et est-européens.
+
+8. **Glorieuse Révolution avortée 1956 comme réplique terminale** : lecture structurelle nouvelle. Pattern de réplique GR qui tente d'achever une RN précédemment interrompue à la restauration, plutôt que d'initier une nouvelle séquence.
+
+9. **Asymétrie 1849-1918 (phase) vs 1947-1989 (perturbation intra-restauration)** : justifiée par la position dans le cycle (RN interrompue tôt vs RN interrompue tardivement) mais asymétrie structurelle peu commune dans le corpus.
+
+---
+
+## Synthèse
+
+Le Parcours hongrois articule six phases canoniques :
+
+- **Phase pré-féodale** 895-1000
+- **Phase féodale** 1000-1308 (~308 ans, +108 par chocs externes : mongol, extinction Árpád)
+- **Phase oligarchique** 1308-1711 (~403 ans, essor de 391 ans étiré par exutoire militaire continu, polarisation-éclair 4 ans, guerre sociale Rákóczi)
+- **Phase absolutiste** 1711-1848 (~137 ans, composite endogène, Charles VI → Joseph II → Saturation/Remontrance 1811 → Reformkor → éclatement 1848)
+- **Phase Révolution Nationale avortée** 1848-1867 (~19 ans en deux temps : révolution initiale écrasée 1848-1849 + Restauration sous occupation Bach 1849-1867 déviée en reboot AR par Ausgleich)
+- **Phase Ancien Régime exogène composite (rebooté par Ausgleich)** 1867-1918 (~51 ans, pattern Philippe)
+- **Phase Révolution Nationale** 1918-1990 (~72 ans, cycle canonique avec sous-phase Restauration prolongée 42 ans par tutelle soviétique, GR avortée 1956, GR finale 1989-1990)
+- **Phase parlementaire** depuis 1990
+
+**Confidence générale : medium**. Le parcours est à traiter comme une hypothèse de travail sérieuse. Patterns nouveaux à valider sur le corpus : reboot d'AR par choc d'hétérogénéité (pattern Philippe), réplique terminale de GR (1956), Restauration exogène d'Antoine Deblonde comme sous-phase de RN.

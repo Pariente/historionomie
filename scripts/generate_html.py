@@ -37,8 +37,8 @@ EXAMPLES_MAP = {
         "Éveil féodal", "Pic féodal", "Crise féodale", "Pacte oligarchique"
     ],
     "phase_oligarchique.md": [
-        "1er monarque oligarchique", "Acmé oligarchique",
-        "Fin de l'expansion", "Guerre sociale"
+        "1er monarque oligarchique", "1er impôt permanent", "1re armée permanente",
+        "Acmé oligarchique", "Fin de l'expansion", "Guerre sociale"
     ],
     "phase_absolutiste.md": [
         "1er monarque absolu", "Dernière grande révolte oligarchique",
@@ -98,6 +98,8 @@ SAILLANT_ICONS = {
     'Crise féodale': ('close', '#8B7355'),
     'Pacte oligarchique': ('gavel', '#8B7355'),
     '1er monarque oligarchique': ('stars', '#2E8B57'),
+    '1er impôt permanent': ('toll', '#2E8B57'),
+    '1re armée permanente': ('military_tech', '#2E8B57'),
     'Acmé oligarchique': ('terrain', '#2E8B57'),
     "Fin de l'expansion": ('block', '#2E8B57'),
     'Guerre sociale': ('local_fire_department', '#2E8B57'),
@@ -129,7 +131,7 @@ MATERIAL_ICON_NAMES = {
     'open_in_full', 'bolt', 'close', 'compress', 'wb_sunny', 'terrain',
     'gavel', 'stars', 'local_fire_department', 'block', 'crown', 'whatshot',
     'record_voice_over', 'flash_on', 'account_balance', 'skull', 'balance',
-    'military_tech', 'star', 'swords', 'circle', 'restart_alt', 'fast_forward',
+    'military_tech', 'toll', 'star', 'swords', 'circle', 'restart_alt', 'fast_forward',
 }
 
 

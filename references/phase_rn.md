@@ -244,6 +244,32 @@ Le critère opérationnel : **y a-t-il eu un IR (endogène ou exogène substanti
 
 Cas-type d'avortement à ne pas confondre avec Restauration : retour de Ferdinand III à Florence (juin 1799) sous protection autrichienne, sans IR préalable — codé comme saillant ponctuel d'avortement, qui rebascule Florence en AR exogène.
 
+### Dérivation rare : Restauration exogène (sous-phase)
+
+**Définition** : sous-phase Restauration imposée par une puissance extérieure après écrasement de la révolution initiale (sans IR endogène intervenu). Le régime restauré est une **pure occupation** sans roman national propre, avec coalition restreinte taillée pour empêcher (a) la réémergence d'un souverain charismatique national et (b) tout élargissement de la coalition gagnante.
+
+**Quand l'utiliser** : la RN est avortée tôt (à la révolution initiale, sans IR ni Restauration endogène), mais la puissance occupante installe un régime durable qui occupe l'espace de la sous-phase Restauration. La sous-phase reste à l'intérieur de la phase RN — elle ne constitue pas une nouvelle phase absolutiste — mais elle est imposée du dehors.
+
+**Critère opérationnel discriminant** (Antoine Deblonde) : qui pilote l'administration centrale ?
+- Admin centrale pilotée par étrangers + langue/droit imposés + constitution suspendue + figures historiographiques d'occupation = **Restauration exogène** (sous-phase de RN)
+- Admin centrale pilotée par nationaux + roman national propre + coalition cooptée + sédimentation possible = **AR exogène composite** (phase à part entière, cf. `phase_absolutiste.md`)
+
+**Critère d'homogénéité** (Antoine Deblonde) : le sort de la Restauration exogène dépend du niveau d'homogénéité de la nation à son entrée :
+- **Homogénéité élevée** → Restauration exogène intenable à long terme. La coalition restreinte ne peut pas tenir face à une nation culturellement constituée. Doit s'élargir, vers l'une des trois trajectoires de sortie ci-dessous.
+- **Homogénéité faible** → Restauration exogène peut perdurer ou transitionner doucement vers un AR exogène durable où le régime tutélaire trouve un socle d'adhésion sociale et un roman national de tutelle.
+
+**Trois trajectoires de sortie possibles** :
+
+1. **Sortie canonique vers GR** : élargissement maximal de la coalition par l'effondrement de la puissance tutélaire ou par négociation pleinement aboutie. La nation accède au parlementarisme souverain. Cas typique : aucun bien documenté à ce stade — toutes les trajectoires connues post-Restauration exogène ont été déviées.
+
+2. **Sortie déviée par pattern Philippe (reboot d'AR)** : pendant l'élargissement attendu vers GR, un choc d'hétérogénéité est injecté (subordination dualiste, multi-ethnicité imposée, légitimité hybride). La trajectoire est rebootée en AR exogène composite. Le saillant de bascule est un **Reboot d'AR** (perturbation `choc_heterogeneite` + `reboot`). Cf. `perturbations.md` §4.7. Cas-type documenté : Hongrie 1849-1867 (Bach) → 1867 Ausgleich → AR exogène composite 1867-1918.
+
+3. **AR exogène durable** : si l'homogénéité est trop faible pour forcer l'élargissement, la Restauration exogène peut être stabilisée comme AR exogène par accommodement progressif (sans nécessiter de Reboot d'AR distinct). Le régime tutélaire trouve sa légitimité par adhésion sociale et roman national de tutelle. Cas-type partiellement documenté : Bohême post-1948 (à examiner).
+
+**Saillant qui ouvre la sous-phase Restauration exogène** : le saillant Restauration canonique (avec subtitle explicitant le caractère exogène), positionné au moment de l'installation du régime occupant. Quand l'écrasement et l'installation sont temporellement indissociables (cas Hongrie 1849 : Världos + Terreur blanche + Bach en quelques mois), un seul saillant Restauration capture les deux événements. Quand un gap temporel les sépare, on peut avoir deux saillants distincts (cf. règle de symétrie ci-dessous).
+
+**Cas-type documenté** : Hongrie 1849-1867 (sous-phase Restauration sous occupation Bach, déviée par Ausgleich 1867 en reboot d'AR).
+
 ### Saillant : Glorieuse Révolution
 
 **Définition** : une réplique de la révolution initiale finit d'ancrer le parlementarisme dans la vie politique. La base politique est élargie fortement et définitivement. C'est la transition vers l'État-nation parlementaire.
@@ -259,6 +285,36 @@ Cas-type d'avortement à ne pas confondre avec Restauration : retour de Ferdinan
 - Bill of rights, constitution révisée, ou actes fondamentaux consacrant la subordination de l'exécutif à la représentation
 - Transition pacifique vers un régime où l'élargissement du corps civique devient possible et progressif
 - Le test discriminant RN vs ENP bascule à l'oui : la subordination du pouvoir administratif à la représentation devient stabilisée et pérenne
+
+**Deux modes formels d'incarnation**
+
+La fonction structurelle de la GR (transition recentrée vers parlementarisme, sans Phase aiguë radicale, stabilisation rapide d'un cadre constitutionnel) peut s'incarner sous deux modes formels distincts selon le contexte de souveraineté :
+
+- **Mode A — dans un État indépendant** : octroi top-down par le souverain légitime. Le souverain accepte la transition vers le parlementarisme parce qu'il est le locus de légitimité dynastique propre. Cas-types : Glorieuse Révolution anglaise 1688, Statuto fondamentale (Léopold II, Florence 17 février 1848), Statut Albertin (Carlo Alberto, Turin 4 mars 1848), Constitution sicilienne, Constitution napolitaine.
+
+- **Mode B — contre une puissance occupante** : mouvement bottom-up qui chasse l'occupant et installe un cadre constitutionnel. La puissance occupante n'ayant pas la légitimité d'octroyer la transition, celle-ci ne peut se faire que par expulsion. Cas-types : Tchéquie 1989 (Velvet Revolution contre l'occupation soviétique), Pologne 1989, Roumanie 1989, Émilie-Romagne 1831 et 1848 contre Habsbourg-Este (Modène), Bourbon-Parme et Légations papales.
+
+**Test discriminant Mode B vs Éclatement révolutionnaire** (qui partage la forme bottom-up mais ouvre la RN au lieu de la clôturer) :
+- Direction du basculement : vers le parlementarisme (pas vers rupture révolutionnaire prolongée)
+- Stabilisation rapide d'un cadre constitutionnel (gouvernement provisoire constitutionnel à composition modérée-libérale, pas dictature révolutionnaire)
+- Absence de Phase aiguë canonique (pas de radicalisation EG endogène, pas de Comité de salut public, pas d'élimination des modérés par les radicaux)
+- Position dans le cycle : se déploie dans une sous-phase Restauration ongoing (la nation a déjà parcouru révolution initiale et IR), pas en ouverture de cycle RN
+
+Sans cette distinction des deux modes, on disqualifierait à tort des GR canoniques au motif qu'elles ne sont pas top-down — alors que c'est leur **fonction structurelle** (transition vers le parlementarisme), pas la direction de l'initiative, qui qualifie le saillant.
+
+### Règle de symétrie : saillant canonique + Écrasement perturbation (cas avorté)
+
+Pour tout saillant canonique de la RN qui se déroule mais ne tient pas (Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Émergence de l'IR, Restauration, Glorieuse Révolution), la convention est :
+
+- **Si un gap temporel exploitable sépare l'événement canonique de son écrasement** (typiquement quelques jours à quelques années) : **deux saillants distincts** sur la frise — le saillant canonique (sans flag perturbation) qui marque la tentative + un saillant Écrasement (perturbation `choc_exogene` + `avortement`) qui marque l'avortement.
+- **Si l'événement canonique et son écrasement sont temporellement indissociables** (collapse en quelques semaines ou mois) : **un seul saillant** qui capture les deux moments — typiquement le saillant Restauration (canonique) qui hérite de la dimension écrasement dans sa description, OU un seul saillant canonique avec `perturbation: true` quand la conflation est complète.
+
+**Cas typiques** :
+- **Restauration avortée** : saillant canonique Restauration (Tildy/Nagy 1945) + saillant Écrasement séparé (Coup de Budapest 1947). Gap : 2 ans → deux saillants.
+- **GR avortée** : saillant canonique Glorieuse Révolution (Nagy 1956, ancrage parlementarisme multipartite + sortie Pacte de Varsovie + neutralité) + saillant Écrasement séparé (intervention soviétique 4 nov 1956). Gap : quelques jours → deux saillants.
+- **Restauration exogène collapsée avec écrasement** : un seul saillant Restauration (Världos 1849 + Terreur blanche + Bach). Gap quasi-nul → un seul saillant qui capture la séquence.
+
+**Pourquoi cette règle** : le saillant canonique GR (ou Restauration) sans flag perturbation se lit comme une vraie tentative dans son ancrage structurel (les trois marqueurs canoniques sont présents). L'Écrasement comme losange séparé indique clairement la cause structurelle de l'avortement (intervention externe, hétérogénéité injectée, etc.). C'est plus lisible que la conflation en un seul saillant + perturbation:true, qui masque la nature distincte des deux événements.
 
 ---
 
@@ -300,6 +356,8 @@ Deux configurations :
 1. **Les institutions locales sont absolutistes, le suzerain étranger est formel** — le Parcours local est en AR propre. L'explosion est contre l'ordre absolutiste local. Le suzerain étranger peut intervenir pour restaurer l'ordre, ce qui peut faire avorter la RN.
 
 2. **Les institutions locales sont totalement subordonnées à l'occupant** — le Parcours local est en AR exogène (cf. `phase_absolutiste.md` §AR exogène). Les conditions d'AR (pression fiscale, mobilité bloquée, sédimentation) sont imposées par l'occupant, mais la réaction du peuple est endogène. La RN éclate contre l'occupant directement.
+
+**GR Mode B applicable** : dans ces configurations sous occupant, non seulement l'Éclatement de l'AR peut être bottom-up contre l'occupant, mais la GR elle-même peut s'incarner en Mode B — mouvement bottom-up qui chasse l'occupant et installe un cadre constitutionnel. Cf. §Saillant : Glorieuse Révolution pour la distinction Mode A / Mode B et le test discriminant correspondant.
 
 ### Phase parlementaire qui suit — active ou contrariée figée (hypothèse)
 

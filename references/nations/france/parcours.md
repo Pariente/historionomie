@@ -197,6 +197,16 @@
 - summary: Philippe VI est le premier roi de France dont la légitimité repose entièrement sur les règles codifiées par le pacte oligarchique de 1317, et non sur la continuité dynastique directe des Capétiens.
 - description: Philippe VI accède au trône en 1328 en vertu de la loi salique fraîchement codifiée, ce qui en fait le premier souverain français dont la légitimité est fondée sur des règles institutionnelles explicites plutôt que sur la succession dynastique directe. Il inaugure la branche des Valois et dispose d'un appareil étatique hérité de Philippe le Bel — baillis, Parlement de Paris, administration fiscale — mais dans un cadre où le pouvoir royal est désormais encadré par les règles adoptées collectivement par les grands du royaume. Son successeur Jean II le Bon achète le Dauphiné en 1349, première extension significative du domaine royal hors du périmètre capétien historique, ce qui montre que l'État central commence à fonctionner comme une machine d'expansion territoriale institutionnalisée.
 
+#### Saillant : 1er impôt permanent
+- type: saillant
+- start: 1341
+- figure: Philippe VI
+- subtitle: Gabelle du sel
+- title: 1er impôt permanent
+- confidence: high
+- summary: Philippe VI institue en 1341 le monopole royal sur le sel et la gabelle — première taxe royale prélevée de façon pérenne sur le territoire, distincte des aides et fouages votés campagne par campagne. Expédient temporaire sous Louis IX, la gabelle devient permanente : c'est le déploiement du marqueur « fisc permanent central » dans l'essor de la première phase oligarchique.
+- description: La gabelle du sel est instaurée par les ordonnances de 1341 (monopole royal sur le sel, taxe uniforme), puis consolidée en 1342 (création des greniers à sel et de leurs tribunaux) et 1343 (monopole d'État achevé). Contrairement aux aides et fouages — levés au coup par coup, avec consentement des États, pour une campagne donnée —, la gabelle est prélevée en continu par des officiers royaux et alimente une caisse centrale : elle satisfait les signes observables du marqueur nº 1 de la phase oligarchique (cf. phase_oligarchique.md §Fisc permanent central) — prélèvement régulier, officiers fiscaux nommés et payés par le centre, pérennité au-delà d'un règne. C'est le premier des deux moteurs étatiques — la construction de l'appareil fiscal — qui se concrétise dans l'essor. Le second moteur, la coercition permanente, n'aboutira pas dans cette phase (cf. Réforme militaire de Charles V) : la première phase oligarchique française consolide son fisc mais pas son armée.
+
 ### Perturbation : GCA : 1er reflux
 - type: perturbation
 - mechanism: choc_exogene
@@ -216,6 +226,19 @@
 - title: Essor oligarchique
 - summary: Charles V incarne la reprise de l'essor oligarchique : il réforme l'armée, rétablit les finances et reconquiert méthodiquement le territoire perdu grâce à son connétable Du Guesclin. À sa mort en 1380, presque tout le terrain perdu a été regagné et les institutions centrales sont renforcées.
 - description: Charles V (1364-1380) relance vigoureusement l'essor oligarchique après le premier reflux. Il réforme l'armée en professionnalisant les troupes, rétablit les finances royales et confie à son connétable Du Guesclin une guerre d'usure méthodique qui évite les batailles rangées et reconquiert progressivement le territoire cédé aux Anglais. Les premières années du règne de Charles VI, avant sa folie (1380-1392), prolongent cette dynamique sous la régence des oncles du roi puis pendant son bref gouvernement personnel. Cette période confirme que l'essor oligarchique n'a jamais été interrompu par le premier reflux — la construction de l'État central a simplement trébuché avant de reprendre.
+
+#### Saillant : Réforme militaire de Charles V
+- type: saillant
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
+- start: 1374
+- figure: Charles V
+- subtitle: Garde de l'Hôtel
+- title: Réforme militaire de Charles V
+- confidence: medium
+- summary: L'ordonnance de 1374 tente de doter la couronne d'une force armée permanente — troupes de garnison dans les forteresses royales, encadrement contractuel des compagnies, garde de l'Hôtel (~1 000 hommes). La réforme échoue faute de ressources fiscales et devant la résistance des vassaux : le marqueur « armée permanente » de l'essor n'est pas atteint. Avortement du second moteur étatique.
+- description: Charles V promulgue en 1374 (ordonnance enregistrée au Parlement en 1375) un train de mesures visant à soustraire la force armée à la logique féodale et mercenaire : encadrement contractuel des capitaines de compagnies, troupes de garnison dans les forteresses du royaume, entretien de la garde de l'Hôtel (~1 000 hommes, Français, Écossais, Allemands). C'est bien une tentative de force territorialisée — déployée sur le territoire comme instrument de coercition du centre, et non une simple garde liée au corps du roi. Mais la réforme ne tient pas : la couronne n'a ni les ressources fiscales pour solder durablement ces troupes, ni le poids politique face aux grands vassaux qui y voient une menace pour leurs prérogatives. Mécanisme : insuffisance interne. Effet : avortement du marqueur « armée permanente soldée par l'exécutif ». La première phase oligarchique française consolide son fisc permanent (gabelle, 1341) mais échoue à consolider sa coercition permanente — désynchronisation des deux moteurs étatiques. Cet échec participe de la fragilité structurelle qui, après le désastre militaire (Azincourt 1415, traité de Troyes 1420), débouchera sur le reboot de la phase : seul l'essor de la phase oligarchique rebootée réussira l'armée permanente (compagnies d'ordonnance, 1445).
 
 ### Perturbation : Effondrement des institutions
 - type: perturbation
@@ -297,6 +320,26 @@
 - confidence: high
 - summary: Charles VII est le premier roi de la seconde phase oligarchique, dont la légitimité repose sur le nouveau pacte de Chinon (1428) confirmé par le sacre à Reims (1429). Il reconstruit l'État central sur des bases entièrement nouvelles — armée permanente, taille permanente, contrôle de l'Église.
 - description: Charles VII accède à la pleine légitimité après le sacre de Reims (17 juillet 1429), rendu possible par les fonds votés aux États généraux de Chinon. Sa légitimité ne repose pas sur la loi salique de 1317 (annulée par le Traité de Troyes) mais sur le nouveau pacte constitué par les élites méridionales. La classe dirigeante qui l'entoure est sociologiquement nouvelle — noblesse du Sud, bourgeoisie marchande (Jacques Cœur, argentier du roi), magistrats du Parlement de Poitiers — par rapport à l'ancienne cour parisienne des premiers Valois. Son programme de reconstruction étatique est d'une ambition sans précédent : Pragmatique Sanction de Bourges (1438), taille permanente (1439), compagnies d'ordonnance (1445), reconquête de la Normandie et de la Guyenne (1449-1453).
+
+#### Saillant : 1er impôt permanent
+- type: saillant
+- start: 1439
+- figure: Charles VII
+- subtitle: Taille permanente
+- title: 1er impôt permanent
+- confidence: high
+- summary: L'ordonnance d'Orléans (2 novembre 1439) rend la taille permanente : la couronne la lève désormais chaque année sans consentement récurrent des États généraux. Premier impôt royal pérenne de la phase oligarchique rebootée — les élites abandonnent leur droit de consentement fiscal en échange d'un État central garant de l'ordre.
+- description: Aux États généraux d'Orléans (1439), Charles VII obtient le droit de lever la taille de façon annuelle et régulière, sans reconvocation ni consentement répété — l'impôt cesse d'être un expédient négocié campagne par campagne pour devenir une ressource pérenne de l'appareil central. C'est le déploiement du marqueur nº 1 de la phase oligarchique (cf. phase_oligarchique.md §Fisc permanent central) dans l'essor de la phase rebootée. Trait distinctif du cas français : l'ordonnance institue la taille permanente explicitement pour financer une armée royale permanente — fisc et armée sont couplés dès l'origine, à six ans d'intervalle (cf. 1re armée permanente, 1445). Là où la première phase oligarchique avait consolidé son fisc mais avorté son armée, la phase rebootée mène les deux moteurs étatiques à terme presque simultanément.
+
+#### Saillant : 1re armée permanente
+- type: saillant
+- start: 1445
+- figure: Charles VII
+- subtitle: Compagnies d'ordonnance
+- title: 1re armée permanente
+- confidence: high
+- summary: L'ordonnance du 26 mai 1445 crée les compagnies d'ordonnance — quinze compagnies de cent lances, soldées en numéraire par le centre, permanentes entre les campagnes. Première force armée permanente de la couronne de France, déployée sur le territoire comme instrument de coercition central.
+- description: Par l'ordonnance de Louppy-le-Châtel (26 mai 1445), Charles VII institue les compagnies d'ordonnance : des unités permanentes de gens d'armes, recrutées et soldées directement par le pouvoir central, entretenues entre les campagnes et stationnées dans le royaume. Elles satisfont les signes observables du marqueur nº 2 de la phase oligarchique (cf. phase_oligarchique.md §Armée permanente) — solde régulière en numéraire versée par le centre, recrutement organisé par la couronne, force subsistant hors campagne — et passent le test fonctionnel du critère retenu : une force déployée sur le territoire, instrument de coercition du centre, et non une garde liée au corps du roi. Financées par la taille rendue permanente six ans plus tôt (1439), elles concrétisent le second moteur étatique. Le couplage fisc → armée est ici exceptionnellement serré : la première phase oligarchique avait consolidé son fisc seul (gabelle 1341) et avorté son armée (réforme de Charles V, 1374) ; la phase rebootée mène les deux à terme presque ensemble.
 
 #### Saillant : Intégration Bourgogne-Provence
 - type: saillant
