@@ -6,11 +6,11 @@
 - flag: images/genes/flag.png
 - start: 951
 - end: 1861 (fusion dans le Parcours italien — proclamation du Royaume d'Italie)
-- subtitle: Cité-État, consortium oligarchique institutionnalisé, acmé absolutiste financière, RN avortée par annexion comme marge passive
+- subtitle: Cité-État, consortium oligarchique institutionnalisé, acmé absolutiste financière, RN à fusion italienne
 - highlight_1: Un 1er monarque absolu qui refuse la seigneurie | Doria 1528 codifie la fusion vecchi/nuovi par 28 Alberghi et institutionnalise le Banco di San Giorgio comme appareil-consortium. Configuration distinctive vs Florence (familial-bancaire) et Venise (organe collégial autonome) : ici la fusion oligarchique est préalable, donc l'appareil ne peut pas se retourner contre ses propres opérateurs-créanciers. | https://commons.wikimedia.org/wiki/Special:FilePath/Andrea%20Doria.jpg?width=120 | absolutiste
 - highlight_2: Un impérialisme financier plutôt que territorial | Après la faillite de Philippe II (1557), les banquiers génois capturent les asientos de la Couronne d'Espagne et tiennent l'Empire hispanique en hégémonie financière pendant 70 ans, sans expansion territoriale propre. Acmé absolutiste fonctionnelle plutôt que militaire — la cité-État trop petite projette par capture financière d'un empire extérieur. | https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20San%20Giorgio%20Genoa%2043.jpg?width=120 | absolutiste
 - highlight_3: Ingérences étrangères prolongent la phase oligarchique | France, Visconti, Charles Quint se succèdent comme tutelles 1396-1528. À chaque déclin, une faction appelle une puissance voisine pour se relever, empêchant la résolution endogène de la guerre sociale. Les 4 doges légalement élus en 189 ans illustrent l'incapacité à produire un 1er MA — pattern « petite cité-État perturbée par voisins ». | https://commons.wikimedia.org/wiki/Special:FilePath/Lodovico%20Pogliaghi%20-%20The%20naval%20battle%20of%20Meloria%20between%20Genoa%20and%20Pisa%2C%201284.png?width=120 | oligarchique
-- highlight_4: Deux RN avortées, puis fusion italienne par les élites génoises | RN (1) 1797-1805 avortée par annexion comme marge passive (Bonaparte). RN (2) 1848-1849 ouverte par le Statut Albertin, écrasée par La Marmora. Entre et après, AR exogènes sardes. Pendant ces tutelles, Mazzini (Giovine Italia 1831) et Mameli (hymne italien 1847) deviennent moteurs de la RN italienne — fusion d'un Parcours de cité-État dans un Parcours de taille standard. | https://commons.wikimedia.org/wiki/Special:FilePath/Giuseppe%20Mazzini.jpg?width=120 | rn
+- highlight_4: Une RN longue à fusion italienne, par cadre sarde élargi | RN unique 1797-1861 (~64 ans) en trois sous-phases. Révolution initiale exogène 1797-1814 (République ligurienne sous tutelle française puis annexion à l'Empire napoléonien — IR exogène effectif, le consortium oligarchique génois est définitivement détruit). Restauration 1814-1849 sous Royaume de Sardaigne en élargissement progressif vers cadre italien ; Mazzini fonde la Giovine Italia (1831), Mameli compose l'hymne italien (1847). GR par Statut Albertin (1848) avortée par l'écrasement de Gênes par La Marmora (avril 1849). Restauration exogène durcie 1849-1861 spécifique à Gênes, puis fusion italienne (1861). | https://commons.wikimedia.org/wiki/Special:FilePath/Giuseppe%20Mazzini.jpg?width=120 | rn
 - highlight_5: Patriciat sans sommet à contester → pas de Remontrance | La Remontrance suppose deux pôles : un corps institutionnel intégré et un sommet exécutif stable. Gênes a le corps (Liber aureus, Conseils, Sénat, Procuratori) mais pas le sommet — doge biennal tournant, patriciat collectivement souverain via le consortium. Cas complémentaire de Florence (qui manque du pôle corps) ; sur 14 nations du corpus, seules ces deux configurations sans Remontrance. | https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Ducale%20%28Genova%29%20salone%20Maggior%20Consiglio%20particolare.jpg?width=120 | absolutiste
 - status: à valider
 - confidence: medium
@@ -325,37 +325,44 @@
 - end: 1797
 - title: Ancien Régime
 - summary: AR de durée standard (~113 ans), aligné avec Florence (~126 ans), Venise (130 ans), Piémont (113 ans avec éclipse). Pattern « petite cité-État italienne » : marqueurs d'AR cumulés (sédimentation, surproduction élitaire, déclin économique, pertes territoriales accumulées) mais sortie par choc exogène avant convergence pleine discrédit + ruine financière. **Remontrance structurellement absente** — signature de la configuration consortium oligarchique institutionnalisé : pas de classe administrative distincte qui pourrait remontrer, les patriciens-créanciers *sont* l'appareil. Aucun souverain réformateur ne peut émerger non plus pour la même raison (pas de figure exécutive personnelle). Sortie par Bonaparte 1797.
-- description: L'AR génois est l'un des plus longs du corpus mais sans devenir une singularité — il s'aligne avec les autres cités-États italiennes (Florence, Venise) et le Piémont. La cause structurelle commune est l'absence d'un mécanisme endogène d'éclatement : (1) les marqueurs d'AR sont cumulés (Liber aureus fermé, accès patricien limité, déclin économique structurel à partir de 1660s, pertes territoriales — Tabarka 1742, Corse 1768, occupation autrichienne 1746, Balilla, raids britanniques 1793) ; (2) mais la convergence discrédit + ruine financière n'est pas pleinement aboutie — Banco di San Giorgio survit jusqu'à 1805 même affaibli, finances détériorées mais pas effondrées, soutien hispano-impérial puis français résiduel ; (3) **Remontrance structurellement absente — analyse à deux pôles**. La Remontrance suppose un corps institutionnel intégré pour formuler la pétition *et* un sommet exécutif stable contre lequel la formuler. Sur les 14 nations du corpus, 11 présentent une Remontrance attestée (France Polysynodie 1715, Angleterre Apology of the Commons 1604, Venise Correzione 1761, Bavière Landtag 1848, Piémont Révolte 1821, Espagne La Gloriosa 1868, Milan République Ambrosienne 1447, Hongrie dissolution diète 1811, Suisse Société Helvétique 1761, Autriche 1848, Israël prolongement Ambassade à Auguste -4) ; trois en sont privées — Israël antique (phase interrompue par Josias en -609), Florence (manque du pôle corps : patriciat ancien éliminé à Montemurlo 1537, Grand-Duché sans parlement, noblesse de robe ducale embryonnaire), Gênes (manque du pôle sommet). À Gênes, le corps existe — Liber aureus dense, Grand Conseil, Petit Conseil, Sénat, Procuratori — mais le sommet manque : le doge biennal tournant n'est pas une figure pérenne à contester, et le patriciat est *lui-même collectivement souverain* via le consortium oligarchique institutionnalisé. Pas d'asymétrie interne au corps inscrit, pas de figure exécutive stable distincte du patriciat — le lieu logique d'où une remontrance pourrait venir n'existe pas. Le contre-exemple décisif est Venise, autre cité-État à patriciat dense (Libro d'Oro), mais qui *a* sa Remontrance (Correzione 1761) parce qu'elle a le sommet à contester (Inquisiteurs d'État, organe collégial autonome au-dessus du patriciat). La sortie de l'AR génois est donc obligatoirement par choc exogène — Bonaparte 1797, qui éclate le cadre dorien-Leges Novae avant que les conditions d'éclatement endogène ne soient réunies. Comme à Florence et Venise, la RN qui suit est compressée et avortée par chocs exogènes successifs.
+- description: L'AR génois est l'un des plus longs du corpus mais sans devenir une singularité — il s'aligne avec les autres cités-États italiennes (Florence, Venise) et le Piémont. La cause structurelle commune est l'absence d'un mécanisme endogène d'éclatement : (1) les marqueurs d'AR sont cumulés (Liber aureus fermé, accès patricien limité, déclin économique structurel à partir de 1660s, pertes territoriales — Tabarka 1742, Corse 1768, occupation autrichienne 1746, Balilla, raids britanniques 1793) ; (2) mais la convergence discrédit + ruine financière n'est pas pleinement aboutie — Banco di San Giorgio survit jusqu'à 1805 même affaibli, finances détériorées mais pas effondrées, soutien hispano-impérial puis français résiduel ; (3) **Remontrance structurellement absente — analyse à deux pôles**. La Remontrance suppose un corps institutionnel intégré pour formuler la pétition *et* un sommet exécutif stable contre lequel la formuler. Sur les 14 nations du corpus, 11 présentent une Remontrance attestée (France Polysynodie 1715, Angleterre Apology of the Commons 1604, Venise Correzione 1761, Bavière Landtag 1848, Piémont Révolte 1821, Espagne La Gloriosa 1868, Milan République Ambrosienne 1447, Hongrie dissolution diète 1811, Suisse Société Helvétique 1761, Autriche 1848, Israël prolongement Ambassade à Auguste -4) ; trois en sont privées — Israël antique (phase interrompue par Josias en -609), Florence (manque du pôle corps : patriciat ancien éliminé à Montemurlo 1537, Grand-Duché sans parlement, noblesse de robe ducale embryonnaire), Gênes (manque du pôle sommet). À Gênes, le corps existe — Liber aureus dense, Grand Conseil, Petit Conseil, Sénat, Procuratori — mais le sommet manque : le doge biennal tournant n'est pas une figure pérenne à contester, et le patriciat est *lui-même collectivement souverain* via le consortium oligarchique institutionnalisé. Pas d'asymétrie interne au corps inscrit, pas de figure exécutive stable distincte du patriciat — le lieu logique d'où une remontrance pourrait venir n'existe pas. Le contre-exemple décisif est Venise, autre cité-État à patriciat dense (Libro d'Oro), mais qui *a* sa Remontrance (Correzione 1761) parce qu'elle a le sommet à contester (Inquisiteurs d'État, organe collégial autonome au-dessus du patriciat). La sortie de l'AR génois est donc obligatoirement par choc exogène — Bonaparte 1797, qui éclate le cadre dorien-Leges Novae avant que les conditions d'éclatement endogène ne soient réunies. Comme à Florence et Milan, la RN qui suit est entièrement portée par la tutelle française pour sa sous-phase initiale (IR exogène napoléonien livrant directement le résultat de la révolution initiale), suivie d'une Restauration sous cadre sarde élargi, puis d'une Restauration exogène durcie post-écrasement de 1849, avant fusion italienne (1861).
 
 ---
 
-## Phase : Révolution Nationale (avortée 1805)
+## Phase : Révolution Nationale
 
 - type: phase
 - phase: rn
 - start: 1797
-- end: 1805
-- title: Révolution Nationale (avortée)
+- end: 1861
+- title: Révolution Nationale
 - typical_duration: ~25-80 ans
-- actual_duration: ~8 ans
-- resolution: Avortement par choc exogène — annexion à l'Empire français (juin 1805) intègre la Liguria comme trois départements sans projet IR génois propre. La RN génoise n'a pas atteint son terme canonique ; le Parcours bascule en AR exogène (cf. phase suivante).
-- summary: RN compressée et avortée. Sous-phase unique de révolution initiale (1797-1805) compressée sous tutelle française. Pas d'IR endogène — Bonaparte n'est pas IR de Gênes (annexion comme marge passive 1805). Pas de moment thermidorien canonique. La RN génoise est avortée ; bascule directe en AR exogène sous Empire français puis Royaume de Sardaigne.
-- description: La RN génoise s'ouvre par l'émeute jacobine de mai-juin 1797 et l'imposition de la République ligurienne par Bonaparte (proclamée le 6 juin 1797) qui éclate l'AR génois par choc exogène. Le déclencheur n'est pas l'aboutissement d'une convergence endogène discrédit + ruine financière, mais la pression du projet français sur une cité affaiblie. La sous-phase de révolution initiale est compressée sous tutelle française : Constitution directoriale du 22 décembre 1797, déposition du Directoire en décembre 1799, siège austro-britannique de Gênes (1800, ~30 000 victimes ; capitulation française reconquise après Marengo), Constitution hybride de 1802 (doge président d'un Sénat). Phase aiguë et Moment thermidorien sont compressés et structurellement absents au sens canonique — la dynamique parlementaire est encadrée par l'occupation française, pas portée par des factions endogènes concurrentes. L'annexion à l'Empire français (juin 1805, suppression du Banco di San Giorgio par Napoléon) intègre la Liguria comme trois départements (Apennins, Gênes, Montenotte) — c'est une absorption administrative passive, pas un projet IR génois. Bonaparte n'est **pas IR** de Gênes au sens de phase_rn.md §Cas particulier : la nation génoise n'est pas cadre actif du projet impérialiste (pas d'armée nationale, pas de projet politique génois propre dans le projet impérial, pas de dynamique IR pour la nation considérée) — c'est un avortement de la RN par choc exogène avec annexion comme marge passive. La phase RN est avortée dès 1805 sans avoir parcouru ses sous-phases canoniques (pas d'IR, pas de Restauration, pas de Glorieuse Révolution) ; bascule directe en AR exogène (cf. phase suivante).
-- deviation: Durée ~8 ans. Sous-phases IR et Restauration structurellement absentes — la RN est avortée par annexion comme marge passive (1805) qui se prolonge en AR exogène long.
+- actual_duration: ~64 ans
+- resolution: Proclamation du Royaume d'Italie (17 mars 1861) — la Révolution Nationale génoise s'achève par fusion-absorption dans le Parcours italien plus vaste, sans Glorieuse Révolution endogène propre stabilisée.
+- summary: Révolution Nationale longue (~64 ans), articulée en trois sous-phases. La sous-phase Révolution initiale exogène (1797-1814) compresse l'Éclatement de l'AR génois (chute du doge, République ligurienne 1797), une Expérience parlementaire encadrée par la tutelle française (Constitutions 1797 et 1802) et l'Émergence de l'IR napoléonien (annexion à l'Empire français 1805-1814) qui livre directement le résultat de la révolution initiale par voie impériale. La sous-phase Restauration (1814-1849) s'ouvre par la brève Repubblica genovese balayée par Vienne, puis l'intégration comme Duché de Gênes au Royaume de Sardaigne ; les élites génoises (Mazzini, Mameli) deviennent moteurs de la RN italienne globale ; Glorieuse Révolution avortée 1848-1849 (Statut Albertin par élargissement piémontais, révolte de Gênes écrasée par La Marmora). La sous-phase Restauration exogène (1849-1861) suit l'écrasement, sous Sardaigne durcie spécifiquement contre Gênes. Aboutissement final par fusion italienne (1861).
+- description: La Révolution Nationale génoise s'étend sur soixante-quatre ans, articulée en trois sous-phases distinctes.
 
-### Subphase : Révolution initiale (1797-1805)
+  La sous-phase de Révolution initiale exogène (1797-1814) est entièrement portée par la tutelle française. L'émeute jacobine du 22 mai - 14 juin 1797 renverse le doge Giacomo Maria Brignole ; Bonaparte impose la République ligurienne (proclamée le 6 juin 1797) — Éclatement de l'AR génois par choc exogène sur la configuration consortium oligarchique institutionnalisé dorienne-Leges Novae. Suit une Expérience parlementaire compressée sous tutelle française : Constitution directoriale du 22 décembre 1797 (inspirée de la Constitution française de l'an III), déposition du Directoire en décembre 1799, siège austro-britannique de Gênes (1800, ~30 000 victimes ; capitulation française reconquise après Marengo), Constitution hybride de 1802 (doge président d'un Sénat). L'annexion à l'Empire français (juin 1805) intègre la Liguria comme trois départements (Apennins, Gênes, Montenotte), avec Code napoléonien, conscription, fiscalité française, suppression du Banco di San Giorgio. Comme à Florence et Milan, Napoléon livre directement le résultat de la révolution initiale par voie impériale — pas de Phase aiguë jacobine endogène, pas de Moment thermidorien, c'est l'IR exogène qui tient toute la séquence transformatrice. Critère héritage : le consortium oligarchique génois est définitivement détruit, le Banco di San Giorgio est éteint et ne sera jamais restauré, les élites génoises sont politiquement transformées — la transformation est durable et persiste post-1814.
+
+  La sous-phase de Restauration (1814-1849) s'ouvre par la chute napoléonienne. Brève Repubblica genovese (26 avril 1814 - 7 janvier 1815) — soulèvement génois et tentative de restauration de la République pré-1797, balayée par la décision du Congrès de Vienne malgré les promesses britanniques. Gênes est intégrée comme Duché de Gênes au sein du Royaume de Sardaigne sous Vittorio Emanuele I, Carlo Felice puis Carlo Alberto. Monarchie absolue savoyarde avec gouverneur, intendances et justice royale. La période n'est pas Restauration exogène stricto sensu : le cadre sarde est en train de se moderniser progressivement (Carlo Alberto oscille entre réaction et concession, le mouvement va vers la constitutionnalisation), et Gênes participe à la trajectoire d'élargissement du Parcours sarde-piémontais qui devient italien. Les élites génoises basculent vers la RN italienne : Giuseppe Mazzini (génois, né 1805) commence ses activités révolutionnaires en 1827, fonde la Giovine Italia à Marseille en 1831, conduit les conspirations de 1833 et est exilé ; Goffredo Mameli (génois) compose en 1847 *Il Canto degli Italiani*, futur hymne italien. La conscience nationale bascule progressivement de génoise à italienne dans les classes éduquées. La Glorieuse Révolution canonique survient avec l'octroi du Statut Albertin par Carlo Alberto le 4 mars 1848 (constitution bicamérale, suffrage censitaire, garanties civiques) — GR par élargissement piémontais, applicable au territoire génois par extension. Mais la GR est avortée par l'écrasement de la révolte de Gênes (5-11 avril 1849) : suite à l'armistice de Vittorio Emanuele II avec Radetzky après la défaite de Novare (25 mars 1849), Gênes se soulève en réaction à l'agression militaire perçue comme trahison, restaure éphémèrement un gouvernement autonome ; le général Alfonso Ferrero La Marmora arrive avec 25-30 000 bersaglieri, bombarde la ville pendant 36 heures sans préavis, force la capitulation, occupe la ville le 11 avril, exile 450 Génois. La révolte de Gênes n'est pas une Phase aiguë canonique (pas de radicalisation EG endogène interne, pas de Comité de salut public, pas d'élimination des modérés — c'est un sursaut patriotique de la GR contre son détournement par la défaite militaire) ; c'est un épisode révolutionnaire de la GR avortée par l'agression militaire sarde.
+
+  La sous-phase de Restauration exogène (1849-1861) suit l'écrasement de Gênes. Avant 1849, Gênes était un partenaire potentiel du cadre sarde italianisant ; après le bombardement de La Marmora, Gênes devient un sujet militairement soumis. La dimension exogène devient explicite et punitive — occupation militaire, exilés non rappelés avant amnistie tardive, surveillance prolongée, intégration administrative durcie. Le Royaume de Sardaigne conserve son Statut Albertin au niveau global (la GR sarde tient), mais traite Gênes spécifiquement comme un foyer à mater. Cavour utilise Gênes comme port et arsenal du programme d'unification italienne — Garibaldi part de Quarto le 5 mai 1860 avec 1 089 volontaires sur le *Piemonte* et le *Lombardo* pour la Sicile (Mille de Quarto). La fusion italienne (17 mars 1861, proclamation du Royaume d'Italie) clôt formellement le Parcours génois propre par absorption dans le Parcours italien. Pattern typique des nations distribuées italiennes (parallèle structurel avec Florence, Émilie-Romagne, Milan, Venise — toutes absorbées sans aboutissement parlementaire endogène propre).
+- deviation: +0 an. Durée 64 ans dans la fourchette canonique (25-80). Cas particulier d'une Révolution initiale entièrement exogène (Éclatement 1797 + Expérience parlementaire sous tutelle + IR napoléonien 1805-1814), suivie d'une Restauration sarde participant à l'élargissement italien (1814-1849) avec GR avortée 1848-1849, puis d'une Restauration exogène durcie après l'écrasement de Gênes (1849-1861).
+
+### Subphase : Révolution initiale exogène (1797-1814)
 
 - type: subphase
 - phase: rn
 - start: 1797
-- end: 1805
-- title: Révolution initiale
-- summary: Sous-phase compressée sous tutelle française. Éclatement de l'AR (émeute jacobine et République ligurienne 1797), Expérience parlementaire (Constitutions de 1797 et 1802), siège austro-britannique (1800). Phase aiguë et Moment thermidorien structurellement absents au sens canonique. Annexion à l'Empire français (1805) avorte la RN par annexion comme marge passive.
+- end: 1814
+- title: Révolution initiale exogène
+- summary: Sous-phase entièrement portée par la tutelle française. Éclatement de l'AR génois par émeute jacobine et imposition de la République ligurienne (juin 1797), Expérience parlementaire compressée sous Constitutions directoriale (1797) puis hybride (1802), siège austro-britannique (1800), annexion à l'Empire français comme trois départements (1805) avec Code napoléonien et suppression du Banco di San Giorgio. Pas de Phase aiguë jacobine endogène, pas de Moment thermidorien — l'IR exogène napoléonien tient toute la séquence transformatrice et livre directement le résultat de la révolution initiale (pattern parallèle Florence, Milan). Le consortium oligarchique génois est définitivement détruit, transformation durable qui persiste post-1814.
 
 #### Saillant : Éclatement de l'AR — République ligurienne
 
 - type: saillant
 - start: 1797
+- end: 1797
 - subtitle: Émeute jacobine et imposition par Bonaparte
 - title: Éclatement de l'AR
 - confidence: high
@@ -369,130 +376,84 @@
 - subtitle: Régime directorial puis hybride
 - title: Expérience parlementaire
 - confidence: medium
-- summary: Constitution du 22 décembre 1797 (régime directorial inspiré de la Constitution française de l'an III). Déposition du Directoire en décembre 1799, commission exécutive provisoire. Constitution de 1802 plus proche de l'ancienne République (doge président d'un Sénat). Expérience parlementaire encadrée par l'occupation française, sans factions endogènes véritablement concurrentes — la dynamique reste exogéniquement contrainte.
+- summary: Constitution du 22 décembre 1797 (régime directorial inspiré de la Constitution française de l'an III). Déposition du Directoire en décembre 1799, commission exécutive provisoire. Constitution de 1802 plus proche de l'ancienne République (doge président d'un Sénat). Expérience parlementaire encadrée par l'occupation française, sans factions endogènes véritablement concurrentes — la dynamique reste exogéniquement contrainte. Pas de Phase aiguë jacobine endogène durable — les jacobins génois existent mais ne contrôlent jamais l'État indépendamment de la tutelle française.
 
-#### Saillant : Annexion comme marge passive — avortement de la RN
+#### Saillant : Émergence de l'IR — annexion à l'Empire français
 
 - type: saillant
-- perturbation: true
-- mechanism: choc_exogene
-- effect: avortement
 - start: 1805
-- subtitle: Trois départements de l'Empire français
-- title: Annexion comme marge passive
-- summary: Juin 1805 : annexion à l'Empire français. La Liguria devient trois départements (Apennins, Gênes, Montenotte). Suppression du Banco di San Giorgio par Napoléon. C'est une absorption administrative passive, **pas un projet IR génois** au sens de phase_rn.md §Cas particulier — la nation génoise n'est pas cadre actif du projet impérialiste (pas d'armée nationale, pas de projet politique génois propre, pas de dynamique IR pour la nation considérée). Avortement de la RN génoise par annexion comme marge passive ; bascule en AR exogène (cf. phase suivante).
+- end: 1814
+- figure: Napoléon Bonaparte
+- subtitle: Trois départements de l'Empire français, suppression du Banco di San Giorgio
+- title: Émergence de l'IR
+- confidence: high
+- alternatives: Lecture antérieure « annexion comme marge passive — avortement de la RN » écartée par cohérence corpus avec Florence et Milan (où Napoléon livre directement le résultat de la révolution initiale par voie impériale). Critère héritage satisfait : le consortium oligarchique génois est définitivement détruit (Banco di San Giorgio éteint et jamais restauré, Liber aureus fermé pour de bon, élites politiquement transformées), transformation durable qui persiste post-1814 — la lecture « annexion comme marge passive » sous-estimait l'efficacité transformatrice durable de la séquence napoléonienne. L'absence formelle de cadre national génois propre dans le projet impérial (pas de République sœur souveraine, pas d'armée nationale) n'est pas décisive — c'est la transformation effective et durable qui qualifie l'IR exogène, pas le cadre nominal.
+- summary: Juin 1805 : annexion à l'Empire français. La Liguria devient trois départements (Apennins, Gênes, Montenotte). Code napoléonien, conscription, fiscalité française, suppression du Banco di San Giorgio. L'IR napoléonien tient la sous-phase de révolution initiale exogène jusqu'à la chute napoléonienne de 1814. Cas-type d'IR entièrement exogène napoléonien — parallèle Florence et Milan, sans la fiction d'un Royaume sœur. La transformation est effective : le consortium oligarchique génois pré-1797 (Liber aureus, Banco di San Giorgio, 28 Alberghi-fusionnés-en-patriciat-unique) est définitivement détruit ; les élites génoises basculent politiquement et ne reviendront pas à l'ancien cadre.
 
----
-
-## Phase : Absolutiste (AR exogène, 1805-1848)
-
-- type: phase
-- phase: absolutiste
-- start: 1805
-- end: 1848
-- title: Phase absolutiste — Ancien Régime exogène (1er bloc)
-- typical_duration: variable (dérivation rare)
-- actual_duration: ~43 ans
-- resolution: Octroi du Statut Albertin par Carlo Alberto (4 mars 1848) — Glorieuse Révolution canonique applicable au territoire génois, qui ouvre une nouvelle phase RN (cf. phase suivante).
-- summary: AR exogène long (~43 ans) ouvert dès l'avortement de la RN en 1805 et qui dure jusqu'à la GR de 1848. Régime sans légitimité endogène, sous tutelles étrangères successives — Empire français 1805-1814 (3 départements, Code civil, suppression Banco San Giorgio), brève Repubblica genovese 1814-1815 (parenthèse de 8 mois sans institutions stabilisées), Royaume de Sardaigne 1815-1848 (Duché de Gênes, monarchie absolue savoyarde). Pendant cette période, les élites génoises (Mazzini, Mameli) deviennent moteurs de la RN italienne globale dont Gênes sera l'un des foyers. Sortie par GR du Statut Albertin (1848).
-- description: Suite à l'avortement de la RN en 1805 (annexion comme marge passive par Bonaparte), Gênes entre en AR exogène long sous tutelles successives — pattern parallèle à Florence (AR exogène 1799-1848). Phase de tutelles étrangères en trois temps : (1) **Empire français 1805-1814** : la Liguria comme trois départements (Apennins, Gênes, Montenotte), application du Code civil, conscription, fiscalité française, suppression du Banco di San Giorgio (1805) ; (2) **brève Repubblica genovese 26 avril 1814 - 7 janvier 1815** : à la chute de Napoléon, soulèvement génois et tentative de restauration de la République pré-1797, balayée par la décision du Congrès de Vienne ; (3) **Royaume de Sardaigne 1815-1848** : Gênes intégrée comme Duché de Gênes au sein du royaume sarde malgré les promesses britanniques de restauration ; monarchie absolue savoyarde (Vittorio Emanuele I, Carlo Felice, Carlo Alberto) avec gouverneur, intendances et justice royale ; insatisfaction des élites marchandes habituées à l'autonomie ; Gênes devient foyer libéral et républicain. C'est pendant cette troisième sous-période que les **élites génoises basculent vers la RN italienne** : Giuseppe Mazzini (génois, né 1805) commence ses activités révolutionnaires en 1827, fonde la Giovine Italia à Marseille en 1831 (projet d'unification républicaine italienne), conduit les conspirations de 1833 contre la monarchie sarde et est exilé. Goffredo Mameli (génois) compose en 1847 *Il Canto degli Italiani*, futur hymne italien. La conscience nationale bascule progressivement de génoise à italienne dans les classes éduquées. La phase se clôt par la Glorieuse Révolution de 1848 (Statut Albertin octroyé par Carlo Alberto, applicable à Gênes par extension), qui ouvre une nouvelle phase RN — avortée immédiatement, cf. phase suivante.
-
-### Subphase : Ancien Régime exogène (1805-1848)
-
-- type: subphase
-- phase: absolutiste
-- start: 1805
-- end: 1848
-- title: Ancien Régime exogène
-- summary: Sous-phase unique. Tutelles étrangères successives sans légitimité endogène : Empire français 1805-1814 (3 départements), brève Repubblica genovese 1814-1815 (parenthèse 8 mois), Royaume de Sardaigne 1815-1848 (Duché de Gênes). Pas de saillant absolutiste canonique propre — la sous-phase entière est une parenthèse exogène. Pendant cette période, les élites génoises basculent vers la RN italienne globale (Mazzini fonde la Giovine Italia à Marseille en 1831, Mameli compose l'hymne italien 1847). Sortie par GR Statut Albertin 1848.
-
----
-
-## Phase : Révolution Nationale (re-tentative avortée, 1848-1849)
-
-- type: phase
-- phase: rn
-- start: 1848
-- end: 1849
-- title: Révolution Nationale (re-tentative)
-- typical_duration: ~25-80 ans
-- actual_duration: ~1 an
-- resolution: Écrasement par La Marmora (avril 1849) lors de la révolte de Gênes — restauration imposée qui rebascule Gênes en AR exogène (cf. phase suivante).
-- summary: RN ultra-comprimée et avortée. La GR (Statut Albertin du 4 mars 1848, octroyé par Carlo Alberto et applicable au territoire génois) ouvre une nouvelle phase RN à l'intérieur de l'AR exogène long. Mais la phase est immédiatement avortée par l'écrasement de la révolte de Gênes (5-11 avril 1849) par La Marmora — la phase parlementaire qui aurait dû s'ouvrir n'existe pas. Gênes retombe en AR exogène sarde (cf. phase suivante). Cas atypique : RN comprimée à un saillant GR + un saillant phase aiguë + un saillant écrasement, sans sous-phases canoniques. Pattern parallèle à Florence et Venise (cités-États italiennes écrasées par puissance étrangère absolutiste à son acmé).
-- description: Le 4 mars 1848, Carlo Alberto octroie le Statut Albertin (constitution bicamérale, suffrage censitaire, garanties civiques) — Glorieuse Révolution canonique de la nation sarde, applicable au territoire génois par extension. Gênes participe à la Première guerre d'indépendance contre l'Autriche. L'armistice de Vittorio Emanuele II avec Radetzky après la défaite de Novare (25 mars 1849) est vécu à Gênes comme une trahison ; le 5 avril 1849, Gênes se soulève et restaure éphémèrement un gouvernement autonome. Le général Alfonso Ferrero La Marmora arrive avec 25-30 000 bersaglieri, bombarde la ville pendant 36 heures sans préavis (5-6 avril), force la capitulation, occupe totalement la ville le 11 avril, exile 450 Génois. Phase aiguë canonique (révolte populaire-jacobine) immédiatement écrasée par le pouvoir absolutiste sarde. La phase RN est avortée moins d'un an après son ouverture, sans avoir parcouru aucune sous-phase canonique au-delà de la GR initiale et de la phase aiguë comprimée. Pattern parallèle à Florence (Statuto fondamentale 1848 → République Guerrazzi 1849 → écrasement autrichien) et Venise (République de Manin 1848-1849 → écrasement autrichien).
-
-### Subphase : Révolution initiale (1848-1849)
+### Subphase : Restauration (1814-1849)
 
 - type: subphase
 - phase: rn
-- start: 1848
+- start: 1814
 - end: 1849
-- title: Révolution initiale
-- summary: Sous-phase ultra-compressée. GR (Statut Albertin, 4 mars 1848), participation à la Première guerre d'indépendance, phase aiguë (révolte de Gênes 5-11 avril 1849), écrasement par La Marmora (avril 1849). Pas d'IR, pas de Restauration canonique. Bascule directe en AR exogène sarde.
+- title: Restauration
+- summary: Sous-phase ouverte par la chute napoléonienne et la brève Repubblica genovese (avril 1814 - janvier 1815) balayée par Vienne. Gênes intégrée comme Duché de Gênes au Royaume de Sardaigne. Période non-exogène stricto sensu : le cadre sarde est en train de se moderniser progressivement et Gênes participe à la trajectoire d'élargissement du Parcours sarde-piémontais qui devient cadre actif de la RN italienne. Les élites génoises basculent vers la RN italienne (Mazzini fonde la Giovine Italia en 1831, Mameli compose l'hymne en 1847). Glorieuse Révolution canonique par octroi du Statut Albertin (4 mars 1848). GR avortée par l'écrasement de la révolte de Gênes par La Marmora (5-11 avril 1849). Bascule en Restauration exogène durcie.
+
+#### Saillant : Restauration — intégration au Royaume de Sardaigne
+
+- type: saillant
+- start: 1815
+- end: 1815
+- figure: Vittorio Emanuele I
+- subtitle: Congrès de Vienne, Duché de Gênes
+- title: Restauration
+- confidence: high
+- summary: 7 janvier 1815 : la brève Repubblica genovese (avril 1814 - janvier 1815), tentative de restauration de la République pré-1797 portée par les milieux marchands génois sous protection britannique nominale, est balayée par la décision du Congrès de Vienne — malgré les promesses britanniques de restauration. Gênes intégrée comme Duché de Gênes au Royaume de Sardaigne sous Vittorio Emanuele I (puis Carlo Felice 1821, Carlo Alberto 1831). Le cadre sarde n'est pas spécifiquement répressif vis-à-vis de Gênes — il est globalement absolutiste avec ouverture progressive vers la constitutionnalisation, qui aboutit au Statut Albertin de 1848. Gênes participe à la trajectoire d'élargissement du Parcours sarde devenant italien.
 
 #### Saillant : Glorieuse Révolution — Statut Albertin
 
 - type: saillant
 - start: 1848
+- end: 1848
 - figure: Carlo Alberto
-- subtitle: Statut Albertin
+- subtitle: Statut Albertin du 4 mars 1848
 - title: Glorieuse Révolution
 - confidence: medium
-- summary: Le 4 mars 1848, Carlo Alberto octroie le Statut Albertin — constitution bicamérale, suffrage censitaire, garanties civiques. Applicable au territoire génois par extension comme partie intégrante du Royaume de Sardaigne. Saillant canonique de Glorieuse Révolution qui ouvre une nouvelle phase RN à l'intérieur de l'AR exogène long. Note : la GR est ici sarde, pas génoise propre — Gênes hérite de la GR de la nation qui l'a absorbée, conformément au pattern de fusion progressive du Parcours génois dans le Parcours italien.
+- alternatives: Discrimination GR canonique vs nouvelle RN-initiale. GR canonique retenue parce que (1) Statut octroyé par le souverain Carlo Alberto — pattern GR canonique en **mode A** (octroi top-down par le souverain légitime de l'État dont Gênes est partie depuis 1815) ; (2) cadre sardo-piémontais avec lequel Gênes est intégrée, continuité institutionnelle, pas Éclatement révolutionnaire ; (3) pattern simultané Statuto Albertino + Statuto Toscane + Constitution sicilienne + Constitution napolitaine du printemps 1848. La GR génoise est par élargissement piémontais — la nation génoise hérite de la GR de la nation qui l'a absorbée, conformément à la trajectoire de sortie « élargissement maximal vers GR » prévue par CLAUDE.md pour la sous-phase Restauration. Mode A retenu plutôt que mode B (mouvement bottom-up contre puissance occupante, cf. Tchéquie 1989, Émilie-Romagne 1831/1848) parce que la GR est ici octroyée par le souverain sarde lui-même, dans la continuité du cadre dont Gênes fait partie — non par insurrection génoise expulsant les Savoie.
+- summary: Le 4 mars 1848, Carlo Alberto octroie le Statut Albertin — constitution bicamérale, suffrage censitaire, garanties civiques. Pattern GR canonique simultané au Statuto Toscane (17 février 1848), à la Constitution sicilienne et à la Constitution napolitaine. Applicable au territoire génois par extension comme partie intégrante du Royaume de Sardaigne. La GR génoise est par élargissement piémontais — Gênes hérite de la GR de la nation qui l'a intégrée, le cadre sardo-piémontais devenant à cette occasion le cadre actif de la RN italienne en cours d'élargissement.
 
-#### Saillant : Phase aiguë — révolte de Gênes
-
-- type: saillant
-- start: 1849
-- subtitle: Révolte de Gênes 5-11 avril 1849
-- title: Phase aiguë
-- confidence: medium
-- summary: Suite à l'armistice de Vittorio Emanuele II avec Radetzky après la défaite de Novare (25 mars 1849), Gênes se soulève le 5 avril 1849 et restaure éphémèrement un gouvernement autonome. Phase aiguë canonique (révolte populaire-jacobine, restauration éphémère d'un cadre républicain), comprimée à six jours avant l'écrasement.
-
-#### Saillant : Écrasement par La Marmora — avortement
+#### Perturbation : Avortement de la GR — écrasement de Gênes par La Marmora
 
 - type: saillant
 - perturbation: true
 - mechanism: choc_exogene
 - effect: avortement
 - start: 1849
+- end: 1849
 - figure: Alfonso Ferrero La Marmora
-- subtitle: Bombardement et sac
-- title: Écrasement par La Marmora
-- summary: Le général Alfonso Ferrero La Marmora arrive avec 25-30 000 bersaglieri, bombarde la ville pendant 36 heures sans préavis (5-6 avril), force la capitulation, occupe totalement la ville le 11 avril, exile 450 Génois. Avortement effectif de la phase RN re-tentative ; retour en AR exogène sarde (cf. phase suivante). Pattern parallèle à Florence et Venise (cités-États italiennes écrasées par puissance étrangère absolutiste à son acmé) — mais la puissance écrasante est ici la Sardaigne elle-même, qui contrôle Gênes depuis 1815.
+- subtitle: Bombardement et sac de Gênes
+- title: Avortement de la GR
+- summary: Suite à l'armistice de Vittorio Emanuele II avec Radetzky après la défaite de Novare (25 mars 1849), Gênes se soulève le 5 avril 1849 en réaction à ce qui est perçu comme une trahison du projet italien, et restaure éphémèrement un gouvernement autonome. La révolte n'est **pas une Phase aiguë canonique** (pas de radicalisation EG endogène interne, pas de Comité de salut public, pas d'élimination des modérés du camp révolutionnaire) — c'est un épisode révolutionnaire de la GR avortée par l'agression militaire, sursaut patriotique-anti-armistice plutôt que dynamique radicale interne. Le général Alfonso Ferrero La Marmora arrive avec 25-30 000 bersaglieri, bombarde la ville pendant 36 heures sans préavis (5-6 avril), force la capitulation, occupe totalement la ville le 11 avril, exile 450 Génois. Avortement effectif de la GR. À la différence de Florence (GR avortée par Autriche) et Venise (siège autrichien), l'agresseur est ici la **Sardaigne elle-même**, qui contrôle Gênes depuis 1815 — c'est précisément cette aggression qui transforme la Restauration sarde modérément modernisante en Restauration exogène durcie pour Gênes.
 
----
-
-## Phase : Absolutiste (AR exogène, 1849-1861)
-
-- type: phase
-- phase: absolutiste
-- start: 1849
-- end: 1861
-- title: Phase absolutiste — Ancien Régime exogène (2e bloc)
-- typical_duration: variable (dérivation rare)
-- actual_duration: ~12 ans
-- resolution: Proclamation du Royaume d'Italie (17 mars 1861). Fin du Parcours génois propre par fusion dans le Parcours italien.
-- summary: AR exogène court (~12 ans) imposé après l'écrasement de la révolte de Gênes. Régime sans légitimité endogène, simple prolongement sous tutelle sarde post-1849. Pendant cette période, Gênes participe au programme savoyard d'unification italienne — Cavour utilise le port et l'industrie navale ; départ des Mille de Garibaldi depuis Quarto (5 mai 1860). Sortie par fusion italienne (17 mars 1861).
-- description: Après l'écrasement par La Marmora (avril 1849), Gênes retombe en AR exogène sarde. Le Royaume de Sardaigne maintient la souveraineté absolue sur le territoire génois ; les exilés ne reviennent pas avant l'amnistie ; le Statut Albertin reste formellement en vigueur mais dans le cadre sarde, pas propre à Gênes. La sortie est exogène et porteuse d'un projet italien : Cavour utilise Gênes comme port et arsenal du programme d'unification, Garibaldi part de Quarto le 5 mai 1860 avec 1 089 volontaires sur le *Piemonte* et le *Lombardo* pour la Sicile, et la proclamation du Royaume d'Italie (17 mars 1861) clôt formellement le Parcours génois propre par fusion dans le Parcours italien.
-
-### Subphase : Ancien Régime exogène (1849-1861)
+### Subphase : Restauration exogène (1849-1861)
 
 - type: subphase
-- phase: absolutiste
+- phase: rn
 - start: 1849
 - end: 1861
-- title: Ancien Régime exogène
-- summary: Sous-phase unique post-écrasement. Royaume de Sardaigne maintient la souveraineté absolue, Statut Albertin formellement en vigueur dans le cadre sarde. Cavour utilise Gênes comme port et arsenal du programme d'unification italienne. Pas de saillant absolutiste canonique propre — parenthèse exogène avant absorption italienne.
+- title: Restauration exogène
+- summary: Sous-phase ouverte par l'écrasement de Gênes par La Marmora. Avant 1849, Gênes participait à la trajectoire d'élargissement du cadre sardo-piémontais ; après le bombardement, la Sardaigne traite Gênes spécifiquement comme un foyer à mater — occupation militaire, 450 exilés non rappelés avant amnistie tardive, surveillance prolongée, intégration administrative durcie. Le Royaume de Sardaigne conserve son Statut Albertin au niveau global mais réserve à Gênes un traitement répressif spécifique. Cavour utilise Gênes comme port et arsenal du programme d'unification italienne (Mille de Quarto, 5 mai 1860). Sortie par fusion italienne (17 mars 1861). Application *in se* du critère Restauration exogène : occupation par puissance extérieure (Savoie), pas de roman national génois propre, coalition restreinte taillée pour empêcher la réémergence d'un cadre génois autonome — trois critères canoniques satisfaits.
 
 #### Saillant : Mille de Quarto — Gênes port d'embarquement du projet italien
 
 - type: saillant
 - start: 1860
+- end: 1860
 - figure: Giuseppe Garibaldi
 - subtitle: Départ des Mille
 - title: Mille de Quarto
-- summary: Le 5 mai 1860, Garibaldi part de Quarto (faubourg de Gênes) avec 1 089 volontaires sur le *Piemonte* et le *Lombardo* pour la Sicile. Gênes devient symboliquement le port d'embarquement du projet italien — élites génoises pleinement intégrées à la RN italienne. Saillant non-canonique du Parcours génois (ce n'est pas un saillant de RN génoise) mais marqueur de la fusion en cours.
+- confidence: high
+- summary: Le 5 mai 1860, Garibaldi part de Quarto (faubourg de Gênes) avec 1 089 volontaires sur le *Piemonte* et le *Lombardo* pour la Sicile. Gênes devient symboliquement le port d'embarquement du projet italien — les élites génoises pleinement intégrées à la RN italienne servent comme infrastructure d'un projet plus vaste. Saillant non-canonique du Parcours génois propre (ce n'est pas un saillant de RN génoise endogène) mais marqueur fonctionnel de la fusion en cours, qui aboutira l'année suivante.
 
 ---
 
@@ -526,15 +487,14 @@
 | **Saturation fiscale** | **— (non applicable, architecture Casa di San Giorgio rend la distinction ordinaire/expédient floue ; bombardement Duquesne 1684 comme proxy de borne AR par choc exogène)** |
 | **Remontrance** | **— (structurellement absente, manque du pôle sommet exécutif stable — analyse à deux pôles, complémentaire de Florence)** |
 | Ancien Régime | 1684-1797 (~113 ans, dans la norme) |
-| **RN (1) avortée** | **1797-1805 (~8 ans)** — Éclatement (1797), Expérience parlementaire (1797-1802), Annexion comme marge passive (1805) |
-| Éclatement de l'AR | Émeute jacobine et République ligurienne (1797) |
-| Expérience parlementaire | Constitutions de 1797 et 1802 (compressée sous tutelle française) |
-| Phase aiguë | — (compressée et exogéniquement encadrée) |
-| Moment thermidorien | — (structurellement absent) |
-| Émergence de l'IR | — (Bonaparte n'est pas IR de Gênes — annexion comme marge passive 1805) |
-| Restauration | — (sous-phase canonique absente — Repubblica genovese 1814-1815 sans IR préalable) |
-| **AR exogène (1er bloc)** | **1805-1848 (~43 ans)** — Empire français 1805-1814, Repubblica genovese 1814-1815, Royaume de Sardaigne 1815-1848 ; Mazzini fonde la Giovine Italia (1831), Mameli compose l'hymne italien (1847) |
-| **RN (2) re-tentative avortée** | **1848-1849 (~1 an)** — GR Statut Albertin (1848), Phase aiguë révolte de Gênes (avril 1849), Écrasement par La Marmora (avril 1849) |
-| Glorieuse Révolution | Statut Albertin (1848, octroyé par Carlo Alberto, applicable à Gênes) |
-| **AR exogène (2e bloc)** | **1849-1861 (~12 ans)** — Royaume de Sardaigne post-écrasement ; Mille de Quarto (1860) |
-| Fusion italienne | Proclamation du Royaume d'Italie (17 mars 1861) — fin du Parcours génois propre par fusion |
+| **Révolution Nationale** | **1797-1861 (~64 ans)** — RN longue articulée en trois sous-phases (Révolution initiale exogène, Restauration, Restauration exogène), aboutissement par fusion italienne |
+| **Éclatement de l'AR** | **Émeute jacobine et République ligurienne (juin 1797)** — chute du doge Brignole, imposition par Bonaparte sur cadre dorien-Leges Novae avant convergence pleine discrédit + ruine financière endogène |
+| **Expérience parlementaire** | **Constitutions de la République ligurienne (1797-1802)** — Constitution directoriale 1797, Constitution hybride 1802, compressée sous tutelle française |
+| Phase aiguë | — (structurellement absente — IR exogène napoléonien tient la séquence transformatrice sans Phase aiguë jacobine endogène) |
+| Moment thermidorien | — (structurellement absent — pas de Phase aiguë endogène à thermidoriser) |
+| **Émergence de l'IR** | **Annexion à l'Empire français (1805-1814)** — Liguria comme trois départements (Apennins, Gênes, Montenotte), Code napoléonien, suppression du Banco di San Giorgio. IR entièrement exogène napoléonien (parallèle Florence, Milan) — critère héritage satisfait : transformation durable du cadre génois (consortium oligarchique définitivement détruit) qui persiste post-1814 |
+| **Restauration** | **Intégration au Royaume de Sardaigne (1815)** — Repubblica genovese 1814-1815 balayée par Vienne, Duché de Gênes sous Vittorio Emanuele I puis Carlo Felice et Carlo Alberto. Période non-exogène stricto sensu : cadre sarde en modernisation progressive vers le constitutionnalisme, Gênes participe à la trajectoire d'élargissement du Parcours sardo-piémontais devenant italien. Mazzini fonde la Giovine Italia (1831), Mameli compose l'hymne italien (1847) |
+| **Glorieuse Révolution (avortée)** | **Statut Albertin (4 mars 1848)** — octroyé par Carlo Alberto. GR canonique par élargissement piémontais. Avortée par l'écrasement de la révolte de Gênes par La Marmora (5-11 avril 1849, bombardement, 450 exilés). La révolte de Gênes n'est pas une Phase aiguë canonique mais un épisode révolutionnaire de la GR en réaction à l'armistice de Vittorio Emanuele II avec Radetzky après Novare |
+| **Restauration exogène** | **Sardaigne durcie post-écrasement (1849-1861)** — occupation militaire, 450 exilés, surveillance prolongée, intégration administrative répressive spécifique à Gênes. Critère canonique Restauration exogène satisfait *in se* : occupation par puissance extérieure (Savoie), pas de roman national génois propre, coalition restreinte taillée pour empêcher la réémergence d'un cadre génois autonome |
+| **Mille de Quarto** | **5 mai 1860** — Garibaldi part de Quarto avec 1 089 volontaires pour la Sicile. Gênes comme infrastructure du projet italien |
+| **Fusion italienne** | **Proclamation du Royaume d'Italie (17 mars 1861)** — fin du Parcours génois propre par fusion-absorption dans le Parcours italien |

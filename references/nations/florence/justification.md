@@ -101,12 +101,107 @@ La lecture initiale faisait de l'AR léopoldin un « AR réformateur prolongateu
 
 ### 10. Saillants partiellement absents en phase absolutiste
 
-Trois saillants attendus sont structurellement absents ou faibles :
+Deux saillants attendus sont structurellement absents ou faibles dans la phase absolutiste :
 - *Fin de l'expansion absolutiste* : structurellement absent — la Toscane n'a pas d'expansion absolutiste majeure (territoire stabilisé à Sienne 1555). Acquisitions tardives (Stato dei Presidi 1815, Lucques 1847) faites pendant la sous-phase RN — pas une expansion phasique active.
 - *Remontrance* : structurellement absente — **analyse à deux pôles**. La Remontrance suppose un *corps institutionnel intégré* qui formule la pétition + un *sommet exécutif stable* à contester. Sur les 14 nations du corpus, 11 présentent une Remontrance attestée (France Polysynodie 1715, Angleterre Apology of the Commons 1604, Venise Correzione 1761, Bavière Landtag 1848, Piémont Révolte 1821, Espagne La Gloriosa 1868, Milan République Ambrosienne 1447, Hongrie dissolution diète 1811, Suisse Société Helvétique 1761, Autriche 1848, Israël prolongement Ambassade à Auguste -4) ; trois en sont privées : Israël antique (phase interrompue par Josias en -609), Florence (manque du pôle corps : patriciat ancien éliminé à Montemurlo 1537, Grand-Duché sans parlement, noblesse de robe ducale embryonnaire — Marzi, Campana, Grifoni, Torelli — secrétaires personnels sans organe collégial formel), Gênes (manque du pôle sommet : doge biennal tournant, patriciat collectivement souverain via consortium oligarchique institutionnalisé). Florence et Gênes présentent l'absence de Remontrance par des chemins structurellement opposés. Venise n'est *pas* dans ce pattern : elle a sa Remontrance précisément parce qu'elle a les deux pôles (Maggior Consiglio + barnabotti pour le corps, Inquisiteurs d'État pour le sommet). À Florence, la transition impérialisme → AR se fait par épuisement dynastique et déclin économique sous Cosme III, sans saillant institutionnel-contestataire ; les tentatives réformatrices léopoldines (constitution Gianni 1779-1782, réformes religieuses) sont des initiatives par le haut, pas des Remontrances d'un corps intégré.
-- *Émergence de l'IR* : structurellement absent en RN — cité-État trop petite pour produire un IR endogène, conformément au pattern documenté pour Venise et Gênes.
-- *Moment thermidorien* : absent — la RN est compressée par les chocs exogènes successifs et écrasée par l'intervention autrichienne (1849).
-- *Glorieuse Révolution* : absente — la sortie est par fusion italienne (plébiscite 1860), pas par GR endogène.
+
+### 11. Structure RN — refonte 1807-1860
+
+La RN florentine s'étale sur ~53 ans (1807-1860), articulée en deux sous-phases. Refonte corrigeant la lecture antérieure qui (a) datait l'Éclatement à 1796 (erroné — l'occupation de Livourne ne brise pas l'AR léopoldin), (b) codait le Viva Maria comme Phase aiguë (disqualifié canoniquement car contre-révolutionnaire), (c) éclatait le cycle en quatre phases successives (RN 1796-1799 / AR exogène 1799-1848 / RN 1848-1849 / AR exogène 1849-1859) qui masquaient la cohérence structurelle d'ensemble.
+
+**Datation Éclatement 1807** : l'annexion directe à l'Empire français (10 décembre 1807) supprime l'État toscan, départementalise (Arno, Méditerranée, Ombrone), impose le Code napoléonien, la sécularisation systématique, la conscription, l'état civil laïc. Test discriminant RN satisfait — rupture institutionnelle, ventilation des élites par intégration ou exclusion du système préfectoral. Datations alternatives écartées : 1796 (occupation Livourne uniquement, Ferdinand III maintenu) ; 1799 (gouvernement provisoire Rivani-Reinhard de 3 mois et 12 jours, modéré dès l'origine, collaboratif avec l'archevêque Martini, institutions léopoldines préservées) ; 1801 (Royaume d'Étrurie = rupture dynastique permanente mais pas rupture institutionnelle, institutions granducales et élites maintenues).
+
+**Sous-phase Révolution initiale exogène (1807-1814)** : ultra-comprimée, Éclatement de l'AR et Émergence de l'IR téléscopés en un seul moment. Pas d'Expérience parlementaire endogène (pas d'assemblée toscane), pas de Phase aiguë jacobine endogène (pas de courant unitaire toscan radical équivalent aux Compagnoni-Galdi-Gioia émiliens), pas de Moment thermidorien. Élisa Bonaparte « grande-duchesse de Toscane » (1809-1814) — fiction institutionnelle restaurée mais la Toscane reste 3 départements de l'Empire français. Pattern d'une RN initiale entièrement portée par la tutelle impériale française qui livre directement le résultat de la révolution initiale (Code, préfets, sécularisation, conscription) sans cycle républicain endogène intermédiaire — parallèle Milan (« absolutisation à marche forcée » par Napoléon).
+
+**Sous-phase Restauration (1814-1859)** : Restauration canonique des Habsbourg-Lorraine — Ferdinand III (1814-1824) puis Léopold II « Canapone » (1824-1859) — avec conservation partielle des acquis napoléoniens (état civil laïc, organisation judiciaire napoléonienne, abolition féodale, biens nationaux non restitués au clergé). Toscane refuge libéral italien (cabinet Vieusseux 1819, *Antologia* 1821-1833). Expansion territoriale légitime (Stato dei Presidi et Piombino 1815, Lucques 1847). Glorieuse Révolution avortée 1848-1849 (cf. §13). Continuation de la Restauration sous forme dure 1849-1859 (cf. §14). Aboutissement par fusion italienne 1859-1860.
+
+### 12. Critère « héritage institutionnel » comme discriminant RN aboutie vs RN avortée par marge passive
+
+Remontée théorique introduite à l'occasion de la refonte Florence, pour discriminer entre :
+- IR exogène effectif (la nation a une RN authentique malgré la tutelle externe)
+- Annexion comme marge passive (la nation a une RN avortée)
+
+Le critère par cadre formel — République sœur souveraine vs simples départements impériaux — est insuffisant. Florence est intégrée comme 3 départements français de 1807 à 1814, exactement comme Gênes 1805-1814, mais le pattern post-1814 diverge nettement.
+
+**Test : qu'est-ce que la tutelle napoléonienne a laissé une fois la tutelle partie ?**
+
+Florence post-1814 sous Habsbourg-Lorraine restaurés :
+- État civil laïc conservé
+- Organisation judiciaire napoléonienne conservée
+- Abolition féodale maintenue
+- Biens nationaux non restitués au clergé
+- Ouverture libérale modérée sous Léopold II (Vieusseux, Antologia)
+- Ventilation des élites partiellement maintenue (refuge des libéraux italiens)
+
+→ Critère satisfait. La RN initiale exogène 1807-1814 a effectivement transformé la Toscane. **Lecture « RN aboutie » avec Restauration canonique 1814-1859.**
+
+Gênes post-1814 sous Royaume de Sardaigne (contre-test) :
+- Code napoléonien abrogé (retour au droit savoyard ancien)
+- Brève Repubblica genovese 1814-1815 balayée par Vienne
+- Intégration comme Duché de Gênes dans monarchie absolue savoyarde
+- Banco di San Giorgio supprimé en 1805 et non restauré
+- Ventilation des élites détruite (les élites ligures privées d'autonomie basculent vers la RN italienne — Mazzini fonde la Giovine Italia, Mameli compose l'hymne)
+
+→ Critère non satisfait. **Lecture « RN avortée par marge passive » avec AR exogène sarde 1805-1848 puis 1849-1861.**
+
+Formulation théorique : *« L'IR exogène ne se mesure pas au cadre nominal du projet impérial (République sœur vs département) mais à l'efficacité transformatrice durable du cadre imposé. Le test discriminant Restauration canonique vs nouvel AR (ou continuation d'AR exogène) est l'héritage institutionnel et la ventilation des élites qui subsistent une fois la tutelle externe disparue. »*
+
+Cas particulier de Florence pour l'instant — pas de remontée dans les fichiers de méthodologie. À instruire séparément sur le corpus napoléonien (Milan, Émilie-Romagne, Naples, Piémont, Suisse, Hongrie) si le critère se confirme.
+
+### 13. Glorieuse Révolution avortée 1848-1849 — écrasement autrichien
+
+Le Statuto fondamentale (17 février 1848) est canoniquement une Glorieuse Révolution : octroyé par Léopold II au sommet de la sous-phase Restauration, bicaméralisme, suffrage censitaire, garanties civiques — pattern parallèle Statuto Albertin, Constitution sicilienne, Constitution napolitaine du même printemps.
+
+Florence est ici en **GR mode A** (cf. §15) : octroi top-down par le souverain légitime de l'État indépendant. Léopold II est l'Habsbourg-Lorraine restauré en 1814, locus de légitimité dynastique propre, et il accepte la transition vers le parlementarisme en octroyant le Statuto. C'est la forme classique de la GR canonique.
+
+L'avortement est porté par l'**intervention autrichienne** (juillet 1849), qui ratifie le retour de Léopold II sous protection, conduit à l'abrogation formelle du Statuto (6 mai 1852) et installe une garnison autrichienne jusqu'en 1855. Pattern parallèle Milan 1848, Venise 1849, Naples 1849.
+
+L'oscillation modérés-radicaux des mois précédents — décrochage sur la Costituente italiana, fuite de Léopold II à Gaeta (7 février 1849), triumvirat Guerrazzi-Montanelli-Mazzoni (8 février), République toscane proclamée (15 février), insurrection contre Guerrazzi (11-12 avril), commission Capponi-Serristori rappelant Léopold II (12 avril) — relève de la **dynamique normale d'ouverture de GR**, pas d'un mécanisme d'avortement endogène distinct. Parallèle France 1830 : hésitation République/Orléans pendant les Trois Glorieuses, La Fayette stabilisant sur Louis-Philippe par embrassade à la fenêtre de l'Hôtel de Ville, républicains qui acceptent puis se rebellent (1832, Lyon canuts). Personne ne lit 1830 comme un avortement endogène au motif que les modérés ont coupé l'élan républicain — c'est juste le mécanisme normal de gouvernance modérée d'une GR.
+
+Hypothèse écartée : « double mécanisme endogène + exogène » — la commission Capponi-Serristori n'est pas un avortement distinct, c'est la fraction modérée qui joue son rôle attendu dans la GR. La GR aurait probablement consolidé son recentrage modéré sans l'intervention autrichienne ; c'est cette intervention qui constitue l'avortement effectif.
+
+### 15. Critère GR canonique — deux modes (purification)
+
+Précision théorique introduite à l'occasion de la refonte Florence-Gênes-Émilie-Romagne, pour purger une formulation initiale trop restrictive du critère GR.
+
+**Formulation initiale écartée (trop restrictive)** : *« GR canonique = octroi top-down par le souverain. »* Cette formulation aurait disqualifié canoniquement plusieurs cas qui sont structurellement des GR (Tchéquie 1989, Pologne 1989, Émilie-Romagne 1831/1848 contre Habsbourg-Este et Papauté), en sur-pondérant la forme (direction de l'initiative) au détriment de la fonction (transition recentrée vers le parlementarisme).
+
+**Formulation purifiée** : la GR canonique est définie par sa **fonction structurelle** — transition recentrée vers un cadre parlementaire-constitutionnel, sans Phase aiguë radicale endogène (pas de Comité de salut public, pas d'élimination des modérés par les radicaux, pas de Terreur), avec stabilisation rapide du régime constitutionnel. Cette fonction peut s'incarner sous deux modes formels distincts :
+
+**Mode A — dans un État indépendant** : octroi top-down par le souverain légitime. Le souverain accepte la transition vers le parlementarisme parce qu'il est le locus de légitimité dynastique propre. Cas-types : Glorieuse Révolution anglaise 1688, Statuto fondamentale (Léopold II, Florence 17 février 1848), Statut Albertin (Carlo Alberto, Turin 4 mars 1848), Constitution sicilienne 1848, Constitution napolitaine 1848.
+
+**Mode B — contre une puissance occupante** : mouvement bottom-up qui chasse l'occupant et installe un cadre constitutionnel. La puissance occupante n'ayant pas la légitimité d'octroyer, le mouvement ne peut être que par expulsion. Cas-types : Tchéquie 1989 (Velvet Revolution contre l'occupation soviétique), Pologne 1989, Roumanie 1989, **Émilie-Romagne 1831 contre Habsbourg-Este à Modène et Papauté aux Légations**, **Émilie-Romagne 1848 contre les mêmes**.
+
+Test discriminant Mode B vs Éclatement révolutionnaire :
+- Direction du basculement vers le parlementarisme (et non vers rupture révolutionnaire prolongée)
+- Stabilisation rapide d'un cadre constitutionnel (gouvernement provisoire constitutionnel, pas dictature révolutionnaire)
+- Absence de Phase aiguë canonique (pas de radicalisation EG endogène avec Terreur)
+- Composition modérée-libérale du leadership révolutionnaire (Menotti, Vicini, Orioli à Bologne 1831 ; Manin à Venise mode A par octroi de Habsbourg mais aussi mode B par insurrection — cas mixte)
+
+Florence est en mode A (Léopold II souverain légitime octroie). Gênes est en mode A par élargissement (Carlo Alberto, souverain de l'État sarde dont Gênes est partie, octroie). Émilie-Romagne en 1831 et 1848 est en mode B (insurrections bottom-up contre souverains occupants étrangers, sans souverain local qui pourrait octroyer).
+
+Critère remonté dans `phase_rn.md` §Saillant : Glorieuse Révolution (sous-section « Deux modes formels d'incarnation ») et §RN contre un occupant (paragraphe « GR Mode B applicable »). La purification a été déclenchée par la lecture Florence-Gênes-Émilie-Romagne du printemps 2026, qui exposait l'incohérence de la formulation initiale (« octroi top-down seulement ») par rapport à des cas canoniques comme la Tchéquie 1989 ou l'Émilie-Romagne 1831/1848.
+
+### 14. Décennie 1849-1859 — continuation Restauration et non nouvel AR
+
+Test décisif : la décennie 1849-1859 est-elle une sous-phase Restauration prolongée (intérieur de la RN ongoing) ou un nouvel AR consolidé qui aurait clôturé le cycle RN ?
+
+**Marqueurs absents qui auraient indiqué un nouvel AR** :
+- Pas de Saturation fiscale (critère Lanoue de Suremain) — pas de tentative de fiscalité égalitaire bloquée
+- Pas de 1er monarque absolu d'un nouveau cycle — Léopold II revient comme grand-duc restauré, pas comme tête d'un cycle d'absolutisation neuf
+- Pas de Réformes échouées (séquence souverain-réformateur des Lumières) — au contraire, Léopold II tourne le dos à toute réforme structurelle
+- Pas de reconstitution d'une cour absolutiste neuve, pas de noblesse de robe nouvelle, pas de projet impérial
+
+**Marqueurs présents qui signent une Restauration dure mais non un nouvel AR** :
+- Concordat avec le Saint-Siège (1851) — restitution de privilèges au clergé, mais sans reconstruction d'une machine fiscale absolutiste
+- 6 mai 1852 : abrogation formelle du Statuto, retour à l'absolutisme constitutionnel pré-1848
+- Garnison autrichienne maintenue 1849-1855
+- Émigration ou silence des modérés libéraux
+- « Biennio nero » dans la mémoire et la littérature toscanes
+
+La décennie 1849-1859 est donc une **sous-phase Restauration durcie** (analogue fonctionnel à la Décennie d'Absolutisme français 1820-1830 sous Charles X qui prépare 1830, ou à la décennie post-1820 napolitaine). La sortie de cette continuation est elle-même non-canonique : pas de GR endogène nouvelle, mais **rivoluzione toscana du 27 avril 1859** — départ pacifique de Léopold II sous pression bourgeoise libérale alignée sur le projet italien, l'armée toscane refusant de tirer.
+
+L'aboutissement final par fusion italienne (plébiscite 11-12 mars 1860, 95,04 % pour l'annexion au Royaume de Sardaigne ; loi du 22 mars 1860) clôture la RN sans GR endogène stabilisée — pattern typique des nations distribuées italiennes (parallèle Émilie-Romagne, Milan, Venise — toutes absorbées sans aboutissement parlementaire endogène propre).
 
 ---
 

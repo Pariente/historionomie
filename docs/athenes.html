@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Athènes</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Public Sans', 'Segoe UI', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.5; }
+.font-headline { font-family: 'Newsreader', Georgia, serif; }
+
+/* Navbar */
+.navbar { background:#fff; border-bottom:1px solid #e0dcd4; padding:0.6rem 2rem; display:flex; align-items:center; gap:2rem; }
+.navbar-brand { font-family:'Newsreader', Georgia, serif; font-size:1.3rem; font-style:italic; color:#8B7355; text-decoration:none; font-weight:600; }
+.navbar-links { display:flex; gap:1.2rem; align-items:center; }
+.navbar-links a { text-decoration:none; font-size:0.85rem; color:#888; font-weight:500; }
+.navbar-links a:hover { color:#333; }
+
+/* Nations dropdown */
+.nav-dropdown { position:relative; display:inline-block; }
+.nav-dropdown-toggle { background:none; border:1px solid #e0dcd4; cursor:pointer; font-family:inherit; font-size:0.85rem; color:#555; padding:0.25rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.4rem; line-height:1.4; }
+.nav-dropdown-toggle:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-toggle .nav-dropdown-current { font-weight:600; color:#8B7355; }
+.nav-dropdown-toggle .nav-dropdown-caret { font-size:0.7rem; color:#8B7355; }
+.nav-dropdown-menu { display:none; position:absolute; top:calc(100% + 4px); left:0; min-width:220px; max-height:65vh; overflow-y:auto; background:#fff; border:1px solid #e0dcd4; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.08); z-index:200; padding:0.3rem 0; }
+.nav-dropdown.open .nav-dropdown-menu { display:block; }
+.nav-dropdown-menu a { display:flex; align-items:center; gap:0.55rem; padding:0.4rem 0.95rem; font-size:0.85rem; color:#555; text-decoration:none; font-weight:500; }
+.nav-dropdown-menu a:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-menu a.active { color:#8B7355; font-weight:700; background:#faf6f0; }
+.nav-flag { display:inline-block; width:18px; height:18px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,0.12); }
+.nav-flag img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.nav-flag-trigger { width:16px; height:16px; }
+.nav-nation-label { line-height:1.2; }
+
+/* Header — briefing style */
+.header { background:#f9f9f9; padding:1.5rem 2rem 0; }
+.header-title-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem; }
+.header-title-row h1 { font-family:'Newsreader', Georgia, serif; font-size:2.4rem; color:#1a1c1c; font-weight:600; line-height:1; }
+.header-flag { height:25px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); position:relative; top:-1px; }
+.header-badge { display:inline-flex; font-size:0.55rem; font-weight:700; padding:2px 8px;
+    border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; position:relative; top:-4px; }
+.badge-territory { background:#8B7355; color:#fff; }
+.badge-status { background:#d4edda; color:#2d6a4f; }
+.badge-status.wip { background:#fff3cd; color:#856404; border:1px solid #f0e0a0; }
+.header-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic;
+    font-size:1.05rem; color:#8B7355; line-height:1.5; margin-bottom:1rem; }
+.header-illustration { width:110px; height:75px; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1); flex-shrink:0; }
+
+/* Briefing grid */
+.briefing { display:grid; grid-template-columns:2fr 1fr; gap:2rem; padding:1rem 2rem 1rem;
+    border-top:1px solid #e0dcd4; }
+.briefing.briefing-full { grid-template-columns:1fr; }
+.briefing-full .insights-grid { grid-template-columns:1fr 1fr 1fr; }
+.briefing-insights { }
+.briefing-label { font-family:'Newsreader', Georgia, serif; font-size:1.6rem; font-weight:500;
+    color:#1a1c1c; margin-bottom:0.75rem; }
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem 1.2rem; }
+.insight-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.78rem; color:#4d453c;
+    line-height:1.5; padding:0.7rem 0.8rem; background:#fff; border-radius:6px;
+    border:1px solid rgba(209,196,185,0.3); box-shadow:0 1px 3px rgba(0,0,0,0.03); }
+.insight-item .insight-title { display:flex; align-items:flex-start; gap:0.35rem; font-weight:700; color:#1a1c1c; font-size:0.78rem; margin-bottom:0.15rem; }
+.insight-item .insight-title span { margin-top:5px; }
+.insight-item .insight-desc { display:block; color:#666; font-size:0.73rem; }
+.insight-item .material-icons { font-size:14px; color:#8B7355; flex-shrink:0; margin-top:2px; }
+.insight-item .insight-img { width:60px; height:70px; object-fit:cover; object-position:top; border-radius:4px; flex-shrink:0; filter:sepia(0.3); }
+.briefing-questions { padding-left:1.5rem; border-left:1px solid #e0dcd4; }
+.question-item { font-size:0.82rem; color:#555; line-height:1.55; margin-bottom:0.8rem;
+    padding:0.6rem 0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #d4c9b8; }
+.question-tag { display:block; font-family:'Public Sans', sans-serif;
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#8B7355; margin-bottom:0.2rem; }
+.question-item .question-text { font-family:'Newsreader', Georgia, serif; font-style:italic; }
+
+/* Timeline container */
+.timeline-wrapper { padding:1.5rem 2rem 0.5rem; overflow-x:auto; }
+.timeline-container { position:relative; min-width:2800px; min-height:685px; margin-bottom:10px; }
+
+/* Ticks */
+.tick { position:absolute; top:0; height:100%; pointer-events:none; }
+.tick-line { position:absolute; top:0; left:0; width:1px; height:100%; background:#ddd; }
+.tick-label { position:absolute; top:-20px; left:-20px; width:40px; text-align:center; font-size:0.7rem; color:#888; }
+
+/* Phase bands */
+.phase-band { position:absolute; top:20px; height:70px; border-radius:0; border-right:1px solid #fff; cursor:pointer;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:30px;
+    transition: filter 0.15s; overflow:hidden; border:none; border-right:1px solid #fff; }
+.phase-band.phase-narrow { min-width:4px; }
+.phase-band:hover { filter:brightness(0.95); }
+.phase-band-label { font-size:0.75rem; font-weight:700; text-align:center; max-width:95%;
+    overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.2;
+    text-transform:uppercase; letter-spacing:0.5px; }
+.phase-band-dates { font-size:0.6rem; color:#555; }
+
+/* Subphase bands */
+.subphase-band { position:absolute; top:100px; height:80px; border-radius:0; cursor:pointer;
+    min-width:4px; transition: filter 0.15s; border-right:1px solid #fff;
+    display:flex; align-items:center; justify-content:center; padding:2px; overflow:visible; }
+.subphase-band:hover { filter:brightness(0.92); }
+.subphase-label { font-size:0.65rem; font-weight:600; color:#333; text-align:center;
+    line-height:1.2; word-wrap:break-word; overflow-wrap:break-word; max-width:95%;
+    text-transform:uppercase; letter-spacing:0.3px; }
+.subphase-band.narrow .subphase-label { font-size:0.5rem; word-wrap:break-word;
+    overflow-wrap:break-word; max-width:95%; }
+.subphase-band.very-narrow .subphase-label { font-size:0.5rem; max-width:none; width:max-content;
+    line-height:10px; overflow:visible; transform:rotate(-90deg); }
+
+/* Perturbation overlay */
+.perturbation-overlay { position:absolute; top:100px; height:80px; cursor:pointer; border-radius:0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.08) 4px, rgba(200,50,50,0.08) 8px);
+    border:1px dashed rgba(200,50,50,0.4); z-index:5; }
+.perturbation-overlay:hover { background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(200,50,50,0.15) 4px, rgba(200,50,50,0.15) 8px); }
+.perturbation-label { font-size:0.5rem; color:#a33; font-weight:600;
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-90deg);
+    pointer-events:none; letter-spacing:0.3px; width:100%; text-align:center; }
+.perturbation-overlay.narrow .perturbation-label { font-size:0.45rem; }
+
+/* Area chart — superficie de référence (stacked: noyau + marges + ref line) */
+.area-chart { position:absolute; left:0; width:100%; height:70px; pointer-events:none; }
+.area-step-group { position:absolute; bottom:0; }
+.area-noyau { position:absolute; bottom:0; left:0; width:100%;
+    background:rgba(130,110,85,0.25); cursor:pointer; pointer-events:auto;
+    transition:background 0.15s; }
+.area-noyau:hover { background:rgba(130,110,85,0.38); }
+.area-step-group.has-marges .area-noyau { border-top:1px dashed rgba(130,110,85,0.30); }
+.area-marges { position:absolute; left:0; width:100%;
+    background:rgba(175,165,150,0.13); border-top:1.5px solid rgba(140,128,115,0.35);
+    cursor:pointer; pointer-events:auto; transition:background 0.15s; }
+.area-marges:hover { background:rgba(175,165,150,0.24); }
+.area-edge { position:absolute; bottom:0; width:1.5px; background:rgba(140,128,115,0.25); pointer-events:none; }
+.area-chart-label { position:absolute; top:0; left:0; font-size:0.6rem; color:#a09080;
+    font-weight:600; text-transform:uppercase; letter-spacing:0.5px; pointer-events:none; white-space:nowrap; }
+.area-saillant-group { position:absolute; top:188px; z-index:15; }
+.area-saillant-label { position:absolute; top:25px; left:-35px; width:70px; text-align:center;
+    line-height:1.1; pointer-events:none; }
+.area-saillant-label .saillant-figure { font-size:0.55rem; color:#666; display:block; }
+.area-saillant-label .saillant-date { font-size:0.5rem; color:#999; display:block; font-weight:600; }
+
+/* Narrow-phase indicator — visible marker for phases too short to see */
+.narrow-indicator { position:absolute; z-index:15; cursor:pointer; pointer-events:auto; margin-left:-10px; }
+.narrow-indicator-pin { width:20px; height:20px; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; }
+.narrow-indicator-pin .material-icons { font-size:10px; color:#fff; transform:rotate(45deg); }
+.narrow-indicator:hover .narrow-indicator-pin { transform:rotate(-45deg) scale(1.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+
+/* Saillant markers */
+.saillant-group { position:absolute; top:200px; z-index:10; }
+.saillant-marker { width:24px; height:24px; cursor:pointer; border-radius:50%;
+    margin-left:-12px; transition:transform 0.15s; display:flex; align-items:center;
+    justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+.saillant-marker:hover { transform:scale(1.15); box-shadow:0 3px 10px rgba(0,0,0,0.25); }
+.saillant-marker .material-icons, .saillant-marker .material-symbols-outlined { font-size:12px; color:#fff; }
+.saillant-label { position:absolute; top:30px; left:-45px; width:90px; text-align:center;
+    line-height:1.15; pointer-events:none; }
+.saillant-label .saillant-title { font-size:0.55rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:0.02em; color:#333; display:block; }
+.saillant-label .saillant-figure { font-size:0.6rem; color:#666; display:block; }
+.saillant-label .saillant-date { font-size:0.55rem; color:#999; display:block; font-weight:600; }
+.saillant-marker.avortement { background:#c0392b !important; }
+.saillant-marker.perturbation-marker { width:19px; height:19px; border-radius:2px; transform:rotate(45deg); margin-left:-9px; }
+.saillant-marker.perturbation-marker .material-icons,
+.saillant-marker.perturbation-marker .material-symbols-outlined { transform:rotate(-45deg); font-size:10px; }
+.saillant-marker.selected { box-shadow:0 0 0 4px #fff, 0 4px 12px rgba(0,0,0,0.3); }
+
+/* Tooltip */
+.tooltip { position:fixed; background:#333; color:#fff; padding:8px 12px; border-radius:6px;
+    font-size:0.8rem; max-width:350px; pointer-events:none; z-index:1000;
+    line-height:1.4; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none; }
+.tooltip strong { color:#fff; font-weight:700; }
+
+/* Detail panel — Stitch style */
+.detail-overlay { position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,0.2);
+    z-index:500; display:none; }
+.detail-panel { position:fixed; top:0; right:0; bottom:0; width:min(400px,92vw);
+    background:rgba(243,243,243,0.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    box-shadow:-4px 0 24px rgba(0,0,0,0.08); z-index:501; overflow-y:auto;
+    display:none; border-left:1px solid rgba(209,196,185,0.3); }
+.detail-panel.open { display:block; }
+.detail-overlay.open { display:block; }
+
+/* Panel header */
+.detail-panel-header { padding:1.2rem 1.5rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+.detail-panel-header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
+.detail-panel-title { font-family:'Newsreader', Georgia, serif; font-size:1.15rem; font-weight:600; color:#1a1c1c; }
+.detail-close { background:none; border:none; cursor:pointer; color:#7f756b; font-size:1.2rem; padding:4px; }
+.detail-close:hover { color:#1a1c1c; }
+
+.detail-badges { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+.detail-kind { display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; padding:4px 10px;
+    border-radius:20px; color:#fff; text-transform:uppercase; letter-spacing:0.8px; }
+.confidence-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:20px;
+    font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.confidence-high { background:rgba(0,99,151,0.1); color:#006397; }
+.confidence-medium { background:rgba(113,91,62,0.1); color:#715b3e; }
+.confidence-low { background:rgba(186,26,26,0.1); color:#ba1a1a; }
+
+/* Panel content */
+.detail-panel-content { padding:1.5rem; }
+.detail-panel-content > section { margin-bottom:1.5rem; }
+
+.detail-section-label { font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+    color:#7f756b; margin-bottom:0.3rem; display:block; }
+.detail-title { font-family:'Newsreader', Georgia, serif; font-size:1.7rem; font-weight:500;
+    color:#1a1c1c; line-height:1.25; padding-right:1rem; }
+.detail-subtitle { font-family:'Newsreader', Georgia, serif; font-style:italic; color:#8B7355;
+    font-size:1rem; margin-top:0.3rem; line-height:1.4; }
+
+/* Data cards grid */
+.detail-cards { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+.detail-card { background:#fff; border-radius:10px; padding:0.8rem 1rem; }
+.detail-card .detail-section-label { margin-bottom:0.2rem; }
+.detail-card-value { font-family:'Newsreader', Georgia, serif; font-size:1.05rem; color:#1a1c1c; }
+
+/* Figure card */
+.detail-figure { display:flex; align-items:center; gap:0.8rem; background:rgba(226,226,226,0.5);
+    border-radius:10px; padding:0.8rem 1rem; }
+.detail-figure-portrait { width:52px; height:52px; border-radius:6px; object-fit:cover; flex-shrink:0;
+    }
+.detail-figure-icon { width:52px; height:52px; border-radius:6px; background:#d1c4b9;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.detail-figure-icon .material-icons { font-size:22px; color:#574329; }
+.detail-figure-info { flex:1; }
+.detail-figure-info .detail-section-label { margin-bottom:0; }
+.detail-figure-name { font-weight:600; color:#1a1c1c; font-size:0.95rem; }
+.detail-figure-role { font-size:0.78rem; color:#7f756b; }
+
+/* Synthèse */
+.detail-section { margin-bottom:1.2rem; }
+.detail-section p { font-size:0.88rem; color:#4d453c; line-height:1.7; }
+.detail-description { font-size:0.88rem; line-height:1.7; color:#4d453c; }
+
+.detail-meta { font-size:0.82rem; color:#4d453c; margin-bottom:1rem; }
+.detail-meta div { margin-bottom:0.3rem; }
+
+.detail-divider { border:none; border-top:1px solid rgba(209,196,185,0.3); margin:1.2rem 0; }
+
+/* Legend */
+.legend { padding:0.8rem 2rem; display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; border-top:1px solid #e0dcd4; background:#f9f9f9; }
+.legend-title { font-size:0.8rem; font-weight:700; color:#555; }
+.legend-item { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; color:#444; }
+.legend-swatch { width:16px; height:16px; border-radius:3px; flex-shrink:0; }
+.legend-diamond { width:16px; height:16px; flex-shrink:0; background:#666; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; }
+.legend-diamond .material-icons, .legend-diamond .material-symbols-outlined { font-size:10px; color:#fff; }
+.legend-conf { display:inline-block; width:24px; height:14px; border-radius:3px; flex-shrink:0; }
+
+/* Footer */
+.footer { text-align:center; padding:1rem; font-size:0.75rem; color:#999; border-top:1px solid #e0dcd4; margin-top:1rem; background:#fff; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header { padding:0.8rem 1rem; }
+    .header h1 { font-size:1.2rem; }
+    .timeline-wrapper { padding:0.5rem 1rem; }
+    .legend { padding:0.5rem 1rem; gap:0.8rem; }
+    .detail-panel { width:100vw; }
+    .saillant-label { width:60px; left:-30px; font-size:0.55rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">Historionomie</a>
+    <div class="navbar-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#wiki">Wiki</a>
+        <div class="nav-dropdown" id="nation-dropdown"><button type="button" class="nav-dropdown-toggle" onclick="document.getElementById('nation-dropdown').classList.toggle('open')"><span class="nav-flag nav-flag-trigger"><img src="images/athenes/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-dropdown-current">Athènes</span><span class="nav-dropdown-caret">&#9662;</span></button><div class="nav-dropdown-menu"><a href="angleterre.html"><span class="nav-flag "><img src="images/angleterre/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Angleterre</span></a><a href="athenes.html" class="active"><span class="nav-flag "><img src="images/athenes/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Athènes</span></a><a href="autriche.html"><span class="nav-flag "><img src="images/autriche/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Autriche</span></a><a href="baviere.html"><span class="nav-flag "><img src="images/baviere/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Bavière</span></a><a href="emilie-romagne.html"><span class="nav-flag "><img src="images/emilie-romagne/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Émilie-Romagne</span></a><a href="espagne.html"><span class="nav-flag "><img src="images/espagne/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Espagne</span></a><a href="etats-pontificaux.html"><span class="nav-flag "><img src="images/etats-pontificaux/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">États pontificaux</span></a><a href="florence.html"><span class="nav-flag "><img src="images/florence/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Florence</span></a><a href="france.html"><span class="nav-flag "><img src="images/france/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">France</span></a><a href="genes.html"><span class="nav-flag "><img src="images/genes/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Gênes</span></a><a href="hongrie.html"><span class="nav-flag "><img src="images/hongrie/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Hongrie</span></a><a href="israel.html"><span class="nav-flag "><img src="images/israel/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Israël</span></a><a href="milan.html"><span class="nav-flag "><img src="images/milan/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Milan</span></a><a href="naples.html"><span class="nav-flag "><img src="images/naples/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Naples</span></a><a href="piemont.html"><span class="nav-flag "><img src="images/piemont/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Piémont</span></a><a href="sicile.html"><span class="nav-flag "><img src="images/sicile/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Sicile</span></a><a href="suisse.html"><span class="nav-flag "><img src="images/suisse/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Suisse</span></a><a href="tchequie.html"><span class="nav-flag "><img src="images/tchequie/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Tchéquie</span></a><a href="venise.html"><span class="nav-flag "><img src="images/venise/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Venise</span></a></div></div>
+    </div>
+</nav>
+
+<div class="header">
+    <div class="header-title-row">
+        <img class='header-flag' src='images/athenes/flag.svg' alt='drapeau'>
+        <h1>Athènes</h1>
+        <span class='header-badge badge-status'>proposition</span>
+    </div>
+    <div class="header-subtitle">Nomos basileus — la loi pour roi</div>
+</div>
+
+<div class="briefing briefing-full"><div class="briefing-insights">
+            <div class="briefing-label">Faits marquants</div>
+            <div class="insights-grid"><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Solon.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#6A0DAD;flex-shrink:0;"></span>La loi comme monarque absolu</span><span class="insight-desc">Athènes n&#39;a pas de roi absolutiste : elle a <strong>Solon (-594)</strong>. Le 1er monarque absolu est ici une institution — la loi écrite intronisée au-dessus des *genē*. Solon résout la guerre sociale par le levier populiste (séisachthéie) et substitue le <strong>cens à la naissance</strong>. Pisistrate gouvernera ensuite *par* les lois de Solon : preuve que le cadre, non l&#39;homme, était souverain. *Nomos basileus*, « la loi est roi ».</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm_von_Kaulbach_-_Die_Seeschlacht_bei_Salamis_-_1868.JPG?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#D4A017;flex-shrink:0;"></span>Thémistocle, l&#39;Impérialiste Revanchard exilé chez l&#39;ennemi</span><span class="insight-desc">L&#39;IR athénien suit l&#39;arc canonique jusqu&#39;au bout : <strong>Thémistocle</strong> sauve la cité à <strong>Salamine (-480)</strong>, projette la revanche anti-perse (flotte, Ligue de Délos), puis tombe — <strong>ostracisé en -471, il meurt en exil à la cour de Perse</strong>. Le parallèle avec Sainte-Hélène est exact. Périclès, qui meurt au pouvoir adulé, n&#39;est pas l&#39;IR mais l&#39;apogée de l&#39;ENP suivante.</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pericles_Pio-Clementino_Inv269_n2.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#1E90FF;flex-shrink:0;"></span>La seule phase parlementaire de l&#39;Antiquité</span><span class="insight-desc">De Clisthène (-508) à Éphialtès (-461), Athènes mène une Révolution Nationale <strong>complète</strong> — les sept saillants jusqu&#39;à la Glorieuse Révolution — et débouche sur un <strong>État-nation parlementaire</strong> : l&#39;Ecclésia souveraine, l&#39;administration subordonnée. Aucune autre ENP antique dans le corpus. Athènes prouve qu&#39;une nation non détruite peut achever son Parcours dès l&#39;Antiquité.</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Parthenon_in_Athens.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#2E8B57;flex-shrink:0;"></span>Une polis à l&#39;âge des poleis</span><span class="insight-desc">Pourquoi Athènes aboutit là où Venise et Florence sont absorbées ? <strong>Échelle.</strong> À l&#39;âge des cités-États, la polis *est* le standard géopolitique : Athènes déroule son Parcours endogènement, comme la France à l&#39;âge des États territoriaux. Venise et Florence, poleis nées à l&#39;âge des États territoriaux, sont <strong>hors-standard</strong> — contenues, puis absorbées avant d&#39;achever.</span></div></div><div class="insight-item"><img class="insight-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kroisos_Kouros.jpg?width=120" alt=""><div><span class="insight-title"><span style="width:10px;height:10px;border-radius:50%;background:#8B7355;flex-shrink:0;"></span>Une phase féodale inversée</span><span class="insight-desc">Athènes n&#39;a <strong>pas de pic féodal</strong> : sa royauté ne culmine pas, elle se délite. De Thésée (synœcisme, ~-900) à l&#39;archontat annuel (-683), le pouvoir royal s&#39;érode en aristocratie collective — l&#39;inverse d&#39;une féodale normale où des rois forts consolident. La polis dense <strong>démonte</strong> la royauté héritée au lieu de bâtir une monarchie. Pattern cité-État (Florence, Milan) poussé à l&#39;extrême.</span></div></div></div>
+        </div></div>
+
+<div class="timeline-wrapper">
+    <div class="timeline-container" id="timeline">
+        
+        <div class="tick" style="left:0.8503%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">-900</div>
+        </div>
+        <div class="tick" style="left:17.8571%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">-800</div>
+        </div>
+        <div class="tick" style="left:34.8639%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">-700</div>
+        </div>
+        <div class="tick" style="left:51.8707%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">-600</div>
+        </div>
+        <div class="tick" style="left:68.8776%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">-500</div>
+        </div>
+        <div class="tick" style="left:85.8844%;">
+            <div class="tick-line"></div>
+            <div class="tick-label">-400</div>
+        </div>
+        
+        <div class="phase-band" style="left:0.8503%;width:36.9048%;
+            background:#e2dcd4;border-top:3px solid #8B7355;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase féodale (atrophiée)&lt;/strong&gt; (-900 — -683)&#10;La féodale athénienne couvre du synœcisme (~-900) à l&#39;archontat annuel (-683), durée normale (~217 ans) mais &lt;strong&gt;caractère atrophié&lt;/strong&gt; : la royauté ne culmine jamais en pic féodal — elle s&#39;érode (rois → archontes à vie → décennaux → annuels). Le test discriminant féodal est satisfait au début (pouvoir personnel du basileus, pas d&#39;administration permanente), mais la trajectoire descend au lieu de monter."
+            onclick="showDetail(0)">
+            <div class="phase-band-label" style="color:#8B7355;">Féodale</div>
+            <div class="phase-band-dates">-900 — -683</div>
+        </div>
+        <div class="phase-band" style="left:37.7551%;width:15.1361%;
+            background:#cae2d5;border-top:3px solid #2E8B57;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase oligarchique&lt;/strong&gt; (-683 — -594)&#10;Phase oligarchique courte (~89 ans), &lt;strong&gt;comprimée par l&#39;échelle polis&lt;/strong&gt; — la cité-État déroule des cycles rapides. Le test discriminant oligarchique est satisfait : un cadre central collégial existe (archontat, Aréopage, naukrariai), mais l&#39;exécutif compose avec les *genē*. Se résout par une guerre sociale entre factions eupatrides."
+            onclick="showDetail(4)">
+            <div class="phase-band-label" style="color:#2E8B57;">Oligarchique</div>
+            <div class="phase-band-dates">-683 — -594</div>
+        </div>
+        <div class="phase-band" style="left:52.8912%;width:14.2857%;
+            background:#d9c2ea;border-top:3px solid #6A0DAD;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase absolutiste&lt;/strong&gt; (-594 — -510)&#10;Phase absolutiste &lt;strong&gt;institutionnelle et comprimée&lt;/strong&gt; (~84 ans). Le 1er monarque absolu n&#39;est pas un homme mais la loi écrite intronisée au-dessus des *genē* (*nomos basileus*) : Solon. La séquence absolutisation → acmé → AR se déroule en quatre-vingts ans (compression polis) — Solon fonde le cadre, Pisistrate l&#39;occupe à son acmé, Hippias en incarne l&#39;AR."
+            onclick="showDetail(10)">
+            <div class="phase-band-label" style="color:#6A0DAD;">Absolutiste</div>
+            <div class="phase-band-dates">-594 — -510</div>
+        </div>
+        <div class="phase-band" style="left:67.1769%;width:8.3333%;
+            background:#f4e7c5;border-top:3px solid #D4A017;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Révolution Nationale&lt;/strong&gt; (-510 — -461)&#10;RN &lt;strong&gt;complète et canonique&lt;/strong&gt; (~49 ans, dans la norme) déroulant les sept saillants. Particularité : l&#39;Impérialiste Revanchard est &lt;strong&gt;Thémistocle&lt;/strong&gt; (Salamine, exil perse — arc napoléonien), et la Restauration est l&#39;ascendant aristocratique de &lt;strong&gt;Cimon&lt;/strong&gt;. La Glorieuse Révolution (Éphialtès, -461) débouche sur la seule ENP antique du corpus."
+            onclick="showDetail(17)">
+            <div class="phase-band-label" style="color:#D4A017;">Révolution Nationale</div>
+            <div class="phase-band-dates">-510 — -461</div>
+        </div>
+        <div class="phase-band" style="left:75.5102%;width:23.6395%;
+            background:#c6e3ff;border-top:3px solid #1E90FF;border-right:1px solid #fff;"
+            data-tooltip="&lt;strong&gt;Phase parlementaire (État-nation parlementaire)&lt;/strong&gt; (-461 — -322)&#10;La seule phase parlementaire de l&#39;Antiquité dans le corpus. L&#39;Ecclésia est souveraine, l&#39;administration subordonnée, le régime stable ~140 ans. Apogée sous Périclès. L&#39;empire (exutoire) la soutient ; deux putschs oligarchiques (Quatre-Cents -411, Trente -404) la testent et sont réabsorbés. Avortée par la conquête macédonienne (-322), non par dégénérescence endogène."
+            onclick="showDetail(30)">
+            <div class="phase-band-label" style="color:#1E90FF;">Parlementaire</div>
+            <div class="phase-band-dates">-461 — -322</div>
+        </div>
+        
+        <div class="subphase-band" style="left:0.8503%;width:25.0000%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Coagulation des élites&lt;/strong&gt; (-900 — -753)&#10;Du synœcisme à l&#39;institution des archontes décennaux. Les *genē* eupatrides se coagulent autour du centre athénien, mais autour d&#39;un paramount dont l&#39;autorité s&#39;effrite plutôt qu&#39;elle ne se renforce."
+            onclick="showDetail(1)">
+            <span class="subphase-label">Coagulation des élites</span>
+        </div>
+        <div class="subphase-band" style="left:25.8503%;width:11.9048%;
+            background:#cac0b2;border-bottom:2px solid #8B7355;"
+            data-tooltip="&lt;strong&gt;Bascule oligarchique&lt;/strong&gt; (-753 — -683)&#10;L&#39;érosion de la royauté s&#39;accélère : archontes à vie → décennaux (-753) → annuels (-683). Le corps eupatride absorbe le pouvoir royal sans crise dynastique ouverte — bascule par délitement, non par effondrement."
+            onclick="showDetail(3)">
+            <span class="subphase-label">Bascule oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:37.7551%;width:8.6735%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Essor oligarchique&lt;/strong&gt; (-683 — -632)&#10;L&#39;archontat annuel institue le cadre oligarchique (Pacte oligarchique). Les naukrariai dotent la cité d&#39;une flotte et d&#39;un proto-fisc centralisés. L&#39;essor est porté par le corps eupatride collégial, sans souverain personnel."
+            onclick="showDetail(5)">
+            <span class="subphase-label">Essor oligarchique</span>
+        </div>
+        <div class="subphase-band" style="left:46.4286%;width:6.4626%;
+            background:#a0cab3;border-bottom:2px solid #2E8B57;"
+            data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt; (-632 — -594)&#10;Conflit ouvert entre factions eupatrides pour le contrôle du cadre central. L&#39;affaire Cylon (-632) ouvre la crise, la codification draconienne (-621) échoue à la résoudre, et la guerre se poursuit jusqu&#39;à l&#39;arbitrage de Solon. La crise agraire (endettement, esclavage pour dettes) est le &lt;strong&gt;levier&lt;/strong&gt;, non l&#39;enjeu."
+            onclick="showDetail(8)">
+            <span class="subphase-label">Guerre sociale</span>
+        </div>
+        <div class="subphase-band" style="left:52.8912%;width:8.1633%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Absolutisation&lt;/strong&gt; (-594 — -546)&#10;Solon (-594) impose le cadre légal central — *nomos basileus*. La résistance des factions régionales eupatrides (DGRO) se prolonge jusqu&#39;à son écrasement par Pisistrate à Pallène (-546), qui clôt l&#39;absolutisation."
+            onclick="showDetail(11)">
+            <span class="subphase-label">Absolutisation</span>
+        </div>
+        <div class="subphase-band" style="left:61.0544%;width:5.4422%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Impérialisme absolutiste&lt;/strong&gt; (-546 — -514)&#10;L&#39;âge d&#39;or pisistratide — Acmé absolutiste. Pisistrate règne fermement par les lois de Solon, redistribue, lance de grands travaux et porte le prestige de la cité à son sommet."
+            onclick="showDetail(14)">
+            <span class="subphase-label">Impérialisme absolutiste</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:66.4966%;width:0.6803%;
+            background:#bb92da;border-bottom:2px solid #6A0DAD;"
+            data-tooltip="&lt;strong&gt;Ancien Régime&lt;/strong&gt; (-514 — -510)&#10;Hippias incarne l&#39;AR qui s&#39;aigrit : après l&#39;assassinat d&#39;Hipparque (-514), la tyrannie se durcit (taxes, exécutions, exils), faisant converger aristocrates exilés et demos contre le bloc régnant. AR très court — la cité-État trop petite n&#39;a pas la profondeur fiscale d&#39;une saturation canonique."
+            onclick="showDetail(16)">
+            <span class="subphase-label">Ancien Régime</span>
+        </div>
+        <div class="subphase-band narrow" style="left:67.1769%;width:4.5918%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Révolution initiale&lt;/strong&gt; (-510 — -483)&#10;De la chute d&#39;Hippias (-510) à l&#39;émergence de Thémistocle. Éclatement, Expérience parlementaire (Clisthène), Phase aiguë (insurrection de -508) et Moment thermidorien (démocratie modérée clisthénienne) s&#39;enchaînent en une dizaine d&#39;années — séquence compressée typique d&#39;une polis."
+            onclick="showDetail(18)">
+            <span class="subphase-label">Révolution initiale</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:71.7687%;width:2.0408%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Impérialisme revanchard&lt;/strong&gt; (-483 — -471)&#10;Thémistocle émerge comme IR : programme naval (-483), victoire de Salamine (-480), revanche anti-perse et fondation de la Ligue de Délos (-478). Les guerres médiques sont la substance de la sous-phase, pas une interruption."
+            onclick="showDetail(23)">
+            <span class="subphase-label">Impérialisme revanchard</span>
+        </div>
+        <div class="subphase-band very-narrow" style="left:73.8095%;width:1.7007%;
+            background:#ebd496;border-bottom:2px solid #D4A017;"
+            data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt; (-471 — -461)&#10;Après la chute de Thémistocle, l&#39;ordre aristocratique-conservateur revient sous Cimon (-471/-461) : philo-laconien, respectueux de l&#39;Aréopage, il domine la cité. La Restauration s&#39;effondre quand Cimon est discrédité (éconduit par Sparte à Ithome)."
+            onclick="showDetail(25)">
+            <span class="subphase-label">Restauration</span>
+        </div>
+        
+        <div class="perturbation-overlay narrow" style="left:70.5782%;width:1.8707%;"
+            data-tooltip="&lt;strong&gt;Guerres médiques&lt;/strong&gt; (-490 — -479)&#10;Type : &#10;Choc exogène / prolongement (territorial: false) : Marathon (-490) puis Salamine et Platées (-480/-479). Guerre existentielle gagnée par l&#39;IR Thémistocle — elle ne détruit rien, elle fonde la puissance navale et lance l&#39;exutoire impérial (Ligue de Délos), portant l&#39;impérialisme revanchard."
+            onclick="showDetail(28)">
+            <span class="perturbation-label">Guerres médiques</span>
+        </div>
+        <div class="perturbation-overlay" style="left:72.6190%;width:4.0816%;"
+            data-tooltip="&lt;strong&gt;Ligue de Délos&lt;/strong&gt; (-478 — -454)&#10;Type : &#10;Choc d&#39;hétérogénéité / prolongement : l&#39;alliance anti-perse se mue en empire maritime tributaire (archè). Exutoire impérial qui prolonge l&#39;ENP à venir — le tribut (phoros) finance la démocratie radicale et la flotte. Parallèle structurel au Stato da Màr vénitien."
+            onclick="showDetail(29)">
+            <span class="perturbation-label">Ligue de Délos</span>
+        </div>
+        <div class="perturbation-overlay narrow" style="left:83.3333%;width:0.3401%;"
+            data-tooltip="&lt;strong&gt;Désastre de Sicile&lt;/strong&gt; (-415 — -413)&#10;Type : &#10;Choc exogène / accélération : l&#39;expédition de Sicile (-415/-413) s&#39;achève par l&#39;anéantissement de la flotte et de l&#39;armée athéniennes à Syracuse. Amorce du démantèlement de l&#39;exutoire impérial et de la crise finale de la guerre du Péloponnèse."
+            onclick="showDetail(31)">
+            <span class="perturbation-label">Désastre de Sicile</span>
+        </div>
+        <div class="perturbation-overlay narrow" style="left:85.0340%;width:0.3401%;"
+            data-tooltip="&lt;strong&gt;Aigos-Potamos&lt;/strong&gt; (-405 — -403)&#10;Type : &#10;Correction d&#39;échelle / accélération : la défaite navale d&#39;Aigos-Potamos (-405) et la capitulation de -404 liquident l&#39;empire (fin de l&#39;exutoire). Sparte impose les Trente Tyrans — restauration exogène avortée, écrasée par Thrasybule, démocratie restaurée en -403."
+            onclick="showDetail(32)">
+            <span class="perturbation-label">Aigos-Potamos</span>
+        </div>
+        <div class="perturbation-overlay" style="left:96.4286%;width:402.0408%;"
+            data-tooltip="&lt;strong&gt;Chéronée&lt;/strong&gt; (-338 — ?)&#10;Type : &#10;Choc exogène / accélération : la défaite de Chéronée (-338) face à Philippe II établit l&#39;hégémonie macédonienne. L&#39;ENP survit (Philippe laisse à Athènes sa démocratie interne), mais perd son autonomie diplomatique — accélération vers la fin."
+            onclick="showDetail(33)">
+            <span class="perturbation-label">Chéronée</span>
+        </div>
+        <div class="perturbation-overlay narrow" style="left:98.9796%;width:0.1701%;"
+            data-tooltip="&lt;strong&gt;Guerre lamiaque&lt;/strong&gt; (-323 — -322)&#10;Type : &#10;Choc exogène / avortement : à l&#39;issue de la guerre lamiaque (-323/-322), Antipatros abolit la démocratie souveraine, impose un régime censitaire et une garnison à Munychie. C&#39;est l&#39;avortement de l&#39;ENP — tuée de l&#39;extérieur avant tout terme endogène. Le Parcours actif s&#39;arrête ici."
+            onclick="showDetail(34)">
+            <span class="perturbation-label">Guerre lamiaque</span>
+        </div>
+        
+    <div class="area-chart" style="top:185px;">
+        
+        <div class="area-chart-label" style="left:0.8503%;">Superficie de référence (×1000 km²)</div>
+        
+        <div class="area-step-group" style="left:0.8503%;width:36.9048%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group" style="left:37.7551%;width:23.2993%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group" style="left:61.0544%;width:11.5646%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group" style="left:72.6190%;width:6.4626%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group has-marges" style="left:79.0816%;width:6.1224%;height:62.0px;"><div class="area-noyau" style="height:6.6px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~3 000 km²"></div><div class="area-marges" style="bottom:6.6px;height:55.4px;" data-tooltip="&lt;strong&gt;Marges&lt;/strong&gt;&#10;~25 000 km² — apogée de l&#39;archè (~150-330 cités tributaires, clérouquies ; Salamine et Oropos rejoignent le noyau)"></div></div>
+        <div class="area-step-group" style="left:85.2041%;width:4.5918%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group" style="left:89.7959%;width:6.6327%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group" style="left:96.4286%;width:2.7211%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        <div class="area-step-group" style="left:99.1497%;width:0.8503%;height:4.4px;"><div class="area-noyau" style="height:4.4px;" data-tooltip="&lt;strong&gt;Noyau territorial&lt;/strong&gt;&#10;~2 000 km²"></div></div>
+        
+        <div class="area-edge" style="left:37.7551%;height:4.4px;"></div>
+        <div class="area-edge" style="left:61.0544%;height:4.4px;"></div>
+        <div class="area-edge" style="left:72.6190%;height:4.4px;"></div>
+        <div class="area-edge" style="left:79.0816%;height:62.0px;"></div>
+        <div class="area-edge" style="left:85.2041%;height:62.0px;"></div>
+        <div class="area-edge" style="left:89.7959%;height:4.4px;"></div>
+        <div class="area-edge" style="left:96.4286%;height:4.4px;"></div>
+        <div class="area-edge" style="left:99.1497%;height:4.4px;"></div>
+    </div>
+        
+        
+        <div class="saillant-group" style="left:0.8503%;">
+            <div class="saillant-marker" style="background:#8B7355;"
+                data-tooltip="&lt;strong&gt;Éveil féodal&lt;/strong&gt;&#10;Synœcisme de l&#39;Attique (-900)&#10;Le synœcisme de l&#39;Attique — consolidation des communautés attiques sous un basileus athénien paramount — satisfait la définition de l&#39;éveil féodal : premier chef supra-régional dont l&#39;autorité force les *genē* à se positionner par rapport à un centre. Personnifié par Thésée ; historiquement un processus des âges obscurs."
+                onclick="showDetail(2)">
+                <span class="material-icons">wb_sunny</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éveil féodal</span><span class="saillant-figure">Synœcisme de l&#39;Attique</span><span class="saillant-date">-900</span></div>
+        </div>
+        <div class="saillant-group" style="left:37.7551%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Pacte oligarchique&lt;/strong&gt;&#10;Archontat annuel (-683)&#10;L&#39;institution de l&#39;archontat annuel (-683) fait du pouvoir une fonction collégiale annuelle garantie par le corps eupatride : passage du pouvoir-patrimoine (royauté personnelle) au pouvoir-fonction qui survit aux successions. Test directionnel décisif satisfait : c&#39;est le corps des grands qui se subordonne à un cadre, pas le centre qui cède."
+                onclick="showDetail(6)">
+                <span class="material-icons">gavel</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Pacte oligarchique</span><span class="saillant-figure">Archontat annuel</span><span class="saillant-date">-683</span></div>
+        </div>
+        <div class="saillant-group" style="left:37.7551%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;1re armée permanente&lt;/strong&gt;&#10;Naukrariai (-683)&#10;Les naukrariai — 48 circonscriptions navales-fiscales — constituent l&#39;équivalent maritime canonique de l&#39;armée permanente : chacune arme et entretient un navire et lève les contributions afférentes, force de coercition appropriée par le cadre central et indépendante de toute personne fondatrice. Proto-fisc et proto-flotte d&#39;un seul tenant."
+                onclick="showDetail(7)">
+                <span class="material-icons">military_tech</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1re armée permanente</span><span class="saillant-figure">Naukrariai</span><span class="saillant-date">-683</span></div>
+        </div>
+        <div class="saillant-group" style="left:46.4286%;">
+            <div class="saillant-marker" style="background:#2E8B57;"
+                data-tooltip="&lt;strong&gt;Guerre sociale&lt;/strong&gt;&#10;Factions eupatrides (-632)&#10;Conflit entre factions eupatrides pour le contrôle de l&#39;État central, ouvert par la tentative de tyrannie de Cylon (-632) et la vendetta qui s&#39;ensuit. &lt;strong&gt;Mode d&#39;expression&lt;/strong&gt; : rivalité lignagère et régionale. &lt;strong&gt;Levier&lt;/strong&gt; : la crise de l&#39;endettement agraire. La codification draconienne (-621) échoue à résoudre — la guerre se prolonge jusqu&#39;à Solon."
+                onclick="showDetail(9)">
+                <span class="material-icons">local_fire_department</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Guerre sociale</span><span class="saillant-figure">Factions eupatrides</span><span class="saillant-date">-632</span></div>
+        </div>
+        <div class="saillant-group" style="left:52.8912%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;1er monarque absolu&lt;/strong&gt;&#10;Nomos basileus (-594)&#10;Solon résout la guerre sociale en imposant un cadre légal central au-dessus des *genē* — le 1er monarque absolu est ici une institution, la loi écrite (*nomos basileus*). Il satisfait les deux critères : le conflit factionnel est tranché par l&#39;arbitrage, et un nouveau cadre subordonne les anciennes élites (cens contre naissance, institutions centrales). Levier populiste : la séisachthéie."
+                onclick="showDetail(12)">
+                <span class="material-symbols-outlined">crown</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">1er monarque absolu</span><span class="saillant-figure">Nomos basileus</span><span class="saillant-date">-594</span></div>
+        </div>
+        <div class="saillant-group" style="left:61.0544%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Dernière grande révolte oligarchique&lt;/strong&gt;&#10;Bataille de Pallène (-546)&#10;Les factions régionales eupatrides (Plaine de Lycurgue, Côte de Mégaclès) résistent au cadre solonien et expulsent deux fois Pisistrate, avant d&#39;être écrasées à Pallène (-546). DGRO canonique — postérieure de ~48 ans au 1er MA (Solon -594), son écrasement clôt l&#39;absolutisation et ouvre l&#39;acmé."
+                onclick="showDetail(13)">
+                <span class="material-icons">whatshot</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Dernière grande révolte oligarchique</span><span class="saillant-figure">Bataille de Pallène</span><span class="saillant-date">-546</span></div>
+        </div>
+        <div class="saillant-group" style="left:62.0748%;">
+            <div class="saillant-marker" style="background:#6A0DAD;"
+                data-tooltip="&lt;strong&gt;Acmé absolutiste&lt;/strong&gt;&#10;Pisistrate (-540)&#10;Pisistrate incarne l&#39;acmé absolutiste : prestige maximal, domestication des élites, prospérité. Il gouverne *par* les lois de Solon — un tyran qui préserve le cadre légal, signe que le cadre était le souverain et que Pisistrate en est l&#39;apogée, non le fondateur."
+                onclick="showDetail(15)">
+                <span class="material-icons">terrain</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Acmé absolutiste</span><span class="saillant-figure">Pisistrate</span><span class="saillant-date">-540</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.1769%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Éclatement de l&#39;AR&lt;/strong&gt;&#10;Chute d&#39;Hippias (-510)&#10;La chute de la tyrannie pisistratide (-510), précipitée par le durcissement post-514 et l&#39;intervention spartiate de Cléomène, ouvre la Révolution Nationale. L&#39;ordre absolutiste s&#39;effondre."
+                onclick="showDetail(19)">
+                <span class="material-icons">flash_on</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Éclatement de l&#39;AR</span><span class="saillant-figure">Chute d&#39;Hippias</span><span class="saillant-date">-510</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.5170%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Expérience parlementaire&lt;/strong&gt;&#10;Clisthène (-508)&#10;Clisthène « prend le demos dans son parti » et propose la restructuration représentative du pouvoir — dèmes, dix tribus recomposées brisant les solidarités claniques, Boulè des Cinq-Cents, ostracisme. Probablement l&#39;Expérience parlementaire la plus pure du corpus : elle fonde littéralement le cadre démocratique."
+                onclick="showDetail(20)">
+                <span class="material-icons">account_balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Expérience parlementaire</span><span class="saillant-figure">Clisthène</span><span class="saillant-date">-508</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.5170%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Phase aiguë&lt;/strong&gt;&#10;Insurrection contre Isagoras (-508)&#10;Insurrection populaire de -508 : Isagoras, appuyé par Cléomène de Sparte, tente d&#39;instaurer une oligarchie étroite ; le demos se soulève, assiège l&#39;Acropole, expulse les Spartiates et &lt;strong&gt;exécute les partisans capturés&lt;/strong&gt;. Violence offensive du camp révolutionnaire contre la contre-révolution oligarchique — polarité de phase aiguë."
+                onclick="showDetail(21)">
+                <span class="material-symbols-outlined">skull</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Phase aiguë</span><span class="saillant-figure">Insurrection contre Isagoras</span><span class="saillant-date">-508</span></div>
+        </div>
+        <div class="saillant-group" style="left:67.6871%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Moment thermidorien&lt;/strong&gt;&#10;Démocratie modérée (-507)&#10;Clisthène rappelé promulgue et institutionnalise la réforme, faisant retomber la fièvre insurrectionnelle dans un cadre stable — démocratie modérée où l&#39;Aréopage subsiste. Refroidissement et retour aux affaires après la violence de -508."
+                onclick="showDetail(22)">
+                <span class="material-icons">balance</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Moment thermidorien</span><span class="saillant-figure">Démocratie modérée</span><span class="saillant-date">-507</span></div>
+        </div>
+        <div class="saillant-group" style="left:71.7687%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Émergence de l&#39;IR&lt;/strong&gt;&#10;Salamine et l&#39;exil perse (-483)&#10;Thémistocle sauve la cité à Salamine (-480), projette la revanche anti-perse (flotte, Ligue de Délos), puis tombe — ostracisé en -471, il meurt en exil à la cour de Perse. Arc d&#39;IR canonique jusqu&#39;au bout (parallèle napoléonien). La fonction IR est ici personnelle, non collectivisée."
+                onclick="showDetail(24)">
+                <span class="material-icons">military_tech</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Émergence de l&#39;IR</span><span class="saillant-figure">Salamine et l&#39;exil perse</span><span class="saillant-date">-483</span></div>
+        </div>
+        <div class="saillant-group" style="left:73.8095%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Restauration&lt;/strong&gt;&#10;Cimon (-471)&#10;Cimon incarne la Restauration aristocratique : philo-laconien, respectueux de l&#39;Aréopage, il domine Athènes après la chute de Thémistocle. Restauration canonique (retour de l&#39;ordre conservateur après l&#39;IR), close par son discrédit à Ithome (-462) qui ouvre la Glorieuse Révolution."
+                onclick="showDetail(26)">
+                <span class="material-icons">diamond</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Restauration</span><span class="saillant-figure">Cimon</span><span class="saillant-date">-471</span></div>
+        </div>
+        <div class="saillant-group" style="left:75.5102%;">
+            <div class="saillant-marker" style="background:#D4A017;"
+                data-tooltip="&lt;strong&gt;Glorieuse Révolution&lt;/strong&gt;&#10;Réforme de l&#39;Aréopage (-461)&#10;Éphialtès (-461) dépouille l&#39;Aréopage de ses pouvoirs politiques — le réduisant à une cour d&#39;homicide — et ancre définitivement la démocratie radicale. Dernier organe aristocratique neutralisé : c&#39;est la Glorieuse Révolution qui clôt la RN et ouvre l&#39;ENP (équivalent structurel de 1688)."
+                onclick="showDetail(27)">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="saillant-label"><span class="saillant-title">Glorieuse Révolution</span><span class="saillant-figure">Réforme de l&#39;Aréopage</span><span class="saillant-date">-461</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="legend">
+    <span class="legend-title">Phases :</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#e7e7e7;border:2px solid #A0A0A0;"></span>Pré-féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#e2dcd4;border:2px solid #8B7355;"></span>Féodale</span><span class="legend-item"><span class="legend-swatch" style="background:#cae2d5;border:2px solid #2E8B57;"></span>Oligarchique</span><span class="legend-item"><span class="legend-swatch" style="background:#d9c2ea;border:2px solid #6A0DAD;"></span>Absolutiste</span><span class="legend-item"><span class="legend-swatch" style="background:#f4e7c5;border:2px solid #D4A017;"></span>Révolution Nationale</span><span class="legend-item"><span class="legend-swatch" style="background:#c6e3ff;border:2px solid #1E90FF;"></span>Parlementaire</span><span class="legend-item"><span class="legend-swatch" style="background:#dbdfe3;border:2px solid #708090;"></span>Technocratique</span>
+    <span class="legend-item"><span class="legend-diamond" style="border-radius:50%;"><span class="material-icons" style="font-size:10px;color:#fff;">diamond</span></span>Saillant</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#E67E22;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">open_in_full</span></span>Prolongement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#2980B9;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">bolt</span></span>Accélération</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#c0392b;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">close</span></span>Avortement</span>
+    <span class="legend-item"><span class="legend-diamond" style="background:#8B0000;border-radius:2px;"><span class="material-icons" style="font-size:10px;color:#fff;">restart_alt</span></span>Reboot</span>
+    <span class='legend-item'><span class='legend-swatch' style="background:rgba(130,110,85,0.25);border:1.5px solid rgba(130,110,85,0.40);"></span>Noyau territorial</span><span class='legend-item'><span class='legend-swatch' style="background:rgba(175,165,150,0.13);border:1.5px solid rgba(140,128,115,0.35);"></span>Marges</span>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-panel" id="detailPanel">
+    <div class="detail-panel-header" id="detailHeader"></div>
+    <div class="detail-panel-content" id="detailContent"></div>
+</div>
+
+<div class="footer">
+    Généré par le skill Historionomie — 05/06/2026
+</div>
+
+<script>
+const elements = [{'kind':'phase','type':'phase','phase':'feodale','title':'Phase féodale (atrophiée)','subtitle':'','summary':'La féodale athénienne couvre du synœcisme (~-900) à l\'archontat annuel (-683), durée normale (~217 ans) mais <strong>caractère atrophié</strong> : la royauté ne culmine jamais en pic féodal — elle s\'érode (rois → archontes à vie → décennaux → annuels). Le test discriminant féodal est satisfait au début (pouvoir personnel du basileus, pas d\'administration permanente), mais la trajectoire descend au lieu de monter.','description':'Le palais mycénien de l\'âge du Bronze — ordre palatial du standard géopolitique de son époque — est balayé par l\'effondrement du XIIe siècle ; ce n\'est pas le début de ce Parcours, qui démarre à la reformation des âges obscurs. Sur ce socle, le synœcisme consolide les communautés attiques (Éleusis, Marathon, Brauron, le Tétrapole) sous un basileus athénien paramount, fondant l\'homogénéité culturelle de l\'Attique (moteur 2). Mais à la différence d\'une féodale canonique, aucun pic féodal n\'apparaît : la royauté ne se reconsolide jamais en monarchie forte (pas de David, pas de Salomon), elle se délite en aristocratie collégiale. La densité civique de la polis — territoire compact, conscience civique intense — canalise le pouvoir vers le corps des *genē* eupatrides plutôt que vers un suzerain. C\'est le pattern cité-État du corpus (Florence : pic féodal absent, « cité-État dense » ; Milan : féodale courte) poussé à l\'extrême : ici la royauté ne stagne pas, elle régresse activement. La phase se conclut non par la subordination d\'un roi fort mais par la formalisation de l\'aristocratie déjà victorieuse.','figure':'','confidence':'','alternatives':'','step':'','deviation':'durée dans la norme (~217 ans) mais profil inversé (érosion sans pic)','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Pacte oligarchique — institution de l\'archontat annuel (-683), qui fait du pouvoir une fonction collégiale survivant aux successions. La transition se fait par érosion progressive de la royauté, pas par un acte de subordination d\'un suzerain fort.','resolution_conditions':'Royauté déjà délitée (jamais reconsolidée en monarchie féodale forte), densité civique de la polis qui canalise le pouvoir vers le corps aristocratique des Eupatrides, homogénéité culturelle attique acquise par le synœcisme.','avortement':'','start':-900,'end':-683,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Coagulation des élites','subtitle':'','summary':'Du synœcisme à l\'institution des archontes décennaux. Les *genē* eupatrides se coagulent autour du centre athénien, mais autour d\'un paramount dont l\'autorité s\'effrite plutôt qu\'elle ne se renforce.','description':'La coagulation attique s\'opère par le synœcisme — l\'intégration politique et cultuelle des communautés de l\'Attique sous Athènes, tradition personnifiée par Thésée mais historiquement un processus des âges obscurs. Les grandes familles (les *genē* : Alcméonides, Philaïdes, Étéoboutades, Médontides) se reconnaissent comme aristocratie commune et monopolisent peu à peu les fonctions. Le test discriminant féodal est satisfait : le pouvoir du basileus repose sur sa personne, sans administration permanente. Mais le mouvement de coagulation aboutit non au renforcement du chef mais à son encadrement croissant par le corps aristocratique — la royauté à vie cède la place à des archontes à vie, puis décennaux (-753).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-900,'end':-753,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'feodale','title':'Éveil féodal','subtitle':'Synœcisme de l\'Attique','summary':'Le synœcisme de l\'Attique — consolidation des communautés attiques sous un basileus athénien paramount — satisfait la définition de l\'éveil féodal : premier chef supra-régional dont l\'autorité force les *genē* à se positionner par rapport à un centre. Personnifié par Thésée ; historiquement un processus des âges obscurs.','description':'Avant le synœcisme, l\'Attique est un semis de communautés autonomes (Éleusis avec ses mystères propres, le Tétrapole de Marathon, Brauron) dotées de cultes et d\'élites distincts — percolation élitaire de la pré-féodale. Le synœcisme fait émerger un paramount athénien dont la stature impose aux nobles attiques de se situer par rapport à un centre unique : c\'est l\'éveil féodal au sens strict, le premier chef supra-régional effectif. La tradition l\'attribue à Thésée et le célèbre par les Synoikia ; historiquement, c\'est un processus séculaire des âges obscurs achevé vers le VIIIe siècle. À la différence de l\'éveil israélite (Saül, suivi des pics David et Salomon), celui d\'Athènes n\'engendre aucun pic : la polis dense dissout la paramountcy en aristocratie collective au lieu de la laisser culminer.','figure':'Thésée','confidence':'low','alternatives':'Saillant le plus mou du Parcours, pour deux raisons cumulées. (1) <strong>Pré-documentaire</strong> : Thésée est légendaire, le synœcisme historique est un processus des âges obscurs non datable finement (~-900 par convention) — hedging analogue à Saül (Israël), éveil semi-légendaire connu par la seule tradition. (2) <strong>Structurellement atrophié</strong> : le paramount synœciste ne se consolide jamais en monarchie féodale, d\'où l\'absence de pic féodal et le profil inversé de la phase. L\'identification repose sur le marqueur structurel (premier chef supra-régional consolidant l\'Attique), pas sur une figure attestée.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-900,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'feodale','title':'Bascule oligarchique','subtitle':'','summary':'L\'érosion de la royauté s\'accélère : archontes à vie → décennaux (-753) → annuels (-683). Le corps eupatride absorbe le pouvoir royal sans crise dynastique ouverte — bascule par délitement, non par effondrement.','description':'La bascule oligarchique athénienne ne procède pas d\'une crise féodale terminale (succession disputée, effondrement post-pic) comme dans les Parcours canoniques, mais d\'une érosion continue : la fonction royale est démembrée et collégialisée. Le roi (basileus) est réduit à des attributions religieuses, l\'archonte éponyme prend le pouvoir civil, le polémarque le commandement militaire ; les charges, d\'abord à vie, deviennent décennales (-753) puis annuelles (-683). Chaque étape transfère un peu plus le pouvoir-patrimoine de la personne royale vers le corps fonctionnel des Eupatrides. La bascule s\'achève au Pacte oligarchique (archontat annuel, -683), filé sous la phase oligarchique d\'arrivée.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-753,'end':-683,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'oligarchique','title':'Phase oligarchique','subtitle':'','summary':'Phase oligarchique courte (~89 ans), <strong>comprimée par l\'échelle polis</strong> — la cité-État déroule des cycles rapides. Le test discriminant oligarchique est satisfait : un cadre central collégial existe (archontat, Aréopage, naukrariai), mais l\'exécutif compose avec les *genē*. Se résout par une guerre sociale entre factions eupatrides.','description':'L\'archontat annuel (-683) ouvre une phase oligarchique pleine : le pouvoir est devenu une fonction collégiale annuelle, garantie par le corps des Eupatrides et survivant aux successions. L\'Aréopage — conseil des anciens archontes — concentre la garde des lois. L\'État central se dote de marqueurs : les naukrariai (48 districts navals-fiscaux) fournissent navires et contributions, la codification draconienne (-621) substitue la loi écrite à la vendetta familiale. Mais l\'administration centrale n\'a pas préséance sur les pouvoirs locaux des *genē* : le test discriminant absolutiste reste négatif. La compétition factionnelle eupatride — affaire Cylon (-632), rivalités lignagères, factions régionales en germe — dégénère en guerre sociale, sur fond de crise agraire (endettement, hectémores) qui fournira le levier de la résolution.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-111 ans vs norme — compression caractéristique de l\'échelle cité-État (cycles courts)','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Guerre sociale entre factions eupatrides, résolue par Solon (-594) qui impose un cadre légal central au-dessus des familles (1er monarque absolu institutionnel).','resolution_conditions':'Polarisation factionnelle aiguë (crise Cylon, échec de la codification draconienne), levier populiste disponible (crise de l\'endettement et de l\'esclavage pour dettes), figure tierce dotée de pouvoirs extraordinaires (Solon, archonte-arbitre).','avortement':'','start':-683,'end':-594,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Essor oligarchique','subtitle':'','summary':'L\'archontat annuel institue le cadre oligarchique (Pacte oligarchique). Les naukrariai dotent la cité d\'une flotte et d\'un proto-fisc centralisés. L\'essor est porté par le corps eupatride collégial, sans souverain personnel.','description':'L\'essor oligarchique athénien est porté par un suzerain collectif — le corps des Eupatrides exerçant le pouvoir par rotation annuelle des magistratures et délibération à l\'Aréopage. La cité se dote des marqueurs de la phase : les naukrariai, 48 circonscriptions, lèvent les contributions et arment les navires (proto-fisc + flotte centralisés), tandis que la codification draconienne fixe la loi écrite. C\'est une configuration de suzerain collectif comparable au cas vénitien : l\'absence de monarque individuel n\'invalide pas l\'identification, le Parcours étant porté par le niveau combiné des deux moteurs, pas par un saillant monarchique.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-683,'end':-632,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Pacte oligarchique','subtitle':'Archontat annuel','summary':'L\'institution de l\'archontat annuel (-683) fait du pouvoir une fonction collégiale annuelle garantie par le corps eupatride : passage du pouvoir-patrimoine (royauté personnelle) au pouvoir-fonction qui survit aux successions. Test directionnel décisif satisfait : c\'est le corps des grands qui se subordonne à un cadre, pas le centre qui cède.','description':'L\'aboutissement de l\'érosion royale est la collégialisation complète du pouvoir : neuf archontes annuels (éponyme, basileus, polémarque, six thesmothètes), tirés du corps eupatride, exercent une autorité devenue fonction temporaire et révocable. L\'Aréopage, composé des anciens archontes, en assure la continuité et la garde des lois. Cet acte satisfait la définition du Pacte oligarchique : le pouvoir cesse de dépendre de la personne d\'un suzerain (il survit désormais aux successions par garantie collective) et la transmission/exercice est codifié. Le test directionnel est passé dans sa forme la plus pure — il n\'y a même plus de suzerain à subordonner, l\'aristocratie ayant absorbé intégralement la fonction royale. Configuration de suzerain collectif, parallèle structurel à l\'abolition de la co-régence à Venise (1032).','figure':'','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-683,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'1re armée permanente','subtitle':'Naukrariai','summary':'Les naukrariai — 48 circonscriptions navales-fiscales — constituent l\'équivalent maritime canonique de l\'armée permanente : chacune arme et entretient un navire et lève les contributions afférentes, force de coercition appropriée par le cadre central et indépendante de toute personne fondatrice. Proto-fisc et proto-flotte d\'un seul tenant.','description':'Les naukrariai sont des circonscriptions territoriales (douze par tribu ionienne, soit 48) chargées de fournir chacune un navire et un contingent de cavaliers, et de lever les contributions nécessaires. Elles combinent les deux marqueurs étatiques de l\'essor oligarchique : un proto-fisc central (contributions appropriées par le cadre, non captées par des intermédiaires lignagers) et une force de coercition permanente sous forme de flotte — équivalent canonique de l\'armée permanente pour une nation maritime. Le dispositif est ancré dans une structure administrative durable, indépendante de toute personne, ce qui satisfait le test d\'ancrage institutionnel. C\'est l\'embryon de la thalassocratie qui portera plus tard l\'exutoire impérial.','figure':'','confidence':'low','alternatives':'Datation incertaine (les naukrariai sont parfois rattachées à une réorganisation solonienne ultérieure). Retenue ici comme marqueur de l\'essor oligarchique au titre de l\'équivalent maritime canonique de l\'armée permanente — la flotte. Confidence basse en raison de la rareté des sources archaïques.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-683,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'oligarchique','title':'Guerre sociale','subtitle':'','summary':'Conflit ouvert entre factions eupatrides pour le contrôle du cadre central. L\'affaire Cylon (-632) ouvre la crise, la codification draconienne (-621) échoue à la résoudre, et la guerre se poursuit jusqu\'à l\'arbitrage de Solon. La crise agraire (endettement, esclavage pour dettes) est le <strong>levier</strong>, non l\'enjeu.','description':'La guerre sociale athénienne est, conformément au critère, un conflit entre factions oligarchiques (les *genē* eupatrides) pour le contrôle des magistratures et de l\'État central — pas le conflit riches/pauvres, qui en est le levier mobilisateur. Elle s\'ouvre avec la tentative de tyrannie de Cylon (-632), épisode factionnel qui déclenche en outre la souillure des Alcméonides (meurtre des suppliants) et une vendetta inter-lignages durable. La codification de Dracon (-621) tente d\'imposer un cadre légal au-dessus de la vendetta familiale, mais ne touche pas la racine du conflit (ni la structure factionnelle, ni la crise de l\'endettement) : la guerre sociale se poursuit. La crise agraire — petits paysans endettés, hectémores, esclavage pour dettes — fournit le levier que la figure résolutrice actionnera : libérer le demos pour casser l\'emprise des factions.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-632,'end':-594,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'oligarchique','title':'Guerre sociale','subtitle':'Factions eupatrides','summary':'Conflit entre factions eupatrides pour le contrôle de l\'État central, ouvert par la tentative de tyrannie de Cylon (-632) et la vendetta qui s\'ensuit. <strong>Mode d\'expression</strong> : rivalité lignagère et régionale. <strong>Levier</strong> : la crise de l\'endettement agraire. La codification draconienne (-621) échoue à résoudre — la guerre se prolonge jusqu\'à Solon.','description':'Cylon, vainqueur olympique gendre du tyran mégarien Théagène, tente de s\'emparer de l\'Acropole (-632) ; l\'échec et le massacre de ses partisans suppliants par les Alcméonides déclenchent la « souillure cylonienne » et une vendetta inter-lignages — symptôme de la lutte ouverte entre *genē* pour le contrôle du centre. Dracon (-621) répond par le premier code écrit, qui retire la vengeance du sang aux familles pour la confier à une procédure publique : c\'est une première tentative de cadre central au-dessus des lignages, mais elle laisse intacte la structure factionnelle et la crise agraire, et ne résout donc pas la guerre sociale (preuve par l\'absurde : Athènes est au bord de la révolution en -594, vingt-sept ans plus tard). La crise de l\'endettement — paysans réduits en hectémores, vendus comme esclaves pour dettes — est l\'enjeu social que la figure résolutrice instrumentalisera comme levier populiste, conformément au mécanisme : le 1er monarque absolu s\'appuie sur le demos contre les oligarques.','figure':'Cylon','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-632,'end':-594,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'absolutiste','title':'Phase absolutiste','subtitle':'','summary':'Phase absolutiste <strong>institutionnelle et comprimée</strong> (~84 ans). Le 1er monarque absolu n\'est pas un homme mais la loi écrite intronisée au-dessus des *genē* (*nomos basileus*) : Solon. La séquence absolutisation → acmé → AR se déroule en quatre-vingts ans (compression polis) — Solon fonde le cadre, Pisistrate l\'occupe à son acmé, Hippias en incarne l\'AR.','description':'L\'absolutisation athénienne illustre le caractère <strong>fonctionnel, non monarchique</strong> du 1er monarque absolu : ici c\'est la loi codifiée qui s\'intronise au-dessus des familles. Solon (-594), archonte doté de pouvoirs extraordinaires d\'arbitrage, résout la guerre sociale en imposant un nouveau cadre central qui subordonne les *genē* : société censitaire substituée à la naissance, séisachthéie abolissant l\'esclavage pour dettes (levier populiste), institutions centrales (Boulè, Ecclésia, Héliée). Le test discriminant absolutiste est satisfait au plan fonctionnel : le critère central (loi écrite, cens) prime désormais sur le privilège lignager. La résistance des factions régionales (Plaine, Côte, Montagne) au cadre solonien constitue la Dernière Grande Révolte Oligarchique, écrasée par Pisistrate à Pallène (-546) — qui gouverne ensuite *par* les lois de Solon, confirmant que le cadre était le véritable souverain. Pisistrate incarne l\'acmé absolutiste (âge d\'or pisistratide), Hippias l\'Ancien Régime qui s\'aigrit. L\'absolutisme reste structurellement léger — figure dynastique sans relais bureaucratique profond — conformément au profil de la cité-État trop petite : il sera renversé en deux générations.','figure':'','confidence':'','alternatives':'','step':'','deviation':'-116 ans vs norme — compression polis ; absolutisme léger, sans appareil bureaucratique profond (cité-État trop petite)','typical_duration':'~200 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Éclatement de l\'AR — chute de la tyrannie pisistratide (-510), ouverture de la Révolution Nationale.','resolution_conditions':'Durcissement de l\'Ancien Régime sous Hippias après l\'assassinat d\'Hipparque (-514), convergence du bloc contestataire (aristocrates exilés type Alcméonides + demos), intervention spartiate.','avortement':'','start':-594,'end':-510,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Absolutisation','subtitle':'','summary':'Solon (-594) impose le cadre légal central — *nomos basileus*. La résistance des factions régionales eupatrides (DGRO) se prolonge jusqu\'à son écrasement par Pisistrate à Pallène (-546), qui clôt l\'absolutisation.','description':'L\'absolutisation procède par l\'intronisation de la loi écrite au-dessus des *genē*. Solon démantèle l\'emprise des familles par trois mouvements : la séisachthéie (abolition de l\'esclavage pour dettes) brise le levier économique des Eupatrides sur le demos ; la réforme censitaire (quatre classes selon la richesse) substitue un critère central au privilège de naissance ; les institutions soloniennes (Boulè des Quatre-Cents, Ecclésia, Héliée) créent des organes au-dessus de l\'Aréopage aristocratique. Mais le règlement solonien est contesté : les factions régionales reprennent la lutte, et c\'est Pisistrate qui, après deux expulsions, écrase la coalition aristocratique à Pallène (-546) — DGRO canonique, postérieure de quarante-huit ans au 1er monarque absolu, dont l\'écrasement clôt l\'absolutisation.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-594,'end':-546,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'1er monarque absolu','subtitle':'Nomos basileus','summary':'Solon résout la guerre sociale en imposant un cadre légal central au-dessus des *genē* — le 1er monarque absolu est ici une institution, la loi écrite (*nomos basileus*). Il satisfait les deux critères : le conflit factionnel est tranché par l\'arbitrage, et un nouveau cadre subordonne les anciennes élites (cens contre naissance, institutions centrales). Levier populiste : la séisachthéie.','description':'Élu archonte avec des pouvoirs extraordinaires de législateur-arbitre (-594), Solon aurait pu se faire tyran ; il choisit d\'introniser la loi à sa place. La séisachthéie annule les dettes et abolit l\'esclavage pour dettes — geste populiste classique de l\'absolutiste qui libère le demos pour briser l\'emprise des oligarques. La réforme censitaire (pentacosiomédimnes, chevaliers, zeugites, thètes) substitue la richesse mesurée à la naissance comme critère d\'accès aux charges, subordonnant le privilège lignager à un critère central. Les institutions soloniennes (Boulè, Ecclésia, Héliée) instituent des organes au-dessus de l\'Aréopage. Que Pisistrate, devenu maître de la cité, ait gouverné *en conservant les lois de Solon* (Aristote, *Constitution d\'Athènes* ; Thucydide) est la preuve décisive que le cadre solonien était le souverain effectif : *nomos basileus*, « la loi est roi ». Parallèle weberien/institutionnel avec les 1ers MA non monarchiques du corpus (Venise, Israël hasmonéen).','figure':'Solon','confidence':'medium','alternatives':'Lecture institutionnelle du 1er MA (cf. Venise / Inquisiteurs d\'État, Israël / Simon Thassi sans royauté). Solon, et non Dracon : Dracon (-621) ne résout pas la guerre sociale (la crise agraire explose après lui, exigeant Solon), il appartient donc à la GS. Solon, et non Pisistrate : Pisistrate gouverne *par* les lois de Solon, preuve que le cadre fondateur est solonien et que Pisistrate en est l\'acmé, non le fondateur. Point ouvert : Solon refuse le pouvoir permanent et son règlement vacille (lecture B : Pisistrate seul stabilise) — mais la préservation des lois soloniennes par Pisistrate tranche pour Solon.','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-594,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Dernière grande révolte oligarchique','subtitle':'Bataille de Pallène','summary':'Les factions régionales eupatrides (Plaine de Lycurgue, Côte de Mégaclès) résistent au cadre solonien et expulsent deux fois Pisistrate, avant d\'être écrasées à Pallène (-546). DGRO canonique — postérieure de ~48 ans au 1er MA (Solon -594), son écrasement clôt l\'absolutisation et ouvre l\'acmé.','description':'Après le règlement solonien, la lutte oligarchique reprend sous la forme des trois factions régionales : la Plaine (Pédieis, aristocrates fonciers, Lycurgue), la Côte (Paraloi, Alcméonides de Mégaclès), la Montagne (Diakrioi, base de Pisistrate). Pisistrate, leader de la Montagne et héraut du demos, prend le pouvoir mais en est chassé deux fois par la coalition des deux autres factions — sursauts oligarchiques contre l\'homme qui consolide le cadre central. Sa victoire définitive à Pallène (-546) écrase cette résistance : c\'est la Dernière Grande Révolte Oligarchique, située à ~48 ans du 1er monarque absolu (Solon, -594), dans la fenêtre canonique des 30-50 ans. Son écrasement marque la fin de l\'absolutisation et l\'ancrage du régime. La distinction GS/DGRO est ici décisive : la lutte factionnelle *après* le 1er MA est une DGRO, pas un prolongement de la guerre sociale.','figure':'Pisistrate','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-546,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Impérialisme absolutiste','subtitle':'','summary':'L\'âge d\'or pisistratide — Acmé absolutiste. Pisistrate règne fermement par les lois de Solon, redistribue, lance de grands travaux et porte le prestige de la cité à son sommet.','description':'Une fois la DGRO écrasée, Pisistrate déploie l\'acmé : il gouverne par les lois soloniennes tout en plaçant ses hommes aux postes clés, redistribue des terres confisquées aux aristocrates exilés, instaure des juges itinérants, frappe les célèbres « chouettes » d\'argent (mines du Laurion), amplifie les Panathénées et les Dionysies, lance un programme de grands travaux. La prospérité et le rayonnement culturel (édition des poèmes homériques) font de cette période l\'apogée du régime absolutiste athénien — acmé personnelle du souverain combinée au prestige maximal de la cité.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-546,'end':-514,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'absolutiste','title':'Acmé absolutiste','subtitle':'Pisistrate','summary':'Pisistrate incarne l\'acmé absolutiste : prestige maximal, domestication des élites, prospérité. Il gouverne *par* les lois de Solon — un tyran qui préserve le cadre légal, signe que le cadre était le souverain et que Pisistrate en est l\'apogée, non le fondateur.','description':'Le règne de Pisistrate (-546 à -527, puis ses fils) satisfait la définition de l\'acmé absolutiste : prestige monumental et culturel maximal, domestication complète des factions (aristocrates rivaux exilés, leurs terres redistribuées), monopole de fait du pouvoir exercé sans renverser les institutions. Les chouettes d\'argent du Laurion, les grands travaux sur l\'Acropole, l\'amplification des fêtes civiques, l\'accueil des poètes : tout concourt au rayonnement. Le point structurellement décisif est que Pisistrate conserve les lois de Solon et les magistratures régulières (Aristote souligne qu\'il administra « constitutionnellement plutôt que tyranniquement ») — l\'acmé opère *dans* le cadre du fondateur, ce qui confirme l\'identification de Solon comme 1er MA et de Pisistrate comme acmé.','figure':'Pisistrate','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-540,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'absolutiste','title':'Ancien Régime','subtitle':'','summary':'Hippias incarne l\'AR qui s\'aigrit : après l\'assassinat d\'Hipparque (-514), la tyrannie se durcit (taxes, exécutions, exils), faisant converger aristocrates exilés et demos contre le bloc régnant. AR très court — la cité-État trop petite n\'a pas la profondeur fiscale d\'une saturation canonique.','description':'L\'Ancien Régime athénien est bref et sans Saturation fiscale canonique : la cité-État trop petite n\'a pas la machine d\'extraction qu\'une saturation supposerait. Le basculement est politique : l\'assassinat d\'Hipparque par les tyrannoctones Harmodios et Aristogiton (-514) durcit le régime d\'Hippias, qui multiplie taxes, exécutions et exils. Le durcissement fait converger le bloc contestataire selon le mécanisme classique de l\'AR : aristocrates exilés (Alcméonides, position ED réactionnaire vis-à-vis du bloc tyrannique) et demos chafing convergent contre les Pisistratides. Cette convergence ED + demos prépare l\'éclatement, qui surviendra avec l\'appui spartiate.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-514,'end':-510,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'rn','title':'Révolution Nationale','subtitle':'','summary':'RN <strong>complète et canonique</strong> (~49 ans, dans la norme) déroulant les sept saillants. Particularité : l\'Impérialiste Revanchard est <strong>Thémistocle</strong> (Salamine, exil perse — arc napoléonien), et la Restauration est l\'ascendant aristocratique de <strong>Cimon</strong>. La Glorieuse Révolution (Éphialtès, -461) débouche sur la seule ENP antique du corpus.','description':'La RN athénienne est la première du corpus à dérouler la séquence canonique entière dans une cité antique. La révolution initiale (chute d\'Hippias -510, Clisthène -508, insurrection de -508, démocratie modérée clisthénienne) installe le cadre représentatif. L\'Émergence de l\'IR est portée par Thémistocle, dont l\'arc épouse l\'archétype jusqu\'au bout : il sauve la cité à Salamine (-480), projette la revanche anti-perse (Ligue de Délos), puis tombe — ostracisé (-471), il meurt en exil à la cour de Perse, parallèle exact de Sainte-Hélène. La chute de l\'IR ouvre la Restauration aristocratique de Cimon (-471/-461), philo-laconien et respectueux de l\'Aréopage. La Glorieuse Révolution est la réforme d\'Éphialtès (-461) qui, profitant du discrédit de Cimon (éconduit par Sparte à Ithome), dépouille l\'Aréopage de ses pouvoirs politiques et ancre définitivement la démocratie radicale. Les guerres médiques fonctionnent comme la substance de l\'impérialisme revanchard (Salamine = la revanche), non comme une interruption.','figure':'','confidence':'','alternatives':'','step':'','deviation':'dans la norme (~49 ans)','typical_duration':'~25-80 ans','perturbation_type':'','affected_motor':'','note':'','resolution':'Glorieuse Révolution — réforme d\'Éphialtès (-461) qui dépouille l\'Aréopage et ancre définitivement la démocratie, ouvrant l\'ENP.','resolution_conditions':'Épuisement de la restauration aristocratique (Cimon discrédité à Ithome), maturation de la base sociale radicale (poids des thètes acquis par la marine après Salamine), réforme institutionnelle décisive (transfert des pouvoirs de l\'Aréopage).','avortement':'','start':-510,'end':-461,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Révolution initiale','subtitle':'','summary':'De la chute d\'Hippias (-510) à l\'émergence de Thémistocle. Éclatement, Expérience parlementaire (Clisthène), Phase aiguë (insurrection de -508) et Moment thermidorien (démocratie modérée clisthénienne) s\'enchaînent en une dizaine d\'années — séquence compressée typique d\'une polis.','description':'La révolution initiale athénienne télescope ses quatre saillants autour du drame de -508. La chute d\'Hippias (-510, avec appui spartiate) est l\'Éclatement de l\'AR. S\'ensuit la rivalité constitutionnelle entre Isagoras (aristocrate) et Clisthène, qui « prend le demos dans son parti » et propose la réforme démocratique : Expérience parlementaire. Isagoras riposte en appelant Cléomène de Sparte ; le demos se soulève, assiège l\'Acropole, expulse Isagoras et les Spartiates et met à mort ses partisans capturés : Phase aiguë (violence du camp révolutionnaire contre la contre-révolution oligarchique). Clisthène rappelé promulgue et institutionnalise alors la réforme (dèmes, dix tribus artificielles, Boulè des Cinq-Cents, ostracisme), posant une démocratie modérée où l\'Aréopage subsiste : Moment thermidorien (refroidissement et stabilisation).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-510,'end':-483,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Éclatement de l\'AR','subtitle':'Chute d\'Hippias','summary':'La chute de la tyrannie pisistratide (-510), précipitée par le durcissement post-514 et l\'intervention spartiate de Cléomène, ouvre la Révolution Nationale. L\'ordre absolutiste s\'effondre.','description':'Le durcissement d\'Hippias après l\'assassinat d\'Hipparque (-514) a fait converger le bloc contestataire. Les Alcméonides exilés financent la reconstruction du temple de Delphes et obtiennent l\'appui de l\'oracle, qui presse Sparte d\'intervenir. Cléomène marche sur l\'Attique, assiège les Pisistratides sur l\'Acropole et obtient la reddition d\'Hippias, qui part en exil (-510, il finira lui aussi à la cour de Perse, guidant les Perses à Marathon). C\'est l\'Éclatement de l\'AR : effondrement de l\'ordre absolutiste et ouverture de la phase révolutionnaire.','figure':'Hippias','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-510,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Expérience parlementaire','subtitle':'Clisthène','summary':'Clisthène « prend le demos dans son parti » et propose la restructuration représentative du pouvoir — dèmes, dix tribus recomposées brisant les solidarités claniques, Boulè des Cinq-Cents, ostracisme. Probablement l\'Expérience parlementaire la plus pure du corpus : elle fonde littéralement le cadre démocratique.','description':'Après la chute d\'Hippias, Clisthène l\'Alcméonide affronte Isagoras pour définir le nouvel ordre. Battu dans les magistratures, il « prend le demos dans son parti » (Hérodote) et propose une refondation : découpage de l\'Attique en dèmes, recomposition du corps civique en dix tribus artificielles mêlant cité, côte et intérieur (briser les solidarités lignagères et régionales — homogénéisation civique délibérée, moteur 2 à l\'état pur), Boulè des Cinq-Cents tirée au sort, ostracisme comme garde-fou anti-tyrannique. C\'est la tentative caractéristique de restructuration représentative du pouvoir — et, à la différence des Expériences parlementaires avortées d\'autres Parcours, elle réussit et devient le socle durable de la démocratie.','figure':'Clisthène','confidence':'high','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-508,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Phase aiguë','subtitle':'Insurrection contre Isagoras','summary':'Insurrection populaire de -508 : Isagoras, appuyé par Cléomène de Sparte, tente d\'instaurer une oligarchie étroite ; le demos se soulève, assiège l\'Acropole, expulse les Spartiates et <strong>exécute les partisans capturés</strong>. Violence offensive du camp révolutionnaire contre la contre-révolution oligarchique — polarité de phase aiguë.','description':'Isagoras, devenu archonte, appelle Cléomène pour dissoudre la Boulè et installer une oligarchie de trois cents partisans. La Boulè résiste ; le demos se soulève, assiège Isagoras et les Spartiates sur l\'Acropole, les contraint à capituler au bout de deux jours, et met à mort les partisans capturés. Le marqueur de phase aiguë est satisfait par la <strong>polarité</strong> de la violence : c\'est le camp révolutionnaire (le demos) qui frappe et exécute les contre-révolutionnaires oligarchiques, et le compromis oligarchique d\'Isagoras s\'effondre. La violence est offensive et populaire — à distinguer du Moment thermidorien qui suit (refroidissement et institutionnalisation). La phase aiguë s\'intercale entre la proposition de Clisthène et sa promulgation.','figure':'Isagoras','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-508,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Moment thermidorien','subtitle':'Démocratie modérée','summary':'Clisthène rappelé promulgue et institutionnalise la réforme, faisant retomber la fièvre insurrectionnelle dans un cadre stable — démocratie modérée où l\'Aréopage subsiste. Refroidissement et retour aux affaires après la violence de -508.','description':'Après l\'expulsion d\'Isagoras, Clisthène est rappelé et procède à la promulgation effective et à l\'institutionnalisation de ses réformes. La fièvre insurrectionnelle retombe dans un cadre légal stable : la démocratie clisthénienne est modérée — l\'Aréopage conserve la garde des lois et un poids aristocratique, les magistratures restent réservées aux classes supérieures. C\'est le Moment thermidorien : non un reflux réactionnaire, mais le refroidissement et la stabilisation institutionnelle qui closent la révolution initiale. Le jeune régime affronte aussitôt (et repousse) la triple invasion de Sparte, Béotie et Chalcis (-506), épreuve qui consolide la cohésion civique.','figure':'Clisthène','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-507,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Impérialisme revanchard','subtitle':'','summary':'Thémistocle émerge comme IR : programme naval (-483), victoire de Salamine (-480), revanche anti-perse et fondation de la Ligue de Délos (-478). Les guerres médiques sont la substance de la sous-phase, pas une interruption.','description':'Thémistocle incarne l\'Impérialiste Revanchard athénien. Son programme naval (-483, financé par l\'argent du Laurion) dote Athènes de deux cents trières et empower les thètes (rameurs), forgeant la base sociale de la démocratie radicale à venir. La victoire de Salamine (-480) sauve la cité et fonde sa puissance ; la Ligue de Délos (-478) institutionnalise la revanche anti-perse en hégémonie maritime. L\'IR athénien rétablit l\'ordre dans le chaos et projette la nation au-dehors — définition canonique. La sous-phase, prolongée par l\'exutoire impérial naissant, se clôt à la chute de l\'IR (ostracisme de Thémistocle, -471).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-483,'end':-471,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Émergence de l\'IR','subtitle':'Salamine et l\'exil perse','summary':'Thémistocle sauve la cité à Salamine (-480), projette la revanche anti-perse (flotte, Ligue de Délos), puis tombe — ostracisé en -471, il meurt en exil à la cour de Perse. Arc d\'IR canonique jusqu\'au bout (parallèle napoléonien). La fonction IR est ici personnelle, non collectivisée.','description':'Thémistocle, archonte dès -493, impose le programme naval de -483 contre l\'avis des partisans de l\'infanterie hoplitique, transformant Athènes en puissance maritime. Sa victoire de Salamine (-480) brise l\'invasion de Xerxès et fonde l\'hégémonie athénienne ; la Ligue de Délos (-478) en est l\'instrument revanchard, explicitement dirigé contre la Perse. Il fortifie Athènes et le Pirée malgré l\'opposition spartiate. Puis l\'arc d\'IR se referme : ostracisé vers -471, accusé de médisme, il fuit et finit — ironie suprême pour le vainqueur de Salamine — gouverneur au service du Grand Roi perse, où il meurt (~-459). Le parallèle avec l\'exil de Napoléon est exact : l\'IR qui sauve et projette la nation finit brisé et exilé chez l\'ancien ennemi. C\'est cet arc, absent chez Périclès, qui désigne Thémistocle comme l\'IR athénien.','figure':'Thémistocle','confidence':'medium','alternatives':'Thémistocle, et non Périclès. Argument décisif : l\'arc de chute. L\'IR finit brisé (Cromwell exhumé, Napoléon exilé) ; Thémistocle est ostracisé (-471) et meurt en exil à la cour de Perse — parallèle Sainte-Hélène exact. Périclès meurt au pouvoir, adulé, de la peste : aucun arc de chute, il est l\'apogée de l\'ENP, pas l\'IR. Ce choix résout aussi l\'ordre des saillants (un IR placé en -461 entrerait en collision avec la Glorieuse Révolution d\'Éphialtès).','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-483,'end':null,'start_approx':false,'end_approx':false},{'kind':'subphase','type':'subphase','phase':'rn','title':'Restauration','subtitle':'','summary':'Après la chute de Thémistocle, l\'ordre aristocratique-conservateur revient sous Cimon (-471/-461) : philo-laconien, respectueux de l\'Aréopage, il domine la cité. La Restauration s\'effondre quand Cimon est discrédité (éconduit par Sparte à Ithome).','description':'La chute de l\'IR ouvre la Restauration — retour de l\'ordre conservateur après la séquence revancharde. Cimon, fils de Miltiade, aristocrate philo-laconien, domine Athènes : il poursuit la guerre contre la Perse (Eurymédon, ~-466) mais respecte l\'Aréopage et l\'ordre aristocratique intérieur, et cultive l\'alliance spartiate. La transition vers la Glorieuse Révolution est historiquement serrée : quand Cimon conduit un corps athénien secourir Sparte révoltée à Ithome (-462) et qu\'il est éconduit, il rentre discrédité — fenêtre que saisissent les radicaux. La Restauration s\'effondre avec le crédit de son chef.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-471,'end':-461,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Restauration','subtitle':'Cimon','summary':'Cimon incarne la Restauration aristocratique : philo-laconien, respectueux de l\'Aréopage, il domine Athènes après la chute de Thémistocle. Restauration canonique (retour de l\'ordre conservateur après l\'IR), close par son discrédit à Ithome (-462) qui ouvre la Glorieuse Révolution.','description':'Cimon est le chef de la Restauration athénienne : conservateur, aristocrate, partisan de l\'entente avec Sparte, il préside un ordre intérieur qui préserve l\'Aréopage et le poids des grandes familles, tout en menant à l\'extérieur la guerre contre la Perse (victoire de l\'Eurymédon, ~-466). Sa domination correspond à la sous-phase de Restauration : retour de l\'ordre conservateur après l\'épisode revanchard de l\'IR. Mais sa politique philo-laconienne le perd : conduisant un contingent athénien au secours de Sparte assiégeant les hilotes révoltés à Ithome (-462), il est humilié par le renvoi spartiate. Rentré discrédité, il ne peut empêcher la réforme d\'Éphialtès et est ostracisé (-461). La Restauration s\'achève à la Glorieuse Révolution.','figure':'Cimon','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-471,'end':null,'start_approx':false,'end_approx':false},{'kind':'saillant','type':'saillant','phase':'rn','title':'Glorieuse Révolution','subtitle':'Réforme de l\'Aréopage','summary':'Éphialtès (-461) dépouille l\'Aréopage de ses pouvoirs politiques — le réduisant à une cour d\'homicide — et ancre définitivement la démocratie radicale. Dernier organe aristocratique neutralisé : c\'est la Glorieuse Révolution qui clôt la RN et ouvre l\'ENP (équivalent structurel de 1688).','description':'Profitant du discrédit de Cimon, Éphialtès fait voter le transfert des pouvoirs politiques de l\'Aréopage (la garde des lois, le contrôle des magistrats) à la Boulè, à l\'Ecclésia et à l\'Héliée populaire, ne lui laissant que la juridiction d\'homicide. C\'est la neutralisation du dernier bastion aristocratique du cadre clisthénien modéré, et l\'ancrage définitif de la démocratie radicale — la chambre populaire devient source ultime du pouvoir. Éphialtès est assassiné peu après, mais sa réforme tient : elle ouvre l\'État-nation parlementaire athénien. C\'est la Glorieuse Révolution au sens canonique — l\'événement qui clôt la RN en ancrant durablement le régime populaire, équivalent structurel de 1688 anglais.','figure':'Éphialtès','confidence':'medium','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-461,'end':null,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'rn','title':'Guerres médiques','subtitle':'','summary':'Choc exogène / prolongement (territorial: false) : Marathon (-490) puis Salamine et Platées (-480/-479). Guerre existentielle gagnée par l\'IR Thémistocle — elle ne détruit rien, elle fonde la puissance navale et lance l\'exutoire impérial (Ligue de Délos), portant l\'impérialisme revanchard.','description':'Les deux invasions perses (Darius -490, Xerxès -480/-479) constituent un choc exogène dont l\'effet est un prolongement, pas un reboot : aucune institution athénienne n\'est détruite (Athènes est évacuée et brûlée en -480, mais reconstruite victorieuse). La guerre est la substance même de l\'impérialisme revanchard — Salamine *est* la revanche anti-perse que portera la Ligue de Délos. Surtout, la mobilisation navale empower durablement les thètes (rameurs), forgeant la base sociale qui rendra possible la radicalisation démocratique d\'Éphialtès une génération plus tard. Le choc alimente donc le Parcours au lieu de l\'interrompre.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'Construction de l\'État central (essor de la thalassocratie + base sociale radicale)','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-490,'end':-479,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'rn','title':'Ligue de Délos','subtitle':'','summary':'Choc d\'hétérogénéité / prolongement : l\'alliance anti-perse se mue en empire maritime tributaire (archè). Exutoire impérial qui prolonge l\'ENP à venir — le tribut (phoros) finance la démocratie radicale et la flotte. Parallèle structurel au Stato da Màr vénitien.','description':'Fondée en -478 comme alliance volontaire contre la Perse, la Ligue de Délos se transforme progressivement en empire athénien : les cités alliées passent du statut de partenaires fournissant des navires à celui de tributaires versant le phoros, les révoltes (Naxos -470, Thasos -465) sont réprimées, et le trésor est transféré de Délos à Athènes (-454). C\'est un exutoire au sens du corpus — projection extérieure qui prolonge la phase — structurellement parallèle au Stato da Màr vénitien (choc d\'hétérogénéité / prolongement). Le tribut finance la démocratie radicale (misthos, indemnités), la flotte et les grands travaux : l\'empire soutient l\'ENP de l\'intérieur. Son épuisement militaire (-404) déclenchera la séquence terminale.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-478,'end':-454,'start_approx':false,'end_approx':false},{'kind':'phase','type':'phase','phase':'parlementaire','title':'Phase parlementaire (État-nation parlementaire)','subtitle':'','summary':'La seule phase parlementaire de l\'Antiquité dans le corpus. L\'Ecclésia est souveraine, l\'administration subordonnée, le régime stable ~140 ans. Apogée sous Périclès. L\'empire (exutoire) la soutient ; deux putschs oligarchiques (Quatre-Cents -411, Trente -404) la testent et sont réabsorbés. Avortée par la conquête macédonienne (-322), non par dégénérescence endogène.','description':'La réforme d\'Éphialtès (-461) inaugure l\'État-nation parlementaire athénien : l\'Ecclésia (assemblée du demos) est la source ultime du pouvoir, la Boulè et l\'Héliée populaire encadrent une administration subordonnée, et le régime se stabilise pour quelque cent quarante ans. L\'apogée est périclèenne : Périclès, réélu stratège sans interruption, porte la cité à son zénith culturel (Parthénon) et impérial — « en théorie une démocratie, en fait le gouvernement du premier citoyen » (Thucydide), mais sans arc de chute : il meurt au pouvoir, de la peste (-429). Il est l\'apogée de l\'ENP, non un IR. L\'empire (exutoire) soutient le régime ; la guerre du Péloponnèse l\'éprouve (désastre de Sicile -413), et deux putschs oligarchiques — les Quatre-Cents (-411) et les Trente (-404) — tentent de le renverser. Tous deux échouent et sont réabsorbés (restauration démocratique de -403, amnistie), preuve de la robustesse de l\'ENP. La phase ne se clôt pas par dégénérescence interne (on ne verra jamais à quoi ressemble la sénescence d\'une ENP antique) : elle est avortée de l\'extérieur par la conquête macédonienne.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'très longue','perturbation_type':'','affected_motor':'','note':'','resolution':'AVORTÉE par choc exogène — la guerre lamiaque (-322) voit Antipatros abolir la démocratie souveraine. L\'ENP est tuée de l\'extérieur avant tout terme endogène (jamais de dégénérescence technocratique observée).','resolution_conditions':'Non atteintes endogènement. La phase parlementaire, censée être très longue et ne se clore que par dégénérescence interne, est interrompue par la conquête macédonienne.','avortement':'','start':-461,'end':-322,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Désastre de Sicile','subtitle':'','summary':'Choc exogène / accélération : l\'expédition de Sicile (-415/-413) s\'achève par l\'anéantissement de la flotte et de l\'armée athéniennes à Syracuse. Amorce du démantèlement de l\'exutoire impérial et de la crise finale de la guerre du Péloponnèse.','description':'L\'expédition de Sicile, lancée en -415 sur l\'impulsion d\'Alcibiade pour étendre l\'empire à l\'ouest, tourne à la catastrophe : la flotte et le corps expéditionnaire sont anéantis à Syracuse (-413), des milliers de prisonniers périssent dans les latomies. Le choc exogène accélère la crise de l\'ENP : il entame mortellement l\'exutoire impérial, encourage les révoltes alliées et l\'intervention perse, et ouvre la phase finale de la guerre du Péloponnèse. C\'est le premier des coups qui mèneront à la défaite de -404.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-415,'end':-413,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Aigos-Potamos','subtitle':'','summary':'Correction d\'échelle / accélération : la défaite navale d\'Aigos-Potamos (-405) et la capitulation de -404 liquident l\'empire (fin de l\'exutoire). Sparte impose les Trente Tyrans — restauration exogène avortée, écrasée par Thrasybule, démocratie restaurée en -403.','description':'La destruction de la flotte athénienne à Aigos-Potamos (-405) par Lysandre force la capitulation de -404 : Athènes perd son empire (fin de l\'exutoire), ses Longs Murs sont abattus. Sparte impose les Trente Tyrans — oligarchie étroite (trente + trois mille) sous garnison spartiate, taillée pour empêcher le retour démocratique : c\'est une <strong>restauration exogène</strong> au sens canonique (occupation par puissance extérieure, coalition restreinte, sans roman national propre), mais <strong>avortée</strong> — Thrasybule, parti de Phylé et du Pirée, l\'écrase en huit mois, et la démocratie est restaurée en -403 avec une amnistie (*mē mnēsikakein*). Distinction importante : cette restauration exogène est une perturbation d\'époque ENP réabsorbée, et non la Restauration de la RN (qui est l\'épisode Cimon, -471/-461). L\'ENP encaisse deux putschs et les recrache — preuve de sa complétude.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-405,'end':-403,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Chéronée','subtitle':'','summary':'Choc exogène / accélération : la défaite de Chéronée (-338) face à Philippe II établit l\'hégémonie macédonienne. L\'ENP survit (Philippe laisse à Athènes sa démocratie interne), mais perd son autonomie diplomatique — accélération vers la fin.','description':'La bataille de Chéronée (-338), où Philippe II de Macédoine écrase la coalition gréco-athénienne, établit l\'hégémonie macédonienne sur la Grèce. Distinction décisive avec -322 : Chéronée ne tue <strong>pas</strong> l\'ENP — Philippe puis Alexandre laissent à Athènes sa démocratie et son autonomie interne, ne lui retirant que la liberté de sa politique étrangère. C\'est une perturbation (perte d\'autonomie diplomatique, fin de l\'exutoire militaire) qui accélère la trajectoire vers l\'avortement, mais l\'Ecclésia continue de gouverner la cité.','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-338,'end':null,'start_approx':false,'end_approx':false},{'kind':'perturbation','type':'perturbation','phase':'parlementaire','title':'Guerre lamiaque','subtitle':'','summary':'Choc exogène / avortement : à l\'issue de la guerre lamiaque (-323/-322), Antipatros abolit la démocratie souveraine, impose un régime censitaire et une garnison à Munychie. C\'est l\'avortement de l\'ENP — tuée de l\'extérieur avant tout terme endogène. Le Parcours actif s\'arrête ici.','description':'À la mort d\'Alexandre (-323), Athènes mène la révolte grecque (guerre lamiaque) pour secouer la tutelle macédonienne. La défaite (Crannon, -322) permet à Antipatros d\'abolir la démocratie souveraine : régime censitaire excluant les thètes, garnison macédonienne à Munychie, exil de Démosthène et des chefs démocrates. C\'est l\'avortement de l\'ENP — la phase parlementaire, qui devait être très longue et ne se clore que par dégénérescence interne (technocratie → dominat), est interrompue de l\'extérieur. Le Parcours <strong>actif</strong> d\'Athènes s\'arrête ici, mais le Parcours lui-même ne s\'éteint pas : la cité demeure un sujet culturel distinct (centre intellectuel du monde grec puis romain), gelée sous tutelle hellénistique puis romaine, jusqu\'à sa fusion graduelle dans le Parcours hellénistique-romain — dissolution sans date nette, marqueur conventionnel ~-86 (sac de Sylla).','figure':'','confidence':'','alternatives':'','step':'','deviation':'','typical_duration':'','perturbation_type':'','affected_motor':'Construction de l\'État central (abolition de la souveraineté démocratique)','note':'','resolution':'','resolution_conditions':'','avortement':'','start':-323,'end':-322,'start_approx':false,'end_approx':false}];
+
+const phaseColors = {
+    'feodale':'#8B7355','oligarchique':'#2E8B57','absolutiste':'#6A0DAD',
+    'rn':'#D4A017','parlementaire':'#1E90FF','technocratique':'#708090'
+};
+const phaseLabels = {
+    'feodale':'Féodale','oligarchique':'Oligarchique','absolutiste':'Absolutiste',
+    'rn':'Révolution Nationale','parlementaire':'Parlementaire','technocratique':'Technocratique'
+};
+const kindLabels = {
+    'phase':'Phase','subphase':'Sous-phase','saillant':'Saillant','perturbation':'Perturbation'
+};
+
+// Tooltip
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+        tooltip.innerHTML = el.getAttribute('data-tooltip').replace(/\n/g, '<br>');
+        tooltip.style.display = 'block';
+    });
+    el.addEventListener('mousemove', e => {
+        let x = e.clientX + 15, y = e.clientY + 15;
+        if (x + 360 > window.innerWidth) x = e.clientX - 360;
+        if (y + 100 > window.innerHeight) y = e.clientY - 110;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+});
+
+// Layout saillants: measure real label widths and assign rows to avoid overlap
+(function layoutSaillants() {
+    const ROW_HEIGHT = 90;
+    const MAX_ROWS = 9;
+    const BASE_TOP = 270;
+    const MARGIN = 6; // px of horizontal breathing room between labels
+
+    const groups = Array.from(document.querySelectorAll('.saillant-group'));
+    if (!groups.length) return;
+
+    // Sort by left position (already sorted in HTML, but be safe)
+    groups.sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left));
+
+    // For each saillant, compute the horizontal extent of its label
+    // relative to the timeline container
+    const container = groups[0].parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    const extents = groups.map(g => {
+        const label = g.querySelector('.saillant-label');
+        const marker = g.querySelector('.saillant-marker');
+        // Use the wider of label vs marker for the horizontal footprint
+        const labelRect = label.getBoundingClientRect();
+        const markerRect = marker.getBoundingClientRect();
+        const left = Math.min(labelRect.left, markerRect.left) - containerRect.left;
+        const right = Math.max(labelRect.right, markerRect.right) - containerRect.left;
+        return { left: left - MARGIN, right: right + MARGIN };
+    });
+
+    // Greedy row assignment: for each saillant, find the lowest row
+    // where it doesn't overlap with any already-placed saillant
+    const rows = [];
+    const rowExtents = [];
+
+    for (let i = 0; i < groups.length; i++) {
+        const ext = extents[i];
+        let row = 0;
+        while (row < MAX_ROWS - 1) {
+            const occupied = rowExtents[row] || [];
+            const conflict = occupied.some(o => !(ext.right < o.left || ext.left > o.right));
+            if (!conflict) break;
+            row++;
+        }
+        rows.push(row);
+        if (!rowExtents[row]) rowExtents[row] = [];
+        rowExtents[row].push(ext);
+    }
+
+    // Apply positions
+    for (let i = 0; i < groups.length; i++) {
+        groups[i].style.top = (BASE_TOP + rows[i] * ROW_HEIGHT) + 'px';
+    }
+
+    // Adjust timeline container min-height to fit all rows
+    const maxRow = Math.max(...rows);
+    const neededHeight = BASE_TOP + (maxRow + 1) * ROW_HEIGHT + 120;
+    const current = parseInt(getComputedStyle(container).minHeight) || 0;
+    if (neededHeight > current) {
+        container.style.minHeight = neededHeight + 'px';
+    }
+})();
+
+// Detail panel
+function formatYear(yr, approx) {
+    if (yr === null) return '?';
+    let p = approx ? '~' : '';
+    if (yr < 0) return p + '-' + Math.abs(yr);
+    return p + yr;
+}
+
+function showDetail(idx) {
+    const e = elements[idx];
+    const panel = document.getElementById('detailPanel');
+    const overlay = document.getElementById('detailOverlay');
+    const content = document.getElementById('detailContent');
+
+    const color = phaseColors[e.phase] || '#666';
+    const kindLabel = kindLabels[e.kind] || e.kind;
+    const phaseLabel = phaseLabels[e.phase] || e.phase;
+
+    let confClass = 'confidence-high';
+    if (e.confidence === 'medium') confClass = 'confidence-medium';
+    if (e.confidence === 'low') confClass = 'confidence-low';
+    const confLabel = e.confidence === 'high' ? 'Haute' : e.confidence === 'medium' ? 'Moyenne' : e.confidence === 'low' ? 'Basse' : '';
+
+    let dates = formatYear(e.start, e.start_approx);
+    if (e.end !== null) dates += ' — ' + formatYear(e.end, e.end_approx);
+    else if (e.kind === 'phase') dates += ' — en cours';
+
+    // Figure portrait images (Wikimedia Commons, public domain)
+    const figureImages = {
+        // France
+        'Louis VI le Gros': 'images/france/louis-vi-le-gros.jpg',
+        'Louis IX': 'images/france/louis-ix.jpg',
+        'Philippe le Bel': 'images/france/philippe-le-bel.jpg',
+        'Philippe Auguste': 'images/france/philippe-auguste.jpg',
+        'Philippe VI': 'images/france/philippe-vi.jpg',
+        'François Ier': 'images/france/francois-ier.jpg',
+        'Henri IV': 'images/france/henri-iv.jpg',
+        'Louis XIV': 'images/france/louis-xiv.jpg',
+        'Bonaparte': 'images/france/bonaparte.jpg',
+        'La Fronde': 'images/france/la-fronde.jpg',
+        'Loi salique': 'images/france/loi-salique.png',
+        'Traité de Troyes': 'images/france/traite-de-troyes.jpg',
+        'Chinon': 'images/france/chinon.jpg',
+        'Charles VII': 'images/france/charles-vii.jpg',
+        'Guerres de Religion': 'images/france/guerres-de-religion.jpg',
+        'Polysynodie': 'images/france/polysynodie.jpg',
+        'Robespierre': 'images/france/robespierre.jpg',
+        // Angleterre
+        'Henri VII': 'images/angleterre/henri-vii.jpg',
+        'Henri VIII': 'images/angleterre/henri-viii.jpg',
+        'Élisabeth Ière': 'images/angleterre/elisabeth-iere.jpg',
+        'Oliver Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Cromwell': 'images/angleterre/oliver-cromwell.jpg',
+        'Guillaume le Conquérant': 'images/angleterre/guillaume-le-conquerant.jpg',
+        'Édouard Ier': 'images/angleterre/edouard-ier.jpg',
+        'Édouard III': 'images/angleterre/edouard-iii.jpg',
+        // Israël
+        'Saül': 'images/israel/saul.jpg',
+        'Salomon': 'images/israel/salomon.jpg',
+        'Hérode': 'images/israel/herode.jpg',
+        // Bavière
+        'Maximilien Ier': 'images/baviere/maximilien-ier.jpg',
+        'Max-Emmanuel': 'images/baviere/max-emmanuel.png',
+        'Maximilien III Joseph': 'images/baviere/maximilien-iii-joseph.jpg',
+        'Louis Ier': 'images/baviere/louis-ier.jpg',
+        'Kurt Eisner': 'images/baviere/kurt-eisner.jpg',
+        // Venise
+        'Francesco Foscari': 'images/venise/francesco-foscari.jpg',
+        'Francesco Morosini': 'images/venise/francesco-morosini.jpg',
+        'Daniele Manin': 'images/venise/daniele-manin.jpg',
+        // Florence
+        'Giano della Bella': 'images/florence/giano-della-bella.jpg',
+        'Laurent de Médicis': 'images/florence/laurent-de-medici.jpg',
+        'Filippo Strozzi': 'images/florence/filippo-strozzi.jpg',
+        'Ferdinand Ier de Médicis': 'images/florence/ferdinand-ier.jpg',
+        'Ferdinand III': 'images/florence/ferdinand-iii.jpg',
+        'Léopold II': 'images/florence/leopold-ii.jpg',
+        'Bettino Ricasoli, Vittorio Emanuele II': 'images/florence/bettino-ricasoli.jpg',
+    };
+
+    // Concept descriptions for subtitles
+    const concepts = {
+        'Éveil féodal': 'Premier chef dont l\'autorité supra-régionale est effective',
+        'Pic féodal': 'Roi fort au sommet de sa puissance personnelle',
+        'Crise féodale': 'Effondrement du système personnel du suzerain',
+        'Pacte oligarchique': 'Les oligarques codifient collectivement la structure de l\'exécutif',
+        '1er monarque oligarchique': 'Premier souverain disposant d\'un État central permanent',
+        'Acmé oligarchique': 'Pic de puissance et de prestige de la phase oligarchique',
+        'Fin de l\'expansion': 'L\'expansion extérieure cesse, les tensions internes prennent le relais',
+        'Guerre sociale': 'Conflit factieux résolu par le triomphe de l\'État central',
+        '1er monarque absolu': 'Figure qui résout la guerre sociale et concentre le pouvoir',
+        'Dernière grande révolte oligarchique': 'Dernier sursaut armé des oligarques contre l\'exécutif',
+        'Acmé absolutiste': 'Sommet de la puissance absolutiste — prestige et expansion maximaux',
+        'Remontrance': 'Tentative institutionnelle de reprendre des prérogatives au pouvoir absolu',
+        'Explosion de l\'AR': 'L\'Ancien Régime perd sa légitimité et sa capacité financière',
+        'Expérience parlementaire': 'On expérimente le parlementarisme après le renversement de l\'ancien ordre',
+        'Phase aiguë': 'L\'extrême-gauche prend le contrôle et élimine les modérés',
+        'Moment thermidorien': 'Le centre reprend le pouvoir et purge l\'extrême-gauche',
+        'Impérialiste Revanchard': 'Figure autoritaire qui renoue avec la verticalité du pouvoir',
+        'Restauration': 'Retour de la monarchie dans un cadre constitutionnel préservant les acquis révolutionnaires',
+        'Glorieuse Révolution': 'Réplique qui ancre définitivement le parlementarisme',
+        'Écrasement': 'La Révolution Nationale est interrompue avant d\'aboutir',
+        'Choc d\'hétérogénéité': 'Expansion territoriale qui hétérogénéise brutalement la société',
+        'Avortement': 'Phase interrompue avant sa résolution naturelle',
+        'Absorption dans le Parcours allemand': 'Le Parcours bavarois est absorbé dans le Parcours allemand',
+    };
+    const conceptSubtitle = concepts[e.title] || '';
+
+    // === HEADER ===
+    let headerHtml = `<div class="detail-panel-header-top">`;
+    headerHtml += `<span class="detail-panel-title">Détails du ${kindLabel.toLowerCase()}</span>`;
+    headerHtml += `<button class="detail-close" onclick="closeDetail()"><span class="material-symbols-outlined">close</span></button>`;
+    headerHtml += `</div>`;
+    headerHtml += `<div class="detail-badges">`;
+    headerHtml += `<span class="detail-kind" style="background:${color}">${phaseLabel}</span>`;
+    if (e.confidence) headerHtml += `<span class="confidence-badge ${confClass}">Confiance : ${confLabel}</span>`;
+    headerHtml += `</div>`;
+    document.getElementById('detailHeader').innerHTML = headerHtml;
+
+    // === CONTENT ===
+    let html = '';
+
+    // Title section
+    html += `<section>`;
+    html += `<span class="detail-section-label">Nom de l'événement</span>`;
+    html += `<div class="detail-title">${e.title}</div>`;
+    if (e.subtitle) html += `<div class="detail-subtitle">${e.subtitle}</div>`;
+    else if (conceptSubtitle) html += `<div class="detail-subtitle">${conceptSubtitle}</div>`;
+    html += `</section>`;
+
+    // Data cards — adapted for phases/subphases vs saillants
+    const isPhaseOrSub = (e.kind === 'phase' || e.kind === 'subphase');
+    html += `<section><div class="detail-cards">`;
+    if (isPhaseOrSub) {
+        // Separate start/end for phases
+        const startLabel = formatYear(e.start, e.start_approx);
+        const endLabel = e.end !== null ? formatYear(e.end, e.end_approx) : 'en cours';
+        html += `<div class="detail-card"><div class="detail-section-label">Début</div><div class="detail-card-value">${startLabel}</div></div>`;
+        html += `<div class="detail-card"><div class="detail-section-label">Fin</div><div class="detail-card-value">${endLabel}</div></div>`;
+    } else {
+        html += `<div class="detail-card"><div class="detail-section-label">Date</div><div class="detail-card-value">${dates}</div></div>`;
+        if (e.perturbation_type) {
+            html += `<div class="detail-card"><div class="detail-section-label">Type</div><div class="detail-card-value">${e.perturbation_type}</div></div>`;
+        } else {
+            html += `<div class="detail-card"><div class="detail-section-label">${kindLabel}</div><div class="detail-card-value">${phaseLabel}</div></div>`;
+        }
+    }
+    html += `</div></section>`;
+
+    // Duration section for phases/subphases
+    if (isPhaseOrSub && e.start !== null && e.end !== null) {
+        const duration = e.end - e.start;
+
+        // Parse typical duration to compute deviation
+        let typicalYears = null;
+        let deviationPct = 0;
+        let deviationStatus = '';  // 'normal', 'short', 'long'
+        let deviationColor = '#2e7d32';  // green by default
+        let deviationLabel = 'Dans la norme';
+        let deviationIcon = 'check_circle';
+
+        if (e.typical_duration) {
+            const m = e.typical_duration.match(/(\d+)/);
+            if (m) {
+                typicalYears = parseInt(m[1]);
+                deviationPct = Math.round(((duration - typicalYears) / typicalYears) * 100);
+                if (deviationPct > 20) {
+                    deviationStatus = 'long';
+                    deviationColor = '#e65100';
+                    deviationLabel = `+${deviationPct}% — plus longue que la norme`;
+                    deviationIcon = 'trending_up';
+                } else if (deviationPct < -20) {
+                    deviationStatus = 'short';
+                    deviationColor = '#1565c0';
+                    deviationLabel = `${deviationPct}% — plus courte que la norme`;
+                    deviationIcon = 'trending_down';
+                } else {
+                    deviationLabel = `${deviationPct > 0 ? '+' : ''}${deviationPct}% — dans la norme`;
+                }
+            }
+        }
+
+        html += `<section><div class="detail-cards">`;
+        html += `<div class="detail-card"><div class="detail-section-label">Durée observée</div><div class="detail-card-value">~${duration} ans</div></div>`;
+        if (typicalYears) {
+            html += `<div class="detail-card"><div class="detail-section-label">Durée typique</div><div class="detail-card-value" style="color:#7f756b;">~${typicalYears} ans</div></div>`;
+        }
+        html += `</div></section>`;
+
+        if (typicalYears) {
+            html += `<section><div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:${deviationColor}10;color:${deviationColor};font-size:0.78rem;font-weight:600;">`;
+            html += `<span class="material-symbols-outlined" style="font-size:16px;">${deviationIcon}</span>`;
+            html += `${deviationLabel}`;
+            html += `</div></section>`;
+        }
+    }
+
+    // Figure card with portrait
+    if (e.figure) {
+        const imgUrl = figureImages[e.figure] || null;
+        html += `<section><div class="detail-figure">`;
+        if (imgUrl) {
+            html += `<img src="${imgUrl}" alt="${e.figure}" class="detail-figure-portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`;
+            html += `<div class="detail-figure-icon" style="display:none;"><span class="material-icons">person</span></div>`;
+        } else {
+            html += `<div class="detail-figure-icon"><span class="material-icons">person</span></div>`;
+        }
+        html += `<div class="detail-figure-info">`;
+        html += `<span class="detail-section-label">Figure clé</span>`;
+        html += `<div class="detail-figure-name">${e.figure}</div>`;
+        html += `</div></div></section>`;
+    }
+
+    // Synthèse historique
+    if (e.summary) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Synthèse historique</span>`;
+        html += `<p>${e.summary}</p>`;
+        html += `</section>`;
+    }
+
+    // Description détaillée
+    if (e.description) {
+        html += `<section>`;
+        html += `<span class="detail-section-label">Analyse détaillée</span>`;
+        html += `<div class="detail-description"><p>${e.description}</p></div>`;
+        html += `</section>`;
+    }
+
+    // Metadata supplémentaires
+    if (e.deviation) {
+        html += `<section><span class="detail-section-label">Déviation</span><p style="color:#715b3e;">${e.deviation}</p></section>`;
+    }
+    if (e.affected_motor) {
+        html += `<section><span class="detail-section-label">Moteur affecté</span><p>${e.affected_motor}</p></section>`;
+    }
+    if (e.alternatives) {
+        html += `<section><span class="detail-section-label">Alternatives envisagées</span><p style="font-style:italic;">${e.alternatives}</p></section>`;
+    }
+
+    // Résolution
+    if (e.resolution) {
+        const isAborted = e.resolution.startsWith('AVORTÉE');
+        const resColor = isAborted ? '#ba1a1a' : '#2e7d32';
+        const resIcon = isAborted ? '✗' : '✓';
+        html += `<hr class="detail-divider">`;
+        html += `<section><span class="detail-section-label">Résolution ${resIcon}</span><p style="color:${resColor};font-weight:600;">${e.resolution}</p></section>`;
+    }
+    if (e.resolution_conditions) {
+        html += `<section><span class="detail-section-label">Conditions de résolution</span><p>${e.resolution_conditions}</p></section>`;
+    }
+
+    content.innerHTML = html;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    tooltip.style.display = 'none';
+}
+
+function closeDetail() {
+    document.getElementById('detailPanel').classList.remove('open');
+    document.getElementById('detailOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+document.addEventListener('click', function(e) {
+    var dd = document.getElementById('nation-dropdown');
+    if (!dd) return;
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+});
+</script>
+</body>
+</html>

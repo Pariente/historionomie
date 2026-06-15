@@ -134,6 +134,16 @@
 - summary: Ludwig IX der Reiche est le pic féodal tardif — celui qui précède directement la crise terminale. Le test discriminant féodal reste positif : l'administration (chancellerie, Hofrat, fiscalité) dépend de la personne du duc, et l'édifice s'effondre à la mort de Georges (1503). Mais cette fois, l'homogénéité est mûre.
 - description: Ludwig IX est le dernier pic féodal du Parcours bavarois — un roi fort au sommet de sa puissance personnelle qui projette la puissance vers l'extérieur et développe l'administration. Bavière-Landshut est le plus riche et le mieux administré des duchés Wittelsbach : revenus miniers (argent et cuivre), agriculture fertile, routes commerciales. Ludwig IX absorbe Bavière-Ingolstadt (1447), bat le margrave Albert Achilles de Hohenzollern dans la guerre bavaroise (1459-1463), et projette Landshut comme pair des rois (Noces de Landshut, 1475). Mais le test discriminant féodal reste positif : le pouvoir repose sur des liens personnels, l'existence de l'administration dépend de la personne du duc. Georges (1479-1503) prolonge le pic, mais à sa mort sans héritier mâle, l'édifice s'effondre immédiatement — confirmant le caractère féodal du pouvoir. La différence structurelle avec les crises précédentes (1255, 1349, 1392) est que l'homogénéité des oligarques pan-bavarois est désormais mûre : les conditions de Deblonde pourront enfin être réunies simultanément.
 
+#### Saillant : 1er impôt permanent
+- type: saillant
+- start: 1493
+- figure: Albert IV
+- subtitle: Aufschlag
+- title: 1er impôt permanent
+- confidence: medium
+- summary: En 1493, Albert IV institue l'Aufschlag — excise sur la bière prélevée par des officiers ducaux à l'occasion du brassage et des transactions, alimentant la caisse centrale. Première taxe ducale véritablement permanente de Bavière, qui restera la recette principale de la couronne pendant trois siècles. Particularité : ce déploiement du marqueur fiscal précède le pacte oligarchique de 1506 — pattern partagé avec le cas anglais (custom sur la laine 1275, antérieure aux Ordonnances de 1311).
+- description: L'Aufschlag instauré par Albert IV en 1493 fait de la bière une régale ducale assortie d'une excise permanente perçue par des officiers ducaux et versée à la caisse centrale. Le Reinheitsgebot de 1516 (Wilhelm IV) verrouillera ensuite la matière imposable en codifiant la composition et la production réglementée de la bière — une régale stabilisée. Contrairement à la Landsteuer ou à la Türkensteuer, votées au coup par coup par les Landstände, l'Aufschlag est prélevé en continu sans reconcession récurrente. Il satisfait les trois critères du marqueur nº 1 de la phase oligarchique (cf. phase_oligarchique.md §Fisc permanent central) : pérennité (prélèvement reconduit sans vote), centralité (officiers ducaux, caisse centrale), survie au règne (l'Aufschlag traverse tous les ducs jusqu'à l'AR). Particularité bavaroise à assumer : ce saillant tombe dans la coagulation féodale tardive, sous Albert IV, et précède de 13 ans le pacte oligarchique (primogéniture 1506). Pattern partagé avec l'Angleterre (custom 1275 → PO 1311) : un appareil étatique qui court en avance sur le moteur d'homogénéisation. Le fisc permanent est ici un acquis de la féodale tardive ; son appropriation collective et sa fixation institutionnelle dans le cadre du PO viendront plus tard (Hofkammer 1550 sous Albert V).
+
 #### Saillant : Crise féodale — guerre de Succession de Landshut
 - type: saillant
 - start: 1503
@@ -218,6 +228,20 @@
 - title: Guerre sociale
 - summary: La guerre sociale bavaroise satisfait les deux critères. **Forme économique pure** (cas weberien classique) : noblesse terrienne (patrimoniaux au patrimoine indépendant du centre, ancrés au Landtag) contre administration ducale catholique (prébendiers dépendants des charges et faveurs). **Mode d'expression confessionnel** jusqu'en 1580, puis institutionnel (Landtag / duc). Prébendes en jeu : Hofkammer, Hofrat, Conseil secret, Rentämter, Landgerichte, bénéfices ecclésiastiques post-Contre-Réforme, commandements, charges jésuites d'État. Résolution par Maximilien Ier (1597) qui construit un appareil bureaucratique entièrement neuf subordonnant les deux factions.
 - description: La guerre sociale bavaroise satisfait les deux critères structurels malgré sa brièveté. Premier critère — l'enjeu est le contrôle de l'État central, sous **forme économique pure**. La suppression des nobles protestants par Albert V (1564) élimine la branche confessionnelle de la faction patrimoniale, mais ne résout pas le conflit fondamental : la noblesse terrienne conserve son patrimoine foncier indépendant et ses droits au Landtag même reconvertie au catholicisme — preuve que le clivage est économique et pas confessionnel au fond. La faction prébendière (cour catholique, Jésuites) se disqualifie à son tour en accumulant une dette colossale sous Guillaume V (1 663 500 florins de dettes contre 1 220 florins en caisse en 1597). Les prébendes concrètes en jeu : **(1) Hofkammer** (Chambre des comptes, finances ducales) ; **(2) Hofrat** (Conseil de cour) et **Geheimer Rat** (Conseil secret) ; **(3) Rentämter** (4 régions fiscales) ; **(4) Landgerichte** (85 tribunaux régionaux) et Vicedomsämter — administration territoriale ducale ; **(5) bénéfices ecclésiastiques** contrôlés par le duc après la Contre-Réforme ; **(6) postes dans l'appareil jésuite d'État** (éducation, contrôle doctrinal, Ingolstadt) ; **(7) commandements militaires** et pensions ducales ; **(8) domaines redistribués** via les confiscations des protestants ; **(9) droits au Landtag** (à défendre pour les patrimoniaux). Le mode d'expression initial est confessionnel (protestants / catholiques), puis institutionnel après l'éradication de l'hérésie. Second critère — résolution par un nouveau cadre central : ni la noblesse patrimoniale (écrasée confessionnellement) ni la vieille garde prébendière (ruinée financièrement) ne sont en position de prendre le pouvoir. Les clientèles des deux factions sont délaissées, rendant possible l'émergence d'un tiers. Maximilien Ier construit un appareil bureaucratique entièrement neuf (Hofkammer rénové, Hofrat, Conseil secret, Rentämter consolidés, 85 tribunaux régionaux) et subordonne les deux factions à cet appareil — « le parti des prébendes en soi » prend corps. En 1612, il cesse de convoquer les Landstände — le test discriminant absolutiste devient positif.
+
+#### Saillant : 1re armée permanente (avortement)
+- type: saillant
+- perturbation: true
+- mechanism: insuffisance_interne
+- effect: avortement
+- start: 1583
+- end: 1597
+- figure: Wilhelm V
+- subtitle: Guerre de Cologne et faillite
+- title: 1re armée permanente
+- confidence: medium
+- summary: La tentative de doter la Bavière d'une coercition permanente dans le cadre des engagements confessionnels (Guerre de Cologne 1583-1588, interventions anti-protestantes ultérieures) se solde par un avortement : Wilhelm V finance ses opérations par mercenariat ad hoc et endettement, sans bâtir de force territoriale permanente. À sa quasi-abdication (1597), le duché compte 1,66 million de florins de dettes contre 1 220 florins en caisse — le marqueur nº 2 de la phase oligarchique (armée permanente soldée par l'exécutif) n'est pas atteint sous la première dynastie oligarchique. Pattern structurel analogue à la réforme militaire avortée de Charles V (France, 1374) : fisc consolidé, coercition permanente échouée.
+- description: Pendant la phase oligarchique bavaroise, le ban féodal (Landfahne, réorganisé par Wilhelm IV en 1543) et les contingents votés par les Landstände demeurent la base de la coercition. La Hofgarde reste une petite garde liée au corps du duc — elle ne passe pas le test fonctionnel d'une force territoriale (cf. phase_oligarchique.md §1re armée permanente). La tentative de bascule survient sous Wilhelm V, dont l'engagement dans la Guerre de Cologne (1583-1588) puis dans la mobilisation confessionnelle anti-protestante mobilise des effectifs considérables — mais entièrement par mercenariat ad hoc levé pour la campagne et dissous ensuite, financé à crédit sur des marchands augsbourgeois et fuggeriens. Mécanisme : insuffisance interne (ressources fiscales insuffisantes pour pérenniser, résistance des Landstände à voter une coercition centrale permanente, faction prébendière incapable d'imposer une réforme de structure). Effet : avortement du marqueur militaire dans cette phase oligarchique. La désynchronisation des deux moteurs étatiques bavarois (fisc opérant via Aufschlag depuis 1493, coercition permanente non atteinte) est un signal structurel : la faction prébendière, ruinée par cette aventure, sera incapable d'imposer sa vision dans la GS. C'est Maximilien Ier qui réalisera enfin l'armée permanente bavaroise (Hofkriegsrat 1607, ossature de la Ligue catholique 1609, régiments réguliers à partir de ~1619) — mais déjà dans le cadre absolutiste post-1597. Pattern structurel partagé avec la France de la 1re phase oligarchique (réforme militaire avortée de Charles V, 1374 ; armée permanente réussie seulement dans la phase rebootée, compagnies d'ordonnance 1445) : un fisc qui aboutit dans l'oligarchique, une armée permanente qui n'aboutit qu'après une recomposition phasique.
 
 #### Saillant : Guerre sociale
 - type: saillant
@@ -429,9 +453,11 @@
 |---|---|
 | Éveil féodal | Louis Ier le Kelheimer (1204) |
 | Pic féodal | Louis IV le Bavarois (1328-1347) |
+| 1er impôt permanent | Aufschlag — Albert IV (1493, pré-PO) |
 | Pacte oligarchique | Primogéniture (1506) |
 | 1er monarque oligarchique | Guillaume IV (1508) |
 | Acmé oligarchique | Albert V (1555) |
+| 1re armée permanente | Avortée — Wilhelm V (1583-1597) |
 | Guerre sociale | 1564-1597 |
 | 1er monarque absolu | Maximilien Ier (1597) |
 | Acmé absolutiste [1] | Maximilien III Joseph (1756) |

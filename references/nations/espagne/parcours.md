@@ -217,6 +217,26 @@ Le Parcours espagnol est porté par la **nation castillane**, qui absorbe progre
 - summary: Henri II (r. 1369-1379) est le premier souverain disposant d'un Etat central sous le cadre codifie du pacte trastamara. Les marqueurs necessaires sont presents : fisc permanent (alcabala), justice royale permanente (Audiencia), administration centrale embryonnaire.
 - description: Henri II est le premier roi qui remplit les conditions du saillant « 1er monarque oligarchique » (cf. phase_oligarchique.md) : il dispose d'un fisc permanent, d'une justice royale permanente et d'une administration centrale, le tout sous un cadre codifie (les mercedes enriquenas et les Cortes de Toro). Les marqueurs necessaires se mettent en place sous ses successeurs directs : le Consejo Real (1385, Jean Ier) centralise le conseil royal, l'alcabala devient permanente (1393, Henri III), les corregidores sont deployes dans les villes comme agents directs de la couronne. Le test discriminant oligarchique est positif (fisc + armee + administration coexistant avec des pouvoirs locaux autonomes) et le test absolutiste est negatif (les Cortes d'Aragon, de Catalogne et de Valence conservent leurs prerogatives). La phase oligarchique commence.
 
+#### Saillant : 1er impôt permanent
+- type: saillant
+- start: 1393
+- figure: Henri III
+- subtitle: Alcabala permanente
+- title: 1er impôt permanent
+- confidence: medium
+- summary: Sous Henri III, l'alcabala — taxe sur les ventes imposée temporairement par Alphonse XI en 1342 — devient en 1393 une renta real permanente, prélevée en continu sans concession répétée des Cortès. Premier impôt central pérenne de l'essor oligarchique castillan, qui fournira jusqu'à 80 % des revenus ordinaires de la couronne.
+- description: L'alcabala est d'abord concédée à Alphonse XI par les Cortès de Burgos en 1342, comme aide temporaire pour le siège d'Algésiras (cf. saillant Pic féodal — Alphonse XI). Sous Henri III, vers 1393, elle cesse d'être un expédient reconductible pour devenir une renta real permanente : prélevée en continu sur tout le territoire castillan par des officiers royaux, sans concession répétée des Cortès. C'est le déploiement du marqueur nº 1 de la phase oligarchique (cf. phase_oligarchique.md §Fisc permanent central), aux côtés de l'Audiencia (justice royale permanente, 1371) et du Consejo Real (1385). La distinction entre l'imposition initiale (1342, temporaire, sous un pic féodal) et la permanisation (1393, dans l'essor oligarchique) est l'analogue castillan du couple gabelle temporaire / gabelle permanente en France : c'est la permanisation, pas l'imposition initiale, qui constitue le saillant.
+
+#### Saillant : 1re armée permanente
+- type: saillant
+- start: 1476
+- figure: Isabelle Ière et Ferdinand V
+- subtitle: Santa Hermandad
+- title: 1re armée permanente
+- confidence: high
+- summary: L'Ordenamiento de Madrigal (19 avril 1476) crée la Santa Hermandad — milliers d'hommes soldés et contrôlés par la couronne, déployés pour tenir les routes et le territoire. Première force armée permanente castillane ; les Guardas de Castilla (1493) n'en seront que la réorganisation professionnalisée.
+- description: Réunies à Dueñas puis aux Cortès de Madrigal, les villes castillanes adoptent en 1476 l'Ordenamiento qui institue la Santa Hermandad Nueva : une force armée permanente, financée et commandée par la couronne, déployée sur le territoire pour pacifier les routes, réprimer le brigandage et mettre au pas la noblesse turbulente. Elle satisfait le marqueur nº 2 de la phase oligarchique (cf. phase_oligarchique.md §Armée permanente) et passe le test fonctionnel du critère retenu : ce n'est pas une garde liée au corps du souverain mais une force territorialisée, instrument de coercition du centre — l'historiographie la désigne comme la première unité militaire permanente d'Espagne et comme le commencement de l'Ejército Real. Elle combattra à Grenade, à Naples et aux Canaries. Les Guardas de Castilla, créées en 1493, n'en sont pas le premier exemplaire mais la réorganisation professionnalisée, sur le modèle de la gendarmerie française. Le marqueur militaire se déploie ainsi tardivement dans l'essor castillan (~83 ans après l'alcabala permanente), sous les Rois Catholiques eux-mêmes — proximité avec l'acmé oligarchique (1492) à signaler.
+
 #### Saillant : Acmé oligarchique
 - type: saillant
 - start: 1492

@@ -16,35 +16,27 @@
 
 **Décision** : question laissée ouverte. La réponse dépend de la définition du territoire national : si le Parcours est « savoyard » dès l'origine (l'entité trans-alpine qui deviendra le Piémont), Humbert Ier tient. Si le Parcours est spécifiquement « piémontais » (centré sur Turin et le versant alpin italien), l'éveil est plus tardif.
 
-### Pacte oligarchique : Statuta Sabaudiae (1430) ou Emmanuel Philibert (1559) ?
+### Pacte oligarchique : Statuta Sabaudiae (1430) ou Ordini Nuovi (1561) ?
 
-**Hypothèse retenue** : Statuta Sabaudiae (1430), avec confidence low-medium.
+**Hypothèse retenue** : Ordini Nuovi (1561), avec confidence medium. *(Révision 2026-05 : le Statuta de 1430 était précédemment retenu comme PO ; il est reclassé en pic féodal + coagulation institutionnelle.)*
 
-**Argument principal** : le test discriminant (le pouvoir survit-il aux successions sans fragmentation ?) est satisfait après 1430. Les institutions (Camera dei Conti, Statuta, administration en châtellenies) continuent de fonctionner sous des ducs faibles. Le territoire ne se fragmente pas.
+**Le test décisif — le moteur.** Le test de survie aux successions (le pouvoir survit-il sans fragmentation ?) est satisfait après 1430 : les institutions tiennent sous des ducs faibles, le territoire ne se fragmente pas sur tout le plateau 1430-1536. Mais ce test est **nécessaire, pas suffisant** pour conclure à un PO — il peut aussi être produit par l'**enracinement dynastique** d'une féodale tardive (comme la lignée capétienne traverse minorités et morts précoces sans PO, restant féodale jusqu'en 1317). Le départage se fait sur le **moteur** : après un vrai PO, l'asymétrie de rôle veut que le centre se dote d'un impôt et d'une armée permanents dans le siècle (cf. `phase_oligarchique.md` §Les trois saillants). Or sur 1430-1536, ni l'un ni l'autre ne se déploie : le tasso reste un prélèvement extraordinaire voté par l'assemblée des trois états (consentement-événement), et l'armée reste féodale (commandée et entretenue par les féodataires locaux qui stationnent les régiments sur leurs terres). L'absence de moteur sur un siècle **falsifie l'hypothèse PO pour 1430**.
 
-**Argument pour Emmanuel Philibert** : il crée les PREMIERS fisc permanent (gabella, tasso), armée permanente, et Sénats spécifiquement piémontais. Avant lui, ces marqueurs de la phase oligarchique ne sont pas pleinement présents. Si Emmanuel Philibert est le pacte, la phase féodale s'étend jusqu'à ~1559 (~556 ans — très extrême, mais le cas anglais fait ~500 ans).
+**Les Statuta sont une coagulation institutionnelle ducale, pas un PO.** Amédée VIII, souverain fort (futur antipape Félix V), fait réviser et unifier le droit par des juristes qu'il commande — c'est un outil du souverain, l'équivalent fonctionnel du Parlement de Paris ou de la stabilisation administrative capétienne, pas un acte par lequel les grands se subordonnent collectivement à un cadre (test directionnel). Classé pic féodal + coagulation institutionnelle.
 
-**Contre-argument** : Emmanuel Philibert RECONSTRUIT sur des fondations existantes. Les Statuta, la Camera dei Conti, la tradition administrative survivent dans la mémoire institutionnelle à travers l'occupation française. Il ne part pas de zéro. Et la phase féodale de 556 ans serait la plus longue du corpus sans mécanisme d'allongement clair (les boucles anglaises ou vénitiennes sont plus nombreuses).
+**Le vrai PO est les Ordini Nuovi (1561).** Après la correction d'échelle de 1536 (perte de la périphérie lémanique, qui homogénéise enfin le noyau), Emmanuel Philibert refonde le cadre — et cette fois le moteur tourne immédiatement : gabella del sale (1er impôt permanent) et milice paysanne soldée (1re armée permanente, 1566) se déploient en synchrone avec le pacte. C'est le déploiement du moteur qui corrobore le PO.
 
-**Décision** : on retient 1430 comme pacte, avec la réserve que la phase oligarchique pré-1536 est faible (ducs incapables, institutions qui tiennent mais s'érodent).
+**Conséquence sur la phase féodale** : elle s'étend de 1233 à 1559 (~326 ans), comparable à la Bavière (326 ans). Allongement à double mécanisme : enracinement dynastique qui absorbe les successions sans forcer de PO, et hétérogénéité du composite trans-alpin qui bloque la condition d'homogénéité de Deblonde jusqu'à la correction d'échelle de 1536.
 
-### Occupation française (1536-1559) : prolongement ou reboot ?
+### Occupation française (1536-1559) : reboot, prolongement, ou crise terminale de la féodale ?
 
-**Hypothèse retenue** : prolongement, avec confidence medium.
+**Hypothèse retenue** : crise terminale de la phase féodale + correction d'échelle homogénéisante (choc exogène, effet accélération), avec confidence medium. *(Révision 2026-05 : précédemment lue comme « prolongement d'une phase oligarchique » — lecture abandonnée puisqu'il n'y a pas de phase oligarchique avant 1559.)*
 
-**Arguments pour le prolongement** :
-- La dynastie survit (Emmanuel Philibert)
-- La noblesse piémontaise conserve ses terres et ses réseaux
-- La mémoire institutionnelle perdure (Emmanuel Philibert reconstruit, il ne fonde pas)
-- L'homogénéité culturelle est préservée
-- Analogie partielle avec Milan sous l'Espagne
+Les anciennes hypothèses (reboot oligarchique vs prolongement) supposaient toutes deux qu'une phase oligarchique préexistait à 1536. Or 1430-1536 est féodal (pas de moteur, cf. supra). La question se reformule : quel est le rôle structurel de l'invasion dans la longue féodale ?
 
-**Arguments pour le reboot** :
-- Les institutions sont formellement remplacées par l'administration française (pas simplement affaiblies)
-- Le duc est en exil, pas en position de faiblesse sur son territoire
-- Emmanuel Philibert crée des institutions NOUVELLES (Sénats, Ordini Nuovi), pas des copies des anciennes
+**Réponse : catalyseur d'une transition bloquée.** La féodale ne pouvait pas produire de PO faute d'homogénéité (composite trans-alpin hétérogène). En 1536, la conquête bernoise (Vaud, Gex, Chablais) et la perte de Genève amputent la périphérie lémanique francophone et réformée — la fraction la plus divergente. L'État récupéré en 1559 est un noyau catholique compact, savoyard-piémontais : la condition d'homogénéité de Deblonde est enfin réunie. Le choc exogène fonctionne donc comme **correction d'échelle** (deuxième du Parcours, après 1233) qui débloque la transition féodale → oligarchique. Effet : accélération d'une transition longtemps empêchée, pas reboot ni prolongement.
 
-**Décision** : prolongement retenu parce que le diagnostic de reboot impliquerait une régression d'une phase (oligarchique → féodale), ce qui ne correspond pas à ce qu'on observe — Emmanuel Philibert crée immédiatement un État avec fisc, armée et administration, sans passer par une phase féodale.
+**Parallèle et contraste avec la France.** Comme Azincourt-Troyes détruit puis Chinon refonde, l'invasion détruit puis Emmanuel Philibert refonde. Mais en France le reboot effaçait un PO préexistant (loi salique 1317) ; ici la destruction n'efface aucun PO — elle crée les conditions du premier PO en homogénéisant le territoire.
 
 ### Identification des factions de la guerre sociale
 
@@ -89,7 +81,7 @@
 
 ### Le Piémont comme Parcours commençant avec Emmanuel Philibert (1559)
 
-Sous cette hypothèse, tout ce qui précède 1559 serait une « pré-phase » ou un Parcours savoyard distinct, et le Parcours piémontais commencerait avec la refondation d'Emmanuel Philibert. Écarté parce que la continuité dynastique (Maison de Savoie sans interruption de 1003 à 1861) et la continuité institutionnelle (les Statuta de 1430 sont le socle que les Ordini Nuovi de 1561 remplacent) plaident pour un Parcours continu.
+Sous cette hypothèse, tout ce qui précède 1559 serait une « pré-phase » ou un Parcours savoyard distinct, et le Parcours piémontais commencerait avec la refondation d'Emmanuel Philibert. Écarté parce que la continuité dynastique (Maison de Savoie sans interruption de 1003 à 1861) et la continuité institutionnelle (les Statuta de 1430, coagulation institutionnelle féodale, sont le socle que les Ordini Nuovi de 1561 réorganisent) plaident pour un Parcours continu : une longue phase féodale (1233-1559) suivie d'une phase oligarchique (1559-1696), pas deux Parcours distincts.
 
 ### L'éclipse napoléonienne comme reboot de la phase absolutiste
 

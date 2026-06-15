@@ -86,20 +86,20 @@ Les écarts sont toujours significatifs — les expliquer par perturbation ident
 - `coagulation des élites`, `bascule oligarchique` (féodale)
 - `essor oligarchique`, `polarisation des élites`, `guerre sociale` (oligarchique). Variante alternative à `polarisation des élites` : `équilibre oligarchique` (phase oligarchique bloquée par homogénéité culturelle empêchant la polarisation des élites).
 - `absolutisation`, `impérialisme absolutiste`, `ancien régime` (absolutiste). Dérivation rare : `ancien régime exogène`.
-- `révolution initiale`, `impérialisme revanchard`, `restauration` (RN)
+- `révolution initiale`, `impérialisme revanchard`, `restauration` (RN). Dérivation rare : `restauration exogène` (parallèle à `ancien régime exogène` — restauration sous occupation par puissance extérieure, sans roman national propre, coalition restreinte taillée pour empêcher la réémergence d'un souverain charismatique).
 
 Toute autre dérivation requiert un précédent documenté.
 
 **Titres de saillants — LISTE FERMÉE** (aucune dérivation autorisée) :
 - **Féodale** : Éveil féodal, Pic féodal, Crise féodale
-- **Oligarchique** : Pacte oligarchique, 1er monarque oligarchique, Acmé oligarchique, Guerre sociale
+- **Oligarchique** : Pacte oligarchique, 1er monarque oligarchique, 1er impôt permanent, 1re armée permanente, Acmé oligarchique, Guerre sociale
 - **Absolutiste** : 1er monarque absolu, Dernière grande révolte oligarchique (DGRO), Acmé absolutiste, Saturation fiscale, Remontrance, Réformes échouées
 - **RN** : Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien, Émergence de l'IR, Restauration, Glorieuse Révolution
 
 **Distinction saillant vs sous-phase** :
 - `Ancien régime` est une sous-phase **seulement** — l'entrée en AR est marquée par le saillant **Saturation fiscale** (critère Lanoue de Suremain), pas par un saillant « Ancien Régime ». La Remontrance, quand elle a lieu, est généralement simultanée ou quasi-simultanée à la Saturation fiscale — mais c'est une manifestation politique contingente qui peut être absente.
 - `révolution initiale` est une sous-phase **seulement** — elle contient les 4 saillants Éclatement de l'AR, Expérience parlementaire, Phase aiguë, Moment thermidorien.
-- `Restauration` est à la fois un **saillant** (le moment) ET une **sous-phase** (la durée).
+- `Restauration` est à la fois un **saillant** (le moment) ET une **sous-phase** (la durée). La dérivation `restauration exogène` (sous-phase) se distingue de la Restauration canonique par : (1) pure occupation par puissance extérieure, (2) absence de roman national propre, (3) coalition restreinte taillée pour empêcher la réémergence d'un souverain charismatique et tout élargissement. Trajectoires de sortie possibles : élargissement maximal vers GR (si homogénéité élevée), reboot en AR exogène composite par choc d'hétérogénéité (pattern Philippe, cf. `perturbations.md` §4.7), ou maintien en AR exogène durable (si homogénéité faible). Cf. `phase_rn.md` §Restauration exogène.
 - `Émergence de l'IR` est un **saillant** ; `impérialisme revanchard` est la **sous-phase**.
 
 **Tout événement qui n'est pas dans la liste fermée n'est PAS un saillant** — c'est soit une **perturbation** (avec mécanisme + effet), soit une **mention dans la description** d'une sous-phase. Ne JAMAIS créer des saillants ad hoc.
