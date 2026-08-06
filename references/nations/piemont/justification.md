@@ -55,10 +55,14 @@ Les anciennes hypothèses (reboot oligarchique vs prolongement) supposaient tout
 - Mécanisme : tentative de redistribution du pouvoir par l'exigence d'une constitution
 - Concession brièvement accordée puis retirée (Charles Albert accepte puis se rétracte)
 - Effet : ferme la voie de réforme, confirme l'entrée dans l'AR profond
-- Parallèle structurel exact avec la Polysynodie (1715), la Correzione (1761), le Landtag bavarois (1848), les Décembristes russes (1825)
+- Parallèle avec la Correzione (1761), le Landtag bavarois (1848), les Décembristes russes (1825)
+- **Position ED confirmée le 2026-07-30**, au sens positionnel de la définition Fabry-Portal : les meneurs sont des nobles ayant fait carrière sous Napoléon, que la Restauration déclasse méthodiquement en réservant provisions et pensions à la noblesse « non compromise avec les Français ». Classe déchue de statut et d'accès dans l'ordre actuel — l'ED se juge sur la position, pas sur la bannière libérale.
+- **Saturation fiscale identifiée le 2026-07-30** : ministère Balbo, 1820-1821, renvoi du ministre le 11 mars 1821. La Restauration de 1814, qui abolit les impôts directs napoléoniens et rétablit les privilèges nobiliaires, en est la cause et non le marqueur. La Remontrance devient quasi-simultanée, ce qui supprime le décalage qu'il fallait auparavant expliquer par l'éclipse napoléonienne.
 
-**Arguments pour un épisode non étiqueté** :
-- La remontrance est normalement une tentative INSTITUTIONNELLE, pas une révolte militaire armée (garnison d'Alessandria). C'est plus violent qu'une Polysynodie.
+**Arguments résiduels pour un épisode non étiqueté** :
+- La voie est armée : une garnison se soulève et se fait écraser à Novara avec l'appui autrichien. C'est l'écart réel, et il est assumé plutôt que résolu. Justification retenue : la Restauration piémontaise n'a aucun corps délibérant — ni parlement, ni états, ni diète — de sorte que le seul instrument collectif de la classe intégrée est le régiment. Ce raisonnement ne doit pas servir aux cas qui disposaient d'un canal et s'en sont servis (Bavière 1848).
+- Ce qui exclut la DGRO : les insurgés n'ont aucune assise territoriale. Officiers d'une garnison, pas seigneurs sur leurs terres.
+- Le mobile italien (guerre contre l'Autriche pour la Lombardie) ne relève ni de l'ED ni de la collégialité, et reste signalé comme tel.
 - Le parallèle avec 1905 en Russie suggère une catégorie intermédiaire entre remontrance et explosion de l'AR
 - La remontrance est normalement à la charnière impérialisme → AR, pas 70+ ans après le acmé absolutiste
 
