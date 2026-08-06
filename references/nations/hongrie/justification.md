@@ -131,7 +131,7 @@ Joseph II applique le même programme de despote éclairé à ses trois royaumes
 
 ### Saturation fiscale et Remontrance simultanées en 1811
 
-Application stricte du critère Lanoue de Suremain : la Diète hongroise refuse l'augmentation de la contribution en 1811-1812 et maintient l'exemption fiscale nobiliaire. François I impose unilatéralement la dévaluation des Bancozettel sans pouvoir briser le blocage parlementaire-nobiliaire. La Couronne ne parvient plus à augmenter durablement ses recettes ordinaires en Hongrie. Datation simultanée à la Remontrance (dissolution de la Diète en 1811, 14 ans sans reconvocation jusqu'en 1825), conformément au pattern canonique des monarchies à corps intermédiaires externes (parallèle structurel : Polysynodie française 1715-1718, Apology of the Commons anglaise 1604, Correzione vénitienne 1761).
+Application stricte du critère Lanoue de Suremain : la Diète hongroise refuse l'augmentation de la contribution en 1811-1812 et maintient l'exemption fiscale nobiliaire. François I impose unilatéralement la dévaluation des Bancozettel sans pouvoir briser le blocage parlementaire-nobiliaire. La Couronne ne parvient plus à augmenter durablement ses recettes ordinaires en Hongrie. Datation simultanée à la Remontrance (dissolution de la Diète en 1811, 14 ans sans reconvocation jusqu'en 1825), conformément au pattern canonique des monarchies à corps intermédiaires externes (parallèle structurel : Grandes Remontrances françaises 1753, Apology of the Commons anglaise 1604, Correzione vénitienne 1761). Le critère ED est vérifié à l'état pur — la diète défend l'exemption fiscale nobiliaire, un privilège menacé, sans revendication d'ordre nouveau.
 
 ### Reformkor 1825-1848 comme Réformes échouées
 

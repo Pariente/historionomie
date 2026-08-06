@@ -23,16 +23,40 @@ Pour le détail par nation, voir `references/nations/*/parcours.md` et `referenc
 | 1er monarque absolu | Josias (-640) | Simon Thassi (-140) | Henri IV (1598) | Henri VII (1485) | Inquisiteurs d'État (~1669) | Maximilien Ier (1597) | Victor Amédée II (~1696) | Laurent le Magnifique (1480) |
 | Dernière grande révolte oligarchique (DGRO) | — | Jannée (-94) | La Fronde (1648-1653) | Henri VIII (~1534-1540) | — (pas d'assise) | — (pas d'assise) | Affaire Graneri (1722-1723) | Montemurlo (1537) |
 | Acmé absolutiste | — (interrompu) | Hérode (-20) | Louis XIV (~1682) | Élisabeth Ière (~1580) | Morosini (~1688) | Max. III Joseph (~1756) / Louis Ier (~1835) | Ch. Emmanuel III (~1748) | Ferdinand Ier (~1591-1609) |
-| Saturation fiscale | — | -4 (à reconsidérer, prolongement sous tutelle) | 1710 (échec dixième Desmaretz) | 1610 (Great Contract échoué) | ~1740 (épuisement extension fiscale dans oligarchie patricienne extrême) | — (machine Montgelas pas durablement bloquée avant Reich 1871) | — (AR avorté avant maturation 1796) | 1774-1775 (Tassa di redenzione + concordat Pierre-Léopold ; comprimée avec Réformes échouées) |
-| Remontrance | — | Ambassade à Auguste (-4) | Polysynodie (1715) | Apology of the Commons (1604) + Petition of Right (1628) | Correzione (1761) | Landtag (1848) | Révolte de 1821 | — |
+| Saturation fiscale | — | -4 (à reconsidérer, prolongement sous tutelle) | 1749-1751 (vingtième de Machault vidé) | 1610 (Great Contract échoué) | ~1740 (épuisement extension fiscale dans oligarchie patricienne extrême) | 1856 (retrait des revenus fonciers de l'assiette par la noblesse re-renforcée, après l'impôt progressif universel de 1848 ; confidence low — série de recettes manquante) | 1820-1821 (blocage Balbo — aucune réforme finançable sans refonte de l'appareil restauré ; saturation tardive, l'AR ayant été entré en 1748 sans marqueur fiscal) | 1774-1775 (Tassa di redenzione + concordat Pierre-Léopold ; comprimée avec Réformes échouées) |
+| Remontrance | — | Ambassade à Auguste (-4) | Grandes Remontrances (1753) | Apology of the Commons (1604) + Petition of Right (1628) | Correzione (1761) | Landtag (1848) | Révolte de 1821 | — |
 | Éclatement de l'AR | — | Grande Révolte (66) | 1789 | Guerre civile (1642) | République de Manin (1848) | Eisner (1918) | — (absorbée, 1861) | Invasion française (1796) |
 | Émergence de l'IR | — | — | Bonaparte (1799) | Cromwell (1653) | — (RN avortée) | — (absorbée) | — (absorbée) | — (absorbée) |
 | Glorieuse Révolution | — | — | 1830 | 1688 | — (absorbée, 1866) | — (absorbée, 1919) | — (absorbée) | — (absorbée, 1860) |
 
 **Note méthodologique sur le critère Saturation fiscale (Lanoue de Suremain)** : la saturation est l'incapacité POLITIQUE de l'État absolutiste à augmenter l'impôt ordinaire par voie d'élargissement durable — du fait du caractère inacceptable de la fiscalité égalitaire dans la société d'AR (privilèges fiscaux figés, corps intermédiaires). Le niveau absolu d'imposition peut être plus bas qu'en phase oligarchique précédente, plus haut en phase parlementaire suivante. Les banqueroutes, défauts, manipulations monétaires, consolidations de dette sont des **expédients réactifs**, pas la saturation elle-même.
 
+**Note sur la France (redatation du 2026-07-29)** : Saturation fiscale portée de 1710 (dixième de Desmaretz) à **1749-1751** (vingtième de Machault) et Remontrance de 1715 (Polysynodie) à **1753** (Grandes Remontrances du Parlement de Paris). L'AR français court désormais 1749-1789 (40 ans) et l'impérialisme absolutiste 1661-1749 (88 ans). Motif décisif : le dixième de 1710 n'a jamais été bloqué — il a été supprimé par l'État lui-même en 1717 puis ressorti deux fois — et la monarchie a réussi en 1749 la plus grosse extension durable de son assiette ordinaire du siècle, ce qui est incompatible avec un état de saturation antérieur. La Polysynodie est écartée comme Remontrance (c'est l'exécutif qui octroie, au profit de la noblesse d'épée, et qui dissout lui-même trois ans plus tard) ; son effet durable, la restitution du droit de remontrance préalable, est ce qui **arme** le Parlement pour 1753. Cf. `nations/france/parcours.md`.
+
+**Note sur le critère ED de la Remontrance (Lanoue de Suremain)** : la Remontrance est structurellement un phénomène d'extrême-droite — un corps réclamant la restitution d'un état antérieur du cadre (cf. `phase_absolutiste.md` §Remontrance). Vérification menée sur l'ensemble du corpus le 2026-07-29 :
+
+| Nation | Remontrance | Comparaison France 1753 | Critère ED |
+|---|---|---|---|
+| Angleterre | Apology of the Commons (1604) | ✓ | ✓ (droits d'héritage, Magna Carta) |
+| France | Grandes Remontrances (1753) | — (référence) | ✓ |
+| Venise | Correzione (1761) | ✓ | ✓ noyau, mixte en marge (barnabotti) |
+| Hongrie | Dissolution de la diète (1811) | ✓ | ✓ (exemption nobiliaire) |
+| Israël | Ambassade à Auguste (-4) | ✓ | ✓ (exclusion des Hérodiens) |
+| Bavière | Landtag (1848) | ✓ | à réexaminer (définition ED corrigée le 30/07) |
+| Autriche | Insurrection viennoise (1848) | ~ partielle | à réexaminer (définition ED corrigée le 30/07) |
+| Milan | République Ambrosienne (1447) | ✗ | ✓ (*aurea libertas*) |
+| Espagne | **absente** (révision 2026-07-30) | — | — |
+| Piémont | Révolte de 1821 | ~ écart assumé (voie armée) | ✓ (officiers nobles déclassés par la Restauration) |
+| Suisse | Société Helvétique (1761) | ✗ | à réexaminer (définition ED corrigée le 30/07) |
+
+**Ligne de partage, révisée le 2026-07-30.** La formulation antérieure opposait « corps d'ordres » et « classe libérale » et concluait que les secondes échouaient au critère ED. **C'était faux, par erreur sur la définition de l'ED.** L'ED est une *position de classe* au sens Fabry-Portal — la classe qui a perdu du statut dans l'ordre actuel et veut revenir à l'antérieur — indépendante de l'idéologie et de l'époque. Une classe déclassée peut donc formuler sa revendication en langue libérale sans cesser d'être ED : c'est le cas des officiers nobles piémontais de 1821, formés sous Napoléon et déclassés par une Restauration qui récompense la noblesse « non compromise ». Ce qui discrimine n'est pas le vocabulaire mais **quelle** classe ED et **ce qu'elle a perdu** : la Remontrance est le fait de la classe administrative intégrée à l'appareil, dont la perte est une perte de part dans l'exercice du pouvoir. Le carlisme reste écarté non parce qu'il ne serait pas ED — il l'est pleinement — mais parce qu'il est une autre ED, réclamant un exécutif plus pur et non la collégialité.
+
+Le critère réellement discriminant devient donc la **voie employée**. Restent problématiques les cas de répression armée massive, que le test exclut explicitement. Le Piémont y échappe par une justification motivée — la Restauration sarde n'a aucun corps délibérant, le régiment est le seul instrument collectif disponible, et l'absence d'assise territoriale exclut la DGRO. **Cette justification ne doit pas être étendue aux cas qui disposaient d'un canal institutionnel et s'en sont servis** (Bavière 1848). **Ne pas créer de sous-typologie** de Remontrances.
+
+**Note sur l'Espagne (redatation du 2026-07-30)** : pacte oligarchique porté du règlement trastámara (1369) aux **Cortès de Tolède (1480)**. Motif : les mercedes enriqueñas transfèrent la rente royale *du centre vers les grands* — c'est une captation, l'inverse d'un pacte (cf. `phase_oligarchique.md` §Corollaire) ; le pacte est l'acte qui les révoque. Cascade : féodale ~1035-1480 (445 ans), oligarchique 1480-1714 (**234 ans, canonique** — la déviation de +145 ans disparaît, ainsi que l'échafaudage colonial qui l'expliquait), 1er impôt permanent porté de l'alcabala de 1393 aux declaratorias de 1480 (la perpétuation de 1393 laisse l'impôt *aliénable*, donc en pouvoir-patrimoine), acmé porté des Rois Catholiques (~1492) à **Philippe II (~1580)**. Pattern partagé avec l'Angleterre : Magna Carta 1215 puis vrai pacte en 1311. 1er monarque oligarchique porté à **Isabelle Ière et Ferdinand V (1480)** — daté sur le changement de mode de gouvernement, conformément au précédent des PO imposés par un souverain fort (Piémont 1561, France 1428-1429, Israël). Reste ouvert : le mécanisme de la perturbation coloniale (choc d'hétérogénéité ou exutoire). Cf. `nations/espagne/justification.md` §2.
+
 **Nations hors tableau principal** :
-- **Espagne** : Saturation fiscale **1868-1871** (abolition consumos par la Gloriosa + échec tentatives Figuerola pour les remplacer par fiscalité directe universelle), simultanée à la Remontrance. Sources Comín, Tedde de Lorca, Carreras-Tafunell.
+- **Espagne** : Saturation fiscale **1868-1875** (échec de la substitution Figuerola aux consumos abolis, puis réversion imposée par le rejet des oligarchies municipales ; recettes en plateau à partir des années 1870). **Remontrance absente** — la Gloriosa, retenue jusqu'au 2026-07-30, échoue au test sur les trois branches (voie armée, exécutif renversé plutôt que maintenu, six ans de redistribution durable). Le carlisme n'est pas un substitut : il est ED mais réclame un exécutif plus pur, pas la collégialité. Dossier laissé ouvert et insatisfaisant. Sources Comín, Tedde de Lorca, Carreras-Tafunell, Vallejo Pousada.
 - **Sicile** : Saturation fiscale **1781-1786** (Caracciolo tente cadastre général + abolition privilèges fiscaux nobiliaires + droits féodaux, bloqué par baronnage parlementaire), simultanée à la séquence Réformes échouées canonique. Sources Ligresti, Cancila, Aymard.
 - **Hongrie** : Saturation fiscale **1811-1812** (Diète refuse augmentation contribution + exemption nobiliaire tient jusqu'aux April Laws 1848), simultanée à la Remontrance. Sources Dobszay/Poór/Szijártó.
 - **États pontificaux** : Saturation fiscale **1708-1710** (Tassa del Milione de Clément XI, contribution générale sur tous les revenus, bloquée par noblesse et clergé exemptés). Sources Pastor, Treccani, Piola Caselli.
@@ -50,7 +74,7 @@ Pour le détail par nation, voir `references/nations/*/parcours.md` et `referenc
 3. **Absolutismes rentier-patrimoniaux** : Gênes, Suisse cantonale — pas de Saturation au sens strict car pas de machine d'extraction centralisée.
 4. **AR exogène** : Bohême (machine habsbourgeoise), Émilie-Romagne / Bologne (machine pontificale) — la Saturation est celle de la machine porteuse, dont la nation sous tutelle est co-actrice ou co-affectée. Pas une « saturation héritée » distincte, juste la même saturation.
 
-Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1710-1789 ; Angleterre ~1610-1642 ; Espagne ~1868-1931 ; Sicile ~1781-1812 ; Hongrie ~1811-1848 ; États pontificaux ~1708-1798 ; Émilie-Romagne ~1708-1796 ; Autriche ~1790-1848 ; Bohême ~1790-1848 (AR exogène) ; Naples ~1755-1798 (AR endogène court avant interruption napoléonienne) ; Florence ~1774-1796 ; Venise ~1740-1848 ; Israël prolongement -4 à 66.
+Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1749-1789 ; Angleterre ~1610-1642 ; Espagne ~1868-1931 ; Sicile ~1781-1812 ; Hongrie ~1811-1848 ; États pontificaux ~1708-1798 ; Émilie-Romagne ~1708-1796 ; Autriche ~1790-1848 ; Bohême ~1790-1848 (AR exogène) ; Naples ~1755-1798 (AR endogène court avant interruption napoléonienne) ; Florence ~1774-1796 ; Venise ~1740-1848 ; Israël prolongement -4 à 66.
 
 ---
 
@@ -76,7 +100,7 @@ Pour les définitions des mécanismes et effets, voir `references/perturbations.
 | Crécy-Poitiers (~1346) | France | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `bolt` |
 | Azincourt-Troyes (1415-1420) | France | Choc exogène | Reboot 🟤 | Oui | ◆🟤 `bolt` |
 | Intégration Bourgogne-Provence (1477-1481) | France | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
-| Traité d'Utrecht (1713) | France | Choc exogène | Accélération 🔵 | Oui | ◆🔵 `bolt` |
+| Traité d'Utrecht (1713-1726) | France | Choc exogène | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | **Espagne** |
 | Empire colonial américain (1521-1533) | Espagne | Choc d'hétérogénéité | Prolongement 🟠 | Oui | ◆🟠 `open_in_full` |
 | Intégration de l'Aragon (1716) | Espagne | Choc d'hétérogénéité (modéré, proximité culturelle) | Prolongement 🟠 | Non (administratif) | ◆🟠 `open_in_full` |
@@ -130,7 +154,7 @@ Parcours canoniques uniquement (Bohême, Hongrie en débat — non inclus). Pour
 | Venise | Orso Ipato (~726) | Galbaio (~764), Partecipazio (~811), Candiano (~959), Orseolo (~991) | Abolition co-régence (1032) | ~306 ans |
 | Angleterre [1] (avortée) | Ecgberht (~829) | Æthelstan (~930), Edgar (~965), Cnut (~1025) | — (avortée, reboot normand) | ~237 ans |
 | Milan | Landolfo II (979) | Ariberto (~1018) | Commune (1097) | ~118 ans |
-| Espagne | Ferdinand Ier (~1035) | Alphonse VI (~1085), Ferdinand III (1230), Alphonse X (~1265), Alphonse XI (1340) | Trastámara (1369) | ~334 ans |
+| Espagne | Ferdinand Ier (~1035) | Alphonse VI (~1085), Ferdinand III (1230), Alphonse X (~1265), Alphonse XI (1340), Henri III (1393), Álvaro de Luna (1445) | Cortès de Tolède (1480) | ~445 ans |
 | Angleterre [2] | Guillaume (1066) | Henri Ier (~1120), Henri II (~1170), Édouard Ier (~1295) | Ordonnances (1311) | ~261 ans |
 | France | Louis VI (~1108) | Philippe Auguste (~1214), Philippe le Bel (~1295) | Loi salique (1317) | ~220 ans |
 | Autriche [1] (avortée) | Léopold VI (~1198) | — | — (avortée, extinction Babenberg 1246) | ~48 ans |
@@ -155,7 +179,7 @@ Pour les définitions des saillants, voir `references/phase_oligarchique.md`.
 | Milan | Système communal (1097) | Paix de Constance (1183) | Torriani vs Visconti (1240-1277) | Ottone Visconti (1277) |
 | Angleterre | Édouard III (1327) | Édouard III (~1350) | Guerre des Deux-Roses (~1455-1485) | Henri VII (1485) |
 | France | Philippe VI (1328) | François Ier (~1515) | Guerres de Religion (~1562-1598) | Henri IV (1598) |
-| Espagne | Henri II Trastámara (1369) | Rois Catholiques (~1492) | Succession d'Espagne (1700-1714) | Philippe V (1714) |
+| Espagne | Isabelle Ière et Ferdinand V (1480) | Philippe II (~1580) | Succession d'Espagne (1700-1714) | Philippe V (1714) |
 | Piémont | Emmanuel Philibert (1561) | Charles Emmanuel Ier (~1600) | Madamisti vs Principisti (1637-1696) | Victor Amédée II (1696) |
 | Suisse | Tagsatzung (~1501) | Occupation de Milan (~1512) | Paysans / Villmergen (1653-1712) | Patriciat trans-confessionnel (1712) |
 | Bavière | Guillaume IV (1508) | Albert V (~1555) | ~1564-1597 | Maximilien Ier (1597) |
