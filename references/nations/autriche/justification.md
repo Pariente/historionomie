@@ -356,7 +356,7 @@ La durée AR de 70 ans est bien dans la norme (35-100 ans) et proche de la moyen
 
 Les révolutions de 1848 à Vienne, Prague, Budapest, Milan et Venise sont **intégralement écrasées**. Le Reichstag de Vienne/Kremsier est dissous. La constitution octroyée en mars 1849 est révoquée par le Sylvesterpatent du 31 décembre 1851. Le néo-absolutisme Bach s'installe. Le bloc contestataire ne prend jamais le pouvoir. François-Joseph remplace Ferdinand Ier et règne en autocrate. Toutes les caractéristiques d'une remontrance écrasée — la classe parlementaire-bourgeoise tente d'imposer un régime constitutionnel et échoue.
 
-Analogue structurel le plus proche : La Gloriosa espagnole (1868), la Polysynodie française (1715), la Correzione vénitienne (1761).
+Analogue structurel le plus proche : La Gloriosa espagnole (1868) et le Landtag bavarois (1848) — les Remontrances de type constitutionnel-libéral. Le rapprochement avec les Remontrances de corps d'ordres (France 1753, Angleterre 1604, Venise 1761) est plus lâche : ni le contenu réactionnaire ni l'absence de répression armée n'y sont vérifiés (cf. `parcours.md` §Remontrance, note de vérification du 2026-07-29).
 
 ---
 

@@ -147,35 +147,45 @@ L'essor oligarchique s'ouvre par le **Pacte oligarchique** — saillant fondateu
 
 ### Saillant : Pacte oligarchique (saillant d'ouverture)
 
-Pour la première fois, ce sont les oligarques eux-mêmes qui codifient la structure de l'exécutif. C'est la **résolution de la phase féodale** et le **passage à la phase oligarchique** — le PO est par convention de filing le **premier saillant de la phase oligarchique** (sous-phase Essor oligarchique), pas le dernier de la féodale. Pattern systémique avec les autres saillants frontière (1er monarque absolu, Éclatement de l'AR), tous filés sous la phase d'arrivée. La sous-phase Bascule oligarchique reste en féodale comme sous-phase terminale de transition (cf. `phase_feodale.md` §Sous-phase 2).
+Pour la première fois, la structure de l'exécutif est codifiée dans un acte qui engage collectivement les grands. C'est la **résolution de la phase féodale** et le **passage à la phase oligarchique** — le PO est par convention de filing le **premier saillant de la phase oligarchique** (sous-phase Essor oligarchique), pas le dernier de la féodale. Pattern systémique avec les autres saillants frontière (1er monarque absolu, Éclatement de l'AR), tous filés sous la phase d'arrivée. La sous-phase Bascule oligarchique reste en féodale comme sous-phase terminale de transition (cf. `phase_feodale.md` §Sous-phase 2).
 
 #### Définition
 
-Acte par lequel le corps des grands subordonne son pouvoir à un cadre central, lui conférant une stabilité qui survit désormais aux successions — faisant passer le pouvoir du régime patrimonial (lien d'homme à homme renégocié à chaque règne) au régime fonctionnel (fonction attachée à une institution persistante). La codification peut porter sur la transmission du pouvoir et/ou sur son exercice ; c'est l'effet, non l'objet codifié, qui est nécessaire.
+**Acte formel et collectif par lequel les grands acceptent une perte de pouvoir au profit d'un cadre central, faisant passer le pouvoir du patrimoine à l'institution.**
 
-#### Marqueurs
+Trois termes, tous nécessaires.
 
-- **Formalisation** — l'acte fixe des règles de façon explicite et datable ; pas une évolution coutumière diffuse.
-- **Collectivité** — il émane d'une assemblée des grands (diète, états, Landtag, Cortès, parlement, arengo, Lords Ordainers, etc.), non d'une décision unilatérale du détenteur du pouvoir.
-- **Fenêtre de faiblesse** — il opère là où convergent l'homogénéité du corps des grands et l'affaiblissement ou la vacance de l'autorité préexistante. Pour le détail des conditions de Deblonde, cf. `phase_feodale.md` §Conditions simultanées du pacte.
-- **Direction subordonnante** — les grands se contraignent au profit du cadre ; le centre ne cède pas du pouvoir aux grands. *(Test directionnel décisif.)*
-- **Effet de survie aux successions** — après l'acte, l'édifice administratif et la loyauté des grands n'ont plus à être reconstruits à chaque transmission. *(Test empirique : une transmission administrée sans effondrement.)*
+- **Acte formel et collectif** — des règles explicites et datables, émanant d'une assemblée (diète, états, Cortès, parlement, arengo, conseil) ou négociées avec elle. Pas une évolution coutumière diffuse.
+- **Les grands acceptent une perte de pouvoir** — le transfert va des grands vers le cadre. Peu importe qui a l'initiative : ce qui compte est le **sens du transfert**, pas l'identité de celui qui tient la plume.
+- **Du patrimoine à l'institution** — après l'acte, la fonction n'est plus un bien attaché à une personne, renégocié à chaque règne ou aliénable à volonté ; elle est attachée à une institution qui persiste. *C'est le terme décisif : les deux premiers sont des conditions de forme, celui-ci est l'effet qui définit le PO.*
 
-#### Le test directionnel : subordination vs capture
+Le troisième terme se teste de deux façons, l'une empirique et l'autre externe. **Test empirique — la survie aux successions** : après l'acte, l'édifice administratif et la loyauté des grands n'ont plus à être reconstruits à chaque transmission ; on doit pouvoir citer une transmission administrée sans effondrement. **Test externe — le déploiement du moteur** : le cadre ainsi créé s'arme et se finance (cf. infra §Le moteur comme test du PO). Le premier est nécessaire mais non suffisant, le second tranche quand il est ambigu.
 
-Un acte collectif et daté qui transfère du pouvoir du centre vers les grands n'est pas un PO, même s'il satisfait formalisation, collectivité et fenêtre de faiblesse : c'est son inverse. Deux contre-exemples du corpus :
+La codification peut porter sur la transmission du pouvoir et/ou sur son exercice — c'est l'effet, non l'objet codifié, qui est nécessaire.
 
-**Mercedes enriqueñas — Castille, 1369.** Henri II Trastámare, usurpateur dépendant du soutien noble, transfère matériellement les revenus royaux (juros, rentes, terres) à la noblesse. Captation pure par transfert de ressources, sans aucun cadre instituant des obligations en retour. Le vrai PO castillan viendra un siècle plus tard (déclaratoria de Tolède, 1480), précisément par révocation des mercedes.
+#### Ce que la définition n'exige pas
 
-**Magna Carta — Angleterre, 1215.** Les barons imposent à Jean Sans Terre un cadre d'enforcement (conseil des 25), mais asymétrique : il contraint le roi sans contraindre les barons, qui restent libres d'agir individuellement contre lui — d'où la Première guerre des Barons. Limitation constitutionnelle sans cadre subordonnant les grands eux-mêmes. Le vrai PO anglais viendra près d'un siècle plus tard (Ordonnances de 1311), avec un cadre institutionnel — le Parlement — qui régit l'action de tous.
+**Ni que les grands aient l'initiative.** Se subordonner et être subordonné produisent le même passage patrimoine → institution, et le corpus contient les deux : la loi salique (1317) sert Philippe V et n'est pas arrachée par la noblesse ; les Ordonnances anglaises (1311) sont au contraire imposées au roi par les Lords Ordainers ; les Ordini Nuovi piémontais (1561) sont l'œuvre d'un duc en position de force. Exiger l'agentivité des grands rendrait le PO impossible autrement que par imposition baronniale, et exclurait d'office tout le chemin A.
+
+**Ni que l'exécutif soit faible.** La fenêtre de faiblesse — convergence entre homogénéité du corps des grands et affaiblissement ou vacance de l'autorité (conditions de Deblonde, cf. `phase_feodale.md`) — **explique pourquoi le pacte survient à ce moment-là**, elle ne le définit pas. C'est un marqueur d'occasion, pas un critère. Un pacte peut se conclure au sortir immédiat d'une crise, quand le vainqueur est déjà rétabli mais que le règlement porte encore la marque de la fenêtre qui vient de se refermer (cas castillan : guerre de succession 1474-1479, pacte à Tolède en 1480).
+
+#### Corollaire : ce qui n'est pas un PO
+
+**Le transfert en sens inverse — la captation.** Un acte collectif, daté, conclu en pleine fenêtre de faiblesse, mais qui transfère du pouvoir du centre vers les grands, est l'inverse d'un PO. *Mercedes enriqueñas — Castille, 1369* : Henri II Trastámare, usurpateur dépendant du soutien noble, transfère matériellement les revenus royaux (juros, rentes, terres) à la noblesse. Captation pure, sans cadre instituant d'obligations en retour. Le vrai PO castillan viendra un siècle plus tard (Cortès de Tolède, 1480), précisément par révocation des mercedes.
+
+**La limitation sans institution.** Un cadre qui contraint le détenteur du pouvoir sans rien instituer qui régisse les grands eux-mêmes ne produit aucun passage à l'institution. *Magna Carta — Angleterre, 1215* : les barons imposent à Jean Sans Terre un conseil des 25, mais asymétrique — il contraint le roi et laisse les barons libres d'agir individuellement contre lui, d'où la Première guerre des Barons. Le vrai PO anglais viendra près d'un siècle plus tard (Ordonnances de 1311), avec un cadre — le Parlement — qui régit l'action de tous.
+
+**La codification de souverain fort sans effet institutionnel.** Un acte qui a toutes les apparences formelles mais après lequel le pouvoir reste patrimonial. Il se détecte par l'absence de moteur (cf. infra). *Statuta Sabaudiae — Piémont, 1430* : codification ducale suivie de 106 ans sans impôt ni armée permanents.
+
+Les trois échouent sur le troisième terme, chacun à sa manière : la captation le franchit à l'envers, la limitation ne le franchit pas, la codification faible ne le franchit qu'en apparence.
 
 #### Le moteur comme test du PO
 
-La survie aux successions (test empirique du marqueur « Effet de survie ») est **nécessaire mais non suffisante** : elle peut aussi être produite par l'enracinement dynastique d'une féodale tardive (la lignée capétienne traverse minorités et morts précoces sans PO, restant féodale jusqu'en 1317 ; la maison de Savoie absorbe neuf successions entre 1430 et 1536 sans PO). Pour départager un vrai PO d'une coagulation féodale réussie, on dispose d'un test externe : le **déploiement du moteur** (1er impôt permanent + 1re armée permanente).
+La survie aux successions (test empirique du troisième terme) est **nécessaire mais non suffisante** : elle peut aussi être produite par l'enracinement dynastique d'une féodale tardive (la lignée capétienne traverse minorités et morts précoces sans PO, restant féodale jusqu'en 1317 ; la maison de Savoie absorbe neuf successions entre 1430 et 1536 sans PO). Pour départager un vrai PO d'une coagulation féodale réussie, on dispose d'un test externe : le **déploiement du moteur** (1er impôt permanent + 1re armée permanente).
 
 L'asymétrie de rôle l'implique : après un vrai PO, le cadre central s'arme et se finance — les deux marqueurs se déploient typiquement dans le siècle qui suit. Donc si, un siècle après un acte candidat, il n'y a toujours ni impôt ni armée permanents, l'acte n'était pas un PO mais une **codification de souverain fort** (coagulation institutionnelle féodale, équivalent du Parlement de Paris). Le déploiement du moteur **corrobore** le PO ; son absence prolongée le **falsifie**.
 
-Ce test n'est pas circulaire : le PO garde ses critères propres (formalisation, collectivité, fenêtre de faiblesse, direction subordonnante). Le moteur est une corroboration externe, décisive quand ces critères sont ambigus — typiquement quand l'acte candidat ressemble à une codification ducale. **Cas-école : le Piémont.** Les Statuta Sabaudiae (1430) et les Ordini Nuovi (1561) sont deux codifications ducales d'apparence semblable. Mais aucun moteur ne se déploie après les Statuta (106 ans de tasso extraordinaire voté et d'armée féodale commandée par les féodataires) → pas un PO, coagulation institutionnelle féodale ; le moteur se déploie immédiatement après les Ordini Nuovi (gabella del sale + milice paysanne 1566) → vrai PO. Ce qui a changé entre les deux : la correction d'échelle de 1536 qui homogénéise le noyau et réunit la condition de Deblonde.
+Ce test n'est pas circulaire : le PO garde ses trois termes propres (acte formel et collectif, perte de pouvoir acceptée par les grands, passage du patrimoine à l'institution). Le moteur est une corroboration externe, décisive quand ces critères sont ambigus — typiquement quand l'acte candidat ressemble à une codification ducale. **Cas-école : le Piémont.** Les Statuta Sabaudiae (1430) et les Ordini Nuovi (1561) sont deux codifications ducales d'apparence semblable. Mais aucun moteur ne se déploie après les Statuta (106 ans de tasso extraordinaire voté et d'armée féodale commandée par les féodataires) → pas un PO, coagulation institutionnelle féodale ; le moteur se déploie immédiatement après les Ordini Nuovi (gabella del sale + milice paysanne 1566) → vrai PO. Ce qui a changé entre les deux : la correction d'échelle de 1536 qui homogénéise le noyau et réunit la condition de Deblonde.
 
 #### Cas limite : « suzerain collectif »
 

@@ -308,10 +308,10 @@ Question ouverte : faut-il documenter ce pattern comme une variante de la config
 Le **critère de saturation d'extraction fiscale** comme borne phasique Impérialisme → AR a été ajouté à `phase_absolutiste.md` (saillant canonique « Saturation fiscale », attribué à Martin sous le nom « Lanoue de Suremain »). La Remontrance y est repositionnée comme manifestation politique contingente, généralement simultanée à la Saturation fiscale, mais qui peut être absente quand la classe administrative intermédiaire est embryonnaire ou étouffée (cas Estense, Florence, Gênes, Venise différée).
 
 Vérifications cross-corpus déjà effectuées (recherche cross-cases sources externes) :
-- France 1648 : saturation (banqueroute Mazarin) ≈ Remontrance (Chambre Saint-Louis) — simultané
+- France 1749-1751 : saturation (vingtième de Machault vidé) ≈ Remontrance (Grandes Remontrances 1753) — quasi-simultané. *Corrigé le 2026-07-29 : la ligne portait auparavant « France 1648 : banqueroute Mazarin ≈ Chambre Saint-Louis », datation abandonnée — 1648 est la DGRO française (Fronde), en sous-phase d'absolutisation.*
 - Angleterre 1610-1635 (échec Great Contract → ship money) ≈ Petition of Right 1628 — quasi-simultané
 - Bavière ~1835-1840 (blocage Landtag Ludwig I) ≈ Remontrance 1848 — quasi-simultané (8-13 ans)
-- Espagne 1898 (Désastre post-Cuba) ≈ Villaverde 1899 — strictement simultané
+- Espagne 1868-1875 : saturation (échec de la substitution Figuerola + réversion aux consumos) ≈ Remontrance **absente**. *Corrigé le 2026-07-30 : la ligne portait « Espagne 1898 ≈ Villaverde 1899 », datation que le dossier Espagne lui-même rejetait.*
 - Venise ~1740 (post-Trieste port franc 1719, dette 71M ducats) → Querini 1761 — décalé ~20 ans (oligarchie patricienne étouffe la Remontrance en interne)
 
 Audit du corpus existant à reprendre dans une session ultérieure : certaines bornes AR documentées (France 1715, Espagne 1874, Bavière 1777, Venise 1761) pourraient mériter révision sous critère rigoureux.

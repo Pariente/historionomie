@@ -247,7 +247,7 @@ Cas typique de la fin d'exutoire militaire : perte d'une possession continentale
 - *Sicile* (post-1296) : oligarchique 382 ans sous tutelles successives, absolutiste fragmenté à partir de 1678 avec maturation rapide.
 - *Naples* : oligarchique 290 ans, absolutiste 124 ans cumulé.
 
-**Contre-exemple** : Espagne pré-Nueva Planta (oligarchique 345 ans, absolutiste 217 ans non compressé). La monarchie composite Habsbourg n'est pas une tutelle étrangère mais une centralisation incomplète endogène ; la castillanisation est state-driven ; l'absence d'absorption laisse la phase absolutiste courir sa pleine durée. Le mécanisme suppose tutelle exogène + culture progressant autonomement de l'État, pas une simple lenteur de centralisation.
+**Contre-exemple** : Espagne pré-Nueva Planta (oligarchique 234 ans, absolutiste 217 ans non compressé). La monarchie composite Habsbourg n'est pas une tutelle étrangère mais une centralisation incomplète endogène ; la castillanisation est state-driven ; l'absence d'absorption laisse la phase absolutiste courir sa pleine durée. Le mécanisme suppose tutelle exogène + culture progressant autonomement de l'État, pas une simple lenteur de centralisation.
 
 **Affichage sur la frise** : pas de marqueur losange propre. La condition est mentionnée dans la description des phases oligarchique (prolongement) et absolutiste (compression) concernées. La durée des phases reflète le mécanisme, comme pour l'exutoire.
 
