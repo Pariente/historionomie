@@ -127,6 +127,8 @@ Pour **chaque scénario**, appliquer les contrôles suivants. Le scénario qui p
 
 Pour chaque phase du scénario, vérifier la présence des saillants canoniques attendus et la satisfaction des marqueurs.
 
+> **⚠️ Plancher d'attestation ≠ date d'instauration.** Pour tout saillant antérieur à ~1300 — et en particulier les saillants de moteur (1er impôt permanent, 1re armée permanente) — la première mention documentaire est un **plancher**, pas une date de création. L'écart peut être considérable : l'estimo du contado florentin est attesté dès 1259 alors que les premiers registres conservés datent de 1350. Dater un saillant sur le premier document survivant biaise donc **systématiquement vers le tard** toutes les bornes de phase des nations pré-modernes. Convention : distinguer explicitement *date d'attestation* et *date d'instauration estimée*, borner l'incertitude amont dans la description du saillant plutôt que de l'écraser sur le document, et se rappeler qu'un saillant graduel reste falsifiable dès lors qu'on sait nommer l'état-avant et l'état-après (cf. `phase_oligarchique.md` §Note de datation).
+
 #### Phase féodale
 **Saillants attendus** : Éveil féodal, Pic féodal (un ou plusieurs), Crise féodale (une ou plusieurs), Pacte oligarchique.
 **Vérifications** :
@@ -343,7 +345,7 @@ Ajouter un objet JS dans le tableau `nations` :
   - `complete` / `Complet` — parcours stabilisé, validé par Thomas.
   - `draft` / `À valider` — parcours rédigé, en attente de relecture.
   - `draft` / `Proposition` — parcours posé comme hypothèse, plus exploratoire qu'`À valider`.
-  - `debate` / `Débat` — parcours actif en débat (cf. mémoire `project_boheme_debat.md`).
+  - `debate` / `Débat` — parcours actif en débat (cf. mémoire `project_parcours_en_debat.md`).
 - `offset` : `[dx, dy]` en pixels, optionnel, pour décaler le pin et son label quand la zone est dense (Italie du Nord, Europe centrale). À ajuster visuellement après vérification.
 
 ### Procédure synthétique

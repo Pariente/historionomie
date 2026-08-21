@@ -273,9 +273,9 @@ La GR canonique 1956 et l'Écrasement 1956 sont encodés comme deux saillants di
 
 Pattern structurellement identique à l'exutoire militaire hongrois. Le Stato da Mar vénitien (territoires d'outre-mer administrés par provveditori issus du patriciat) canalise l'énergie du patriciat vénitien vers la projection extérieure et prolonge l'essor oligarchique vénitien sur des siècles. La Hongrie applique le même mécanisme via la projection angevine offensive puis les Confins militaires anti-ottomans défensifs.
 
-### Bohême — RN 2 sous tutelle soviétique
+### Tchéquie — RN 2 sous tutelle soviétique
 
-La Hongrie est structurellement proche de la Bohême pour la RN 1918-1990 : toutes deux ont une RN intercalée entre Autriche-Empire et influence soviétique, avec tutelle soviétique au milieu et Glorieuse Révolution tardive (1989-1990 pour la Hongrie, 1989-1993 pour la Bohême).
+La Hongrie est structurellement proche de la Tchéquie pour la RN 1918-1990 : toutes deux ont une RN intercalée entre Autriche-Empire et influence soviétique, avec tutelle soviétique au milieu et Glorieuse Révolution tardive (1989-1990 pour la Hongrie, 1989-1993 pour la Bohême).
 
 ### Castille pré-Nueva Planta et Bohême pré-Haugwitz — absolutisme composite
 

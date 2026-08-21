@@ -1,311 +1,252 @@
 # Justification — Parcours de Florence
 
+> **Statut : parcours en débat actif (août 2026).** La lecture ci-dessous résulte d'une refonte complète qui a déplacé le 1er monarque absolu de Laurent (1480) à Cosme Ier (1537). Elle n'a pas encore été confrontée au sous-corpus italien. Ne pas invoquer Florence comme référence comparative canonique tant que le débat n'est pas refermé.
+
 ## Cadrage et scénario retenu
 
-Le scénario retenu (lecture B révisée — « 1er MA Laurent + AR sans ruine financière ») a émergé d'une procédure multi-agent (Collecteur Agent 1, Évaluateur Agent 2, synthèse parent) suivie de plusieurs itérations en dialogue avec Thomas qui ont substantiellement amendé la lecture initiale.
+**Périmètre temporel** : 1014 (Florence devient un centre politique, après le transfert de résidence d'Hugues le Grand) → 1860 (plébiscite et fusion dans le Parcours italien). La borne de fin n'est pas la perte de souveraineté politique mais la fusion culturelle.
 
-**Périmètre temporel** : ~Ve siècle (effondrement romain en Toscane) → 1860 (plébiscite et fusion dans le Parcours italien). La borne de fin n'est pas la perte de souveraineté politique mais la fusion culturelle — Florence reste capitale du Royaume d'Italie 1865-1871, mais le Parcours toscan endogène cesse d'être un sujet historionomique distinct dès le plébiscite.
+**Séquence retenue** :
 
-**Particularités structurelles** :
-- Cité-État dans un environnement qui passe progressivement aux États territoriaux (XVe-XVIe). Conformément à `parcours.md` §Taille, signature attendue : phase féodale courte, phase oligarchique éventuellement prolongée par exutoire, phase absolutiste avec forme atypique, résolution exogène possible, RN contrariée.
-- Patriciat avec assise territoriale partielle (les fuorusciti gardent des biens et clientèles en Toscane et hors-Toscane) — ce qui rend possible une DGRO (Montemurlo 1537), comme à Milan, contrairement à Venise/Gênes.
+| Phase | Bornes | Durée | Typique |
+|---|---|---|---|
+| Pré-féodale | 1014-1115 | 101 ans | 90-120 |
+| Féodale | 1115-1293 | 178 ans | ~200 |
+| Oligarchique | 1293-1537 | 244 ans | ~200 |
+| Absolutiste | 1537-1807 | 270 ans | ~200 |
+| Révolution Nationale | 1807-1860 | 53 ans | 25-80 |
+
+Aucune durée aberrante. Les deux écarts (oligarchique +44, absolutiste +70) ont chacun un mécanisme identifié et daté, exposés ci-dessous.
+
+**Particularité structurelle** : cité-État dans un environnement qui passe progressivement aux États territoriaux. Conformément à `parcours.md` §Taille : absolutisme fragile face aux chocs exogènes, guerre sociale arbitrée par les voisins, RN contrariée, et disponibilité permanente de la grammaire révolutionnaire.
 
 ---
 
 ## Hésitations principales
 
-### 1. Phase pré-féodale très longue (~615 ans)
+### 1. Pourquoi Florence part ~200 ans après Venise, Gênes et Milan
 
-L'extension de la pré-féodale toscane jusqu'à 1115 est inhabituelle (vs Venise 274 ans, Milan 91 ans). Elle s'explique par la subordination prolongée de Florence à des autorités supra-toscanes successives (duché lombard à siège lucquois, marquisats carolingien et attonide, marche canossienne). La nation toscane ne dispose pas de centre politique propre tant que ces structures sont en place. Mathilde de Toscane (1077-1115) est un chef supra-régional effectif, mais sa marche couvre Toscane + Émilie et son Parcours est porté par la dynastie Canossa, pas par une nation toscane endogène. La fin de la pré-féodale coïncide avec la mort de Mathilde (1115) qui ouvre la fenêtre de l'autonomisation communale.
+Venise 1032, Gênes 1097, Milan 1097, Florence 1293. L'écart n'est pas une anomalie florentine mais la conséquence d'une différence structurelle : **Florence est la seule des quatre à être coiffée d'une autorité supra-régionale opérante siégeant ailleurs.**
 
-### 2. Crise féodale terminale resserrée (1280-1282)
+- **Venise** n'a jamais été conquise par les Lombards ni intégrée à l'Empire carolingien ; sous autorité byzantine nominale, elle se donne un doge dès le VIIIe siècle.
+- **Milan** a l'archevêque — puissance supra-locale qui est milanaise et siège à Milan.
+- **Gênes** relève d'un marquisat obertenghe faible et distant ; ses vicomtes s'autonomisent tôt.
+- **Florence** est une ville secondaire dans une marche de Toscane qui fonctionne réellement et **qui siège à Lucques**. Tant que cette structure tient, Florence n'a pas de pouvoir central propre.
 
-La phase féodale florentine 1115-1250 contient deux types de crises distincts :
-- **Boucle féodale** : factionnalisme magnatial guelfe/gibelin (1215-1268) qui prolonge la phase sans la résoudre. Sociétés des tours, fidélités lignagères, guerres entre factions (Montaperti 1260, Bénévent 1266), élimination des Hohenstaufen (Conradin 1268).
-- **Crise féodale terminale** : échec de la Paix du cardinal Latino (1280) à réconcilier les factions, impasse persistante du système consulaire-podestariat à contenir le factionnalisme magnatial. Culmine avec le Secondo Popolo de juin 1282.
+Le déblocage est double et daté : transfert de résidence d'Hugues le Grand à la fin du Xe siècle, qui fait de Florence un centre pour la première fois ; puis mort de Mathilde en 1115 sans héritier, qui vide la marche.
 
-La bascule oligarchique resserrée (1282-1293, ~11 ans) place le PO juste après la crise terminale — dans la norme. La distinction boucle / crise terminale corrige une hésitation initiale qui faisait une bascule de 25-78 ans (trop longue).
+Règle falsifiable qui en découle : *toute cité-État coiffée d'une structure supra-régionale siégeant ailleurs entre en Parcours tard.*
 
-### 3. Acmé oligarchique précoce (1325-1339)
+**Ce qu'il ne faut pas faire** : comparer des dates de PO entre nations qui n'entrent pas en Parcours au même moment. Seule la séquence interne est comparable, et celle de Florence est canonique. La formule « PO décalé de +200 ans » de la version antérieure de ce fichier comparait ce qui n'est pas comparable.
 
-L'acmé bancaire est positionnée à ~0.32 dans la phase oligarchique (1293-1480). Position précoce par rapport au corpus des cités-États italiennes (Venise Foscari ~0.64, Gênes Meloria ~0.93). Elle s'explique par la nature de l'exutoire : Florence n'a pas d'empire territorial à conquérir et à digérer, seulement un réseau bancaire international (Bardi, Peruzzi, Acciaiuoli) qui sature en 60 ans (~1280-1339). La faillite de 1339 et la Peste de 1348 ferment l'exutoire avant que la phase oligarchique n'ait achevé son tiers.
+### 2. Borne de départ à 1014 — soft, mais non porteuse
 
-**Alternative écartée** : acmé oligarchique = Laurent le Magnifique (1469-1492). Écartée parce que l'acmé doit refléter une projection oligarchique combinée (puissance externe maximale du souverain + nation), or Laurent ne dispose pas d'expansion territoriale (Florence stabilisée à Livourne 1421) et l'effondrement bancaire dès 1339 a clôt l'exutoire principal. De plus, dans la lecture finale retenue, Laurent est 1er MA (en phase absolutiste), donc ne peut être acmé oligarchique.
+L'étiquetage « pré-féodale, sous-phase Marche canossienne » est hybride : une marche est une seigneurie supra-régionale, la traiter comme percolation élitaire est inconfortable. Si l'on voulait être rigoureux, la pré-féodale commence bien plus tôt, à l'effondrement de l'ordre antique. 1014 (Tedaldo de Canossa) marque en pratique le moment où Florence devient observable comme centre politique.
 
-### 4. Distinction polarisation / guerre sociale
+**Non porteur** : la féodale commence en 1115 dans toutes les lectures, et tout l'aval est inchangé. À consigner, pas à résoudre en priorité.
 
-La phase oligarchique post-1339 a été révisée pour distinguer :
-- **Polarisation** : 1339-1433 (~94 ans, longue) — sous régime Albizzi, polarisation contenue par cooptation patricienne restreinte (~70 familles). Émergence des nouvelles élites bancaires médicéennes.
-- **Guerre sociale** : 1433-1480 (~47 ans, dans la norme) — Albizzi vs Médicis. Déclencheur : exil-retour de Cosme l'Ancien (1433-1434). Mode d'expression non-armé : coups de palais, conjurations (Pitti 1466, Pazzi 1478), répressions sanglantes. Résolution par triomphe médicéen progressif culminant dans la création des Settanta (1480, Laurent).
+### 3. Pacte oligarchique — Ordonnances de Justice (1293), contre la commune consulaire (1138)
 
-La lecture initiale fusionnait polarisation et guerre sociale (1382-1537, ~155 ans, ultra-longue). La distinction est rendue possible par la reconnaissance que la stabilité médicéenne 1434-1494 n'est pas une « paix gelée » dans une guerre sociale en cours mais une consolidation absolutisante d'une faction qui a gagné la guerre sociale 1433-1480.
+Candidat concurrent sérieux, porté par la lecture Fabry : la commune consulaire de 1138 (douze consuls, Credenza, parlamentum). Départagé par les trois termes de la définition.
 
-### 5. 1er monarque absolu — Laurent le Magnifique (appareil familial-bancaire)
+| | 1138 | 1293 |
+|---|---|---|
+| Acte formel et collectif | ✗ — première *mention* de consuls, à l'occasion d'une ligue de cités toscanes ; les *boni homines* commencent à être **appelés** consuls ; premiers textes statutaires seulement en 1159 | ✓ — texte daté du 18 janvier, voté par les Conseils du Comune et du Popolo, promoteur nommé (Giano della Bella) |
+| Les grands acceptent une perte de pouvoir | ambigu — les mêmes hommes, rebaptisés | ✓ — sens du transfert correct : des lignages vers le cadre central |
+| Du patrimoine à l'institution (terme décisif) | ✗ — régime **aboli en 1193** au profit d'un podestat étranger, faute d'avoir contenu les lignages | ✓ — cadre tenu 239 ans, jusqu'en 1532 |
 
-Laurent le Magnifique (1469-1492) est retenu comme 1er MA en 1480, avec l'argument de la **lecture fonctionnelle du test discriminant absolutiste** :
+Le troisième terme est décisif et l'écart est net. Preuve la plus forte côté 1293 : **toutes les factions qui prennent le pouvoir ensuite le font en manipulant les bourses**, c'est-à-dire depuis l'intérieur de la procédure. Cosme l'Ancien ne l'abolit pas, il la truque. Il faut attendre 1532 pour qu'un pouvoir ose la supprimer.
 
-1. **Préséance de l'administration centrale (de facto et de jure)** : satisfaite. Le Conseil des Settanta (1480), magistrature à vie cooptée, prend le contrôle des affaires d'État. Les squittini contrôlés par les accoppiatori médicéens, la sélection des Priori. La Banque Médicis joue le rôle d'appareil parallèle (lever des fonds, récompenser alliés, étrangler opposants, conduire la diplomatie financière).
-2. **Capacité de l'exécutif à agir sans frein juridique des oligarques** : satisfaite. Laurent décide en pratique, le Settanta absorbe les décisions structurantes.
-3. **Perte de l'autonomie fiscale des entités décentralisées** : centralisation Laurent 1471 (Cinque Conservatori).
-4. **Résolution de la guerre sociale par nouveau cadre central** : les Settanta constituent un nouveau cadre exécutif supra-Signoria qui transcende le clivage palleschi/anti-médicéens. La conjuration des Pazzi (1478) écrasée sanglantement consolide.
-5. **Classe administrative distincte** : la Banque Médicis joue ce rôle dans une cité-État où la distinction public/privé est faible — appareil familial-bancaire avec succursales internationales (Rome, Genève/Lyon, Bruges, Londres, Avignon, Milan, Venise) qui sert l'État médicéen sans appartenir à l'État formel.
+Comparaison avec les cas canoniques — loi salique (1317), Ordonnances anglaises (1311), Cortès de Tolède (1480) : tous sont des textes datés émanant d'une assemblée, qui changent la règle du jeu pour l'élite comme classe et qui tiennent ensuite. 1293 a les quatre traits, 1138 n'en a aucun.
 
-**Configuration appareil familial-bancaire fragile** : Laurent est chef de la faction palleschi gagnante. Le cadre dépend de sa personne et de la solidité de la Banque. Il s'effondre 14 mois après la succession à Pierre II (expulsion 1494). Pattern Milan-like (Visconti puis Sforza) — absolutisme personnel instable qui boucle sous chocs exogènes.
+**Objection traitée** : « les magnats n'acceptent pas, ils sont exclus ». Le cadre répond que l'initiative des grands n'est pas requise — les Ordonnances anglaises de 1311 sont *imposées* au roi. Ce qui compte est le sens du transfert.
 
-**Alternatives écartées** :
-- *Configuration figure dynastique stable* : écartée pour Laurent — le cadre s'effondre 14 mois après son fils sans appui exogène structurant. Cette stabilité ne survient qu'avec Cosme Ier en 1537.
-- *Configuration consortium oligarchique* : testée. Le Monte Comune (1345) consolide la dette publique en parts négociables détenues par le patriciat, mais n'absorbe pas les fonctions d'État au sens où le Banco di San Giorgio génois capture l'État. Les fonctions étatiques restent à la Signoria, aux Balìe, aux gouverneurs. Configuration partielle uniquement, écartée.
-- *Cosme Ier comme 1er MA (1537)* : écarté comme 1er MA distinct, retenu comme **consolidateur post-DGRO Sforza-like** dans la même phase absolutiste. La lecture initiale faisait de Cosme Ier le 1er MA en configuration hybride ; l'argumentation a montré que la Banque Médicis et les Settanta satisfont fonctionnellement le test discriminant dès Laurent.
+**Fausse piste écartée, soulevée puis retirée en cours d'analyse** : rapprocher 1293 de la Serrata vénitienne de 1297. La Serrata gère l'appartenance à l'intérieur d'un cadre établi ; les Ordonnances brisent un type social — la consorteria lignagère — par responsabilité collective, cautions de parentèle, procédure sommaire et milice du Gonfalonnier. Opérations différentes.
 
-### 6. Boucle d'instabilité absolutiste 1494-1537 par chocs exogènes
+**Ce que 1293 supprime est une aristocratie lignagère armée** (sociétés des tours, guerre privée, châteaux du contado). Une bascule qui consiste à dissoudre des clans armés lignagers est la sortie de la féodalité, pas l'entrée dans l'absolutisme — et la persistance de ces structures jusqu'en 1293 est une preuve positive datée que Florence était encore féodale.
 
-L'instabilité 1494-1537 (expulsions et retours médicéens) est causée par **chocs exogènes successifs**, pas par défaut intrinsèque de l'absolutisme installé. Chaque bascule a une cause exogène identifiable :
-- **1494** : invasion française (Charles VIII)
-- **1512** : troupes hispano-pontificales de Jules II (sac de Prato)
-- **1527** : Sac de Rome impérial libère Florence
-- **1529-1530** : siège impérial-pontifical de Charles Quint
-- **1532** : duché Alexandre par bulle impériale
-- **1537** : confirmation impériale de Cosme Ier après Montemurlo
+### 4. Les deux saillants de moteur
 
-C'est exactement le pattern Gênes (« chaque faction en déclin appelle une puissance étrangère pour se relever »). L'appareil familial-bancaire laurentien est fragile face aux chocs exogènes mais le cadre absolutiste sous-jacent (clientèle médicéenne, Banque, principe d'institution exécutive supra-oligarchique) survit aux dominations et se reconstitue, jusqu'à consolidation Sforza-like par Cosme Ier (1537).
+Absents de la version antérieure du parcours, ajoutés en août 2026.
 
-### 7. DGRO Montemurlo (1537)
+**1er impôt permanent — régime de gabelles, 1293-1338, ancré à 1315.** Villani, qui écrit avant 1348, atteste qu'aucune gabelle n'était perçue avant 1293. En 1315 la bascule est verrouillée (citoyens définitivement dispensés de l'estimo direct, maintenu pour le seul contado). En 1338, l'indirect fournit les trois quarts de la recette publique. Preuve rétrospective d'irréversibilité : on ne consolide pas une dette publique en parts négociables (Monte Comune 1345) sans flux permanent adossé.
 
-Montemurlo (1er août 1537) est canoniquement la DGRO — **dernière révolte armée des oligarques après la consolidation du 1er MA**. 57 ans après Laurent (1480), dans la fenêtre canonique post-MA (analogue à Della Torre 1302-1311 à Milan, 25 ans après Ottone Visconti ; Pilgrimage of Grace ~50 ans après Henri VII en Angleterre ; Fronde 50 ans après Henri IV en France).
+**Borne basse incertaine, explicitement consignée.** L'estimo du contado est attesté dès 1259 — extraction sur les sujets, antérieure au PO, qui ne qualifie pas. Un faisceau d'indices non probants remonte plus haut (le cercle d'enceinte de 1173-1175 canalise le trafic par des points contrôlables et suppose un financement soutenu). Aucune attestation ne permet de trancher entre consentement-régime et consentement-événement pour ces prélèvements antérieurs. Rappel méthodologique : un plancher d'attestation n'est pas une date d'instauration — les premiers registres d'estimo conservés datent de 1350, soit 91 ans après la première attestation. Référence à consulter : Barbadoro, *Le finanze della repubblica fiorentina* (1929).
 
-Critères satisfaits :
-- **Caractère armé** : oui, bataille rangée
-- **Assise territoriale** : oui, les fuorusciti Strozzi et autres avaient conservé pendant l'instabilité 1494-1537 des biens et clientèles en Toscane et hors-Toscane, alliances avec puissances rivales de Charles Quint
-- **Caractère terminal** : oui, après Montemurlo plus de force armée oligarchique organisée — exécution de Strozzi (1538), confiscations massives, désarmements définitifs
+**1re armée permanente — condotte de longue durée, ~1350.** Le cliché machiavélien est réfuté : Florence entretenait des armées opérationnelles toute l'année, avec contrats de longue durée et mêmes capitaines sur des décennies, les troupes indigènes gardant un poids réel (Caferro, *Journal of Modern History* 80/2, 2008). Deux fausses pistes tardives écartées : l'*ordinanza* de Machiavel (1505-1507) et les bande medicee (1552) sont des refondations sur base indigène conscrite, pas la première permanence.
 
-La lecture initiale classait Montemurlo comme « DGRO immédiate de Cosme Ier en début de phase absolutiste », ce qui contredisait la règle structurelle (« DGRO arrive APRÈS la résolution de la guerre sociale par le 1er MA, pas pendant »). La révision place correctement Montemurlo dans le pattern post-MA, en cohérence avec le corpus.
+**Caractère décisif pour l'aval** : cette force permanente est **louée, non possédée**. Le centre paie mais n'a pas la propriété de ses moyens de coercition, qu'il achète sur un marché où ses propres oligarques peuvent surenchérir et où toute puissance étrangère peut entrer. C'est le mécanisme de la boucle 1494-1537, et l'entrée réelle en absolutisme se date au moment où le centre cesse de louer pour posséder.
 
-### 8. AR long sans ruine financière endogène
+**Position de l'armée dans la séquence** : ~1350 tombe onze ans après la fin de l'essor (1339, faillite Bardi-Peruzzi et Peste), donc au début de la polarisation. Écart assumé, dans la fenêtre du siècle suivant le PO.
 
-L'AR florentin (1670-1796, ~126 ans) est l'un des plus longs du corpus mais s'aligne avec Venise (130) et Piémont (113). La cause structurelle est l'**absence de ruine financière endogène** :
+### 5. Guerre sociale 1433-1537 — polarité corrigée
 
-- **Discrédit** : satisfait au moins partiellement. Cosme III (1670-1723) est bigot, surfiscalité, déclin économique, lois somptuaires absurdes, lois anti-juives partielles, déclin démographique. Échecs léopoldins systémiques : constitution Gianni 1779-1782 abandonnée, émeute Prato 1787 contre les réformes religieuses, émeutes Florence/Livourne 1790. Légitimité érodée.
-- **Ruine financière** : NON satisfait. Cosme III tend les finances mais ne les ruine pas. Pierre-Léopold (1765-1790) **assainit activement** : abolition des fidéicommis (1788) libère du capital foncier, suppression des couvents et ventes de biens ecclésiastiques alimentent le trésor, modernisation du Catasto rationalise la fiscalité. À l'arrivée de Bonaparte (1796), le Grand-Duché léopoldin est financièrement sain.
+**La version antérieure de ce fichier avait les deux camps à l'envers**, ayant classé sur le type d'actif plutôt que sur la dépendance au centre.
 
-Sans ruine financière, l'éclatement endogène est impossible (le régime peut continuer à acheter ses soutiens). La sortie est **obligatoirement** par choc exogène (Napoléon 1796), ce qui produit une RN avortée par absorption italienne plutôt qu'aboutie.
+Le noyau ottimate (Albizzi) est **prébendier** : intérêts du Monte financés par les gabelles pesant sur la consommation populaire ; emprunts forcés de guerre convertissant l'impôt en rente patricienne, la décision de guerre appartenant aux Dieci ; contrôle des squittini donc de l'accès aux offices salariés du dominio ; affermage des gabelles ; législation de l'Arte della Lana verrouillant la sujétion des sottoposti depuis 1382.
 
-**Pattern « petite nation italienne »** : taille modeste = budget contenu (pas d'armée massive, pas de cour royale dispendieuse, pas de guerre coûteuse) = pas de ruine financière endogène = AR long jusqu'à choc exogène = RN avortée par absorption. Vérifié sur Florence, Venise, Piémont.
+La fortune médicéenne est **patrimoniale** : compte de la Curie (*depositario generale*, obtenu dans les années 1410) et réseau de succursales étrangères — revenu tiré d'un centre extérieur, insensible à l'exclusion du centre florentin.
 
-### 9. Despotisme éclairé léopoldin = AR mature (pas AR réformateur prolongateur)
+**Test opératoire de la proscription**, qui donne un gradient conforme à la composition d'actif :
 
-Le règne réformateur de Pierre-Léopold (1765-1790) est canoniquement classé comme **marqueur d'AR mature** : tentatives massives de réformes qui **échouent systémiquement** par incapacité de la nation à se réformer en AR. Pattern Louis XVI (Turgot, Necker, Calonne, Brienne — tout échoue), Joseph II (révolte des Pays-Bas, retour partiel), Charles III d'Espagne (réformes mitigées sous Charles IV).
+| Famille | Composition | Effet de la proscription |
+|---|---|---|
+| Albizzi | offices, Monte, décision de guerre | éteints comme force politique dès 1434 |
+| Strozzi | terres et Monte, banque minoritaire (Palla Strozzi au catasto de 1427 : 54 fermes, 30 maisons, 45 000 fl de capital bancaire sur ~163 000 fl bruts) | survivent un siècle de proscriptions, éliminés en 1537-1538 |
+| Médicis | banque à centre étranger | Cosme banni en 1433, rentre en treize mois |
 
-Pour Florence : seule l'abolition de la peine de mort + torture (Code Léopoldin 1786) est durable. Tout le reste s'enlise — constitution Gianni abandonnée, émeute Prato contre les réformes religieuses, suppressions de couvents avec résistance, émeutes anti-réformes 1790, recul partiel sous Ferdinand III post-1790.
+Les Strozzi sont de l'**agrégation**, pas une impureté du clivage : une famille patrimoniale a intérêt à rejoindre le camp prébendier, puisque si ce camp l'emporte elle sera du côté qui distribue et que son assise propre ne risque rien. Cf. `elites.md` §Le clivage est économique par définition.
 
-La lecture initiale faisait de l'AR léopoldin un « AR réformateur prolongateur » qui prolongeait la phase absolutiste sous forme moderne. C'était une erreur : le despotisme éclairé est le pattern AR mature, pas un mécanisme de prolongement. La cause de la longueur de l'AR n'est pas la modernisation léopoldine, c'est l'absence de ruine financière (point précédent).
+**Enjeu** : la Seigneurie et les conseils ne sont pas des prébendes, ils sont l'organe qui les distribue. Les prébendes réelles sont les offices salariés du dominio, l'affermage des gabelles, l'assiette des prestanze comme arme politique, les intérêts du Monte, les bénéfices ecclésiastiques.
 
-### 10. Saillants partiellement absents en phase absolutiste
+### 6. Durée de la guerre sociale — 104 ans, prolongée par chocs exogènes
 
-Deux saillants attendus sont structurellement absents ou faibles dans la phase absolutiste :
-- *Fin de l'expansion absolutiste* : structurellement absent — la Toscane n'a pas d'expansion absolutiste majeure (territoire stabilisé à Sienne 1555). Acquisitions tardives (Stato dei Presidi 1815, Lucques 1847) faites pendant la sous-phase RN — pas une expansion phasique active.
-- *Remontrance* : structurellement absente — **analyse à deux pôles**. La Remontrance suppose un *corps institutionnel intégré* qui formule la pétition + un *sommet exécutif stable* à contester. Sur les 14 nations du corpus, 10 présentent une Remontrance attestée (recensement révisé le 2026-07-30) (France Grandes Remontrances 1753, Angleterre Apology of the Commons 1604, Venise Correzione 1761, Bavière Landtag 1848, Piémont Révolte 1821, Milan République Ambrosienne 1447, Hongrie dissolution diète 1811, Suisse Société Helvétique 1761, Autriche 1848, Israël prolongement Ambassade à Auguste -4) ; quatre en sont privées : Espagne (Gloriosa écartée le 2026-07-30 : voie armée, exécutif renversé, redistribution durable ; carlisme non substituable — ED mais réclamant un exécutif plus pur, pas la collégialité), Israël antique (phase interrompue par Josias en -609), Florence (manque du pôle corps : patriciat ancien éliminé à Montemurlo 1537, Grand-Duché sans parlement, noblesse de robe ducale embryonnaire — Marzi, Campana, Grifoni, Torelli — secrétaires personnels sans organe collégial formel), Gênes (manque du pôle sommet : doge biennal tournant, patriciat collectivement souverain via consortium oligarchique institutionnalisé). Florence et Gênes présentent l'absence de Remontrance par des chemins structurellement opposés. Venise n'est *pas* dans ce pattern : elle a sa Remontrance précisément parce qu'elle a les deux pôles (Maggior Consiglio + barnabotti pour le corps, Inquisiteurs d'État pour le sommet). À Florence, la transition impérialisme → AR se fait par épuisement dynastique et déclin économique sous Cosme III, sans saillant institutionnel-contestataire ; les tentatives réformatrices léopoldines (constitution Gianni 1779-1782, réformes religieuses) sont des initiatives par le haut, pas des Remontrances d'un corps intégré.
+Écart de +57 ans sur la norme du corpus (21 à 47 ans). Mécanisme identifié et daté : **chaque fois qu'une faction est sur le point de l'emporter définitivement, une puissance extérieure renverse la table.**
 
-### 11. Structure RN — refonte 1807-1860
+1494 (Charles VIII), 1512 (troupes hispano-pontificales de Jules II, sac de Prato), 1527 (le Sac de Rome libère Florence), 1529-1530 (siège impérial-pontifical de Charles Quint). Codés en deux perturbations `choc_exogene` + `prolongement`, sur l'ouverture et la fermeture de la boucle.
 
-La RN florentine s'étale sur ~53 ans (1807-1860), articulée en deux sous-phases. Refonte corrigeant la lecture antérieure qui (a) datait l'Éclatement à 1796 (erroné — l'occupation de Livourne ne brise pas l'AR léopoldin), (b) codait le Viva Maria comme Phase aiguë (disqualifié canoniquement car contre-révolutionnaire), (c) éclatait le cycle en quatre phases successives (RN 1796-1799 / AR exogène 1799-1848 / RN 1848-1849 / AR exogène 1849-1859) qui masquaient la cohérence structurelle d'ensemble.
+**Signature vérifiable** : six retournements, six réécritures immédiates de la procédure de sélection — 1434 (balìa, refonte des bourses), 1494 (Grand Conseil, suppression des accoppiatori), 1512 (parlamento, balìa), 1527 (Grand Conseil rétabli), 1530 (aboli), 1532 (Seigneurie et gonfalonnat supprimés). Chaque round est ouvert par une armée étrangère et clos par une réécriture de la procédure. C'est la technologie propre à cette guerre sociale, et elle la distingue du conflit du XIIIe siècle où les vainqueurs abattaient des tours.
 
-**Datation Éclatement 1807** : l'annexion directe à l'Empire français (10 décembre 1807) supprime l'État toscan, départementalise (Arno, Méditerranée, Ombrone), impose le Code napoléonien, la sécularisation systématique, la conscription, l'état civil laïc. Test discriminant RN satisfait — rupture institutionnelle, ventilation des élites par intégration ou exclusion du système préfectoral. Datations alternatives écartées : 1796 (occupation Livourne uniquement, Ferdinand III maintenu) ; 1799 (gouvernement provisoire Rivani-Reinhard de 3 mois et 12 jours, modéré dès l'origine, collaboratif avec l'archevêque Martini, institutions léopoldines préservées) ; 1801 (Royaume d'Étrurie = rupture dynastique permanente mais pas rupture institutionnelle, institutions granducales et élites maintenues).
+### 7. La séquence 1494-1512 — réponse endogène à une perturbation exogène
 
-**Sous-phase Révolution initiale exogène (1807-1814)** : ultra-comprimée, Éclatement de l'AR et Émergence de l'IR téléscopés en un seul moment. Pas d'Expérience parlementaire endogène (pas d'assemblée toscane), pas de Phase aiguë jacobine endogène (pas de courant unitaire toscan radical équivalent aux Compagnoni-Galdi-Gioia émiliens), pas de Moment thermidorien. Élisa Bonaparte « grande-duchesse de Toscane » (1809-1814) — fiction institutionnelle restaurée mais la Toscane reste 3 départements de l'Empire français. Pattern d'une RN initiale entièrement portée par la tutelle impériale française qui livre directement le résultat de la révolution initiale (Code, préfets, sécularisation, conscription) sans cycle républicain endogène intermédiaire — parallèle Milan (« absolutisation à marche forcée » par Napoléon).
+C'est le point sur lequel la lecture antérieure était la plus faible : elle traitait cette séquence comme du bruit, alors qu'elle a la morphologie complète d'une RN (chute du prince, expérience parlementaire, purificateur, élimination du purificateur, exécutif resserré).
 
-**Sous-phase Restauration (1814-1859)** : Restauration canonique des Habsbourg-Lorraine — Ferdinand III (1814-1824) puis Léopold II « Canapone » (1824-1859) — avec conservation partielle des acquis napoléoniens (état civil laïc, organisation judiciaire napoléonienne, abolition féodale, biens nationaux non restitués au clergé). Toscane refuge libéral italien (cabinet Vieusseux 1819, *Antologia* 1821-1833). Expansion territoriale légitime (Stato dei Presidi et Piombino 1815, Lucques 1847). Glorieuse Révolution avortée 1848-1849 (cf. §13). Continuation de la Restauration sous forme dure 1849-1859 (cf. §14). Aboutissement par fusion italienne 1859-1860.
+**La perturbation est le choc, pas la séquence.** Charles VIII retire l'appareil dirigeant ; ce qui remplit la fenêtre est entièrement endogène — Conseil des Trois-Mille en décembre 1494, restitution au Grand Conseil du pouvoir d'élire la Seigneurie en juillet 1495, République chrétienne, gonfalonnier à vie Soderini en 1502. Tiré du répertoire constitutionnel communal et de la fracture factionnelle locale.
 
-### 12. Critère « héritage institutionnel » comme discriminant RN aboutie vs RN avortée par marge passive
+**Fonction de Savonarole** : il n'est chef d'aucun camp et ne détient aucune charge. Le camp anti-médicéen se divise immédiatement sur l'ampleur de la machine reprise — ottimati partisans d'un sénat étroit à la vénitienne contre popolani partisans du conseil large. Savonarole est l'instrument de l'option large : il la **légitime** en mobilisant le popolo contre le projet oligarchique. D'où le fait le plus étrange de l'affaire, qui devient explicable : son exécution en 1498 ne modifie aucune institution, le Grand Conseil lui survit à l'identique jusqu'en 1512. La question avait été tranchée en 1495 ; les arrabbiati tuent l'homme, ils ne parviennent pas à rétrécir le conseil.
 
-Remontée théorique introduite à l'occasion de la refonte Florence, pour discriminer entre :
-- IR exogène effectif (la nation a une RN authentique malgré la tutelle externe)
-- Annexion comme marge passive (la nation a une RN avortée)
+**Mécanisme général** (remonté dans `parcours.md` §Taille) : dans une cité-État, une faction élitaire écartée n'a qu'un allié disponible, le corps des citoyens, et l'enrôler suppose de l'élargir. Toute guerre sociale de cité-État produit donc des épisodes d'élargissement qui ressemblent à une révolution. Mais l'élargissement est **instrumental et réversible** — Grand Conseil institué en 1494, rétréci en 1512, rétabli en 1527, aboli en 1530-1532. Dans une RN il est le résultat, donc irréversible.
 
-Le critère par cadre formel — République sœur souveraine vs simples départements impériaux — est insuffisant. Florence est intégrée comme 3 départements français de 1807 à 1814, exactement comme Gênes 1805-1814, mais le pattern post-1814 diverge nettement.
+**Troisième niveau, diagnostique** : qu'un choc extérieur puisse renverser l'appareil prouve que la guerre sociale n'était pas résolue. Un cadre résolu survit à son fondateur.
 
-**Test : qu'est-ce que la tutelle napoléonienne a laissé une fois la tutelle partie ?**
+### 8. 1er monarque absolu — Cosme Ier (1537), contre Laurent (1480)
 
-Florence post-1814 sous Habsbourg-Lorraine restaurés :
-- État civil laïc conservé
-- Organisation judiciaire napoléonienne conservée
-- Abolition féodale maintenue
-- Biens nationaux non restitués au clergé
-- Ouverture libérale modérée sous Léopold II (Vieusseux, Antologia)
-- Ventilation des élites partiellement maintenue (refuge des libéraux italiens)
+Révision d'août 2026. Les trois tests fonctionnels de la figure résolvante (`phase_oligarchique.md`) départagent nettement.
 
-→ Critère satisfait. La RN initiale exogène 1807-1814 a effectivement transformé la Toscane. **Lecture « RN aboutie » avec Restauration canonique 1814-1859.**
+| Test | Laurent 1480 | Cosme Ier 1537 |
+|---|---|---|
+| Subordonne sa propre faction ? | ✗ — gouverne **par** les palleschi ; les Settanta sont cooptés parmi ses partisans | ✓ — les ottimati qui l'élisent en croyant le tenir sont marginalisés ; secrétaires recrutés hors du patriciat (Torelli de Fano, Campana de Colle, Grifoni de San Miniato, Polverini de Prato, Concini de Terranuova) |
+| Absorbe les réseaux des deux camps ? | ✗ — le fisc est l'arme anti-adversaires ; les anti-médicéens sont exilés, pas intégrés | ✓ — Nove Conservatori (1560), Legge Polverina (1548), Pandectes de Torelli (1553) |
+| La logique factionnelle cesse-t-elle ? | ✗ — palleschi contre fuorusciti structure la vie politique jusqu'en 1537 | ✓ — après Montemurlo et l'exécution de Strozzi, le clivage disparaît |
 
-Gênes post-1814 sous Royaume de Sardaigne (contre-test) :
-- Code napoléonien abrogé (retour au droit savoyard ancien)
-- Brève Repubblica genovese 1814-1815 balayée par Vienne
-- Intégration comme Duché de Gênes dans monarchie absolue savoyarde
-- Banco di San Giorgio supprimé en 1805 et non restauré
-- Ventilation des élites détruite (les élites ligures privées d'autonomie basculent vers la RN italienne — Mazzini fonde la Giovine Italia, Mameli compose l'hymne)
+**Test d'irréversibilité** : le cadre d'un 1er MA survit à son fondateur (Henri IV assassiné, Henry VII, Cosme Ier dont la dynastie va jusqu'en 1737 puis l'État passe intact aux Habsbourg-Lorraine). Le cadre laurentien tombe quatorze mois après la succession de Pierre II, puis trois fois encore en quarante-trois ans.
 
-→ Critère non satisfait. **Lecture « RN avortée par marge passive » avec AR exogène sarde 1805-1848 puis 1849-1861.**
+**Deux marqueurs institutionnels datent la bascule** :
+1. **Abolition du tirage au sort.** Le Priorat des Arts et la Seigneurie à mandat de deux mois ont gouverné de 1282-1293 à 1532 — 250 ans. Le dispositif est anti-absolutiste par conception : un appareil central a besoin de continuité, de compétence accumulée, de mémoire administrative et de loyauté personnelle, et le tirage au sort à mandat court détruit les quatre. Vidé de l'intérieur dès 1434 (accoppiatori, squittini truqués, balìe), il n'est aboli qu'en 1532.
+2. **Passage d'une coercition louée à une coercition possédée** : Fortezza da Basso (commencée en 1534, bâtie contre la ville), rachat des forteresses à Charles Quint (1543), bande medicee (1552), ordre de Santo Stefano (1561).
 
-Formulation théorique : *« L'IR exogène ne se mesure pas au cadre nominal du projet impérial (République sœur vs département) mais à l'efficacité transformatrice durable du cadre imposé. Le test discriminant Restauration canonique vs nouvel AR (ou continuation d'AR exogène) est l'héritage institutionnel et la ventilation des élites qui subsistent une fois la tutelle externe disparue. »*
+**Circularité écartée** : la configuration « appareil familial-bancaire dans cité-État » de `phase_absolutiste.md` a été **rédigée depuis Florence**. Elle ne pouvait donc pas servir à valider Florence. Elle est en outre affaiblie par l'existence d'un fisc public florentin antérieur et distinct de la banque (Monte Comune 1345, catasto 1427, gabelles) — contrairement au Banco di San Giorgio génois, qui absorbait réellement des fonctions d'État. La Banque Médicis n'a jamais administré un territoire, levé un impôt ni porté la dette publique.
 
-Cas particulier de Florence pour l'instant — pas de remontée dans les fichiers de méthodologie. À instruire séparément sur le corpus napoléonien (Milan, Émilie-Romagne, Naples, Piémont, Suisse, Hongrie) si le critère se confirme.
+**Note sur le test discriminant** : le tirage au sort et l'existence de conseils sont des **formes**, pas des tests. La Suisse a une phase absolutiste sans monarque (« le système patricien », 1712), l'Angleterre garde un parlement en phases oligarchique et absolutiste. Le critère fonctionnel est la préséance de facto de l'administration centrale et le caractère **incontesté** du pouvoir exécutif. Florence 1293-1494 échoue sur ce dernier point de façon factuelle : Noirs contre Blancs 1300-1302, duc d'Athènes 1342-43, Ciompi 1378, ammonizioni, Albizzi contre Médicis, conjuration Pitti 1466, conjuration des Pazzi 1478 — deux siècles de contestation continue.
 
-### 13. Glorieuse Révolution avortée 1848-1849 — écrasement autrichien
+### 9. DGRO structurellement absente
 
-Le Statuto fondamentale (17 février 1848) est canoniquement une Glorieuse Révolution : octroyé par Léopold II au sommet de la sous-phase Restauration, bicaméralisme, suffrage censitaire, garanties civiques — pattern parallèle Statuto Albertin, Constitution sicilienne, Constitution napolitaine du même printemps.
+Montemurlo (1er août 1537) n'est pas une DGRO : la DGRO est postérieure au 1er MA et ne se confond jamais avec la phase terminale de la guerre sociale. Montemurlo est concomitant de la résolution — c'est la dernière bataille.
 
-Florence est ici en **GR mode A** (cf. §15) : octroi top-down par le souverain légitime de l'État indépendant. Léopold II est l'Habsbourg-Lorraine restauré en 1814, locus de légitimité dynastique propre, et il accepte la transition vers le parlementarisme en octroyant le Statuto. C'est la forme classique de la GR canonique.
+Et l'écrasement est assez radical pour rendre toute DGRO ultérieure structurellement impossible : exécution de Filippo Strozzi (1538), confiscations massives, désarmements définitifs, élimination du patriciat ancien comme classe à assise territoriale. Cas canonique n° 2 d'absence — **absolutisation par éradication**.
 
-L'avortement est porté par l'**intervention autrichienne** (juillet 1849), qui ratifie le retour de Léopold II sous protection, conduit à l'abrogation formelle du Statuto (6 mai 1852) et installe une garnison autrichienne jusqu'en 1855. Pattern parallèle Milan 1848, Venise 1849, Naples 1849.
+### 10. Trois absences, une seule cause
 
-L'oscillation modérés-radicaux des mois précédents — décrochage sur la Costituente italiana, fuite de Léopold II à Gaeta (7 février 1849), triumvirat Guerrazzi-Montanelli-Mazzoni (8 février), République toscane proclamée (15 février), insurrection contre Guerrazzi (11-12 avril), commission Capponi-Serristori rappelant Léopold II (12 avril) — relève de la **dynamique normale d'ouverture de GR**, pas d'un mécanisme d'avortement endogène distinct. Parallèle France 1830 : hésitation République/Orléans pendant les Trois Glorieuses, La Fayette stabilisant sur Louis-Philippe par embrassade à la fenêtre de l'Hôtel de Ville, républicains qui acceptent puis se rebellent (1832, Lyon canuts). Personne ne lit 1830 comme un avortement endogène au motif que les modérés ont coupé l'élan républicain — c'est juste le mécanisme normal de gouvernance modérée d'une GR.
+L'éradication de 1537-1538 supprime le patriciat comme corps. De là découlent mécaniquement :
 
-Hypothèse écartée : « double mécanisme endogène + exogène » — la commission Capponi-Serristori n'est pas un avortement distinct, c'est la fraction modérée qui joue son rôle attendu dans la GR. La GR aurait probablement consolidé son recentrage modéré sans l'intervention autrichienne ; c'est cette intervention qui constitue l'avortement effectif.
+- **DGRO absente** (plus d'oligarques à assise territoriale) ;
+- **Remontrance absente** (pas de corps institutionnel intégré : pas de parlement, pas d'états, Sénat des Quarante-Huit et Conseil des Deux-Cents réduits à l'enregistrement, noblesse de robe ducale embryonnaire) ;
+- **impossibilité d'une sortie endogène d'AR** par retrait de légitimité, faute de corps pour le formuler.
 
-### 15. Critère GR canonique — deux modes (purification)
+Ce n'est pas un empilement de trois singularités mais une cause unique à trois conséquences.
 
-Précision théorique introduite à l'occasion de la refonte Florence-Gênes-Émilie-Romagne, pour purger une formulation initiale trop restrictive du critère GR.
+### 11. AR long (137 ans) — deux verrous, pas un
 
-**Formulation initiale écartée (trop restrictive)** : *« GR canonique = octroi top-down par le souverain. »* Cette formulation aurait disqualifié canoniquement plusieurs cas qui sont structurellement des GR (Tchéquie 1989, Pologne 1989, Émilie-Romagne 1831/1848 contre Habsbourg-Este et Papauté), en sur-pondérant la forme (direction de l'initiative) au détriment de la fonction (transition recentrée vers le parlementarisme).
+La sortie endogène d'AR exige **discrédit et ruine financière**. Florence a le discrédit (Cosme III : bigoterie, surfiscalité, déclin économique et démographique ; puis échecs systémiques des réformes léopoldines — constitution Gianni abandonnée 1779-1782, émeute de Prato 1787, émeutes de Florence et Livourne 1790). Elle n'a **pas** la ruine : Pierre-Léopold assainit activement (abolition des fidéicommis 1788, ventes de biens ecclésiastiques, modernisation du catasto), si bien qu'à l'arrivée de Bonaparte le Grand-Duché est financièrement sain.
 
-**Formulation purifiée** : la GR canonique est définie par sa **fonction structurelle** — transition recentrée vers un cadre parlementaire-constitutionnel, sans Phase aiguë radicale endogène (pas de Comité de salut public, pas d'élimination des modérés par les radicaux, pas de Terreur), avec stabilisation rapide du régime constitutionnel. Cette fonction peut s'incarner sous deux modes formels distincts :
+S'y ajoute le second verrou du §10 : aucun corps ne peut retirer sa légitimité. **Les deux voies de sortie endogène sont fermées**, et la phase attend le choc exogène de 1807.
 
-**Mode A — dans un État indépendant** : octroi top-down par le souverain légitime. Le souverain accepte la transition vers le parlementarisme parce qu'il est le locus de légitimité dynastique propre. Cas-types : Glorieuse Révolution anglaise 1688, Statuto fondamentale (Léopold II, Florence 17 février 1848), Statut Albertin (Carlo Alberto, Turin 4 mars 1848), Constitution sicilienne 1848, Constitution napolitaine 1848.
+Pattern « petite nation italienne » : budget contenu, pas d'armée massive, pas de cour dispendieuse, pas de guerre ruineuse — la course aux armements qui ruine la France et l'Espagne n'opère pas à cette échelle. AR de Venise 130 ans, du Piémont 113, de Florence 137. Groupe, pas exception.
 
-**Mode B — contre une puissance occupante** : mouvement bottom-up qui chasse l'occupant et installe un cadre constitutionnel. La puissance occupante n'ayant pas la légitimité d'octroyer, le mouvement ne peut être que par expulsion. Cas-types : Tchéquie 1989 (Velvet Revolution contre l'occupation soviétique), Pologne 1989, Roumanie 1989, **Émilie-Romagne 1831 contre Habsbourg-Este à Modène et Papauté aux Légations**, **Émilie-Romagne 1848 contre les mêmes**.
+Le despotisme éclairé léopoldin est classé comme **marqueur d'AR mature** (pattern Louis XVI, Joseph II, Charles III), pas comme mécanisme prolongateur.
 
-Test discriminant Mode B vs Éclatement révolutionnaire :
-- Direction du basculement vers le parlementarisme (et non vers rupture révolutionnaire prolongée)
-- Stabilisation rapide d'un cadre constitutionnel (gouvernement provisoire constitutionnel, pas dictature révolutionnaire)
-- Absence de Phase aiguë canonique (pas de radicalisation EG endogène avec Terreur)
-- Composition modérée-libérale du leadership révolutionnaire (Menotti, Vicini, Orioli à Bologne 1831 ; Manin à Venise mode A par octroi de Habsbourg mais aussi mode B par insurrection — cas mixte)
+### 12. Structure de la RN (1807-1860)
 
-Florence est en mode A (Léopold II souverain légitime octroie). Gênes est en mode A par élargissement (Carlo Alberto, souverain de l'État sarde dont Gênes est partie, octroie). Émilie-Romagne en 1831 et 1848 est en mode B (insurrections bottom-up contre souverains occupants étrangers, sans souverain local qui pourrait octroyer).
+Éclatement daté à l'annexion directe à l'Empire français (10 décembre 1807) : suppression de l'État toscan, départementalisation (Arno, Méditerranée, Ombrone), Code napoléonien, sécularisation, conscription, état civil laïc.
 
-Critère remonté dans `phase_rn.md` §Saillant : Glorieuse Révolution (sous-section « Deux modes formels d'incarnation ») et §RN contre un occupant (paragraphe « GR Mode B applicable »). La purification a été déclenchée par la lecture Florence-Gênes-Émilie-Romagne du printemps 2026, qui exposait l'incohérence de la formulation initiale (« octroi top-down seulement ») par rapport à des cas canoniques comme la Tchéquie 1989 ou l'Émilie-Romagne 1831/1848.
+Datations écartées : 1796 (occupation de Livourne seule, Ferdinand III maintenu) ; 1799 (gouvernement provisoire de trois mois, modéré dès l'origine, institutions léopoldines préservées) ; 1801 (Royaume d'Étrurie — rupture dynastique sans rupture institutionnelle).
 
-### 14. Décennie 1849-1859 — continuation Restauration et non nouvel AR
+**Révolution initiale exogène (1807-1814)** : ultra-comprimée, Éclatement et Émergence de l'IR téléscopés. Pas d'expérience parlementaire endogène, pas de phase aiguë jacobine toscane, pas de moment thermidorien.
 
-Test décisif : la décennie 1849-1859 est-elle une sous-phase Restauration prolongée (intérieur de la RN ongoing) ou un nouvel AR consolidé qui aurait clôturé le cycle RN ?
+**Restauration (1814-1859)** : Habsbourg-Lorraine restaurés avec conservation partielle des acquis napoléoniens (état civil laïc, organisation judiciaire, abolition féodale, biens nationaux non restitués). Glorieuse Révolution en mode A (Statuto fondamentale, 17 février 1848), avortée par l'intervention autrichienne de juillet 1849. Continuation en Restauration durcie 1849-1859. Aboutissement par fusion italienne (plébiscite des 11-12 mars 1860).
 
-**Marqueurs absents qui auraient indiqué un nouvel AR** :
-- Pas de Saturation fiscale (critère Lanoue de Suremain) — pas de tentative de fiscalité égalitaire bloquée
-- Pas de 1er monarque absolu d'un nouveau cycle — Léopold II revient comme grand-duc restauré, pas comme tête d'un cycle d'absolutisation neuf
-- Pas de Réformes échouées (séquence souverain-réformateur des Lumières) — au contraire, Léopold II tourne le dos à toute réforme structurelle
-- Pas de reconstitution d'une cour absolutiste neuve, pas de noblesse de robe nouvelle, pas de projet impérial
-
-**Marqueurs présents qui signent une Restauration dure mais non un nouvel AR** :
-- Concordat avec le Saint-Siège (1851) — restitution de privilèges au clergé, mais sans reconstruction d'une machine fiscale absolutiste
-- 6 mai 1852 : abrogation formelle du Statuto, retour à l'absolutisme constitutionnel pré-1848
-- Garnison autrichienne maintenue 1849-1855
-- Émigration ou silence des modérés libéraux
-- « Biennio nero » dans la mémoire et la littérature toscanes
-
-La décennie 1849-1859 est donc une **sous-phase Restauration durcie** (analogue fonctionnel à la Décennie d'Absolutisme français 1820-1830 sous Charles X qui prépare 1830, ou à la décennie post-1820 napolitaine). La sortie de cette continuation est elle-même non-canonique : pas de GR endogène nouvelle, mais **rivoluzione toscana du 27 avril 1859** — départ pacifique de Léopold II sous pression bourgeoise libérale alignée sur le projet italien, l'armée toscane refusant de tirer.
-
-L'aboutissement final par fusion italienne (plébiscite 11-12 mars 1860, 95,04 % pour l'annexion au Royaume de Sardaigne ; loi du 22 mars 1860) clôture la RN sans GR endogène stabilisée — pattern typique des nations distribuées italiennes (parallèle Émilie-Romagne, Milan, Venise — toutes absorbées sans aboutissement parlementaire endogène propre).
+**Critère « héritage institutionnel »** : ce qui subsiste une fois la tutelle partie discrimine l'IR exogène effectif de l'annexion comme marge passive. Florence post-1814 satisfait le critère (état civil, organisation judiciaire, abolition féodale, biens nationaux, ouverture libérale sous Léopold II), contrairement à Gênes post-1814 (Code abrogé, retour au droit savoyard, Banco di San Giorgio non restauré).
 
 ---
 
-## Hypothèses écartées (machlokot)
+## Hypothèses écartées
 
-### Scénario S1 initial — « Cité-État canonique avec 1er MA Cosme Ier »
+### S1 — 1er MA Laurent le Magnifique (1480)
 
-**Hypothèse initiale** : 1er MA Cosme Ier 1537 forme hybride 1+3 ; phase oligarchique 1250-1537 (~287 ans) ; guerre sociale 1382-1537 (~155 ans) ; DGRO absente comme à Venise/Gênes ; Montemurlo classé comme dernière bataille de guerre sociale.
+Scénario retenu jusqu'en août 2026. Écarté : échoue aux trois tests fonctionnels et au test d'irréversibilité (cf. §8). Conséquences de l'abandon : la phase oligarchique gagne 57 ans, la guerre sociale passe de 47 à 104 ans, Montemurlo cesse d'être une DGRO, la phase absolutiste passe de 327 à 270 ans, et la boucle 1494-1537 est rendue à la guerre sociale — ce qui supprime l'anomalie d'une phase absolutiste passant 21 de ses 57 premières années sous un conseil républicain de 3 000 membres.
 
-**Pour** : test discriminant formellement passé sous Cosme Ier (classe administrative distincte de la noblesse de robe ducale embryonnaire) ; rigueur théorique stricte (pas d'absolutisme informel sans appareil étatique).
+### S2 — Lecture canossienne
 
-**Contre** :
-- Guerre sociale ultra-longue (155 ans) anormalement singulière dans le corpus
-- Polarisation et guerre sociale fusionnées (point 4 corrigé)
-- Montemurlo classé comme dernière bataille de guerre sociale, ce qui contredit la règle « DGRO post-MA » (point 7 corrigé)
-- Sous-estime le rôle absolutisant de la Banque Médicis et des Settanta — Thomas a fait remarquer que dans une cité-État où la distinction public/privé est faible, un appareil familial-bancaire durable joue **fonctionnellement** le rôle d'État
+Éveil féodal Tedaldo (~1014), pic féodal Mathilde (1076-1115), crise féodale à la succession ratée de 1115. **Écartée** : la marche canossienne couvre Toscane et Émilie, et son centre dynastique est en Émilie. Le Parcours canossien n'est pas toscan.
 
-**Conclusion** : remplacé par lecture B révisée. La rigueur du test discriminant doit être lue **fonctionnellement** dans une cité-État, pas formellement.
+### S3 — Lecture Fabry (*La Structure de l'Histoire*, 2018 ; *Hail Caesars*)
 
-### Scénario S2 — « Lecture canossienne »
+Lecture concurrente complète, à prendre au sérieux : PO à la commune consulaire (1138), expansion 1222-1235, guerre civile guelfe-gibeline 1249-1302 comme fin de phase oligarchique, absolutisme à partir des gouvernements dictatoriaux de 1326-1343, DGRO aux Ciompi (1378), seconde étape absolutiste Albizzi-Médicis 1382-1494, **RN 1494-1530** (expérience parlementaire, Savonarole en phase aiguë, Soderini en IR, restauration de 1512, réplique de 1527), contrariée par Charles Quint, héritage réduit au social (égalité juridique des bourgeois, 1532).
 
-**Hypothèse** : éveil féodal toscan = Tedaldo de Canossa (~1014), pic féodal = Mathilde (1076-1115), crise féodale = succession ratée 1115. Phase féodale ~1014-1250 (~235 ans).
+Durées internes plausibles (~200/190/165), donc les durées n'arbitrent pas. **Écartée sur trois points vérifiables** :
 
-**Pour** : Mathilde est un chef supra-régional effectif, capable de cristalliser oppositions à l'échelle de la Toscane, ses successions ratées correspondent à un schéma de crise féodale canonique, et la durée de la phase féodale serait alors plus standard.
+1. **Le PO de 1138** échoue au premier et au troisième terme de la définition (cf. §3).
+2. **Le test discriminant absolutiste est négatif de 1293 à 1494** — le pouvoir n'y est jamais incontesté (cf. §8, note).
+3. **Le corps civique ne s'élargit pas de façon permanente** en 1494-1530 : l'éligibilité reste aux *beneficiati*, identique en 1512, abolie en 1532. Et l'acquis qu'il retient — l'abolition en 1532 de la distinction entre bourgeois selon leurs corporations — est un **nivellement absolutiste** : égalité des sujets obtenue par suppression des corps intermédiaires, accompagnée de la suppression de tout organe représentatif. Le nivellement seul ne discrimine pas (Napoléon le pratique en RN) ; ce qui discrimine est ce qui l'accompagne.
 
-**Contre** : la marche canossienne couvre Toscane + Émilie (Mantoue, Reggio, Modène) et son centre dynastique est en Émilie. Le Parcours canossien n'est pas un Parcours toscan endogène. La fragmentation post-1115 ramène le territoire au noyau toscan seul, ce qui suppose une *discontinuité territoriale* entre la marche canossienne et la commune florentine.
+**Argument décisif en aval** : une RN aboutie ou avortée ne produit pas trois siècles de construction étatique endogène derrière elle. Le Grand-Duché n'est pas une superstructure imposée — Cosme Ier est florentin, élu par les Quarante-Huit, rachète les forteresses à Charles Quint en 1543 et fait partir les garnisons, conquiert Sienne pour son compte, obtient le titre grand-ducal, recrute une administration toscane, et fonde une dynastie qui règne deux cents ans puis transmet l'État par héritage. Un Parcours contrarié par un État de taille standard ressemble à Milan sous gouverneurs espagnols ou à Naples sous vice-rois, pas à cela.
 
-**Conclusion** : ajoute une singularité non structurellement justifiée. Écarté.
+**Ce que la lecture Fabry apporte, et qu'il faut conserver** : elle a identifié un objet réel que notre lecture antérieure traitait comme du bruit — la séquence de 1494-1512. Le §7 lui donne un logement fonctionnel. Sa remarque que Florence est le meilleur ajustement de son corpus s'explique d'ailleurs par le mécanisme du §7 : une cité-État produit la grammaire révolutionnaire à la demande, donc un modèle indexé sur cette séquence y trouvera toujours son meilleur ajustement — et s'y trompera toujours.
 
-### Scénario S3 — « Lecture laurentienne d'acmé oligarchique »
-
-**Hypothèse** : acmé oligarchique = Laurent (1469-1492), phase oligarchique 1250-1494, RN aboutie compressée 1796-1860.
-
-**Pour** : durée plus standard, acmé tardive plus alignée avec Venise/Gênes.
-
-**Contre** : trois singularités structurelles. Et surtout : dans la lecture finale retenue, Laurent est 1er MA (en phase absolutiste), donc ne peut être acmé oligarchique. La projection extérieure réelle de Florence est bancaire (Bardi-Peruzzi), pas territoriale ; l'acmé doit refléter cette projection.
-
-**Conclusion** : incompatible avec la lecture B révisée. Écarté.
+**Note sur les vocabulaires** : *La Structure de l'Histoire* (2018) emploie un vocabulaire antérieur (« réveil monarchique », « monarchie autoritaire », « dictature militaire ») qui correspond terme à terme aux phases actuelles. Ce n'est pas un modèle incomplet mais un état antérieur du même modèle.
 
 ---
 
 ## Comparaison avec le corpus
 
-Florence se positionne dans le corpus des cités-États italiennes comme un cas singulier mais cohérent :
-
 | Trait | Venise | Gênes | Milan | Florence |
 |---|---|---|---|---|
-| Phase féodale | longue boucle (306 ans) | courte (100 ans) | courte (118 ans) | courte (135 ans) |
-| PO | 1032 (chemin B) | 1097 (chemin B) | 1097 (chemin B) | **1293 (chemin B, décalé +200 ans)** |
-| Exutoire oligarchique | Stato da Màr + Terraferma (très long) | Comptoirs + Mahona (long) | Ligue lombarde + Visconti (moyen) | **Bancaire (court)** |
-| Acmé olig. position | 0.64 | 0.93 | 0.48 | **0.32 (précoce)** |
-| Guerre sociale | 41 ans (forme éco pure) | 21 ans (forme mixte) | 37 ans (forme éco pure) | **47 ans (forme mixte Albizzi/Médicis)** |
-| 1er MA | Inquisiteurs (consortium oligarchique) | Boccanegra + Banco (consortium oligarchique) | Ottone Visconti (figure résolvant la guerre sociale) | **Laurent (appareil familial-bancaire, Settanta + Banque)** |
-| Consolidation | continue | continue | Sforza post-Ambrosienne (1450) | **Cosme Ier post-DGRO (1537)** |
-| DGRO | absente | absente | Della Torre (1302-1311) | **Montemurlo (1537)** |
-| AR | 130 ans (sans ruine fin.) | 22 ans + RN | endogène court avant reboot | **126 ans (sans ruine fin.)** |
-| Fin du Parcours | RN avortée 1848, absorbée 1866 | RN aboutie 1506-1528, parl. figée | RN avortée 1848, absorbée | **RN avortée par absorption 1860** |
+| Entrée en Parcours | très précoce (pas de structure supra-régionale) | précoce (marquisat faible) | précoce (archevêque local) | **tardive (marche de Toscane à Lucques)** |
+| PO | 1032 | 1097 | 1097 | **1293** |
+| Phase oligarchique | 637 ans | 337 ans | — | **244 ans** |
+| Exutoire oligarchique | Stato da Màr + Terraferma | comptoirs + Mahona | Ligue lombarde + Visconti | **bancaire (court)** |
+| Acmé olig. | 0.64 | 0.93 | 0.48 | **0.13 (très précoce)** |
+| Guerre sociale | 41 ans | 189 ans | 37 ans | **104 ans** |
+| 1er MA | Inquisiteurs (consortium) | Doria + Banco (consortium) | Ottone Visconti | **Cosme Ier (figure dynastique)** |
+| DGRO | absente | absente | Della Torre (1302-1311) | **absente (éradication)** |
+| AR | 130 ans | 22 ans | — | **137 ans** |
+| Fin du Parcours | RN avortée 1848, absorbée 1866 | à trancher (cf. questions ouvertes) | RN avortée 1848, absorbée | **RN avortée par absorption 1860** |
 
-**Convergences** : phase féodale courte (typique cité-État), PO chemin B suzerain collectif, sortie par absorption (sauf Gênes qui produit Doria 1528), AR long sans ruine financière (Venise, Piémont, Florence).
+**Convergences** : phase oligarchique longue et prolongée par exutoire (trait commun des cités-États), guerre sociale arbitrée ou prolongée par les voisins, AR long sans ruine financière (Venise, Piémont, Florence), sortie par absorption.
 
-**Singularités florentines justifiées** :
-1. **PO décalé 200 ans** : structurel, pré-féodale longue (subordination supra-régionale).
-2. **Exutoire bancaire court** : acmé précoce, structurel.
-3. **1er MA par appareil familial-bancaire** : configuration où l'appareil étatique central est juridiquement privé (Banque Médicis) mais exerce les fonctions d'État — pattern intermédiaire entre Milan (figure dynastique avec appareil étatique formel) et Gênes/Venise (consortium oligarchique institutionnalisé) — **élément théorique à documenter**.
-4. **Boucle d'instabilité absolutiste 1494-1537 par chocs exogènes successifs** : pattern Gênes (« chaque faction appelle une puissance étrangère »), avec consolidation Sforza-like par Cosme Ier post-DGRO.
-5. **DGRO présente** (Montemurlo) contrairement à Venise/Gênes — patriciat avec assise territoriale partielle, comme Milan.
-6. **AR long sans ruine financière** : aligné Venise/Piémont, pattern « petite nation italienne ».
+**Ce qui reste propre à Florence** : la résolution par une **figure dynastique** là où Venise et Gênes produisent des consortiums oligarchiques. C'est la divergence à expliquer, et elle n'est pas expliquée par la contrariété impériale, puisque Charles Quint est présent dans les deux cas — il laisse Doria promulguer une république et impose un duc à Florence. Diplomatie contingente (Doria apporte sa flotte et change de camp ; les Médicis sont la famille de Clément VII) plutôt que structure.
 
 ---
 
-## Apports d'Agent 2 (recherches complémentaires)
+## Éléments théoriques produits par ce dossier
 
-Agent 2 a fait trois recherches web qui ont structuré l'analyse :
-
-1. **Ordinamenti di Giustizia 1293** confirmé comme acte formel daté (18 janvier 1293), passé par les Conseils du Comune et du Popolo, instituant exclusion des magnats, Gonfalonier de Justice, mandat de 2 mois, tirage au sort sur listes d'inscrits aux Arts. Cas paradigmatique du PO chemin B en suzerain collectif.
-
-2. **Monte Comune 1345** documenté comme consolidation de la dette publique en parts négociables, secondaire market, héritable, détenu majoritairement par le patriciat. Néanmoins, il ne semble pas absorber les fonctions d'État — il reste un instrument de gestion de la dette publique. Hypothèse consortium oligarchique partiel uniquement, écartée.
-
-3. **Cosme Ier — bureaucratie professionnelle distincte du patriciat** confirmée : recrutement de secrétaires (Marzi, Campana, Grifoni, Torelli) parmi les juristes-notaires des provinces, hors du patriciat florentin, avec marginalisation explicite de l'ancienne classe gouvernante. Embryon de noblesse de robe ducale qui distingue la consolidation Sforza-like de Cosme Ier d'une simple continuation laurentienne — Cosme stabilise la phase en passant de l'appareil familial-bancaire à un appareil étatique.
-
----
-
-## Configurations atypiques signalées comme éléments théoriques nouveaux
-
-1. **Appareil familial-bancaire comme appareil d'État** : Laurent le Magnifique satisfait fonctionnellement le test discriminant absolutiste par la combinaison Settanta (institution exécutive à vie supra-Signoria) + Banque Médicis (appareil de pouvoir parallèle dans une cité-État où la distinction public/privé est faible). Configuration où l'appareil de l'État central est juridiquement privé tout en exerçant les fonctions d'État — déjà inscrit dans `parcours.md` §Nature de l'appareil étatique et `phase_absolutiste.md` §Configurations rencontrées. Florence en est le cas paradigmatique.
-
-2. **Boucle d'instabilité absolutiste par chocs exogènes successifs** : Florence 1494-1537 reproduit le pattern Gênes XVe siècle (« chaque faction en déclin appelle une puissance étrangère pour se relever »). L'appareil familial-bancaire laurentien est fragile face aux chocs exogènes mais le cadre absolutiste sous-jacent survit aux dominations et se reconstitue. Pattern structurel pour cités-États dans environnement d'États territoriaux où chaque puissance voisine peut intervenir.
-
-3. **Consolidation Sforza-like post-DGRO** : Cosme Ier (1537) joue le rôle de stabilisateur dynastique après la boucle d'instabilité, comme Sforza à Milan post-République Ambrosienne (1450). Transition de configuration (appareil familial-bancaire fragile → figure dynastique stable avec noblesse de robe ducale) sans rupture de phase.
-
-4. **Sortie endogène d'AR — discrédit ET ruine financière simultanément** : la sortie endogène d'AR par éclatement (vers RN aboutie) demande discrédit du régime ET ruine financière. Tant que l'un manque, l'AR perdure jusqu'à choc exogène. Florence satisfait discrédit mais pas ruine financière (Léopoldine assainit), d'où sortie obligatoire par Napoléon et RN avortée par absorption. Pattern « petite nation italienne » (Florence, Venise, Piémont) : taille modeste = budget contenu = pas de ruine financière endogène = AR long jusqu'à choc exogène = RN avortée. À documenter explicitement dans `phase_absolutiste.md` comme conditions de sortie endogène.
-
-5. **Despotisme éclairé = marqueur d'AR mature, pas mécanisme prolongateur** : les tentatives réformatrices massives en fin de phase absolutiste (Louis XVI, Joseph II, Pierre-Léopold, Charles III) sont la **signature** de l'AR mature, pas un mécanisme qui prolonge la phase par modernisation. Les réformes échouent systémiquement par incapacité de la nation à se réformer en AR. À documenter dans `phase_absolutiste.md`.
-
-6. **Pré-féodale longue pour cité-État subordonnée à structures supra-régionales successives** : la pré-féodale florentine (~615 ans) est extraordinairement longue parce que la nation toscane n'a pas de centre politique propre tant que les structures supra-toscanes (lombarde, carolingienne, canossienne) sont en place. Pattern à comparer avec d'autres cités-États émergeant dans l'orbite de structures dynastiques territoriales.
+1. **Élargissement instrumental du corps civique** comme mécanisme de la ressemblance RN dans les cités-États — remonté dans `parcours.md` §Taille.
+2. **Discriminant RN / interlude républicain de cité-État** : une RN élargit le corps civique de façon permanente ; un interlude ne l'élargit pas — remonté dans `parcours.md` §Taille.
+3. **Test opératoire de la proscription** (l'exil comme expérience naturelle mesurant la dépendance au centre) et **cas-limite « lire la dépendance, jamais le type d'actif »** — remontés dans `elites.md`.
+4. **Plancher d'attestation ≠ date d'instauration** pour les saillants antérieurs à ~1300 — remonté dans `methode_cartographie.md` §5a.
+5. **Coercition louée vs possédée** : une force permanente contractée sur un marché ouvert n'appartient pas au centre et laisse la nation vulnérable à ses propres oligarques comme aux puissances voisines. À instruire sur Gênes et Venise.
+6. **Règle d'entrée tardive** : une cité-État coiffée d'une structure supra-régionale siégeant ailleurs entre en Parcours tard. À tester sur d'autres cas.
 
 ---
 
 ## Questions ouvertes
 
-1. **Acmé absolutiste — Ferdinand Ier vs Cosme Ier** : Ferdinand Ier (1587-1609, Lois Livornine, mariages européens, flotte de Saint-Étienne) est retenu, mais sa position dans la phase reste précoce (~0.35) et l'élévation au Grand-duché par Cosme Ier (1569) constitue une alternative plausible. L'incertitude ne change pas la lecture phasique d'ensemble mais elle reste réelle, faute de saillant absolutiste majeur clairement positionné.
+1. **Impérialisme absolutiste 1555-1670 (115 ans) sans impérialisme après Sienne.** C'est le seul vrai trou du parcours. Le territoire est stabilisé à Sienne en 1555, il n'y a pas de saillant « fin de l'expansion », et la borne de 1670 (avènement de Cosme III) est retenue pour des raisons dynastiques et reste conventionnelle. Si l'AR commence en réalité plus tôt — à la mort de Ferdinand Ier (1609, notre acmé absolutiste) ou vers 1620 —, l'impérialisme tombe à ~50-65 ans, ce qui convient à une projection extérieure brève (Leggi Livornine, galères de Santo Stefano, mariages européens), et l'AR monte à ~190 ans, le mécanisme du §11 devant alors porter davantage.
 
-2. **Borne fin de l'impérialisme absolutiste / entrée en AR** : la transition se fait par épuisement et déclin économique sans saillant institutionnel-contestataire (la Remontrance est structurellement absente). 1670 (avènement Cosme III) est retenu pour des raisons dynastiques mais reste conventionnel — alternatives plausibles autour de 1700.
+2. **Saturation fiscale — à retirer ou à redater.** Le parcours porte encore « 1774-1775, Tassa di redenzione + concordat », datation qui figure aussi dans la liste d'exemples de `phase_absolutiste.md`. **Le codage est inversé** : la *tassa di redenzione* de mai 1774 unifie les charges sur la propriété foncière en un impôt unique destiné à éteindre la dette publique, et elle y parvient — la dette est quasi épuisée en 1790. C'est un élargissement d'assiette qui **réussit**, l'exact contraire du marqueur (« tentative datée d'élargissement qui échoue devant le corps détenant le veto fiscal »). Deux options : saturation **structurellement absente** faute de corps détenant un veto (cohérent avec le §10, et retenue provisoirement comme la plus probable), ou saturation **présente mais non datable**, lisible seulement dans la série. Vérification non faite : existe-t-il une tentative d'élargissement bloquée sous Cosme III (1670-1723) ou sous la Régence lorraine (1737-1765) ? Si oui, elle serait le vrai saillant et daterait l'entrée en AR, ce qui trancherait du même coup la question 1.
 
-3. **Consortium oligarchique partiel et sa place théorique** : le Monte Comune (1345) consolide la dette publique en parts négociables détenues par le patriciat avec marché secondaire, sans absorber les fonctions d'État au sens du Banco di San Giorgio génois ou des Inquisiteurs vénitiens. Florence pose une question théorique qui dépasse son seul cas : un dispositif oligarchique qui esquisse une institutionnalisation de consortium sans aboutir à capturer l'État doit-il être traité comme une institution oligarchique parmi d'autres, ou comme une configuration distincte à théoriser ?
+3. **Acmé absolutiste — Ferdinand Ier vs Cosme Ier.** Ferdinand Ier (1591-1609 : Leggi Livornine, mariages européens, flotte de Saint-Étienne) est retenu, mais l'élévation au Grand-Duché par Cosme Ier (1569) reste une alternative plausible.
 
-4. **Test discriminant absolutiste à l'échelle nationale post-conquête de Sienne (1555-1786)** : Sienne (~12 000 km², soit l'équivalent du noyau toscan) maintient un « Stato Nuovo » administrativement distinct jusqu'aux réformes léopoldines (1770-1786). Le test absolutiste à l'échelle de la nation entière n'est donc pleinement passé que tardivement — cohérent avec le pattern espagnol Nueva Planta. Question : un absolutisme dont une moitié territoriale conserve une administration distincte sur deux siècles reste-t-il pleinement absolutiste à l'échelle nationale, ou est-ce un cas à expliciter dans `phase_absolutiste.md` ?
+4. **Incohérence de corpus sur Gênes, à trancher avant de s'appuyer sur elle.** `nations/genes/parcours.md` code 1528 (Doria, *Forma reipublicae*) comme résolution de la guerre sociale par consortium oligarchique, donc **entrée en phase absolutiste**. Le tableau comparatif de la version antérieure de ce fichier décrivait Gênes comme « RN aboutie 1506-1528, parlementaire figée ». Les deux ne peuvent pas être vrais, et Fabry lit Gênes de la seconde façon.
+
+5. **Test discriminant absolutiste à l'échelle nationale post-Sienne.** Sienne (~12 000 km²) maintient un « Stato Nuovo » administrativement distinct jusqu'aux réformes léopoldines (1770-1786). Un absolutisme dont une moitié territoriale conserve une administration distincte pendant deux siècles est-il pleinement absolutiste à l'échelle de la nation ? Pattern comparable à la Nueva Planta espagnole.

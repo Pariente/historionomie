@@ -62,7 +62,7 @@ Le critère réellement discriminant devient donc la **voie employée**. Restent
 - **États pontificaux** : Saturation fiscale **1708-1710** (Tassa del Milione de Clément XI, contribution générale sur tous les revenus, bloquée par noblesse et clergé exemptés). Sources Pastor, Treccani, Piola Caselli.
 - **Émilie-Romagne (Bologne)** : Saturation fiscale **1708** (machine pontificale dont Bologne fait partie en Légation tutélaire).
 - **Autriche** : Saturation fiscale **1789-1790** (Steuerpatent + Urbarialpatent joséphins retirés par Léopold II sous résistance Stände + comitats hongrois + noblesse). Sources Beales, Dickson, Macartney.
-- **Bohême** : Saturation fiscale **1789-1790** (Stände bohêmes co-acteurs de la résistance au Steuerpatent joséphin).
+- **Tchéquie** : Saturation fiscale **1789-1790** (Stände bohêmes co-acteurs de la résistance au Steuerpatent joséphin).
 - **Naples** : Saturation fiscale **1741-1755** (Catasto Onciario de Charles VII/Tanucci bloqué par capture communale du baronnage local). **Cas atypique** : séquence inversée — Saturation précède l'Acmé absolutiste (Tanucci 1759-1776). Sources Calabria, Galasso, Astarita.
 - **Florence** : Saturation fiscale **1774-1775** (Tassa di redenzione + concordat de Pierre-Léopold, résistance progressive de patriciat sédimenté et clergé). **Cas particulier** : Saturation + Réformes échouées comprimées dans la séquence léopoldine sous le même souverain. Sources Waquet, Diaz, Sordi.
 - **Gênes, Suisse** : non applicable canoniquement (architecture Casa di San Giorgio / absolutisme rentier-patrimonial — pas de machine d'extraction fiscale centralisée qui tenterait d'élargir).
@@ -72,7 +72,7 @@ Le critère réellement discriminant devient donc la **voie employée**. Restent
 1. **Séquence compressée / inversée** : Naples (Saturation 1755 précède Acmé Tanucci 1759-1776) — l'absolutisme se redéploie sur les terrains non-fiscaux quand la voie fiscale sature précocement.
 2. **Saturation + Réformes échouées compressées** : Florence (Pierre-Léopold cumule les deux dans une AR très court, sans Remontrance distincte).
 3. **Absolutismes rentier-patrimoniaux** : Gênes, Suisse cantonale — pas de Saturation au sens strict car pas de machine d'extraction centralisée.
-4. **AR exogène** : Bohême (machine habsbourgeoise), Émilie-Romagne / Bologne (machine pontificale) — la Saturation est celle de la machine porteuse, dont la nation sous tutelle est co-actrice ou co-affectée. Pas une « saturation héritée » distincte, juste la même saturation.
+4. **AR exogène** : Tchéquie (machine habsbourgeoise), Émilie-Romagne / Bologne (machine pontificale) — la Saturation est celle de la machine porteuse, dont la nation sous tutelle est co-actrice ou co-affectée. Pas une « saturation héritée » distincte, juste la même saturation.
 
 Sous-phase « Ancien régime » (ne pas confondre avec un saillant) : France ~1749-1789 ; Angleterre ~1610-1642 ; Espagne ~1868-1931 ; Sicile ~1781-1812 ; Hongrie ~1811-1848 ; États pontificaux ~1708-1798 ; Émilie-Romagne ~1708-1796 ; Autriche ~1790-1848 ; Bohême ~1790-1848 (AR exogène) ; Naples ~1755-1798 (AR endogène court avant interruption napoléonienne) ; Florence ~1774-1796 ; Venise ~1740-1848 ; Israël prolongement -4 à 66.
 
@@ -146,7 +146,7 @@ Pour les définitions des mécanismes et effets, voir `references/perturbations.
 
 ## Tableau récapitulatif — phase féodale
 
-Parcours canoniques uniquement (Bohême, Hongrie en débat — non inclus). Pour les définitions des saillants, voir `references/phase_feodale.md`.
+Parcours canoniques uniquement (Tchéquie, Hongrie en débat — non inclus). Pour les définitions des saillants, voir `references/phase_feodale.md`.
 
 | Parcours | Éveil féodal | Pics féodaux | Pacte oligarchique | Durée |
 |---|---|---|---|---|

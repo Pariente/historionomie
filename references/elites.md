@@ -120,17 +120,37 @@ Conséquence pour l'analyse :
 
 Le test reste structurel : enjeu = contrôle central pour les prébendes ; résolution = nouveau cadre subordonnant les oligarques.
 
-### Les formes du clivage factionnel
+### Le clivage est économique par définition ; ce qui varie, c'est l'agrégation
 
-La polarisation en deux factions est universelle ; la **forme** qu'elle prend dépend de la nature de l'hétérogénéité qui sépare les marges du cœur. Trois cas-type :
+La ligne prébendier/patrimonial **est** définie par le mode d'enrichissement : c'est la matrice elle-même. Il n'existe donc pas de « formes » du clivage dont l'économique serait une variante parmi d'autres — le noyau de toute guerre sociale est économique par construction. Ce qui varie d'un cas à l'autre, c'est la **pureté de l'agrégation** autour de ce noyau, et le **mode d'expression** par lequel les camps se reconnaissent (religieux, régional, dynastique — cf. `phase_oligarchique.md` §Les deux critères essentiels).
 
-- **Forme économique pure** : une faction est clairement prébendière (revenu dépendant du centre), l'autre clairement patrimoniale (revenu indépendant). Le mode d'enrichissement et la ligne de faction coïncident, ce qui rend le clivage lisible directement sur la matrice Pariente.
+Trois sources d'agrégation impure :
 
-- **Forme géographique** : deux groupes majoritairement patrimoniaux (ou mixtes) dont la polarisation suit une fracture territoriale cœur/marges. L'enjeu reste le contrôle des prébendes, mais le mode d'enrichissement ne discrimine pas les factions — le clivage se construit sur la position vis-à-vis du centre.
+1. **Le pari sur l'accès.** Une famille patrimoniale peut rejoindre le camp prébendier : si ce camp l'emporte, elle se retrouve du côté qui distribue. C'est une voie d'accès aux prébendes, donc un calcul rationnel — pas une exception au modèle. L'inverse est plus coûteux : une famille prébendière qui rejoint le camp patrimonial met en jeu sa source de revenu. *Prédiction à tester sur le corpus : les ralliements patrimonial → camp prébendier doivent être nettement plus fréquents que l'inverse.*
 
-- **Forme mixte** : combinaison des précédentes, souvent avec superposition de logiques économique, géographique, confessionnelle, dynastique. C'est probablement le cas empirique le plus fréquent.
+2. **La proximité sociale.** Parenté, voisinage, clientèle, alliance ancienne. La guerre sociale est aussi un conflit social ; les familles ne recalculent pas leur intérêt à chaque génération.
 
-**Conséquence pour l'analyse** : ne pas forcer la lecture prébendier/patrimonial quand les deux factions sont majoritairement d'un même type (deux blocs patrimoniaux, deux blocs prébendiers). Ce qui compte structurellement est l'enjeu et l'existence d'une polarisation — la forme qu'elle prend est un élément à documenter, pas à forcer.
+3. **Les grilles superposées.** Religieuse, régionale, idéologique. Elles produisent des ralliements que l'axe économique n'explique pas. C'est de la contingence, pas de la structure — la vie n'est jamais parfaitement encapsulée dans le modèle.
+
+**Garde-fou : « je ne vois pas de clivage économique » n'est pas un résultat.** Quand l'analyse conclut que les deux camps se ressemblent, la première hypothèse à tester n'est pas l'impureté du cas mais l'**inversion du codage**. La faction qui tient l'organe de distribution est par définition la faction prébendière ; si un codage la classe patrimoniale au motif qu'elle possède aussi des terres, il est inversé. Le type d'actif ne classe rien — seule la dépendance classe (cf. cas-limite ci-dessous).
+
+**Second piège, symétrique : confondre la classe prébendière avec le personnel administratif.** Un fermier d'impôt, un titulaire de monopole, un acheteur de charge ou de juridiction est prébendier sans tenir aucun office. Une administration tenue par des étrangers — royaume sous vice-roi, province sous gouverneur — n'empêche donc pas l'existence d'une classe prébendière endogène : elle en fait des **clients** de l'appareil plutôt que ses agents. Cas pris à ce piège : la Sicile, où l'origine castillane des fonctionnaires vice-royaux avait fait conclure à tort à l'absence de pôle prébendier local, alors que les tratte, les fermes fiscales, les charges de la Deputazione del Regno et les juridictions vendues par la couronne alimentaient une clientèle palermitaine massive.
+
+#### Cas-limite : lire la dépendance, jamais le type d'actif (Florence 1382-1434)
+
+Le risque symétrique de la mise en garde ci-dessus est de lire la matrice sur le **type d'actif** plutôt que sur la **dépendance au centre**. Florence en est le cas-école, parce que les deux factions de sa guerre sociale y sont sociologiquement indiscernables : Albizzi, Strozzi, Peruzzi et Médicis relèvent tous du patriciat marchand-banquier. Lue par type d'actif, la matrice ne produit aucun clivage — ou produit le clivage inverse (les Médicis classés prébendiers parce que banquiers, les Albizzi patrimoniaux parce qu'établis).
+
+Lue par dépendance, elle coupe. Le régime ottimate installé après 1382 vit du centre : intérêts du Monte servis au patriciat et financés par les gabelles pesant sur la consommation populaire ; emprunts forcés de guerre convertissant l'impôt en rente patricienne, la décision de guerre appartenant aux Dieci ; contrôle des squittini, donc de l'accès aux offices salariés du dominio ; affermage des gabelles ; législation de l'Arte della Lana verrouillant la sujétion des sottoposti. La fortune médicéenne, elle, repose sur le compte de la Curie (*depositario generale*) et le réseau de succursales étrangères — revenu tiré d'un centre **étranger**, insensible à l'exclusion du centre florentin.
+
+**Test opératoire : la proscription comme expérience naturelle.** Là où une phase oligarchique pratique le bannissement, l'exil retire l'accès au centre et l'on observe ce qui subsiste. Le résultat est un gradient, pas un binaire, et il suit la composition d'actif :
+
+| Famille | Composition dominante | Effet de la proscription |
+|---|---|---|
+| Albizzi | offices, Monte, décision de guerre | éteints comme force politique dès 1434 |
+| Strozzi | terres et Monte, banque minoritaire (Palla Strozzi au catasto de 1427 : 54 fermes, 30 maisons, 45 000 fl de capital bancaire sur ~163 000 fl bruts) | survivent un siècle de proscriptions, éliminés seulement en 1537-1538 |
+| Médicis | banque à centre étranger (Rome, Genève, Bruges, Londres) | Cosme banni en 1433, rentre en treize mois |
+
+Ce gradient ne brouille pas le clivage : il en mesure la profondeur. Le noyau ottimate est prébendier, le noyau médicéen patrimonial ; les Strozzi sont de l'**agrégation**. Une famille patrimoniale a intérêt à rejoindre le camp prébendier — si ce camp l'emporte, elle sera du côté qui distribue, et son assise propre ne risque rien dans l'opération. S'agréger contre son mode d'enrichissement est donc un pari rationnel sur l'accès, pas une anomalie de la matrice. La tendance de fond reste lisible ; la ligne individuelle ne l'est pas toujours.
 
 ### Observation Deblonde : centre vs marges
 
