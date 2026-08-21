@@ -367,10 +367,7 @@ On désigne par « guerre sociale » le conflit entre deux factions élitaires �
 
 ### Les deux critères essentiels (de la guerre sociale au sens historionomique)
 
-**1. L'enjeu du conflit est le contrôle de l'État central** — pour accéder aux prébendes qu'il distribue ou garantir celles qu'on détient déjà. C'est l'invariant structurel : la polarisation en deux factions est universelle, mais la **forme** qu'elle prend dépend du contexte national. Trois cas-type (cf. `elites.md`) :
-- Forme économique pure (prébendier/patrimonial au sens weberien strict)
-- Forme géographique (deux groupes majoritairement patrimoniaux dont la polarisation suit une fracture cœur/marges)
-- Forme mixte (combinaison, le plus fréquent en pratique)
+**1. L'enjeu du conflit est le contrôle de l'État central** — pour accéder aux prébendes qu'il distribue ou garantir celles qu'on détient déjà. C'est l'invariant structurel. La ligne de faction est **toujours** celle du mode d'enrichissement — prébendiers contre patrimoniaux — puisque c'est ainsi que la matrice la définit (cf. `elites.md`). Ce qui varie selon le contexte national, c'est la pureté de l'agrégation autour de ce noyau (ralliements par pari sur l'accès, par proximité sociale, par grille superposée) et le mode d'expression par lequel les camps se reconnaissent. Quand le clivage économique paraît introuvable, tester d'abord l'**inversion du codage** — la faction qui tient l'organe de distribution est par définition la prébendière — avant de conclure à l'impureté du cas.
 
 La religion, la région, la dynastie, la langue sont des **modes d'expression du clivage**, pas sa cause. Le test critique : *l'enjeu du conflit est-il bien le contrôle de l'appareil central pour la distribution des prébendes* (pas le salut des âmes, pas l'autonomie régionale, pas la continuité dynastique comme fin en soi) ?
 

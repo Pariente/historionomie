@@ -281,8 +281,8 @@ Ces trois sources d'hétérogénéité empêchent structurellement la GR souvera
 - **Gap temporel nul ou collapsé** (semaines à mois) : **un seul saillant** qui capture les deux moments — typiquement le saillant canonique avec `perturbation: true` quand la conflation est complète, ou le saillant Restauration qui hérite de la dimension écrasement dans sa description.
 
 **Cas-types documentés** :
-- **Restauration avortée par Coup** : saillant canonique Restauration (Tildy/Nagy 1945 Hongrie ; Beneš 1945-1948 Bohême) + saillant Écrasement séparé (Coup de Budapest 1947 ; Coup de Prague 1948). Gap 2-3 ans → deux saillants.
-- **GR avortée par intervention extérieure** : saillant canonique Glorieuse Révolution (Nagy 1956 Hongrie ; Dubček 1968 Bohême) + saillant Écrasement séparé (intervention soviétique 4 nov 1956 ; intervention du Pacte de Varsovie août 1968). Gap quelques jours-mois → deux saillants.
+- **Restauration avortée par Coup** : saillant canonique Restauration (Tildy/Nagy 1945 Hongrie ; Beneš 1945-1948 Tchéquie) + saillant Écrasement séparé (Coup de Budapest 1947 ; Coup de Prague 1948). Gap 2-3 ans → deux saillants.
+- **GR avortée par intervention extérieure** : saillant canonique Glorieuse Révolution (Nagy 1956 Hongrie ; Dubček 1968 Tchéquie) + saillant Écrasement séparé (intervention soviétique 4 nov 1956 ; intervention du Pacte de Varsovie août 1968). Gap quelques jours-mois → deux saillants.
 - **Restauration exogène collapsée avec écrasement** : un seul saillant Restauration (Hongrie 1849 : Världos + Terreur blanche + installation Bach sur quelques mois). Gap quasi-nul → un seul saillant qui capture la séquence.
 
 **Pourquoi cette règle** : le saillant canonique sans flag perturbation se lit comme une vraie tentative dans son ancrage structurel (les trois marqueurs canoniques sont présents). L'Écrasement comme losange séparé indique clairement la cause structurelle de l'avortement (intervention externe, hétérogénéité injectée, etc.). C'est plus lisible que la conflation en un seul saillant + perturbation:true, qui masque la nature distincte des deux événements quand un gap existe.
