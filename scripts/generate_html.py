@@ -29,6 +29,7 @@ METHODOLOGY_FILES = [
     ("phase_parlementaire.md", "Phase parlementaire", "#1E90FF"),
     ("elites.md", "Les élites", "#8B7355"),
     ("perturbations.md", "Perturbations", "#8B7355"),
+    ("saturation_fiscale.md", "La Saturation fiscale", "#6A0DAD"),
 ]
 
 # Mapping: methodology file → which saillant titles to extract from parcours
@@ -183,6 +184,7 @@ def markdown_to_html(text):
     in_code_block = False
     in_list = False
     in_blockquote = False
+    in_raw = False
     in_recap_section = False  # skip "Tableau récapitulatif" (replaced by dynamic examples)
     list_items = []
     table_rows = []
@@ -268,7 +270,12 @@ def markdown_to_html(text):
                     html_lines.append('  <tr>')
                     cells = [c.strip() for c in row.split('|')[1:-1]]
                     for cell in cells:
-                        html_lines.append(f'    <{tag}>{convert_inline(cell)}</{tag}>')
+                        # Cellule bloquante : préfixe '!!' -> <td class="bloque">
+                        cls = ''
+                        if cell.startswith('!!'):
+                            cls = ' class="bloque"'
+                            cell = cell[2:].strip()
+                        html_lines.append(f'    <{tag}{cls}>{convert_inline(cell)}</{tag}>')
                     html_lines.append('  </tr>')
                     if ri == 0:
                         html_lines.append('</thead>')
@@ -322,6 +329,26 @@ def markdown_to_html(text):
             flush_list()
             flush_table()
             flush_blockquote()
+            continue
+
+        # Bloc HTML brut : ':::html' ... ':::'
+        if stripped == ':::html':
+            flush_list(); flush_table(); flush_blockquote()
+            in_raw = True
+            continue
+        if stripped == ':::' and in_raw:
+            in_raw = False
+            continue
+        if in_raw:
+            html_lines.append(line)
+            continue
+
+        # Définition mise en exergue : ligne commençant par '=> '
+        if stripped.startswith('=> '):
+            flush_list()
+            flush_table()
+            flush_blockquote()
+            html_lines.append(f'<p class="definition">{convert_inline(stripped[3:])}</p>')
             continue
 
         # Blockquote
@@ -765,6 +792,16 @@ td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
 
 /* --- Blockquote --- */
 blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- Définition mise en exergue --- */
+p.definition { font-family:'Newsreader', serif; font-size:1.45rem; line-height:1.55; font-weight:400; color:#3d3730; margin:2rem 0 2.5rem; padding-left:1.2rem; border-left:4px solid #8B7355; }
+
+/* --- Cellule bloquante dans un tableau --- */
+td.bloque { background:rgba(168,50,45,0.09); color:#8f2f2a; font-weight:500; box-shadow:inset 2px 0 0 #a8322d; }
+td.bloque::before { content:'⛔'; margin-right:0.4em; font-size:0.9em; }
+
+/* --- Drapeau inline dans une cellule --- */
+img.flag-inline { width:1.15em; height:auto; vertical-align:-0.18em; margin-right:0.45em; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); }
 
 /* --- HR --- */
 hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }

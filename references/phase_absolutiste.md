@@ -277,7 +277,22 @@ L'ancien régime, contrairement aux autres phases, ne s'achève pas par une tran
 
 > **Précaution de méthode** : « nous refusons parce que le système est inefficace » est l'auto-description constante des bloqueurs, à toutes les époques. Le discriminant ne peut donc pas être le motif déclaré. Ce qui s'observe et se date, c'est la **position structurelle** du corps qui bloque et le **fait objectif** du blocage.
 
-**Marqueur empirique central** : **tentative datée d'élargissement de l'assiette qui échoue devant le corps détenant le veto fiscal** (parlement, états provinciaux, diète, clergé, baronnage, oligarchies municipales, groupe d'intérêt organisé). C'est l'événement-pivot à identifier dans le parcours. Un État bien géré qui ne tente pas d'élargissement ne produira pas d'événement-pivot spectaculaire : sa saturation ne sera lisible que dans la série des recettes rapportées à l'économie (cf. Venise ~1740).
+**Marqueur empirique central** : **tentative datée d'établir un prélèvement direct ET permanent, qui échoue devant un corps conservant la fonction d'assiette ou de répartition** (parlement, états provinciaux, diète, clergé assemblé, baronnage, oligarchies municipales). C'est l'événement-pivot à identifier dans le parcours.
+
+> **Trois termes, tous nécessaires.**
+> 1. **Direct** — l'État vise à prélever sur les sujets sans passer par un corps interposé.
+> 2. **Permanent** — l'instrument est perpétuel, typiquement un cadastre ou la conversion d'un prélèvement de guerre en ressource ordinaire. *Une contribution extraordinaire de circonstance qui échoue est un **expédient**, pas une saturation* — les expédients suivent la saturation, ils ne la constituent pas. Contre-exemple : la Tassa del Milione de Clément XI (1708) est explicitement temporaire et extraordinaire, levée pour financer la guerre contre l'Empereur et supprimée en 1710.
+> 3. **Bloqué par un corps qui garde une fonction** — et non par une classe qui obtient une exemption. Une classe qui sort de l'assiette ne bloque rien, puisque l'impôt continue d'être levé directement sur tous les autres ; c'est une réussite partielle de la réforme, pas son échec. Cf. §Fiscalité directe établie.
+>
+> **Cas sans événement-pivot : la saturation lisible dans le non-recouvrement.** La définition exige le retrait du consentement par le corps détenant le veto ; elle n'exige pas une tentative *nouvelle*. La tentative bloquée est la forme **visible** du phénomène — celle qu'on observe quand l'État essaie malgré tout. Il existe un second cas : le corps retire son consentement **sur l'impôt déjà dû**, en ne versant pas, et l'État cesse alors de chercher l'imposition permanente parce que demander davantage n'aurait plus de sens. La saturation s'y observe par un **indicateur quantitatif** — le taux de non-recouvrement des directes par les corps médiateurs — et par le **changement de comportement de l'État**, qui bascule du permanent vers l'extraordinaire. Cas-type : Venise, 22 à 68 % de non-paiement des directes par les communautés de Terreferme en 1738 (qualifié d'opposition passive, non d'incapacité), et aucune augmentation permanente adoptée entre 1736 et 1755, le Sénat préférant emprunts et conversions de dette. Cette forme est plus faiblement datable — d'où une confiance plafonnée à `medium` — mais elle n'est pas moins falsifiable : un taux de recouvrement est une donnée.
+>
+> Empiriquement, les cas confirmés du corpus visent presque tous un **cadastre général** ou un impôt direct perpétuel : Catasto Onciario napolitain (1755), cadastre de Caracciolo en Sicile (1781-86), Steuerpatent joséphin sur cadastre unique (1789), vingtième perpétuel de Machault (1749). Un État bien géré qui ne tente pas d'élargissement ne produira pas d'événement-pivot spectaculaire : sa saturation ne sera lisible que dans la série des recettes rapportées à l'économie (cf. Venise ~1740).
+
+> **Contrôle de vraisemblance par la durée (critère Pariente).** Une saturation est irréversible : le régime ne peut plus lever l'ordinaire, donc il consomme des expédients, qui sont par nature auto-destructeurs. La distance entre Saturation et éclatement de l'AR est donc **bornée** — dans le corpus elle va de trente à soixante-dix ans : Angleterre 1610→1642 (32), Hongrie 1811→1848 (37), France 1749→1789 (40), Naples 1755→1799 (44), Autriche 1789→1848 (59). Un AR de plus d'un siècle courant depuis une saturation supposée est un signal d'erreur de datation : soit la saturation est plus tardive, soit ce qu'on a pris pour elle n'en est pas une.
+>
+> **Le contrôle est un plafond, pas un plancher.** Une distance très courte n'invalide rien : un AR peut être tronqué par un choc exogène avant maturation — États pontificaux 1777→1798 (21 ans) et Émilie-Romagne 1780→1796 (16 ans), tous deux interrompus par l'arrivée des Français. C'est la distance **longue** qui signale l'erreur, parce qu'elle suppose un régime tenant plus d'un siècle sur des expédients.
+>
+> **Corollaire pratique** : un État qui **se rétablit** financièrement par voie ordinaire n'était pas saturé — la limite politique de la saturation ne se lève pas. Un endettement lourd suivi d'un redressement (coupes, consolidations, retour à l'équilibre) décrit un régime qui va mal et qui tient, pas un régime qui ne peut plus lever. Cas-type : les finances pontificales, dette triplée entre 1620 et 1670 et service absorbant deux tiers des revenus, mais redressées par Innocent XI dans les années 1680 — ce qui a longtemps fait dater à tort une saturation vers 1657.
 
 **Distinction surendettement / saturation** : banqueroutes, défauts, dévaluations monétaires, consolidations forcées de dette sont des **expédients réactifs** qui peuvent suivre la saturation (l'État cherche du cash autrement que par fiscalité ordinaire), pas la saturation elle-même. Ne pas confondre : en France, **la saturation a eu lieu en 1749-1751** avec le vidage du vingtième de Machault ; la banqueroute partielle de Terray (1770) est un expédient réactif postérieur. Le cas symétrique mérite attention — le système de Law et son effondrement (1716-1720) sont **antérieurs** à la saturation et ne la constituent pas : c'est une crise de surendettement que l'État absorbe et dont il sort par une reconstruction réussie (stabilisation monétaire de 1726, budgets d'Orry, aucune banqueroute entre 1720 et 1770). Un épisode de surendettement n'est donc ni une preuve de saturation, ni même une preuve qu'elle est proche. Pareil pour 1872 en Espagne (Moratoria Salaverría = défaut, la saturation est en 1868-1871 avec l'abolition des consumos et l'échec Figuerola). Pareil pour 1811 en Autriche (banqueroute Wallis, expédient réactif ; la saturation est en 1789-1790 avec le retrait des patentes joséphines).
 
@@ -295,8 +310,8 @@ Un État saturé peut encore emprunter, vendre, lever des contributions extraord
 **Exemples empiriques** (datations sur événement-pivot d'élargissement bloqué) :
 - France **1749-1751** : vingtième de Machault (impôt direct universel perpétuel institué en mai 1749, vidé de son universalité par la capitulation royale du 23 décembre 1751 devant l'Assemblée générale du clergé)
 - Angleterre **1610** : échec du Great Contract de Salisbury (Parlement refuse de remplacer wardships/purveyance par rente fixe)
-- États pontificaux **1708** : Tassa del Milione de Clément XI (contribution universelle bloquée par noblesse et clergé exemptés)
-- Émilie-Romagne **1708** : machine pontificale (Bologne suit en configuration tutélaire)
+- États pontificaux **1780-1781** : plan Boncompagni (chirographes des 25 octobre et 7 novembre 1780) — impôts directs sur le foncier, cadastre par arpenteurs, **retrait au Sénat de Bologne du contrôle des finances** ; refus du Sénat des Quarante, échec avant mise en œuvre. Tentative d'échelle pontificale dont Bologne était le banc d'essai : le saillant est partagé avec l'Émilie-Romagne, ce qui n'est pas une dérivation mais un même acte à deux échelles. *Datations antérieures écartées le 2026-08-21 : Tassa del Milione 1708 (contribution extraordinaire, donc expédient) et Catasto Piano 1777-1783 (mené à terme, déclarations remises aux Communautés, aucun corps nommé — reversé aux Réformes échouées).*
+- Émilie-Romagne **1780-1781** : chirographes des 25 octobre et 7 novembre 1780 (légation Boncompagni à Bologne) — impôts directs sur la propriété foncière, cadastre exact par arpenteurs, et **retrait au Sénat du contrôle des finances** ; le Sénat des Quarante refuse et la réforme échoue avant même sa mise en œuvre. Cas le plus explicite du corpus, la réforme visant nommément à retirer au corps sa fonction fiscale. *Datations antérieures 1708 (dérivée de Rome) et 1657 (plafonnement de recettes) écartées le 2026-08-21.*
 - Naples **1755** : Catasto Onciario de Charles VII/Tanucci (capture communale par baronnage local)
 - Florence **1774-1775** : Tassa di redenzione + concordat de Pierre-Léopold (résistance progressive de patriciat sédimenté et clergé)
 - Sicile **1781-1786** : Caracciolo (cadastre général + privilèges nobiliaires bloqués par baronnage parlementaire)
@@ -304,9 +319,9 @@ Un État saturé peut encore emprunter, vendre, lever des contributions extraord
 - Tchéquie **1789-1790** : co-actrice de la saturation habsbourgeoise (Stände bohêmes parmi les bloqueurs)
 - Hongrie **1811-1812** : Diète refuse l'augmentation de la contribution, exemption nobiliaire tient jusqu'aux April Laws de 1848
 - Espagne **1868-1875** : échec de la substitution Figuerola aux consumos abolis, puis réversion imposée par le rejet des oligarchies municipales (recettes en plateau à partir des années 1870)
-- Venise **~1740** : épuisement de l'extension fiscale ordinaire dans une oligarchie patricienne extrême
+- Venise **1736-1755, ancrée 1738** : non-recouvrement de 22 à 68 % des directes par les communautés de Terreferme (opposition passive) et résistance du clergé à la decima ; aucune augmentation permanente adoptée sur la période, le Sénat basculant sur emprunts, conversions et provvedimenti straordinari. Saturation sans événement-pivot, lisible dans le taux de recouvrement. *Datation antérieure « ~1740 » écartée le 2026-08-22 : elle reposait sur le port franc de Trieste (érosion technique) et sur l'encours de dette (surendettement), tous deux exclus par la doctrine.*
 - Bavière **1856** : retrait des revenus de la propriété foncière de l'assiette de l'impôt sur le revenu par la noblesse re-renforcée, huit ans après la loi progressive universelle de 1848 (confidence low — non corroboré par une série de recettes)
-- Piémont **1820-1821** : ministère Balbo, aucune réforme finançable sans refonte de l'appareil restauré, renvoi du ministre le 11 mars 1821 (saturation tardive, cf. Cas atypiques nº 2)
+- Piémont : **entrée supprimée le 2026-08-22.** Le ministère Balbo échoue aux trois termes — aucun instrument fiscal daté, et le renvoi du 11 mars 1821 par Charles-Félix est **constitutionnel** (projet de constitution jugé trop avancé), non fiscal ; l'épisode faisait de surcroît double emploi avec la Remontrance de 1821. Une Saturation y est **structurellement impossible** : les États généraux ont été vidés par Emanuele Filiberto (1559-1580) et la répartition communale absorbée par la perequazione generale (édit du 5 mai 1731). Le Piémont relève de **Fiscalité directe établie**.
 
 ### Cas atypiques
 
@@ -323,6 +338,55 @@ Un État saturé peut encore emprunter, vendre, lever des contributions extraord
 4. **Absolutismes rentier-patrimoniaux** (Suisse cantonale, Gênes via Casa di San Giorgio) — pas de machine d'extraction fiscale centralisée qui pourrait tenter un élargissement, donc pas de Saturation au sens strict. L'AR (s'il existe) se signale par d'autres marqueurs (sédimentation patricienne, fermeture des familles éligibles). Berne accumule au XVIIIᵉ un trésor d'État investi sur le marché londonien — pattern structurellement **inverse** de la saturation.
 
 5. **AR avorté ou tutélaire sans saturation observée** (Milan post-1814) — la phase absolutiste est interrompue avant qu'un événement-pivot ne soit identifiable. *La Bavière figurait ici jusqu'au 2026-08-06 ; elle en sort — sa saturation est datée de 1856 (retrait des revenus fonciers de l'assiette), la mention « machine Montgelas pas durablement bloquée » ne valant que pour la période antérieure.* *Le Piémont figurait ici jusqu'au 2026-07-30 ; il en sort — il a bien une Saturation, sous la forme du variant nº 2.* **Cas voisin à signaler** : la première période d'AR piémontaise (1748-1796) est bien entrée sans Saturation, non par interruption mais parce que la perequazione de 1731 avait déjà réussi l'égalité fiscale — il ne restait aucun élargissement à faire bloquer. Entrée en AR par sédimentation seule.
+
+### Dater l'entrée en Ancien Régime quand la Saturation fiscale est absente
+
+L'Ancien Régime est défini par **l'état de la société** — sédimentation des élites, mobilité bloquée, incapacité à se réformer, financement par expédients — et non par le saillant qui l'ouvre. La Saturation fiscale en est le marqueur canonique parce que la limite fiscale coïncide *habituellement* avec ce basculement : c'est elle qui arrête la projection extérieure et retourne l'énergie vers l'intérieur.
+
+Quand elle est structurellement absente (cf. §Fiscalité directe établie), la sous-phase existe quand même et il faut la dater autrement. Règle :
+
+1. **Dater sur la première attestation de la sédimentation elle-même** : surproduction élitaire, fermeture de la classe politique, mobilité sociale figée, vénalité devenue ressource ordinaire, déclin démographique et économique, échec répété des tentatives de réforme.
+2. **Ne pas dater sur la fermeture de la projection extérieure seule.** Une nation peut être *empêchée* de projeter par un contexte géopolitique défavorable longtemps avant de sédimenter. Une sous-phase d'impérialisme sans impérialisme effectif est une **contingence normale**, pas une erreur de datation — l'impérialisme est une tendance de la phase, pas une obligation. Cas-type : la Toscane cesse toute expansion à Sienne (1555) mais reste une société vivante et productive pendant plus d'un siècle (port franc de Livourne, Accademia del Cimento en 1657), et ne sédimente qu'ensuite.
+3. La borne est alors explicitement **conventionnelle**, et son marqueur doit être nommé dans le fichier.
+
+Corollaire : l'absence de Saturation ne dit rien de l'état de la société. Elle dit seulement que le marqueur habituel manque, parce qu'aucun corps ne pouvait produire le refus qui le rend visible.
+
+### Saillant : Fiscalité directe établie (critère Deblonde)
+
+**Définition** : moment où l'État absolutiste établit une extraction **directe et non médiatisée** sur ses sujets, sans qu'aucun corps intermédiaire ne puisse s'y opposer — soit qu'aucun n'ait survécu à l'absolutisation, soit que l'opposition rencontrée n'ait pu que se retirer de l'assiette au lieu de bloquer.
+
+C'est le **miroir de la Saturation fiscale** : même tentative, issue inverse. Les deux saillants sont mutuellement exclusifs sur un même cycle.
+
+#### Le mécanisme commun aux deux saillants
+
+Ce que l'État tente, dans les deux cas, est de **prélever sur les sujets sans passer par un corps interposé**. Ce que les intermédiaires défendent n'est pas d'abord leur exemption mais leur **fonction de médiation** — affermage, répartition, collecte déléguée, abonnement négocié. Passer à une fiscalité directe et horizontale la leur retire.
+
+D'où le test discriminant, qui porte sur l'état du système **après** l'épisode :
+
+> **L'État prélève-t-il désormais directement sur les sujets, ou doit-il encore passer par un corps qui assied et répartit ?**
+> - Encore par un corps → **Saturation fiscale**
+> - Directement → **Fiscalité directe établie**
+
+**Classe exemptée ≠ corps intermédiaire.** Une classe qui obtient de sortir de l'assiette ne bloque rien : l'impôt direct continue d'être levé sur tous les autres, et la réforme a partiellement réussi. Seul un corps qui **conserve la fonction d'assiette ou de répartition** constitue un blocage. C'est ce qui distingue le Parlement anglais de 1610 — qui refuse le principe même du Great Contract parce qu'une rente fixe affranchirait la Couronne de lui — d'une noblesse qui se fait simplement retirer de l'assiette.
+
+#### Pourquoi la taille joue
+
+Le besoin de corps intermédiaires est d'abord **technique**. Un territoire qu'un souverain peut administrer et collecter en direct n'a pas besoin de déléguer, donc ne conserve pas de médiateurs, donc ne peut pas produire de Saturation. Un grand État territorial ne peut pas se passer de la délégation, donc entretient les corps qui finiront par le bloquer. La taille n'agit pas directement : elle agit par le **besoin de délégation**.
+
+**Corollaire structurel** : une absolutisation qui achève le troisième critère du test discriminant — perte de l'autonomie fiscale des entités décentralisées — se prive de sa propre Saturation. Cas-type : Florence, dont les communautés du dominio sont supprimées comme médiateurs par les Nove Conservatori (1560), c'est-à-dire par le marqueur même qui la qualifie comme absolutiste.
+
+#### Conséquences
+
+1. **L'entrée en AR n'a pas de marqueur fiscal.** Elle se date sur les marqueurs de sédimentation, et reste conventionnelle.
+2. **La sortie endogène de l'AR devient impossible.** Ni Saturation ni ruine financière endogène : le régime peut lever ce qu'il veut. Le déclenchement de la RN est donc **nécessairement exogène**.
+
+L'implication ne vaut que dans ce sens. Une nation qui *a* une Saturation peut malgré tout connaître un déclenchement exogène.
+
+**Signes observables** : suppression ou subordination des organes fiscaux locaux pendant l'absolutisation ; absence d'états, de diète, de parlement ou de conseil disposant d'une compétence d'assiette ; opposition qui prend la forme d'exemptions individuelles ou de classe plutôt que de refus institutionnels ; hausses fiscales imposées sans négociation avec un corps.
+
+**Cas identifiés** : Bavière (impôt sur le revenu de 1848 levé directement, la noblesse n'obtenant en 1856 qu'un retrait du foncier de l'assiette), Florence (Nove Conservatori 1560). À instruire : Milan, Gênes, Suisse.
+
+---
 
 ### Saillant : Remontrance
 
