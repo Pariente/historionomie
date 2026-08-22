@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Saturation fiscale — Historionomie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>:root { --phase-color: #6A0DAD; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Public Sans', system-ui, sans-serif; background:#f9f9f9; color:#1a1c1c; line-height:1.6; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* --- Navbar (= docs/index.html) --- */
+.navbar { background:#f9f9f9; position:sticky; top:0; z-index:50; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; border-bottom:1px solid rgba(209,196,185,0.3); }
+.navbar-brand { font-family:'Newsreader', serif; font-size:1.5rem; font-weight:600; font-style:italic; color:#8B7355; text-decoration:none; }
+.navbar-links { display:flex; gap:1.5rem; align-items:center; }
+.navbar-links a { text-decoration:none; font-size:0.9rem; font-weight:500; color:#888; transition:color 0.2s; }
+.navbar-links a:hover { color:#8B7355; }
+.navbar-links a.active { color:#8B7355; font-weight:700; border-bottom:2px solid #8B7355; padding-bottom:2px; }
+
+/* Nations dropdown */
+.nav-dropdown { position:relative; display:inline-block; }
+.nav-dropdown-toggle { background:none; border:1px solid #e0dcd4; cursor:pointer; font-family:inherit; font-size:0.85rem; color:#555; padding:0.25rem 0.6rem; border-radius:4px; display:inline-flex; align-items:center; gap:0.4rem; line-height:1.4; }
+.nav-dropdown-toggle:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-toggle .nav-dropdown-current { font-weight:600; color:#8B7355; }
+.nav-dropdown-toggle .nav-dropdown-caret { font-size:0.7rem; color:#8B7355; }
+.nav-dropdown-menu { display:none; position:absolute; top:calc(100% + 4px); right:0; min-width:220px; max-height:65vh; overflow-y:auto; background:#fff; border:1px solid #e0dcd4; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.08); z-index:200; padding:0.3rem 0; }
+.nav-dropdown.open .nav-dropdown-menu { display:block; }
+.nav-dropdown-menu a { display:flex; align-items:center; gap:0.55rem; padding:0.4rem 0.95rem; font-size:0.85rem; color:#555; text-decoration:none; font-weight:500; border-bottom:none; }
+.nav-dropdown-menu a:hover { background:#f5f1eb; color:#1a1c1c; }
+.nav-dropdown-menu a.active { color:#8B7355; font-weight:700; background:#faf6f0; }
+.nav-flag { display:inline-block; width:18px; height:18px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,0.12); }
+.nav-flag img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.nav-nation-label { line-height:1.2; }
+
+/* --- Layout --- */
+.page-grid { margin-left:14rem; min-height:calc(100vh - 3.5rem); }
+
+/* --- Sidebar --- */
+.sidebar { position:fixed; top:3.5rem; left:0; width:14rem; height:calc(100vh - 3.5rem); overflow-y:auto; padding:1.5rem 0.8rem 2rem 1rem; background:#f3f3f3; border-right:1px solid rgba(209,196,185,0.2); scrollbar-width:none; z-index:40; }
+.sidebar::-webkit-scrollbar { display:none; }
+.sidebar-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; padding:0 0.4rem; margin-bottom:0.6rem; }
+.sidebar-nav { list-style:none; }
+.sidebar-nav li { margin:2px 0; }
+.sidebar-nav a { display:block; padding:0.4rem 0.6rem; font-size:0.82rem; font-weight:500; color:#666; text-decoration:none; border-radius:6px; transition:background 0.15s, color 0.15s; line-height:1.4; }
+.sidebar-nav a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+.sidebar-nav a.active { background:rgba(139,115,85,0.08); color:#8B7355; font-weight:700; }
+
+/* --- Content --- */
+.content { padding:0 2.5rem 4rem; min-width:0; }
+.toc-grid { display:grid; grid-template-columns:13rem 1fr; gap:2rem; align-items:start; }
+article { max-width:50rem; min-width:0; }
+
+/* --- Hero --- */
+.hero { padding:1rem 0 0; max-width:700px; }
+.hero-label { display:none; }
+.hero h1 { font-family:'Newsreader', serif; font-size:2.4rem; font-weight:600; color:#1a1c1c; line-height:1.15; margin-bottom:0.8rem; border:none; padding:0; }
+.hero-divider { height:0; border-bottom:1px solid rgba(209,196,185,0.2); margin-bottom:0.5rem; }
+
+/* --- TOC --- */
+nav.toc { position:sticky; top:4.5rem; max-height:calc(100vh - 5.5rem); overflow-y:auto; padding:1rem 0 2rem; scrollbar-width:none; }
+nav.toc::-webkit-scrollbar { display:none; }
+nav.toc h2 { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#999; margin:0 0 0.6rem; border:none; padding:0 0.5rem; }
+nav.toc ul { list-style:none; padding-left:0; }
+nav.toc ul ul { padding-left:0.9rem; }
+nav.toc li { margin:2px 0; }
+nav.toc a { color:#888; text-decoration:none; display:block; padding:0.2rem 0.5rem; border-radius:4px; line-height:1.4; font-size:0.78rem; transition:background 0.1s, color 0.1s; }
+nav.toc a:hover { background:rgba(139,115,85,0.04); color:#4d453c; }
+nav.toc > ul > li > a { font-weight:600; color:#666; font-size:0.8rem; }
+
+/* --- Headers --- */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top:4.5rem; }
+h1 { font-family:'Newsreader', serif; font-size:1.6rem; font-weight:600; color:#1a1c1c; margin:2.5rem 0 0.5rem; border:none; padding:0; }
+h2 { font-family:'Newsreader', serif; font-size:1.4rem; font-weight:600; color:var(--phase-color, #8B7355); margin:2.5rem 0 0.6rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(209,196,185,0.2); }
+h3 { font-size:0.95rem; font-weight:700; color:#1a1c1c; margin:1.8rem 0 0.4rem; display:flex; align-items:center; gap:0.4rem; padding:0.7rem 0 0.4rem; border-bottom:1px solid rgba(209,196,185,0.15); opacity:0.8; text-transform:uppercase; letter-spacing:1px; }
+.h3-icon { font-size:1.1rem; flex-shrink:0; }
+h4 { font-size:1rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+h5, h6 { font-size:0.85rem; font-weight:600; color:#666; margin:1.2rem 0 0.3rem; }
+.anchor { font-size:0.75em; color:#ccc; text-decoration:none; margin-left:0.4rem; opacity:0; transition:opacity 0.15s; }
+h2:hover .anchor, h3:hover .anchor { opacity:1; }
+
+/* --- Body text --- */
+p { margin:0.4rem 0 0.7rem; color:#4d453c; font-size:0.9rem; line-height:1.7; }
+a { color:#715b3e; text-decoration:none; }
+a:hover { text-decoration:underline; }
+strong { font-weight:600; color:#1a1c1c; }
+
+/* --- Lists --- */
+ul, ol { margin:0.3rem 0; padding-left:1.6rem; }
+li { margin:0.25rem 0; line-height:1.65; font-size:0.9rem; color:#4d453c; }
+
+/* --- Code --- */
+code { font-family:'SF Mono','Fira Code',monospace; font-size:0.84em; background:#f3f3f3; padding:0.12em 0.35em; border-radius:3px; color:#715b3e; }
+pre { background:#f3f3f3; border-radius:8px; padding:1rem; overflow-x:auto; margin:0.8rem 0; }
+pre code { background:none; padding:0; font-size:0.82rem; color:#1a1c1c; }
+
+/* --- Tables --- */
+.table-wrapper { overflow-x:auto; margin:1rem 0; background:#fff; border-radius:8px; box-shadow:0 12px 32px rgba(26,28,28,0.06); border:1px solid rgba(209,196,185,0.15); }
+table { border-collapse:collapse; width:100%; font-size:0.84rem; }
+th { font-weight:700; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#8B7355; padding:0.65rem 1rem; text-align:left; border-bottom:1px solid rgba(209,196,185,0.3); background:rgba(139,115,85,0.025); }
+td { padding:0.55rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid rgba(209,196,185,0.1); color:#4d453c; }
+tbody tr:hover { background:rgba(139,115,85,0.02); }
+td:first-child { font-weight:600; color:#1a1c1c; white-space:nowrap; }
+td.summary { font-size:0.78rem; line-height:1.5; max-width:26rem; color:#666; }
+
+/* --- Blockquote --- */
+blockquote { border-left:3px solid rgba(209,196,185,0.4); margin:1rem 0; padding:0.3rem 0 0.3rem 1rem; color:#666; font-size:0.9rem; }
+
+/* --- Définition mise en exergue --- */
+p.definition { font-family:'Newsreader', serif; font-size:1.45rem; line-height:1.55; font-weight:400; color:#3d3730; margin:2rem 0 2.5rem; padding-left:1.2rem; border-left:4px solid #8B7355; }
+
+/* --- Cellule bloquante dans un tableau --- */
+td.bloque { background:rgba(168,50,45,0.09); color:#8f2f2a; font-weight:500; box-shadow:inset 2px 0 0 #a8322d; }
+td.bloque::before { content:'⛔'; margin-right:0.4em; font-size:0.9em; }
+
+/* --- Drapeau inline dans une cellule --- */
+img.flag-inline { width:1.15em; height:auto; vertical-align:-0.18em; margin-right:0.45em; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); }
+
+/* --- HR --- */
+hr { border:none; border-top:1px solid rgba(209,196,185,0.2); margin:2rem 0; }
+
+/* --- Examples --- */
+.examples { margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(209,196,185,0.3); }
+.examples > h2 { font-family:'Newsreader', serif; font-size:1.3rem; font-weight:500; color:#8B7355; border:none; margin-bottom:0.3rem; padding:0; }
+.examples-intro { color:#999; margin-bottom:1.2rem; font-size:0.85rem; font-style:italic; }
+
+/* Saillant accordion (= docs/index.html) */
+.saillant-list { display:flex; flex-direction:column; gap:0.4rem; }
+details summary::-webkit-details-marker { display:none; }
+details[open] summary .expand-icon { transform:rotate(90deg); }
+.saillant-details { background:none; border:none; border-radius:0; padding:0; }
+.saillant-details summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; padding:0.55rem 0.4rem; border-radius:6px; transition:background 0.15s; }
+.saillant-details summary:hover { background:rgba(139,115,85,0.04); }
+.saillant-details summary .saillant-left { display:flex; align-items:center; gap:0.5rem; }
+.saillant-details summary .saillant-left .material-symbols-outlined { font-size:1rem; }
+.saillant-details summary .saillant-left span:last-child { font-size:0.82rem; font-weight:700; color:#1a1c1c; }
+.saillant-details summary .expand-icon { font-size:1rem; color:#b0a28e; transition:transform 0.25s ease, color 0.2s; }
+.saillant-details[open] summary .expand-icon { color:#8B7355; }
+.saillant-details .saillant-body { padding:0.1rem 0.4rem 0.6rem; }
+.saillant-details .saillant-body p { font-size:0.84rem; color:#4d453c; line-height:1.65; margin-bottom:0.7rem; }
+
+/* Example cards (= docs/index.html) */
+.saillant-examples { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.55rem; overflow:hidden; }
+.example-card { display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:#4d453c; padding:0.55rem 0.6rem; background:rgba(139,115,85,0.025); border-radius:6px; border:1px solid rgba(209,196,185,0.15); min-width:0; overflow:hidden; }
+.example-card .card-content { flex:1; min-width:0; }
+.example-card .card-header { display:flex; align-items:center; gap:0.35rem; margin-bottom:0.15rem; }
+.example-card .card-flag { height:11px; width:auto; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,0.06); flex-shrink:0; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; flex:1; min-width:0; }
+.example-card .card-date { font-family:'IBM Plex Mono','Courier New',monospace; color:#8B7355; font-size:0.68rem; font-weight:600; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; margin-left:auto; }
+.example-card .card-title { font-weight:700; color:#1a1c1c; font-size:0.78rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.example-card .card-desc { display:block; color:#666; font-size:0.72rem; line-height:1.4; }
+
+/* Badges */
+.badge { display:inline-block; padding:2px 8px; font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; border-radius:20px; white-space:nowrap; margin-left:0.3rem; }
+.badge-prolongement { background:rgba(255,165,0,0.12); color:#b86e00; }
+.badge-acceleration { background:rgba(59,130,246,0.1); color:#2563eb; }
+.badge-avortement { background:rgba(220,38,38,0.08); color:#c94a4a; }
+.badge-reboot { background:rgba(139,115,85,0.1); color:#715b3e; }
+
+@media (max-width:900px) { .saillant-examples { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .saillant-examples { grid-template-columns:1fr; } }
+
+/* --- Footer --- */
+footer { border-top:1px solid rgba(209,196,185,0.15); padding:2rem; text-align:center; }
+.footer-brand { font-family:'Newsreader', serif; font-weight:600; font-style:italic; color:#8B7355; font-size:1rem; margin-bottom:0.3rem; }
+.footer-meta { font-size:0.78rem; color:#999; font-style:italic; }
+
+/* --- Responsive --- */
+@media (max-width:1024px) {
+    .page-grid { margin-left:0; }
+    .sidebar { display:none; }
+    .toc-grid { grid-template-columns:1fr; gap:0; }
+    nav.toc { position:static; max-height:none; overflow-y:visible; background:#f3f3f3; padding:1rem; margin:1rem 0 1.5rem; border-radius:8px; }
+}
+@media (max-width:640px) {
+    .content { padding:0 1rem 3rem; }
+    .hero h1 { font-size:1.8rem; }
+    .navbar { padding:0.6rem 1rem; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="index.html">Historionomie</a>
+<div class="navbar-links">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="parcours.html">Méthodologie</a>
+    <div class="nav-dropdown" id="nation-dropdown"><button type="button" class="nav-dropdown-toggle" onclick="document.getElementById('nation-dropdown').classList.toggle('open')"><span class="nav-dropdown-current">Parcours</span><span class="nav-dropdown-caret">&#9662;</span></button><div class="nav-dropdown-menu"><a href="angleterre.html"><span class="nav-flag"><img src="images/angleterre/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Angleterre</span></a><a href="athenes.html"><span class="nav-flag"><img src="images/athenes/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Athènes</span></a><a href="autriche.html"><span class="nav-flag"><img src="images/autriche/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Autriche</span></a><a href="baviere.html"><span class="nav-flag"><img src="images/baviere/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Bavière</span></a><a href="emilie-romagne.html"><span class="nav-flag"><img src="images/emilie-romagne/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Émilie-Romagne</span></a><a href="espagne.html"><span class="nav-flag"><img src="images/espagne/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Espagne</span></a><a href="etats-pontificaux.html"><span class="nav-flag"><img src="images/etats-pontificaux/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">États pontificaux</span></a><a href="florence.html"><span class="nav-flag"><img src="images/florence/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Florence</span></a><a href="france.html"><span class="nav-flag"><img src="images/france/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">France</span></a><a href="genes.html"><span class="nav-flag"><img src="images/genes/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Gênes</span></a><a href="hongrie.html"><span class="nav-flag"><img src="images/hongrie/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Hongrie</span></a><a href="israel.html"><span class="nav-flag"><img src="images/israel/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Israël</span></a><a href="milan.html"><span class="nav-flag"><img src="images/milan/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Milan</span></a><a href="naples.html"><span class="nav-flag"><img src="images/naples/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Naples</span></a><a href="piemont.html"><span class="nav-flag"><img src="images/piemont/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Piémont</span></a><a href="sicile.html"><span class="nav-flag"><img src="images/sicile/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Sicile</span></a><a href="suisse.html"><span class="nav-flag"><img src="images/suisse/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Suisse</span></a><a href="tchequie.html"><span class="nav-flag"><img src="images/tchequie/flag.svg" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Tchéquie</span></a><a href="venise.html"><span class="nav-flag"><img src="images/venise/flag.png" alt="" onerror="this.parentElement.style.display='none'"></span><span class="nav-nation-label">Venise</span></a></div></div>
+</div>
+</nav>
+<div class="page-grid">
+<aside class="sidebar">
+<span class="sidebar-label">Méthodologie</span>
+<ul class="sidebar-nav">
+<li><a href="parcours.html">Le Parcours de construction nationale</a></li>
+<li><a href="phase_pre_feodale.html">Phase pré-féodale</a></li>
+<li><a href="phase_feodale.html">Phase féodale</a></li>
+<li><a href="phase_oligarchique.html">Phase oligarchique</a></li>
+<li><a href="phase_absolutiste.html">Phase absolutiste</a></li>
+<li><a href="phase_rn.html">Révolution Nationale</a></li>
+<li><a href="phase_parlementaire.html">Phase parlementaire</a></li>
+<li><a href="elites.html">Les élites</a></li>
+<li><a href="perturbations.html">Perturbations</a></li>
+<li><a href="saturation_fiscale.html" class="active">La Saturation fiscale</a></li>
+</ul></aside>
+<div class="content">
+<div class="hero">
+    <span class="hero-label">Section Méthodologique</span>
+    <h1>La Saturation fiscale</h1>
+    <div class="hero-divider"></div>
+</div>
+<div class="toc-grid">
+<nav class="toc"><h2>Sommaire</h2><ul>
+<li><a href="#définition">Définition</a></li>
+<li><a href="#critère-de-faisabilité">Critère de faisabilité</a></li>
+<li><a href="#les-trois-maillons">Les trois maillons</a></li>
+<li><a href="#ce-que-le-saillant-date">Ce que le saillant date</a></li>
+<li><a href="#tableau-du-corpus">Tableau du corpus</a></li>
+<li><a href="#sans-corps-intermédiaire">Sans corps intermédiaire</a></li>
+</ul></nav>
+<article>
+<h2 id="définition">Définition<a class="anchor" href="#définition">#</a></h2>
+<p class="definition">La Saturation fiscale est le moment où l'État absolutiste <strong>échoue à établir un prélèvement direct et permanent dont il tienne lui-même les trois maillons</strong> &mdash; consentir, asseoir, percevoir —, parce qu'un corps intermédiaire refuse de lui céder celui qu'il détient.</p>
+<p>Ce n'est ni la perte d'une capacité, ni une création à partir de rien. L'État dispose souvent déjà de prélèvements directs &mdash; la France a la capitation dès 1695, permanente à partir de 1701 et frappant les trois ordres ; la Judée hérodienne lève une capitation assise sur l'âge et le sexe. Ce qui lui manque n'est pas le prélèvement direct : c'est un prélèvement dont il tienne la chaîne d'un bout à l'autre.</p>
+<p>Créer un impôt nouveau ou refondre un impôt existant est donc <strong>contingent</strong> &mdash; le vingtième de 1749 s'ajoute à la taille et à la capitation, le Catasto Onciario remplace une répartition, le Great Contract commue des droits féodaux en rente. Ce qui est constant, c'est la reprise d'un maillon.</p>
+<p>Toute absolutisation cherche cette reprise : c'est le troisième critère du test discriminant absolutiste, la perte de l'autonomie fiscale des entités décentralisées. Là où elle aboutit, <strong>Fiscalité directe établie</strong> ; là où un corps se refuse, <strong>Saturation fiscale</strong>. Deux issues de la même tentative.</p>
+<p>La limite est <strong>politique</strong>, non financière. Un État saturé peut encore emprunter, vendre des charges, lever des contributions extraordinaires &mdash; c'est même la signature de l'Ancien Régime. Ce qu'il ne parvient pas à faire, c'est atteindre le contribuable sans passer par un corps.</p>
+<p><strong>Trois termes, tous nécessaires.</strong></p>
+<p><strong>Direct</strong> &mdash; l'État vise à prélever sans passer par un corps interposé.</p>
+<p><strong>Permanent</strong> &mdash; l'instrument est perpétuel, typiquement un cadastre général. Une contribution extraordinaire de circonstance qui échoue est un expédient, non une saturation ; les expédients suivent la saturation, ils ne la constituent pas.</p>
+<p><strong>Bloqué par un corps qui garde son maillon</strong> &mdash; et non par une classe qui obtient une exemption. Une classe qui sort de l'assiette ne bloque rien : l'impôt continue d'être levé sur tous les autres, et la réforme a partiellement réussi. Un corps bloque quand il conserve le <strong>consentement</strong>, l'<strong>assiette</strong> ou la <strong>perception</strong>.</p>
+<hr>
+<h2 id="critère-de-faisabilité">Critère de faisabilité<a class="anchor" href="#critère-de-faisabilité">#</a></h2>
+<p>Avant de chercher une saturation, il faut savoir si elle est possible. Une seule question :</p>
+<p><strong>Un corps intermédiaire tient-il l'un des trois maillons de la fiscalité &mdash; consentir, asseoir, percevoir ?</strong></p>
+<p>Ce corps prend des formes variées &mdash; états provinciaux, diète, parlement, clergé assemblé, baronnage à juridictions, communautés répartitrices, oligarchies municipales. Ce qui compte n'est pas sa forme mais le <strong>maillon</strong> qu'il détient : il s'interpose entre l'État et le contribuable à l'un des trois moments du prélèvement.</p>
+<blockquote>
+<p><strong>N.B. &mdash; un organe de l'État central n'est pas un corps intermédiaire.</strong> La Casa di San Giorgio ressemble à un contre-pouvoir et n'en est pas un : elle perçoit « pour le compte et en substitution de la République », et ses protettori sortent du même <em>Liber nobilitatis</em> que les magistrats. Un veto suppose deux parties ; il n'y en a qu'une.</p>
+</blockquote>
+<hr>
+<h2 id="les-trois-maillons">Les trois maillons<a class="anchor" href="#les-trois-maillons">#</a></h2>
+<p>Un prélèvement suppose trois opérations. Un corps intermédiaire est un corps qui en tient une.</p>
+<p><strong>Consentir</strong> &mdash; accorder le prélèvement, sans quoi il n'a pas lieu.</p>
+<p><strong>Asseoir</strong> &mdash; déterminer qui doit combien.</p>
+<p><strong>Percevoir</strong> &mdash; encaisser effectivement.</p>
+<blockquote>
+<p><strong>Un État qui tient les trois maillons ne peut pas saturer.</strong> Il n'a personne à convaincre, personne à qui demander la mesure, personne qui puisse retenir l'argent. Un État qui en a cédé un peut être bloqué là &mdash; et c'est toujours là qu'il l'est.</p>
+</blockquote>
+<p><strong>Le taux n'est jamais l'enjeu.</strong> On relève indéfiniment un impôt dont l'assiette est fixée par le rang ou par un forfait : l'augmentation retombe sur ceux qui ne tiennent aucun maillon. La capitation française, créée en 1695 et permanente dès 1701, frappe les trois ordres et ne déclenche jamais rien &mdash; parce qu'elle est assise sur vingt-deux classes de statut, ce qui ne demande de connaître le revenu de personne. Le vingtième de 1749 est assis sur <strong>déclaration de revenu réel</strong> : il exige que l'État mesure. C'est cela qui se fait bloquer, pas le montant.</p>
+<p><strong>Asseoir est le maillon le plus souvent cédé</strong>, parce que c'est le plus coûteux à tenir soi-même : il faut arpenter, recenser, vérifier. D'où le fait que presque toutes les saturations du corpus se cristallisent sur un <strong>cadastre</strong> &mdash; le cadastre est l'opération par laquelle l'État reprend l'assiette.</p>
+<p><strong>La forme que prend le conflit est commandée par le maillon détenu.</strong> Elle n'est pas contingente :</p>
+<ul>
+  <li>Le corps tient le <strong>consentement</strong> → l'État n'a rien à reprendre, sa simple demande est bloquée. La saturation prend alors la forme d'un <strong>refus</strong>, sans réforme d'assiette. Le Great Contract de 1610 ne touche à aucune évaluation : le Parlement refuse une rente fixe permanente parce qu'elle affranchirait la Couronne de revenir demander. Même chose en Hongrie en 1811, où Vienne dévalue, demande davantage, et la Diète refuse.</li>
+  <li>Le corps tient l'<strong>assiette</strong> → l'État peut lever ce qu'il veut mais ne peut pas mesurer. Il doit tenter un <strong>cadastre</strong>. C'est le cas majoritaire, parce qu'asseoir est le maillon le plus coûteux à tenir soi-même et donc le plus souvent cédé.</li>
+  <li>Le corps tient la <strong>perception</strong> → l'État doit tenter un <strong>transfert de recouvrement</strong>. Les oligarchies municipales espagnoles font échouer la substitution Figuerola parce qu'elles encaissaient les consumos.</li>
+</ul>
+<blockquote>
+<p><strong>Corollaire pratique : reprendre un maillon en en laissant l'exécution à celui qui le détient garantit l'échec.</strong> Le catasto onciario napolitain est dressé par les communautés elles-mêmes, et le Catasto Piano pontifical repose sur des déclarations remises aux Communautés &mdash; les deux sont capturés sans qu'un refus soit même nécessaire. Là où le relevé est confié à des agents de l'État &mdash; arpenteurs de Boncompagni, intendants piémontais —, il est soit bloqué frontalement, soit il passe.</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Parcours</th>
+    <th>Consentir</th>
+    <th>Asseoir</th>
+    <th>Percevoir</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><img class="flag-inline" src="images/angleterre/flag.png" alt=""> <a href="angleterre.html"><strong>Angleterre</strong></a></td>
+    <td class="bloque">Parlement</td>
+    <td>commissaires locaux (gentry)</td>
+    <td>shérifs et fermiers</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/venise/flag.png" alt=""> <a href="venise.html"><strong>Venise</strong></a></td>
+    <td>État</td>
+    <td class="bloque">estimi généraux provinciaux</td>
+    <td class="bloque">communautés de Terreferme</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/naples/flag.png" alt=""> <a href="naples.html"><strong>Naples</strong></a></td>
+    <td>État</td>
+    <td class="bloque">baronnage au niveau communal</td>
+    <td>communautés</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/france/flag.png" alt=""> <a href="france.html"><strong>France</strong></a></td>
+    <td>État</td>
+    <td class="bloque">pays d'États par abonnement</td>
+    <td>élus et collecteurs de paroisse</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/etats-pontificaux/flag.png" alt=""> <a href="etats-pontificaux.html"><strong>États pontificaux</strong></a></td>
+    <td>État</td>
+    <td class="bloque">comunità, capitulations des Légations</td>
+    <td>comunità</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/emilie-romagne/flag.png" alt=""> <a href="emilie-romagne.html"><strong>Émilie-Romagne</strong></a></td>
+    <td>État</td>
+    <td class="bloque">Sénat des Quarante</td>
+    <td>comunità</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/sicile/flag.png" alt=""> <a href="sicile.html"><strong>Sicile</strong></a></td>
+    <td class="bloque">Parlement à trois braccia</td>
+    <td class="bloque">baronnage</td>
+    <td>baronnage</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/autriche/flag.png" alt=""> <a href="autriche.html"><strong>Autriche</strong></a></td>
+    <td>Stände</td>
+    <td class="bloque">Stände (répartition)</td>
+    <td>Stände</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/tchequie/flag.png" alt=""> <a href="tchequie.html"><strong>Tchéquie</strong></a></td>
+    <td>Stände bohêmes</td>
+    <td class="bloque">Stände bohêmes</td>
+    <td>Stände bohêmes</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/hongrie/flag.png" alt=""> <a href="hongrie.html"><strong>Hongrie</strong></a></td>
+    <td class="bloque">Diète</td>
+    <td class="bloque">comitats</td>
+    <td>comitats</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/espagne/flag.png" alt=""> <a href="espagne.html"><strong>Espagne</strong></a></td>
+    <td>État</td>
+    <td>État</td>
+    <td class="bloque">oligarchies municipales (consumos)</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/piemont/flag.png" alt=""> <a href="piemont.html"><strong>Piémont</strong></a></td>
+    <td>états généraux vidés par Emanuele Filiberto, 1559-1580</td>
+    <td>repris par le cadastre, édit du 5 mai 1731</td>
+    <td>communautés, mais sur base fixée par l'État</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/florence/flag.png" alt=""> <a href="florence.html"><strong>Florence</strong></a></td>
+    <td>patriciat éradiqué à Montemurlo, 1537</td>
+    <td>repris par les Nove Conservatori, 1560</td>
+    <td>communautés, sous tutelle des Nove</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/baviere/flag.png" alt=""> <a href="baviere.html"><strong>Bavière</strong></a></td>
+    <td>Landtag, mais l'impôt sur le revenu passe en 1848</td>
+    <td>État</td>
+    <td>État</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/genes/flag.png" alt=""> <a href="genes.html"><strong>Gênes</strong></a></td>
+    <td>aucun corps distinct de l'exécutif</td>
+    <td>trivial &mdash; gabelles perçues aux portes</td>
+    <td>San Giorgio, organe de l'État</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/milan/flag.png" alt=""> <a href="milan.html"><strong>Milan</strong></a> <em>(1er cycle)</em></td>
+    <td>aucun corps</td>
+    <td>exemptions et juridictions privées abolies par Francesco Sforza</td>
+    <td>municipalités subordonnées à la tutelle ducale</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/israel/flag.png" alt=""> <a href="israel.html"><strong>Israël</strong></a></td>
+    <td>Hérodiens, puis Rome après 6 apr. J.-C.</td>
+    <td>trivial &mdash; capitation par âge et sexe</td>
+    <td>fermiers, contractants révocables</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/suisse/flag.png" alt=""> <a href="suisse.html"><strong>Suisse</strong></a></td>
+    <td>le patriciat cantonal <em>est</em> l'État</td>
+    <td>sans objet &mdash; base rentière, pas extractive</td>
+    <td>sans objet</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/athenes/flag.png" alt=""> <a href="athenes.html"><strong>Athènes</strong></a></td>
+    <td>hors périmètre</td>
+    <td>—</td>
+    <td>—</td>
+  </tr>
+</tbody>
+</table></div>
+<p>En rouge, le maillon effectivement bloqué. Les huit dernières lignes n'en ont aucun, et aucune de ces nations n'a de Saturation fiscale ; les onze premières en ont au moins un, et toutes en ont une.</p>
+<svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arbre de décision de la saturation fiscale" style="width:100%;height:auto;margin:2rem 0;font-family:'Newsreader',serif;">
+  <defs>
+    <marker id="fl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8B7355"/></marker>
+  </defs>
+  <g fill="none" stroke="#8B7355" stroke-width="1.4" marker-end="url(#fl)">
+    <path d="M380,58 L380,92"/><path d="M300,120 L150,120 L150,168"/><path d="M460,120 L610,120 L610,168"/>
+    <path d="M610,222 L610,258"/><path d="M530,286 L330,286 L330,330"/><path d="M690,286 L700,286 L700,330"/>
+    <path d="M150,222 L150,392"/><path d="M330,384 L330,392"/>
+  </g>
+  <rect x="230" y="20" width="300" height="40" rx="4" fill="#f6f2ec" stroke="#8B7355" stroke-width="1.4"/>
+  <text x="380" y="45" text-anchor="middle" font-size="15" fill="#3d3730">Un corps tient-il un maillon de la fiscalité ?</text>
+  <text x="290" y="112" text-anchor="end" font-size="13" fill="#8f2f2a" font-style="italic">non</text>
+  <text x="470" y="112" font-size="13" fill="#3d7a4a" font-style="italic">oui</text>
+  <rect x="30" y="170" width="240" height="52" rx="4" fill="#eef3ee" stroke="#3d7a4a" stroke-width="1.4"/>
+  <text x="150" y="191" text-anchor="middle" font-size="14" fill="#2f5c39" font-weight="600">Fiscalité directe établie</text>
+  <text x="150" y="211" text-anchor="middle" font-size="12.5" fill="#4a6b52">saturation structurellement impossible</text>
+  <rect x="470" y="170" width="280" height="52" rx="4" fill="#f6f2ec" stroke="#8B7355" stroke-width="1.4"/>
+  <text x="610" y="191" text-anchor="middle" font-size="14" fill="#3d3730">L'État tente-t-il de le reprendre ?</text>
+  <text x="610" y="211" text-anchor="middle" font-size="12.5" fill="#7a6f62">cadastre, transfert, ou simple demande</text>
+  <rect x="470" y="260" width="280" height="26" rx="4" fill="#fbf9f6" stroke="#c9bcae" stroke-width="1.2"/>
+  <text x="610" y="278" text-anchor="middle" font-size="12.5" fill="#5c5348">non — la voie est déjà morte · oui</text>
+  <rect x="196" y="332" width="268" height="52" rx="4" fill="#fbeeed" stroke="#a8322d" stroke-width="1.6"/>
+  <text x="330" y="353" text-anchor="middle" font-size="14" fill="#8f2f2a" font-weight="600">⛔ Saturation fiscale</text>
+  <text x="330" y="373" text-anchor="middle" font-size="12.5" fill="#8f2f2a">échec, ou renoncement — entrée en Ancien Régime</text>
+  <rect x="586" y="332" width="164" height="52" rx="4" fill="#eef3ee" stroke="#3d7a4a" stroke-width="1.4"/>
+  <text x="668" y="353" text-anchor="middle" font-size="13.5" fill="#2f5c39" font-weight="600">Réussite</text>
+  <text x="668" y="373" text-anchor="middle" font-size="12.5" fill="#4a6b52">Fiscalité directe établie</text>
+  <rect x="30" y="394" width="434" height="56" rx="4" fill="#f4f1fa" stroke="#6A0DAD" stroke-width="1.4"/>
+  <text x="247" y="415" text-anchor="middle" font-size="13" fill="#4b0f80">Pas de ruine financière endogène possible</text>
+  <text x="247" y="436" text-anchor="middle" font-size="13" fill="#4b0f80">⇒ Révolution Nationale nécessairement déclenchée de l'extérieur</text>
+</svg>
+<hr>
+<h2 id="ce-que-le-saillant-date">Ce que le saillant date<a class="anchor" href="#ce-que-le-saillant-date">#</a></h2>
+<p>La Saturation fiscale marque la borne <strong>impérialisme absolutiste → Ancien Régime</strong>. C'est le moment où la limite fiscale arrête la projection extérieure et retourne l'énergie vers l'intérieur.</p>
+<p>Mais c'est une <strong>décision de tracé</strong>, pas un fait de nature. L'Ancien Régime est défini par l'état de la société &mdash; sédimentation des élites, mobilité bloquée, incapacité à se réformer, financement par expédients &mdash; et cet état s'installe progressivement. La Saturation sert de borne parce qu'elle est le marqueur le plus net, pas parce qu'elle causerait la sédimentation.</p>
+<p>D'où deux conséquences pratiques :</p>
+<ul>
+  <li>Quand la Saturation est absente, <strong>la sous-phase existe quand même</strong> et se date sur la première attestation de la sédimentation. Jamais sur la seule fermeture de la projection extérieure : une nation peut être <em>empêchée</em> de projeter par un contexte géopolitique défavorable longtemps avant de sédimenter.</li>
+  <li><strong>Contrôle de vraisemblance par la durée.</strong> La saturation étant irréversible et les expédients auto-destructeurs, la distance entre Saturation et éclatement de l'AR est bornée &mdash; de trente à soixante-dix ans dans le corpus. Un AR de plus d'un siècle courant depuis une saturation supposée signale une erreur de datation. C'est un plafond, pas un plancher : un AR peut être tronqué par choc exogène.</li>
+</ul>
+<hr>
+<h2 id="tableau-du-corpus">Tableau du corpus<a class="anchor" href="#tableau-du-corpus">#</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+  <tr>
+    <th>Parcours</th>
+    <th>Date</th>
+    <th>Événement</th>
+    <th>Direct</th>
+    <th>Permanent</th>
+    <th>Corps qui bloque</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><img class="flag-inline" src="images/angleterre/flag.png" alt=""> <a href="angleterre.html"><strong>Angleterre</strong></a></td>
+    <td>1610</td>
+    <td>Great Contract</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Parlement</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/venise/flag.png" alt=""> <a href="venise.html"><strong>Venise</strong></a></td>
+    <td>1736-1755</td>
+    <td>Non-recouvrement des directes</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Communautés de Terreferme, clergé</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/naples/flag.png" alt=""> <a href="naples.html"><strong>Naples</strong></a></td>
+    <td>1741-1755</td>
+    <td>Catasto Onciario</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Baronnage local</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/france/flag.png" alt=""> <a href="france.html"><strong>France</strong></a></td>
+    <td>1749-1751</td>
+    <td>Vingtième de Machault</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Pays d'États (abonnement provincial)</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/etats-pontificaux/flag.png" alt=""> <a href="etats-pontificaux.html"><strong>États pontificaux</strong></a></td>
+    <td>1780-1781</td>
+    <td>Chirographes Boncompagni</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Sénat des Quarante</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/emilie-romagne/flag.png" alt=""> <a href="emilie-romagne.html"><strong>Émilie-Romagne</strong></a></td>
+    <td>1780-1781</td>
+    <td>Chirographes Boncompagni</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Sénat des Quarante</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/sicile/flag.png" alt=""> <a href="sicile.html"><strong>Sicile</strong></a></td>
+    <td>1781-1786</td>
+    <td>Cadastre de Caracciolo</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Baronnage parlementaire</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/autriche/flag.png" alt=""> <a href="autriche.html"><strong>Autriche</strong></a></td>
+    <td>1789-1790</td>
+    <td>Patentes joséphines retirées</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Stände</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/tchequie/flag.png" alt=""> <a href="tchequie.html"><strong>Tchéquie</strong></a></td>
+    <td>1789-1790</td>
+    <td>Patentes joséphines retirées</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Stände bohêmes</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/hongrie/flag.png" alt=""> <a href="hongrie.html"><strong>Hongrie</strong></a></td>
+    <td>1811-1812</td>
+    <td>Blocage de la Diète</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Diète, comitats</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/espagne/flag.png" alt=""> <a href="espagne.html"><strong>Espagne</strong></a></td>
+    <td>1868-1875</td>
+    <td>Échec de la substitution Figuerola</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓ Oligarchies municipales</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/piemont/flag.png" alt=""> <a href="piemont.html"><strong>Piémont</strong></a></td>
+    <td>—</td>
+    <td><em>Perequazione generale, 1698-1731</em></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✗ États généraux vidés au XVIᵉ</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/florence/flag.png" alt=""> <a href="florence.html"><strong>Florence</strong></a></td>
+    <td>—</td>
+    <td><em>Tassa di redenzione, 1774</em></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✗ Communautés absorbées en 1560</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/baviere/flag.png" alt=""> <a href="baviere.html"><strong>Bavière</strong></a></td>
+    <td>—</td>
+    <td><em>Impôt sur le revenu, 1848</em></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✗ Exemption de classe seulement</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/genes/flag.png" alt=""> <a href="genes.html"><strong>Gênes</strong></a></td>
+    <td>—</td>
+    <td>aucune tentative</td>
+    <td>—</td>
+    <td>—</td>
+    <td>✗ San Giorgio est l'appareil d'État</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/milan/flag.png" alt=""> <a href="milan.html"><strong>Milan</strong></a></td>
+    <td>—</td>
+    <td>aucune tentative</td>
+    <td>—</td>
+    <td>—</td>
+    <td>✗ Exemptions abolies par Sforza</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/suisse/flag.png" alt=""> <a href="suisse.html"><strong>Suisse</strong></a></td>
+    <td>—</td>
+    <td>aucune tentative</td>
+    <td>—</td>
+    <td>—</td>
+    <td>✗ Base rentière, excédent chronique</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/israel/flag.png" alt=""> <a href="israel.html"><strong>Israël</strong></a></td>
+    <td>—</td>
+    <td><em>entrée à réexaminer</em></td>
+    <td>✗</td>
+    <td>✗</td>
+    <td>✗ Aucun acte ni corps nommé</td>
+  </tr>
+  <tr>
+    <td><img class="flag-inline" src="images/athenes/flag.png" alt=""> <a href="athenes.html"><strong>Athènes</strong></a></td>
+    <td>—</td>
+    <td>hors périmètre</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+  </tr>
+</tbody>
+</table></div>
+<p>Les lignes en italique sont des <strong>Fiscalité directe établie</strong> : la tentative a réussi faute d'opposant. Les trois dernières colonnes s'y lisent donc à l'envers &mdash; l'État a bien voulu du direct et du permanent, et personne n'a pu l'en empêcher.</p>
+<p>L'entrée israélite ne satisfait aucun des trois termes en l'état : elle décrit un surendettement et une cascade d'expédients, ce que le critère exclut expressément. À reprendre.</p>
+<hr>
+<h2 id="sans-corps-intermédiaire">Sans corps intermédiaire<a class="anchor" href="#sans-corps-intermédiaire">#</a></h2>
+<p>L'absence de corps n'est pas un défaut de documentation, c'est un fait structurel, et il commande toute la suite du Parcours.</p>
+<p><strong>Pas de saturation possible.</strong> Le troisième terme ne peut jamais être satisfait. L'État prélève directement et rien ne l'arrête.</p>
+<p><strong>Pas de ruine financière endogène.</strong> Un État qui peut lever ce qu'il veut ne se ruine pas par blocage politique. Or l'éclatement de l'Ancien Régime demande la convergence du discrédit et de la ruine. L'un des deux verrous ne peut plus sauter.</p>
+<p><strong>Donc pas de sortie endogène.</strong> Le corpus le confirme sans exception : les nations sans corps intermédiaire voient toutes leur Révolution Nationale déclenchée de l'extérieur &mdash; Florence et Gênes par Bonaparte en 1797, le Piémont par l'invasion française de 1796, Milan en 1499 puis 1796, la Suisse en 1798, la Bavière par la guerre et la famine de 1918.</p>
+<p><strong>Et ce sont de petites nations, ce qui n'est pas un hasard.</strong> Le besoin de corps intermédiaires est d'abord <strong>technique</strong> : un souverain qui peut administrer et percevoir en direct n'a pas besoin de déléguer. Un grand État territorial ne peut pas se passer de la délégation, donc entretient les corps qui finiront par le bloquer. La taille n'agit pas directement &mdash; elle agit par le besoin de délégation.</p>
+<p>D'où le résultat qui referme le dossier : <strong>un pouvoir absolutiste qui a l'occasion de se débarrasser de ses corps intermédiaires &mdash; affermage, communautés répartitrices, états provinciaux &mdash; et qui la saisit, s'affranchit de la saturation et se prive du même coup de toute fin endogène.</strong> Le Piémont en est la démonstration la plus nette : même programme fiscal que la France, cadastre général contre les immunités nobiliaires et ecclésiastiques, et l'issue inverse &mdash; parce qu'Emanuele Filiberto avait vidé les États généraux cent quarante ans plus tôt.</p>
+
+</article>
+</div>
+</div>
+</div>
+<footer>
+    <div class="footer-brand">Historionomie</div>
+    <div class="footer-meta">Cadre théorique de Philippe Fabry — Parcours de construction nationale</div>
+</footer>
+<script>
+document.addEventListener('click', function(e) {
+    var dd = document.getElementById('nation-dropdown');
+    if (!dd) return;
+    if (!dd.contains(e.target)) dd.classList.remove('open');
+});
+</script>
+</body>
+</html>
